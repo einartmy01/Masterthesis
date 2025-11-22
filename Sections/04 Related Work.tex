@@ -4,8 +4,6 @@
 Experiences from other simialar fields, self driving cars, drones, maybe other remote controlled trains in different countries
 
 \subsubsection{Train Control}
-In accordance to UITP, of all fully automated metro lines, 87\% use CBTC (communications based train control) \cite{uitp2018metro}
-
 As mentionted in ERA's ERTMS. Commission Regulation (EU) 2016/919 of 27 May 2016 on the technical specification for 
 interoperability relating to the ‘control-command and signalling’ subsystems of the rail system in the European Union \cite{era_ertms}
 
@@ -16,7 +14,36 @@ A key component of the project is the integration of an Automatic Train Operatio
 
 The project also emphasizes human factors engineering, ensuring that the RSC is ergonomically designed for operator efficiency and safety. For this project, researchers have employ virtual reality tools to simulate realistic control room environments and train personnel for future remote supervision tasks. Tests are being conducted on Betuweroute, a freight only railway, linking Rotterdam and the Ruhr region to validate the technical and operational readiness of this automation concept. The ultimate goal is to establish a European reference model for automated freight train operation \cite{dlr2025atocargo}.
 
+(Jürgensen 2025)
+\cite{jürgensen2025rcrailvehicles}
+Is a project in \dots
+says that at 300ms, you get loss of performance, and at 1000ms the delay becomes unfeasible.
+And references: "Design and Evaluation of Remote Driving Architecture on 4G and 5G Mobile Networks" (OHS, 2022)
+Which references (Lane, 2002) and (Neumier, 2019)
+
+Jernberg(2024) 
+\cite{jernberg2024latency}
+- Voysys
+- G2G
+- Average delay of 88.8 ms and added conditions of +100 -> 188 ms and +200 -> 288 ms
+- 50km/h and 70km/h (Try to keep speedlimits)
+- was not given a latency
+Neumeier et al. (2019) stated that 300 ms might be manageable for trained operators but in some conditions during their simulator study there were tendencies that even smaller latencies affected the performance of the operator negatively.
+
+
+(Neumier 2019)
+\cite{neumeier2019}
+ - Round Trip Time (RTT)
+ - Average delay of 67 ms and added conditions of +100 +300 +500
+ - Was given the ca. latency
+
+Talks about how participent leave the car lane significanlty more with higher latency, even tho with stable high latency. But:
+"In the Parking scenario, even no differences for whatever latency could be revealed"
+Scenarios, was driving with turns, and one parking. No hazards except latency
+
+
 Sjekk T-teknikk
+
 \subsubsection{Car Control}
 //Distraction lantecy?
 
@@ -26,13 +53,6 @@ Sjekk T-teknikk
 \subsubsection{Crane Control?}
 
 \subsubsection{Offshore Control}
-
-
-
-
-//Usikker på om dette skal være med
-\subsection{Remote Control}
-How remote control works, how it is set up. Why its relevant for this project.
 
 \subsection{Human factors}
 All the ways human error can effect the results from the tests.
@@ -44,14 +64,14 @@ How humans adapt to stable v unstable latencies.
 
 "Fixed latency seems to be better than varied latency" (Davis et al., 2010, Gnatzig et al., 2013) 
 
-Gorsich et al. (2018) found that a higher latency results in more inaccurate behavior, with a drastic decrease starting at a latency of 600 ms, and Gnatzig et al. (2013) found that a constant latency of 500 ms was unproblematic for drivers when the vehicle was steadily kept at 30 km/h on their track. Neumeier et al. (2019) stated that 300 ms might be manageable for trained operators but in some conditions during their simulator study there were tendencies that even smaller latencies affected the performance of the operator negatively.
+Gorsich et al. (2018) found that a higher latency results in more inaccurate behavior, with a drastic decrease starting at a latency of 600 ms, and Gnatzig et al. (2013) found that a constant latency of 500 ms was unproblematic for drivers when the vehicle was steadily kept at 30 km/h on their track. 
 Jernberg(2024) 
 \cite{jernberg2024latency}
-- Voysys
-- G2G
-- Average delay of 88.8 ms and added conditions of +100 -> 188 ms and +200 -> 288 ms
-- 50km/h and 70km/h
 
+
+(Neumier 2019)
+\cite{neumeier2019}
+Could not confirm that fixed latency resultet in any better result than varied latency.
 
 \subsection{Acceptance levels}
 \textit{Sjekk master til Emilia om hva hun fant av regler}
@@ -66,6 +86,7 @@ What obligation do we have in a project like this.
 \subsection{Cyber Security}
 How we can protect the system from attacks. What regulations are in place. 
 
+
 \subsection{Calculation of latency}
 The math behind calculations of latency. How to measure most precisely and what errors  we find in the calculations.
 
@@ -75,6 +96,3 @@ Here, the time of the visual event in front of
 the camera is denoted as T1 and the time when the event
 was detected on the receiving end as T2. The start of frame processing is denoted as T3.
 \textit{TVL =(T1 - T1)-(T2 -T3)=T3 -T1}
-
-
-

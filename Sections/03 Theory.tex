@@ -31,13 +31,18 @@ ETCS is commonly described with levels that express how information is exchanged
 ETCS defines different operational modes such as Full Supervision, On-Sight, Staff Responsible, Shunting, and Automatic Driving. Modes determine how the onboard equipment supervises movement authority and interacts with ATO where present. Automatic Driving mode is used when conditions for ATO are satisfied and ETCS provides the required movement and track data while Full Supervision is when ETCS is supplied with all possible train and track data needed \cite{eu_etcs_levels}.
 
 
-\subsection{5G}
-5G is built up by OFDM, Orthogonal Frequency Division Multiplexing.
-Divides "Spectrum" into small subcarriers
-\subsection{5G URLLC}
-Ultra-Reliable Low-Latency Communications.
-How its different from other 5G networks.
-How to connect to it. 
+\subsection{Cellular communications}
+For connecting remote control center up to the train.
+
+\subsubsection{5G URLLC}
+5G is built up by OFDM, Orthogonal Frequency Division Multiplexing wich divides "Spectrum" into small subcarriers. 5G is designed to support three different service categories, one of which is Ultra-Reliable and Low-Latency Communications (URLLC). URLLC is a communication service characterized by the need to successfully deliver packets with stringent requirements in terms of availability, latency, and reliability. This capability is essential for providing connectivity to new services and applications from vertical domains, such as autonomous driving and factory automation. \cite{akhila20235G, li20185G}
+
+URLLC could be crucial for supporting emerging applications like wireless control and automation in industrial factory environments. For the specific use case of Remote Control, the required key performance indicators are an end-to-end latency of 5 ms and a reliability of 99.999\%. Remote control applications often involve closed-loop control applications, like the use of collaborative robots in a factory, which require URLLC services. \cite{akhila20235G, li20185G}
+
+\subsubsection{GSM-R}
+
+\subsubsection{WiFi}
+
 
 
 \subsection{ERTMS}
@@ -77,8 +82,10 @@ Two-Way Active Measurement Protocol (TWAMP) and One-Way Active Measurement Proto
 
 Test tools. Measurements are typically expressed in milliseconds and include metrics for delay variation and loss.
 
-\subsection{Static and Dynamic latency}
+\subsection{Differnt aspects of latency}
 \textit{What is the difference}
+Fixed, static v dynamic.
+
 
 \subsection{Regulations}
 \textit{Sjekk master til Emilia om hva hun fant av regler}

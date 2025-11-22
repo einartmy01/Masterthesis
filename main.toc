@@ -13,28 +13,29 @@
 \contentsline {subsection}{\numberline {2.3}ETCS}{3}{subsection.2.3}%
 \contentsline {subsubsection}{\numberline {2.3.1}Levels}{3}{subsubsection.2.3.1}%
 \contentsline {subsubsection}{\numberline {2.3.2}Modes}{4}{subsubsection.2.3.2}%
-\contentsline {subsection}{\numberline {2.4}5G}{4}{subsection.2.4}%
-\contentsline {subsection}{\numberline {2.5}5G URLLC}{4}{subsection.2.5}%
-\contentsline {subsection}{\numberline {2.6}ERTMS}{5}{subsection.2.6}%
-\contentsline {subsubsection}{\numberline {2.6.1}ERTMS/ATO}{5}{subsubsection.2.6.1}%
-\contentsline {subsection}{\numberline {2.7}Latency}{5}{subsection.2.7}%
-\contentsline {subsubsection}{\numberline {2.7.1}Latency Measurements}{5}{subsubsection.2.7.1}%
-\contentsline {subsection}{\numberline {2.8}Static and Dynamic latency}{6}{subsection.2.8}%
-\contentsline {subsection}{\numberline {2.9}Regulations}{6}{subsection.2.9}%
+\contentsline {subsection}{\numberline {2.4}Cellular communications}{4}{subsection.2.4}%
+\contentsline {subsubsection}{\numberline {2.4.1}5G URLLC}{4}{subsubsection.2.4.1}%
+\contentsline {subsubsection}{\numberline {2.4.2}GSM-R}{5}{subsubsection.2.4.2}%
+\contentsline {subsubsection}{\numberline {2.4.3}WiFi}{5}{subsubsection.2.4.3}%
+\contentsline {subsection}{\numberline {2.5}ERTMS}{5}{subsection.2.5}%
+\contentsline {subsubsection}{\numberline {2.5.1}ERTMS/ATO}{5}{subsubsection.2.5.1}%
+\contentsline {subsection}{\numberline {2.6}Latency}{5}{subsection.2.6}%
+\contentsline {subsubsection}{\numberline {2.6.1}Latency Measurements}{6}{subsubsection.2.6.1}%
+\contentsline {subsection}{\numberline {2.7}Differnt aspects of latency}{6}{subsection.2.7}%
+\contentsline {subsection}{\numberline {2.8}Regulations}{7}{subsection.2.8}%
 \contentsline {section}{\numberline {3}Related Work}{8}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Other Experiences}{8}{subsection.3.1}%
 \contentsline {subsubsection}{\numberline {3.1.1}Train Control}{8}{subsubsection.3.1.1}%
 \contentsline {subsubsection}{\numberline {3.1.2}ATO-Cargo Project}{8}{subsubsection.3.1.2}%
-\contentsline {subsubsection}{\numberline {3.1.3}Car Control}{8}{subsubsection.3.1.3}%
-\contentsline {subsubsection}{\numberline {3.1.4}Drone Control}{8}{subsubsection.3.1.4}%
-\contentsline {subsubsection}{\numberline {3.1.5}Crane Control?}{8}{subsubsection.3.1.5}%
-\contentsline {subsubsection}{\numberline {3.1.6}Offshore Control}{8}{subsubsection.3.1.6}%
-\contentsline {subsection}{\numberline {3.2}Remote Control}{9}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}Human factors}{9}{subsection.3.3}%
-\contentsline {subsection}{\numberline {3.4}Acceptance levels}{9}{subsection.3.4}%
-\contentsline {subsection}{\numberline {3.5}Ethics}{9}{subsection.3.5}%
-\contentsline {subsection}{\numberline {3.6}Cyber Security}{9}{subsection.3.6}%
-\contentsline {subsection}{\numberline {3.7}Calculation of latency}{9}{subsection.3.7}%
+\contentsline {subsubsection}{\numberline {3.1.3}Car Control}{9}{subsubsection.3.1.3}%
+\contentsline {subsubsection}{\numberline {3.1.4}Drone Control}{9}{subsubsection.3.1.4}%
+\contentsline {subsubsection}{\numberline {3.1.5}Crane Control?}{9}{subsubsection.3.1.5}%
+\contentsline {subsubsection}{\numberline {3.1.6}Offshore Control}{9}{subsubsection.3.1.6}%
+\contentsline {subsection}{\numberline {3.2}Human factors}{9}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Acceptance levels}{9}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Ethics}{9}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}Cyber Security}{9}{subsection.3.5}%
+\contentsline {subsection}{\numberline {3.6}Calculation of latency}{9}{subsection.3.6}%
 \contentsline {section}{\numberline {4}Method}{10}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Research Methodology}{10}{subsection.4.1}%
 \contentsline {subsection}{\numberline {4.2}Literature Review Strategy}{10}{subsection.4.2}%

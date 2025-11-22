@@ -1,3 +1,4 @@
+//Theory
 @phdthesis{milroy1980aspects,
   author       = {I. P. Milroy},
   title        = {Aspects of Automatic Train Control},
@@ -6,15 +7,6 @@
   url          = {https://repository.lboro.ac.uk/articles/thesis/Aspects_of_automatic_train_control/9537395/1/files/17166803.pdf},
   urldate      = {2025-9-27}
 } //Brukes i ATO forklaring
-
-@report{dlr2025atocargo,
-  author      = {German Aerospace Center (DLR)},
-  title       = {ATO-Cargo -- Automatic Train Operation Technologies for Cargo},
-  institution = {Institute of Transportation Systems, German Aerospace Center (DLR)},
-  year        = {2025},
-  url         = {https://www.dlr.de/en/ts/research-transfer/projects/ato-cargo},
-  urldate     = {2025-10-8}
-} //Refert til i ATO forklaring, kanskje flytte til lignende
 
 @report{iec62290,
   author      = {International Electrotechnical Commission (IEC)},
@@ -31,32 +23,13 @@
   url          = {https://www.cbtcsolutions.ca/goa},
   urldate      = {2025-10-1}
 } //Brukes i GoA forklaring
-
-
-@techreport{era_ertms_doc,
-  author      = {European Union Agency for Railways (ERA)},
-  title       = {ERTMS / ETCS -- Technical documents and unit guidance},
-  institution = {European Union Agency for Railways (ERA)},
-  year        = {2022},
-  url         = {https://www.era.europa.eu/domains/european-rail-traffic-management-system-ertms_en}
-} Denne fungerer ikke, og vet ikke hvorfor den brukes
-
-@techreport{era_ertms,
-  author      = {European Union Agency for Railways (ERA)},
-  title       = {ERTMS},
-  institution = {European Union Agency for Railways (ERA)},
-  url         = {https://www.era.europa.eu/domains/infrastructure/european-rail-traffic-management-system-ertms_en},
-  urldate     = {2025-10-9},
-}
-
-@misc{eu_etcs_levels,
+@report{eu_etcs_levels,
   author      = {European Commission, Directorate-General for Mobility and Transport},
   title       = {ETCS Levels and Modes},
   year        = {2023},
   url         = {https://transport.ec.europa.eu/transport-modes/rail/ertms/what-ertms-and-how-does-it-work/etcs-levels-and-modes_en},
   urldate     = {2025-10-9},
-}
-
+} Snakker om ETCS
 @report{uitp2018metro,
   author      = {International Association of Public Transport (UITP)},
   title       = {World Report on Metro Automation},
@@ -66,13 +39,42 @@
   urldate     = {2025-10-15}
 } Snakker om GoA og mengde ATO i metro systemer
 
+////Cellular communications
+
+@article{li20185G,
+  author    = {Zexian Li and Hamidreza Shariatmadari and Bikramjit Singh and Mikko Uusitalo},
+  title     = {5G URLLC: Design challenges and system concepts},
+  booktitle = {2018 International Symposium on Wireless Communication Systems (ISWCS)},
+  year      = {2018},
+  url       = {https://ieeexplore.ieee.org/document/8491078},
+  urldate   = {2025-10-15}
+} //5G
+@Article{akhila20235G,
+  author    = {Akhila, S. and Hemavathi},
+  title     = {5G Ultra-Reliable Low-Latency Communication: Use Cases, Concepts and Challenges}, 
+  year      = {2023},
+  url       = {https://ieeexplore.ieee.org/document/10112312},
+  urldate   = {2025-11-22}
+} //5G
+
+
+
+@techreport{era_ertms,
+  author      = {European Union Agency for Railways (ERA)},
+  title       = {ERTMS},
+  institution = {European Union Agency for Railways (ERA)},
+  url         = {https://www.era.europa.eu/domains/infrastructure/european-rail-traffic-management-system-ertms_en},
+  urldate     = {2025-10-9},
+} // Brukes i teori og regulations men ikke protocoller
+
+Her burde jeg gå inn igjen og gå inn på CCS av TSI, og Operation n Traffic Managment
 @report{era_tsi,
   author      = {European Union Agency for Railways (ERA)},
   title       = {Technical Specifications for Interoperability (TSIs)},
   institution = {European Union Agency for Railways (ERA)},
   year        = {2016},
   url         = {https://www.era.europa.eu/domains/technical-specifications-interoperability_en}
-} Her burde jeg gå inn igjen og gå inn på CCS av TSI, og Operation n Traffic Managment
+} Regulations
 
 https://www.era.europa.eu/domains/technical-specifications-interoperability/control-command-and-signalling-tsi_en
 
@@ -84,13 +86,15 @@ https://www.era.europa.eu/domains/technical-specifications-interoperability/oper
   year        = {2013},
   url         = {https://www.sjt.no/globalassets/00_generell/english/pdf-files/unofficial-translation-kjoretoyforskrift-en.pdf}
 }
-
 @misc{banenor_network,
   author      = {Bane NOR},
   title       = {Network Statement / Access Conditions 2025},
   year        = {2025},
   url         = {https://oppslagsverk.banenor.no/en/network-statement/2025/access-conditions/}
 }
+
+////Protocols
+
 
 @techreport{itu_g1051,
   author      = {International Telecommunication Union (ITU)},
@@ -99,7 +103,6 @@ https://www.era.europa.eu/domains/technical-specifications-interoperability/oper
   year        = {2023},
   url         = {https://www.itu.int/rec/dologin_pub.asp?lang=e&id=T-REC-G.1051-202303-I!!PDF-E&type=items}
 } Støtter opp om TWAMP fra IETF
-
 @misc{rfc_twamp_ietf,
   author      = {Internet Engineering Task Force (IETF)},
   title       = {Two-Way Active Measurement Protocol (TWAMP)},
@@ -107,7 +110,6 @@ https://www.era.europa.eu/domains/technical-specifications-interoperability/oper
   url         = {https://datatracker.ietf.org/doc/html/rfc5357},
   urldate      = {2025-11-08}
 } 
-
 @misc{dns_latency_protocols,
   author       = {DNSstuff},
   title        = {Network Latency Test Tools: Measuring Ping, Traceroute, and Delay},
@@ -122,6 +124,9 @@ https://www.era.europa.eu/domains/technical-specifications-interoperability/oper
   url          = {https://www.techtarget.com/whatis/definition/Request-for-Comments-RFC},
   urldate      = {2025-11-09}
 }
+
+////Method
+
 @book{creswell2014researchdesign,
   author    = {John W. Creswell},
   title     = {Research Design: Qualitative, Quantitative, and Mixed Methods Approaches},
@@ -140,16 +145,17 @@ https://www.era.europa.eu/domains/technical-specifications-interoperability/oper
 }
 @article{lim2008evidencebased,
   author  = {Wendy Lim and Donald M. Arnold and Veronika Bachanova and Richard L. Haspel and Rachel P. Rosovsky and Andrei R. Shustov and Mark A. Crowther},
-  title   = {Evidence‐Based Guidelines — An Introduction},
+  title   = {Evidence-Based Guidelines — An Introduction},
   journal = {Hematology. American Society of Hematology Education Program},
   volume  = {2008},
-  number  = {1},
   pages   = {26--30},
   year    = {2008},
-  doi     = {10.1182/asheducation-2008.1.26},
   url     = {https://www.ashpublications.org/hematology/article/2008/1/26/95823/Evidence-Based-Guidelines-An-Introduction},
   urldate = {2025-10-15}
 }
+
+
+//Latency general (Car)
 @article{kaknjo2018videolatency,
   author  = {Admir Kaknjo and Muzaffar Rao and Edin Omerdi{\'c} and Luke Robinson and Daniel Toal and Thomas Newe},
   title   = {Real-Time Video Latency Measurement between a Robot and Its Remote Control Station: Causes and Mitigation},
@@ -158,6 +164,7 @@ https://www.era.europa.eu/domains/technical-specifications-interoperability/oper
   url     = {https://www.researchgate.net/publication/329369713_Real-Time_Video_Latency_Measurement_between_a_Robot_and_Its_Remote_Control_Station_Causes_and_Mitigation},
   urldate = {2025-10-15}
 }
+//Car
 @article{jernberg2024latency,
   author  = {C. Jernberg and A. Sjöberg and P. Karlsson},
   title   = {The effect of latency, speed and task on remote operation},
@@ -166,7 +173,33 @@ https://www.era.europa.eu/domains/technical-specifications-interoperability/oper
   year    = {2024},
   url     = {https://www.sciencedirect.com/science/article/pii/S2590198224001386},
   urldate = {2025-10-15}
+} 
+@article{neumeier2019,
+  author    = {Stefan Neumeier and Philipp Wintersberger and Anna-Katharina Frison and Armin Becher and Christian Facchi and Andreas Riener},
+  title     = {Teleoperation: The Holy Grail to Solve Problems of Automated Driving? Sure, but Latency Matters},
+  year      = {2019},
+  url       = {https://dl.acm.org/doi/pdf/10.1145/3342197.3344534},
+  urldate   = {2025-10-15}
 }
+
+//Latency railway
+@phdthesis{jürgensen2025rcrailvehicles,
+  author      = {Simon Jürgensen},
+  title       = {Remote Control for Rail Vehicles},
+  school      = {University of Kiel},
+  year        = {2025},
+  url         = {https://rtsys.informatik.uni-kiel.de/~biblio/downloads/theses/sij-bt.pdf},
+  urldate     = {2025-10-15}
+}
+@report{dlr2025atocargo,
+  author      = {German Aerospace Center (DLR)},
+  title       = {ATO-Cargo -- Automatic Train Operation Technologies for Cargo},
+  institution = {Institute of Transportation Systems, German Aerospace Center (DLR)},
+  year        = {2025},
+  url         = {https://www.dlr.de/en/ts/research-transfer/projects/ato-cargo},
+  urldate     = {2025-10-8}
+} //Refert til i ATO forklaring, kanskje flytte til lignende
+
 
 
 
