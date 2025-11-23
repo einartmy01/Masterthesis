@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.10.18)  23 NOV 2025 12:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.10.18)  23 NOV 2025 13:00
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -952,4 +952,354 @@ LaTeX Info: Redefining \] on input line 2950.
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
  (C:\Users\einar\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
-\symAM
+\symAMSa=\mathgroup7
+\symAMSb=\mathgroup8
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)) (C:\Users\einar\AppData\Local\Programs\MiKTeX\tex/latex/amscls\amsthm.sty
+Package: amsthm 2020/05/29 v2.20.6
+\thm@style=\toks49
+\thm@bodyfont=\toks50
+\thm@headfont=\toks51
+\thm@notefont=\toks52
+\thm@headpunct=\toks53
+\thm@preskip=\skip83
+\thm@postskip=\skip84
+\thm@headsep=\skip85
+\dth@everypar=\toks54
+) (C:\Users\einar\AppData\Local\Programs\MiKTeX\tex/latex/base\textcomp.sty
+Package: textcomp 2024/04/24 v2.1b Standard LaTeX package
+) (C:\Users\einar\AppData\Local\Programs\MiKTeX\tex/latex/gensymb\gensymb.sty
+Package: gensymb 2022/10/17 v1.0.2 (KJH)
+) (C:\Users\einar\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+ (C:\Users\einar\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+)
+\Gm@cnth=\count523
+\Gm@cntv=\count524
+\c@Gm@tempcnt=\count525
+\Gm@bindingoffset=\dimen307
+\Gm@wd@mp=\dimen308
+\Gm@odd@mp=\dimen309
+\Gm@even@mp=\dimen310
+\Gm@layoutwidth=\dimen311
+\Gm@layoutheight=\dimen312
+\Gm@layouthoffset=\dimen313
+\Gm@layoutvoffset=\dimen314
+\Gm@dimlist=\toks55
+ (C:\Users\einar\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg)) (C:\Users\einar\AppData\Local\Programs\MiKTeX\tex/latex/fancyhdr\fancyhdr.sty
+Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
+\f@nch@headwidth=\skip86
+\f@nch@offset@elh=\skip87
+\f@nch@offset@erh=\skip88
+\f@nch@offset@olh=\skip89
+\f@nch@offset@orh=\skip90
+\f@nch@offset@elf=\skip91
+\f@nch@offset@erf=\skip92
+\f@nch@offset@olf=\skip93
+\f@nch@offset@orf=\skip94
+\f@nch@height=\skip95
+\f@nch@footalignment=\skip96
+\f@nch@widthL=\skip97
+\f@nch@widthC=\skip98
+\f@nch@widthR=\skip99
+\@temptokenb=\toks56
+))
+Package csquotes Info: Checking for multilingual support...
+Package csquotes Info: ... found 'babel' package.
+Package csquotes Info: Adjusting default style.
+Package csquotes Info: Redefining alias 'default' -> 'british'.
+ (main.aux)
+\openout1 = `main.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+Package biblatex Info: Trying to load language 'british'...
+Package biblatex Info: ... file 'british.lbx' found.
+ (C:\Users\einar\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/lbx\british.lbx
+File: british.lbx 2025/07/10 v3.21 biblatex localization (PK/MW)
+Package biblatex Info: Trying to load language 'english'...
+Package biblatex Info: ... file 'english.lbx' found.
+ (C:\Users\einar\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/lbx\english.lbx
+File: english.lbx 2025/07/10 v3.21 biblatex localization (PK/MW)
+))
+Package biblatex Info: Input encoding 'utf8' detected.
+Package biblatex Info: Automatic encoding selection.
+(biblatex)             Assuming data encoding 'utf8'.
+\openout3 = `main.bcf'.
+
+Package biblatex Info: Trying to load bibliographic data...
+Package biblatex Info: ... file 'main.bbl' found.
+ (main.bbl
+
+Package biblatex Warning: Biber reported the following issues
+(biblatex)                with 'dlr2025atocargo':
+(biblatex)                - report entry 'dlr2025atocargo' (references.bib): Invalid format '2025-10-8' of date field 'urldate' - ignoring.
+
+
+Package biblatex Warning: Biber reported the following issues
+(biblatex)                with 'eu_etcs_levels':
+(biblatex)                - report entry 'eu_etcs_levels' (references.bib): Invalid format '2025-10-9' of date field 'urldate' - ignoring.
+
+
+Package biblatex Warning: Biber reported the following issues
+(biblatex)                with 'cbtc_goa':
+(biblatex)                - misc entry 'cbtc_goa' (references.bib): Invalid format '2025-10-1' of date field 'urldate' - ignoring.
+
+
+Package biblatex Warning: Biber reported the following issues
+(biblatex)                with 'milroy1980aspects':
+(biblatex)                - thesis entry 'milroy1980aspects' (references.bib): Invalid format '2025-9-27' of date field 'urldate' - ignoring.
+
+
+Package biblatex Warning: Biber reported the following issues
+(biblatex)                with 'era_ertms':
+(biblatex)                - report entry 'era_ertms' (references.bib): Invalid format '2025-10-9' of date field 'urldate' - ignoring.
+
+)
+Package biblatex Info: Reference section=0 on input line 9.
+Package biblatex Info: Reference segment=0 on input line 9.
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: float package is loaded.
+Package caption Info: hyperref package is loaded.
+Package caption Info: wrapfig package is loaded.
+Package caption Info: End \AtBeginDocument code.
+ (C:\Users\einar\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count526
+\scratchdimen=\dimen315
+\scratchbox=\box108
+\nofMPsegments=\count527
+\nofMParguments=\count528
+\everyMPshowfont=\toks57
+\MPscratchCnt=\count529
+\MPscratchDim=\dimen316
+\MPnumerator=\count530
+\makeMPintoPDFobject=\count531
+\everyMPtoPDFconversion=\toks58
+) (C:\Users\einar\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+ (C:\Users\einar\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
+))
+Package hyperref Info: Link coloring ON on input line 9.
+ (main.out) (main.out)
+\@outlinefile=\write7
+\openout7 = `main.out'.
+
+ (C:\Users\einar\AppData\Local\Programs\MiKTeX\tex/latex/pdflscape\pdflscape.sty
+Package: pdflscape 2022-10-27 v0.13 Display of landscape pages in PDF
+ (C:\Users\einar\AppData\Local\Programs\MiKTeX\tex/latex/pdflscape\pdflscape-nometadata.sty
+Package: pdflscape-nometadata 2022-10-28 v0.13 Display of landscape pages in PDF (HO)
+ (C:\Users\einar\AppData\Local\Programs\MiKTeX\tex/latex/graphics\lscape.sty
+Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
+)
+Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
+)) (C:\Users\einar\AppData\Local\Programs\MiKTeX\tex/latex/translations/dicts\translations-basic-dictionary-english.trsl
+File: translations-basic-dictionary-english.trsl (english translation file `translations-basic-dictionary')
+)
+\symgns@font=\mathgroup9
+LaTeX Font Info:    Overwriting symbol font `gns@font' in version `bold'
+(Font)                  TS1/cmr/m/n --> TS1/cmr/b/n on input line 9.
+Package gensymb Info: Math companion symbols declared on input line 9.
+LaTeX Info: Redefining \degree on input line 9.
+LaTeX Info: Redefining \celsius on input line 9.
+Package gensymb Info: Using text companion symbols for \degree, \celsius and \perthousand on input line 9.
+LaTeX Info: Redefining \ohm on input line 9.
+Package gensymb Info: Using \textohm for \ohm on input line 9.
+LaTeX Info: Redefining \micro on input line 9.
+Package gensymb Info: Using \textmu for \micro on input line 9.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(85.35826pt, 426.79134pt, 85.35828pt)
+* v-part:(T,H,B)=(59.18173pt, 697.09251pt, 88.7726pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=426.79134pt
+* \textheight=697.09251pt
+* \oddsidemargin=13.08827pt
+* \evensidemargin=13.08827pt
+* \topmargin=-50.08826pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=10.0pt
+* \footskip=30.0pt
+* \marginparwidth=65.0pt
+* \marginparsep=11.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+(./title.tex
+<./Images/NTNU_logo.png, id=218, 426.393pt x 110.5731pt>
+File: ./Images/NTNU_logo.png Graphic file (type png)
+<use ./Images/NTNU_logo.png>
+Package pdftex.def Info: ./Images/NTNU_logo.png  used on input line 9.
+(pdftex.def)             Requested size: 170.71393pt x 44.26894pt.
+
+
+[1
+
+{C:/Users/einar/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./Images/NTNU_logo.png>]) (Sections/00 Preface.tex)
+
+[1] (Sections/01 Abstract.tex)
+
+[2] (main.toc
+LaTeX Font Info:    Trying to load font information for U+msa on input line 5.
+ (C:\Users\einar\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 5.
+ (C:\Users\einar\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+
+[3])
+\tf@toc=\write8
+\openout8 = `main.toc'.
+
+ (main.lof)
+\tf@lof=\write9
+\openout9 = `main.lof'.
+
+ (main.lot)
+\tf@lot=\write10
+\openout10 = `main.lot'.
+
+
+
+[4]
+
+[5] (Sections/02 Introduction.tex)
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.31 \newpage
+              [1] (Sections/03 Theory.tex (Sections/./Tables/GoATable.tex)
+<Images/GoA from UITP.png, id=337, 247.42438pt x 176.66pt>
+File: Images/GoA from UITP.png Graphic file (type png)
+<use Images/GoA from UITP.png>
+Package pdftex.def Info: Images/GoA from UITP.png  used on input line 16.
+(pdftex.def)             Requested size: 298.75262pt x 213.32256pt.
+
+
+[2] (Sections/./Tables/ETCSItems.tex
+<Images/ETCS lv1.png, id=351, 507.8975pt x 251.43938pt>
+File: Images/ETCS lv1.png Graphic file (type png)
+<use Images/ETCS lv1.png>
+Package pdftex.def Info: Images/ETCS lv1.png  used on input line 7.
+(pdftex.def)             Requested size: 256.0774pt x 126.77829pt.
+
+
+[3 <./Images/GoA from UITP.png>]
+<Images/ETCS lv2.png, id=365, 504.88625pt x 238.39063pt>
+File: Images/ETCS lv2.png Graphic file (type png)
+<use Images/ETCS lv2.png>
+Package pdftex.def Info: Images/ETCS lv2.png  used on input line 14.
+(pdftex.def)             Requested size: 256.0774pt x 120.91193pt.
+)
+
+[4 <./Images/ETCS lv1.png> <./Images/ETCS lv2.png>]
+<Images/ERTMS-ATO solution.png, id=388, 459.7175pt x 416.05438pt>
+File: Images/ERTMS-ATO solution.png Graphic file (type png)
+<use Images/ERTMS-ATO solution.png>
+Package pdftex.def Info: Images/ERTMS-ATO solution.png  used on input line 63.
+(pdftex.def)             Requested size: 213.39566pt x 193.13316pt.
+
+
+[5] (Sections/./Tables/LatencyMeasurements.tex)
+
+[6 <./Images/ERTMS-ATO solution.png>])
+
+[7]
+
+[8] (Sections/04 Related Work.tex
+
+[9])
+
+[10] (Sections/05 Method.tex
+
+[11])
+
+[12] (Sections/06 Results.tex)
+
+[13] (Sections/15 Discussion.tex)
+
+[14] (Sections/20 Conclusion.tex)
+Overfull \hbox (5.4434pt too wide) in paragraph at lines 49--49
+[]\OT1/cmr/m/n/10 John W. Creswell. \OT1/cmr/m/it/10 Re-search Design: Qual-it-at-ive, Quant-it-at-ive, and Mixed Meth-ods Ap-proaches\OT1/cmr/m/n/10 .
+ []
+
+
+Overfull \hbox (27.14835pt too wide) in paragraph at lines 49--49
+\OT1/cmss/m/n/10 Video[]Latency[]Measurement[]between[]a[]Robot[]and[]Its[]Remote[]Control[]Station[]Causes[]and[]Mitigation$[][]
+ []
+
+
+
+[15]
+
+[16]
+runsystem(latexminted cleantemp  --timestamp 20251123130003 FAD58DE7366495DB4650CFEFAC2FCD61)...disabled (restricted).
+
+ (main.aux)
+ ***********
+LaTeX2e <2025-06-01> patch level 1
+L3 programming layer <2025-09-02>
+ ***********
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: E55B3AB50FDBA1170311846D8267EF62;7443.
+Package logreq Info: Writing requests to 'main.run.xml'.
+\openout1 = `main.run.xml'.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 43517 strings out of 468081
+ 939603 string characters out of 5425788
+ 1869076 words of memory out of 5000000
+ 71412 multiletter control sequences out of 15000+600000
+ 637806 words of font info for 75 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 117i,12n,121p,976b,2879s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\einar\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/einar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/einar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/einar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/einar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/einar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/einar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/einar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/Users/einar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/einar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/einar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on main.pdf (22 pages, 946037 bytes).
+PDF statistics:
+ 604 PDF objects out of 1000 (max. 8388607)
+ 114 named destinations out of 1000 (max. 500000)
+ 462 words of extra memory for PDF output out of 10000 (max. 10000000)
+
