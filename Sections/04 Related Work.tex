@@ -4,8 +4,9 @@
 Experiences from other simialar fields, self driving cars, drones, maybe other remote controlled trains in different countries
 
 \subsubsection{Train Control}
+// Usikker
 As mentionted in ERA's ERTMS. Commission Regulation (EU) 2016/919 of 27 May 2016 on the technical specification for 
-interoperability relating to the ‘control-command and signalling’ subsystems of the rail system in the European Union \cite{era_ertms}
+interoperability relating to the "control-command and signalling" subsystems of the rail system in the European Union \cite{era_ertms}
 
 \subsubsection{ATO-Cargo Project}
 The ATO-Cargo project, led by the German Aerospace Center (DLR) in cooperation with DB Cargo AG, Digitale Schiene Deutschland (DSD), and ProRail B.V., focuses on developing and testing highly automated technologies for freight trains. The goal is to enhance rail freight efficiency by optimizing speed profiles, improving route utilization, and increasing competitiveness with road transport \cite{dlr2025atocargo}.
@@ -14,14 +15,29 @@ A key component of the project is the integration of an Automatic Train Operatio
 
 The project also emphasizes human factors engineering, ensuring that the RSC is ergonomically designed for operator efficiency and safety. For this project, researchers have employ virtual reality tools to simulate realistic control room environments and train personnel for future remote supervision tasks. Tests are being conducted on Betuweroute, a freight only railway, linking Rotterdam and the Ruhr region to validate the technical and operational readiness of this automation concept. The ultimate goal is to establish a European reference model for automated freight train operation \cite{dlr2025atocargo}.
 
+
 (Jürgensen 2025)
 \cite{jürgensen2025rcrailvehicles}
 Is a project in \dots
-says that at 300ms, you get loss of performance, and at 1000ms the delay becomes unfeasible.
-And references: "Design and Evaluation of Remote Driving Architecture on 4G and 5G Mobile Networks" (OHS, 2022)
+
+Says that at 300ms, you get loss of performance, and at 1000ms the delay becomes unfeasible.
+And references: "Design and Evaluation of Remote Driving Architecture on 4G and 5G Mobile Networks" (Ouden, 2022) \cite{ouden2022}
 Which references (Lane, 2002) and (Neumier, 2019)
 
-Jernberg(2024) 
+\subsubsection{Car Control}
+
+(Ouden 2022)
+\cite{ouden2022}
+- 4G and 5G 
+- 4 times 120 angle camera
+- H.264
+- Split latency up into Control and video and does
+- min, mean, 95\%ile, max latency in ms
+
+Says that at 300ms, you get loss of performance, and at 1000ms the delay becomes unfeasible.
+
+
+(Jernberg 2024) 
 \cite{jernberg2024latency}
 - Voysys
 - G2G
@@ -30,6 +46,17 @@ Jernberg(2024)
 - was not given a latency
 Neumeier et al. (2019) stated that 300 ms might be manageable for trained operators but in some conditions during their simulator study there were tendencies that even smaller latencies affected the performance of the operator negatively.
 
+(Kaknjo 2018)
+\cite{kaknjo2018videolatency}
+- G2G
+- Time stamps
+- H.264
+- MJPEG
+- RTSP (Real Time Streaming protocol)
+- TCP/UDP
+
+Found MJPEG to be 300 ms lower latency than H.264. However it found H.264 to demand less bandwitdh 50-380Kbps as it compresses more enhensive than MJPEG 4.6-5Mbps.
+Found detoriation in performance in latencies above 300 ms and increase in errors during control for latencies larger than 500 ms.
 
 (Neumier 2019)
 \cite{neumeier2019}
@@ -39,16 +66,23 @@ Neumeier et al. (2019) stated that 300 ms might be manageable for trained operat
 
 Talks about how participent leave the car lane significanlty more with higher latency, even tho with stable high latency. But:
 "In the Parking scenario, even no differences for whatever latency could be revealed"
-Scenarios, was driving with turns, and one parking. No hazards except latency
+Scenarios, was driving with turns, and one parking. No hazards except latency.
 
+
+(Kang 2018)
+\cite{kang2018}
+- 3 different resulutions (320x240, 640x480, 1280x960)
+- 3 different bitrate (0.5Mbps, 1Mbps, 4Mbps)
+- LTE and WiFi
+- Video and camerea catching timestamps
 
 Sjekk T-teknikk
 
-\subsubsection{Car Control}
-//Distraction lantecy?
+
+
 
 \subsubsection{Drone Control}
-//Sjekk Emilia sin
+%Sjekk Emilia sin
 
 \subsubsection{Crane Control?}
 
@@ -72,6 +106,44 @@ Jernberg(2024)
 (Neumier 2019)
 \cite{neumeier2019}
 Could not confirm that fixed latency resultet in any better result than varied latency.
+Could not confirm "Kang et al" \cite{kang2018} who stated that fixed latency leads to better driving performance than varying.
+% Kang did not at all mention fixed vs variable latencies. 
+
+(Brandernburger 2023)
+\cite{brandenburger2023vqreactiontimertc}
+Test of human factors and realiable communcations via 5g
+"Limited literature on:" 
+"Positive effect of bitrate on quaility", "Stalling has worse effect on QoExperience, if bitrate is higher"
+"Higher frame rate not linked to information assimiliation, but increased user enjoyment"
+
+Tested with three different levels of bitrate
+1, 6, 24 Mbps
+5, 15, 25 FPS
+Stimulus
+Light signal, Distance marker
+
+Measurements
+Responce accuracy
+Responce speed
+
+Study 1:
+Higher bitrate -> faster answears, more correct
+Higher FPS -> same speed on answear, same amount of correct
+
+Study 2:
+Higher bitrate -> same speed on answears, more correct
+Higher FPS -> same speed on answear, same amount of correct
+
+Bitrate is more important (source 5 in PP: https://dl.acm.org/doi/abs/10.1145/2072298.2072351)
+
+Stimulus type:
+Distance marker signs where answeared faster and more correct than light signals
+5000 -> 3000 speed, and 0.51 -> 0.58 and 0.61 -> 0.69
+
+This is promosing new with the implementation of ERTMS as the only input stimulus in signalling threw camera and video stream will be signs as the remote control operatior will get the ETCS directly in the control room. 
+
+
+After certain bitrate less helpful
 
 
 \subsection{Ethics}

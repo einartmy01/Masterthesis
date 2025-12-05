@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.10.18)  23 NOV 2025 13:00
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.10.18)  5 DEC 2025 17:11
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1071,6 +1071,11 @@ Package biblatex Warning: Biber reported the following issues
 
 
 Package biblatex Warning: Biber reported the following issues
+(biblatex)                with 'ouden2022':
+(biblatex)                - article entry 'ouden2022' (references.bib): Invalid format '2025-12-5' of date field 'urldate' - ignoring.
+
+
+Package biblatex Warning: Biber reported the following issues
 (biblatex)                with 'era_ertms':
 (biblatex)                - report entry 'era_ertms' (references.bib): Invalid format '2025-10-9' of date field 'urldate' - ignoring.
 
@@ -1211,7 +1216,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has b
                    \relax 
 l.31 \newpage
               [1] (Sections/03 Theory.tex (Sections/./Tables/GoATable.tex)
-<Images/GoA from UITP.png, id=337, 247.42438pt x 176.66pt>
+<Images/GoA from UITP.png, id=338, 247.42438pt x 176.66pt>
 File: Images/GoA from UITP.png Graphic file (type png)
 <use Images/GoA from UITP.png>
 Package pdftex.def Info: Images/GoA from UITP.png  used on input line 16.
@@ -1219,7 +1224,7 @@ Package pdftex.def Info: Images/GoA from UITP.png  used on input line 16.
 
 
 [2] (Sections/./Tables/ETCSItems.tex
-<Images/ETCS lv1.png, id=351, 507.8975pt x 251.43938pt>
+<Images/ETCS lv1.png, id=353, 507.8975pt x 251.43938pt>
 File: Images/ETCS lv1.png Graphic file (type png)
 <use Images/ETCS lv1.png>
 Package pdftex.def Info: Images/ETCS lv1.png  used on input line 7.
@@ -1227,7 +1232,7 @@ Package pdftex.def Info: Images/ETCS lv1.png  used on input line 7.
 
 
 [3 <./Images/GoA from UITP.png>]
-<Images/ETCS lv2.png, id=365, 504.88625pt x 238.39063pt>
+<Images/ETCS lv2.png, id=367, 504.88625pt x 238.39063pt>
 File: Images/ETCS lv2.png Graphic file (type png)
 <use Images/ETCS lv2.png>
 Package pdftex.def Info: Images/ETCS lv2.png  used on input line 14.
@@ -1235,7 +1240,7 @@ Package pdftex.def Info: Images/ETCS lv2.png  used on input line 14.
 )
 
 [4 <./Images/ETCS lv1.png> <./Images/ETCS lv2.png>]
-<Images/ERTMS-ATO solution.png, id=388, 459.7175pt x 416.05438pt>
+<Images/ERTMS-ATO solution.png, id=390, 459.7175pt x 416.05438pt>
 File: Images/ERTMS-ATO solution.png Graphic file (type png)
 <use Images/ERTMS-ATO solution.png>
 Package pdftex.def Info: Images/ERTMS-ATO solution.png  used on input line 63.
@@ -1250,17 +1255,19 @@ Package pdftex.def Info: Images/ERTMS-ATO solution.png  used on input line 63.
 
 [8] (Sections/04 Related Work.tex
 
-[9])
+[9]
 
-[10] (Sections/05 Method.tex
+[10])
 
-[11])
+[11] (Sections/05 Method.tex
 
-[12] (Sections/06 Results.tex)
+[12])
 
-[13] (Sections/15 Discussion.tex)
+[13] (Sections/06 Results.tex)
 
-[14] (Sections/20 Conclusion.tex)
+[14] (Sections/15 Discussion.tex)
+
+[15] (Sections/20 Conclusion.tex)
 Overfull \hbox (5.4434pt too wide) in paragraph at lines 49--49
 []\OT1/cmr/m/n/10 John W. Creswell. \OT1/cmr/m/it/10 Re-search Design: Qual-it-at-ive, Quant-it-at-ive, and Mixed Meth-ods Ap-proaches\OT1/cmr/m/n/10 .
  []
@@ -1272,10 +1279,10 @@ Overfull \hbox (27.14835pt too wide) in paragraph at lines 49--49
 
 
 
-[15]
-
 [16]
-runsystem(latexminted cleantemp  --timestamp 20251123130003 FAD58DE7366495DB4650CFEFAC2FCD61)...disabled (restricted).
+
+[17]
+runsystem(latexminted cleantemp  --timestamp 20251205171123 FAD58DE7366495DB4650CFEFAC2FCD61)...disabled (restricted).
 
  (main.aux)
  ***********
@@ -1289,17 +1296,17 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 43517 strings out of 468081
- 939603 string characters out of 5425788
- 1869076 words of memory out of 5000000
- 71412 multiletter control sequences out of 15000+600000
+ 43531 strings out of 468081
+ 940171 string characters out of 5425788
+ 1867286 words of memory out of 5000000
+ 71422 multiletter control sequences out of 15000+600000
  637806 words of font info for 75 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  117i,12n,121p,976b,2879s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\einar\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/einar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/einar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/einar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/einar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/einar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/einar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/einar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/Users/einar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/einar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/einar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on main.pdf (22 pages, 946037 bytes).
+Output written on main.pdf (23 pages, 952702 bytes).
 PDF statistics:
- 604 PDF objects out of 1000 (max. 8388607)
- 114 named destinations out of 1000 (max. 500000)
+ 623 PDF objects out of 1000 (max. 8388607)
+ 118 named destinations out of 1000 (max. 500000)
  462 words of extra memory for PDF output out of 10000 (max. 10000000)
 

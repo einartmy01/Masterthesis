@@ -27,28 +27,28 @@
 \contentsline {subsection}{\numberline {3.1}Other Experiences}{9}{subsection.3.1}%
 \contentsline {subsubsection}{\numberline {3.1.1}Train Control}{9}{subsubsection.3.1.1}%
 \contentsline {subsubsection}{\numberline {3.1.2}ATO-Cargo Project}{9}{subsubsection.3.1.2}%
-\contentsline {subsubsection}{\numberline {3.1.3}Car Control}{10}{subsubsection.3.1.3}%
+\contentsline {subsubsection}{\numberline {3.1.3}Car Control}{9}{subsubsection.3.1.3}%
 \contentsline {subsubsection}{\numberline {3.1.4}Drone Control}{10}{subsubsection.3.1.4}%
 \contentsline {subsubsection}{\numberline {3.1.5}Crane Control?}{10}{subsubsection.3.1.5}%
 \contentsline {subsubsection}{\numberline {3.1.6}Offshore Control}{10}{subsubsection.3.1.6}%
 \contentsline {subsection}{\numberline {3.2}Human factors}{10}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}Ethics}{10}{subsection.3.3}%
-\contentsline {subsection}{\numberline {3.4}Cyber Security}{10}{subsection.3.4}%
-\contentsline {subsection}{\numberline {3.5}Calculation of latency}{10}{subsection.3.5}%
-\contentsline {section}{\numberline {4}Method}{11}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Research Methodology}{11}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Literature Review Strategy}{11}{subsection.4.2}%
-\contentsline {subsubsection}{\numberline {4.2.1}Search Strategy and Databases}{11}{subsubsection.4.2.1}%
-\contentsline {subsubsection}{\numberline {4.2.2}Inclusion Criteria}{11}{subsubsection.4.2.2}%
-\contentsline {subsubsection}{\numberline {4.2.3}Search Queries and Refinement}{12}{subsubsection.4.2.3}%
-\contentsline {subsection}{\numberline {4.3}Supporting Tools}{12}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}Parameters for latency testing}{12}{subsection.4.4}%
-\contentsline {subsection}{\numberline {4.5}Parameters for latency evaluation}{12}{subsection.4.5}%
-\contentsline {subsection}{\numberline {4.6}Calculations of parameters}{12}{subsection.4.6}%
-\contentsline {section}{\numberline {5}Results og discussion}{13}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Human factors results}{13}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}Comparment of latency for different vehicles}{13}{subsection.5.2}%
-\contentsline {subsection}{\numberline {5.3}Threshold for acceptable latency}{13}{subsection.5.3}%
-\contentsline {section}{\numberline {6}Discussion}{14}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Theory v. Practical test}{14}{subsection.6.1}%
-\contentsline {section}{Bibliography}{15}{section*.13}%
+\contentsline {subsection}{\numberline {3.3}Ethics}{11}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Cyber Security}{11}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}Calculation of latency}{11}{subsection.3.5}%
+\contentsline {section}{\numberline {4}Method}{12}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Research Methodology}{12}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Literature Review Strategy}{12}{subsection.4.2}%
+\contentsline {subsubsection}{\numberline {4.2.1}Search Strategy and Databases}{12}{subsubsection.4.2.1}%
+\contentsline {subsubsection}{\numberline {4.2.2}Inclusion Criteria}{12}{subsubsection.4.2.2}%
+\contentsline {subsubsection}{\numberline {4.2.3}Search Queries and Refinement}{13}{subsubsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.3}Supporting Tools}{13}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Parameters for latency testing}{13}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Parameters for latency evaluation}{13}{subsection.4.5}%
+\contentsline {subsection}{\numberline {4.6}Calculations of parameters}{13}{subsection.4.6}%
+\contentsline {section}{\numberline {5}Results og discussion}{14}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Human factors results}{14}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Comparment of latency for different vehicles}{14}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Threshold for acceptable latency}{14}{subsection.5.3}%
+\contentsline {section}{\numberline {6}Discussion}{15}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Theory v. Practical test}{15}{subsection.6.1}%
+\contentsline {section}{Bibliography}{16}{section*.13}%

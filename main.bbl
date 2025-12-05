@@ -109,7 +109,11 @@
       \field{labeltitlesource}{title}
       \field{title}{ITU-T G.1051 -- Latency Measurement and Methodologies}
       \field{type}{techreport}
+      \field{urlday}{20}
+      \field{urlmonth}{10}
+      \field{urlyear}{2025}
       \field{year}{2023}
+      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://www.itu.int/rec/dologin_pub.asp?lang=e&id=T-REC-G.1051-202303-I!!PDF-E&type=items
       \endverb
@@ -194,6 +198,52 @@
       \endverb
       \verb{url}
       \verb https://ieeexplore.ieee.org/document/9984654
+      \endverb
+    \endentry
+    \entry{brandenburger2023vqreactiontimertc}{inproceedings}{}{}
+      \name{author}{3}{}{%
+        {{hash=9c8c650c0c317ba42080dc0d88101b41}{%
+           family={Brandenburger},
+           familyi={B\bibinitperiod},
+           given={Niels},
+           giveni={N\bibinitperiod}}}%
+        {{hash=8719edb5ef604d1aaeffa05902a1872c}{%
+           family={Strauß},
+           familyi={S\bibinitperiod},
+           given={Friedrich\bibnamedelima Maximilian},
+           giveni={F\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=081ca7d691f30ccf1096e20e9ac3812e}{%
+           family={Naumann},
+           familyi={N\bibinitperiod},
+           given={Anja},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {DLR}%
+      }
+      \strng{namehash}{a6ab8d587636550d84bac7c72d6337b5}
+      \strng{fullhash}{a012e850a5b727d6e5e9eb28fb1b7a20}
+      \strng{fullhashraw}{a012e850a5b727d6e5e9eb28fb1b7a20}
+      \strng{bibnamehash}{a012e850a5b727d6e5e9eb28fb1b7a20}
+      \strng{authorbibnamehash}{a012e850a5b727d6e5e9eb28fb1b7a20}
+      \strng{authornamehash}{a6ab8d587636550d84bac7c72d6337b5}
+      \strng{authorfullhash}{a012e850a5b727d6e5e9eb28fb1b7a20}
+      \strng{authorfullhashraw}{a012e850a5b727d6e5e9eb28fb1b7a20}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Effects of Video Quality on Perception and Reaction Time in Video-based Remote Train Control}
+      \field{urlday}{5}
+      \field{urlmonth}{12}
+      \field{urlyear}{2025}
+      \field{year}{2023}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://elib.dlr.de/194929/1/PresentationHFES2023_DLR.pdf
+      \endverb
+      \verb{url}
+      \verb https://elib.dlr.de/194929/1/PresentationHFES2023_DLR.pdf
       \endverb
     \endentry
     \entry{creswell2014researchdesign}{book}{}{}
@@ -449,7 +499,11 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Regulations on Vehicles on the National Railway Network (Unofficial Translation)}
+      \field{urlday}{20}
+      \field{urlmonth}{10}
+      \field{urlyear}{2025}
       \field{year}{2013}
+      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://www.sjt.no/globalassets/00_generell/english/pdf-files/unofficial-translation-kjoretoyforskrift-en.pdf
       \endverb
@@ -596,6 +650,54 @@
       \endverb
       \verb{url}
       \verb https://www.researchgate.net/publication/329369713_Real-Time_Video_Latency_Measurement_between_a_Robot_and_Its_Remote_Control_Station_Causes_and_Mitigation
+      \endverb
+    \endentry
+    \entry{kang2018}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=a33b3e4c4fb7eca8d1ffb839261b8f9c}{%
+           family={Kang},
+           familyi={K\bibinitperiod},
+           given={Lei},
+           giveni={L\bibinitperiod}}}%
+        {{hash=def8807560ed10dea6acf8e850733c00}{%
+           family={Qi},
+           familyi={Q\bibinitperiod},
+           given={Bozhao},
+           giveni={B\bibinitperiod}}}%
+        {{hash=16e27adac1b31563e17c86920f0c910e}{%
+           family={Zhao},
+           familyi={Z\bibinitperiod},
+           given={Wei},
+           giveni={W\bibinitperiod}}}%
+        {{hash=226a1902b861d213e01664620152fbb2}{%
+           family={Banerjee},
+           familyi={B\bibinitperiod},
+           given={Suman},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{f7b08c1e9871633ba8f4216ae8bbe164}
+      \strng{fullhash}{3031bb32502abb3813cfba61db18bbd4}
+      \strng{fullhashraw}{3031bb32502abb3813cfba61db18bbd4}
+      \strng{bibnamehash}{f7b08c1e9871633ba8f4216ae8bbe164}
+      \strng{authorbibnamehash}{f7b08c1e9871633ba8f4216ae8bbe164}
+      \strng{authornamehash}{f7b08c1e9871633ba8f4216ae8bbe164}
+      \strng{authorfullhash}{3031bb32502abb3813cfba61db18bbd4}
+      \strng{authorfullhashraw}{3031bb32502abb3813cfba61db18bbd4}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Augmenting Self-Driving with Remote Control: Challenges and Directions}
+      \field{urlday}{5}
+      \field{urlmonth}{12}
+      \field{urlyear}{2025}
+      \field{year}{2018}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://dl.acm.org/doi/pdf/10.1145/3177102.3177104
+      \endverb
+      \verb{url}
+      \verb https://dl.acm.org/doi/pdf/10.1145/3177102.3177104
       \endverb
     \endentry
     \entry{pandey2022wifi}{article}{}{}
@@ -865,13 +967,57 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Network Statement / Access Conditions 2025}
+      \field{urlday}{20}
+      \field{urlmonth}{10}
+      \field{urlyear}{2025}
       \field{year}{2025}
+      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://oppslagsverk.banenor.no/en/network-statement/2025/access-conditions/
       \endverb
       \verb{url}
       \verb https://oppslagsverk.banenor.no/en/network-statement/2025/access-conditions/
       \endverb
+    \endentry
+    \entry{ouden2022}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=ed59d4f633b8cbd964aa4332c99fa19f}{%
+           family={Ouden},
+           familyi={O\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=b905feae43d8dd86aafb8ca21b3c767f}{%
+           family={Ho},
+           familyi={H\bibinitperiod},
+           given={V.},
+           giveni={V\bibinitperiod}}}%
+        {{hash=5cd0360088e505196c64b183a43babd6}{%
+           family={Smagt},
+           familyi={S\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{b30013ffbf0e8f6d3d0e662e04f89264}
+      \strng{fullhash}{bdb9202365b836107f576d4bb876d514}
+      \strng{fullhashraw}{bdb9202365b836107f576d4bb876d514}
+      \strng{bibnamehash}{bdb9202365b836107f576d4bb876d514}
+      \strng{authorbibnamehash}{bdb9202365b836107f576d4bb876d514}
+      \strng{authornamehash}{b30013ffbf0e8f6d3d0e662e04f89264}
+      \strng{authorfullhash}{bdb9202365b836107f576d4bb876d514}
+      \strng{authorfullhashraw}{bdb9202365b836107f576d4bb876d514}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Design and Evaluation of Remote Driving Architecture on 4G and 5G Mobile Networks}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb https://www.frontiersin.org/journals/future-transportation/articles/10.3389/ffutr.2021.801567/full
+      \endverb
+      \verb{url}
+      \verb https://www.frontiersin.org/journals/future-transportation/articles/10.3389/ffutr.2021.801567/full
+      \endverb
+      \warn{\item article entry 'ouden2022' (references.bib): Invalid format '2025-12-5' of date field 'urldate' - ignoring}
     \endentry
     \entry{uitp2018metro}{report}{}{}
       \name{author}{1}{}{%
@@ -974,7 +1120,11 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Technical Specifications for Interoperability (TSIs)}
+      \field{urlday}{20}
+      \field{urlmonth}{10}
+      \field{urlyear}{2025}
       \field{year}{2016}
+      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://www.era.europa.eu/domains/technical-specifications-interoperability_en
       \endverb
