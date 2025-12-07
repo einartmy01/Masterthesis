@@ -43,14 +43,17 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{ATO-Cargo -- Automatic Train Operation Technologies for Cargo}
+      \field{urlday}{8}
+      \field{urlmonth}{10}
+      \field{urlyear}{2025}
       \field{year}{2025}
+      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://www.dlr.de/en/ts/research-transfer/projects/ato-cargo
       \endverb
       \verb{url}
       \verb https://www.dlr.de/en/ts/research-transfer/projects/ato-cargo
       \endverb
-      \warn{\item report entry 'dlr2025atocargo' (references.bib): Invalid format '2025-10-8' of date field 'urldate' - ignoring}
     \endentry
     \entry{iec62290}{report}{}{}
       \name{author}{1}{}{%
@@ -314,6 +317,61 @@
       \verb https://www.dnsstuff.com/network-latency-test-tools
       \endverb
     \endentry
+    \entry{brunnström2020}{report}{}{}
+      \name{author}{5}{}{%
+        {{hash=f9df10b760fcaa3dc754779263c2d93d}{%
+           family={Elijs\bibnamedelima Dimab},
+           familyi={E\bibinitperiod\bibinitdelim D\bibinitperiod},
+           given={Kjell\bibnamedelima Brunnströma},
+           giveni={K\bibinitperiod\bibinitdelim B\bibinitperiod},
+           prefix={an},
+           prefixi={a\bibinitperiod}}}%
+        {{hash=552f57366c84b111bdd605fca431b77e}{%
+           family={Qureshic},
+           familyi={Q\bibinitperiod},
+           given={Tahir},
+           giveni={T\bibinitperiod}}}%
+        {{hash=7a42e1784c1ee13e364d7c40af4bfe0e}{%
+           family={Johansond},
+           familyi={J\bibinitperiod},
+           given={Mathias},
+           giveni={M\bibinitperiod}}}%
+        {{hash=da5abaad7b8edbc0393b50a223c72603}{%
+           family={Anderssonb},
+           familyi={A\bibinitperiod},
+           given={Mattias},
+           giveni={M\bibinitperiod}}}%
+        {{hash=6023ab41fafde876a8f550bdbaa67494}{%
+           family={Sjöströmb},
+           familyi={S\bibinitperiod},
+           given={Mårten},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{e9ba1c890635176e7396ae99662ab590}
+      \strng{fullhash}{bf57bfd89a1a0620698c52045eaaed4d}
+      \strng{fullhashraw}{bf57bfd89a1a0620698c52045eaaed4d}
+      \strng{bibnamehash}{e9ba1c890635176e7396ae99662ab590}
+      \strng{authorbibnamehash}{e9ba1c890635176e7396ae99662ab590}
+      \strng{authornamehash}{e9ba1c890635176e7396ae99662ab590}
+      \strng{authorfullhash}{bf57bfd89a1a0620698c52045eaaed4d}
+      \strng{authorfullhashraw}{bf57bfd89a1a0620698c52045eaaed4d}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Latency impact on Quality of Experience in a virtual reality simulator for remote control of machines}
+      \field{urlday}{7}
+      \field{urlmonth}{12}
+      \field{urlyear}{2025}
+      \field{year}{2020}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S0923596520301648
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S0923596520301648
+      \endverb
+    \endentry
     \entry{eu_etcs_levels}{report}{}{}
       \name{author}{2}{}{%
         {{hash=50ef538b2bc72ee3e70c75217f4c12c4}{%
@@ -338,14 +396,17 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{ETCS Levels and Modes}
+      \field{urlday}{9}
+      \field{urlmonth}{10}
+      \field{urlyear}{2025}
       \field{year}{2023}
+      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://transport.ec.europa.eu/transport-modes/rail/ertms/what-ertms-and-how-does-it-work/etcs-levels-and-modes_en
       \endverb
       \verb{url}
       \verb https://transport.ec.europa.eu/transport-modes/rail/ertms/what-ertms-and-how-does-it-work/etcs-levels-and-modes_en
       \endverb
-      \warn{\item report entry 'eu_etcs_levels' (references.bib): Invalid format '2025-10-9' of date field 'urldate' - ignoring}
     \endentry
     \entry{george2021mixedmethods}{misc}{}{}
       \name{author}{1}{}{%
@@ -469,14 +530,17 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Grades of Automation (GoA) Explained}
+      \field{urlday}{1}
+      \field{urlmonth}{10}
+      \field{urlyear}{2025}
       \field{year}{2023}
+      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://www.cbtcsolutions.ca/goa
       \endverb
       \verb{url}
       \verb https://www.cbtcsolutions.ca/goa
       \endverb
-      \warn{\item misc entry 'cbtc_goa' (references.bib): Invalid format '2025-10-1' of date field 'urldate' - ignoring}
     \endentry
     \entry{sjt_regulations}{misc}{}{}
       \name{author}{1}{}{%
@@ -511,7 +575,7 @@
       \verb https://www.sjt.no/globalassets/00_generell/english/pdf-files/unofficial-translation-kjoretoyforskrift-en.pdf
       \endverb
     \endentry
-    \entry{jernberg2024latency}{article}{}{}
+    \entry{jernberg2024}{article}{}{}
       \name{author}{3}{}{%
         {{hash=8dbd2d193fe1e5f56b48429f310d6b5c}{%
            family={Jernberg},
@@ -937,14 +1001,17 @@
       \field{labeltitlesource}{title}
       \field{title}{Aspects of Automatic Train Control}
       \field{type}{phdthesis}
+      \field{urlday}{27}
+      \field{urlmonth}{9}
+      \field{urlyear}{2025}
       \field{year}{1980}
+      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://repository.lboro.ac.uk/articles/thesis/Aspects_of_automatic_train_control/9537395/1/files/17166803.pdf
       \endverb
       \verb{url}
       \verb https://repository.lboro.ac.uk/articles/thesis/Aspects_of_automatic_train_control/9537395/1/files/17166803.pdf
       \endverb
-      \warn{\item thesis entry 'milroy1980aspects' (references.bib): Invalid format '2025-9-27' of date field 'urldate' - ignoring}
     \endentry
     \entry{neumeier2019}{article}{}{}
       \name{author}{6}{}{%
@@ -1068,14 +1135,17 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Design and Evaluation of Remote Driving Architecture on 4G and 5G Mobile Networks}
+      \field{urlday}{5}
+      \field{urlmonth}{12}
+      \field{urlyear}{2025}
       \field{year}{2022}
+      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://www.frontiersin.org/journals/future-transportation/articles/10.3389/ffutr.2021.801567/full
       \endverb
       \verb{url}
       \verb https://www.frontiersin.org/journals/future-transportation/articles/10.3389/ffutr.2021.801567/full
       \endverb
-      \warn{\item article entry 'ouden2022' (references.bib): Invalid format '2025-12-5' of date field 'urldate' - ignoring}
     \endentry
     \entry{uitp2018metro}{report}{}{}
       \name{author}{1}{}{%
@@ -1143,13 +1213,16 @@
       \field{labeltitlesource}{title}
       \field{title}{ERTMS}
       \field{type}{techreport}
+      \field{urlday}{9}
+      \field{urlmonth}{10}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://www.era.europa.eu/domains/infrastructure/european-rail-traffic-management-system-ertms_en
       \endverb
       \verb{url}
       \verb https://www.era.europa.eu/domains/infrastructure/european-rail-traffic-management-system-ertms_en
       \endverb
-      \warn{\item report entry 'era_ertms' (references.bib): Invalid format '2025-10-9' of date field 'urldate' - ignoring}
     \endentry
     \entry{era_tsi}{report}{}{}
       \name{author}{1}{}{%
@@ -1257,6 +1330,60 @@
       \endverb
       \verb{url}
       \verb https://www.techtarget.com/whatis/definition/Request-for-Comments-RFC
+      \endverb
+    \endentry
+    \entry{fp2r2dato2024report}{report}{}{}
+      \name{author}{4}{}{%
+        {{hash=cd886c93b757b80473e29e30971e6127}{%
+           family={Vela},
+           familyi={V\bibinitperiod},
+           given={Nacho\bibnamedelima Celaya},
+           giveni={N\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=4f2e0e22b36a99a94af9f34dc7bc5638}{%
+           family={Mugueta},
+           familyi={M\bibinitperiod},
+           given={Itziar},
+           giveni={I\bibinitperiod}}}%
+        {{hash=43e813f219df5c31fbb8050ea2cea7a9}{%
+           family={Goya},
+           familyi={G\bibinitperiod},
+           given={Jon},
+           giveni={J\bibinitperiod}}}%
+        {{hash=c9bc18f8836f14ab0cb87ed9fdcc6890}{%
+           family={Klago},
+           familyi={K\bibinitperiod},
+           given={Dusan\bibnamedelima Patrick},
+           giveni={D\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+      }
+      \list{institution}{4}{%
+        {CAF}%
+        {STR}%
+        {FP2R2DATO}%
+        {Europe's Rail}%
+      }
+      \strng{namehash}{00166582324c5f20794040aea22faa72}
+      \strng{fullhash}{d21653a27ea9b4091f5a8caf58f2f819}
+      \strng{fullhashraw}{d21653a27ea9b4091f5a8caf58f2f819}
+      \strng{bibnamehash}{00166582324c5f20794040aea22faa72}
+      \strng{authorbibnamehash}{00166582324c5f20794040aea22faa72}
+      \strng{authornamehash}{00166582324c5f20794040aea22faa72}
+      \strng{authorfullhash}{d21653a27ea9b4091f5a8caf58f2f819}
+      \strng{authorfullhashraw}{d21653a27ea9b4091f5a8caf58f2f819}
+      \field{sortinit}{V}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{D41.2 - Testing reports and assessment}
+      \field{urlday}{7}
+      \field{urlmonth}{12}
+      \field{urlyear}{2025}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://rail-research.europa.eu/wp-content/uploads/2025/02/D41.2-Testing-reports-assessment.pdf
+      \endverb
+      \verb{url}
+      \verb https://rail-research.europa.eu/wp-content/uploads/2025/02/D41.2-Testing-reports-assessment.pdf
       \endverb
     \endentry
   \enddatalist

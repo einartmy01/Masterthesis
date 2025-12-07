@@ -1,6 +1,6 @@
 \babel@toc {british}{}\relax 
-\contentsline {section}{List of Figures}{iv}{section*.4}%
-\contentsline {section}{List of Tables}{iv}{section*.5}%
+\contentsline {section}{List of Figures}{iv}{Doc-Start}%
+\contentsline {section}{List of Tables}{iv}{Doc-Start}%
 \contentsline {section}{\numberline {1}Introduction}{1}{section.1}%
 \contentsline {subsection}{\numberline {1.1}Purpose}{1}{subsection.1.1}%
 \contentsline {subsubsection}{\numberline {1.1.1}Research Questions}{1}{subsubsection.1.1.1}%
@@ -12,8 +12,8 @@
 \contentsline {subsection}{\numberline {2.2}GoA}{2}{subsection.2.2}%
 \contentsline {subsection}{\numberline {2.3}ERTMS}{3}{subsection.2.3}%
 \contentsline {subsection}{\numberline {2.4}ETCS}{3}{subsection.2.4}%
-\contentsline {paragraph}{Levels}{3}{section*.8}%
-\contentsline {paragraph}{Modes}{4}{section*.11}%
+\contentsline {paragraph}{\numberline {2.4.0.1}Levels}{3}{paragraph.2.4.0.1}%
+\contentsline {paragraph}{\numberline {2.4.0.2}Modes}{4}{paragraph.2.4.0.2}%
 \contentsline {subsection}{\numberline {2.5}Cellular communications}{4}{subsection.2.5}%
 \contentsline {subsubsection}{\numberline {2.5.1}5G URLLC}{4}{subsubsection.2.5.1}%
 \contentsline {subsubsection}{\numberline {2.5.2}GSM-R}{5}{subsubsection.2.5.2}%
@@ -24,33 +24,49 @@
 \contentsline {subsubsection}{\numberline {2.7.1}Latency Measurements}{6}{subsubsection.2.7.1}%
 \contentsline {subsection}{\numberline {2.8}Differnt aspects of latency}{7}{subsection.2.8}%
 \contentsline {subsection}{\numberline {2.9}Regulations}{7}{subsection.2.9}%
+\contentsline {subsubsection}{\numberline {2.9.1}WP41 - Validation Criteria Tramways}{8}{subsubsection.2.9.1}%
 \contentsline {section}{\numberline {3}Related Work}{9}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Other Experiences}{9}{subsection.3.1}%
 \contentsline {subsubsection}{\numberline {3.1.1}Train Control}{9}{subsubsection.3.1.1}%
-\contentsline {paragraph}{ATO-Cargo Project}{9}{section*.13}%
-\contentsline {subsubsection}{\numberline {3.1.2}Car Control}{10}{subsubsection.3.1.2}%
-\contentsline {subsubsection}{\numberline {3.1.3}Drone Control}{11}{subsubsection.3.1.3}%
-\contentsline {subsubsection}{\numberline {3.1.4}Crane Control?}{11}{subsubsection.3.1.4}%
-\contentsline {subsubsection}{\numberline {3.1.5}Offshore Control}{12}{subsubsection.3.1.5}%
-\contentsline {subsection}{\numberline {3.2}Human factors}{12}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}Ethics}{13}{subsection.3.3}%
-\contentsline {subsection}{\numberline {3.4}Cyber Security}{13}{subsection.3.4}%
-\contentsline {subsection}{\numberline {3.5}Calculation of latency}{13}{subsection.3.5}%
-\contentsline {section}{\numberline {4}Method}{14}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Research Methodology}{14}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Literature Review Strategy}{14}{subsection.4.2}%
-\contentsline {subsubsection}{\numberline {4.2.1}Search Strategy and Databases}{14}{subsubsection.4.2.1}%
-\contentsline {subsubsection}{\numberline {4.2.2}Inclusion Criteria}{14}{subsubsection.4.2.2}%
-\contentsline {subsubsection}{\numberline {4.2.3}Search Queries and Refinement}{15}{subsubsection.4.2.3}%
-\contentsline {subsection}{\numberline {4.3}Supporting Tools}{15}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}Parameters for latency testing}{15}{subsection.4.4}%
-\contentsline {subsection}{\numberline {4.5}Parameters for latency evaluation}{15}{subsection.4.5}%
-\contentsline {subsection}{\numberline {4.6}Calculations of parameters}{16}{subsection.4.6}%
-\contentsline {section}{\numberline {5}Results og discussion}{17}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Human factors results}{17}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}Comparment of latency for different vehicles}{17}{subsection.5.2}%
-\contentsline {subsection}{\numberline {5.3}Threshold for acceptable latency}{17}{subsection.5.3}%
-\contentsline {section}{\numberline {6}Discussion}{18}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Theory v. Practical test}{18}{subsection.6.1}%
-\contentsline {subsection}{\numberline {6.2}Future work}{18}{subsection.6.2}%
-\contentsline {section}{Bibliography}{19}{section*.16}%
+\contentsline {paragraph}{\numberline {3.1.1.1}ATO-Cargo Project}{9}{paragraph.3.1.1.1}%
+\contentsline {paragraph}{\numberline {3.1.1.2}Jürgensen 2025}{9}{paragraph.3.1.1.2}%
+\contentsline {paragraph}{\numberline {3.1.1.3}Kozarevic 2024}{9}{paragraph.3.1.1.3}%
+\contentsline {paragraph}{\numberline {3.1.1.4}Mejías 2024}{9}{paragraph.3.1.1.4}%
+\contentsline {paragraph}{\numberline {3.1.1.5}FP2R2Dato, EuropesRail 2023 D5.4}{10}{paragraph.3.1.1.5}%
+\contentsline {paragraph}{\numberline {3.1.1.6}FP2R2Dato, EuropesRail 2024 D41.2}{11}{paragraph.3.1.1.6}%
+\contentsline {paragraph}{\numberline {3.1.1.7}Brandernburger 2023}{11}{paragraph.3.1.1.7}%
+\contentsline {subsubsection}{\numberline {3.1.2}Car Control}{11}{subsubsection.3.1.2}%
+\contentsline {paragraph}{\numberline {3.1.2.1}Sato 2021}{11}{paragraph.3.1.2.1}%
+\contentsline {paragraph}{\numberline {3.1.2.2}Nakamura 2021}{11}{paragraph.3.1.2.2}%
+\contentsline {paragraph}{\numberline {3.1.2.3}Ouden 2022}{11}{paragraph.3.1.2.3}%
+\contentsline {paragraph}{\numberline {3.1.2.4}Jernberg 2024}{12}{paragraph.3.1.2.4}%
+\contentsline {paragraph}{\numberline {3.1.2.5}Kaknjo 2018}{12}{paragraph.3.1.2.5}%
+\contentsline {paragraph}{\numberline {3.1.2.6}Neumier 2019}{12}{paragraph.3.1.2.6}%
+\contentsline {paragraph}{\numberline {3.1.2.7}Kang 2018}{12}{paragraph.3.1.2.7}%
+\contentsline {subsubsection}{\numberline {3.1.3}Drone Control}{12}{subsubsection.3.1.3}%
+\contentsline {subsubsection}{\numberline {3.1.4}Crane Control}{13}{subsubsection.3.1.4}%
+\contentsline {paragraph}{\numberline {3.1.4.1}Brunnström 2020}{13}{paragraph.3.1.4.1}%
+\contentsline {subsubsection}{\numberline {3.1.5}Offshore Control}{13}{subsubsection.3.1.5}%
+\contentsline {subsection}{\numberline {3.2}Human factors}{13}{subsection.3.2}%
+\contentsline {subsubsection}{\numberline {3.2.1}Adaptation to stable latency.}{13}{subsubsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.3}Ethics}{14}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Cyber Security}{14}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}Calculation of latency}{14}{subsection.3.5}%
+\contentsline {section}{\numberline {4}Method}{15}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Research Methodology}{15}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Literature Review Strategy}{15}{subsection.4.2}%
+\contentsline {subsubsection}{\numberline {4.2.1}Search Strategy and Databases}{15}{subsubsection.4.2.1}%
+\contentsline {subsubsection}{\numberline {4.2.2}Inclusion Criteria}{15}{subsubsection.4.2.2}%
+\contentsline {subsubsection}{\numberline {4.2.3}Search Queries and Refinement}{16}{subsubsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.3}Supporting Tools}{16}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Parameters for latency testing}{16}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Parameters for latency evaluation}{17}{subsection.4.5}%
+\contentsline {subsection}{\numberline {4.6}Calculations of parameters}{17}{subsection.4.6}%
+\contentsline {section}{\numberline {5}Results og discussion}{18}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Human factors results}{18}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Comparment of latency for different vehicles}{18}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Threshold for acceptable latency}{19}{subsection.5.3}%
+\contentsline {section}{\numberline {6}Discussion}{20}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Theory v. Practical test}{20}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Future work}{20}{subsection.6.2}%
+\contentsline {section}{Bibliography}{21}{subsection.6.2}%

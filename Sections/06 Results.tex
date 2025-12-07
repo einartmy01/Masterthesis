@@ -5,26 +5,73 @@ A page with all the information i found and aanalyzise of it.
 1. part analyzise
 2. part future steps}
 
+
 \subsection{Human factors results}
 Discuss how a high stable latency could be more acceptable than a low unstable latency due to info found in Theory, Human Factors.
 
-\cite{jernberg2024latency}
-This article conlcude that the remote operators adapt to the circumstances. Adding safety margins adjusted for their personal limit.
+\cite{brandenburger2023vqreactiontimertc}
+Test of human factors and realiable communcations via 5g
+"Limited literature on:" 
+"Positive effect of bitrate on quaility", "Stalling has worse effect on QoExperience, if bitrate is higher"
+"Higher frame rate not linked to information assimiliation, but increased user enjoyment"
+Tested with three different levels of bitrate
+1, 6, 24 Mbps at 5, 15, 25 FPS
+Stimulus: Light signal, Distance marker
+Measurements: Responce accuracy, Responce speed
+
+Study 1:
+Higher bitrate -> faster answears, more correct
+Higher FPS -> same speed on answear, same amount of correct
+Study 2:
+Higher bitrate -> same speed on answears, more correct
+Higher FPS -> same speed on answear, same amount of correct
+
+Bitrate is more important (source 5 in PP: https://dl.acm.org/doi/abs/10.1145/2072298.2072351)
+Stimulus type:
+Distance marker signs where answeared faster and more correct than light signals
+5000 -> 3000 ms speed, and 0.51 -> 0.58 and 0.61 -> 0.69 correct.
+This is promosing new with the implementation of ERTMS as the only input stimulus in signalling threw camera and video stream will be signs as the remote control operatior will get the ETCS directly in the control room. 
+After certain bitrate less helpful
+
+
+\cite{jernberg2024}
+"However, it also seems to be the case that remote operators adapt to the circumstances they find themselves in; for example, they drive with a safety margin reducing risks to their personal chosen limit and do not override the barriers of their own choice."
+
+"The reaction time in H1 (a car cutting in into the ego lane) increased more for each latency condition than the offset in time that the manipulation created. This suggests that even an unperceived increase in latency (based on subjective ratings) is affecting the participants in a way that makes them less observant of their surroundings. Combined with a self-reported decline in performance and control as the latency increases, a conclusion could be that the added mental workload is turning the primary driving task into a distraction in itself, by forcing the operator to devote an unusual amount of attention just to maintain speed and lane position."
+
+\import{./Tables/}{HumanFactorResults}
+INSERT TABLE.
+
+Effect
+
+These papers:
+Car:
+
+
 
 \subsection{Comparment of latency for different vehicles}
+After reading threw an  reasearch paper on the topic of how latency treshold are set. It became apparent to me that very few have done enhanced research on this very topic for railway remote control. Papers such as XX, who mentions anything about the maximum latency before loosing performance reference sources of other vehicles and their tests of remote control. 
 
-
-Important to mention the hazards and proxy hazards that driving met on:
-\cite{jernberg2024latency}
-That was:
-H1/P1: Car pulling over into your lane.
-H2/P2: Car crossing from opposing lane threw your lane.
-H3/P3: Car with "vikeplikt" does not stop in crossing.
-H4/P4: Child runs into traffic from behind a bus.
-H5/P5: Bicycal in lane that driver needs to pass in oppsing lane.
-
+In the case of XX who reference Jernberg 2024 adn their findings of. Jernberg goes into details of the hazards and proxy hazards that the driver were facing. As mentionen in Section 4 "Related Work" \cite{jernberg2024}
 How in control of the vehicle were you during the drive (1-5)
 Baseline 3.7, 100ms 3.5, 200ms 2.9
 
 
+
+The most referenced remote control latency effect paper, Neumeier's paper XX, talks about how participent leave the car lane significanlty more with higher latency, even tho with stable high latency. But:
+"In the Parking scenario, even no differences for whatever latency could be revealed" \cite{neumeier2019}
+Scenarios, was driving with turns, and one parking. No hazards except latency. 
+
+\cite{fp2r2dato2024report} % Need more information about bitsize + other
+D41.2 - Testing reports \& assessment 
+Results of the remote driving of tramways demonstrator. 
+Image latency 
+- G2G, (capturing processing, compression, transmission, reception, decompressing, displaying)
+- Oslo to Berlin
+- Two atomic clocks on phones.
+- Measured to be 340 - 380 ms (Always under 400 ms)
+
+\import{./Tables/}{LatencyThresholdResults}
 \subsection{Threshold for acceptable latency}
+Maybe include calculations of speed of train, compare to the previous and discuss a posible latency treshhold. End in that research on spesificly train drivers on railway should be tested.
+

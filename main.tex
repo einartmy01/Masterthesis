@@ -1,9 +1,29 @@
 % Author - Einar, NTNU MTP
 \documentclass{article}
 
+% Make Latex stop complaining
+\usepackage{silence}
+\WarningFilter{latex}{`h' float specifier changed to `ht'}
 % Importing document settings from our file "packages.sty"
 \usepackage{packages}
+\usepackage{titlesec}
+\usepackage{float}
 
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{geometry} % For better page margins in the example
+
+% Define a new column type 'C' for centered cells in tabularx
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+
+
+% For adding paragraph to numbers. It is possible to get it into List as well, but i didnt yet.
+\setcounter{secnumdepth}{4}
+\titleformat{\paragraph}
+{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
 
 % Beginning of document
 \begin{document}

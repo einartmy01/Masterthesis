@@ -1,44 +1,40 @@
 [0] Config.pm:328> INFO - This is Biber 2.21
 [0] Config.pm:331> INFO - Logfile is 'main.blg'
-[99] biber-MSWIN64:342> INFO - === 
-[149] Biber.pm:421> INFO - Reading 'main.bcf'
-[272] Biber.pm:1002> INFO - Found 30 citekeys in bib section 0
-[286] Biber.pm:4487> INFO - Processing section 0
-[297] Biber.pm:4678> INFO - Looking for bibtex file 'references.bib' for section 0
-[418] bibtex.pm:1713> INFO - LaTeX decoding ...
-[464] bibtex.pm:1519> INFO - Found BibTeX data source 'references.bib'
-[626] UCollate.pm:68> INFO - Overriding locale 'en-GB' defaults 'variable = shifted' with 'variable = non-ignorable'
-[626] UCollate.pm:68> INFO - Overriding locale 'en-GB' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[628] Biber.pm:4307> INFO - Sorting list 'nty/global//global/global/global' of type 'entry' with template 'nty' and locale 'en-GB'
-[628] Biber.pm:4313> INFO - No sort tailoring available for locale 'en-GB'
-[654] bbl.pm:676> INFO - Writing 'main.bbl' with encoding 'UTF-8'
-[671] bbl.pm:779> INFO - Output to main.bbl
-[672] Biber.pm:132> WARN - report entry 'dlr2025atocargo' (references.bib): Invalid format '2025-10-8' of date field 'urldate' - ignoring
-[672] Biber.pm:132> WARN - thesis entry 'milroy1980aspects' (references.bib): Invalid format '2025-9-27' of date field 'urldate' - ignoring
-[672] Biber.pm:132> WARN - misc entry 'cbtc_goa' (references.bib): Invalid format '2025-10-1' of date field 'urldate' - ignoring
-[672] Biber.pm:132> WARN - report entry 'era_ertms' (references.bib): Invalid format '2025-10-9' of date field 'urldate' - ignoring
-[672] Biber.pm:132> WARN - report entry 'eu_etcs_levels' (references.bib): Invalid format '2025-10-9' of date field 'urldate' - ignoring
-[672] Biber.pm:132> WARN - article entry 'ouden2022' (references.bib): Invalid format '2025-12-5' of date field 'urldate' - ignoring
-[672] Biber.pm:132> WARN - BibTeX subsystem: C:\Users\einar\AppData\Local\Temp\biber_tmp_fwh2\33e59b5ca9ec342068223d604c3f8d55_3524.utf8, line 2, warning: 8 characters of junk seen at toplevel
-[672] Biber.pm:132> WARN - BibTeX subsystem: C:\Users\einar\AppData\Local\Temp\biber_tmp_fwh2\33e59b5ca9ec342068223d604c3f8d55_3524.utf8, line 11, warning: 22 characters of junk seen at toplevel
-[672] Biber.pm:132> WARN - BibTeX subsystem: C:\Users\einar\AppData\Local\Temp\biber_tmp_fwh2\33e59b5ca9ec342068223d604c3f8d55_3524.utf8, line 19, warning: 37 characters of junk seen at toplevel
-[672] Biber.pm:132> WARN - BibTeX subsystem: C:\Users\einar\AppData\Local\Temp\biber_tmp_fwh2\33e59b5ca9ec342068223d604c3f8d55_3524.utf8, line 26, warning: 22 characters of junk seen at toplevel
-[672] Biber.pm:132> WARN - BibTeX subsystem: C:\Users\einar\AppData\Local\Temp\biber_tmp_fwh2\33e59b5ca9ec342068223d604c3f8d55_3524.utf8, line 33, warning: 13 characters of junk seen at toplevel
-[672] Biber.pm:132> WARN - BibTeX subsystem: C:\Users\einar\AppData\Local\Temp\biber_tmp_fwh2\33e59b5ca9ec342068223d604c3f8d55_3524.utf8, line 44, warning: 63 characters of junk seen at toplevel
-[672] Biber.pm:132> WARN - BibTeX subsystem: C:\Users\einar\AppData\Local\Temp\biber_tmp_fwh2\33e59b5ca9ec342068223d604c3f8d55_3524.utf8, line 52, warning: 4 characters of junk seen at toplevel
-[672] Biber.pm:132> WARN - BibTeX subsystem: C:\Users\einar\AppData\Local\Temp\biber_tmp_fwh2\33e59b5ca9ec342068223d604c3f8d55_3524.utf8, line 60, warning: 4 characters of junk seen at toplevel
-[672] Biber.pm:132> WARN - BibTeX subsystem: C:\Users\einar\AppData\Local\Temp\biber_tmp_fwh2\33e59b5ca9ec342068223d604c3f8d55_3524.utf8, line 68, warning: 7 characters of junk seen at toplevel
-[672] Biber.pm:132> WARN - BibTeX subsystem: C:\Users\einar\AppData\Local\Temp\biber_tmp_fwh2\33e59b5ca9ec342068223d604c3f8d55_3524.utf8, line 76, warning: 7 characters of junk seen at toplevel
-[672] Biber.pm:132> WARN - BibTeX subsystem: C:\Users\einar\AppData\Local\Temp\biber_tmp_fwh2\33e59b5ca9ec342068223d604c3f8d55_3524.utf8, line 84, warning: 6 characters of junk seen at toplevel
-[672] Biber.pm:132> WARN - BibTeX subsystem: C:\Users\einar\AppData\Local\Temp\biber_tmp_fwh2\33e59b5ca9ec342068223d604c3f8d55_3524.utf8, line 92, warning: 6 characters of junk seen at toplevel
-[672] Biber.pm:132> WARN - BibTeX subsystem: C:\Users\einar\AppData\Local\Temp\biber_tmp_fwh2\33e59b5ca9ec342068223d604c3f8d55_3524.utf8, line 101, warning: 118 characters of junk seen at toplevel
-[672] Biber.pm:132> WARN - BibTeX subsystem: C:\Users\einar\AppData\Local\Temp\biber_tmp_fwh2\33e59b5ca9ec342068223d604c3f8d55_3524.utf8, line 114, warning: 239 characters of junk seen at toplevel
-[672] Biber.pm:132> WARN - BibTeX subsystem: C:\Users\einar\AppData\Local\Temp\biber_tmp_fwh2\33e59b5ca9ec342068223d604c3f8d55_3524.utf8, line 134, warning: 13 characters of junk seen at toplevel
-[672] Biber.pm:132> WARN - BibTeX subsystem: C:\Users\einar\AppData\Local\Temp\biber_tmp_fwh2\33e59b5ca9ec342068223d604c3f8d55_3524.utf8, line 142, warning: 25 characters of junk seen at toplevel
-[673] Biber.pm:132> WARN - BibTeX subsystem: C:\Users\einar\AppData\Local\Temp\biber_tmp_fwh2\33e59b5ca9ec342068223d604c3f8d55_3524.utf8, line 166, warning: 10 characters of junk seen at toplevel
-[673] Biber.pm:132> WARN - BibTeX subsystem: C:\Users\einar\AppData\Local\Temp\biber_tmp_fwh2\33e59b5ca9ec342068223d604c3f8d55_3524.utf8, line 195, warning: 21 characters of junk seen at toplevel
-[673] Biber.pm:132> WARN - BibTeX subsystem: C:\Users\einar\AppData\Local\Temp\biber_tmp_fwh2\33e59b5ca9ec342068223d604c3f8d55_3524.utf8, line 204, warning: 5 characters of junk seen at toplevel
-[673] Biber.pm:132> WARN - BibTeX subsystem: C:\Users\einar\AppData\Local\Temp\biber_tmp_fwh2\33e59b5ca9ec342068223d604c3f8d55_3524.utf8, line 236, warning: 16 characters of junk seen at toplevel
-[673] Biber.pm:132> WARN - BibTeX subsystem: C:\Users\einar\AppData\Local\Temp\biber_tmp_fwh2\33e59b5ca9ec342068223d604c3f8d55_3524.utf8, line 253, warning: 50 characters of junk seen at toplevel
-[673] Biber.pm:132> WARN - BibTeX subsystem: C:\Users\einar\AppData\Local\Temp\biber_tmp_fwh2\33e59b5ca9ec342068223d604c3f8d55_3524.utf8, line 262, warning: 15 characters of junk seen at toplevel
-[673] Biber.pm:134> INFO - WARNINGS: 28
+[121] biber-MSWIN64:342> INFO - === 
+[179] Biber.pm:421> INFO - Reading 'main.bcf'
+[318] Biber.pm:1002> INFO - Found 32 citekeys in bib section 0
+[333] Biber.pm:4487> INFO - Processing section 0
+[344] Biber.pm:4678> INFO - Looking for bibtex file 'references.bib' for section 0
+[461] bibtex.pm:1713> INFO - LaTeX decoding ...
+[514] bibtex.pm:1519> INFO - Found BibTeX data source 'references.bib'
+[687] UCollate.pm:68> INFO - Overriding locale 'en-GB' defaults 'variable = shifted' with 'variable = non-ignorable'
+[687] UCollate.pm:68> INFO - Overriding locale 'en-GB' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[687] Biber.pm:4307> INFO - Sorting list 'nty/global//global/global/global' of type 'entry' with template 'nty' and locale 'en-GB'
+[687] Biber.pm:4313> INFO - No sort tailoring available for locale 'en-GB'
+[718] bbl.pm:676> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[736] bbl.pm:779> INFO - Output to main.bbl
+[737] Biber.pm:132> WARN - BibTeX subsystem: C:\Users\einar\AppData\Local\Temp\biber_tmp_QXRh\33e59b5ca9ec342068223d604c3f8d55_37392.utf8, line 2, warning: 8 characters of junk seen at toplevel
+[737] Biber.pm:132> WARN - BibTeX subsystem: C:\Users\einar\AppData\Local\Temp\biber_tmp_QXRh\33e59b5ca9ec342068223d604c3f8d55_37392.utf8, line 11, warning: 22 characters of junk seen at toplevel
+[737] Biber.pm:132> WARN - BibTeX subsystem: C:\Users\einar\AppData\Local\Temp\biber_tmp_QXRh\33e59b5ca9ec342068223d604c3f8d55_37392.utf8, line 19, warning: 37 characters of junk seen at toplevel
+[737] Biber.pm:132> WARN - BibTeX subsystem: C:\Users\einar\AppData\Local\Temp\biber_tmp_QXRh\33e59b5ca9ec342068223d604c3f8d55_37392.utf8, line 26, warning: 22 characters of junk seen at toplevel
+[737] Biber.pm:132> WARN - BibTeX subsystem: C:\Users\einar\AppData\Local\Temp\biber_tmp_QXRh\33e59b5ca9ec342068223d604c3f8d55_37392.utf8, line 33, warning: 13 characters of junk seen at toplevel
+[737] Biber.pm:132> WARN - BibTeX subsystem: C:\Users\einar\AppData\Local\Temp\biber_tmp_QXRh\33e59b5ca9ec342068223d604c3f8d55_37392.utf8, line 44, warning: 63 characters of junk seen at toplevel
+[737] Biber.pm:132> WARN - BibTeX subsystem: C:\Users\einar\AppData\Local\Temp\biber_tmp_QXRh\33e59b5ca9ec342068223d604c3f8d55_37392.utf8, line 52, warning: 4 characters of junk seen at toplevel
+[737] Biber.pm:132> WARN - BibTeX subsystem: C:\Users\einar\AppData\Local\Temp\biber_tmp_QXRh\33e59b5ca9ec342068223d604c3f8d55_37392.utf8, line 60, warning: 4 characters of junk seen at toplevel
+[737] Biber.pm:132> WARN - BibTeX subsystem: C:\Users\einar\AppData\Local\Temp\biber_tmp_QXRh\33e59b5ca9ec342068223d604c3f8d55_37392.utf8, line 68, warning: 7 characters of junk seen at toplevel
+[737] Biber.pm:132> WARN - BibTeX subsystem: C:\Users\einar\AppData\Local\Temp\biber_tmp_QXRh\33e59b5ca9ec342068223d604c3f8d55_37392.utf8, line 76, warning: 7 characters of junk seen at toplevel
+[737] Biber.pm:132> WARN - BibTeX subsystem: C:\Users\einar\AppData\Local\Temp\biber_tmp_QXRh\33e59b5ca9ec342068223d604c3f8d55_37392.utf8, line 84, warning: 6 characters of junk seen at toplevel
+[737] Biber.pm:132> WARN - BibTeX subsystem: C:\Users\einar\AppData\Local\Temp\biber_tmp_QXRh\33e59b5ca9ec342068223d604c3f8d55_37392.utf8, line 92, warning: 6 characters of junk seen at toplevel
+[737] Biber.pm:132> WARN - BibTeX subsystem: C:\Users\einar\AppData\Local\Temp\biber_tmp_QXRh\33e59b5ca9ec342068223d604c3f8d55_37392.utf8, line 101, warning: 118 characters of junk seen at toplevel
+[737] Biber.pm:132> WARN - BibTeX subsystem: C:\Users\einar\AppData\Local\Temp\biber_tmp_QXRh\33e59b5ca9ec342068223d604c3f8d55_37392.utf8, line 114, warning: 239 characters of junk seen at toplevel
+[737] Biber.pm:132> WARN - BibTeX subsystem: C:\Users\einar\AppData\Local\Temp\biber_tmp_QXRh\33e59b5ca9ec342068223d604c3f8d55_37392.utf8, line 134, warning: 13 characters of junk seen at toplevel
+[737] Biber.pm:132> WARN - BibTeX subsystem: C:\Users\einar\AppData\Local\Temp\biber_tmp_QXRh\33e59b5ca9ec342068223d604c3f8d55_37392.utf8, line 142, warning: 25 characters of junk seen at toplevel
+[737] Biber.pm:132> WARN - BibTeX subsystem: C:\Users\einar\AppData\Local\Temp\biber_tmp_QXRh\33e59b5ca9ec342068223d604c3f8d55_37392.utf8, line 166, warning: 10 characters of junk seen at toplevel
+[737] Biber.pm:132> WARN - BibTeX subsystem: C:\Users\einar\AppData\Local\Temp\biber_tmp_QXRh\33e59b5ca9ec342068223d604c3f8d55_37392.utf8, line 195, warning: 21 characters of junk seen at toplevel
+[737] Biber.pm:132> WARN - BibTeX subsystem: C:\Users\einar\AppData\Local\Temp\biber_tmp_QXRh\33e59b5ca9ec342068223d604c3f8d55_37392.utf8, line 204, warning: 5 characters of junk seen at toplevel
+[737] Biber.pm:132> WARN - BibTeX subsystem: C:\Users\einar\AppData\Local\Temp\biber_tmp_QXRh\33e59b5ca9ec342068223d604c3f8d55_37392.utf8, line 237, warning: 16 characters of junk seen at toplevel
+[737] Biber.pm:132> WARN - BibTeX subsystem: C:\Users\einar\AppData\Local\Temp\biber_tmp_QXRh\33e59b5ca9ec342068223d604c3f8d55_37392.utf8, line 254, warning: 50 characters of junk seen at toplevel
+[737] Biber.pm:132> WARN - BibTeX subsystem: C:\Users\einar\AppData\Local\Temp\biber_tmp_QXRh\33e59b5ca9ec342068223d604c3f8d55_37392.utf8, line 263, warning: 15 characters of junk seen at toplevel
+[737] Biber.pm:132> WARN - BibTeX subsystem: C:\Users\einar\AppData\Local\Temp\biber_tmp_QXRh\33e59b5ca9ec342068223d604c3f8d55_37392.utf8, line 271, warning: 29 characters of junk seen at toplevel
+[737] Biber.pm:132> WARN - BibTeX subsystem: C:\Users\einar\AppData\Local\Temp\biber_tmp_QXRh\33e59b5ca9ec342068223d604c3f8d55_37392.utf8, line 283, warning: 43 characters of junk seen at toplevel
+[737] Biber.pm:134> INFO - WARNINGS: 24

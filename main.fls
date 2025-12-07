@@ -7,6 +7,8 @@ INPUT C:\Users\einar\AppData\Local\Programs\MiKTeX\tex\latex\base\article.cls
 INPUT C:\Users\einar\AppData\Local\Programs\MiKTeX\tex\latex\base\size10.clo
 INPUT C:\Users\einar\AppData\Local\Programs\MiKTeX\tex\latex\base\size10.clo
 INPUT C:\Users\einar\AppData\Local\Programs\MiKTeX\tex\latex\base\size10.clo
+INPUT C:\Users\einar\AppData\Local\Programs\MiKTeX\tex\latex\silence\silence.sty
+INPUT C:\Users\einar\AppData\Local\Programs\MiKTeX\tex\latex\silence\silence.sty
 INPUT .\packages.sty
 INPUT packages.sty
 INPUT C:\Users\einar\AppData\Local\Programs\MiKTeX\tex\latex\base\inputenc.sty
@@ -356,6 +358,14 @@ INPUT C:\Users\einar\AppData\Local\Programs\MiKTeX\tex\latex\geometry\geometry.c
 INPUT C:\Users\einar\AppData\Local\Programs\MiKTeX\tex\latex\geometry\geometry.cfg
 INPUT C:\Users\einar\AppData\Local\Programs\MiKTeX\tex\latex\fancyhdr\fancyhdr.sty
 INPUT C:\Users\einar\AppData\Local\Programs\MiKTeX\tex\latex\fancyhdr\fancyhdr.sty
+INPUT C:\Users\einar\AppData\Local\Programs\MiKTeX\tex\latex\titlesec\titlesec.sty
+INPUT C:\Users\einar\AppData\Local\Programs\MiKTeX\tex\latex\titlesec\titlesec.sty
+INPUT C:\Users\einar\AppData\Local\Programs\MiKTeX\tex\latex\tools\tabularx.sty
+INPUT C:\Users\einar\AppData\Local\Programs\MiKTeX\tex\latex\tools\tabularx.sty
+INPUT C:\Users\einar\AppData\Local\Programs\MiKTeX\tex\latex\booktabs\booktabs.sty
+INPUT C:\Users\einar\AppData\Local\Programs\MiKTeX\tex\latex\booktabs\booktabs.sty
+INPUT C:\Users\einar\AppData\Local\Programs\MiKTeX\tex\latex\multirow\multirow.sty
+INPUT C:\Users\einar\AppData\Local\Programs\MiKTeX\tex\latex\multirow\multirow.sty
 INPUT C:\Users\einar\AppData\Local\Programs\MiKTeX\tex\latex\graphics\color.sty
 INPUT .\main.aux
 INPUT .\main.aux
@@ -550,6 +560,18 @@ INPUT Sections\06 Results.tex
 INPUT .\Sections\06 Results.tex
 INPUT .\Sections\06 Results.tex
 INPUT Sections\06 Results.tex
+INPUT .\Sections\.\Tables\HumanFactorResults.tex
+INPUT .\Sections\.\Tables\HumanFactorResults.tex
+INPUT Sections\.\Tables\HumanFactorResults.tex
+INPUT .\Sections\.\Tables\HumanFactorResults.tex
+INPUT .\Sections\.\Tables\HumanFactorResults.tex
+INPUT Sections\.\Tables\HumanFactorResults.tex
+INPUT .\Sections\.\Tables\LatencyThresholdResults.tex
+INPUT .\Sections\.\Tables\LatencyThresholdResults.tex
+INPUT Sections\.\Tables\LatencyThresholdResults.tex
+INPUT .\Sections\.\Tables\LatencyThresholdResults.tex
+INPUT .\Sections\.\Tables\LatencyThresholdResults.tex
+INPUT Sections\.\Tables\LatencyThresholdResults.tex
 INPUT .\Sections\15 Discussion.tex
 INPUT .\Sections\15 Discussion.tex
 INPUT Sections\15 Discussion.tex

@@ -29,11 +29,11 @@ As of now both Norway and Sweden? har implementing ERTMS which will be crucial f
 \subsection{ETCS}
 The European Train Control System (ETCS) is a signalling and train protection element developed and included in the ERTMS initiative. ETCS provides movement authorities and intermittently or continuously supervises train speed and braking to ensure safe train separation. It replaces or complements national trackside signals by delivering standardized information to onboard equipment, enabling safer and more interoperable cross-border operation \cite{era_ertms,eu_etcs_levels}.
 
-\paragraph{Levels} \indent
+\paragraph{Levels} %Må muligens bli subsubsections igjen
 ETCS is commonly described with levels that express how information is exchanged:
 \import{./Tables/}{ETCSItems}
 
-\paragraph{Modes} \indent
+\paragraph{Modes}
 ETCS defines different operational modes such as Full Supervision, On-Sight, Staff Responsible, Shunting, and Automatic Driving. Modes determine how the onboard equipment supervises movement authority and interacts with ATO where present. Automatic Driving mode is used when conditions for ATO are satisfied and ETCS provides the required movement and track data while Full Supervision is when ETCS is supplied with all possible train and track data needed \cite{eu_etcs_levels}.
 
 
@@ -112,23 +112,15 @@ From \cite{era_ertms}
 8.2 ATO 2: Supervision and regulation 
 8.2.1 ATO 2.1 - Supervise train operations 
 During ATO operation, it shall be possible to: 
-• Supervise train location by monitoring trains automatically using train identification and status 
-(including delay information) to recognise deviations from normal operation as soon as 
-possible; 
+• Supervise train location by monitoring trains automatically using train identification and status (including delay information) to recognise deviations from normal operation as soon as possible; 
 8.2.2 ATO 2.2 - Manage the train service 
 During ATO operation, it shall be possible to: 
 • Input the journey profile from the planning system; 
 • Start the journey profile; 
-• Dynamically modify the journey profile in real time to take account of changes in operating 
-conditions including: 
-disruption management; 
-re-routing; 
-re-timing. 
+• Dynamically modify the journey profile in real time to take account of changes in operating conditions including: disruption management; re-routing; re-timing. 
 • Adapt the train’s journey profile to meet any update of the operational timetable; 
-• Regulate trains to avoid bunching of trains and to reduce delays to trains in the case of 
-disturbances; 
-• Dispatch ATO trains to harmonise the starting of ATO trains, corresponding to results of train 
-regulation and ensuring connecting services; 
+• Regulate trains to avoid bunching of trains and to reduce delays to trains in the case of disturbances; 
+• Dispatch ATO trains to harmonise the starting of ATO trains, corresponding to results of train regulation and ensuring connecting services; 
 • Operate both ATO and non-ATO trains simultaneously. 
 
 
@@ -137,5 +129,17 @@ I think this could be very useful:
 Commission Regulation (EU) 2016/919 of 27 May 2016 on the technical specification for 
 interoperability relating to the ‘control-command and signalling’ subsystems of the rail 
 system in the European Union 
+
+\subsubsection{WP41 - Validation Criteria Tramways}
+%https://ec.europa.eu/research/participants/documents/downloadPublic?documentIds=080166e508af73fc&appId=PPGMS
+
+WP41 - Collection of test cases and validation criteria for remote driving of tramways 
+demonstrator.  
+Is delivered by Sporveien Trikken AS with the assistence of CAF, UITP and FP2R2Dato in the Europe's Rail program.
+Contains detailed plan and procedures for testing remote control of tramways.
+Including, functionality of electric circuits implemented, TCMS, CERES actions,  and safety supervision.
+Defining Key Performance indicators and how they should be measured.
+Including: Solution QoE (1-5), Image Quality (1-5), Image latency (ms), Availability (Failure rate)
+
 
 

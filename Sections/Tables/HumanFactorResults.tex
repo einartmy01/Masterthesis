@@ -1,0 +1,44 @@
+
+\begin{table}[h]
+    \centering
+    \caption{Attributes of Different Vehicle Types}
+    \label{tab:vehicle_attributes}
+    \begin{tabularx}{\textwidth}{l|C|C|C|C|C|C} % 'l' for Vehicle column (left-aligned) and 'C' for the attribute columns (centered, equal width)
+        \toprule
+        \textbf{Vehicle} & 
+        \textbf{Paper} & 
+        \textbf{Release year} & 
+        \textbf{Method} & 
+        \textbf{Latency for slight perfromance downgrade} & 
+        \textbf{Latency for major perfromance downgrade} & 
+        \textbf{Test subjects} \\
+        \midrule
+        
+        % --- CAR Category (3 Rows) ---
+        \multirow{3}{*}{\textbf{Car}} 
+        & Paper A & 2020 & X & XX & X \\
+        \cmidrule{2-6} 
+         & Paper B & 2021 & XX & XX & XX \\
+        \cmidrule{2-6}
+         & Paper C & 2023 & X & X & X \\
+        \midrule 
+        
+        % --- RAILWAY Category (4 Rows) ---
+        \multirow{4}{*}{\textbf{Railway}} 
+        &Brandernburger 2023 \cite{brandenburger2023vqreactiontimertc} & 2024 & X & X & X \\
+        \cmidrule{2-6}
+         & Paper E & 2022 & X & X & X \\
+        \cmidrule{2-6}
+         & Paper F & 2024 & X & X & X \\
+        \cmidrule{2-6}
+         & Paper G & 2024 & X & X & X \\
+        \midrule 
+        
+        % --- FUTURE Category (Example of an added category) ---
+        \multirow{2}{*}{\textbf{Drone}} 
+        & Paper H & 2025 & Vision & Battery & 150 \\
+        \cmidrule{2-6}
+         & Paper I & 2025 & Control & Battery & 120 \\
+        \bottomrule
+    \end{tabularx}
+\end{table}

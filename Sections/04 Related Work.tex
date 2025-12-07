@@ -4,7 +4,7 @@
 Experiences from other simialar fields, self driving cars, drones, maybe other remote controlled trains in different countries
 
 \subsubsection{Train Control}
-// Usikker
+%Usikker
 As mentionted in ERA's ERTMS. Commission Regulation (EU) 2016/919 of 27 May 2016 on the technical specification for 
 interoperability relating to the "control-command and signalling" subsystems of the rail system in the European Union \cite{era_ertms}
 
@@ -15,8 +15,7 @@ A key component of the project is the integration of an Automatic Train Operatio
 
 The project also emphasizes human factors engineering, ensuring that the RSC is ergonomically designed for operator efficiency and safety. For this project, researchers have employ virtual reality tools to simulate realistic control room environments and train personnel for future remote supervision tasks. Tests are being conducted on Betuweroute, a freight only railway, linking Rotterdam and the Ruhr region to validate the technical and operational readiness of this automation concept. The ultimate goal is to establish a European reference model for automated freight train operation \cite{dlr2025atocargo}.
 
-
-(Jürgensen 2025)
+\paragraph{Jürgensen 2025}
 \cite{jürgensen2025rcrailvehicles}
 Is a project in \dots
 
@@ -24,13 +23,14 @@ Says that at 300ms, you get loss of performance, and at 1000ms the delay becomes
 And references: "Design and Evaluation of Remote Driving Architecture on 4G and 5G Mobile Networks" (Ouden, 2022) \cite{ouden2022}
 Which references (Lane, 2002) and (Neumier, 2019)
 
-(Kozarevic 2024)
+
+\paragraph{Kozarevic 2024}
 %emilia prosjektoppgave
 Talks about the dangers of latency in high speed vehicles. Comparing it to drone operations.
 Reference drone and says 100 ms
 Reference Chen?, and Neumier, 170 ms and 300 ms have minimal impact on remote operators.
 
-(Mejías 2024)
+\paragraph{Mejías 2024}
 \cite{mejias2024}
 Compare:
 - RTSP
@@ -39,7 +39,6 @@ as their Real-time Transport Protocol (RTP) protocol.
 
 - E2E
 - H.264
-
 
 Methodology for latency measurment.
 Network Time Protocol (NTP) is necesarry to synchronize sender and receiver.
@@ -90,15 +89,94 @@ RTSP with rate control
 Allows the bandwidth to go past 7 Mbps that was issue before, although with high latency. 
 Adjust itself back up again. Also we can see a shift in latency between latency when increased bitsize of video.  
 
+\paragraph{FP2R2Dato, EuropesRail 2023 D5.4}
+Based on drone latency. enhensive calculations of latency to match to train. 
+%https://rail-research.europa.eu/wp-content/uploads/2025/07/D5.4-%E2%80%93-Documentation-of-use-cases-for-Remote-Driving.pdf
+
+\paragraph{FP2R2Dato, EuropesRail 2024 D41.2}
+D41.2 - Testing reports \& assessment 
+Results of the remote driving of tramways demonstrator. 
+\cite{fp2r2dato2024report}
+Image latency 
+- G2G, (capturing processing, compression, transmission, reception, decompressing, displaying)
+- Oslo to Berlin
+- Two atomic clocks on phones.
+- Measured to be 340 - 380 ms (Always under 400 ms)
+
+
+Auxiliary circuit tests,
+- Driver safety
+- Remote wake up
+- R driving loop
+- R control commands
+- R ...
+Static functional tests,
+- Start Tram, CERES,
+- CERES do step 1.2.3\dots
+
+Dynamis functional tests,
+- CERES Local brakte test
+- CERES Remote Brakte test 
+- C Drive 5km/h 
+- C Drive 100\% dont break max speed 
+- C loose communication.
+- C DSD brake sequence
+- C Local driver break priority over remote.
+
+Reaction Time,
+reduction in time needed to perform spesific tram operations, fleet management and preparation, start-up and shut-down procedures, maintenance tasks, shunting. 
+Time reduction in these processes are efficiency improvments.
+
+
+
+
+
+\paragraph{Brandernburger 2023}
+\cite{brandenburger2023vqreactiontimertc}
+Test of human factors and realiable communcations via 5g
+"Limited literature on:" 
+"Positive effect of bitrate on quaility", "Stalling has worse effect on QoExperience, if bitrate is higher"
+"Higher frame rate not linked to information assimiliation, but increased user enjoyment"
+
+Tested with three different levels of bitrate
+1, 6, 24 Mbps
+5, 15, 25 FPS
+Stimulus
+Light signal, Distance marker
+
+Measurements
+Responce accuracy
+Responce speed
+
+Study 1:
+Higher bitrate -> faster answears, more correct
+Higher FPS -> same speed on answear, same amount of correct
+
+Study 2:
+Higher bitrate -> same speed on answears, more correct
+Higher FPS -> same speed on answear, same amount of correct
+
+Bitrate is more important (source 5 in PP: https://dl.acm.org/doi/abs/10.1145/2072298.2072351)
+
+Stimulus type:
+Distance marker signs where answeared faster and more correct than light signals
+5000 -> 3000 speed, and 0.51 -> 0.58 and 0.61 -> 0.69
+
+This is promosing new with the implementation of ERTMS as the only input stimulus in signalling threw camera and video stream will be signs as the remote control operatior will get the ETCS directly in the control room. 
+
+
+After certain bitrate less helpful
+
+
 \subsubsection{Car Control}
 
-(Sato 2021)
+\paragraph{Sato 2021}
 %https://ieeexplore.ieee.org/document/9575817
 
-(Nakamura 2021)
+\paragraph{Nakamura 2021}
 %https://ieeexplore.ieee.org/abstract/document/9622069
 
-(Ouden 2022)
+\paragraph{Ouden 2022}
 \cite{ouden2022}
 - 4G and 5G 
 - 4 times 120 angle camera
@@ -109,8 +187,8 @@ Adjust itself back up again. Also we can see a shift in latency between latency 
 Includes a test that results in at 300ms, you get loss of performance, and at 1000ms the delay becomes unfeasible.
 
 
-(Jernberg 2024) 
-\cite{jernberg2024latency}
+\paragraph{Jernberg 2024}
+\cite{jernberg2024}
 - Voysys
 - G2G
 - Average delay of 88.8 ms and added conditions of +100 -> 188 ms and +200 -> 288 ms
@@ -118,10 +196,15 @@ Includes a test that results in at 300ms, you get loss of performance, and at 10
 - driver was not given a latency
 Reference Neumeier et al. (2019) stated that 300 ms might be manageable for trained operators but in some conditions during their simulator study there were tendencies that even smaller latencies affected the performance of the operator negatively.
 
+That was:
+H1/P1: Car pulling over into your lane.
+H2/P2: Car crossing from opposing lane threw your lane.
+H3/P3: Car with "vikeplikt" does not stop in crossing.
+H4/P4: Child runs into traffic from behind a bus.
+H5/P5: Bicycal in lane that driver needs to pass in oppsing lane.
 
 
-
-(Kaknjo 2018)
+\paragraph{Kaknjo 2018}
 \cite{kaknjo2018videolatency}
 - G2G
 - Time stamps
@@ -133,7 +216,7 @@ Reference Neumeier et al. (2019) stated that 300 ms might be manageable for trai
 Found MJPEG to be 300 ms lower latency than H.264. However it found H.264 to demand less bandwitdh 50-380Kbps as it compresses more enhensive than MJPEG 4.6-5Mbps.
 Found detoriation in performance in latencies above 300 ms and increase in errors during control for latencies larger than 500 ms.
 
-(Neumier 2019)
+\paragraph{Neumier 2019}
 \cite{neumeier2019}
  - Round-Trip Time (RTT)
  - Average delay of 67 ms and added conditions of +100 +300 +500
@@ -144,7 +227,7 @@ Talks about how participent leave the car lane significanlty more with higher la
 Scenarios, was driving with turns, and one parking. No hazards except latency.
 
 
-(Kang 2018)
+\paragraph{Kang 2018}
 \cite{kang2018}
 - 3 different resulutions (320x240, 640x480, 1280x960)
 - 3 different bitrate (0.5Mbps, 1Mbps, 4Mbps)
@@ -202,10 +285,9 @@ the PRRT communication path with the Rust bridge.
 IPT = tp2 - tp1 (Time between packets)
 RTT = tr1 - tp1 (Round-trip time)
 
-\subsubsection{Crane Control?}
-
-(Brunnström 2020)
-%https://www.sciencedirect.com/science/article/pii/S0923596520301648
+\subsubsection{Crane Control}
+\paragraph{Brunnström 2020}
+\cite{brunnström2020}
 To study QoE. 
 - VR.
 - 270 angle HMD video threw 4 cameras on crane.
@@ -215,7 +297,6 @@ Tested with diffrent delays for display and joystick. Baseline was 25 ms for dis
 - Joystick, 10, 20, 50, 100, 200, 400, 800 -> 80, 90, 100, 130, 180, 280, 480, 880
 
 Comfort of the subject was not affected by joystick delay, but the display delayed had an negative effect of Comfort quality. Why this could be discussed alot. Might have to do with VR and a more moving image. 
-
 480 ms gave a mild reduction in effect and quality of the work at hand but at 880 it was a major decrease in effect and operatbility. 
 
 \subsubsection{Offshore Control}
@@ -223,64 +304,22 @@ Comfort of the subject was not affected by joystick delay, but the display delay
 \subsection{Human factors}
 All the ways human error can effect the results from the tests.
 All the ways human control needs to be adjusted for in acceptance levels.
-
-How humans adapt to stable v unstable latencies.
-
 How humans act depending on knowing the latency they have and not knowing.
 
-
+\subsubsection{Adaptation to stable latency.} % Må endre tittel
+Jernberg(2024) 
 "Fixed latency seems to be better than varied latency" (Davis et al., 2010, Gnatzig et al., 2013) 
 
 Gorsich et al. (2018) found that a higher latency results in more inaccurate behavior, with a drastic decrease starting at a latency of 600 ms, and Gnatzig et al. (2013) found that a constant latency of 500 ms was unproblematic for drivers when the vehicle was steadily kept at 30 km/h on their track. 
-
-Jernberg(2024) 
-\cite{jernberg2024latency}
-
+\cite{jernberg2024}
 
 (Neumier 2019)
-\cite{neumeier2019}
 Could not confirm that fixed latency resultet in any better result than varied latency.
-Could not confirm "Kang et al" \cite{kang2018} who stated that fixed latency leads to better driving performance than varying.
+Could not confirm "Kang et al" \cite{kang2018} who stated that fixed latency leads to better driving performance than varying. \cite{neumeier2019}
 % Kang did not at all mention fixed vs variable latencies. 
 
-(Brandernburger 2023)
-\cite{brandenburger2023vqreactiontimertc}
-Test of human factors and realiable communcations via 5g
-"Limited literature on:" 
-"Positive effect of bitrate on quaility", "Stalling has worse effect on QoExperience, if bitrate is higher"
-"Higher frame rate not linked to information assimiliation, but increased user enjoyment"
-
-Tested with three different levels of bitrate
-1, 6, 24 Mbps
-5, 15, 25 FPS
-Stimulus
-Light signal, Distance marker
-
-Measurements
-Responce accuracy
-Responce speed
-
-Study 1:
-Higher bitrate -> faster answears, more correct
-Higher FPS -> same speed on answear, same amount of correct
-
-Study 2:
-Higher bitrate -> same speed on answears, more correct
-Higher FPS -> same speed on answear, same amount of correct
-
-Bitrate is more important (source 5 in PP: https://dl.acm.org/doi/abs/10.1145/2072298.2072351)
-
-Stimulus type:
-Distance marker signs where answeared faster and more correct than light signals
-5000 -> 3000 speed, and 0.51 -> 0.58 and 0.61 -> 0.69
-
-This is promosing new with the implementation of ERTMS as the only input stimulus in signalling threw camera and video stream will be signs as the remote control operatior will get the ETCS directly in the control room. 
-
-
-After certain bitrate less helpful
-
-
-%CHECK LINK ABOUT CRANE CONTROL
+In the event of offloading a truck with a crane, the participents where exposed to constant levels of latency, and showing that delaly of joystick all the way up to 480 ms was basicly irrelevant for QoE and the results of task done pr time. However a delay of 880 significantly reduced the performance overall by atleast halfing the rating on the scores (1-5).
+\cite{brunnström2020}
 
 \subsection{Ethics}
 Who is responsible. Fully automated, or remote driver.
@@ -294,7 +333,8 @@ How we can protect the system from attacks. What regulations are in place.
 
 
 \subsection{Calculation of latency}
-The math behind calculations of latency. How to measure most precisely and what errors  we find in the calculations.
+The measurements and therefore the calculations of latency is not easily done. Since its a fluctuating measurement that varies alot depending on the components in the system used, the way to calculate various on what the personens want to find. 
+
 
 Very difficult from related works:
 Real time video latency: \cite{kaknjo2018videolatency}
@@ -302,3 +342,7 @@ Here, the time of the visual event in front of
 the camera is denoted as T1 and the time when the event
 was detected on the receiving end as T2. The start of frame processing is denoted as T3.
 \textit{TVL =(T1 - T1)-(T2 -T3)=T3 -T1}
+
+
+
+
