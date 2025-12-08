@@ -2,11 +2,12 @@
     \centering
     \caption{Different Latency Thresholds used}
     \label{tab:LatencyThresholds}
-    \begin{tabularx}{\textwidth}{l|C|C|C|C|C|C} % 'l' for Vehicle column (left-aligned) and 'C' for the attribute columns (centered, equal width)
+    \begin{tabularx}{\textwidth}{l|C|C|C|C|C|C|C} % 'l' for Vehicle column (left-aligned) and 'C' for the attribute columns (centered, equal width)
         \toprule
         \textbf{Vehicle} & 
         \textbf{Paper} & 
         \textbf{Release year} & 
+        \textbf{Latency found} &
         \textbf{Latency for slight perfromance downgrade} & 
         \textbf{Latency for major perfromance downgrade} & 
         \textbf{Method} & 
@@ -16,26 +17,26 @@
 
         % --- RAILWAY Category (4 Rows) ---
         \multirow{5}{*}{\textbf{Railway}} 
-        & Jurgensen 2025 \cite{jürgensen2025rcrailvehicles} & 2025 & SVM & Electric & 300 \\
+        & Jurgensen 2025 \cite{jürgensen2025rcrailvehicles} & 2025 & X & X & X \\
         \cmidrule{2-6}
-         & Kozarevic & 2025 & GNN & Diesel & 160 \\
+         & Kozarevic & 2025 & X & X & X \\
         \cmidrule{2-6}
-         & Mejias \cite{mejias2024} & 2024 & RL & Electric & 350 \\
+         & Mejias \cite{mejias2024} & 2024 & X & X & X \\
         \cmidrule{2-6}
-         & FP2R2Dato, EuropesRail 2023 D5.4%https://rail-research.europa.eu/wp-content/uploads/2025/07/D5.4-%E2%80%93-Documentation-of-use-cases-for-Remote-Driving.pdf 
-         & 2024 & ANN & Electric & 280 \\
+         & FP2R2Dato, EuropesRail 2023 D5.4 \cite{fp2r2dato2023d5.4}
+         & 2023 & L1 & L2 & Method & Drone \\
         \cmidrule{2-6}
-        & FP2R2DATO\cite{fp2r2dato2024report} & 2024 & X & X & X \\
+        & FP2R2DATO\cite{fp2r2dato2024report} & 2024 & 380 ms & L1 & L2 & G2G, synchronized phone clocks & Own test \\
         \midrule 
 
 
         % --- CAR Category (3 Rows) ---
         \multirow{3}{*}{\textbf{Car}} 
-        & Paper A & 2020 & CNN & Petrol & 220 \\
+        & Paper A & year & L1 & L2 & Method & Source \\
         \cmidrule{2-6} 
-         & Paper B & 2021 & LSTM & Diesel & 180 \\
+         & Paper B & year & L1 & L2 & Method & Source \\
         \cmidrule{2-6}
-         & Paper C & 2023 & Transformer & Electric & 250 \\
+         & Paper C & year & L1 & L2 & Method & Source \\
         \midrule 
         
         
@@ -60,9 +61,10 @@
         
         % --- Offshore Category  ---
         \multirow{2}{*}{\textbf{Offshore}} 
-        & Paper H & 2025 & Vision & Battery & 150 \\
+        & Paper H & 2025 & X & X & X \\
         \cmidrule{2-6}
-         & Paper I & 2025 & Control & Battery & 120 \\
+         & Paper I & 2025 & X & X & X \\
         \bottomrule
+
     \end{tabularx}
 \end{table}

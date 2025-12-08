@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.10.18)  8 DEC 2025 09:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.10.18)  8 DEC 2025 10:20
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1315,18 +1315,23 @@ Overfull \hbox (19.41196pt too wide) in paragraph at lines 62--62
 )
 
 [18] (Sections/./Tables/LatencyThresholdResults.tex
-Overfull \hbox (5.27306pt too wide) in paragraph at lines 67--67
+Overfull \hbox (2.70386pt too wide) in paragraph at lines 69--69
+ []|\OT1/cmr/m/n/10 Jurgensen 
+ []
+
+
+Overfull \hbox (2.23164pt too wide) in paragraph at lines 69--69
+ []|\OT1/cmr/m/n/10 Kozarevic| 
+ []
+
+
+Overfull \hbox (14.14836pt too wide) in paragraph at lines 69--69
  []|\OT1/cmr/m/n/10 FP2R2Dato, 
  []
 
 
-Overfull \hbox (25.55086pt too wide) in paragraph at lines 67--67
- []|\OT1/cmr/m/n/10 FP2R2DATO[[][]32[][]]| 
- []
-
-
-Overfull \hbox (3.74524pt too wide) in paragraph at lines 67--67
- []|\OT1/cmr/m/n/10 Transformer| 
+Overfull \hbox (34.42616pt too wide) in paragraph at lines 69--69
+ []|\OT1/cmr/m/n/10 FP2R2DATO[[][]33[][]]| 
  []
 
 )
@@ -1341,6 +1346,11 @@ Overfull \hbox (5.4434pt too wide) in paragraph at lines 69--69
  []
 
 
+Overfull \hbox (18.5485pt too wide) in paragraph at lines 69--69
+[]\OT1/cmr/m/n/10 Inzirillo Francesco and et al. \OT1/cmr/m/it/10 D5.4 - Doc-u-ment-a-tion of use cases for Re-mote Driv-ing\OT1/cmr/m/n/10 . FP2R2DATO
+ []
+
+
 Overfull \hbox (27.14835pt too wide) in paragraph at lines 69--69
 \OT1/cmss/m/n/10 Video[]Latency[]Measurement[]between[]a[]Robot[]and[]Its[]Remote[]Control[]Station[]Causes[]and[]Mitigation$[][]
  []
@@ -1350,7 +1360,7 @@ Overfull \hbox (27.14835pt too wide) in paragraph at lines 69--69
 [22]
 
 [23]
-runsystem(latexminted cleantemp  --timestamp 20251208093918 FAD58DE7366495DB4650CFEFAC2FCD61)...disabled (restricted).
+runsystem(latexminted cleantemp  --timestamp 20251208102053 FAD58DE7366495DB4650CFEFAC2FCD61)...disabled (restricted).
 
  (main.aux)
  ***********
@@ -1364,17 +1374,17 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 44236 strings out of 468081
- 952059 string characters out of 5425788
- 1899119 words of memory out of 5000000
- 72079 multiletter control sequences out of 15000+600000
+ 44243 strings out of 468081
+ 952289 string characters out of 5425788
+ 1900189 words of memory out of 5000000
+ 72082 multiletter control sequences out of 15000+600000
  637806 words of font info for 75 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  117i,12n,121p,1290b,2877s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\einar\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/einar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/einar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/einar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/einar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/einar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/einar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/einar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/Users/einar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/einar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/einar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on main.pdf (29 pages, 982865 bytes).
+Output written on main.pdf (29 pages, 985584 bytes).
 PDF statistics:
- 700 PDF objects out of 1000 (max. 8388607)
- 141 named destinations out of 1000 (max. 500000)
+ 713 PDF objects out of 1000 (max. 8388607)
+ 145 named destinations out of 1000 (max. 500000)
  470 words of extra memory for PDF output out of 10000 (max. 10000000)
 

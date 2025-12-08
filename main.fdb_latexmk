@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber main"] 0 "main.bcf" "main.bbl" "main" 1765183161.59507 -1
-  "main.bcf" 1765183161 114162 4108c01f61ab169a6991297ffe8d5e90 "pdflatex"
-  "references.bib" 1765121976 12509 a415ce3a483231e7e0b6c2a75cbcaad8 ""
+["biber main"] 1765185538.73928 "main.bcf" "main.bbl" "main" 1765185660.04733 0
+  "main.bcf" 1765185659 114381 e3fce324d8c35690a6a2cab43373de35 "pdflatex"
+  "references.bib" 1765185424 12952 6a93d651bcc390a618f2551364a38a1c ""
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1765183158.47958 "c:/Users/einar/OneDrive - NTNU/11.Semester IogIKT/Fordypningsprosjekt/Overleaf github/Prosjektoppgave-NTNU/main.tex" "main.pdf" "main" 1765183161.59599 0
+["pdflatex"] 1765185652.99322 "c:/Users/einar/OneDrive - NTNU/11.Semester IogIKT/Fordypningsprosjekt/Overleaf github/Prosjektoppgave-NTNU/main.tex" "main.pdf" "main" 1765185660.05035 0
   "C:/Users/einar/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1765126175 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
   "C:/Users/einar/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1000.pk" 1760786514 11548 f6a9dfd2457f37b31e2a8605d46c0ab7 ""
   "C:/Users/einar/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1760786364 13321623 0f0cfbfa57017b5a90a6cd5a43911fd5 ""
@@ -254,25 +254,25 @@
   "Sections/./Tables/GoATable.tex" 1762600684 1183 8dbccd6bc2bfa6c8cfa17dc5fdea5fcf ""
   "Sections/./Tables/HumanFactorResults.tex" 1765183157 2079 fbc8ccddba7e44de36f12f17b0bfdb2b ""
   "Sections/./Tables/LatencyMeasurements.tex" 1765121388 1202 7fd8062d1a6585fecbbfedaa7e1a126a ""
-  "Sections/./Tables/LatencyThresholdResults.tex" 1765183137 2466 6cf6cd9355eb799a1da30860a88f55da ""
+  "Sections/./Tables/LatencyThresholdResults.tex" 1765185462 2412 981ae43948d2186176f00fcf2bd82666 ""
   "Sections/00 Preface.tex" 1760780607 375 d09ff5523f92b22a7033cf9f6c726de4 ""
   "Sections/01 Abstract.tex" 1760780607 100 ebd4e2d72d80f4e9c40f833ebc22c4cb ""
   "Sections/02 Introduction.tex" 1763818257 1955 17a6ef9262d1e03e6a02c84bc0acb8d1 ""
   "Sections/03 Theory.tex" 1765182303 13706 e06b735a71cb8bf6273ca40f4e7efb11 ""
-  "Sections/04 Related Work.tex" 1765182290 16709 fbb8c2f58cb4465859ff3b80a77ec2d1 ""
+  "Sections/04 Related Work.tex" 1765185646 16633 5b1a6f0263e21f0b88b1283e4701a9bf ""
   "Sections/05 Method.tex" 1765119443 5999 73c1a8460627c8cb637f78c8d5e3ef78 ""
-  "Sections/06 Results.tex" 1765182855 4431 a13c9d5294ea931f1e1e0e33dfe76497 ""
+  "Sections/06 Results.tex" 1765185534 4477 8c1c5e7287e2ea38fc63b626bdaf665e ""
   "Sections/15 Discussion.tex" 1765033104 383 9537b30a7a9a127f8c767afb5162da47 ""
   "Sections/20 Conclusion.tex" 1760780607 0 d41d8cd98f00b204e9800998ecf8427e ""
   "c:/Users/einar/OneDrive - NTNU/11.Semester IogIKT/Fordypningsprosjekt/Overleaf github/Prosjektoppgave-NTNU/main.tex" 1765182476 1795 87e065029dde42ed39bbcb91f57793f5 ""
-  "main.aux" 1765183161 19230 f826695c34bf87234f09d684075fd2c7 "pdflatex"
-  "main.bbl" 1765127932 59065 9577896f46f6846d8f49cbf8a8e7ecde "biber main"
-  "main.lof" 1765183161 387 117629e3d846e32ed9a1f5bea1b3c8c5 "pdflatex"
-  "main.lot" 1765183161 619 c35641ce1aceb4e1ceef3c386a9333c4 "pdflatex"
-  "main.out" 1765183161 7768 8716f056b7d683a8945ce29fe923cbf4 "pdflatex"
-  "main.run.xml" 1765183161 2341 774b1370d7471097fc23c34b072738c2 "pdflatex"
+  "main.aux" 1765185659 19920 67281aae3b3b7981df31c7f663de965e "pdflatex"
+  "main.bbl" 1765185540 60850 1bbb0e8da958ff616f3bb8ce7b8aa238 "biber main"
+  "main.lof" 1765185659 387 117629e3d846e32ed9a1f5bea1b3c8c5 "pdflatex"
+  "main.lot" 1765185659 619 c35641ce1aceb4e1ceef3c386a9333c4 "pdflatex"
+  "main.out" 1765185659 7768 8716f056b7d683a8945ce29fe923cbf4 "pdflatex"
+  "main.run.xml" 1765185659 2341 774b1370d7471097fc23c34b072738c2 "pdflatex"
   "main.tex" 1765182476 1795 87e065029dde42ed39bbcb91f57793f5 ""
-  "main.toc" 1765183161 6023 deb04286fdffede8a3b071bdb4e59abd "pdflatex"
+  "main.toc" 1765185659 6282 b24e9961d2e1df87ed4b5a74dca78168 "pdflatex"
   "packages.sty" 1760780607 5800 df1fc465ef2b6498c4735992048b7e0e ""
   "title.tex" 1760780607 828 534e59d05b1b27c329b0932069367a7d ""
   (generated)

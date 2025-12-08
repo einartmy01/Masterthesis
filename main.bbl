@@ -408,6 +408,48 @@
       \verb https://transport.ec.europa.eu/transport-modes/rail/ertms/what-ertms-and-how-does-it-work/etcs-levels-and-modes_en
       \endverb
     \endentry
+    \entry{fp2r2dato2023d5.4}{report}{}{}
+      \name{author}{2}{}{%
+        {{hash=97ccb1b8990745fbabe49b06fe38c0e4}{%
+           family={Francesco},
+           familyi={F\bibinitperiod},
+           given={Inzirillo},
+           giveni={I\bibinitperiod}}}%
+        {{hash=38026ba4ee6b102b47bf3ffb41325c8f}{%
+           family={al.},
+           familyi={a\bibinitperiod},
+           prefix={et},
+           prefixi={e\bibinitperiod}}}%
+      }
+      \list{institution}{2}{%
+        {FP2R2DATO}%
+        {Europe's Rail}%
+      }
+      \strng{namehash}{934c3d59d5a4c30f8a540cd428745c44}
+      \strng{fullhash}{934c3d59d5a4c30f8a540cd428745c44}
+      \strng{fullhashraw}{934c3d59d5a4c30f8a540cd428745c44}
+      \strng{bibnamehash}{934c3d59d5a4c30f8a540cd428745c44}
+      \strng{authorbibnamehash}{934c3d59d5a4c30f8a540cd428745c44}
+      \strng{authornamehash}{934c3d59d5a4c30f8a540cd428745c44}
+      \strng{authorfullhash}{934c3d59d5a4c30f8a540cd428745c44}
+      \strng{authorfullhashraw}{934c3d59d5a4c30f8a540cd428745c44}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{D5.4 - Documentation of use cases for Remote Driving}
+      \field{urlday}{8}
+      \field{urlmonth}{12}
+      \field{urlyear}{2025}
+      \field{year}{2023}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://rail-research.europa.eu/wp-content/uploads/2025/07/D5.4-%E2%80%93-Documentation-of-use-cases-for-Remote-Driving.pdf
+      \endverb
+      \verb{url}
+      \verb https://rail-research.europa.eu/wp-content/uploads/2025/07/D5.4-%E2%80%93-Documentation-of-use-cases-for-Remote-Driving.pdf
+      \endverb
+    \endentry
     \entry{george2021mixedmethods}{misc}{}{}
       \name{author}{1}{}{%
         {{hash=e23c50e392ecba769299b04e5e54d0e4}{%
