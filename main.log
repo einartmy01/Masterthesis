@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.10.18)  10 DEC 2025 11:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.10.18)  10 DEC 2025 12:46
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1206,7 +1206,7 @@ Package gensymb Info: Using \textmu for \micro on input line 7.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 (./title.tex
-<./Images/NTNU_logo.png, id=296, 426.393pt x 110.5731pt>
+<./Images/NTNU_logo.png, id=293, 426.393pt x 110.5731pt>
 File: ./Images/NTNU_logo.png Graphic file (type png)
 <use ./Images/NTNU_logo.png>
 Package pdftex.def Info: ./Images/NTNU_logo.png  used on input line 9.
@@ -1245,7 +1245,14 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 
 
-[5] (Sections/02 Introduction.tex)
+[5] (Sections/02 Introduction.tex
+
+LaTeX Warning: Citation 'era_tsi' on page 1 undefined on input line 21.
+
+
+LaTeX Warning: Citation 'dlr2025atocargo' on page 1 undefined on input line 21.
+
+)
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
@@ -1254,135 +1261,603 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has b
 l.27 \newpage
               [1] (Sections/02.5 Method.tex
 
+LaTeX Warning: Citation 'arksey2005scoping' on page 2 undefined on input line 6.
+
+
+LaTeX Warning: Citation 'arksey2005scoping' on page 2 undefined on input line 6.
+
+
+LaTeX Warning: Citation 'creswell2014researchdesign' on page 2 undefined on input line 8.
+
+
+LaTeX Warning: Citation 'george2021mixedmethods' on page 2 undefined on input line 10.
+
+
+LaTeX Warning: Citation 'lim2008evidencebased' on page 2 undefined on input line 13.
+
+
+
 [2]
 
 [3])
 
-[4] (Sections/03 Theory.tex (Sections/./Tables/GoATable.tex)
-<Images/GoA from UITP.png, id=467, 247.42438pt x 176.66pt>
+[4] (Sections/03 Theory.tex
+
+LaTeX Warning: Citation 'milroy1980aspects' on page 5 undefined on input line 4.
+
+
+LaTeX Warning: Citation 'dlr2025atocargo' on page 5 undefined on input line 4.
+
+
+LaTeX Warning: Citation 'cbtc_goa' on page 5 undefined on input line 7.
+
+(Sections/./Tables/GoATable.tex)
+
+LaTeX Warning: Citation 'brandenburger2023vqreactiontimertc' on page 5 undefined on input line 11.
+
+<Images/GoA from UITP.png, id=446, 247.42438pt x 176.66pt>
 File: Images/GoA from UITP.png Graphic file (type png)
 <use Images/GoA from UITP.png>
 Package pdftex.def Info: Images/GoA from UITP.png  used on input line 16.
 (pdftex.def)             Requested size: 298.75262pt x 213.32256pt.
 
+LaTeX Warning: Citation 'uitp2018metro' on page 5 undefined on input line 18.
 
-[5] (Sections/./Tables/ETCSItems.tex
-<Images/ETCS lv1.png, id=482, 507.8975pt x 251.43938pt>
+
+LaTeX Warning: Citation 'uitp2018metro' on page 5 undefined on input line 18.
+
+
+
+[5]
+
+LaTeX Warning: Citation 'iec62290' on page 6 undefined on input line 21.
+
+
+LaTeX Warning: Citation 'cbtc_goa' on page 6 undefined on input line 21.
+
+
+LaTeX Warning: Citation 'uitp2018metro' on page 6 undefined on input line 21.
+
+
+LaTeX Warning: Citation 'era_ertms' on page 6 undefined on input line 30.
+
+
+LaTeX Warning: Citation 'eu_etcs_levels' on page 6 undefined on input line 30.
+
+(Sections/./Tables/ETCSItems.tex
+<Images/ETCS lv1.png, id=451, 507.8975pt x 251.43938pt>
 File: Images/ETCS lv1.png Graphic file (type png)
 <use Images/ETCS lv1.png>
 Package pdftex.def Info: Images/ETCS lv1.png  used on input line 7.
 (pdftex.def)             Requested size: 256.0774pt x 126.77829pt.
 
 
+LaTeX Warning: Citation 'eu_etcs_levels' on page 6 undefined on input line 9.
+
+
+LaTeX Warning: Citation 'eu_etcs_levels' on page 6 undefined on input line 9.
+
+
+
 [6 <./Images/GoA from UITP.png>]
-<Images/ETCS lv2.png, id=496, 504.88625pt x 238.39063pt>
+<Images/ETCS lv2.png, id=460, 504.88625pt x 238.39063pt>
 File: Images/ETCS lv2.png Graphic file (type png)
 <use Images/ETCS lv2.png>
 Package pdftex.def Info: Images/ETCS lv2.png  used on input line 14.
 (pdftex.def)             Requested size: 256.0774pt x 120.91193pt.
+
+
+LaTeX Warning: Citation 'eu_etcs_levels' on page 7 undefined on input line 16.
+
+
+LaTeX Warning: Citation 'eu_etcs_levels' on page 7 undefined on input line 16.
+
+
+LaTeX Warning: Citation 'eu_etcs_levels' on page 7 undefined on input line 18.
+
 )
 
+LaTeX Warning: Citation 'eu_etcs_levels' on page 7 undefined on input line 37.
+
+
+LaTeX Warning: Citation 'akhila20235g' on page 7 undefined on input line 45.
+
+
+LaTeX Warning: Citation 'li20185g' on page 7 undefined on input line 45.
+
+
+
 [7 <./Images/ETCS lv1.png> <./Images/ETCS lv2.png>]
-<Images/ERTMS-ATO solution.png, id=522, 459.7175pt x 416.05438pt>
+
+LaTeX Warning: Citation 'akhila20235g' on page 8 undefined on input line 47.
+
+
+LaTeX Warning: Citation 'li20185g' on page 8 undefined on input line 47.
+
+
+LaTeX Warning: Citation 'sniady2012gsmr' on page 8 undefined on input line 50.
+
+
+LaTeX Warning: Citation 'he2016gsmr' on page 8 undefined on input line 50.
+
+
+LaTeX Warning: Citation 'sniady2012gsmr' on page 8 undefined on input line 53.
+
+
+LaTeX Warning: Citation 'he2016gsmr' on page 8 undefined on input line 53.
+
+
+LaTeX Warning: Citation 'uic_frmcs' on page 8 undefined on input line 56.
+
+
+LaTeX Warning: Citation 'mandoc2019erauicfrmcs' on page 8 undefined on input line 56.
+
+
+LaTeX Warning: Citation 'mejias2024' on page 8 undefined on input line 63.
+
+
+LaTeX Warning: Citation 'amador2022wifi' on page 8 undefined on input line 66.
+
+
+LaTeX Warning: Citation 'pandey2022wifi' on page 8 undefined on input line 66.
+
+
+LaTeX Warning: Citation 'amador2022wifi' on page 8 undefined on input line 68.
+
+
+LaTeX Warning: Citation 'pandey2022wifi' on page 8 undefined on input line 68.
+
+<Images/ERTMS-ATO solution.png, id=469, 459.7175pt x 416.05438pt>
 File: Images/ERTMS-ATO solution.png Graphic file (type png)
 <use Images/ERTMS-ATO solution.png>
 Package pdftex.def Info: Images/ERTMS-ATO solution.png  used on input line 74.
 (pdftex.def)             Requested size: 213.39566pt x 193.13316pt.
 
+LaTeX Warning: Citation 'era_ertms' on page 8 undefined on input line 76.
 
-[8] (Sections/./Tables/HowToMeasure.tex
+
+LaTeX Warning: Citation 'era_ertms' on page 8 undefined on input line 76.
+
+
+
+[8]
+
+LaTeX Warning: Citation 'era_ertms' on page 9 undefined on input line 78.
+
+(Sections/./Tables/HowToMeasure.tex
 
 [9 <./Images/ERTMS-ATO solution.png>])
 
-[10] (Sections/./Tables/Regulations3GPP.tex
-Sections/./Tables/Regulations3GPP.tex:20: Missing # inserted in alignment preamble.
-<to be read again> 
-                   \cr 
-l.20     \end{tabularx}
-                       
-There should be exactly one # between &'s, when an
-\halign or \valign is being set up. In this case you had
-none, so I've put one in; maybe that will work.
+LaTeX Warning: Citation 'itu_g1051' on page 10 undefined on input line 89.
 
-Sections/./Tables/Regulations3GPP.tex:20: Misplaced \noalign.
-\toprule ->\noalign 
-                    {\ifnum 0=`}\fi \@aboverulesep =\abovetopsep \global \@b...
-l.20     \end{tabularx}
-                       
-I expect to see \noalign only after the \cr of
-an alignment. Proceed, and I'll ignore this case.
 
-Sections/./Tables/Regulations3GPP.tex:20: Missing } inserted.
-<inserted text> 
-                }
-l.20     \end{tabularx}
-                       
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
+LaTeX Warning: Citation 'techtarget_rfc_definition' on page 10 undefined on input line 89.
 
-Sections/./Tables/Regulations3GPP.tex:20: Missing } inserted.
-<inserted text> 
-                }
-l.20     \end{tabularx}
-                       
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
 
-Sections/./Tables/Regulations3GPP.tex:20: Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.20     \end{tabularx}
-                       
-I'm guessing that you meant to end an alignment here.
+LaTeX Warning: Citation 'dns_latency_protocols' on page 10 undefined on input line 92.
 
-Sections/./Tables/Regulations3GPP.tex:20: Undefined control sequence.
-\@BTrule ...\doublerulesep \fi \fi \fi \@BTswitch 
-                                                  
-l.20     \end{tabularx}
-                       
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
 
-Sections/./Tables/Regulations3GPP.tex:20: Misplaced alignment tab character &.
-<inserted text> ...} \toprule \textbf {Scenario} &
-                                                   \textbf {End2End Latency}...
-l.20     \end{tabularx}
-                       
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
+LaTeX Warning: Citation 'itu_g1051' on page 10 undefined on input line 94.
 
-Sections/./Tables/Regulations3GPP.tex:20: Misplaced alignment tab character &.
-<inserted text> ...} & \textbf {End2End Latency} &
-                                                   \textbf {Reliability} & \...
-l.20     \end{tabularx}
-                       
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
 
-Sections/./Tables/Regulations3GPP.tex:20: Misplaced alignment tab character &.
-<inserted text> ...ency} & \textbf {Reliability} &
-                                                   \textbf {Speed limit} & \...
-l.20     \end{tabularx}
-                       
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you'r
+LaTeX Warning: Citation 'era_tsi' on page 10 undefined on input line 106.
+
+
+LaTeX Warning: Citation 'era_ertms' on page 10 undefined on input line 106.
+
+
+LaTeX Warning: Citation 'sjt_regulations' on page 10 undefined on input line 108.
+
+
+LaTeX Warning: Citation 'banenor_network' on page 10 undefined on input line 108.
+
+
+LaTeX Warning: Citation 'dlr2025atocargo' on page 10 undefined on input line 108.
+
+
+LaTeX Warning: Citation 'era_tsi' on page 10 undefined on input line 108.
+
+
+LaTeX Warning: Citation 'era_ertms' on page 10 undefined on input line 110.
+
+
+
+[10]
+
+LaTeX Warning: Citation 'fp2r2dato2023d41_1' on page 11 undefined on input line 133.
+
+
+LaTeX Warning: Citation 'uic_frmcs' on page 11 undefined on input line 146.
+
+
+LaTeX Warning: Citation '3gppts22289' on page 11 undefined on input line 146.
+
+(Sections/./Tables/Regulations3GPP.tex
+Overfull \vbox (6.94444pt too high) detected at line 18
+ []
+
+
+Overfull \vbox (6.94444pt too high) detected at line 18
+ []
+
+
+Overfull \vbox (6.94444pt too high) detected at line 18
+ []
+
+
+Overfull \hbox (130.35704pt too wide) in alignment at lines 18--18
+[][][][][][] 
+ []
+
+)
+
+LaTeX Warning: Citation '3gppts22289' on page 11 undefined on input line 153.
+
+
+LaTeX Warning: Citation 'era_tsi' on page 11 undefined on input line 158.
+
+)
+
+[11] (Sections/04 Related Work.tex
+
+LaTeX Warning: Citation 'era_ertms' on page 12 undefined on input line 8.
+
+
+LaTeX Warning: Citation 'dlr2025atocargo' on page 12 undefined on input line 11.
+
+
+LaTeX Warning: Citation 'dlr2025atocargo' on page 12 undefined on input line 15.
+
+
+LaTeX Warning: Citation 'j√ºrgensen2025rcrailvehicles' on page 12 undefined on input line 18.
+
+Missing character: There is no √ in font cmbx10!
+Missing character: There is no º in font cmbx10!
+
+LaTeX Warning: Citation 'ouden2022' on page 12 undefined on input line 26.
+
+
+LaTeX Warning: Citation 'mejias2024' on page 12 undefined on input line 41.
+
+
+
+[12]
+
+[13]
+
+LaTeX Warning: Citation 'fp2r2dato2023d5_4' on page 14 undefined on input line 102.
+
+
+LaTeX Warning: Citation 'fp2r2dato2024d41_2' on page 14 undefined on input line 111.
+
+
+LaTeX Warning: Citation 'brandenburger2023vqreactiontimertc' on page 14 undefined on input line 149.
+
+
+
+[14]
+
+LaTeX Warning: Citation 'ouden2022' on page 15 undefined on input line 205.
+
+
+LaTeX Warning: Citation 'jernberg2024' on page 15 undefined on input line 230.
+
+
+LaTeX Warning: Citation 'jernberg2024' on page 15 undefined on input line 250.
+
+
+LaTeX Warning: Citation 'kaknjo2018videolatency' on page 15 undefined on input line 253.
+
+
+
+[15]
+
+LaTeX Warning: Citation 'neumeier2019' on page 16 undefined on input line 267.
+
+
+LaTeX Warning: Citation 'kang2018' on page 16 undefined on input line 280.
+
+
+LaTeX Warning: Citation 'gonz√°lez2023' on page 16 undefined on input line 294.
+
+Missing character: There is no √ in font cmbx10!
+Missing character: There is no ° in font cmbx10!
+
+LaTeX Warning: Citation 'larsen2022' on page 16 undefined on input line 309.
+
+
+LaTeX Warning: Citation 'b√∂hmer2020' on page 16 undefined on input line 328.
+
+Missing character: There is no √ in font cmbx10!
+Missing character: There is no ∂ in font cmbx10!
+
+
+[16]
+
+LaTeX Warning: Citation 'brunnstr√∂m2020' on page 17 undefined on input line 350.
+
+Missing character: There is no √ in font cmbx10!
+Missing character: There is no ∂ in font cmbx10!
+
+LaTeX Warning: Citation 'fp2r2dato2023d5_4' on page 17 undefined on input line 374.
+
+)
+
+[17] (Sections/06 Results.tex
+
+LaTeX Warning: Citation 'ouden2022' on page 18 undefined on input line 12.
+
+(Sections/./Tables/HumanFactorResults.tex
+
+[18]
+Missing character: There is no √ in font cmbx10!
+Missing character: There is no ° in font cmbx10!
+Missing character: There is no √ in font cmbx10!
+Missing character: There is no ∂ in font cmbx10!
+Missing character: There is no √ in font cmbx10!
+Missing character: There is no ° in font cmbx10!
+Missing character: There is no √ in font cmbx10!
+Missing character: There is no ∂ in font cmbx10!
+
+LaTeX Warning: Citation 'brandenburger2023vqreactiontimertc' on page 19 undefined on input line 48.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 48--48
+[]|\OT1/cmr/m/n/10 Brandernburger
+ []
+
+
+Overfull \hbox (107.06737pt too wide) in paragraph at lines 48--48
+\OT1/cmr/m/n/10 [[]]| 
+ []
+
+
+LaTeX Warning: Citation 'ouden2022' on page 19 undefined on input line 48.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 48--48
+[]|\OT1/cmr/m/n/10 Ouden 2022
+ []
+
+
+LaTeX Warning: Citation 'jernberg2024' on page 19 undefined on input line 48.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 48--48
+[]|\OT1/cmr/m/n/10 Jernberg 2024
+ []
+
+
+LaTeX Warning: Citation 'neumeier2019' on page 19 undefined on input line 48.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 48--48
+[]|\OT1/cmr/m/n/10 Neumier 2019
+ []
+
+
+LaTeX Warning: Citation 'gonz√°lez2023' on page 19 undefined on input line 48.
+
+Missing character: There is no √ in font cmbx10!
+Missing character: There is no ° in font cmbx10!
+
+Underfull \hbox (badness 1546) in paragraph at lines 48--48
+[]|\OT1/cmr/m/n/10 N. Gonz^^Salez 2023
+ []
+
+
+LaTeX Warning: Citation 'brunnstr√∂m2020' on page 19 undefined on input line 48.
+
+Missing character: There is no √ in font cmbx10!
+Missing character: There is no ∂ in font cmbx10!
+
+Underfull \hbox (badness 10000) in paragraph at lines 48--48
+[]|\OT1/cmr/m/n/10 Brunnstr^^?om 2020
+ []
+
+
+
+[19
+
+
+]
+Overfull \vbox (53.51628pt too high) has occurred while \output is active []
+
+
+
+[20])
+
+LaTeX Warning: Citation 'brandenburger2023vqreactiontimertc' on page 21 undefined on input line 16.
+
+
+LaTeX Warning: Citation 'jernberg2024' on page 21 undefined on input line 41.
+
+
+LaTeX Warning: Citation 'jernberg2024' on page 21 undefined on input line 53.
+
+
+LaTeX Warning: Citation 'kang2018' on page 21 undefined on input line 57.
+
+
+LaTeX Warning: Citation 'neumeier2019' on page 21 undefined on input line 57.
+
+
+LaTeX Warning: Citation 'brunnstr√∂m2020' on page 21 undefined on input line 61.
+
+Missing character: There is no √ in font cmbx10!
+Missing character: There is no ∂ in font cmbx10!
+(Sections/./Tables/LatencyThresholdResults.tex
+
+[21
+
+]
+Missing character: There is no √ in font cmbx10!
+Missing character: There is no º in font cmbx10!
+Missing character: There is no √ in font cmbx10!
+Missing character: There is no º in font cmbx10!
+
+LaTeX Warning: Citation 'j√ºrgensen2025rcrailvehicles' on page 22 undefined on input line 50.
+
+Missing character: There is no √ in font cmbx10!
+Missing character: There is no º in font cmbx10!
+
+Underfull \hbox (badness 10000) in paragraph at lines 50--50
+[]|\OT1/cmr/m/n/10 J^^?urgensen 2025
+ []
+
+
+Overfull \hbox (34.15683pt too wide) in paragraph at lines 50--50
+\OT1/cmr/m/n/10 [[]]| 
+ []
+
+
+LaTeX Warning: Citation 'ouden2022' on page 22 undefined on input line 50.
+
+
+LaTeX Warning: Citation 'neumeier2019' on page 22 undefined on input line 50.
+
+
+LaTeX Warning: Citation 'fp2r2dato2023d5_4' on page 22 undefined on input line 50.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 50--50
+[]|\OT1/cmr/m/n/10 FP2R2Dato D5.4
+ []
+
+
+LaTeX Warning: Citation 'fp2r2dato2024d41_2' on page 22 undefined on input line 50.
+
+
+Overfull \hbox (61.9182pt too wide) in paragraph at lines 50--50
+[]|\OT1/cmr/m/n/10 FP2R2DATO[[]]| 
+ []
+
+
+LaTeX Warning: Citation 'ouden2022' on page 22 undefined on input line 50.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 50--50
+[]|\OT1/cmr/m/n/10 Ouden 2022
+ []
+
+
+LaTeX Warning: Citation 'neumeier2019' on page 22 undefined on input line 50.
+
+
+
+[22
+
+
+])
+
+LaTeX Warning: Citation 'jernberg2024' on page 23 undefined on input line 69.
+
+
+LaTeX Warning: Citation 'neumeier2019' on page 23 undefined on input line 75.
+
+
+LaTeX Warning: Citation 'fp2r2dato2024d41_2' on page 23 undefined on input line 78.
+
+
+LaTeX Warning: Citation 'kaknjo2018videolatency' on page 23 undefined on input line 92.
+
+
+LaTeX Warning: Citation 'fp2r2dato2023d5_4' on page 23 undefined on input line 102.
+
+(Sections/./Tables/ToolsFactorResults.tex
+
+[23
+
+]
+Missing character: There is no √ in font cmbx10!
+Missing character: There is no ° in font cmbx10!
+Missing character: There is no √ in font cmbx10!
+Missing character: There is no ∂ in font cmbx10!
+Missing character: There is no √ in font cmbx10!
+Missing character: There is no ° in font cmbx10!
+Missing character: There is no √ in font cmbx10!
+Missing character: There is no ∂ in font cmbx10!
+
+LaTeX Warning: Citation 'mejias2024' on page 24 undefined on input line 48.
+
+
+LaTeX Warning: Citation 'kaknjo2018videolatency' on page 24 undefined on input line 48.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 48--48
+[]|\OT1/cmr/m/n/10 Kaknjo 2018
+ []
+
+
+LaTeX Warning: Citation 'kang2018' on page 24 undefined on input line 48.
+
+
+LaTeX Warning: Citation 'gonz√°lez2023' on page 24 undefined on input line 48.
+
+Missing character: There is no √ in font cmbx10!
+Missing character: There is no ° in font cmbx10!
+
+Underfull \hbox (badness 10000) in paragraph at lines 48--48
+[]|\OT1/cmr/m/n/10 N. Gonz^^Salez 2023
+ []
+
+
+LaTeX Warning: Citation 'larsen2022' on page 24 undefined on input line 48.
+
+
+LaTeX Warning: Citation 'b√∂hmer2020' on page 24 undefined on input line 48.
+
+Missing character: There is no √ in font cmbx10!
+Missing character: There is no ∂ in font cmbx10!
+
+
+[24
+
+
+]))
+
+[25
+
+] (Sections/20 Conclusion.tex)
+
+[26]
+
+LaTeX Warning: Empty bibliography on input line 43.
+
+runsystem(latexminted cleantemp  --timestamp 20251210124659 FAD58DE7366495DB4650CFEFAC2FCD61)...disabled (restricted).
+
+(main.aux)
+ ***********
+LaTeX2e <2025-06-01> patch level 1
+L3 programming layer <2025-09-02>
+ ***********
+
+
+LaTeX Warning: There were undefined references.
+
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: 2E4DAC72A65C55D1165A92ACDBCAD072;10348.
+
+Package biblatex Warning: Please (re)run Biber on the file:
+(biblatex)                main
+(biblatex)                and rerun LaTeX afterwards.
+
+Package logreq Info: Writing requests to 'main.run.xml'.
+\openout1 = `main.run.xml'.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 44115 strings out of 468081
+ 946908 string characters out of 5425788
+ 1877631 words of memory out of 5000000
+ 71976 multiletter control sequences out of 15000+600000
+ 637210 words of font info for 73 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 117i,14n,121p,1290b,2877s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\einar\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/einar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/einar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/einar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Users/einar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/einar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/einar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/einar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/einar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/einar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/einar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/einar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on main.pdf (32 pages, 966575 bytes).
+PDF statistics:
+ 629 PDF objects out of 1000 (max. 8388607)
+ 119 named destinations out of 1000 (max. 500000)
+ 614 words of extra memory for PDF output out of 10000 (max. 10000000)
+
