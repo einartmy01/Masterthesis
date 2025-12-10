@@ -1069,6 +1069,25 @@
       \verb https://ec.europa.eu/research/participants/documents/downloadPublic?documentIds=080166e508af73fc&appId=PPGMS
       \endverb
     \endentry
+    \entry{3gppts22289}{manual}{}{}
+      \list{organization}{1}{%
+        {ETSI}%
+      }
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labeltitlesource}{title}
+      \field{month}{5}
+      \field{note}{Accessed: YYYY-MM-DD}
+      \field{number}{TS 122 289 V17.0.0}
+      \field{title}{ETSI TS 122 289 V17.0.0 – LTE; 5G; Mobile communication system for railways (3GPP TS 22.289 version 17.0.0 Release 17)}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb https://www.etsi.org/deliver/etsi_ts/122200_122299/122289/17.00.00_60/ts_122289v170000p.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.etsi.org/deliver/etsi_ts/122200_122299/122289/17.00.00_60/ts_122289v170000p.pdf
+      \endverb
+    \endentry
     \entry{jürgensen2025rcrailvehicles}{thesis}{}{}
       \name{author}{1}{}{%
         {{hash=8338c031c310ec89e27849de49b2e102}{%
@@ -1268,8 +1287,8 @@
       \strng{authornamehash}{c39db6713da094266fa1ab9c84e5c977}
       \strng{authorfullhash}{4b95e8cae13e72bc3b7da60ba8b324d7}
       \strng{authorfullhashraw}{4b95e8cae13e72bc3b7da60ba8b324d7}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Transportation Engineering}

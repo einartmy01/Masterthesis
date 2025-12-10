@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.10.18)  9 DEC 2025 19:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.10.18)  10 DEC 2025 11:43
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1259,7 +1259,7 @@ l.27 \newpage
 [3])
 
 [4] (Sections/03 Theory.tex (Sections/./Tables/GoATable.tex)
-<Images/GoA from UITP.png, id=465, 247.42438pt x 176.66pt>
+<Images/GoA from UITP.png, id=467, 247.42438pt x 176.66pt>
 File: Images/GoA from UITP.png Graphic file (type png)
 <use Images/GoA from UITP.png>
 Package pdftex.def Info: Images/GoA from UITP.png  used on input line 16.
@@ -1267,7 +1267,7 @@ Package pdftex.def Info: Images/GoA from UITP.png  used on input line 16.
 
 
 [5] (Sections/./Tables/ETCSItems.tex
-<Images/ETCS lv1.png, id=480, 507.8975pt x 251.43938pt>
+<Images/ETCS lv1.png, id=482, 507.8975pt x 251.43938pt>
 File: Images/ETCS lv1.png Graphic file (type png)
 <use Images/ETCS lv1.png>
 Package pdftex.def Info: Images/ETCS lv1.png  used on input line 7.
@@ -1275,7 +1275,7 @@ Package pdftex.def Info: Images/ETCS lv1.png  used on input line 7.
 
 
 [6 <./Images/GoA from UITP.png>]
-<Images/ETCS lv2.png, id=494, 504.88625pt x 238.39063pt>
+<Images/ETCS lv2.png, id=496, 504.88625pt x 238.39063pt>
 File: Images/ETCS lv2.png Graphic file (type png)
 <use Images/ETCS lv2.png>
 Package pdftex.def Info: Images/ETCS lv2.png  used on input line 14.
@@ -1283,7 +1283,7 @@ Package pdftex.def Info: Images/ETCS lv2.png  used on input line 14.
 )
 
 [7 <./Images/ETCS lv1.png> <./Images/ETCS lv2.png>]
-<Images/ERTMS-ATO solution.png, id=520, 459.7175pt x 416.05438pt>
+<Images/ERTMS-ATO solution.png, id=522, 459.7175pt x 416.05438pt>
 File: Images/ERTMS-ATO solution.png Graphic file (type png)
 <use Images/ERTMS-ATO solution.png>
 Package pdftex.def Info: Images/ERTMS-ATO solution.png  used on input line 74.
@@ -1294,113 +1294,95 @@ Package pdftex.def Info: Images/ERTMS-ATO solution.png  used on input line 74.
 
 [9 <./Images/ERTMS-ATO solution.png>])
 
-[10])
+[10] (Sections/./Tables/Regulations3GPP.tex
+Sections/./Tables/Regulations3GPP.tex:20: Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.20     \end{tabularx}
+                       
+There should be exactly one # between &'s, when an
+\halign or \valign is being set up. In this case you had
+none, so I've put one in; maybe that will work.
 
-[11] (Sections/04 Related Work.tex
+Sections/./Tables/Regulations3GPP.tex:20: Misplaced \noalign.
+\toprule ->\noalign 
+                    {\ifnum 0=`}\fi \@aboverulesep =\abovetopsep \global \@b...
+l.20     \end{tabularx}
+                       
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
 
-[12]
+Sections/./Tables/Regulations3GPP.tex:20: Missing } inserted.
+<inserted text> 
+                }
+l.20     \end{tabularx}
+                       
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
 
-[13]
+Sections/./Tables/Regulations3GPP.tex:20: Missing } inserted.
+<inserted text> 
+                }
+l.20     \end{tabularx}
+                       
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
 
-[14]
+Sections/./Tables/Regulations3GPP.tex:20: Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.20     \end{tabularx}
+                       
+I'm guessing that you meant to end an alignment here.
 
-[15]
+Sections/./Tables/Regulations3GPP.tex:20: Undefined control sequence.
+\@BTrule ...\doublerulesep \fi \fi \fi \@BTswitch 
+                                                  
+l.20     \end{tabularx}
+                       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-[16])
+Sections/./Tables/Regulations3GPP.tex:20: Misplaced alignment tab character &.
+<inserted text> ...} \toprule \textbf {Scenario} &
+                                                   \textbf {End2End Latency}...
+l.20     \end{tabularx}
+                       
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
 
-[17] (Sections/06 Results.tex (Sections/./Tables/HumanFactorResults.tex
+Sections/./Tables/Regulations3GPP.tex:20: Misplaced alignment tab character &.
+<inserted text> ...} & \textbf {End2End Latency} &
+                                                   \textbf {Reliability} & \...
+l.20     \end{tabularx}
+                       
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
 
-[18]
-Underfull \hbox (badness 1546) in paragraph at lines 48--48
-[]|\OT1/cmr/m/n/10 N. Gonz^^Salez 2023
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 48--48
-[]|\OT1/cmr/m/n/10 Brunnstr^^?om 2020
- []
-
-
-
-[19
-
-
-]
-Overfull \vbox (53.51628pt too high) has occurred while \output is active []
-
-
-
-[20]) (Sections/./Tables/LatencyThresholdResults.tex
-
-[21
-
-]
-
-[22
-
-
-]) (Sections/./Tables/ToolsFactorResults.tex
-
-[23
-
-]
-
-[24
-
-
-]))
-
-[25
-
-] (Sections/20 Conclusion.tex)
-
-[26]
-Overfull \hbox (5.4434pt too wide) in paragraph at lines 43--43
-[]\OT1/cmr/m/n/10 John W. Creswell. \OT1/cmr/m/it/10 Re-search Design: Qual-it-at-ive, Quant-it-at-ive, and Mixed Meth-ods Ap-proaches\OT1/cmr/m/n/10 .
- []
-
-
-
-[27]
-Overfull \hbox (0.21512pt too wide) in paragraph at lines 43--43
-[]\OT1/cmr/m/n/10 Inzirillo Francesco et al. \OT1/cmr/m/it/10 D5.4 - Doc-u-ment-a-tion of use cases for Re-mote Driv-ing\OT1/cmr/m/n/10 . FP2R2DATO
- []
-
-
-Overfull \hbox (27.14835pt too wide) in paragraph at lines 43--43
-\OT1/cmss/m/n/10 Video[]Latency[]Measurement[]between[]a[]Robot[]and[]Its[]Remote[]Control[]Station[]Causes[]and[]Mitigation$[][]
- []
-
-
-
-[28]
-
-[29]
-runsystem(latexminted cleantemp  --timestamp 20251209190802 FAD58DE7366495DB4650CFEFAC2FCD61)...disabled (restricted).
-
- (main.aux)
- ***********
-LaTeX2e <2025-06-01> patch level 1
-L3 programming layer <2025-09-02>
- ***********
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 2FF2B4145BBB5879A3EA098424F28CA6;10452.
-Package logreq Info: Writing requests to 'main.run.xml'.
-\openout1 = `main.run.xml'.
-
- ) 
-Here is how much of TeX's memory you used:
- 44297 strings out of 468081
- 953770 string characters out of 5425788
- 1884799 words of memory out of 5000000
- 72120 multiletter control sequences out of 15000+600000
- 637806 words of font info for 75 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 117i,12n,121p,1290b,2877s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\einar\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/einar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/einar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/einar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/einar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/einar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/einar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/einar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/einar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/Users/einar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/einar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/einar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/einar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on main.pdf (35 pages, 1034325 bytes).
-PDF statistics:
- 899 PDF objects out of 1000 (max. 8388607)
- 159 named destinations out of 1000 (max. 500000)
- 622 words of extra memory for PDF output out of 10000 (max. 10000000)
-
+Sections/./Tables/Regulations3GPP.tex:20: Misplaced alignment tab character &.
+<inserted text> ...ency} & \textbf {Reliability} &
+                                                   \textbf {Speed limit} & \...
+l.20     \end{tabularx}
+                       
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you'r

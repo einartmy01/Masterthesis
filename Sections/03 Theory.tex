@@ -53,7 +53,7 @@ GSM-R is built upon the commercial GSM standard, the system operates within a de
 GSM-R employs Time Division Multiple Access (TDMA) to organize radio resources and primarily relies on circuit-switched connections to guarantee dedicated bandwidth for critical transmissions. \cite{sniady2012gsmr, he2016gsmr}
 
 \subsubsection{FRMCS}
-FRMCS or Future Railway Mobile Communication System is product of International Union of Railways (UIC) to find a successor for GSM-R as it was getting older. FRMCS is built upon 3GPP standards with 5G URLLC and other more modern techonology. FRMCS is set to replace GSM-R as the unified radio communication for ERTMS and will be a huge part of the future of railway technology.
+FRMCS or Future Railway Mobile Communication System is product of International Union of Railways (UIC) to find a successor for GSM-R as it was getting older. FRMCS is built upon 3GPP standards with 5G URLLC and other more modern techonology. FRMCS is set to replace GSM-R as the unified radio communication for ERTMS and will be a huge part of the future of railway technology.\cite{}
 
 \textit{3GPP Rel-16}
 Defines video quality for railway operations. 
@@ -143,21 +143,16 @@ Including: Solution QoE (1-5), Image Quality (1-5), Image latency (ms), Availabi
 
 
 \subsection{3GPP TS 22.289}
+3GPP TS 22.289 is a techincal spesification report. Done by 3GPP in the works with UIC and European Telecommunications Standards Institute (ETSI), which among other list performance requirments for main lines\cite{uic_frmcs,3gppts22289}. These requirements are set to ensure safe and good communications for the future of railway, but as mentioned in the report it is of now only target values. GoA3 and GoA4 is mentioned with the necesarry high level of communciations needed for operation. Here they also mention video-based remote control as a part of GoA3/GoA4 and put them in the same category for "Very Critical Video Communication". 
+
+
+Relevant information from table in 3GPP TS 22.289 posted on  about requirments for FRMCS
+Target Values:
+\import{./Tables/}{Regulations3GPP}
+
+In the table we can see end to end latency beeing mentioned, and they have defined it as the same as G2G \cite{3gppts22289}
 End-to-end latency: the time that takes to transfer a given piece of information unidirectional from a source to a 
 destination, measured at the communication interface, from the moment it is transmitted by the source to the moment it 
 is successfully received at the destination.
-Target Values:
-Very Critical 
-Video 
-Communication 
-with direct 
-impact on train 
-safety 
-E2E: < 100 ms 
- 
-Reliability 99,9\%
-Speed limit < 500 km/h 10 Mbps up to 20 Mbps Medium Up to 1 Gbps/km 200 km along rail tracks <10 ms 
- 
-99,9\% <40 km/h 10 Mbps up to 30 Mbps Medium Up to 1 Gbps/km 2 km along rail tracks urban or station  
 
-But is not yet considered in ERA's TSI CCS
+The work of 3GPP, TS 22.289, is not yet considered in ERA's TSI CCS and therefore not completely applied. Yet it is still to be expected to be the regulations of future work and something to keep in mind under future developement. \cite{era_tsi}
