@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber main"] 1765448601.91917 "main.bcf" "main.bbl" "main" 1765448611.92355 0
-  "main.bcf" 1765448611 117252 1e0715036fbc4a56fbc539d2624afdf9 "pdflatex"
-  "references.bib" 1765445272 16308 9e04b1418a73ec9006253e2513a7ee7d ""
+["biber main"] 1765450773.1646 "main.bcf" "main.bbl" "main" 1765450780.3707 0
+  "main.bcf" 1765450780 117400 66d1337d942b7f59ec3f55c5045cbd04 "pdflatex"
+  "references.bib" 1765450082 16310 bea36f98dbb484e922c93b6c1c0be3d4 ""
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1765448608.08274 "c:/Users/einar/OneDrive - NTNU/11.Semester IogIKT/Fordypningsprosjekt/Prosjektoppgave-NTNU/main.tex" "main.pdf" "main" 1765448611.92427 0
+["pdflatex"] 1765450776.19195 "c:/Users/einar/OneDrive - NTNU/11.Semester IogIKT/Fordypningsprosjekt/Prosjektoppgave-NTNU/main.tex" "main.pdf" "main" 1765450780.37146 0
   "C:/Users/einar/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1765368953 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
   "C:/Users/einar/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1000.pk" 1760786514 11548 f6a9dfd2457f37b31e2a8605d46c0ab7 ""
   "C:/Users/einar/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1760786364 13321623 0f0cfbfa57017b5a90a6cd5a43911fd5 ""
@@ -252,8 +252,8 @@
   "Images/ETCS lv2.png" 1765371898 302970 9df810ae9019fe18a41202254adf5410 ""
   "Images/GoA from UITP.png" 1765371898 49314 4529acabf3510192dd1cb192449f5dcd ""
   "Images/NTNU_logo.png" 1765371898 59242 c9f4f1196347f4a06dda9af8575c81d2 ""
-  "Sections/./04 Related Work Controls/Car Control.tex" 1765445636 949 190831d5878fa3b14c8fd9c43e246317 ""
-  "Sections/./04 Related Work Controls/Train Control.tex" 1765444848 8078 b6b56af0117e779a8a584f3171e73d21 ""
+  "Sections/./04 Related Work Controls/Car Control.tex" 1765450779 3450 67d96a68612c21c488c7059e872fba08 ""
+  "Sections/./04 Related Work Controls/Train Control.tex" 1765450768 8070 88979f5d7348b7d1f16487068d063f97 ""
   "Sections/./Tables/ETCSItems.tex" 1765371898 1321 cb5e9392483433d2841b8aed8223a67e ""
   "Sections/./Tables/GoATable.tex" 1765371898 1183 8dbccd6bc2bfa6c8cfa17dc5fdea5fcf ""
   "Sections/./Tables/HowToMeasure.tex" 1765371898 1202 7fd8062d1a6585fecbbfedaa7e1a126a ""
@@ -263,21 +263,21 @@
   "Sections/./Tables/ToolsFactorResults.tex" 1765372125 1695 328c663e4a756c271204611d0748f247 ""
   "Sections/00 Preface.tex" 1765371898 375 d09ff5523f92b22a7033cf9f6c726de4 ""
   "Sections/01 Abstract.tex" 1765371898 100 ebd4e2d72d80f4e9c40f833ebc22c4cb ""
-  "Sections/02 Introduction.tex" 1765448597 5293 c13555eefe264434408e9f027127ef4c ""
+  "Sections/02 Introduction.tex" 1765449475 5383 d34c1f1c4e859ee1b16b6677cb88298c ""
   "Sections/02.5 Method.tex" 1765371898 8870 a60f0335a5cdb0872de0470dc3d7eb73 ""
   "Sections/03 Theory.tex" 1765393118 17589 35f66a9714b82b6c013d4725289181b6 ""
   "Sections/04 Related Work.tex" 1765445707 6612 33f524c5bba5a7526be0ef0ef3839f0c ""
   "Sections/06 Results.tex" 1765447842 14450 9b9e479cb3729878a21b2b1ba39b2eaf ""
   "Sections/20 Conclusion.tex" 1765371898 124 eccec5b0370e63a3820b215084196583 ""
   "c:/Users/einar/OneDrive - NTNU/11.Semester IogIKT/Fordypningsprosjekt/Prosjektoppgave-NTNU/main.tex" 1765381864 989 35f58f15797f6f59b552c878e7252e61 ""
-  "main.aux" 1765448611 25053 924a0c2d98e7f3556597812dc98b354d "pdflatex"
-  "main.bbl" 1765448604 78304 5b749f6152cddf3a3c97e544196236d3 "biber main"
-  "main.lof" 1765448611 388 dc8af8242e9de22bceb3d70657231561 "pdflatex"
-  "main.lot" 1765448611 990 53eb336e98a2d98f35d1cbacc3b57f61 "pdflatex"
-  "main.out" 1765448611 9990 ba38d0fd483fabd33157180d28dff211 "pdflatex"
-  "main.run.xml" 1765448611 2341 774b1370d7471097fc23c34b072738c2 "pdflatex"
+  "main.aux" 1765450780 25214 32a92b2b39e22c9a5e751f810e082ee6 "pdflatex"
+  "main.bbl" 1765450776 78304 5b749f6152cddf3a3c97e544196236d3 "biber main"
+  "main.lof" 1765450780 388 dc8af8242e9de22bceb3d70657231561 "pdflatex"
+  "main.lot" 1765450780 990 5d661ff64dfa31bfb006873f98e2551e "pdflatex"
+  "main.out" 1765450780 9998 affa48cd6d14ad6f9e706442176590e3 "pdflatex"
+  "main.run.xml" 1765450780 2341 774b1370d7471097fc23c34b072738c2 "pdflatex"
   "main.tex" 1765381864 989 35f58f15797f6f59b552c878e7252e61 ""
-  "main.toc" 1765448611 6049 59a0a89469941c3e1d89cc4153b3e52b "pdflatex"
+  "main.toc" 1765450780 6060 1097b945065d22aa25a9cf6307929c84 "pdflatex"
   "packages.sty" 1765371898 6573 0f2b982c0dbe53540c4ea207b4fcb929 ""
   "title.tex" 1765371898 832 49015bd91f82fa836b6adc384fcb38e8 ""
   (generated)

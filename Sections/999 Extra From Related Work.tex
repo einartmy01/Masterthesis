@@ -1,10 +1,6 @@
 \cite{jürgensen2025rcrailvehicles}
 \paragraph{Additional extracted points:}
 \begin{enumerate}
-
-    \item \textbf{Digitalization in Railway} \\
-    The report emphasizes the broader digitization trend in German railways, including ATO over ETCS, improved connectivity, autonomous traffic management, and the reactivation of rural rail networks. Remote control is embedded within this digital transformation as part of automated and on-demand mobility concepts such as those pursued by REAKT and REAKTOR to increase efficiency and safety in rural rail operations :contentReference\cite{jürgensen2025rcrailvehicles}.
-
     \item \textbf{Protocols Used (and reasons, if stated)} \\
     The system currently uses \textbf{TCP} for communication between server and vehicle, prioritizing reliability for control commands, Heartbeat integrity, and safe data transfer. For the livestream, TCP is used in the prototype for stability, though the report notes that \textbf{UDP} may become preferable on cellular networks due to lower latency. Communication between components relies on Python sockets, JSON-encoded messages, and OpenCV for video handling :contentReference\cite{jürgensen2025rcrailvehicles}.
 
@@ -14,10 +10,6 @@
 
 \cite{kozarevic2025}
 \paragraph{Additional extracted points:}
-
-    \item \textbf{Digitalization in Railway} \\
-    The study is situated within the broader digitalisation of rail transport, where automation, remote operation, and new operational concepts require redesigned roles and interfaces. The transition to digital and autonomous systems motivates the need for remote supervisory and fallback functionality, which must align with evolving human–machine interaction requirements .
-
     \item \textbf{Protocols Used (if mentioned)} \\
     The report does not specify communication or networking protocols. It discusses functional requirements and human-factor needs rather than technical implementation details. No protocol choice or justification is provided .
 
@@ -28,10 +20,6 @@
 \cite{mejias2024}
 \paragraph{Additional extracted points:}
 \begin{enumerate}
-
-    \item \textbf{Digitalization in Railway} \\
-    The work fits into the shift toward FRMCS and 5G, which are expected to replace GSM-R and support real-time remote operation with higher bandwidth and reliability :contentReference.
-
     \item \textbf{Protocols Used} \\
     RTSP and WebRTC are compared, both running on RTP/RTCP. RTP provides low-latency transport, and RTCP supplies the metrics used for bitrate adaptation. RTSP is highlighted as more suitable when several users must access the same stream.
 
@@ -42,10 +30,6 @@
 \cite{fp2r2dato2024d41_2}.
 \paragraph{Additional extracted points:}
 \begin{enumerate}
-
-    \item \textbf{Digitalization in Railway} \\
-    The work is positioned within broader digitalisation goals, where remote control, perception systems, and integrated communication tools support more automated workflows. The KPI analysis highlights expected gains in operational efficiency, resource use, and system availability as digital processes replace manual ones.
-
     \item \textbf{Protocols Used} \\
     The deliverable does not specify technical communication or streaming protocols. It focuses on operational testing rather than implementation details, and no communication standards or protocol choices are discussed.
 
@@ -57,10 +41,6 @@
 \cite{fp2r2dato2023d5_4}
 \paragraph{Additional extracted points:}
 \begin{enumerate}
-
-    \item \textbf{Digitalization in Railway} \\
-    The chapter reflects the dependency of remote operation on digital systems such as communication links and onboard perception. It highlights how digital weaknesses—reduced bandwidth, sensor faults, missing data—directly affect the feasibility of remote driving and require defined fallback responses :contentReference[oaicite:2]{index=2}.
-
     \item \textbf{Protocols Used} \\
     No technical protocols are specified. The chapter focuses on operational behaviour, not communication architecture or protocol design :contentReference[oaicite:3]{index=3}.
 
@@ -72,10 +52,6 @@
 \cite{brandenburger2023vqreactiontimertc}
 \paragraph{Additional extracted points:}
 \begin{enumerate}
-
-    \item \textbf{Digitalization in Railway} \\
-    The work fits into ongoing digitalisation efforts where camera-based supervision and remote control depend on stable, high-quality video streams. It highlights human-factor limits that must be considered as digital platforms replace traditional in-cab visibility :contentReference[oaicite:2]{index=2}.
-
     \item \textbf{Protocols Used} \\
     No communication protocols are discussed. The study focuses strictly on video quality parameters (bitrate, FPS) rather than transmission methods :contentReference[oaicite:3]{index=3}.
 
@@ -89,3 +65,11 @@
     \item \textbf{Protocols Used} \\
     The video stream uses H.264 encoding, with command-and-control messages carried over mobile 4G/5G networks. No additional transport protocols are discussed in detail :contentReference[oaicite:3]{index=3}.
 \end{enumerate}
+
+\cite{jernberg2024}
+\paragraph{Protocols used}
+The study does not use or reference any communication protocols. All latency is generated internally within the simulator by delaying image frames, and no transport- or network-layer protocols are discussed or applied.
+
+\cite{kaknjo2018videolatency
+\paragraph{Protocols used}
+The paper evaluates video transmission using RTSP over both TCP and UDP. Tests include H.264 and MJPEG encoding, with direct connections to the camera as well as server–client forwarding setups for measuring one-way transport delay. TCP introduces retransmissions and higher jitter, while UDP provides lower delay but without delivery guarantees. }
