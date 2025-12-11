@@ -23,57 +23,9 @@ The improvement increased as well for higher latency
 Samme som de andre, sim med lagt på latency.
 
 
-
-\subsubsection{Jernberg 2024}
-\cite{jernberg2024}
-- Evaluates Latency by performance, (people) Sim
-
-- Voysys
-- G2G
-- Average delay of 88.8 ms and added conditions of +100 -> 188 ms and +200 -> 288 ms
-- 50km/h and 70km/h (Try to keep speedlimits)
-- driver was not given a latency
-
-+100 and +200 was chosen because of Neumeier result.
-Reference Neumeier et al. (2019) stated that 300 ms might be manageable for trained operators but in some conditions during their simulator study there were tendencies that even smaller latencies affected the performance of the operator negatively.
-
-That was:
-H1/P1: Car pulling over into your lane.
-H2/P2: Car crossing from opposing lane threw your lane.
-H3/P3: Car with "vikeplikt" does not stop in crossing.
-H4/P4: Child runs into traffic from behind a bus.
-H5/P5: Bicycal in lane that driver needs to pass in oppsing lane.
+\import{./04 Related Work Controls}{Drone Control}
 
 
-According to Jernberg \cite{jernberg2024}, when performing a study with more naturalistic driving scenarios, speed and type of task is significant for results as well as latency. 
-They also adapt to cerumstances, adjusting speed and safetymargins.
-
-
-\subsubsection{Neumier 2019}
-\cite{neumeier2019}
-- Evaluate latency by performance, (people) Sim
-
- - Round-Trip Time (RTT)
- - Average delay of 67 ms and added conditions of +100 +300 +500
- - Was given the ca. latency
-
-Talks about how participent leave the car lane significanlty more with higher latency, even tho with stable high latency. But:
-"In the Parking scenario, even no differences for whatever latency could be revealed"
-Scenarios, was driving with turns, and one parking. No hazards except latency.
-
-
-\subsubsection{Kang 2018}
-\cite{kang2018}
-- Evaluate latency by perfomance, (different tools) IRL, 
-
-- 3 different resulutions (320x240, 640x480, 1280x960)
-- 3 different bitrate (0.5Mbps, 1Mbps, 4Mbps)
-- LTE and WiFi
-- Video and camerea catching timestamps
-
-
-
-\subsection{Drone Control}
 %Ikke sjekk Emilia sin, hun har ikke kilder
 
 \subsubsection{N. González 2023}
@@ -90,6 +42,7 @@ Can activate low latency mode.
 Connection requirments of 100 ms for video streaming, set by 3GPP TS 22.829 for unmanned aerial vehicles
 Found added latency of around 180 start causing lower MOS / QoE, and steady deteriation making it 1, lowest grade at around 460 ms
 concludes with a e2e of 250 ms is vaiable for service usability.
+
 
 \subsubsection{Larsen 2022}
 \cite{larsen2022}

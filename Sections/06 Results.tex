@@ -72,6 +72,42 @@ Includes a test that results in at 300ms, you get loss of performance, and at 10
 
 Did not find resonable difference in the latencies of straight acceleration test. 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cite{neumeier2019}
+- Evaluate latency by performance, (people) Sim
+
+ - Round-Trip Time (RTT)
+ - Average delay of 67 ms and added conditions of +100 +300 +500
+ - Was given the ca. latency
+
+Talks about how participent leave the car lane significanlty more with higher latency, even tho with stable high latency. But:
+"In the Parking scenario, even no differences for whatever latency could be revealed"
+Scenarios, was driving with turns, and one parking. No hazards except latency.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cite{jernberg2024}
+- Evaluates Latency by performance, (people) Sim
+
+- Voysys
+- G2G
+- Average delay of 88.8 ms and added conditions of +100 -> 188 ms and +200 -> 288 ms
+- 50km/h and 70km/h (Try to keep speedlimits)
+- driver was not given a latency
+
++100 and +200 was chosen because of Neumeier result.
+Reference Neumeier et al. (2019) stated that 300 ms might be manageable for trained operators but in some conditions during their simulator study there were tendencies that even smaller latencies affected the performance of the operator negatively.
+
+That was:
+H1/P1: Car pulling over into your lane.
+H2/P2: Car crossing from opposing lane threw your lane.
+H3/P3: Car with "vikeplikt" does not stop in crossing.
+H4/P4: Child runs into traffic from behind a bus.
+H5/P5: Bicycal in lane that driver needs to pass in oppsing lane.
+
+
+According to Jernberg \cite{jernberg2024}, when performing a study with more naturalistic driving scenarios, speed and type of task is significant for results as well as latency. 
+They also adapt to cerumstances, adjusting speed and safetymargins.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \cite{jernberg2024}
 "However, it also seems to be the case that remote operators adapt to the circumstances they find themselves in; for example, they drive with a safety margin reducing risks to their personal chosen limit and do not override the barriers of their own choice."
@@ -92,8 +128,19 @@ Could not confirm that fixed latency resultet in any better result than varied l
 Could not confirm "Kang et al" \cite{kang2018} who stated that fixed latency leads to better driving performance than varying. \cite{neumeier2019}
 % Kang did not at all mention fixed vs variable latencies. 
 
+
 In the event of offloading a truck with a crane, the participents where exposed to constant levels of latency, and showing that delaly of joystick all the way up to 480 ms was basicly irrelevant for QoE and the results of task done pr time. However a delay of 880 significantly reduced the performance overall by atleast halfing the rating on the scores (1-5).
 \cite{brunnström2020}
+
+
+
+
+
+
+
+
+
+
 
 
 \subsection{Comparing latency for different vehicles}
@@ -267,6 +314,26 @@ Adjust itself back up again. Also we can see a shift in latency between latency 
 Found MJPEG to be 300 ms lower latency than H.264. However it found H.264 to demand less bandwitdh 50-380Kbps as it compresses more enhensive than MJPEG 4.6-5Mbps.
 Found detoriation in performance in latencies above 300 ms and increase in errors during control for latencies larger than 500 ms.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Kang 2018}
+\cite{kang2018}
+- Evaluate latency by perfomance, (different tools) IRL, 
+
+- 3 different resulutions (320x240, 640x480, 1280x960)
+- 3 different bitrate (0.5Mbps, 1Mbps, 4Mbps)
+- LTE and WiFi
+- Video and camerea catching timestamps
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+
+
+
+
 
 \subsection{Theory v. Practical test}
 Compare from the PreDraft of what expected result and hopes were, and discussing them with the information of what happend in the test and measurments.

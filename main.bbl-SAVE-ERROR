@@ -19,6 +19,267 @@
 
 \refsection{0}
   \datalist[entry]{none/global//global/global/global}
+    \entry{jürgensen2025rcrailvehicles}{thesis}{}{}
+      \name{author}{1}{}{%
+        {{hash=8338c031c310ec89e27849de49b2e102}{%
+           family={Jürgensen},
+           familyi={J\bibinitperiod},
+           given={Simon},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {University of Kiel}%
+      }
+      \strng{namehash}{8338c031c310ec89e27849de49b2e102}
+      \strng{fullhash}{8338c031c310ec89e27849de49b2e102}
+      \strng{fullhashraw}{8338c031c310ec89e27849de49b2e102}
+      \strng{bibnamehash}{8338c031c310ec89e27849de49b2e102}
+      \strng{authorbibnamehash}{8338c031c310ec89e27849de49b2e102}
+      \strng{authornamehash}{8338c031c310ec89e27849de49b2e102}
+      \strng{authorfullhash}{8338c031c310ec89e27849de49b2e102}
+      \strng{authorfullhashraw}{8338c031c310ec89e27849de49b2e102}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Remote Control for Rail Vehicles}
+      \field{type}{phdthesis}
+      \field{urlday}{15}
+      \field{urlmonth}{10}
+      \field{urlyear}{2025}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://rtsys.informatik.uni-kiel.de/~biblio/downloads/theses/sij-bt.pdf
+      \endverb
+      \verb{url}
+      \verb https://rtsys.informatik.uni-kiel.de/~biblio/downloads/theses/sij-bt.pdf
+      \endverb
+    \endentry
+    \entry{kozarevic2025}{thesis}{}{}
+      \name{author}{1}{}{%
+        {{hash=2245206624b7fba66a1b22e91547f5ca}{%
+           family={Kozarevic},
+           familyi={K\bibinitperiod},
+           given={Emilia\bibnamedelima Salvesen},
+           giveni={E\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {NTNU}%
+      }
+      \strng{namehash}{2245206624b7fba66a1b22e91547f5ca}
+      \strng{fullhash}{2245206624b7fba66a1b22e91547f5ca}
+      \strng{fullhashraw}{2245206624b7fba66a1b22e91547f5ca}
+      \strng{bibnamehash}{2245206624b7fba66a1b22e91547f5ca}
+      \strng{authorbibnamehash}{2245206624b7fba66a1b22e91547f5ca}
+      \strng{authornamehash}{2245206624b7fba66a1b22e91547f5ca}
+      \strng{authorfullhash}{2245206624b7fba66a1b22e91547f5ca}
+      \strng{authorfullhashraw}{2245206624b7fba66a1b22e91547f5ca}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Developing Remote Control as a Fallback System: An Iterative Approach}
+      \field{type}{phdthesis}
+      \field{year}{2025}
+    \endentry
+    \entry{mejias2024}{report}{}{}
+      \name{author}{6}{}{%
+        {{hash=826d33cd0a14c7180865f96fc30aacf1}{%
+           family={Mejías},
+           familyi={M\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod}}}%
+        {{hash=260a31583a6369af1f43a17fbcfc876e}{%
+           family={Fernández},
+           familyi={F\bibinitperiod},
+           given={Z.},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=0b2fa02ee6b0b2300a4742d14ad4613c}{%
+           family={Viola},
+           familyi={V\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+        {{hash=46081ac0f9584a56165185e9be2ee4f4}{%
+           family={Aramburu},
+           familyi={A\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=6cba38aaf5431b875a3c0fbd45b9fcf2}{%
+           family={Lopez},
+           familyi={L\bibinitperiod},
+           given={I.},
+           giveni={I\bibinitperiod}}}%
+        {{hash=e5091ff4b22fd906359d4eb468c7dbe8}{%
+           family={Diaz},
+           familyi={D\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{73f293b416c504fd7a0bb6bf1bc77344}
+      \strng{fullhash}{5e2d5183a1f9a0d478750fbfd8a23475}
+      \strng{fullhashraw}{5e2d5183a1f9a0d478750fbfd8a23475}
+      \strng{bibnamehash}{73f293b416c504fd7a0bb6bf1bc77344}
+      \strng{authorbibnamehash}{73f293b416c504fd7a0bb6bf1bc77344}
+      \strng{authornamehash}{73f293b416c504fd7a0bb6bf1bc77344}
+      \strng{authorfullhash}{5e2d5183a1f9a0d478750fbfd8a23475}
+      \strng{authorfullhashraw}{5e2d5183a1f9a0d478750fbfd8a23475}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Towards Railways Remote Driving: Analysis of Video Streaming Latency and Adaptive Rate Control}
+      \field{urlday}{6}
+      \field{urlmonth}{12}
+      \field{urlyear}{2025}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://ieeexplore.ieee.org/document/10597107
+      \endverb
+      \verb{url}
+      \verb https://ieeexplore.ieee.org/document/10597107
+      \endverb
+    \endentry
+    \entry{fp2r2dato2024d41_2}{report}{}{}
+      \name{author}{4}{}{%
+        {{hash=cd886c93b757b80473e29e30971e6127}{%
+           family={Vela},
+           familyi={V\bibinitperiod},
+           given={Nacho\bibnamedelima Celaya},
+           giveni={N\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=4f2e0e22b36a99a94af9f34dc7bc5638}{%
+           family={Mugueta},
+           familyi={M\bibinitperiod},
+           given={Itziar},
+           giveni={I\bibinitperiod}}}%
+        {{hash=43e813f219df5c31fbb8050ea2cea7a9}{%
+           family={Goya},
+           familyi={G\bibinitperiod},
+           given={Jon},
+           giveni={J\bibinitperiod}}}%
+        {{hash=c9bc18f8836f14ab0cb87ed9fdcc6890}{%
+           family={Klago},
+           familyi={K\bibinitperiod},
+           given={Dusan\bibnamedelima Patrick},
+           giveni={D\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+      }
+      \list{institution}{4}{%
+        {CAF}%
+        {STR}%
+        {FP2R2DATO}%
+        {Europe's Rail}%
+      }
+      \strng{namehash}{00166582324c5f20794040aea22faa72}
+      \strng{fullhash}{d21653a27ea9b4091f5a8caf58f2f819}
+      \strng{fullhashraw}{d21653a27ea9b4091f5a8caf58f2f819}
+      \strng{bibnamehash}{00166582324c5f20794040aea22faa72}
+      \strng{authorbibnamehash}{00166582324c5f20794040aea22faa72}
+      \strng{authornamehash}{00166582324c5f20794040aea22faa72}
+      \strng{authorfullhash}{d21653a27ea9b4091f5a8caf58f2f819}
+      \strng{authorfullhashraw}{d21653a27ea9b4091f5a8caf58f2f819}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{D41.2 - Testing reports and assessment}
+      \field{urlday}{7}
+      \field{urlmonth}{12}
+      \field{urlyear}{2025}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://rail-research.europa.eu/wp-content/uploads/2025/02/D41.2-Testing-reports-assessment.pdf
+      \endverb
+      \verb{url}
+      \verb https://rail-research.europa.eu/wp-content/uploads/2025/02/D41.2-Testing-reports-assessment.pdf
+      \endverb
+    \endentry
+    \entry{fp2r2dato2023d5_4}{report}{}{}
+      \name{author}{1}{}{%
+        {{hash=768a361049aefb367d9a989af2448510}{%
+           family={al.},
+           familyi={a\bibinitperiod},
+           given={Inzirillo\bibnamedelima Francesco},
+           giveni={I\bibinitperiod\bibinitdelim F\bibinitperiod},
+           prefix={et},
+           prefixi={e\bibinitperiod}}}%
+      }
+      \list{institution}{2}{%
+        {FP2R2DATO}%
+        {Europe's Rail}%
+      }
+      \strng{namehash}{768a361049aefb367d9a989af2448510}
+      \strng{fullhash}{768a361049aefb367d9a989af2448510}
+      \strng{fullhashraw}{768a361049aefb367d9a989af2448510}
+      \strng{bibnamehash}{768a361049aefb367d9a989af2448510}
+      \strng{authorbibnamehash}{768a361049aefb367d9a989af2448510}
+      \strng{authornamehash}{768a361049aefb367d9a989af2448510}
+      \strng{authorfullhash}{768a361049aefb367d9a989af2448510}
+      \strng{authorfullhashraw}{768a361049aefb367d9a989af2448510}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{D5.4 - Documentation of use cases for Remote Driving}
+      \field{urlday}{8}
+      \field{urlmonth}{12}
+      \field{urlyear}{2025}
+      \field{year}{2023}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://rail-research.europa.eu/wp-content/uploads/2025/07/D5.4-%E2%80%93-Documentation-of-use-cases-for-Remote-Driving.pdf
+      \endverb
+      \verb{url}
+      \verb https://rail-research.europa.eu/wp-content/uploads/2025/07/D5.4-%E2%80%93-Documentation-of-use-cases-for-Remote-Driving.pdf
+      \endverb
+    \endentry
+    \entry{brandenburger2023vqreactiontimertc}{report}{}{}
+      \name{author}{3}{}{%
+        {{hash=9c8c650c0c317ba42080dc0d88101b41}{%
+           family={Brandenburger},
+           familyi={B\bibinitperiod},
+           given={Niels},
+           giveni={N\bibinitperiod}}}%
+        {{hash=8719edb5ef604d1aaeffa05902a1872c}{%
+           family={Strauß},
+           familyi={S\bibinitperiod},
+           given={Friedrich\bibnamedelima Maximilian},
+           giveni={F\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=081ca7d691f30ccf1096e20e9ac3812e}{%
+           family={Naumann},
+           familyi={N\bibinitperiod},
+           given={Anja},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {DLR}%
+      }
+      \strng{namehash}{a6ab8d587636550d84bac7c72d6337b5}
+      \strng{fullhash}{a012e850a5b727d6e5e9eb28fb1b7a20}
+      \strng{fullhashraw}{a012e850a5b727d6e5e9eb28fb1b7a20}
+      \strng{bibnamehash}{a012e850a5b727d6e5e9eb28fb1b7a20}
+      \strng{authorbibnamehash}{a012e850a5b727d6e5e9eb28fb1b7a20}
+      \strng{authornamehash}{a6ab8d587636550d84bac7c72d6337b5}
+      \strng{authorfullhash}{a012e850a5b727d6e5e9eb28fb1b7a20}
+      \strng{authorfullhashraw}{a012e850a5b727d6e5e9eb28fb1b7a20}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Effects of Video Quality on Perception and Reaction Time in Video-based Remote Train Control}
+      \field{urlday}{5}
+      \field{urlmonth}{12}
+      \field{urlyear}{2025}
+      \field{year}{2023}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://elib.dlr.de/194929/1/PresentationHFES2023_DLR.pdf
+      \endverb
+      \verb{url}
+      \verb https://elib.dlr.de/194929/1/PresentationHFES2023_DLR.pdf
+      \endverb
+    \endentry
     \entry{era_tsi}{report}{}{}
       \name{author}{1}{}{%
         {{hash=a0a51d67eed2f67ff7473ccb60bb6caf}{%
@@ -41,8 +302,8 @@
       \strng{authorfullhash}{a0a51d67eed2f67ff7473ccb60bb6caf}
       \strng{authorfullhashraw}{a0a51d67eed2f67ff7473ccb60bb6caf}
       \field{extraname}{1}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Technical Specifications for Interoperability (TSIs)}
@@ -77,8 +338,8 @@
       \strng{authornamehash}{0966f9fe30dc9bf75449bc21bcaceb8e}
       \strng{authorfullhash}{0966f9fe30dc9bf75449bc21bcaceb8e}
       \strng{authorfullhashraw}{0966f9fe30dc9bf75449bc21bcaceb8e}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{ATO-Cargo -- Automatic Train Operation Technologies for Cargo}
@@ -92,6 +353,45 @@
       \endverb
       \verb{url}
       \verb https://www.dlr.de/en/ts/research-transfer/projects/ato-cargo
+      \endverb
+    \endentry
+    \entry{arksey2005scoping}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=6fe2d953ee3aaa433f0a3477dc48ed8a}{%
+           family={Arksey},
+           familyi={A\bibinitperiod},
+           given={Hilary},
+           giveni={H\bibinitperiod}}}%
+        {{hash=5325eb7f9c27ab66346943362dd705b3}{%
+           family={O'Malley},
+           familyi={O\bibinitperiod},
+           given={Lisa},
+           giveni={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{3277d031ac27f1740567dd87ffcbb403}
+      \strng{fullhash}{3277d031ac27f1740567dd87ffcbb403}
+      \strng{fullhashraw}{3277d031ac27f1740567dd87ffcbb403}
+      \strng{bibnamehash}{3277d031ac27f1740567dd87ffcbb403}
+      \strng{authorbibnamehash}{3277d031ac27f1740567dd87ffcbb403}
+      \strng{authornamehash}{3277d031ac27f1740567dd87ffcbb403}
+      \strng{authorfullhash}{3277d031ac27f1740567dd87ffcbb403}
+      \strng{authorfullhashraw}{3277d031ac27f1740567dd87ffcbb403}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{International Journal of Social Research Methodology}
+      \field{title}{Scoping studies: towards a methodological framework}
+      \field{urlday}{9}
+      \field{urlmonth}{12}
+      \field{urlyear}{2025}
+      \field{year}{2005}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.tandfonline.com/doi/abs/10.1080/1364557032000119616
+      \endverb
+      \verb{url}
+      \verb https://www.tandfonline.com/doi/abs/10.1080/1364557032000119616
       \endverb
     \endentry
     \entry{creswell2014researchdesign}{book}{}{}
@@ -113,8 +413,8 @@
       \strng{authornamehash}{b1380c24c67c845904268779de94b743}
       \strng{authorfullhash}{b1380c24c67c845904268779de94b743}
       \strng{authorfullhashraw}{b1380c24c67c845904268779de94b743}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{4th}
@@ -147,8 +447,8 @@
       \strng{authornamehash}{e23c50e392ecba769299b04e5e54d0e4}
       \strng{authorfullhash}{e23c50e392ecba769299b04e5e54d0e4}
       \strng{authorfullhashraw}{e23c50e392ecba769299b04e5e54d0e4}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Mixed Methods Research | Definition, Guide \& Examples}
@@ -210,8 +510,8 @@
       \strng{authornamehash}{a8642186059100a8c62ce2847a44e325}
       \strng{authorfullhash}{1347234e67a0f35c2f4606a27b9590f2}
       \strng{authorfullhashraw}{1347234e67a0f35c2f4606a27b9590f2}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Hematology. American Society of Hematology Education Program}
@@ -250,8 +550,8 @@
       \strng{authornamehash}{e3909d5ddf8434a29f1bab3e87c25058}
       \strng{authorfullhash}{e3909d5ddf8434a29f1bab3e87c25058}
       \strng{authorfullhashraw}{e3909d5ddf8434a29f1bab3e87c25058}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Aspects of Automatic Train Control}
@@ -284,8 +584,8 @@
       \strng{authornamehash}{0e4ea719015d42bb487082ec9e6a4ac1}
       \strng{authorfullhash}{0e4ea719015d42bb487082ec9e6a4ac1}
       \strng{authorfullhashraw}{0e4ea719015d42bb487082ec9e6a4ac1}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Grades of Automation (GoA) Explained}
@@ -299,52 +599,6 @@
       \endverb
       \verb{url}
       \verb https://www.cbtcsolutions.ca/goa
-      \endverb
-    \endentry
-    \entry{brandenburger2023vqreactiontimertc}{inproceedings}{}{}
-      \name{author}{3}{}{%
-        {{hash=9c8c650c0c317ba42080dc0d88101b41}{%
-           family={Brandenburger},
-           familyi={B\bibinitperiod},
-           given={Niels},
-           giveni={N\bibinitperiod}}}%
-        {{hash=8719edb5ef604d1aaeffa05902a1872c}{%
-           family={Strauß},
-           familyi={S\bibinitperiod},
-           given={Friedrich\bibnamedelima Maximilian},
-           giveni={F\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
-        {{hash=081ca7d691f30ccf1096e20e9ac3812e}{%
-           family={Naumann},
-           familyi={N\bibinitperiod},
-           given={Anja},
-           giveni={A\bibinitperiod}}}%
-      }
-      \list{institution}{1}{%
-        {DLR}%
-      }
-      \strng{namehash}{a6ab8d587636550d84bac7c72d6337b5}
-      \strng{fullhash}{a012e850a5b727d6e5e9eb28fb1b7a20}
-      \strng{fullhashraw}{a012e850a5b727d6e5e9eb28fb1b7a20}
-      \strng{bibnamehash}{a012e850a5b727d6e5e9eb28fb1b7a20}
-      \strng{authorbibnamehash}{a012e850a5b727d6e5e9eb28fb1b7a20}
-      \strng{authornamehash}{a6ab8d587636550d84bac7c72d6337b5}
-      \strng{authorfullhash}{a012e850a5b727d6e5e9eb28fb1b7a20}
-      \strng{authorfullhashraw}{a012e850a5b727d6e5e9eb28fb1b7a20}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{Effects of Video Quality on Perception and Reaction Time in Video-based Remote Train Control}
-      \field{urlday}{5}
-      \field{urlmonth}{12}
-      \field{urlyear}{2025}
-      \field{year}{2023}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://elib.dlr.de/194929/1/PresentationHFES2023_DLR.pdf
-      \endverb
-      \verb{url}
-      \verb https://elib.dlr.de/194929/1/PresentationHFES2023_DLR.pdf
       \endverb
     \endentry
     \entry{uitp2018metro}{report}{}{}
@@ -368,8 +622,8 @@
       \strng{authornamehash}{ed5616019213d3251db24236cadd32e0}
       \strng{authorfullhash}{ed5616019213d3251db24236cadd32e0}
       \strng{authorfullhashraw}{ed5616019213d3251db24236cadd32e0}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{World Report on Metro Automation}
@@ -404,8 +658,8 @@
       \strng{authornamehash}{dd17c6e87cb58188cabe57d8b0d283df}
       \strng{authorfullhash}{dd17c6e87cb58188cabe57d8b0d283df}
       \strng{authorfullhashraw}{dd17c6e87cb58188cabe57d8b0d283df}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{IEC 62290-1:2025 -Railway applications - Urban guided transport management and command/control systems - Part 3: System requirements specification}
@@ -439,8 +693,8 @@
       \strng{authorfullhash}{a0a51d67eed2f67ff7473ccb60bb6caf}
       \strng{authorfullhashraw}{a0a51d67eed2f67ff7473ccb60bb6caf}
       \field{extraname}{2}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{ERTMS}
@@ -454,6 +708,80 @@
       \endverb
       \verb{url}
       \verb https://www.era.europa.eu/domains/infrastructure/european-rail-traffic-management-system-ertms_en
+      \endverb
+    \endentry
+    \entry{holter2025ertmshistory}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=aeae4c7134cb6e7257b6af144d96ddc2}{%
+           family={Holter},
+           familyi={H\bibinitperiod},
+           given={Kjell},
+           giveni={K\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Bane NOR}%
+      }
+      \strng{namehash}{aeae4c7134cb6e7257b6af144d96ddc2}
+      \strng{fullhash}{aeae4c7134cb6e7257b6af144d96ddc2}
+      \strng{fullhashraw}{aeae4c7134cb6e7257b6af144d96ddc2}
+      \strng{bibnamehash}{aeae4c7134cb6e7257b6af144d96ddc2}
+      \strng{authorbibnamehash}{aeae4c7134cb6e7257b6af144d96ddc2}
+      \strng{authornamehash}{aeae4c7134cb6e7257b6af144d96ddc2}
+      \strng{authorfullhash}{aeae4c7134cb6e7257b6af144d96ddc2}
+      \strng{authorfullhashraw}{aeae4c7134cb6e7257b6af144d96ddc2}
+      \field{extraname}{1}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{ERTMS and the History of Signalling, Part 1}
+      \field{urlday}{10}
+      \field{urlmonth}{12}
+      \field{urlyear}{2025}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.banenor.no
+      \endverb
+      \verb{url}
+      \verb https://www.banenor.no
+      \endverb
+    \endentry
+    \entry{holter2025ertmsprogramme}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=aeae4c7134cb6e7257b6af144d96ddc2}{%
+           family={Holter},
+           familyi={H\bibinitperiod},
+           given={Kjell},
+           giveni={K\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Bane NOR}%
+      }
+      \strng{namehash}{aeae4c7134cb6e7257b6af144d96ddc2}
+      \strng{fullhash}{aeae4c7134cb6e7257b6af144d96ddc2}
+      \strng{fullhashraw}{aeae4c7134cb6e7257b6af144d96ddc2}
+      \strng{bibnamehash}{aeae4c7134cb6e7257b6af144d96ddc2}
+      \strng{authorbibnamehash}{aeae4c7134cb6e7257b6af144d96ddc2}
+      \strng{authornamehash}{aeae4c7134cb6e7257b6af144d96ddc2}
+      \strng{authorfullhash}{aeae4c7134cb6e7257b6af144d96ddc2}
+      \strng{authorfullhashraw}{aeae4c7134cb6e7257b6af144d96ddc2}
+      \field{extraname}{2}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{ERTMS and the Digital Railway, Part 2}
+      \field{urlday}{10}
+      \field{urlmonth}{12}
+      \field{urlyear}{2025}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.banenor.no
+      \endverb
+      \verb{url}
+      \verb https://www.banenor.no
       \endverb
     \endentry
     \entry{eu_etcs_levels}{report}{}{}
@@ -475,8 +803,8 @@
       \strng{authornamehash}{f3835f1f16b0ad71f531a48146a22637}
       \strng{authorfullhash}{f3835f1f16b0ad71f531a48146a22637}
       \strng{authorfullhashraw}{f3835f1f16b0ad71f531a48146a22637}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{ETCS Levels and Modes}
@@ -511,8 +839,8 @@
       \strng{authornamehash}{c66e1edff2ee4c49b57ccf0ad7217662}
       \strng{authorfullhash}{c66e1edff2ee4c49b57ccf0ad7217662}
       \strng{authorfullhashraw}{c66e1edff2ee4c49b57ccf0ad7217662}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{5G Ultra-Reliable Low-Latency Communication: Use Cases, Concepts and Challenges}
@@ -559,8 +887,8 @@
       \strng{authornamehash}{6e8484cf8c9bbaa278343e039988a414}
       \strng{authorfullhash}{d66746696556603165e9657ab239fbe0}
       \strng{authorfullhashraw}{d66746696556603165e9657ab239fbe0}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{2018 International Symposium on Wireless Communication Systems (ISWCS)}
@@ -598,8 +926,8 @@
       \strng{authornamehash}{d9b837ac42d364854258f29a05b90505}
       \strng{authorfullhash}{d9b837ac42d364854258f29a05b90505}
       \strng{authorfullhashraw}{d9b837ac42d364854258f29a05b90505}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{An overview of GSM-R technology and its shortcomings}
@@ -666,8 +994,8 @@
       \strng{authornamehash}{2dd32c891feef37b9ade205222c67e12}
       \strng{authorfullhash}{72879743b76f751bb237895dcfd5933f}
       \strng{authorfullhashraw}{72879743b76f751bb237895dcfd5933f}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{High-Speed Railway Communications: From GSM-R to LTE-R}
@@ -683,62 +1011,60 @@
       \verb https://ieeexplore.ieee.org/document/7553613
       \endverb
     \endentry
-    \entry{mejias2024}{report}{}{}
-      \name{author}{6}{}{%
-        {{hash=826d33cd0a14c7180865f96fc30aacf1}{%
-           family={Mejías},
-           familyi={M\bibinitperiod},
-           given={Daniel},
-           giveni={D\bibinitperiod}}}%
-        {{hash=260a31583a6369af1f43a17fbcfc876e}{%
-           family={Fernández},
-           familyi={F\bibinitperiod},
-           given={Z.},
-           giveni={Z\bibinitperiod}}}%
-        {{hash=0b2fa02ee6b0b2300a4742d14ad4613c}{%
-           family={Viola},
-           familyi={V\bibinitperiod},
-           given={R.},
-           giveni={R\bibinitperiod}}}%
-        {{hash=46081ac0f9584a56165185e9be2ee4f4}{%
-           family={Aramburu},
-           familyi={A\bibinitperiod},
-           given={A.},
-           giveni={A\bibinitperiod}}}%
-        {{hash=6cba38aaf5431b875a3c0fbd45b9fcf2}{%
-           family={Lopez},
-           familyi={L\bibinitperiod},
-           given={I.},
-           giveni={I\bibinitperiod}}}%
-        {{hash=e5091ff4b22fd906359d4eb468c7dbe8}{%
-           family={Diaz},
-           familyi={D\bibinitperiod},
-           given={A.},
-           giveni={A\bibinitperiod}}}%
+    \entry{uic_frmcs}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=93a8ca56f93ad545d9ac9fca98bd4d7f}{%
+           family={UIC},
+           familyi={U\bibinitperiod}}}%
       }
-      \strng{namehash}{73f293b416c504fd7a0bb6bf1bc77344}
-      \strng{fullhash}{5e2d5183a1f9a0d478750fbfd8a23475}
-      \strng{fullhashraw}{5e2d5183a1f9a0d478750fbfd8a23475}
-      \strng{bibnamehash}{73f293b416c504fd7a0bb6bf1bc77344}
-      \strng{authorbibnamehash}{73f293b416c504fd7a0bb6bf1bc77344}
-      \strng{authornamehash}{73f293b416c504fd7a0bb6bf1bc77344}
-      \strng{authorfullhash}{5e2d5183a1f9a0d478750fbfd8a23475}
-      \strng{authorfullhashraw}{5e2d5183a1f9a0d478750fbfd8a23475}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \strng{namehash}{93a8ca56f93ad545d9ac9fca98bd4d7f}
+      \strng{fullhash}{93a8ca56f93ad545d9ac9fca98bd4d7f}
+      \strng{fullhashraw}{93a8ca56f93ad545d9ac9fca98bd4d7f}
+      \strng{bibnamehash}{93a8ca56f93ad545d9ac9fca98bd4d7f}
+      \strng{authorbibnamehash}{93a8ca56f93ad545d9ac9fca98bd4d7f}
+      \strng{authornamehash}{93a8ca56f93ad545d9ac9fca98bd4d7f}
+      \strng{authorfullhash}{93a8ca56f93ad545d9ac9fca98bd4d7f}
+      \strng{authorfullhashraw}{93a8ca56f93ad545d9ac9fca98bd4d7f}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{Towards Railways Remote Driving: Analysis of Video Streaming Latency and Adaptive Rate Control}
-      \field{urlday}{6}
-      \field{urlmonth}{12}
-      \field{urlyear}{2025}
-      \field{year}{2024}
-      \field{urldateera}{ce}
+      \field{title}{FRMCS Future Railway Mobile Communication System Telecoms \& Signalling}
+      \field{year}{2025}
       \verb{urlraw}
-      \verb https://ieeexplore.ieee.org/document/10597107
+      \verb https://uic.org/rail-system/telecoms-signalling/frmcs
       \endverb
       \verb{url}
-      \verb https://ieeexplore.ieee.org/document/10597107
+      \verb https://uic.org/rail-system/telecoms-signalling/frmcs
+      \endverb
+    \endentry
+    \entry{mandoc2019erauicfrmcs}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=0b0969595b46ac6180d2c0822c5687af}{%
+           family={Mandoc},
+           familyi={M\bibinitperiod},
+           given={Dan},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{0b0969595b46ac6180d2c0822c5687af}
+      \strng{fullhash}{0b0969595b46ac6180d2c0822c5687af}
+      \strng{fullhashraw}{0b0969595b46ac6180d2c0822c5687af}
+      \strng{bibnamehash}{0b0969595b46ac6180d2c0822c5687af}
+      \strng{authorbibnamehash}{0b0969595b46ac6180d2c0822c5687af}
+      \strng{authornamehash}{0b0969595b46ac6180d2c0822c5687af}
+      \strng{authorfullhash}{0b0969595b46ac6180d2c0822c5687af}
+      \strng{authorfullhashraw}{0b0969595b46ac6180d2c0822c5687af}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{FRMCS Definition Specification and Standardization Activities ERA UIC FRMCS Definition}
+      \field{year}{2019}
+      \verb{urlraw}
+      \verb https://www.era.europa.eu/system/files/2022-11/4-3_dan_mandoc_era_uic_frmcs_definition_16102019_en.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.era.europa.eu/system/files/2022-11/4-3_dan_mandoc_era_uic_frmcs_definition_16102019_en.pdf
       \endverb
     \endentry
     \entry{amador2022wifi}{article}{}{}
@@ -767,8 +1093,8 @@
       \strng{authornamehash}{23c2ccec5c84b1d81b8777d8c90be246}
       \strng{authorfullhash}{9604687671b67291f794ea23d0a69e07}
       \strng{authorfullhashraw}{9604687671b67291f794ea23d0a69e07}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{A Survey on Remote Operation of Road Vehicles}
@@ -805,8 +1131,8 @@
       \strng{authornamehash}{89a7e20be93d0ca20c1213648caee389}
       \strng{authorfullhash}{89a7e20be93d0ca20c1213648caee389}
       \strng{authorfullhashraw}{89a7e20be93d0ca20c1213648caee389}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{A Smart Vehicle Control Remotely using Wifi}
@@ -841,8 +1167,8 @@
       \strng{authornamehash}{bd5b83a0a2a947ddbe291c72b3eba0cb}
       \strng{authorfullhash}{bd5b83a0a2a947ddbe291c72b3eba0cb}
       \strng{authorfullhashraw}{bd5b83a0a2a947ddbe291c72b3eba0cb}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{ITU-T G.1051 -- Latency Measurement and Methodologies}
@@ -873,8 +1199,8 @@
       \strng{authornamehash}{700f0e630e939fff4cff6be3fc518b34}
       \strng{authorfullhash}{700f0e630e939fff4cff6be3fc518b34}
       \strng{authorfullhashraw}{700f0e630e939fff4cff6be3fc518b34}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Request for Comments (RFC) Definition}
@@ -904,8 +1230,8 @@
       \strng{authornamehash}{7a6949c0cc179351f826f697de88ff43}
       \strng{authorfullhash}{7a6949c0cc179351f826f697de88ff43}
       \strng{authorfullhashraw}{7a6949c0cc179351f826f697de88ff43}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Network Latency Test Tools: Measuring Ping, Traceroute, and Delay}
@@ -937,8 +1263,8 @@
       \strng{authornamehash}{14c9adcb7c5b81d863072d8d309feeda}
       \strng{authorfullhash}{14c9adcb7c5b81d863072d8d309feeda}
       \strng{authorfullhashraw}{14c9adcb7c5b81d863072d8d309feeda}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Regulations on Vehicles on the National Railway Network (Unofficial Translation)}
@@ -970,8 +1296,8 @@
       \strng{authornamehash}{d67308f0b2af9309db74bc422722653e}
       \strng{authorfullhash}{d67308f0b2af9309db74bc422722653e}
       \strng{authorfullhashraw}{d67308f0b2af9309db74bc422722653e}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Network Statement / Access Conditions 2025}
@@ -1013,8 +1339,8 @@
       \strng{authornamehash}{ea03ca47e3c67c568e19ded3ba3ccc85}
       \strng{authorfullhash}{154aba3dac0a13a571613da6ac9e9720}
       \strng{authorfullhashraw}{154aba3dac0a13a571613da6ac9e9720}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{D41.1 - Collection of test cases and validation criteria}
@@ -1030,41 +1356,32 @@
       \verb https://ec.europa.eu/research/participants/documents/downloadPublic?documentIds=080166e508af73fc&appId=PPGMS
       \endverb
     \endentry
-    \entry{jürgensen2025rcrailvehicles}{thesis}{}{}
+    \entry{3gppts22289}{report}{}{}
       \name{author}{1}{}{%
-        {{hash=8338c031c310ec89e27849de49b2e102}{%
-           family={Jürgensen},
-           familyi={J\bibinitperiod},
-           given={Simon},
-           giveni={S\bibinitperiod}}}%
+        {{hash=d35591bdf12c3515b328845fbce3fac8}{%
+           family={ETSI},
+           familyi={E\bibinitperiod}}}%
       }
-      \list{institution}{1}{%
-        {University of Kiel}%
-      }
-      \strng{namehash}{8338c031c310ec89e27849de49b2e102}
-      \strng{fullhash}{8338c031c310ec89e27849de49b2e102}
-      \strng{fullhashraw}{8338c031c310ec89e27849de49b2e102}
-      \strng{bibnamehash}{8338c031c310ec89e27849de49b2e102}
-      \strng{authorbibnamehash}{8338c031c310ec89e27849de49b2e102}
-      \strng{authornamehash}{8338c031c310ec89e27849de49b2e102}
-      \strng{authorfullhash}{8338c031c310ec89e27849de49b2e102}
-      \strng{authorfullhashraw}{8338c031c310ec89e27849de49b2e102}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \strng{namehash}{d35591bdf12c3515b328845fbce3fac8}
+      \strng{fullhash}{d35591bdf12c3515b328845fbce3fac8}
+      \strng{fullhashraw}{d35591bdf12c3515b328845fbce3fac8}
+      \strng{bibnamehash}{d35591bdf12c3515b328845fbce3fac8}
+      \strng{authorbibnamehash}{d35591bdf12c3515b328845fbce3fac8}
+      \strng{authornamehash}{d35591bdf12c3515b328845fbce3fac8}
+      \strng{authorfullhash}{d35591bdf12c3515b328845fbce3fac8}
+      \strng{authorfullhashraw}{d35591bdf12c3515b328845fbce3fac8}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{Remote Control for Rail Vehicles}
-      \field{type}{phdthesis}
-      \field{urlday}{15}
-      \field{urlmonth}{10}
-      \field{urlyear}{2025}
-      \field{year}{2025}
-      \field{urldateera}{ce}
+      \field{title}{ETSI TS 122 289 V17.0.0 LTE 5G Mobile communication system for railways 3GPP TS 22.289 version 17.0.0 Release 17}
+      \field{type}{techreport}
+      \field{year}{2022}
       \verb{urlraw}
-      \verb https://rtsys.informatik.uni-kiel.de/~biblio/downloads/theses/sij-bt.pdf
+      \verb https://www.etsi.org/deliver/etsi_ts/122200_122299/122289/17.00.00_60/ts_122289v170000p.pdf
       \endverb
       \verb{url}
-      \verb https://rtsys.informatik.uni-kiel.de/~biblio/downloads/theses/sij-bt.pdf
+      \verb https://www.etsi.org/deliver/etsi_ts/122200_122299/122289/17.00.00_60/ts_122289v170000p.pdf
       \endverb
     \endentry
     \entry{ouden2022}{article}{}{}
@@ -1093,8 +1410,8 @@
       \strng{authornamehash}{b30013ffbf0e8f6d3d0e662e04f89264}
       \strng{authorfullhash}{bdb9202365b836107f576d4bb876d514}
       \strng{authorfullhashraw}{bdb9202365b836107f576d4bb876d514}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Design and Evaluation of Remote Driving Architecture on 4G and 5G Mobile Networks}
@@ -1108,99 +1425,6 @@
       \endverb
       \verb{url}
       \verb https://www.frontiersin.org/journals/future-transportation/articles/10.3389/ffutr.2021.801567/full
-      \endverb
-    \endentry
-    \entry{fp2r2dato2023d5_4}{report}{}{}
-      \name{author}{1}{}{%
-        {{hash=768a361049aefb367d9a989af2448510}{%
-           family={al.},
-           familyi={a\bibinitperiod},
-           given={Inzirillo\bibnamedelima Francesco},
-           giveni={I\bibinitperiod\bibinitdelim F\bibinitperiod},
-           prefix={et},
-           prefixi={e\bibinitperiod}}}%
-      }
-      \list{institution}{2}{%
-        {FP2R2DATO}%
-        {Europe's Rail}%
-      }
-      \strng{namehash}{768a361049aefb367d9a989af2448510}
-      \strng{fullhash}{768a361049aefb367d9a989af2448510}
-      \strng{fullhashraw}{768a361049aefb367d9a989af2448510}
-      \strng{bibnamehash}{768a361049aefb367d9a989af2448510}
-      \strng{authorbibnamehash}{768a361049aefb367d9a989af2448510}
-      \strng{authornamehash}{768a361049aefb367d9a989af2448510}
-      \strng{authorfullhash}{768a361049aefb367d9a989af2448510}
-      \strng{authorfullhashraw}{768a361049aefb367d9a989af2448510}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{D5.4 - Documentation of use cases for Remote Driving}
-      \field{urlday}{8}
-      \field{urlmonth}{12}
-      \field{urlyear}{2025}
-      \field{year}{2023}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://rail-research.europa.eu/wp-content/uploads/2025/07/D5.4-%E2%80%93-Documentation-of-use-cases-for-Remote-Driving.pdf
-      \endverb
-      \verb{url}
-      \verb https://rail-research.europa.eu/wp-content/uploads/2025/07/D5.4-%E2%80%93-Documentation-of-use-cases-for-Remote-Driving.pdf
-      \endverb
-    \endentry
-    \entry{fp2r2dato2024d41_2}{report}{}{}
-      \name{author}{4}{}{%
-        {{hash=cd886c93b757b80473e29e30971e6127}{%
-           family={Vela},
-           familyi={V\bibinitperiod},
-           given={Nacho\bibnamedelima Celaya},
-           giveni={N\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
-        {{hash=4f2e0e22b36a99a94af9f34dc7bc5638}{%
-           family={Mugueta},
-           familyi={M\bibinitperiod},
-           given={Itziar},
-           giveni={I\bibinitperiod}}}%
-        {{hash=43e813f219df5c31fbb8050ea2cea7a9}{%
-           family={Goya},
-           familyi={G\bibinitperiod},
-           given={Jon},
-           giveni={J\bibinitperiod}}}%
-        {{hash=c9bc18f8836f14ab0cb87ed9fdcc6890}{%
-           family={Klago},
-           familyi={K\bibinitperiod},
-           given={Dusan\bibnamedelima Patrick},
-           giveni={D\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
-      }
-      \list{institution}{4}{%
-        {CAF}%
-        {STR}%
-        {FP2R2DATO}%
-        {Europe's Rail}%
-      }
-      \strng{namehash}{00166582324c5f20794040aea22faa72}
-      \strng{fullhash}{d21653a27ea9b4091f5a8caf58f2f819}
-      \strng{fullhashraw}{d21653a27ea9b4091f5a8caf58f2f819}
-      \strng{bibnamehash}{00166582324c5f20794040aea22faa72}
-      \strng{authorbibnamehash}{00166582324c5f20794040aea22faa72}
-      \strng{authornamehash}{00166582324c5f20794040aea22faa72}
-      \strng{authorfullhash}{d21653a27ea9b4091f5a8caf58f2f819}
-      \strng{authorfullhashraw}{d21653a27ea9b4091f5a8caf58f2f819}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{D41.2 - Testing reports and assessment}
-      \field{urlday}{7}
-      \field{urlmonth}{12}
-      \field{urlyear}{2025}
-      \field{year}{2024}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://rail-research.europa.eu/wp-content/uploads/2025/02/D41.2-Testing-reports-assessment.pdf
-      \endverb
-      \verb{url}
-      \verb https://rail-research.europa.eu/wp-content/uploads/2025/02/D41.2-Testing-reports-assessment.pdf
       \endverb
     \endentry
     \entry{jernberg2024}{article}{}{}
@@ -1229,8 +1453,8 @@
       \strng{authornamehash}{c39db6713da094266fa1ab9c84e5c977}
       \strng{authorfullhash}{4b95e8cae13e72bc3b7da60ba8b324d7}
       \strng{authorfullhashraw}{4b95e8cae13e72bc3b7da60ba8b324d7}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Transportation Engineering}
@@ -1289,8 +1513,8 @@
       \strng{authornamehash}{b3a64faa8dc0c1b5ccf96afa15c9a280}
       \strng{authorfullhash}{a6ea819838a42d964debbe1597c9cc44}
       \strng{authorfullhashraw}{a6ea819838a42d964debbe1597c9cc44}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Wireless Communications and Mobile Computing}
@@ -1348,8 +1572,8 @@
       \strng{authornamehash}{9f2f1453729ea907d73aa7b63e1638d7}
       \strng{authorfullhash}{51f3359b2fcc0590d32a87d2362146ed}
       \strng{authorfullhashraw}{51f3359b2fcc0590d32a87d2362146ed}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Teleoperation: The Holy Grail to Solve Problems of Automated Driving? Sure, but Latency Matters}
@@ -1396,8 +1620,8 @@
       \strng{authornamehash}{f7b08c1e9871633ba8f4216ae8bbe164}
       \strng{authorfullhash}{3031bb32502abb3813cfba61db18bbd4}
       \strng{authorfullhashraw}{3031bb32502abb3813cfba61db18bbd4}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Augmenting Self-Driving with Remote Control: Challenges and Directions}
@@ -1449,8 +1673,8 @@
       \strng{authornamehash}{af96f72150c37232a29604b965dc118a}
       \strng{authorfullhash}{1cf3868f89760aaca3bde8737d29dc84}
       \strng{authorfullhashraw}{1cf3868f89760aaca3bde8737d29dc84}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{A quality of experience model for live video in first-person-view drone control in cellular networks}
@@ -1492,8 +1716,8 @@
       \strng{authornamehash}{41ab35b52355420d3b60992879bfee60}
       \strng{authorfullhash}{442a0cadb448dfceceee24ac646f72e1}
       \strng{authorfullhashraw}{442a0cadb448dfceceee24ac646f72e1}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Xhaul Latency Dimensioning of 5G Drone Control}
@@ -1540,8 +1764,8 @@
       \strng{authornamehash}{00509f3b8a65acc549c183c08c01ebce}
       \strng{authorfullhash}{baa55c43fcf2874f2757353cb2a105df}
       \strng{authorfullhashraw}{baa55c43fcf2874f2757353cb2a105df}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Latency-aware and -predictable Communication with Open Protocol Stacks for Remote Drone Control}
@@ -1598,8 +1822,8 @@
       \strng{authornamehash}{d2591904d7cd3508c6cfd76f3981b25f}
       \strng{authorfullhash}{b8d366e16ba8f34deb4e7744901b8fc4}
       \strng{authorfullhashraw}{b8d366e16ba8f34deb4e7744901b8fc4}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Latency impact on Quality of Experience in a virtual reality simulator for remote control of machines}

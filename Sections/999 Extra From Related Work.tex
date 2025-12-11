@@ -3,18 +3,6 @@
 \begin{enumerate}
     \item \textbf{Protocols Used (and reasons, if stated)} \\
     The system currently uses \textbf{TCP} for communication between server and vehicle, prioritizing reliability for control commands, Heartbeat integrity, and safe data transfer. For the livestream, TCP is used in the prototype for stability, though the report notes that \textbf{UDP} may become preferable on cellular networks due to lower latency. Communication between components relies on Python sockets, JSON-encoded messages, and OpenCV for video handling :contentReference\cite{jürgensen2025rcrailvehicles}.
-
-    \item \textbf{Regulations Used (if mentioned)} \\
-    The report does not reference any formal external railway regulations or standards (e.g., TSI, ERA, IEC). It discusses safety concepts, human factors, and operational modes conceptually but does not apply specific regulatory frameworks. Any regulatory alignment (such as ETCS levels or GoA definitions) is descriptive rather than normative, and no regulatory compliance process is implemented in the system :contentReference\cite{jürgensen2025rcrailvehicles}.
-\end{enumerate}
-
-\cite{kozarevic2025}
-\paragraph{Additional extracted points:}
-    \item \textbf{Protocols Used (if mentioned)} \\
-    The report does not specify communication or networking protocols. It discusses functional requirements and human-factor needs rather than technical implementation details. No protocol choice or justification is provided .
-
-    \item \textbf{Regulations Used (if mentioned)} \\
-    No formal regulatory frameworks (e.g., TSI, ERA, safety standards) are applied. The thesis references operational concepts such as degraded-mode handling but does not cite or rely on specific railway regulations. Its focus is conceptual and requirement-oriented rather than compliance-oriented .
 \end{enumerate}
 
 \cite{mejias2024}
@@ -23,40 +11,6 @@
     \item \textbf{Protocols Used} \\
     RTSP and WebRTC are compared, both running on RTP/RTCP. RTP provides low-latency transport, and RTCP supplies the metrics used for bitrate adaptation. RTSP is highlighted as more suitable when several users must access the same stream.
 
-    \item \textbf{Regulations Used} \\
-    No formal regulations are applied. FRMCS video quality recommendations are mentioned but not used as regulatory constraints.
-\end{enumerate}
-
-\cite{fp2r2dato2024d41_2}.
-\paragraph{Additional extracted points:}
-\begin{enumerate}
-    \item \textbf{Protocols Used} \\
-    The deliverable does not specify technical communication or streaming protocols. It focuses on operational testing rather than implementation details, and no communication standards or protocol choices are discussed.
-
-    \item \textbf{Regulations Used} \\
-    No specific regulations or standards are referenced. The demonstrator follows internal safety procedures, operational rules from Sporveien, and agreed test protocols, but no external regulatory frameworks are cited in the document.
-\end{enumerate}
-
-
-\cite{fp2r2dato2023d5_4}
-\paragraph{Additional extracted points:}
-\begin{enumerate}
-    \item \textbf{Protocols Used} \\
-    No technical protocols are specified. The chapter focuses on operational behaviour, not communication architecture or protocol design :contentReference[oaicite:3]{index=3}.
-
-    \item \textbf{Regulations Used} \\
-    No regulations are referenced. The content provides operational descriptions only and does not discuss standards or compliance requirements :contentR
-
-\end{enumerate}
-
-\cite{brandenburger2023vqreactiontimertc}
-\paragraph{Additional extracted points:}
-\begin{enumerate}
-    \item \textbf{Protocols Used} \\
-    No communication protocols are discussed. The study focuses strictly on video quality parameters (bitrate, FPS) rather than transmission methods :contentReference[oaicite:3]{index=3}.
-
-    \item \textbf{Regulations Used} \\
-    None. The presentation is exploratory and does not reference standards or regulatory frameworks :contentReference[oaicite:4]{index=4}.
 \end{enumerate}
 
 \cite{ouden2022}
@@ -66,10 +20,19 @@
     The video stream uses H.264 encoding, with command-and-control messages carried over mobile 4G/5G networks. No additional transport protocols are discussed in detail :contentReference[oaicite:3]{index=3}.
 \end{enumerate}
 
-\cite{jernberg2024}
-\paragraph{Protocols used}
-The study does not use or reference any communication protocols. All latency is generated internally within the simulator by delaying image frames, and no transport- or network-layer protocols are discussed or applied.
 
 \cite{kaknjo2018videolatency
 \paragraph{Protocols used}
 The paper evaluates video transmission using RTSP over both TCP and UDP. Tests include H.264 and MJPEG encoding, with direct connections to the camera as well as server–client forwarding setups for measuring one-way transport delay. TCP introduces retransmissions and higher jitter, while UDP provides lower delay but without delivery guarantees. }
+
+\cite{kang2018}
+\paragraph{Protocols used}
+The streaming setup uses UDP to transmit H.264- or MPEG-4–encoded video frames from the vehicle to the server. The server decompresses frames using a GStreamer pipeline. LTE and Wi-Fi are used as transport networks, but no additional communication protocols are implemented beyond UDP for frame delivery. 
+
+\cite{gonzález2023}
+\paragraph{Protocols used}
+Telemetry and command/control use MAVLink over TCP. Video is transmitted with RTP encapsulated in UDP, encoded with H.264. Additional tools such as ffmpeg and GStreamer are used to process and forward video in different connection schemes. Also uses URLLC.
+
+\cite{larsen2022}
+\paragraph{Protocols used}
+The fronthaul assumes Ethernet transport using eCPRI to carry 5G split-7.2x traffic. All latency modelling is based on Ethernet frames traversing multiple switches with strict-priority scheduling or Time-Aware Shaping (TAS). No application-layer protocols are used, as the study focuses on transport-layer behaviour rather than drone-specific command or video formats. :contentReference[oaicite:1]{index=1}

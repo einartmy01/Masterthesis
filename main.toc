@@ -45,24 +45,26 @@
 \contentsline {subsubsection}{\numberline {4.2.1}Ouden 2022}{16}{subsubsection.4.2.1}%
 \contentsline {subsubsection}{\numberline {4.2.2}Jernberg 2024}{16}{subsubsection.4.2.2}%
 \contentsline {subsubsection}{\numberline {4.2.3}Kaknjo 2018}{16}{subsubsection.4.2.3}%
-\contentsline {subsubsection}{\numberline {4.2.4}Sato 2021}{17}{subsubsection.4.2.4}%
-\contentsline {subsubsection}{\numberline {4.2.5}Nakamura 2021}{17}{subsubsection.4.2.5}%
-\contentsline {subsubsection}{\numberline {4.2.6}Jernberg 2024}{17}{subsubsection.4.2.6}%
-\contentsline {subsubsection}{\numberline {4.2.7}Neumier 2019}{17}{subsubsection.4.2.7}%
-\contentsline {subsubsection}{\numberline {4.2.8}Kang 2018}{17}{subsubsection.4.2.8}%
+\contentsline {subsubsection}{\numberline {4.2.4}Neumeier 2019}{17}{subsubsection.4.2.4}%
+\contentsline {subsubsection}{\numberline {4.2.5}Kang 2018}{17}{subsubsection.4.2.5}%
+\contentsline {subsubsection}{\numberline {4.2.6}Sato 2021}{17}{subsubsection.4.2.6}%
+\contentsline {subsubsection}{\numberline {4.2.7}Nakamura 2021}{18}{subsubsection.4.2.7}%
 \contentsline {subsection}{\numberline {4.3}Drone Control}{18}{subsection.4.3}%
-\contentsline {subsubsection}{\numberline {4.3.1}N. González 2023}{18}{subsubsection.4.3.1}%
+\contentsline {subsubsection}{\numberline {4.3.1}González 2023}{18}{subsubsection.4.3.1}%
 \contentsline {subsubsection}{\numberline {4.3.2}Larsen 2022}{18}{subsubsection.4.3.2}%
-\contentsline {subsubsection}{\numberline {4.3.3}Böhmer 2020}{18}{subsubsection.4.3.3}%
-\contentsline {subsection}{\numberline {4.4}Crane Control}{18}{subsection.4.4}%
-\contentsline {subsubsection}{\numberline {4.4.1}Brunnström 2020}{18}{subsubsection.4.4.1}%
+\contentsline {subsubsection}{\numberline {4.3.3}N. González 2023}{18}{subsubsection.4.3.3}%
+\contentsline {subsubsection}{\numberline {4.3.4}Larsen 2022}{18}{subsubsection.4.3.4}%
+\contentsline {subsubsection}{\numberline {4.3.5}Böhmer 2020}{19}{subsubsection.4.3.5}%
+\contentsline {subsection}{\numberline {4.4}Crane Control}{19}{subsection.4.4}%
+\contentsline {subsubsection}{\numberline {4.4.1}Brunnström 2020}{19}{subsubsection.4.4.1}%
 \contentsline {section}{\numberline {5}Results and discussion}{20}{section.5}%
 \contentsline {subsection}{\numberline {5.1}Human factors results}{20}{subsection.5.1}%
-\contentsline {subsubsection}{\numberline {5.1.1}Adaptation to stable latency.}{23}{subsubsection.5.1.1}%
+\contentsline {subsubsection}{\numberline {5.1.1}Adaptation to stable latency.}{24}{subsubsection.5.1.1}%
 \contentsline {subsection}{\numberline {5.2}Comparing latency for different vehicles}{24}{subsection.5.2}%
 \contentsline {subsubsection}{\numberline {5.2.1}Calculation of latency}{26}{subsubsection.5.2.1}%
 \contentsline {subsection}{\numberline {5.3}Threshold for acceptable latency}{26}{subsection.5.3}%
 \contentsline {subsection}{\numberline {5.4}Tools and protocols for remote control}{27}{subsection.5.4}%
+\contentsline {subsubsection}{\numberline {5.4.1}Kang 2018}{30}{subsubsection.5.4.1}%
 \contentsline {subsection}{\numberline {5.5}Theory v. Practical test}{30}{subsection.5.5}%
 \contentsline {subsection}{\numberline {5.6}Future work}{30}{subsection.5.6}%
 \contentsline {section}{\numberline {6}Conclusion}{31}{section.6}%
