@@ -8,122 +8,44 @@
 \subsection{Human factors results}
 Human performance is a decisive part of remote train operation, because every control action is performed by a human operator who must interpret a video feed, react to system feedback, and compensate for delays. The results in this subsection focus on how operators respond to different levels and types of latency, and how stable versus unstable delay affects their ability to perform remote driving tasks. By comparing findings from railway, car, drone and crane studies, a sense of which latency ranges operators can adapt to, which conditions cause performance loss, and how these observations influence acceptable thresholds for remote train control. These insights form the basis for evaluating how much latency the system can tolerate before performance is affected.
 
-In Table \ref{tab:HumanEvaluation} I have sorted some of the previously introduced papers and compared them. Method and added effect show how the research has decided to set up the tests, while task define what the participants had to do. The results were many and varying for each research, but I have extracted a specific number the paper decided represents performance downgrade.
+In Table \ref{tab:HumanEvaluation} I have sorted some of the previously introduced papers and compared them. Method and added effect show how the research has decided to set up the tests like Sim = Simulation and IRL = In real life, while task define what the participants had to do. The results were many and varying for each research, but I have extracted a specific number the paper decided represents performance downgrade.
 
 \import{./Tables/}{HumanFactorResults}
 
 
+The columns of slight performance downgrade that was extracted for each paper are chosen from different values of evaluation. The research from Brandenburger \cite{brandenburger2023vqreactiontimertc} focus primarily on the results, measuring how fast and how accurate did the participants react to the stimulus of light signals and distance marker. Interesting founds from the report was that FPS seem to not affect the participant, at least inside the range tested, yet the bitrate was decisive for the results. Showing both higher accuracy and reaction time for higher bitrate. Another interesting result showed that the participant reacted better for the distance marker. This will be interesting forward with ERTMS as the only physical signalling the track will be markers \cite{holter2025ertmsprogramme}.
+Jernberg \cite{jernberg2024} evaluate the participants by results like speed and deviation from lane, but also a self evaluation from the driver on their own performance when performing five different hazards:
+\begin{itemize}
+    \setlength\itemsep{0.04cm}
+    \item H1/P1: Car pulling over into your lane.
+    \item H2/P2: Car crossing from opposing lane threw your lane. 
+    \item H3/P3: Car with "yield" does not stop in crossing.
+    \item H4/P4: Child runs into traffic from behind a bus.
+    \item H5/P5: Bicycle in lane that driver needs to pass in opposing lane.
+\end{itemize} 
+A found in Jernberg was that reaction time in H1 increased more than latency added. And with the negative results from self evaluation the paper propose that higher latency reduce awareness and put a extra mental workload on the operator. But even with this reduction, a latency of almost 300 ms did not show any more problems and the final results was that with latency tested, that only H5 at 289 ms caused performance reduction in lateral lane position.
+A very similar result was confirmed by Neumeier et al. \cite{neumeier2019} where driving slalom results in participants leaving the car lane significantly more with higher latency, even with stable high latency. However as Neumeier writes "In the Parking scenario, even no differences for whatever latency could be revealed" \cite{neumeier2019}. Even Ouden et al. \cite{ouden2022}, with extremely low added latency compared to the other two car trials, did only notice a difference in the slalom driving, with then packet loss instead of latency. Ouden did not find reasonable difference between the scenarios with latency and packet loss in the straight acceleration test. 
+
+If we compare these result to railway operation, especially train control where there are no "Cars to pull over into your lane", then are the values and results found viable? According to Jernberg \cite{jernberg2024}, when performing a study with more naturalistic driving scenarios, speed and type of task is significant for results as well as latency. A realistic driving scenario for RTO would probably not include the tests and scenarios that resulted in the performance downgrade.
+
+The other vehicles also include interesting results form their research. Both doing a thorough test with respectively eight and six + packet loss levels of added latency. Doing so many test is thorough but needs to be done carefully and planned to avoid the participants getting eased into the added latency, unless that is the purpose. Both the crane test done by Brunnström et al. \cite{brunnström2020} and drone test by González et al. \cite{gonzález2023} contained a evaluation form called Quality of Experience (QoE) which the papers used to evaluate remote control. Here the participants rate not their own performance but how they experienced the quality of control. 
+Even with the same form for evaluation, the results vary between the different vehicles. For the crane remote operation a latency of 480 ms gave a slight reduction in both QoE and effect of the work at hand, but at 880 ms it was a major decrease in effect and operability \cite{brunnström2020}. While the drone evaluation of performance found added latency of around 180 ms start causing lower performance score and QoE, and steady deterioration with more latency, and ending up with the lowest grade at around 460 ms. Yet it concludes with a E2E of 250 ms is viable for service usability, but draws the line at 300 ms. The same scores and QoE was measured to be around 0.2\% and 0.3\% packet loss.
 
 
+\begin{comment}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Its important to include how humans act in different scenarios, as regardless of the systems, the remote operator will always be a constant high latency of at least 500 - 1000 ms \cite{ouden2022}. And how they react to a possible system latency will also be crucial for the full remote operation.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\cite{brandenburger2023vqreactiontimertc}
-- Evaluates latency by performance, (human) IRL
-
-Test of human factors and realiable communcations via 5g
-"Limited literature on:" 
-"Positive effect of bitrate on quaility", "Stalling has worse effect on QoExperience, if bitrate is higher"
-"Higher frame rate not linked to information assimiliation, but increased user enjoyment"
-
-Tested with three different levels of bitrate
-1, 6, 24 Mbps
-5, 15, 25 FPS
-Stimulus
-Light signal, Distance marker
-
-MeasurementsResponce accuracyResponce speed
-
-Study 1:
-Higher bitrate -> faster answears, more correct
-Higher FPS -> same speed on answear, same amount of correct
-Study 2:
-Higher bitrate -> same speed on answears, more correct
-Higher FPS -> same speed on answear, same amount of correct
-
-Bitrate is more important (source 5 in PP: https://dl.acm.org/doi/abs/10.1145/2072298.2072351)
-Stimulus type:
-Distance marker signs where answeared faster and more correct than light signals
-5000 -> 3000 speed, and 0.51 -> 0.58 and 0.61 -> 0.69
-
-This is promosing new with the implementation of ERTMS as the only input stimulus in signalling threw camera and video stream will be signs as the remote control operatior will get the ETCS directly in the control room. 
-After certain bitrate less helpful
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\cite{ouden2022}
-- Evaluates Latency by performance, (people) IRL  
-
-- Evaluate Latency threshold on SIMulation
-
-- 4G and 5G 
-- 4 times 120 angle camera
-- H.264
-- Split latency up into Control and video and does
-- min, mean, 95\%ile, max latency in ms
-
-- Speed of 10, 20, 30 and 40km/h
-100 manual test runs for benchmark
-180 runs of RC with 4G
-300 runs of RC with 5G 
-One Trip Latency.” Every unit
-was time synchronized with a GPS-PPP source.
-Packets logged using tcpdump.
 
 
-Includes a test that results in at 300ms, you get loss of performance, and at 1000ms the delay becomes unfeasible.
-
-Did not find resonable difference in the latencies of straight acceleration test. 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\cite{neumeier2019}
-- Evaluate latency by performance, (people) Sim
-
- - Round-Trip Time (RTT)
- - Average delay of 67 ms and added conditions of +100 +300 +500
- - Was given the ca. latency
-
-Talks about how participent leave the car lane significanlty more with higher latency, even tho with stable high latency. But:
-"In the Parking scenario, even no differences for whatever latency could be revealed"
-Scenarios, was driving with turns, and one parking. No hazards except latency.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\cite{brunnström2020}
-- Evaluate latency on performance, (Humans) Sim
 
 
-To study QoE. 
-- VR.
-- 270 angle HMD video threw 4 cameras on crane.
-Mission is to offload a truck full of logs.
-Tested with diffrent delays for display and joystick. Baseline was 25 ms for display and 80 ms for joystick.
-- Display, 5, 10, 20, 30 -> 25, 30, 35, 45, 55
-- Joystick, 10, 20, 50, 100, 200, 400, 800 -> 80, 90, 100, 130, 180, 280, 480, 880
 
-Comfort of the subject was not affected by joystick delay, but the display delayed had an negative effect of Comfort quality. Why this could be discussed alot. Might have to do with VR and a more moving image. 
-480 ms gave a mild reduction in effect and quality of the work at hand but at 880 it was a major decrease in effect and operatbility. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\cite{jernberg2024}
-- Evaluates Latency by performance, (people) Sim
 
-- Voysys
-- G2G
-- Average delay of 88.8 ms and added conditions of +100 -> 188 ms and +200 -> 288 ms
-- 50km/h and 70km/h (Try to keep speedlimits)
-- driver was not given a latency
-
-+100 and +200 was chosen because of Neumeier result.
-Reference Neumeier et al. (2019) stated that 300 ms might be manageable for trained operators but in some conditions during their simulator study there were tendencies that even smaller latencies affected the performance of the operator negatively.
-
-That was:
-H1/P1: Car pulling over into your lane.
-H2/P2: Car crossing from opposing lane threw your lane.
-H3/P3: Car with "vikeplikt" does not stop in crossing.
-H4/P4: Child runs into traffic from behind a bus.
-H5/P5: Bicycal in lane that driver needs to pass in oppsing lane.
-
-
-According to Jernberg \cite{jernberg2024}, when performing a study with more naturalistic driving scenarios, speed and type of task is significant for results as well as latency. 
-They also adapt to cerumstances, adjusting speed and safetymargins.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \cite{gonzález2023}
 - Evaluation tools for latency, 
 - People tested
@@ -144,35 +66,35 @@ concludes with a e2e of 250 ms is vaiable for service usability.
 \cite{jernberg2024}
 "However, it also seems to be the case that remote operators adapt to the circumstances they find themselves in; for example, they drive with a safety margin reducing risks to their personal chosen limit and do not override the barriers of their own choice."
 
-"The reaction time in H1 (a car cutting in into the ego lane) increased more for each latency condition than the offset in time that the manipulation created. This suggests that even an unperceived increase in latency (based on subjective ratings) is affecting the participants in a way that makes them less observant of their surroundings. Combined with a self-reported decline in performance and control as the latency increases, a conclusion could be that the added mental workload is turning the primary driving task into a distraction in itself, by forcing the operator to devote an unusual amount of attention just to maintain speed and lane position."
+"The reaction time in H1 (a car cutting in into the ego lane) increased more, for each latency condition, than the offset in time that the manipulation created. This suggests that even an unperceived increase in latency (based on subjective ratings) is affecting the participants in a way that makes them less observant of their surroundings. Combined with a self-reported decline in performance and control as the latency increases, a conclusion could be that the added mental workload is turning the primary driving task into a distraction in itself, by forcing the operator to devote an unusual amount of attention just to maintain speed and lane position."
 
-
+\end{comment}
 
 \subsubsection{Adaptation to stable latency.}
+
+\begin{comment}
+
 Jernberg(2024) 
 "Fixed latency seems to be better than varied latency" (Davis et al., 2010, Gnatzig et al., 2013) 
 
+
 Gorsich et al. (2018) found that a higher latency results in more inaccurate behavior, with a drastic decrease starting at a latency of 600 ms, and Gnatzig et al. (2013) found that a constant latency of 500 ms was unproblematic for drivers when the vehicle was steadily kept at 30 km/h on their track. 
 \cite{jernberg2024}
+- driver was not given a latency
 
 (Neumier 2019)
 Could not confirm that fixed latency resultet in any better result than varied latency.
 Could not confirm "Kang et al" \cite{kang2018} who stated that fixed latency leads to better driving performance than varying. \cite{neumeier2019}
+For the slalom, even with stable, the car swivels more out of lane.
 % Kang did not at all mention fixed vs variable latencies. 
+\cite{neumeier2019}
+Was given the ca. latency
+
 
 
 In the event of offloading a truck with a crane, the participents where exposed to constant levels of latency, and showing that delaly of joystick all the way up to 480 ms was basicly irrelevant for QoE and the results of task done pr time. However a delay of 880 significantly reduced the performance overall by atleast halfing the rating on the scores (1-5).
 \cite{brunnström2020}
-
-
-
-
-
-
-
-
-
-
+\end{comment}
 
 
 \subsection{Measured Latency for Different Vehicles}
@@ -183,16 +105,16 @@ Table \ref{tab:LatencyMeasured} contains the papers inclduing own latency measur
 
 \import{./Tables/}{LatencyThresholdResults}
 
-
-
+\begin{comment}
 In the case of XX who reference Jernberg 2024 adn their findings of. Jernberg goes into details of the hazards and proxy hazards that the driver were facing. As mentioned in Section 4 "Related Work" \cite{jernberg2024}
 How in control of the vehicle were you during the drive (1-5)
 Baseline 3.7, 100ms 3.5, 200ms 2.9
 
 
-The most referenced remote control latency effect paper, Neumeier's paper \textit{Teleoperation: The Holy Grail to Solve Problems of Automated Driving? Sure, but Latency Matters} \cite{neumeier2019}, talks about how participant leave the car lane significantly more with higher latency, even tho with stable high latency. However, Neumeier also writes "In the Parking scenario, even no differences for whatever latency could be revealed" \cite{neumeier2019}
+The most referenced remote control latency effect paper, Neumeier's paper \textit{Teleoperation: The Holy Grail to Solve Problems of Automated Driving? Sure, but Latency Matters} \cite{neumeier2019}, talks about how participant leave the car lane significantly more with higher latency, even tho with stable high latency. However, as mentioned Neumeier got no differences for whatever latency\cite{neumeier2019}
 Scenarios, was driving with turns, and one parking. No hazards except latency. 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \cite{fp2r2dato2024d41_2} % Need more information about bitsize + other
 D41.2 - Testing reports \& assessment 
 Results of the remote driving of tramways demonstrator. 
@@ -255,37 +177,72 @@ Time reduction in these processes are efficiency improvments.
 Talks about the dangers of latency in high speed vehicles. Comparing it to drone operations.
 Reference drone and says 100 ms
 Reference Chen?, and Neumeier, 170 ms and 300 ms have minimal impact on remote operators.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\cite{ouden2022}
+- Evaluates Latency by performance, (people) IRL  
+
+- Evaluate Latency threshold on SIMulation
+
+- 4G and 5G 
+- 4 times 120 angle camera
+- H.264
+- Split latency up into Control and video and does
+- min, mean, 95\%ile, max latency in ms
+
+- Speed of 10, 20, 30 and 40km/h
+100 manual test runs for benchmark
+180 runs of RC with 4G
+300 runs of RC with 5G 
+One Trip Latency.” Every unit
+was time synchronized with a GPS-PPP source.
+Packets logged using tcpdump.
+
+
+Includes a reference that results in at 300ms, you get loss of performance, and at 1000ms the delay becomes unfeasible.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cite{jernberg2024}
+- Evaluates Latency by performance, (people) Sim
+
+- Voysys
+- G2G
+- Average delay of 88.8 ms and added conditions of +100 -> 188 ms and +200 -> 288 ms
+- 50km/h and 70km/h (Try to keep speedlimits)
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{comment}
 
 \subsubsection{Calculation of latency}
-The measurements and therefore the calculations of latency is not easily done. Since its a fluctuating measurement that varies alot depending on the components in the system used, the way to calculate various on what the personens want to find. 
+The measurements and therefore the calculations of latency is not easily done. Since its a fluctuating measurement that varies a lot depending on the components in the system used, the way to calculate various on what the research aims to figure out.
 
-
+\begin{comment}
 Very difficult from related works:
 Real time video latency: \cite{kaknjo2018videolatency}
 Here, the time of the visual event in front of
 the camera is denoted as T1 and the time when the event
 was detected on the receiving end as T2. The start of frame processing is denoted as T3.
 \textit{TVL =(T1 - T1)-(T2 -T3)=T3 -T1}
-
+\end{comment}
 
 \subsubsection{Threshold for acceptable latency}
 After reading threw research paper on the topic of how latency threshold are set. It became apparent that very few have done enhanced research on this very topic for railway remote control. Papers such as Jürgensen \cite{jürgensen2025rcrailvehicles} and Kozarevic \cite{kozarevic2025}, who mentions the maximum latency measured before loosing performance reference sources of other vehicles and their tests of remote control. 
 
-
-
-
-
+\begin{comment}
++100 and +200 was chosen because of Neumeier result.
+Reference Neumeier et al. (2019) stated that 300 ms might be manageable for trained operators but in some conditions during their simulator study there were tendencies that even smaller latencies affected the performance of the operator negatively.
+\cite{jernberg2024}
+\end{comment}
 
 \textit{Maybe include calculations of speed of train, compare to the previous and discuss a posible latency treshhold. End in that research on spesificly train drivers on railway should be tested.
 Use this report \cite{fp2r2dato2023d5_4}}
-
 
 \subsection{Tools and protocols for remote control}
 Remote operation depends not only on network performance but also on the tools and protocols used to capture, encode, transmit and display video. This subsection outlines the main technical options applied across the reviewed studies as well as encoding formats and measurement frameworks.This is done for the purpose of showing how different protocols influence latency, stability and video quality, and to compare their practical strengths and limitations for real-time control. By highlighting the variety of available tools and the results they produced in different vehicle domains, the subsection provides a foundation for identifying which approaches are most suitable for remote train operation.
 
 \import{./Tables/}{ToolsFactorResults}
 
+\begin{comment}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \cite{mejias2024}
 - Evaluate latency depending on parameters / tools
@@ -420,7 +377,7 @@ Connection requirments of 100 ms for video streaming, set by 3GPP TS 22.829 for 
 Found added latency of around 180 start causing lower MOS / QoE, and steady deteriation making it 1, lowest grade at around 460 ms
 concludes with a e2e of 250 ms is vaiable for service usability.
 
-
+\end{comment}
 
 
 
@@ -433,6 +390,7 @@ concludes with a e2e of 250 ms is vaiable for service usability.
 
 
 \subsection{Theory v. Practical test}
+
 Compare from the PreDraft of what expected result and hopes were, and discussing them with the information of what happend in the test and measurments.
 
 
