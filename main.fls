@@ -558,12 +558,12 @@ INPUT Sections\04 Related Work.tex
 INPUT .\Sections\04 Related Work.tex
 INPUT .\Sections\04 Related Work.tex
 INPUT Sections\04 Related Work.tex
-INPUT .\Sections\.\04 Related Work Controls\Train Control.tex
-INPUT .\Sections\.\04 Related Work Controls\Train Control.tex
-INPUT Sections\.\04 Related Work Controls\Train Control.tex
-INPUT .\Sections\.\04 Related Work Controls\Train Control.tex
-INPUT .\Sections\.\04 Related Work Controls\Train Control.tex
-INPUT Sections\.\04 Related Work Controls\Train Control.tex
+INPUT .\Sections\.\04 Related Work Controls\Railway Control.tex
+INPUT .\Sections\.\04 Related Work Controls\Railway Control.tex
+INPUT Sections\.\04 Related Work Controls\Railway Control.tex
+INPUT .\Sections\.\04 Related Work Controls\Railway Control.tex
+INPUT .\Sections\.\04 Related Work Controls\Railway Control.tex
+INPUT Sections\.\04 Related Work Controls\Railway Control.tex
 INPUT .\Sections\.\04 Related Work Controls\Car Control.tex
 INPUT .\Sections\.\04 Related Work Controls\Car Control.tex
 INPUT Sections\.\04 Related Work Controls\Car Control.tex
@@ -576,6 +576,12 @@ INPUT Sections\.\04 Related Work Controls\Drone Control.tex
 INPUT .\Sections\.\04 Related Work Controls\Drone Control.tex
 INPUT .\Sections\.\04 Related Work Controls\Drone Control.tex
 INPUT Sections\.\04 Related Work Controls\Drone Control.tex
+INPUT .\Sections\.\04 Related Work Controls\Crane Control.tex
+INPUT .\Sections\.\04 Related Work Controls\Crane Control.tex
+INPUT Sections\.\04 Related Work Controls\Crane Control.tex
+INPUT .\Sections\.\04 Related Work Controls\Crane Control.tex
+INPUT .\Sections\.\04 Related Work Controls\Crane Control.tex
+INPUT Sections\.\04 Related Work Controls\Crane Control.tex
 INPUT .\Sections\06 Results.tex
 INPUT .\Sections\06 Results.tex
 INPUT Sections\06 Results.tex

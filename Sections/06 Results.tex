@@ -82,6 +82,21 @@ Did not find resonable difference in the latencies of straight acceleration test
 Talks about how participent leave the car lane significanlty more with higher latency, even tho with stable high latency. But:
 "In the Parking scenario, even no differences for whatever latency could be revealed"
 Scenarios, was driving with turns, and one parking. No hazards except latency.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cite{brunnström2020}
+- Evaluate latency on performance, (Humans) Sim
+
+
+To study QoE. 
+- VR.
+- 270 angle HMD video threw 4 cameras on crane.
+Mission is to offload a truck full of logs.
+Tested with diffrent delays for display and joystick. Baseline was 25 ms for display and 80 ms for joystick.
+- Display, 5, 10, 20, 30 -> 25, 30, 35, 45, 55
+- Joystick, 10, 20, 50, 100, 200, 400, 800 -> 80, 90, 100, 130, 180, 280, 480, 880
+
+Comfort of the subject was not affected by joystick delay, but the display delayed had an negative effect of Comfort quality. Why this could be discussed alot. Might have to do with VR and a more moving image. 
+480 ms gave a mild reduction in effect and quality of the work at hand but at 880 it was a major decrease in effect and operatbility. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \cite{jernberg2024}
@@ -123,6 +138,27 @@ Found added latency of around 180 start causing lower MOS / QoE, and steady dete
 concludes with a e2e of 250 ms is vaiable for service usability.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cite{böhmer2020}
+- Evaluation latency on perfomance, (tools) IRL
+
+Predictably Reliable Real-time Transport (PRRT) protocol [A. Schmidt, “Cross-layer latency-aware and -predictable data communication 2019]
+The Crazyflie is controlled by Bitcraze's application layer protocol called Crazy Real-Time Protocol (CRTP)
+
+Rasberry Pi including WiFi 2.4GHz due to Rasberry Pi constraints
+timestamps by controller to drone: 
+tp1 -> packet1 -> drone
+tr1 <- response1 <- drone
+tp2 -> packet2 -> drone
+tr2 <- response2 <- drone
+
+the Crazyradio communication path using the traditional radio link
+the PRRT communication path with the Python bridge, and
+the PRRT communication path with the Rust bridge.
+
+IPT = tp2 - tp1 (Time between packets)
+RTT = tr1 - tp1 (Round-trip time)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \cite{jernberg2024}
 "However, it also seems to be the case that remote operators adapt to the circumstances they find themselves in; for example, they drive with a safety margin reducing risks to their personal chosen limit and do not override the barriers of their own choice."

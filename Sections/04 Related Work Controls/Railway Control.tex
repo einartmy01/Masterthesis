@@ -1,4 +1,4 @@
-\subsection{Train Control}
+\subsection{Railway Control}
 As showed in Table \ref{tab:vehicleSearch} there is only a handful of papers connected to Railway control compared to the rest. Therefore have I selected a few of the papers discussing latency, ATO and remote control of exactly trains.
 
 \subsubsection{ATO-Cargo Project}
@@ -22,7 +22,7 @@ The report by Kozarević aims to develop a remote control fallback system for au
 The work proceeds by starting from a broad set of functions that a driver normally performs and reducing them to the subset that is strictly necessary for remote operation. The thesis focuses on determining which controls, displays, and sensory feedback elements a remote fallback system must include and evaluates the role of human factors, describing how situational awareness degrades when control is exercised remotely. The thesis ends talking about how remote fallback operation is feasible but requires a carefully reduced function set tailored to remote conditions. \cite{kozarevic2025}
 
 \subsubsection{Mejías 2024}
-The paper by Mejías et al. \cite{mejias2024} examines how video streaming can support remote train driving, focusing on keeping latency low enough for safe operation. The authors compare RTSP and WebRTC in a test setup that imitates an onboard camera system sending video over a 5G network to a remote operator. A key part of the work is a method for measuring true end-to-end latency by embedding timestamps directly into each frame. They also develop a simple adaptive bitrate mechanism that reacts to jitter and packet loss to keep the video usable under degrading network conditions. Tests in two laboratory setups show how latency grows as bandwidth drops and how bitrate adaptation delays freezing and pixelation under poor network conditions.
+The paper by Mejías et al. \cite{mejias2024} examines how video streaming can support remote railway driving, focusing on keeping latency low enough for safe operation. The authors compare RTSP and WebRTC in a test setup that imitates an onboard camera system sending video over a 5G network to a remote operator. A key part of the work is a method for measuring true end-to-end latency by embedding timestamps directly into each frame. They also develop a simple adaptive bitrate mechanism that reacts to jitter and packet loss to keep the video usable under degrading network conditions. Tests in two laboratory setups show how latency grows as bandwidth drops and how bitrate adaptation delays freezing and pixelation under poor network conditions.
 
 \subsubsection{FP2R2Dato, EuropesRail 2024 D41.2}
 This deliverable D41.2 from Europe's Rail and FP2R2Dato project presents the testing results and assessments from the first remote driving demo for tramways. 

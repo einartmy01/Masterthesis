@@ -33,7 +33,7 @@
 \contentsline {subsubsection}{\numberline {3.8.1}WP41 - Validation Criteria Tramways}{12}{subsubsection.3.8.1}%
 \contentsline {subsubsection}{\numberline {3.8.2}3GPP TS 22.289}{12}{subsubsection.3.8.2}%
 \contentsline {section}{\numberline {4}Related Work}{14}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Train Control}{14}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.1}Railway Control}{14}{subsection.4.1}%
 \contentsline {subsubsection}{\numberline {4.1.1}ATO-Cargo Project}{14}{subsubsection.4.1.1}%
 \contentsline {subsubsection}{\numberline {4.1.2}Jürgensen 2025}{14}{subsubsection.4.1.2}%
 \contentsline {subsubsection}{\numberline {4.1.3}Kozarevic 2025}{15}{subsubsection.4.1.3}%
@@ -57,7 +57,7 @@
 \contentsline {subsubsection}{\numberline {4.4.1}Brunnström 2020}{19}{subsubsection.4.4.1}%
 \contentsline {section}{\numberline {5}Results and discussion}{20}{section.5}%
 \contentsline {subsection}{\numberline {5.1}Human factors results}{20}{subsection.5.1}%
-\contentsline {subsubsection}{\numberline {5.1.1}Adaptation to stable latency.}{24}{subsubsection.5.1.1}%
+\contentsline {subsubsection}{\numberline {5.1.1}Adaptation to stable latency.}{23}{subsubsection.5.1.1}%
 \contentsline {subsection}{\numberline {5.2}Comparing latency for different vehicles}{24}{subsection.5.2}%
 \contentsline {subsubsection}{\numberline {5.2.1}Calculation of latency}{26}{subsubsection.5.2.1}%
 \contentsline {subsection}{\numberline {5.3}Threshold for acceptable latency}{26}{subsection.5.3}%
@@ -67,4 +67,7 @@
 \contentsline {subsection}{\numberline {5.5}Theory v. Practical test}{30}{subsection.5.5}%
 \contentsline {subsection}{\numberline {5.6}Future work}{30}{subsection.5.6}%
 \contentsline {section}{\numberline {6}Conclusion}{31}{section.6}%
-\contentsline {section}{Bibliography}{32}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Evaluation of latency}{31}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Important aspects of latency}{31}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Video streaming tools}{31}{subsection.6.3}%
+\contentsline {section}{Bibliography}{32}{subsection.6.3}%

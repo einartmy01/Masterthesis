@@ -36,3 +36,7 @@ Telemetry and command/control use MAVLink over TCP. Video is transmitted with RT
 \cite{larsen2022}
 \paragraph{Protocols used}
 The fronthaul assumes Ethernet transport using eCPRI to carry 5G split-7.2x traffic. All latency modelling is based on Ethernet frames traversing multiple switches with strict-priority scheduling or Time-Aware Shaping (TAS). No application-layer protocols are used, as the study focuses on transport-layer behaviour rather than drone-specific command or video formats. :contentReference[oaicite:1]{index=1}
+
+\cite{böhmer2020}
+\paragraph{Protocols used}
+The communication system uses Wi-Fi with IPv4, UDP, and the Predictably Reliable Real-time Transport (PRRT) protocol to carry control messages. Internally, the drone still uses CRTP over UART, while video streaming relies on GStreamer pipelines with H.264 encoding sent through PRRT. 

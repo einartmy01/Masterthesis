@@ -9,4 +9,9 @@ González et al. \cite{gonzález2023} study how live video for first person view
 
 Larsen et al. \cite{larsen2022} examine whether a 5G network can support safe drone control when very low latency is required. The report looks at how delay is created as data travels from a drone, through the radio link, into the 5G transport network, and finally to a ground control station. To understand this, the authors break the network into segments and study how distance, number of switches, message size, and link speed each add delay. They then use these factors to calculate how far a drone can realistically fly from the control station while still meeting strict real-time requirements. The work also compares autonomous flight and manual remote control to show how their communication needs are different. In general, the report provides a framework for deciding how strong and fast the network must be, depending on how far drones are expected to operate and how much data they send.
 
+\subsubsection{Böhmer 2020}
+
+The report done by Böhmer et al. \cite{böhmer2020} investigate how open communication stacks can be used for remote drone control while still achieving low and predictable latency. The authors build a full test system around the Crazyflie nano-drone by extending it with a Raspberry Pi to enable WiFi communication and by developing a bridge that forwards control messages between the drone and a ground station. They implement two different bridges, one in Python and one in Rust before they analyse how each contributes to overall delay in the control loop. Using detailed timestamp logging and cross-layer analysis, the paper breaks down latency into processing steps on the Raspberry Pi, UART transfer times, and the wireless path. This allows them to compare their open protocol stack with the drone's original proprietary radio link and determine whether the open solution is viable for control tasks.
+
+
 
