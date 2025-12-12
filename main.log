@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.10.18)  12 DEC 2025 10:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.10.18)  12 DEC 2025 11:29
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1385,9 +1385,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 45--45
 
 ] Excluding 'comment' comment.)
 
-[30] (Sections/20 Conclusion.tex)
+[30] (Sections/20 Conclusion.tex
 
-[31]
+[31])
+
+[32]
 Overfull \hbox (0.21512pt too wide) in paragraph at lines 43--43
 []\OT1/cmr/m/n/10 Inzirillo Francesco et al. \OT1/cmr/m/it/10 D5.4 - Doc-u-ment-a-tion of use cases for Re-mote Driv-ing\OT1/cmr/m/n/10 . FP2R2DATO
  []
@@ -1399,17 +1401,17 @@ Overfull \hbox (5.4434pt too wide) in paragraph at lines 43--43
 
 
 
-[32]
+[33]
 Overfull \hbox (27.14835pt too wide) in paragraph at lines 43--43
 \OT1/cmss/m/n/10 Video[]Latency[]Measurement[]between[]a[]Robot[]and[]Its[]Remote[]Control[]Station[]Causes[]and[]Mitigation$[][]
  []
 
 
 
-[33]
-
 [34]
-runsystem(latexminted cleantemp  --timestamp 20251212101850 FAD58DE7366495DB4650CFEFAC2FCD61)...disabled (restricted).
+
+[35]
+runsystem(latexminted cleantemp  --timestamp 20251212112952 FAD58DE7366495DB4650CFEFAC2FCD61)...disabled (restricted).
 
  (main.aux)
  ***********
@@ -1417,23 +1419,23 @@ LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-09-02>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: D22067E0DA67FCC5651FE6A155A92AD6;10314.
+(rerunfilecheck)             Checksum: AEE7BF2CAD0C26404687D24F00E11239;10291.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 44386 strings out of 468081
- 957538 string characters out of 5425788
+ 44387 strings out of 468081
+ 957545 string characters out of 5425788
  1886295 words of memory out of 5000000
  72167 multiletter control sequences out of 15000+600000
  637806 words of font info for 75 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  117i,14n,121p,1278b,2877s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\einar\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/einar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/einar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/einar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/einar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/einar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/einar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/einar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/einar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/Users/einar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/einar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/einar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/einar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on main.pdf (40 pages, 1071305 bytes).
+Output written on main.pdf (41 pages, 1073143 bytes).
 PDF statistics:
- 994 PDF objects out of 1000 (max. 8388607)
- 182 named destinations out of 1000 (max. 500000)
+ 998 PDF objects out of 1000 (max. 8388607)
+ 183 named destinations out of 1000 (max. 500000)
  614 words of extra memory for PDF output out of 10000 (max. 10000000)
 

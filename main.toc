@@ -69,5 +69,5 @@
 \contentsline {section}{\numberline {6}Conclusion}{31}{section.6}%
 \contentsline {subsection}{\numberline {6.1}Evaluation of latency}{31}{subsection.6.1}%
 \contentsline {subsection}{\numberline {6.2}Important aspects of latency}{31}{subsection.6.2}%
-\contentsline {subsection}{\numberline {6.3}Video streaming tools}{31}{subsection.6.3}%
-\contentsline {section}{Bibliography}{32}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6.3}Measuring latency}{31}{subsection.6.3}%
+\contentsline {section}{Bibliography}{33}{subsection.6.3}%
