@@ -1,7 +1,7 @@
 \section{Results and discussion}\label{sec:ResultsDiscussion}
 
 \textit{Results in 2 parts.
-1. part analyzise
+1. part analysis
 2. part future steps}
 
 
@@ -15,7 +15,7 @@ In Table \ref{tab:HumanEvaluation} I have sorted some of the previously introduc
 
 
 
-Its important to include how humans act in different scenarios, as regardless of the systems, the remote operator will always be a constant high latency of atleast 500 - 1000 ms \cite{ouden2022}. And how they react to a possible system latency will also be crucial for the full remote operation.
+Its important to include how humans act in different scenarios, as regardless of the systems, the remote operator will always be a constant high latency of at least 500 - 1000 ms \cite{ouden2022}. And how they react to a possible system latency will also be crucial for the full remote operation.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \cite{brandenburger2023vqreactiontimertc}
 - Evaluates latency by performance, (human) IRL
@@ -139,27 +139,7 @@ Found added latency of around 180 start causing lower MOS / QoE, and steady dete
 concludes with a e2e of 250 ms is vaiable for service usability.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\cite{böhmer2020}
-- Evaluation latency on perfomance, (tools) IRL
 
-Predictably Reliable Real-time Transport (PRRT) protocol [A. Schmidt, “Cross-layer latency-aware and -predictable data communication 2019]
-The Crazyflie is controlled by Bitcraze's application layer protocol called Crazy Real-Time Protocol (CRTP)
-
-Rasberry Pi including WiFi 2.4GHz due to Rasberry Pi constraints
-timestamps by controller to drone: 
-tp1 -> packet1 -> drone
-tr1 <- response1 <- drone
-tp2 -> packet2 -> drone
-tr2 <- response2 <- drone
-
-the Crazyradio communication path using the traditional radio link
-the PRRT communication path with the Python bridge, and
-the PRRT communication path with the Rust bridge.
-
-IPT = tp2 - tp1 (Time between packets)
-RTT = tr1 - tp1 (Round-trip time)
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \cite{jernberg2024}
 "However, it also seems to be the case that remote operators adapt to the circumstances they find themselves in; for example, they drive with a safety margin reducing risks to their personal chosen limit and do not override the barriers of their own choice."
@@ -168,7 +148,7 @@ RTT = tr1 - tp1 (Round-trip time)
 
 
 
-\subsubsection{Adaptation to stable latency.} % Må endre tittel
+\subsubsection{Adaptation to stable latency.}
 Jernberg(2024) 
 "Fixed latency seems to be better than varied latency" (Davis et al., 2010, Gnatzig et al., 2013) 
 
@@ -199,7 +179,8 @@ In the event of offloading a truck with a crane, the participents where exposed 
 Different researchers have approached remote operation with their own measurement methods, system architectures and performance criteria, but the challenges of latency remain comparable. This subsection examines how latency has been measured across trains, cars, drones and cranes, what numerical values these studies reported, and which thresholds they used to classify acceptable and unacceptable delay. By reviewing both the technical measurement approaches, such as synchronized timestamping, G2G and E2E evaluation, the results illustrate how various industries establish practical latency boundaries. This comparison provides a reference point for railway applications, showing how today's measurements are compared to thresholds and discussing how more research on a dedicated railway threshold is still needed.
 
 
-After reading threw research paper on the topic of how latency threshold are set. It became apparent that very few have done enhanced research on this very topic for railway remote control. Papers such as Jürgensen \cite{jürgensen2025rcrailvehicles} and Kozarevic \cite{kozarevic2025}, who mentions the maximum latency measured before loosing performance reference sources of other vehicles and their tests of remote control. 
+Table \ref{tab:LatencyMeasured} contains the papers inclduing own latency measurments of real test of remote control operation. Which method they use to measure, the threshold they decided to compare it to and where that threshold has its origin.
+
 \import{./Tables/}{LatencyThresholdResults}
 
 
@@ -289,13 +270,20 @@ was detected on the receiving end as T2. The start of frame processing is denote
 \textit{TVL =(T1 - T1)-(T2 -T3)=T3 -T1}
 
 
-\subsection{Threshold for acceptable latency}
-Maybe include calculations of speed of train, compare to the previous and discuss a posible latency treshhold. End in that research on spesificly train drivers on railway should be tested.
+\subsubsection{Threshold for acceptable latency}
+After reading threw research paper on the topic of how latency threshold are set. It became apparent that very few have done enhanced research on this very topic for railway remote control. Papers such as Jürgensen \cite{jürgensen2025rcrailvehicles} and Kozarevic \cite{kozarevic2025}, who mentions the maximum latency measured before loosing performance reference sources of other vehicles and their tests of remote control. 
 
-Use this report \cite{fp2r2dato2023d5_4}
+
+
+
+
+
+\textit{Maybe include calculations of speed of train, compare to the previous and discuss a posible latency treshhold. End in that research on spesificly train drivers on railway should be tested.
+Use this report \cite{fp2r2dato2023d5_4}}
 
 
 \subsection{Tools and protocols for remote control}
+Remote operation depends not only on network performance but also on the tools and protocols used to capture, encode, transmit and display video. This subsection outlines the main technical options applied across the reviewed studies as well as encoding formats and measurement frameworks.This is done for the purpose of showing how different protocols influence latency, stability and video quality, and to compare their practical strengths and limitations for real-time control. By highlighting the variety of available tools and the results they produced in different vehicle domains, the subsection provides a foundation for identifying which approaches are most suitable for remote train operation.
 
 \import{./Tables/}{ToolsFactorResults}
 
@@ -398,6 +386,27 @@ LQ = queing latency.
 
 0.5 Mbps video rate in uplink and a 60 Hz update rate in downlink. Further, we assume that the higher quality video for inspection require 8 Mbps.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cite{böhmer2020}
+- Evaluation latency on perfomance, (tools) IRL
+
+Predictably Reliable Real-time Transport (PRRT) protocol [A. Schmidt, “Cross-layer latency-aware and -predictable data communication 2019]
+The Crazyflie is controlled by Bitcraze's application layer protocol called Crazy Real-Time Protocol (CRTP)
+
+Rasberry Pi including WiFi 2.4GHz due to Rasberry Pi constraints
+timestamps by controller to drone: 
+tp1 -> packet1 -> drone
+tr1 <- response1 <- drone
+tp2 -> packet2 -> drone
+tr2 <- response2 <- drone
+
+the Crazyradio communication path using the traditional radio link
+the PRRT communication path with the Python bridge, and
+the PRRT communication path with the Rust bridge.
+
+IPT = tp2 - tp1 (Time between packets)
+RTT = tr1 - tp1 (Round-trip time)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \cite{gonzález2023}
 - Evaluation tools for latency, 
 - People tested

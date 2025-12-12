@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber main"] 1765540237.9123 "main.bcf" "main.bbl" "main" 1765540941.74672 0
-  "main.bcf" 1765540941 118167 28291bbb575148a41a64d59201746b00 "pdflatex"
+["biber main"] 1765543622.44614 "main.bcf" "main.bbl" "main" 1765543628.95552 0
+  "main.bcf" 1765543628 118167 d20b1a73ffe6d69f503d329601cd3f5f "pdflatex"
   "references.bib" 1765456691 16312 8a155e868852373e9262c8774f5da4f8 ""
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1765540937.60022 "c:/Users/einar/OneDrive - NTNU/11.Semester IogIKT/Fordypningsprosjekt/Prosjektoppgave-NTNU/main.tex" "main.pdf" "main" 1765540941.7474 0
+["pdflatex"] 1765543624.7878 "c:/Users/einar/OneDrive - NTNU/11.Semester IogIKT/Fordypningsprosjekt/Prosjektoppgave-NTNU/main.tex" "main.pdf" "main" 1765543628.95619 0
   "C:/Users/einar/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1765368953 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
   "C:/Users/einar/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1000.pk" 1760786514 11548 f6a9dfd2457f37b31e2a8605d46c0ab7 ""
   "C:/Users/einar/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1760786364 13321623 0f0cfbfa57017b5a90a6cd5a43911fd5 ""
@@ -255,7 +255,7 @@
   "Sections/./04 Related Work Controls/Car Control.tex" 1765456393 6156 41aa64bba3cc1377d9b944d833eaec3f ""
   "Sections/./04 Related Work Controls/Crane Control.tex" 1765465827 1259 159098bc64e25f19d5b68934107481c6 ""
   "Sections/./04 Related Work Controls/Drone Control.tex" 1765463339 3138 5ce98772801f071302ff7764fa8186fe ""
-  "Sections/./04 Related Work Controls/Railway Control.tex" 1765530574 8074 70714c315dcf2464e379cd14e5a82ac1 ""
+  "Sections/./04 Related Work Controls/Railway Control.tex" 1765543494 8164 52708ecb868b9dfdfb6daab02c6f78e3 ""
   "Sections/./Tables/ETCSItems.tex" 1765371898 1321 cb5e9392483433d2841b8aed8223a67e ""
   "Sections/./Tables/GoATable.tex" 1765371898 1183 8dbccd6bc2bfa6c8cfa17dc5fdea5fcf ""
   "Sections/./Tables/HowToMeasure.tex" 1765371898 1202 7fd8062d1a6585fecbbfedaa7e1a126a ""
@@ -267,19 +267,19 @@
   "Sections/01 Abstract.tex" 1765371898 100 ebd4e2d72d80f4e9c40f833ebc22c4cb ""
   "Sections/02 Introduction.tex" 1765465277 5384 cabcb32e88adb05b052be75682fb71f3 ""
   "Sections/02.5 Method.tex" 1765371898 8870 a60f0335a5cdb0872de0470dc3d7eb73 ""
-  "Sections/03 Theory.tex" 1765453550 17456 e6521d86d7e349c4684f4dc75f8bf6b2 ""
-  "Sections/04 Related Work.tex" 1765530622 1433 f2b247c7b47c5b9f7740d60b7508c020 ""
-  "Sections/06 Results.tex" 1765540936 22390 0506a12fd986ba092a8617e45befa50b ""
-  "Sections/20 Conclusion.tex" 1765539143 4821 6e9ecc8aca4ef99b7e14f1731783db64 ""
+  "Sections/03 Theory.tex" 1765542829 17452 da5913505931fc2078963dfd3e5873e9 ""
+  "Sections/04 Related Work.tex" 1765543439 1433 f2b247c7b47c5b9f7740d60b7508c020 ""
+  "Sections/06 Results.tex" 1765543617 23350 322adfed70033d4f344d31db2d1a7469 ""
+  "Sections/20 Conclusion.tex" 1765543406 4824 c39d7e9b7a55f6289d0125268fbaac68 ""
   "c:/Users/einar/OneDrive - NTNU/11.Semester IogIKT/Fordypningsprosjekt/Prosjektoppgave-NTNU/main.tex" 1765381864 989 35f58f15797f6f59b552c878e7252e61 ""
-  "main.aux" 1765540941 26100 b4ad1963a1c2025c192569b5ed45024e "pdflatex"
-  "main.bbl" 1765540247 78304 5b749f6152cddf3a3c97e544196236d3 "biber main"
-  "main.lof" 1765540941 388 dc8af8242e9de22bceb3d70657231561 "pdflatex"
-  "main.lot" 1765540941 990 8e5ae70af65da70ab8f77e6e153bdd9b "pdflatex"
-  "main.out" 1765540941 10286 54015f6415790448a6a9bf4dd378fc04 "pdflatex"
-  "main.run.xml" 1765540941 2341 774b1370d7471097fc23c34b072738c2 "pdflatex"
+  "main.aux" 1765543628 26110 8fd20cdd7b0e487f6854381804aa1554 "pdflatex"
+  "main.bbl" 1765543624 78304 5b749f6152cddf3a3c97e544196236d3 "biber main"
+  "main.lof" 1765543628 388 dc8af8242e9de22bceb3d70657231561 "pdflatex"
+  "main.lot" 1765543628 990 8e5ae70af65da70ab8f77e6e153bdd9b "pdflatex"
+  "main.out" 1765543628 10296 a9ae218bcbcfea4676c80af603238fb8 "pdflatex"
+  "main.run.xml" 1765543628 2341 774b1370d7471097fc23c34b072738c2 "pdflatex"
   "main.tex" 1765381864 989 35f58f15797f6f59b552c878e7252e61 ""
-  "main.toc" 1765540941 6174 f56c615f57147f14ebfd441ecd71fa26 "pdflatex"
+  "main.toc" 1765543628 6184 f22c53121d4a52186d9d6f874ae20c00 "pdflatex"
   "packages.sty" 1765371898 6573 0f2b982c0dbe53540c4ea207b4fcb929 ""
   "title.tex" 1765465628 832 2c5849948c263c45d9e399ce49d77bab ""
   (generated)
