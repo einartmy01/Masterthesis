@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber main"] 1765543622.44614 "main.bcf" "main.bbl" "main" 1765543628.95552 0
-  "main.bcf" 1765543628 118167 d20b1a73ffe6d69f503d329601cd3f5f "pdflatex"
+["biber main"] 1765544022.22968 "main.bcf" "main.bbl" "main" 1765544083.20502 0
+  "main.bcf" 1765544082 118236 17e461cdc84925055d1b386a0239b8bc "pdflatex"
   "references.bib" 1765456691 16312 8a155e868852373e9262c8774f5da4f8 ""
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1765543624.7878 "c:/Users/einar/OneDrive - NTNU/11.Semester IogIKT/Fordypningsprosjekt/Prosjektoppgave-NTNU/main.tex" "main.pdf" "main" 1765543628.95619 0
+["pdflatex"] 1765544079.02208 "c:/Users/einar/OneDrive - NTNU/11.Semester IogIKT/Fordypningsprosjekt/Prosjektoppgave-NTNU/main.tex" "main.pdf" "main" 1765544083.20615 0
   "C:/Users/einar/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1765368953 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
   "C:/Users/einar/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1000.pk" 1760786514 11548 f6a9dfd2457f37b31e2a8605d46c0ab7 ""
   "C:/Users/einar/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1760786364 13321623 0f0cfbfa57017b5a90a6cd5a43911fd5 ""
@@ -269,17 +269,17 @@
   "Sections/02.5 Method.tex" 1765371898 8870 a60f0335a5cdb0872de0470dc3d7eb73 ""
   "Sections/03 Theory.tex" 1765542829 17452 da5913505931fc2078963dfd3e5873e9 ""
   "Sections/04 Related Work.tex" 1765543439 1433 f2b247c7b47c5b9f7740d60b7508c020 ""
-  "Sections/06 Results.tex" 1765543617 23350 322adfed70033d4f344d31db2d1a7469 ""
+  "Sections/06 Results.tex" 1765544074 23496 d3d3ab634b4e7322a1207a0749646d38 ""
   "Sections/20 Conclusion.tex" 1765543406 4824 c39d7e9b7a55f6289d0125268fbaac68 ""
   "c:/Users/einar/OneDrive - NTNU/11.Semester IogIKT/Fordypningsprosjekt/Prosjektoppgave-NTNU/main.tex" 1765381864 989 35f58f15797f6f59b552c878e7252e61 ""
-  "main.aux" 1765543628 26110 8fd20cdd7b0e487f6854381804aa1554 "pdflatex"
-  "main.bbl" 1765543624 78304 5b749f6152cddf3a3c97e544196236d3 "biber main"
-  "main.lof" 1765543628 388 dc8af8242e9de22bceb3d70657231561 "pdflatex"
-  "main.lot" 1765543628 990 8e5ae70af65da70ab8f77e6e153bdd9b "pdflatex"
-  "main.out" 1765543628 10296 a9ae218bcbcfea4676c80af603238fb8 "pdflatex"
-  "main.run.xml" 1765543628 2341 774b1370d7471097fc23c34b072738c2 "pdflatex"
+  "main.aux" 1765544082 26175 f0f07d12af8669adea9896f2ee44445e "pdflatex"
+  "main.bbl" 1765544024 78304 5b749f6152cddf3a3c97e544196236d3 "biber main"
+  "main.lof" 1765544082 388 dc8af8242e9de22bceb3d70657231561 "pdflatex"
+  "main.lot" 1765544082 990 8e5ae70af65da70ab8f77e6e153bdd9b "pdflatex"
+  "main.out" 1765544082 10296 a9ae218bcbcfea4676c80af603238fb8 "pdflatex"
+  "main.run.xml" 1765544082 2341 774b1370d7471097fc23c34b072738c2 "pdflatex"
   "main.tex" 1765381864 989 35f58f15797f6f59b552c878e7252e61 ""
-  "main.toc" 1765543628 6184 f22c53121d4a52186d9d6f874ae20c00 "pdflatex"
+  "main.toc" 1765544082 6184 39e89738102bf91485e92ddfc45d403b "pdflatex"
   "packages.sty" 1765371898 6573 0f2b982c0dbe53540c4ea207b4fcb929 ""
   "title.tex" 1765465628 832 2c5849948c263c45d9e399ce49d77bab ""
   (generated)
