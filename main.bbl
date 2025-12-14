@@ -531,6 +531,45 @@
       \verb https://www.ashpublications.org/hematology/article/2008/1/26/95823/Evidence-Based-Guidelines-An-Introduction
       \endverb
     \endentry
+    \entry{bannigan2009raliabilityvalidity}{book}{}{}
+      \name{author}{2}{}{%
+        {{hash=90f4e6b70c6f3b958fb92542c85a2eaf}{%
+           family={Bannigan},
+           familyi={B\bibinitperiod},
+           given={K.},
+           giveni={K\bibinitperiod}}}%
+        {{hash=586ed646d73b45e30bf17c79a5ff4e6a}{%
+           family={Watson},
+           familyi={W\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{f53dd9a4e1187215437dedbc8cc55522}
+      \strng{fullhash}{f53dd9a4e1187215437dedbc8cc55522}
+      \strng{fullhashraw}{f53dd9a4e1187215437dedbc8cc55522}
+      \strng{bibnamehash}{f53dd9a4e1187215437dedbc8cc55522}
+      \strng{authorbibnamehash}{f53dd9a4e1187215437dedbc8cc55522}
+      \strng{authornamehash}{f53dd9a4e1187215437dedbc8cc55522}
+      \strng{authorfullhash}{f53dd9a4e1187215437dedbc8cc55522}
+      \strng{authorfullhashraw}{f53dd9a4e1187215437dedbc8cc55522}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Clinical Nursing}
+      \field{title}{Reliability and validity in a nutshell}
+      \field{urlday}{14}
+      \field{urlmonth}{12}
+      \field{urlyear}{2025}
+      \field{year}{2019}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://onlinelibrary.wiley.com/doi/full/10.1111/j.1365-2702.2009.02939.x?casa_token=b9d-T734K_IAAAAA%3ArclOral7cAkanCBM5q4tkjV5I41KLFUaVp38BKlF2VKEhqPoNxFBUWKTHhtM9zQguFyouEfW7ngBgPsuKQ#b24
+      \endverb
+      \verb{url}
+      \verb https://onlinelibrary.wiley.com/doi/full/10.1111/j.1365-2702.2009.02939.x?casa_token=b9d-T734K_IAAAAA%3ArclOral7cAkanCBM5q4tkjV5I41KLFUaVp38BKlF2VKEhqPoNxFBUWKTHhtM9zQguFyouEfW7ngBgPsuKQ#b24
+      \endverb
+    \endentry
     \entry{milroy1980aspects}{thesis}{}{}
       \name{author}{1}{}{%
         {{hash=e3909d5ddf8434a29f1bab3e87c25058}{%
@@ -584,8 +623,8 @@
       \strng{authornamehash}{0e4ea719015d42bb487082ec9e6a4ac1}
       \strng{authorfullhash}{0e4ea719015d42bb487082ec9e6a4ac1}
       \strng{authorfullhashraw}{0e4ea719015d42bb487082ec9e6a4ac1}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Grades of Automation (GoA) Explained}
@@ -1542,8 +1581,8 @@
       \strng{authornamehash}{9f2f1453729ea907d73aa7b63e1638d7}
       \strng{authorfullhash}{51f3359b2fcc0590d32a87d2362146ed}
       \strng{authorfullhashraw}{51f3359b2fcc0590d32a87d2362146ed}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Teleoperation: The Holy Grail to Solve Problems of Automated Driving? Sure, but Latency Matters}

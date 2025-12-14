@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.10.18)  14 DEC 2025 16:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.10.18)  14 DEC 2025 17:35
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1258,10 +1258,10 @@ l.28
 
 [3]
 
-[4])
+[4] Excluding 'comment' comment.)
 
 [5] (Sections/03 Theory.tex (Sections/./Tables/GoATable.tex)
-<Images/GoA from UITP.png, id=461, 247.42438pt x 176.66pt>
+<Images/GoA from UITP.png, id=462, 247.42438pt x 176.66pt>
 File: Images/GoA from UITP.png Graphic file (type png)
 <use Images/GoA from UITP.png>
 Package pdftex.def Info: Images/GoA from UITP.png  used on input line 16.
@@ -1271,12 +1271,12 @@ Package pdftex.def Info: Images/GoA from UITP.png  used on input line 16.
 [6]
 
 [7 <./Images/GoA from UITP.png>] (Sections/./Tables/ETCSItems.tex
-<Images/ETCS lv1.png, id=492, 507.8975pt x 251.43938pt>
+<Images/ETCS lv1.png, id=493, 507.8975pt x 251.43938pt>
 File: Images/ETCS lv1.png Graphic file (type png)
 <use Images/ETCS lv1.png>
 Package pdftex.def Info: Images/ETCS lv1.png  used on input line 7.
 (pdftex.def)             Requested size: 256.0774pt x 126.77829pt.
-<Images/ETCS lv2.png, id=495, 504.88625pt x 238.39063pt>
+<Images/ETCS lv2.png, id=496, 504.88625pt x 238.39063pt>
 File: Images/ETCS lv2.png Graphic file (type png)
 <use Images/ETCS lv2.png>
 Package pdftex.def Info: Images/ETCS lv2.png  used on input line 14.
@@ -1286,7 +1286,7 @@ Package pdftex.def Info: Images/ETCS lv2.png  used on input line 14.
 [8 <./Images/ETCS lv1.png> <./Images/ETCS lv2.png>]
 
 [9]
-<Images/ERTMS-ATO solution.png, id=532, 459.7175pt x 416.05438pt>
+<Images/ERTMS-ATO solution.png, id=534, 459.7175pt x 416.05438pt>
 File: Images/ERTMS-ATO solution.png Graphic file (type png)
 <use Images/ERTMS-ATO solution.png>
 Package pdftex.def Info: Images/ERTMS-ATO solution.png  used on input line 79.
@@ -1371,12 +1371,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 43--43
 [25
 
 ]
-<Images/D5_4 threshold.png, id=753, 444.66125pt x 386.94562pt>
+<Images/D5_4 threshold.png, id=755, 444.66125pt x 386.94562pt>
 File: Images/D5_4 threshold.png Graphic file (type png)
 <use Images/D5_4 threshold.png>
 Package pdftex.def Info: Images/D5_4 threshold.png  used on input line 63.
 (pdftex.def)             Requested size: 341.43436pt x 297.11653pt.
-<Images/D5_4 driven distance.png, id=758, 452.18938pt x 171.64125pt>
+<Images/D5_4 driven distance.png, id=760, 452.18938pt x 171.64125pt>
 File: Images/D5_4 driven distance.png Graphic file (type png)
 <use Images/D5_4 driven distance.png>
 Package pdftex.def Info: Images/D5_4 driven distance.png  used on input line 72.
@@ -1415,6 +1415,11 @@ Overfull \hbox (5.4434pt too wide) in paragraph at lines 43--43
  []
 
 
+Overfull \hbox (114.5297pt too wide) in paragraph at lines 43--43
+\OT1/cmss/m/n/10 IAAAAA % 3ArclOral7cAkanCBM5q4tkjV5I41KLFUaVp38BKlF2VKEhqPoNxFBUWKTHhtM9zQguFyouEfW7ngBgPsuKQ #
+ []
+
+
 
 [35]
 Overfull \hbox (27.14835pt too wide) in paragraph at lines 43--43
@@ -1426,7 +1431,7 @@ Overfull \hbox (27.14835pt too wide) in paragraph at lines 43--43
 [36]
 
 [37]
-runsystem(latexminted cleantemp  --timestamp 20251214165332 FAD58DE7366495DB4650CFEFAC2FCD61)...disabled (restricted).
+runsystem(latexminted cleantemp  --timestamp 20251214173540 FAD58DE7366495DB4650CFEFAC2FCD61)...disabled (restricted).
 
  (main.aux)
  ***********
@@ -1440,17 +1445,17 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 44410 strings out of 468081
- 958495 string characters out of 5425788
- 1885405 words of memory out of 5000000
- 72188 multiletter control sequences out of 15000+600000
+ 44414 strings out of 468081
+ 958731 string characters out of 5425788
+ 1887504 words of memory out of 5000000
+ 72191 multiletter control sequences out of 15000+600000
  637806 words of font info for 75 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  117i,14n,121p,1538b,2877s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\einar\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/einar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/einar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/einar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/einar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/einar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/einar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/einar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/einar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/einar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/einar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/Users/einar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/einar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/einar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/einar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on main.pdf (43 pages, 1378355 bytes).
+Output written on main.pdf (43 pages, 1381837 bytes).
 PDF statistics:
- 1040 PDF objects out of 1200 (max. 8388607)
- 180 named destinations out of 1000 (max. 500000)
+ 1048 PDF objects out of 1200 (max. 8388607)
+ 181 named destinations out of 1000 (max. 500000)
  584 words of extra memory for PDF output out of 10000 (max. 10000000)
 

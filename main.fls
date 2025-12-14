@@ -492,7 +492,6 @@ INPUT .\Sections\02.5 Method.tex
 INPUT Sections\02.5 Method.tex
 INPUT .\Sections\02.5 Method.tex
 INPUT Sections\02.5 Method.tex
-INPUT C:\Users\einar\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmti10.tfm
 INPUT .\Sections\03 Theory.tex
 INPUT .\Sections\03 Theory.tex
 INPUT Sections\03 Theory.tex
@@ -533,6 +532,7 @@ INPUT .\Images\ETCS lv2.png
 INPUT .\Images\ETCS lv2.png
 INPUT .\Images\ETCS lv2.png
 INPUT .\Images\ETCS lv2.png
+INPUT C:\Users\einar\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmti10.tfm
 INPUT .\Images\ERTMS-ATO solution.png
 INPUT .\Images\ERTMS-ATO solution.png
 INPUT Images\ERTMS-ATO solution.png
