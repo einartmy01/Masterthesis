@@ -14,24 +14,23 @@
 \contentsline {subsection}{\numberline {2.3}Supporting Tools}{5}{subsection.2.3}%
 \contentsline {subsection}{\numberline {2.4}Validity}{5}{subsection.2.4}%
 \contentsline {subsection}{\numberline {2.5}Reliability}{5}{subsection.2.5}%
-\contentsline {section}{\numberline {3}Theory}{6}{section.3}%
-\contentsline {subsection}{\numberline {3.1}ATO}{6}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}GoA}{6}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}ERTMS}{7}{subsection.3.3}%
-\contentsline {subsection}{\numberline {3.4}ETCS}{8}{subsection.3.4}%
-\contentsline {subsubsection}{\numberline {3.4.1}Levels}{8}{subsubsection.3.4.1}%
+\contentsline {section}{\numberline {3}Theory}{7}{section.3}%
+\contentsline {subsection}{\numberline {3.1}ATO}{7}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}GoA}{7}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}ERTMS}{8}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}ETCS}{9}{subsection.3.4}%
+\contentsline {subsubsection}{\numberline {3.4.1}Levels}{9}{subsubsection.3.4.1}%
 \contentsline {subsubsection}{\numberline {3.4.2}Modes}{9}{subsubsection.3.4.2}%
-\contentsline {subsection}{\numberline {3.5}Cellular communications}{9}{subsection.3.5}%
-\contentsline {subsubsection}{\numberline {3.5.1}5G URLLC}{9}{subsubsection.3.5.1}%
-\contentsline {subsubsection}{\numberline {3.5.2}GSM-R}{9}{subsubsection.3.5.2}%
-\contentsline {subsubsection}{\numberline {3.5.3}FRMCS}{9}{subsubsection.3.5.3}%
-\contentsline {subsubsection}{\numberline {3.5.4}Wi-Fi}{10}{subsubsection.3.5.4}%
-\contentsline {subsection}{\numberline {3.6}ERTMS/ATO}{10}{subsection.3.6}%
+\contentsline {subsection}{\numberline {3.5}Cellular communications}{10}{subsection.3.5}%
+\contentsline {subsubsection}{\numberline {3.5.1}5G URLLC}{10}{subsubsection.3.5.1}%
+\contentsline {subsubsection}{\numberline {3.5.2}GSM-R}{10}{subsubsection.3.5.2}%
+\contentsline {subsubsection}{\numberline {3.5.3}FRMCS}{10}{subsubsection.3.5.3}%
+\contentsline {subsubsection}{\numberline {3.5.4}Wi-Fi}{11}{subsubsection.3.5.4}%
+\contentsline {subsection}{\numberline {3.6}ERTMS/ATO}{11}{subsection.3.6}%
 \contentsline {subsection}{\numberline {3.7}Latency}{11}{subsection.3.7}%
-\contentsline {subsubsection}{\numberline {3.7.1}Latency Measurements}{11}{subsubsection.3.7.1}%
-\contentsline {subsection}{\numberline {3.8}Regulations}{12}{subsection.3.8}%
-\contentsline {subsubsection}{\numberline {3.8.1}WP41 - Validation Criteria Tramways}{13}{subsubsection.3.8.1}%
-\contentsline {subsubsection}{\numberline {3.8.2}3GPP TS 22.289}{13}{subsubsection.3.8.2}%
+\contentsline {subsubsection}{\numberline {3.7.1}Latency Measurements}{12}{subsubsection.3.7.1}%
+\contentsline {subsection}{\numberline {3.8}Regulations}{13}{subsection.3.8}%
+\contentsline {subsubsection}{\numberline {3.8.1}Spesific validation criteria}{14}{subsubsection.3.8.1}%
 \contentsline {section}{\numberline {4}Related Work}{15}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Railway Control}{15}{subsection.4.1}%
 \contentsline {subsubsection}{\numberline {4.1.1}ATO-Cargo Project}{15}{subsubsection.4.1.1}%

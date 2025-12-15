@@ -11,13 +11,12 @@ The Grade of Automation (GoA) classifies how much of the train operation is auto
 Remote Train Operations (RTO), as discussed in this paper, is a part of stage GoA~3 as a disruption management handling system and as a safety system for GoA~4 if it were to fail \cite{brandenburger2023vqreactiontimertc}. 
 
 GoA also changes and updates regularly because of new technology added that shifts the definition. Figure \ref{fig:GoAUITP} below is UITP's definition of how GoA is graded.
- \begin{figure}[H]
-    \centering
-    \includegraphics[width=0.7\textwidth]{Images/GoA from UITP.png}
-    \caption[GoA definition]{UITP's simple definition of GoA}
-    \label{fig:GoAUITP}
-    \source{\cite{uitp2018metro}}
-  \end{figure}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.7\textwidth]{Images/GoA from UITP.png}
+  \caption[GoA definition]{UITP's simple definition of GoA \cite{uitp2018metro}}
+  \label{fig:GoAUITP}
+\end{figure}
 
 The formal definitions and required functions per level are described in IEC 62290 and discussed in CBTC Solutions as well as UITP \cite{iec62290,cbtc_goa,uitp2018metro}.
 
@@ -78,9 +77,8 @@ Because of the international rollout of ERTMS, ATO will have to follow along. ER
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.5\textwidth]{Images/ERTMS-ATO solution.png}
-    \caption[ERTMS/ATO solution]{Architecture of ERA's ERTMS/ATO solution}
+    \caption[ERTMS/ATO solution]{Architecture of ERA's ERTMS/ATO solution \cite{era_ertms}}
     \label{fig:ERTMS-ATO}
-    \source{\cite{era_ertms}}
 \end{figure}
 Figure \ref{fig:ERTMS-ATO} is showcasing different ATO working together with different responsibility and how they communicate with each other \cite{era_ertms}.
 
@@ -128,18 +126,18 @@ From ERA's \cite{era_ertms} rules about during ATO operation, it shall be possib
 \end{enumerate}
 
 A way to guarantee these rules are followed and maintained is to implement a safety for when ATO is not working like intended, demanding a downgrade either to manual and physical steering or a option of remote control.
-
 %cspell:words Sporveien Trikken Dato 
-\subsubsection{WP41 - Validation Criteria Tramways}
-WP41 is a deliverable by FP2R2DATO which is a collection of test cases and validation criteria for remote driving of tramways. It is delivered by Sporveien Trikken AS with the assistance of CAF, UITP and FP2R2Dato in the Europe's Rail program and contains detailed plan and procedures for testing remote control of tramways. Which includes functionality of electric circuits implemented, TCMS, CERES actions, and safety supervision. Its a standardisation for defining Key Performance indicators and how they should be measured including: Solution QoE (1-5), Image Quality (1-5), Image latency (ms), Availability (Failure rate). Since remote control will come in the light and collaboration with Europe's Rail program. A similar design validation criteria should be expected and produced for railway infrastructure as well, which makes the WP41 a good resource on possible future regulations for RTO.
+\subsubsection{Spesific validation criteria}
+To complement the technical analysis of latency and communication performance, selected deliverables are included to illustrate how remote operation is currently being validated and how future requirements may be formalised. The documents WP41 and 3GPP TS 22.289 provide structured validation criteria and performance targets that are directly relevant for assessing remote train operation in safety-critical contexts.
+
+WP41 - Validation Criteria for Tramways is a deliverable by FP2R2DATO which is a collection of test cases and validation criteria for remote driving of tramways. It is delivered by Sporveien Trikken AS with the assistance of CAF, UITP and FP2R2Dato in the Europe's Rail program and contains detailed plan and procedures for testing remote control of tramways. Which includes functionality of electric circuits implemented, TCMS, CERES actions, and safety supervision. Its a standardisation for defining Key Performance indicators and how they should be measured including: Solution QoE (1-5), Image Quality (1-5), Image latency (ms), Availability (Failure rate). Since remote control will come in the light and collaboration with Europe's Rail program. A similar design validation criteria should be expected and produced for railway infrastructure as well, which makes the WP41 a good resource on possible future regulations for RTO.
 \cite{fp2r2dato2023d41_1}
 
-\subsubsection{3GPP TS 22.289}
 3GPP TS 22.289 is a technical specification report. Completed by 3GPP in the works with UIC and European Telecommunications Standards Institute (ETSI), which among other list performance requirements for main lines\cite{uic_frmcs,3gppts22289}. These requirements are set to ensure safe and good communications for the future of railway, but as mentioned in the report it is of now only target values. GoA3 and GoA4 is mentioned with the necessary high level of communications needed for operation. Here they also mention video-based remote control as a part of GoA3/GoA4 and put them in the same category for "Very Critical Video Communication". 
 
 Relevant information from table in 3GPP TS 22.289 about requirements for FRMCS can be seen in Table \ref{tab:Regulations}
 \import{./Tables/}{Regulations3GPP}
 
-In the table we can see end to end latency being mentioned, and they have defined it as the same as G2G \cite{3gppts22289}, measured at the communication interface, from the moment it is transmitted by the source to the moment it is successfully received at the destination.
+In Table \ref{tab:Regulations} we can see end to end latency being mentioned, and they have defined it as the same as G2G \cite{3gppts22289}, measured at the communication interface, from the moment it is transmitted by the source to the moment it is successfully received at the destination.
 
 The work of 3GPP, TS 22.289, is not yet considered in ERA's TSI CCS and therefore not completely applied. Yet it is still to be expected to be the regulations of future work and something to keep in mind under future development \cite{era_tsi}.

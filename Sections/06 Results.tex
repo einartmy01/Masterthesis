@@ -61,18 +61,16 @@ In the release of FP2R2DATO D5.4 in Chapter 12 \cite{fp2r2dato2023d5_4} about \t
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{Images/D5_4 threshold.png}
-    \caption[Threshold]{Maximum speed function of latency}
+    \caption[Threshold]{Maximum speed function of latency \cite{fp2r2dato2023d5_4}}
     \label{fig:SpeedByLatencyThreshold}
-    \source{\cite{fp2r2dato2023d5_4}}
 \end{figure}
 Where as the Y-axis is not directly speed in km/h but a scaled measure of the trains max speed accredited. Figure \ref{fig:SpeedByLatencyThreshold} suggest a steep reduction in speed at 150 ms, before at 400 ms that the train goes to the absolute minium speed possible \cite{fp2r2dato2023d5_4}. These numbers are not directly calculated, but rather chosen from the understanding of the author with the influence of Table \ref{fig:DistancePerTime} that show driven distance at different speeds.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{Images/D5_4 driven distance.png}
-    \caption[DistancePrTime]{Driven distance function of speed}
+    \caption[DistancePrTime]{Driven distance function of speed \cite{fp2r2dato2023d5_4}}
     \label{fig:DistancePerTime}
-    \source{\cite{fp2r2dato2023d5_4}}
 \end{figure}
 
 This way to decide a threshold seem problematic. This is from Europe's Rail delivery but give no scientific grounds for the choices. Use Norway as an example where the max allowed speed for passing threw a station is 40 km/t \cite{snlrail}. Easy formula from Norwegian railway operators Bane NOR \cite{banenor}:
@@ -137,6 +135,6 @@ Mejías also demonstrated that bitrate adaptation driven by Real-Time Transport 
 
 Larsen investigated delay sources in video transmission over 5G URLLC systems and showed that most variation came from serialization and queueing in the network path rather than the application layer \cite{larsen2022}. The work also demonstrated how Time-Sensitive Networking (TSN) reduces this variation by enforcing deterministic forwarding. For RTO this could mean that predictable network level is as important as an efficient streaming tool, since unstable forwarding alone can make control unreliable even when bandwidth is sufficient.
 
-Kang evaluated how resolution, bitrate and network choice influence practical delay under Long Term Evolution (LTE) and WiFi \cite{kang2018}. Higher resolutions consistently increased delay, and LTE produced more fluctuation than WiFi. González also compared LTE and WiFi, more specifically LTE server routing, LTE direct mode and WiFi \cite{gonzález2023}. The study found large differences between the server-routed LTE who produced delays near 500 ms, direct LTE with 10 ms, while WiFi was 4 ms. For RTO this shows that routing architecture, not only protocol will have an major impact on latency.
+Kang evaluated how resolution, bitrate and network choice influence practical delay under Long Term Evolution (LTE) and Wi-Fi \cite{kang2018}. Higher resolutions consistently increased delay, and LTE produced more fluctuation than Wi-Fi. González also compared LTE and Wi-Fi, more specifically LTE server routing, LTE direct mode and Wi-Fi \cite{gonzález2023}. The study found large differences between the server-routed LTE who produced delays near 500 ms, direct LTE with 10 ms, while Wi-Fi was 4 ms. For RTO this shows that routing architecture, not only protocol will have an major impact on latency.
 
 Kozarevic and Böhmer both relied on products developed by others, but in different ways. Kozarevic used the commercial Voysys teleoperation platform to enable full-scale train tests early in the project \cite{kozarevic2025}. This allowed rapid iteration but limited insight into internal timing behaviour, which can make it difficult to identify where delay originated or adjust components for railway. Böhmer instead used the open Crazyradio ecosystem with Crazy RTP and Predictably Reliable Real-Time Transport (PRRT), gaining full visibility and the ability to tune transport behaviour \cite{böhmer2020}. For RTO, the comparison show that commercial platforms speed up deployment but reduce optimisation possibilities, while open research tools support detailed analysis but require significant redevelopment before they can meet railway safety and reliability requirements.

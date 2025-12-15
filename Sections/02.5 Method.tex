@@ -45,26 +45,26 @@ To ensure the study is based on the relevant and current information, specific c
 I did not include a specific keyword criteria because of the exploratory nature of the research questions. Instead, broad search terms were used initially, with relevance determined through title and abstract screening against the inclusion criteria.
 
 \subsubsection{Search Queries and Refinement}
-Initial broad queries were executed and subsequently refined to focus on specific research gaps, such as the intersection of video communication and system latency. For example, Table \ref{tab:genericSearch} illustrates a query targeting the core technological elements of the study.
+Initial broad queries were executed and subsequently refined to focus on specific research gaps, such as the intersection of video communication and system latency. For example, Table \ref{tab:genericSearch} illustrates a query targeting the core technological elements of the study. "Filtered" are based on the inclusion criteria from Table \ref{tab:inclusion_criteria} while "Selected" has amount of reports used from each search by the method in Figure \ref{fig:prisma}. Note that some selected overlap with each other, especially in Table \ref{tab:vehicleSearch}.
 
 \begin{table}[H]
     \centering
     \caption{Summary of Refined Search Queries. \label{tab:genericSearch}}
-    \begin{tabularx}{\textwidth}{|X|c|c|}
+    \begin{tabularx}{\linewidth}{|X|c|c|c|}
         \hline
-        Search Query & Initial Hits & Filtered Hits\\
+        Search Query & Initial Hits & Filtered & Selected\\
         \hline
-        "Remote" "Train operation" OR "Train control"               & 12 900 & 5 380 \\
+        "Remote" "Train operation" OR "Train control"               & 12 900 & 5 380 & 4\\
         \hline
-        "Automatic" "Train operation" OR "Train control"            & 17 600 & 11 900 \\
+        "Automatic" "Train operation" OR "Train control"            & 17 600 & 11 900 & 3\\
         \hline
-        "Vehicle" "streaming" "protocols" "real-time" "performance" & 36 800 & 17 400 \\
+        "Vehicle" "streaming" "protocols" "real-time" "performance" & 36 800 & 17 400 & 4\\
         \hline
-        "Ethics" "Remote" Control" "Vehicle"                        & 298 000 & 34 200 \\
+        "Ethics" "Remote" Control" "Vehicle"                        & 298 000 & 34 200 & 1\\
         \hline
-        "Cybersecurity" "Remote" "Control" "Vehicle"                & 42 600 & 21 600 \\
+        "Cybersecurity" "Remote" "Control" "Vehicle"                & 42 600 & 21 600 & 1\\
         \hline
-        "Latency awareness" "Remote" "Control"                      & 460  & 294 \\
+        "Latency awareness" "Remote" "Control"                      & 460  & 294 & 2\\
         \hline
     \end{tabularx}
 \end{table}
@@ -75,17 +75,17 @@ For more detailed searches and for finding reports to compare with, the followin
     \centering
     \caption{Summary of Refined Search Queries.}
     \label{tab:vehicleSearch}
-    \begin{tabularx}{\textwidth}{|X|c|c|}
+    \begin{tabularx}{\linewidth}{|X|c|c|c|}
         \hline
-        Search Query & Initial Hits & Filtered Hits\\
+        Search Query & Initial Hits & Filtered & Selected\\
         \hline
-        "Remote" "Latency" "Operation" OR "Control"                         & 841 000 & 83 000 \\
+        "Remote" "Latency" "Operation" OR "Control"                         & 841 000 & 83 000 & 14\\
         \hline
-        "Remote" "Latency" "Operation" OR "Control" "Railway"               & 11 800 & 6 580 \\
+        "Remote" "Latency" "Operation" OR "Control" "Railway"               & 11 800 & 6 580  & 6\\
         \hline
-        "Remote" "Latency" "Threshold" "Operation" OR "Control"             & 245 000 & 33 700 \\
+        "Remote" "Latency" "Threshold" "Operation" OR "Control"             & 245 000 & 33 700 & 8\\
         \hline
-        "Remote" "Latency" "Threshold" "Operation" OR "Control" "Railway"   & 4 350  & 2 530 \\
+        "Remote" "Latency" "Threshold" "Operation" OR "Control" "Railway"   & 4 350  & 2 530 & 3\\
         \hline
     \end{tabularx}
 \end{table}
@@ -96,9 +96,8 @@ To be able to choose from multiple thousands papers down to the ones chosen, a f
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.9\textwidth]{Images/Prisma.png}
-    \caption[PRISMA Flow Chart]{PRISMA flow chart}
+    \caption[PRISMA Flow Chart]{PRISMA flow chart for query: "Remote" "Latency" "Threshold" "Operation" OR "Control"}
     \label{fig:prisma}
-    \source{Own product}
   \end{figure}
 \subsection{Supporting Tools}
 
