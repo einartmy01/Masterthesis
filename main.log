@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.10.18)  15 DEC 2025 19:10
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.10.18)  15 DEC 2025 22:52
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1359,12 +1359,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 43--43
 [26
 
 ]
-<Images/D5_4 threshold.png, id=773, 444.66125pt x 386.94562pt>
+<Images/D5_4 threshold.png, id=775, 444.66125pt x 386.94562pt>
 File: Images/D5_4 threshold.png Graphic file (type png)
 <use Images/D5_4 threshold.png>
 Package pdftex.def Info: Images/D5_4 threshold.png  used on input line 63.
 (pdftex.def)             Requested size: 341.43436pt x 297.11653pt.
-<Images/D5_4 driven distance.png, id=779, 452.18938pt x 171.64125pt>
+<Images/D5_4 driven distance.png, id=781, 452.18938pt x 171.64125pt>
 File: Images/D5_4 driven distance.png Graphic file (type png)
 <use Images/D5_4 driven distance.png>
 Package pdftex.def Info: Images/D5_4 driven distance.png  used on input line 71.
@@ -1388,9 +1388,9 @@ Package pdftex.def Info: Images/D5_4 driven distance.png  used on input line 71.
 
 [32] (Sections/20 Conclusion.tex
 
-[33]
+[33] Excluding 'comment' comment.)
 
-[34] Excluding 'comment' comment.)
+[34]
 
 [35]
 Overfull \hbox (0.21512pt too wide) in paragraph at lines 43--43
@@ -1414,7 +1414,7 @@ Overfull \hbox (27.14835pt too wide) in paragraph at lines 43--43
 [37]
 
 [38]
-runsystem(latexminted cleantemp  --timestamp 20251215191047 FAD58DE7366495DB4650CFEFAC2FCD61)...disabled (restricted).
+runsystem(latexminted cleantemp  --timestamp 20251215225227 FAD58DE7366495DB4650CFEFAC2FCD61)...disabled (restricted).
 
  (main.aux)
  ***********
@@ -1436,9 +1436,9 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  117i,14n,121p,2346b,2956s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\einar\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/einar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/einar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/einar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/einar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/einar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/einar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/einar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/einar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/einar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/Users/einar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/einar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/einar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/einar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on main.pdf (44 pages, 1513920 bytes).
+Output written on main.pdf (44 pages, 1513909 bytes).
 PDF statistics:
- 1062 PDF objects out of 1200 (max. 8388607)
+ 1064 PDF objects out of 1200 (max. 8388607)
  182 named destinations out of 1000 (max. 500000)
  581 words of extra memory for PDF output out of 10000 (max. 10000000)
 
