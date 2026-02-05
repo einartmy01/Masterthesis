@@ -1,0 +1,35 @@
+I terminal:
+
+sudo apt update
+
+#Generell download av essentielle gadgets
+sudo apt install -y build-essential curl wget git unzip
+
+sudo apt install -y bash coreutils
+
+sudo apt install -y net-tools iputils-ping tcpdump
+
+sudo apt install -y ffmpeg
+
+sudo apt install -y v4l-utils
+
+#GS download, kopier alt inn i terminal:
+sudo apt install -y \
+gstreamer1.0-tools \
+gstreamer1.0-plugins-base \
+gstreamer1.0-plugins-good \
+gstreamer1.0-plugins-bad \
+gstreamer1.0-plugins-ugly \
+gstreamer1.0-libav
+
+#Verifiser gs
+gst-launch-1.0 --version
+
+
+#Sjekk at intern kamera fungerer: 
+v4l2-ctl --list-devices
+
+
+#Naviger til script folder og så:
+chmod +x sender_udp.sh
+
