@@ -1,0 +1,2 @@
+Checkpoint 1: OS + camera detected
+Checkpoint 2: capture timestamps
