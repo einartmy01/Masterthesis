@@ -1,0 +1,8 @@
+To run the scripts:
+1. Enter terminal
+2. Navigate to folder with scripts
+3. Execute in terminal: chmod +x "filename".
+    3.1. This is a one time thing and does not need to be repeated. Only if you create a new sh file.
+4. Execute in terminal: ./"filename".sh
+    4.1. Always execute reciver first
+
