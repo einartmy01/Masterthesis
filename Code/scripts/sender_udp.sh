@@ -12,12 +12,12 @@
 #Activate hardware H.264 encoder. One I-frame per second at 30fps. Bitrate controls stable quaility.
 #IDK
 #IDK
+#Swap internal host=127.0.0.1 
 
 gst-launch-1.0 \
 v4l2src device=/dev/video0 do-timestamp=true ! \
 videoconvert ! \
 x264enc tune=zerolatency speed-preset=ultrafast key-int-max=30 bitrate=4000 ! \
 rtph264pay config-interval=1 pt=96 ! \
-#udpsink host=127.0.0.1 port=5000 sync=false async=false	
 udpsink host=10.22.93.21 port=5000 sync=false async=false
 

@@ -33,3 +33,7 @@ v4l2-ctl --list-devices
 #Naviger til script folder og så:
 chmod +x sender_udp.sh
 
+#Først:
+./receiver_udp.sh
+#Så:
+./sender_udp.sh
