@@ -18,5 +18,5 @@ v4l2src device=/dev/video0 do-timestamp=true ! \
 videoconvert ! \
 vaapih264enc keyframe-period=30 bitrate=4000 ! \
 rtph264pay config-interval=1 pt=96 ! \
-udpsink host=127.0.0.1 port=5000 sync=false async=false	
-
+#udpsink host=127.0.0.1 port=5000 sync=false async=false	
+udpsink host=10.22.93.21 port=5000 sync=false async=false
