@@ -7,4 +7,4 @@ rtph264depay ! \
 avdec_h264 ! \
 videoconvert ! \
 autovideosink sync=false \
-2>&1 | grep "time=(guint64)" > receiver_log.txt
+2>&1 | grep "time=(guint64)" > logs/receiver_log.txt

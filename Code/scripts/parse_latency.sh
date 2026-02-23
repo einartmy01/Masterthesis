@@ -6,7 +6,7 @@ if [ -z "$1" ]; then
 fi
 
 INPUT="$1"
-OUTPUT="latency_readable.txt"
+OUTPUT="logs/latency_readable.txt"
 
 # Remove ANSI color codes
 # Keep only real latency measurements (numeric time values)
