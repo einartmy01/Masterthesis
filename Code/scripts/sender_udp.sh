@@ -14,7 +14,7 @@
 #IDK
 #Swap internal host=127.0.0.1 
 
-GST_DEBUG="rtpbasepayload:7" \
+GST_DEBUG="rtpbasepayload:7,rtph264pay:7" \
 gst-launch-1.0 \
 v4l2src device=/dev/video0 do-timestamp=true ! \
 videoconvert ! \

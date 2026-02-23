@@ -7,7 +7,7 @@ fi
 
 SENDER="$1"
 RECEIVER="$2"
-OUTPUT="rtp_combined.csv"
+OUTPUT="logs/rtp_combined.csv"
 
 # Remove ANSI colors first
 clean_sender=$(mktemp)

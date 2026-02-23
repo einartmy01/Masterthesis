@@ -1,0 +1,12 @@
+To run the scripts:
+1. Enter terminal
+2. Navigate to folder with scripts
+3. Execute in terminal: chmod +x "filename".
+    3.1. This is a one time thing and does not need to be repeated. Only if you create a new sh file.
+4. Execute in terminal: ./"filename".sh
+    4.1. Always execute reciver first
+
+Find IP:
+1. Execute in terminal: ip -4 a
+2. Find: inet 10.22.95.X
+3. Put that IP in sender code
