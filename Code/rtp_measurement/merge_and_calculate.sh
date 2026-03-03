@@ -1,8 +1,15 @@
 #!/bin/bash
 
-awk -F, 'NR==FNR {if(NR>1) send[$2]=$1; next}
+awk -F, '
+NR==FNR {
+    if (NR>1 && $2!="") {
+        send[$2]=$1
+    }
+    next
+}
 NR>1 && $2 in send {
-    delay = $1 - send[$2]
+    delay = ($1 - send[$2]) * 1000
     print $2 "," send[$2] "," $1 "," delay
-}' logs/sender_rtp.csv logs/receiver_rtp.csv \
+}
+' logs/sender_rtp.csv logs/receiver_rtp.csv \
 > logs/delay_results.csv
