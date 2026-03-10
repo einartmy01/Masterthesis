@@ -8,7 +8,7 @@ RTSP_PORT="554"
 INTERFACE="enp0s31f6"
 LOCAL_IP="192.168.1.20"
 
-RECEIVER_IP="10.113.98.249"
+RECEIVER_IP="10.185.193.249"
 RTP_PORT="5000"
 
 echo "Configuring sender network..."
