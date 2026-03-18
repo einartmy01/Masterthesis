@@ -1,0 +1,22 @@
+\section{System Design}
+This chapter describes the design of the video streaming system developed in this thesis. It outlines the requirements that shaped the system, the overall architecture, the pipeline design, the approach used for timestamp-based latency measurement, and the Wi-Fi network setup used during testing. Together these sections document the reasoning behind the key design decisions made throughout the development process.
+
+\subsection{Requirements}
+The requirements for the system are shaped by the operational context of remote train operation, where reliability and low latency are critical. Unlike a controlled lab setting, a moving train introduces real-world challenges such as varying network conditions, physical vibrations, and the need for the system to perform consistently during operation.
+
+The key requirements identified for the system are:
+
+Low latency: The pipeline must deliver video with as little end-to-end delay as possible, as latency directly affects the remote operator's ability to perceive and react to the environment safely.
+
+Reliability: The system must maintain a stable stream under varying network conditions, as interruptions or degraded quality during operation could have serious safety implications.
+
+Multi-camera support: The system must be capable of handling multiple camera streams simultaneously, reflecting the practical needs of a remote driving setup where several viewing angles are required.
+
+Deployable on a moving train: The system must function in a real train environment, accounting for the network and physical conditions that come with that setting.
+
+Reproducibility: The setup must be straightforward to reproduce and redeploy, both for continued development within the project and for potential use by other researchers or partners in the collaboration.
+
+\subsection{Architecture}
+\subsection{Pipeline Design}
+\subsection{Timestamps and Latency Measurement Design}
+\subsection{Wi-Fi Network Setup}

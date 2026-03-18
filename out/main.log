@@ -1,6 +1,7 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.3.16)  16 MAR 2026 18:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.3.16)  18 MAR 2026 16:53
 entering extended mode
  \write18 enabled.
+ file:line:error style messages enabled.
  %&-line parsing enabled.
 **/home/einar/Masterthesis/main.tex
 (/home/einar/Masterthesis/main.tex
@@ -1106,27 +1107,27 @@ Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'british'.
- (./main.aux)
+ (out/main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
 Package biblatex Info: Trying to load language 'british'...
 Package biblatex Info: ... file 'british.lbx' found.
  (/usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/british.lbx
@@ -1142,17 +1143,16 @@ Package biblatex Info: Automatic encoding selection.
 \openout3 = `main.bcf'.
 
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'main.bbl' not found.
-
-No file main.bbl.
-Package biblatex Info: Reference section=0 on input line 8.
-Package biblatex Info: Reference segment=0 on input line 8.
+Package biblatex Info: ... file 'main.bbl' found.
+ (out/main.bbl)
+Package biblatex Info: Reference section=0 on input line 9.
+Package biblatex Info: Reference segment=0 on input line 9.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
-(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+ (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count526
 \scratchdimen=\dimen335
@@ -1171,7 +1171,8 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-Package hyperref Info: Link coloring ON on input line 8.
+Package hyperref Info: Link coloring ON on input line 9.
+ (out/main.out) (out/main.out)
 \@outlinefile=\write8
 \openout8 = `main.out'.
 
@@ -1180,15 +1181,15 @@ File: translations-basic-dictionary-english.trsl (english translation file `tran
 )
 \symgns@font=\mathgroup9
 LaTeX Font Info:    Overwriting symbol font `gns@font' in version `bold'
-(Font)                  TS1/cmr/m/n --> TS1/cmr/b/n on input line 8.
-Package gensymb Info: Math companion symbols declared on input line 8.
-LaTeX Info: Redefining \degree on input line 8.
-LaTeX Info: Redefining \celsius on input line 8.
-Package gensymb Info: Using text companion symbols for \degree, \celsius and \perthousand on input line 8.
-LaTeX Info: Redefining \ohm on input line 8.
-Package gensymb Info: Using \textohm for \ohm on input line 8.
-LaTeX Info: Redefining \micro on input line 8.
-Package gensymb Info: Using \textmu for \micro on input line 8.
+(Font)                  TS1/cmr/m/n --> TS1/cmr/b/n on input line 9.
+Package gensymb Info: Math companion symbols declared on input line 9.
+LaTeX Info: Redefining \degree on input line 9.
+LaTeX Info: Redefining \celsius on input line 9.
+Package gensymb Info: Using text companion symbols for \degree, \celsius and \perthousand on input line 9.
+LaTeX Info: Redefining \ohm on input line 9.
+Package gensymb Info: Using \textohm for \ohm on input line 9.
+LaTeX Info: Redefining \micro on input line 9.
+Package gensymb Info: Using \textmu for \micro on input line 9.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1225,420 +1226,66 @@ Package gensymb Info: Using \textmu for \micro on input line 8.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 (././title.tex
-<./Images/NTNU_logo.png, id=7, 426.393pt x 110.5731pt>
+<./Images/NTNU_logo.png, id=207, 426.393pt x 110.5731pt>
 File: ./Images/NTNU_logo.png Graphic file (type png)
 <use ./Images/NTNU_logo.png>
 Package pdftex.def Info: ./Images/NTNU_logo.png  used on input line 9.
 (pdftex.def)             Requested size: 170.71393pt x 44.26894pt.
  [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./Images/NTNU_logo.png>]) (./Sections/00 Preface.tex) [1{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}] (./Sections/01 Abstract.tex) [2]
-No file main.toc.
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./Images/NTNU_logo.png>]) (./Sections/00 Preface.tex) [1{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}] (./Sections/01 Abstract.tex) [2] (out/main.toc
+LaTeX Font Info:    Trying to load font information for U+msa on input line 5.
+ (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 5.
+ (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) [3])
 \tf@toc=\write9
 \openout9 = `main.toc'.
 
-No file main.lof.
+ (out/main.lof)
 \tf@lof=\write10
 \openout10 = `main.lof'.
 
-No file main.lot.
+ (out/main.lot)
 \tf@lot=\write11
 \openout11 = `main.lot'.
 
-[3] (./Sections/02 Introduction.tex
-
-LaTeX Warning: Citation 'j√ºrgensen2025rcrailvehicles' on page 1 undefined on input line 11.
-
-Missing character: There is no √ in font cmbx10!
-Missing character: There is no º in font cmbx10!
-
-LaTeX Warning: Citation 'kozarevic2025' on page 1 undefined on input line 11.
-
-
-LaTeX Warning: Citation 'mejias2024' on page 1 undefined on input line 13.
-
-
-LaTeX Warning: Citation 'fp2r2dato2024d41_2' on page 1 undefined on input line 13.
-
-
-LaTeX Warning: Citation 'fp2r2dato2023d5_4' on page 1 undefined on input line 13.
-
-
-LaTeX Warning: Citation 'brandenburger2023vqreactiontimertc' on page 1 undefined on input line 15.
-
-
+ [4] (./Sections/02 Introduction.tex
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.27 \end{enumerate}
-                     [1]
-
-LaTeX Warning: Citation 'era_tsi' on page 2 undefined on input line 31.
-
-
-LaTeX Warning: Citation 'dlr2025atocargo' on page 2 undefined on input line 31.
-
-
-LaTeX Warning: Citation 'j√ºrgensen2025rcrailvehicles' on page 2 undefined on input line 33.
-
-Missing character: There is no √ in font cmbx10!
-Missing character: There is no º in font cmbx10!
-
-LaTeX Warning: Citation 'mejias2024' on page 2 undefined on input line 33.
-
-
-LaTeX Warning: Citation 'fp2r2dato2023d5_4' on page 2 undefined on input line 35.
-
-
-LaTeX Warning: Citation 'brandenburger2023vqreactiontimertc' on page 2 undefined on input line 35.
-
-Excluding 'comment' comment.) [2] (./Sections/02.5 Method.tex
-
-LaTeX Warning: Citation 'lim2008evidencebased' on page 3 undefined on input line 9.
-
-LaTeX Font Info:    Trying to load font information for U+msa on input line 28.
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 28.
- (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-
-LaTeX Warning: Reference `tab:genericSearch' on page 3 undefined on input line 44.
-
-
-LaTeX Warning: Reference `tab:inclusion_criteria' on page 3 undefined on input line 44.
-
-
-LaTeX Warning: Reference `fig:prisma' on page 3 undefined on input line 44.
-
-
-LaTeX Warning: Reference `tab:vehicleSearch' on page 3 undefined on input line 44.
-
-[3]
-
-LaTeX Warning: Reference `tab:vehicleSearch' on page 4 undefined on input line 58.
-
-
-LaTeX Warning: Reference `fig:prisma' on page 4 undefined on input line 75.
-
-
-LaTeX Warning: Citation 'bannigan2009raliabilityvalidity' on page 4 undefined on input line 88.
-
-
-LaTeX Warning: Reference `sec:ResultsDiscussion' on page 4 undefined on input line 88.
-
-
-Overfull \hbox (49.6596pt too wide) in paragraph at lines 88--89
-\OT1/cmr/m/n/10 which a meas-ure-ment ac-cur-ately meas-ures what it is in-ten-ded to meas-ure [[]].
- []
-
-
-LaTeX Warning: Citation 'bannigan2009raliabilityvalidity' on page 4 undefined on input line 91.
-
-) [4] [5] (./Sections/03 Theory.tex
-
-LaTeX Warning: Citation 'milroy1980aspects' on page 6 undefined on input line 4.
-
-
-LaTeX Warning: Citation 'dlr2025atocargo' on page 6 undefined on input line 4.
-
-
-LaTeX Warning: Citation 'cbtc_goa' on page 6 undefined on input line 7.
-
-
-LaTeX Warning: Reference `tab:GoA' on page 6 undefined on input line 7.
-
-(./Sections/./Tables/GoATable.tex)
-
-LaTeX Warning: Citation 'brandenburger2023vqreactiontimertc' on page 6 undefined on input line 11.
-
-
-LaTeX Warning: Reference `fig:GoAUITP' on page 6 undefined on input line 13.
-
-
-LaTeX Warning: File `Images/GoA from UITP.png' not found on input line 16.
-
-
-! Package pdftex.def Error: File `Images/GoA from UITP.png' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.16 ...h=0.7\textwidth]{Images/GoA from UITP.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: Citation 'uitp2018metro' on page 6 undefined on input line 17.
-
-
-LaTeX Warning: Citation 'uitp2018metro' on page 6 undefined on input line 17.
-
-[6]
-
-LaTeX Warning: Citation 'iec62290' on page 7 undefined on input line 21.
-
-
-LaTeX Warning: Citation 'cbtc_goa' on page 7 undefined on input line 21.
-
-
-LaTeX Warning: Citation 'uitp2018metro' on page 7 undefined on input line 21.
-
-
-LaTeX Warning: Citation 'era_ertms' on page 7 undefined on input line 25.
-
-
-LaTeX Warning: Citation 'holter2025ertmshistory' on page 7 undefined on input line 27.
-
-
-LaTeX Warning: Citation 'holter2025ertmsprogramme' on page 7 undefined on input line 36.
-
-[7]
-
-LaTeX Warning: Citation 'era_ertms' on page 8 undefined on input line 40.
-
-
-LaTeX Warning: Citation 'eu_etcs_levels' on page 8 undefined on input line 40.
-
-
-LaTeX Warning: Citation 'eu_etcs_levels' on page 8 undefined on input line 43.
-
-(./Sections/./Tables/ETCSItems.tex
-Overfull \hbox (4.80785pt too wide) in paragraph at lines 43--1
-\OT1/cmr/m/n/10 ETCS is com-monly de-scribed with levels that ex-press how in-form-a-tion is ex-changed [[]]: 
- []
-
-
-LaTeX Warning: Reference `fig:ETCSlv1' on page 8 undefined on input line 4.
-
-
-LaTeX Warning: File `Images/ETCS lv1.png' not found on input line 7.
-
-
-! Package pdftex.def Error: File `Images/ETCS lv1.png' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.7 ...s[width=0.6\textwidth]{Images/ETCS lv1.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: Citation 'eu_etcs_levels' on page 8 undefined on input line 8.
-
-
-LaTeX Warning: Citation 'eu_etcs_levels' on page 8 undefined on input line 8.
-
-
-Underfull \hbox (badness 1681) in paragraph at lines 8--8
-[]\OT1/cmr/m/n/10 Figure 2: |Train fol-low-ing reg-u-lar sig-nal with as-sisted speed and po-s-i-tion with bal-ises
- []
-
-
-LaTeX Warning: Reference `fig:ETCSlv2' on page 8 undefined on input line 11.
-
-
-LaTeX Warning: File `Images/ETCS lv2.png' not found on input line 14.
-
-
-! Package pdftex.def Error: File `Images/ETCS lv2.png' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.14 ...[width=0.6\textwidth]{Images/ETCS lv2.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: Citation 'eu_etcs_levels' on page 8 undefined on input line 15.
-
-
-LaTeX Warning: Citation 'eu_etcs_levels' on page 8 undefined on input line 15.
-
-[8])
-
-LaTeX Warning: Citation 'eu_etcs_levels' on page 9 undefined on input line 47.
-
-
-LaTeX Warning: Citation 'akhila20235g' on page 9 undefined on input line 55.
-
-
-LaTeX Warning: Citation 'li20185g' on page 9 undefined on input line 55.
-
-
-LaTeX Warning: Citation 'akhila20235g' on page 9 undefined on input line 57.
-
-
-LaTeX Warning: Citation 'li20185g' on page 9 undefined on input line 57.
-
-
-LaTeX Warning: Citation 'sniady2012gsmr' on page 9 undefined on input line 60.
-
-
-LaTeX Warning: Citation 'he2016gsmr' on page 9 undefined on input line 60.
-
-[9]
-
-LaTeX Warning: Citation 'sniady2012gsmr' on page 10 undefined on input line 63.
-
-
-LaTeX Warning: Citation 'he2016gsmr' on page 10 undefined on input line 63.
-
-
-LaTeX Warning: Citation 'uic_frmcs' on page 10 undefined on input line 66.
-
-
-LaTeX Warning: Citation 'mandoc2019erauicfrmcs' on page 10 undefined on input line 66.
-
-
-LaTeX Warning: Citation 'mejias2024' on page 10 undefined on input line 68.
-
-
-LaTeX Warning: Citation 'amador2022wifi' on page 10 undefined on input line 71.
-
-
-LaTeX Warning: Citation 'pandey2022wifi' on page 10 undefined on input line 71.
-
-
-LaTeX Warning: Citation 'amador2022wifi' on page 10 undefined on input line 73.
-
-
-LaTeX Warning: Citation 'pandey2022wifi' on page 10 undefined on input line 73.
-
-
-LaTeX Warning: Reference `fig:ERTMS-ATO' on page 10 undefined on input line 76.
-
-
-LaTeX Warning: File `Images/ERTMS-ATO solution.png' not found on input line 79.
-
-
-! Package pdftex.def Error: File `Images/ERTMS-ATO solution.png' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.79 ...\textwidth]{Images/ERTMS-ATO solution.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: Citation 'era_ertms' on page 10 undefined on input line 80.
-
-
-LaTeX Warning: Citation 'era_ertms' on page 10 undefined on input line 80.
-
-[10]
-
-LaTeX Warning: Reference `fig:ERTMS-ATO' on page 11 undefined on input line 83.
-
-
-LaTeX Warning: Citation 'era_ertms' on page 11 undefined on input line 83.
-
-(./Sections/./Tables/HowToMeasure.tex [11]) Excluding 'comment' comment.
-
-LaTeX Warning: Citation 'itu_g1051' on page 12 undefined on input line 104.
-
-
-LaTeX Warning: Citation 'techtarget_rfc_definition' on page 12 undefined on input line 104.
-
-(./Sections/./Tables/Protocols.tex [12])
-
-LaTeX Warning: Citation 'era_tsi' on page 13 undefined on input line 112.
-
-
-LaTeX Warning: Citation 'era_ertms' on page 13 undefined on input line 112.
-
-
-LaTeX Warning: Citation 'sjt_regulations' on page 13 undefined on input line 114.
-
-
-LaTeX Warning: Citation 'banenor_network' on page 13 undefined on input line 114.
-
-
-LaTeX Warning: Citation 'dlr2025atocargo' on page 13 undefined on input line 114.
-
-
-LaTeX Warning: Citation 'era_tsi' on page 13 undefined on input line 114.
-
-
-LaTeX Warning: Citation 'era_ertms' on page 13 undefined on input line 116.
-
-
-LaTeX Warning: Citation 'fp2r2dato2023d41_1' on page 13 undefined on input line 134.
-
-[13]
-
-LaTeX Warning: Citation 'uic_frmcs' on page 14 undefined on input line 136.
-
-
-LaTeX Warning: Citation '3gppts22289' on page 14 undefined on input line 136.
-
-
-LaTeX Warning: Reference `tab:Regulations' on page 14 undefined on input line 138.
-
-(./Sections/./Tables/Regulations3GPP.tex
-
-LaTeX Warning: Citation '3gppts22289' on page 14 undefined on input line 3.
-
-
-LaTeX Warning: Citation '3gppts22289' on page 14 undefined on input line 3.
-
-
-Overfull \vbox (6.94444pt too high) detected at line 18
- []
-
-
-Overfull \vbox (6.94444pt too high) detected at line 18
- []
-
-
-Overfull \vbox (6.94444pt too high) detected at line 18
- []
-
-)
-
-LaTeX Warning: Reference `tab:Regulations' on page 14 undefined on input line 141.
-
-
-LaTeX Warning: Citation '3gppts22289' on page 14 undefined on input line 141.
-
-
-LaTeX Warning: Citation 'era_tsi' on page 14 undefined on input line 143.
-
-) [14] (./Sections/04 Related Work.tex
-
-! LaTeX Error: File `./04 Related Work Controls/Railway Control.tex' not found.
-
-Type X to quit or <RETURN> to proceed,
-or enter new name. (Default extension: tex)
-
-Enter file name: 
-! Emergency stop.
-<read *> 
-         
-l.5 .../04 Related Work Controls}{Railway Control}
-                                                  ^^M
-*** (cannot \read from terminal in nonstop modes)
-
- 
+l.26 
+      [1] [2]) [3] (./Sections/03 Theory.tex) [4] [5] (./Sections/04 System Design.tex) [6] (./Sections/05 Methodology.tex [7] [8]) [9] (./Sections/06 Results.tex) [10] (./Sections/20 Conclusion.tex) [11]
+
+LaTeX Warning: Empty bibliography on input line 44.
+
+(out/main.aux)
+ ***********
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-01-22>
+ ***********
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: DF1158D7831EDF58EE97FABD023F5122;7220.
+Package logreq Info: Writing requests to 'main.run.xml'.
+\openout1 = `main.run.xml'.
+
+ ) 
 Here is how much of TeX's memory you used:
- 42403 strings out of 474222
- 877157 string characters out of 5748733
- 1939975 words of memory out of 5000000
- 63898 multiletter control sequences out of 15000+600000
- 567118 words of font info for 68 fonts, out of 8000000 for 9000
+ 42086 strings out of 474222
+ 868846 string characters out of 5748733
+ 1938975 words of memory out of 5000000
+ 63607 multiletter control sequences out of 15000+600000
+ 566604 words of font info for 66 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 117i,14n,121p,2285b,2365s stack positions out of 10000i,1000n,20000p,200000b,200000s
-!  ==> Fatal error occurred, no output PDF file produced!
+ 117i,12n,121p,1154b,2736s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on out/main.pdf (16 pages, 174848 bytes).
+PDF statistics:
+ 390 PDF objects out of 1000 (max. 8388607)
+ 352 compressed objects within 4 object streams
+ 70 named destinations out of 1000 (max. 500000)
+ 418 words of extra memory for PDF output out of 10000 (max. 10000000)
+

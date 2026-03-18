@@ -4,7 +4,7 @@ INPUT /usr/share/texmf/web2c/texmf.cnf
 INPUT /usr/share/texlive/texmf-dist/web2c/texmf.cnf
 INPUT /var/lib/texmf/web2c/pdftex/pdflatex.fmt
 INPUT /home/einar/Masterthesis/main.tex
-OUTPUT main.log
+OUTPUT out/main.log
 INPUT /usr/share/texlive/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/share/texlive/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
@@ -388,17 +388,22 @@ INPUT /usr/share/texlive/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
 INPUT ./main.aex
 INPUT ./main.aex
 INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
-INPUT ./main.aux
-INPUT ./main.aux
-INPUT main.aux
-OUTPUT main.aux
+INPUT out/main.aux
+INPUT out/main.aux
+INPUT out/main.aux
+OUTPUT out/main.aux
 INPUT /usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/british.lbx
 INPUT /usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/british.lbx
 INPUT /usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/british.lbx
 INPUT /usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/english.lbx
 INPUT /usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/english.lbx
 INPUT /usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/english.lbx
-OUTPUT main.bcf
+OUTPUT out/main.bcf
+INPUT out/main.bbl
+INPUT out/main.bbl
+INPUT out/main.bbl
+INPUT out/main.bbl
+INPUT out/main.bbl
 INPUT /usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT /usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT /usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
@@ -407,8 +412,14 @@ INPUT /usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 INPUT /usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 INPUT /usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-OUTPUT main.out
-OUTPUT main.pdf
+INPUT out/main.out
+INPUT out/main.out
+INPUT out/main.out
+INPUT out/main.out
+OUTPUT out/main.pdf
+INPUT out/main.out
+INPUT out/main.out
+OUTPUT out/main.out
 INPUT /usr/share/texlive/texmf-dist/tex/latex/translations/translations-basic-dictionary-english.trsl
 INPUT /usr/share/texlive/texmf-dist/tex/latex/translations/translations-basic-dictionary-english.trsl
 INPUT /usr/share/texlive/texmf-dist/tex/latex/translations/translations-basic-dictionary-english.trsl
@@ -448,21 +459,10 @@ INPUT ./Sections/01 Abstract.tex
 INPUT ./Sections/01 Abstract.tex
 INPUT ./Sections/01 Abstract.tex
 INPUT ./Sections/01 Abstract.tex
-OUTPUT main.toc
-OUTPUT main.lof
-OUTPUT main.lot
-INPUT ./Sections/02 Introduction.tex
-INPUT ./Sections/02 Introduction.tex
-INPUT ./Sections/02 Introduction.tex
-INPUT ./Sections/02 Introduction.tex
-INPUT ./Sections/02 Introduction.tex
-INPUT ./Sections/02 Introduction.tex
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
+INPUT out/main.toc
+INPUT out/main.toc
+INPUT out/main.toc
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
-INPUT ./Sections/02.5 Method.tex
-INPUT ./Sections/02.5 Method.tex
-INPUT ./Sections/02.5 Method.tex
-INPUT ./Sections/02.5 Method.tex
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx7.tfm
@@ -476,11 +476,9 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy5.tfm
 INPUT /usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 INPUT /usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 INPUT /usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
-INPUT /usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam7.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam5.tfm
-INPUT /usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 INPUT /usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 INPUT /usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 INPUT /usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
@@ -489,47 +487,61 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/tcrm0700.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/tcrm0500.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmti10.tfm
+OUTPUT out/main.toc
+INPUT out/main.lof
+INPUT out/main.lof
+INPUT out/main.lof
+OUTPUT out/main.lof
+INPUT out/main.lot
+INPUT out/main.lot
+INPUT out/main.lot
+OUTPUT out/main.lot
+INPUT ./Sections/02 Introduction.tex
+INPUT ./Sections/02 Introduction.tex
+INPUT ./Sections/02 Introduction.tex
+INPUT ./Sections/02 Introduction.tex
+INPUT ./Sections/02 Introduction.tex
+INPUT ./Sections/02 Introduction.tex
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 INPUT ./Sections/03 Theory.tex
 INPUT ./Sections/03 Theory.tex
 INPUT ./Sections/03 Theory.tex
 INPUT ./Sections/03 Theory.tex
 INPUT ./Sections/03 Theory.tex
 INPUT ./Sections/03 Theory.tex
-INPUT ./Sections/./Tables/GoATable.tex
-INPUT ./Sections/./Tables/GoATable.tex
-INPUT ./Sections/./Tables/GoATable.tex
-INPUT ./Sections/./Tables/GoATable.tex
-INPUT ./Sections/./Tables/GoATable.tex
-INPUT ./Sections/./Tables/GoATable.tex
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmtt10.tfm
-INPUT ./Sections/./Tables/ETCSItems.tex
-INPUT ./Sections/./Tables/ETCSItems.tex
-INPUT ./Sections/./Tables/ETCSItems.tex
-INPUT ./Sections/./Tables/ETCSItems.tex
-INPUT ./Sections/./Tables/ETCSItems.tex
-INPUT ./Sections/./Tables/ETCSItems.tex
-INPUT ./Sections/./Tables/HowToMeasure.tex
-INPUT ./Sections/./Tables/HowToMeasure.tex
-INPUT ./Sections/./Tables/HowToMeasure.tex
-INPUT ./Sections/./Tables/HowToMeasure.tex
-INPUT ./Sections/./Tables/HowToMeasure.tex
-INPUT ./Sections/./Tables/HowToMeasure.tex
-INPUT ./Sections/./Tables/Protocols.tex
-INPUT ./Sections/./Tables/Protocols.tex
-INPUT ./Sections/./Tables/Protocols.tex
-INPUT ./Sections/./Tables/Protocols.tex
-INPUT ./Sections/./Tables/Protocols.tex
-INPUT ./Sections/./Tables/Protocols.tex
-INPUT ./Sections/./Tables/Regulations3GPP.tex
-INPUT ./Sections/./Tables/Regulations3GPP.tex
-INPUT ./Sections/./Tables/Regulations3GPP.tex
-INPUT ./Sections/./Tables/Regulations3GPP.tex
-INPUT ./Sections/./Tables/Regulations3GPP.tex
-INPUT ./Sections/./Tables/Regulations3GPP.tex
-INPUT ./Sections/04 Related Work.tex
-INPUT ./Sections/04 Related Work.tex
-INPUT ./Sections/04 Related Work.tex
-INPUT ./Sections/04 Related Work.tex
-INPUT ./Sections/04 Related Work.tex
-INPUT ./Sections/04 Related Work.tex
+INPUT ./Sections/04 System Design.tex
+INPUT ./Sections/04 System Design.tex
+INPUT ./Sections/04 System Design.tex
+INPUT ./Sections/04 System Design.tex
+INPUT ./Sections/04 System Design.tex
+INPUT ./Sections/04 System Design.tex
+INPUT ./Sections/05 Methodology.tex
+INPUT ./Sections/05 Methodology.tex
+INPUT ./Sections/05 Methodology.tex
+INPUT ./Sections/05 Methodology.tex
+INPUT ./Sections/05 Methodology.tex
+INPUT ./Sections/05 Methodology.tex
+INPUT ./Sections/06 Results.tex
+INPUT ./Sections/06 Results.tex
+INPUT ./Sections/06 Results.tex
+INPUT ./Sections/06 Results.tex
+INPUT ./Sections/06 Results.tex
+INPUT ./Sections/06 Results.tex
+INPUT ./Sections/20 Conclusion.tex
+INPUT ./Sections/20 Conclusion.tex
+INPUT ./Sections/20 Conclusion.tex
+INPUT ./Sections/20 Conclusion.tex
+INPUT ./Sections/20 Conclusion.tex
+INPUT ./Sections/20 Conclusion.tex
+INPUT out/main.aux
+INPUT out/main.out
+INPUT out/main.out
+INPUT out/main.run.xml
+OUTPUT out/main.run.xml
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb
+INPUT /usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb

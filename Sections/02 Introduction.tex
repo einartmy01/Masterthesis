@@ -1,44 +1,61 @@
+% chktex-file 13
 \section{Introduction}
 The chapter of Introduction will contain text about purpose, research questions and a small bulk about history and the level of digitalisation we have reached right now.
 
-\subsection{Purpose}
+\subsection{Background and Motivation}
+As the railway sector transitions toward higher Grades of Automation (GoA), particularly GoA 3 and GoA 4, remote driving becomes an increasingly critical operational capability. Remote driving is not only a natural consequence of reduced onboard personnel at higher GoA levels, but serves as a mandatory safety layer within the ATO architecture enabling operators to intervene when automated systems encounter situations they cannot resolve independently, such as unexpected track conditions or degraded operational modes [source].
 
-The purpose of this paper is to document the development, measurment and evalutaion of a video signal for Remote Train Operation, RTO. As progression for future railway develops, RTO, ATO is to be expected [kilde?]. And a important aspect for the scientific development is to have complete control over the tools beeing used. One of the tools necessary to achieve a higher Grade of Automatio, GOA, is 
+A fundamental requirement for safe remote driving is the availability of reliable, low-latency video streaming. When the operator is physically separated from the train, the video feed becomes the primary source of situational awareness, and its quality and responsiveness directly determine whether timely and safe intervention is possible [source]. Industry experience further demonstrates that remote operation can support a range of practical tasks including shunting, depot movements, and vehicle preparation provided that the communication link meets sufficient performance criteria [source].
 
-development
-It is crucial that the development and measurments needs to be replicable to determine if the results are thrustworthy.
+Understanding the relationship between latency and human perception is equally important in this context. Research on human factors in remote operation indicates that video delay, bitrate, and stream stability all influence an operator's ability to detect obstacles, interpret dynamic scenes, and execute corrective actions under time pressure [source]. Identifying the latency boundaries within which safe remote operation remains feasible is therefore a key step toward enabling higher automation levels in railway systems.
 
-As the railway sector transitions toward higher Grades of Automation (GoA), particularly GoA~3 and GoA~4, remote control becomes an essential operational component. Previous research highlights that RTO is required for safely deploying and validating autonomous capabilities, as it enables controlled testing and secure intervention when automated functions cannot perform as intended \cite{jürgensen2025rcrailvehicles}. In this context, RTO functions as a mandatory fallback layer within the ATO architecture, ensuring continuity of safe operation during degraded modes or for unexpected track conditions \cite{kozarevic2025}.
+This thesis is developed within an ongoing research collaboration led by NTNU with the help of VTI and other European railway organizations, contributing to the technical groundwork required to make remote train driving a safe and practical reality in future railway deployments.
 
-A important requirement for such fallback control is the availability of reliable low-latency video transmission. Studies on remote train supervision emphasise that successful human intervention depends heavily on the stability and responsiveness of video streams when the physical control room is replaced by a remote workstation \cite{mejias2024}. Industry demonstrations show that remote operation can supports practical tasks such as shunting, depot movements, and vehicle preparation and thereby improving efficiency while maintaining safety \cite{fp2r2dato2024d41_2}. At the same time, the downgraded mode scenarios described in deliveries from Europe's Rail \cite{fp2r2dato2023d5_4} show how responsibility will transition between automated systems and human operators. And it is therefore important to identify the operational limits imposed by latency, uncertainty, and reduced information quality.
+\subsection{Problem}
 
-An equally important aspect is understanding how latency affects human perception and reaction time. Human factors research provides insight into how video quality, bitrate, and delay influence a remote operator's ability to detect signals, interpret scene dynamics, and perform corrective actions under time constraints. These findings contribute to defining minimum perceptual requirements for safe fallback operation and support the formulation of latency thresholds for high automation environments \cite{brandenburger2023vqreactiontimertc}.
+The current remote train operation setup relies on a commercial off-the-shelf product, Voysys, which imposes significant limitations on the project's ability to test and develop the system further. As a closed external solution, it restricts access to the underlying pipeline, making it difficult to adjust configurations, measure internal latency, or experiment with different streaming approaches. In addition, licensing such a product over the course of a multi-year research project represents a considerable and ongoing cost [source].
 
+At the same time, there is limited existing research that addresses video streaming specifically in the context of remote train operation. Most work on low-latency video transmission is either too general or focused on other domains, leaving a gap when it comes to understanding what configurations and trade-offs are most suitable for railway use cases [source].
 
-Over the last development cycle, Voysys has been used. Voysys is an external developer specialising in video transmission for remote control. Using Voysys has been effective and with good end results. Yet, this thesis on developing a replacement was found needed. To do even more specialised developement for Train video transmission, full liberty to testing and development was needed. If the developement would reach a point where the latency was under acceptable thresholds, and change was not possible due to developement restrictions, it could have critical consequences. 
+Building a custom streaming solution also comes with its own set of challenges. Network conditions such as signal strength, interference, and varying load introduce unpredictable variability in transmission quality. Balancing video quality against latency is a non-trivial trade-off, and testing these trade-offs on real hardware in a realistic setup adds further complexity. Without a flexible and open pipeline, it is difficult to isolate and measure where latency is introduced and how different configurations affect overall system performance.
 
-\subsubsection{Research Questions}
-To achieve the purpose of this paper, the research questions listed below was created to help. 
+\subsection{Objectives}
+
+The main objective of this thesis is to design and implement a low-latency video streaming pipeline tailored specifically for remote train operation, serving as a practical replacement for the current commercial solution. The pipeline should be functional, flexible, and open enough to support continued development and testing within the project.
+More specifically, the objectives are to:
 
 \begin{enumerate}
-    \item RQ1: 
-    \item RQ2: 
-    \item RQ3: 
+    \item O1: Develop a working GStreamer-based streaming pipeline that meets the low-latency requirements of remote train operation
+
+    \item O2: Implement a latency measurement framework that allows end-to-end delay to be captured, logged, and compared across different configurations
+
+    \item O3: Evaluate the pipeline across multiple configurations, including different codecs, payloaders, and network settings, to identify trade-offs between latency and video quality
+    \item O4: Design the system to be dynamic and extensible, allowing additional cameras and new configurations to be added with minimal effort
+    \item O5: Deliver a stable and usable prototype that is good enough for practical use during the current development period and serves as a foundation for future work
 \end{enumerate}
 
-\subsection{Digitalisation in Railway}
+The result should be a system that gives the project full control over the streaming pipeline, removes dependency on external licensed software, and produces reliable data to guide future configuration decisions.
 
-Railway digitalization has progressed from early computer assisted signalling and centralized traffic control systems to modern Automatic Train Protection (ATP), ERTMS/ETCS deployments, and integrated traffic management platforms. Recent developments include communication-based train control (CBTC) in metros, ETCS rollout on mainlines, and the integration of predictive maintenance and data analytics tools. Projects such as national ETCS rollouts, the UK East Coast Digital Programme, and research initiatives like ATO-Cargo exemplify a shift from isolated automation pilots to system wide modernization that combines ATO, interoperability standards (TSIs), and remote supervision concepts \cite{era_tsi, dlr2025atocargo}. 
+\subsection{Scope and Limitations}
+Write more about this later in the process.
+\subsection{Outline of Structure}
+The remainder of this thesis is organized as follows:
 
-The current digitalisation also shapes how future railway operations are organised. Projects across Europe show that automation and improved connectivity all depend on reliable digital systems that support both automated driving and human supervision. Remote control is becoming a standard element in this transition because it allows operators to intervene safely when automated functions cannot handle a situation. It also supports new operational concepts such as remote supervision of rural lines and more efficient traffic management \cite{jürgensen2025rcrailvehicles}. At the same time, the move toward FRMCS and 5G aims to replace GSM-R and provide the higher bandwidth and lower delay needed for real-time video and control during remote operation \cite{mejias2024}.
+Chapter 2 - Theory presents the theoretical background underlying the work. This includes an overview of Automatic Train Operation and the role of remote driving in higher GoA levels, fundamentals of video streaming such as codecs, RTP, and UDP, an introduction to GStreamer, the main sources of latency in a streaming pipeline, and relevant aspects of cellular and Wi-Fi communication.
 
-Digitalisation also increases the system's dependency on stable communication and sensor data. Research shows that issues such as reduced bandwidth, sensor faults, or missing information can directly affect whether remote operation is possible, making clear procedures for degraded modes essential \cite{fp2r2dato2023d5_4}. Human factor studies further underline that the quality of digital perception. Especially video streams must be high enough to replace traditional visibility when operators supervise the train remotely \cite{brandenburger2023vqreactiontimertc}.
+Chapter 3 - System Design describes the design decisions made in developing the streaming system. This covers the requirements, overall architecture, pipeline design, the approach to timestamp-based latency measurement, and the Wi-Fi network setup used in testing.
 
-\begin{comment}
+Chapter 4 - Methodology explains how the research was conducted, including the research design, development process, GStreamer pipeline development, and the experimental and latency measurement methodology.
+
+Chapter 5 - Experiment and Results presents the experimental findings, including a comparison of different GStreamer configurations, latency measurements per configuration, the effect of Wi-Fi conditions, and the trade-offs between video quality and latency.
+
+Chapter 6 - Discussion interprets and reflects on the results in relation to the objectives and broader context of remote train operation.
+
+Chapter 7 - Conclusion summarizes the key findings and contributions of the thesis and outlines directions for future work.
+
 \subsection{System Overview}
 A section to go through the system as it stands.
 
 \subsubsection{Components}
 A overview of the components in use.
 Also mentioning alternatives to the ones we have in use.
-\end{comment}
