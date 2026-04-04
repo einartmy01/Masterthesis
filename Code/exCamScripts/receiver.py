@@ -7,10 +7,8 @@ import csv
 import os
 import sys
 
-# ── Config ────────────────────────────────────────────────────────────────────
 RTP_PORT  = "5000"
 LOG_FILE  = "logs/receiver_timestamps.csv"
-# ─────────────────────────────────────────────────────────────────────────────
 
 def main():
     os.makedirs("logs", exist_ok=True)
