@@ -10,12 +10,14 @@ import sys
 
 # ── Config ────────────────────────────────────────────────────────────────────
 CAM_IP       = "192.168.1.100"
+#CAM_IP       = "192.168.1.101"
+#CAM_IP       = "192.168.1.102"         
 USER         = "admin"
 PASS         = "NilsNils"
 RTSP_PORT    = "554"
 INTERFACE    = "enp0s31f6"
 LOCAL_IP     = "192.168.1.20"
-RECEIVER_IP  = "10.185.193.249"
+RECEIVER_IP  = "10.14.235.249"
 RTP_PORT     = "5000"
 LOG_FILE     = "logs/sender_timestamps.csv"
 # ─────────────────────────────────────────────────────────────────────────────
