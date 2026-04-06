@@ -412,13 +412,13 @@ INPUT /usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 INPUT /usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 INPUT /usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-INPUT out/main.out
-INPUT out/main.out
-INPUT out/main.out
-INPUT out/main.out
+INPUT ./main.out
+INPUT ./main.out
+INPUT main.out
+INPUT main.out
 OUTPUT out/main.pdf
-INPUT out/main.out
-INPUT out/main.out
+INPUT ./main.out
+INPUT ./main.out
 OUTPUT out/main.out
 INPUT /usr/share/texlive/texmf-dist/tex/latex/translations/translations-basic-dictionary-english.trsl
 INPUT /usr/share/texlive/texmf-dist/tex/latex/translations/translations-basic-dictionary-english.trsl
@@ -459,10 +459,43 @@ INPUT ./Sections/01 Abstract.tex
 INPUT ./Sections/01 Abstract.tex
 INPUT ./Sections/01 Abstract.tex
 INPUT ./Sections/01 Abstract.tex
-INPUT out/main.toc
-INPUT out/main.toc
-INPUT out/main.toc
+INPUT ./main.toc
+INPUT ./main.toc
+INPUT main.toc
+OUTPUT out/main.toc
+INPUT ./main.lof
+INPUT ./main.lof
+INPUT main.lof
+OUTPUT out/main.lof
+INPUT ./main.lot
+INPUT ./main.lot
+INPUT main.lot
+OUTPUT out/main.lot
+INPUT ./Sections/02 Introduction.tex
+INPUT ./Sections/02 Introduction.tex
+INPUT ./Sections/02 Introduction.tex
+INPUT ./Sections/02 Introduction.tex
+INPUT ./Sections/02 Introduction.tex
+INPUT ./Sections/02 Introduction.tex
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
+INPUT ./Sections/03 Theory.tex
+INPUT ./Sections/03 Theory.tex
+INPUT ./Sections/03 Theory.tex
+INPUT ./Sections/03 Theory.tex
+INPUT ./Sections/03 Theory.tex
+INPUT ./Sections/03 Theory.tex
+INPUT ./Sections/04 System Design.tex
+INPUT ./Sections/04 System Design.tex
+INPUT ./Sections/04 System Design.tex
+INPUT ./Sections/04 System Design.tex
+INPUT ./Sections/04 System Design.tex
+INPUT ./Sections/04 System Design.tex
+INPUT ./Images/PhysicalSetup.png
+INPUT ./Images/PhysicalSetup.png
+INPUT Images/PhysicalSetup.png
+INPUT ./Images/PhysicalSetup.png
+INPUT ./Images/PhysicalSetup.png
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx7.tfm
@@ -476,9 +509,11 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy5.tfm
 INPUT /usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 INPUT /usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 INPUT /usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+INPUT /usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam7.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam5.tfm
+INPUT /usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 INPUT /usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 INPUT /usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 INPUT /usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
@@ -487,34 +522,6 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/tcrm0700.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/tcrm0500.tfm
-OUTPUT out/main.toc
-INPUT out/main.lof
-INPUT out/main.lof
-INPUT out/main.lof
-OUTPUT out/main.lof
-INPUT out/main.lot
-INPUT out/main.lot
-INPUT out/main.lot
-OUTPUT out/main.lot
-INPUT ./Sections/02 Introduction.tex
-INPUT ./Sections/02 Introduction.tex
-INPUT ./Sections/02 Introduction.tex
-INPUT ./Sections/02 Introduction.tex
-INPUT ./Sections/02 Introduction.tex
-INPUT ./Sections/02 Introduction.tex
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
-INPUT ./Sections/03 Theory.tex
-INPUT ./Sections/03 Theory.tex
-INPUT ./Sections/03 Theory.tex
-INPUT ./Sections/03 Theory.tex
-INPUT ./Sections/03 Theory.tex
-INPUT ./Sections/03 Theory.tex
-INPUT ./Sections/04 System Design.tex
-INPUT ./Sections/04 System Design.tex
-INPUT ./Sections/04 System Design.tex
-INPUT ./Sections/04 System Design.tex
-INPUT ./Sections/04 System Design.tex
-INPUT ./Sections/04 System Design.tex
 INPUT ./Sections/05 Methodology.tex
 INPUT ./Sections/05 Methodology.tex
 INPUT ./Sections/05 Methodology.tex
@@ -536,11 +543,12 @@ INPUT ./Sections/20 Conclusion.tex
 INPUT out/main.aux
 INPUT out/main.out
 INPUT out/main.out
-INPUT out/main.run.xml
 OUTPUT out/main.run.xml
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb
