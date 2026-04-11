@@ -9,16 +9,16 @@ import subprocess
 import sys
 
 # ── Config ────────────────────────────────────────────────────────────────────
-CAM_IP0       = "192.168.1.100"
-CAM_IP1       = "192.168.1.101"
-CAM_IP2       = "192.168.1.102"  
-CAM_IPs      = [CAM_IP0, CAM_IP1, CAM_IP2]       
+CAM_IP0      = "192.168.1.100"
+CAM_IP1      = "192.168.1.101"
+CAM_IP2      = "192.168.1.102"  
+CAM_IPs      = [CAM_IP0, CAM_IP1, CAM_IP2]     
 USER         = "admin"
 PASS         = "NilsNils"
 RTSP_PORT    = "554"
 INTERFACE    = "enp0s31f6"
 LOCAL_IP     = "192.168.1.20"
-RECEIVER_IP  = "10.14.235.249"
+RECEIVER_IP  = "10.238.111.249"
 RTP_PORT     = "5000"
 LOG_FILE     = "logs/sender_timestamps.csv"
 # ─────────────────────────────────────────────────────────────────────────────
@@ -33,20 +33,22 @@ def setup_network():
 # Camera check pings the cameras and tests RTSP port connectivity before starting the pipeline.
 def check_camera():
     print("Checking camera reachability...")
-    for cam_ip in CAM_IPs:
+    #for cam_ip in CAM_IPs:
+    cam_ip       = CAM_IP0
 
-        # Ping of cameras
-        pingResponse = subprocess.run(["ping", "-c", "2", cam_ip], capture_output=True)
-        if pingResponse.returncode != 0:
-            print(f"Camera at {cam_ip} not reachable."); sys.exit(1)
 
-        # Test RTSP port connectivity
-        # nc, netcat, is a simple utility for testing TCP/UDP connectivity. Here we use it to check if the RTSP port is open on the camera.
-        # -z: zero-I/O mode, no data is sent, just checking if the port is open
-        # -w 3: wait 3 seconds for a connection before timing out
-        rtspResponse = subprocess.run(["nc", "-z", "-w", "3", cam_ip, RTSP_PORT], capture_output=True)
-        if rtspResponse.returncode != 0:
-            print(f"RTSP port not reachable for camera at {cam_ip}."); sys.exit(1)
+    # Ping of cameras
+    pingResponse = subprocess.run(["ping", "-c", "2", cam_ip], capture_output=True)
+    if pingResponse.returncode != 0:
+        print(f"Camera at {cam_ip} not reachable."); sys.exit(1)
+
+    # Test RTSP port connectivity
+    # nc, netcat, is a simple utility for testing TCP/UDP connectivity. Here we use it to check if the RTSP port is open on the camera.
+    # -z: zero-I/O mode, no data is sent, just checking if the port is open
+    # -w 3: wait 3 seconds for a connection before timing out
+    rtspResponse = subprocess.run(["nc", "-z", "-w", "3", cam_ip, RTSP_PORT], capture_output=True)
+    if rtspResponse.returncode != 0:
+        print(f"RTSP port not reachable for camera at {cam_ip}."); sys.exit(1)
 
 
 def main():
@@ -58,7 +60,7 @@ def main():
 
     pipeline_str = (
         # RTSP connection
-        f'rtspsrc location="rtsp://{USER}:{PASS}@{CAM_IP}:{RTSP_PORT}/Streaming/Channels/101" '
+        f'rtspsrc location="rtsp://{USER}:{PASS}@{CAM_IP0}:{RTSP_PORT}/Streaming/Channels/101" '
         # RTSP setup 
         f'protocols=tcp latency=0 name=src ! '
         f'rtph264depay name=depay ! '

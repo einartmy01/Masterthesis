@@ -11,9 +11,14 @@ Find IP:
 2. Find: "wlo1: inet 10.X.X.X"
 3. Put that IP in sender code
 
+
 Sender Local IP:
 1. If sender don't have an Local enp0s31f6 adress
 2. Follow these commands: 
     sudo ip addr flush dev enp0s31f6
-    sudo ip addr add 192.168.1.50/24 dev enp0s31f6
-    sudo ip link set enp0s31f6 up
+    sudo ip addr add 192.168.2.50/24 dev enp0s31f6
+    sudo ip addr flush dev eth0
+    sudo ip addr add 192.168.0.50/24 dev eth0
+    sudo ip addr flush dev eth1
+    sudo ip addr add 192.168.1.50/24 dev eth1
+
