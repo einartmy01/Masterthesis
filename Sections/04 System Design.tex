@@ -20,47 +20,44 @@ Reproducibility: The setup must be straightforward to reproduce and redeploy, bo
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.9\textwidth]{Images/PhysicalSetup.png}
-    \caption{Physical Setup of Project}
-    \label{fig:physicalSetup}
+    \caption{Physical Setup of Project}\label{fig:physicalSetup}
 \end{figure}
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.9\textwidth]{Images/ApplicationAndTransportSetup.png}
-    \caption{Application and Transport layer Setup of Project}
-    \label{fig:appAndTransSetup}
+    \caption{Application and Transport layer Setup of Project}\label{fig:appAndTransSetup}
 \end{figure}
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.9\textwidth]{Images/SequenceDiagramCompCam.png}
-    \caption{Sequence Diagram between Sender and Camera before active Stream}
-    \label{fig:seqDiagramRTSP}
+    \caption{Sequence Diagram between Sender and Camera before active Stream}\label{fig:seqDiagramRTSP}
 \end{figure}
 
 \begin{table}[H]
     \centering
     \caption{Setup for IP and Port Connection}\label{tab:IP and port Connection}
     \begin{tabular}{|c|c|c|c|c|c|c|}
-    \hline
+    \toprule
     Camera & Camera IP & Connection interface & Local IP  & Receiver IP & RTP Port\\
-    \hline
+    \midrule
     Camera 1 & 192.168.0.100 & eth0 & 192.168.0.50 & 10.238.111.249 & 5000\\
-    \hline
+    \midrule
     Camera 2 & 192.168.1.101 & eth1 & 192.168.1.50 & 10.238.111.249 & 5002\\
-    \hline
+    \midrule
     Camera 3 & 192.168.2.102 & enp0s31f6 & 192.168.2.50 & 10.238.111.249 & 5004\\
-    \hline
+    \bottomrule
     \end{tabular}
 \end{table}
 
 IP Cameras:
-Logged in with SADP, iVMS and Hikvision, to be set to standard IP address of 192.168.1.100, 101 and 102. This will remain IP address until manually overwritten.
+Logged in with SADE, iVMS and Hikvision, to be set to standard IP address of 192.168.1.100, 101 and 102. This will remain IP address until manually overwritten.
 
-Important to seperate:
+Important to separate:
 Transport Layer: TCP, UDP
 Application Layer: RTSP, RTP
 TCP perfect, correct order and intact. UDP speedier but less reliable 
 
-Between Cam and Laptop, TCP. A NetCat TCP handshake to port 554 to check its availability. 
+Between Cam and Laptop, TCP.\@ A NetCat TCP handshake to port 554 to check its availability. 
 
 Sender Computer
 Sets local IP address to 192.168.1.20 to make sure to be on the same subnet as the IP cameras. 
@@ -74,12 +71,12 @@ Channel 1 carries RTCP (Control and monitoring QoS, Sync streams, provides feedb
 
 Real-Time Streaming Protocol control the stream. Using NetCat (needs download) to check if the RTSP port is open
 
-Pulls the stream from the camera over RTSP/TCP, with no jitter buffer "latency = 0"
+Pulls the stream from the camera over RTSP/TCP, with no jitter buffer ``latency = 0``
 Camera sends:     |--||--||--||--||--||--|    (perfectly even)
 Network delivers: |--| |---||--| |----||--|   (uneven gaps)
 
 Without buffer:  |--| |---||--| |----||--|    (choppy, uneven)
-With buffer:     waits... then |--||--||--||--||--|   (smooth, even)
+With buffer:     waits\dots then |--||--||--||--||--|   (smooth, even)
 
 Because of local wired connection, the jitter is probably very low, and not adding jitter buffer will not affect much other than lowering latency.
 
@@ -113,8 +110,9 @@ Receiver Computer:
 Listens to UDP port 5000
 rtph264depay: Strips RTP again to get H.264 NAL units
 h264parse: Parses and structures the bitstream
-avdec_h264: Software decodes H.264 to raw frames (this is the expensive step)
+avdec-h264: Software decodes H.264 to raw frames (this is the expensive step)
 autovideosink: Displays on screen (sync=false = no clock sync, lowest latency)
+
 
 \subsection{Pipeline Design}
 \subsection{Timestamps and Latency Measurement Design}
