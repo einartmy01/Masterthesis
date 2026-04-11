@@ -13,7 +13,7 @@ Find IP:
 
 
 Sender Local IP:
-1. If sender don't have an Local enp0s31f6 adress
+1. If sender don't have an Local enp0s31f6 address
 2. Follow these commands: 
     sudo ip addr flush dev enp0s31f6
     sudo ip addr add 192.168.2.50/24 dev enp0s31f6
@@ -22,3 +22,11 @@ Sender Local IP:
     sudo ip addr flush dev eth1
     sudo ip addr add 192.168.1.50/24 dev eth1
 
+
+kanskje
+sudo usermod -aG dialout $USER
+getent group dialout
+id
+muligens kun:
+newgrp dialout
+id
