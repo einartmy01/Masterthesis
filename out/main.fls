@@ -496,6 +496,16 @@ INPUT ./Images/PhysicalSetup.png
 INPUT Images/PhysicalSetup.png
 INPUT ./Images/PhysicalSetup.png
 INPUT ./Images/PhysicalSetup.png
+INPUT ./Images/ApplicationAndTransportSetup.png
+INPUT ./Images/ApplicationAndTransportSetup.png
+INPUT Images/ApplicationAndTransportSetup.png
+INPUT ./Images/ApplicationAndTransportSetup.png
+INPUT ./Images/ApplicationAndTransportSetup.png
+INPUT ./Images/SequenceDiagramCompCam.png
+INPUT ./Images/SequenceDiagramCompCam.png
+INPUT Images/SequenceDiagramCompCam.png
+INPUT ./Images/SequenceDiagramCompCam.png
+INPUT ./Images/SequenceDiagramCompCam.png
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx7.tfm

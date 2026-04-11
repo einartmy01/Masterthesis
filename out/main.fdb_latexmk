@@ -1,15 +1,15 @@
 # Fdb version 4
-["biber out/main"] 0 "out/main.bcf" "out/main.bbl" "out/main" 1775476156.70296 -1
-  "out/main.bcf" 1775476156.56629 107095 a1eb83844a79bf1b3588ee293028f51f "pdflatex"
+["biber out/main"] 0 "out/main.bcf" "out/main.bbl" "out/main" 1775901935.78085 -1
+  "out/main.bcf" 1775901935.63021 107095 a1eb83844a79bf1b3588ee293028f51f "pdflatex"
   "references.bib" 1773680440.44934 17971 a467eb6f45b3b383d686284609db46a7 ""
   (generated)
   "out/main.bbl"
   "out/main.blg"
   (rewritten before read)
-["pdflatex"] 1775476155.42642 "/home/einar/Masterthesis/main.tex" "out/main.pdf" "main" 1775476156.70321 2
+["pdflatex"] 1775901933.14986 "/home/einar/Masterthesis/main.tex" "out/main.pdf" "main" 1775901935.78137 2
   "./title.tex" 1773849068.80137 772 aa8127a032c6e9b3d64e13c86d1d7484 ""
   "/etc/texmf/web2c/texmf.cnf" 1773679518.72801 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/einar/Masterthesis/main.tex" 1773849344.87276 958 4a05439160eaa4f2e335074848779d33 ""
+  "/home/einar/Masterthesis/main.tex" 1775900765.39175 958 4a05439160eaa4f2e335074848779d33 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/tcrm0500.tfm" 1136768653 1536 b3387106d9afecbfe14bde2de6eadf47 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/tcrm0700.tfm" 1136768653 1536 73da8e8f1d2a4c957d51ca133585586b ""
@@ -251,24 +251,26 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1707919699 40399 f2c302f7d2af602abb742093540a5834 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1773679537.53171 5472669 54eaf61a88b6b7896ebd0dac973cb29c ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1773679615 8214208 611e799d39427ee259dd374b6bb6d44f ""
+  "Images/ApplicationAndTransportSetup.png" 1775579176.80471 165202 2aea5d8c8d8abf7fc1d5f90cb4704198 ""
   "Images/NTNU_logo.png" 1770296721.33252 59242 58d58f93524b34e3b98ce83e28a1328b ""
-  "Images/PhysicalSetup.png" 1775403003.1355 74575 3ed46a8ca96e79a0a9faa90761ddbe36 ""
+  "Images/PhysicalSetup.png" 1775578883.73359 115429 f94031232472135e52a925e7799e32c6 ""
+  "Images/SequenceDiagramCompCam.png" 1775578639.64782 65660 1f1d681b2b0980062d1d4830bf9b33dc ""
   "Sections/00 Preface.tex" 1773736816.98691 933 bdbed06e08ed0eba9cd5c4af6bbc05f7 ""
   "Sections/01 Abstract.tex" 1773736612.96687 97 b1bc337e84914f844600f71b7febc15a ""
   "Sections/02 Introduction.tex" 1773833971.01695 6880 53e005d3eb4feaf301c15c8dad1a6843 ""
   "Sections/03 Theory.tex" 1773835049.88486 2902 72cd08a7fc1a055c2e7a5396f5b7c06d ""
-  "Sections/04 System Design.tex" 1775476153.88227 5853 a6250c67e8e9398a02e9d99ff420523f ""
-  "Sections/05 Methodology.tex" 1773843797.08107 7227 2710b60607c904036b5cf425f3a7525a ""
+  "Sections/04 System Design.tex" 1775901932.65192 6883 311cdfc60f25168b62d385fe849eb95a ""
+  "Sections/05 Methodology.tex" 1775900639.92131 7227 2710b60607c904036b5cf425f3a7525a ""
   "Sections/06 Results.tex" 1773736917.72157 17 e5aa29df4c37f93cdad04a47e60f71d0 ""
   "Sections/20 Conclusion.tex" 1773849216.14712 57 b202952748807037df4cf5bfec66eb7a ""
   "main.lof" 1773680476.98754 0 d41d8cd98f00b204e9800998ecf8427e ""
   "main.lot" 1773680476.98954 0 d41d8cd98f00b204e9800998ecf8427e ""
   "main.out" 1773680477.31154 3860 d32796dfd2287597e7d96bbe736c0bbe ""
-  "main.tex" 1773849344.87276 958 4a05439160eaa4f2e335074848779d33 ""
+  "main.tex" 1775900765.39175 958 4a05439160eaa4f2e335074848779d33 ""
   "main.toc" 1773680476.98654 0 d41d8cd98f00b204e9800998ecf8427e ""
-  "out/main.aux" 1775476156.56229 7154 8c19c4bb126cdfce06d215f4c25f3d3d "pdflatex"
+  "out/main.aux" 1775901935.62421 7995 6607fc835544d2c27738f64ed54e2c33 "pdflatex"
   "out/main.bbl" 1773830436.30103 466 ee04f40f768daeed26442158e95aba61 "biber out/main"
-  "out/main.out" 1775476156.56429 7220 df1158d7831edf58ee97fabd023f5122 "pdflatex"
+  "out/main.out" 1775901935.62721 7220 df1158d7831edf58ee97fabd023f5122 "pdflatex"
   "packages.sty" 1770296721.34352 6412 0f2b982c0dbe53540c4ea207b4fcb929 ""
   "title.tex" 1773849068.80137 772 aa8127a032c6e9b3d64e13c86d1d7484 ""
   (generated)
