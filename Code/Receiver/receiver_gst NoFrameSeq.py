@@ -55,7 +55,7 @@ def run(get_time_ns):
     csv_files = []
     writers   = []
     for i in range(len(RTP_PORTS)):
-        path = os.path.join(LOG_DIR, f"camera{i}_timestamps.csv")
+        path = os.path.join(LOG_DIR, f"camera{i}_receiver_timestamps.csv")
         f = open(path, "w", newline="")
         w = csv.writer(f)
         w.writerow(["time_ns", "gst_buffer_pts_ns", "stage"])
