@@ -1,23 +1,18 @@
 #!/usr/bin/env python3
 """
-sender_vbox.py
---------------
-Sender using VBOX Sport GPS timestamps.
-Also sends a UDP sync packet per frame to the receiver so it can match frames.
+receiver_vbox.py
+----------------
+Receiver using VBOX Sport GPS timestamps.
 Run this when a VBOX is connected via USB.
 """
 
 import time
-import socket
-import struct
 import serial
 import threading
-import sender_gst
+import Code.oldCode.Receiver.receiver_gst as receiver_gst
 
-VBOX_PORT   = "/dev/ttyACM0"
-VBOX_BAUD   = 115200
-SYNC_PORT   = 5001
-RECEIVER_IP = sender_gst.RECEIVER_IP
+VBOX_PORT = "/dev/ttyACM0"
+VBOX_BAUD = 115200
 
 
 class VBOXTimeSource:
@@ -43,6 +38,7 @@ class VBOXTimeSource:
         self._ser.close()
 
     def get_time_ns(self):
+        """Returns interpolated GPS time-of-day in nanoseconds, or None if no fix."""
         with self._lock:
             if self._last_gps_ticks is None:
                 return None
@@ -93,17 +89,9 @@ def main():
         print('.', end='', flush=True)
     print(" fix acquired!")
 
-    sync_sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-
-    def on_frame(cam_idx, pts, time_ns):
-        # Pack: 1 byte cam_idx + 8 bytes pts + 8 bytes gps_time_ns = 17 bytes
-        packet = struct.pack('>BQQ', cam_idx, pts, time_ns)
-        sync_sock.sendto(packet, (RECEIVER_IP, SYNC_PORT))
-
     try:
-        sender_gst.run(get_time_ns=vbox.get_time_ns, on_frame=on_frame)
+        receiver_gst.run(get_time_ns=vbox.get_time_ns)
     finally:
-        sync_sock.close()
         vbox.stop()
 
 
