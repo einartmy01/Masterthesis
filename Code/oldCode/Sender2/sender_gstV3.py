@@ -23,7 +23,7 @@ CAM_IPs     = ["192.168.0.100", "192.168.1.101", "192.168.2.102"]
 USER        = "admin"
 PASS        = "NilsNils"
 RTSP_PORT   = "554"
-INTERFACES  = ["eth0", "eth1", "enp0s31f6"]
+INTERFACES  = ["eth0", "eth1", "enp0s31f6"] #Be aware, must be same order as IPs, also might change for computer
 LOCAL_IPS   = ["192.168.0.50/24", "192.168.1.50/24", "192.168.2.50/24"]
 RECEIVER_IP = "10.238.111.249"
 RTP_PORTS   = ["5000", "5002", "5004"]
@@ -39,13 +39,13 @@ def setup_network():
 
 def check_cameras():
     print("Checking camera reachability...")
-    for i, cam_ip in enumerate(CAM_IPs):
-        ping = subprocess.run(["ping", "-c", "2", cam_ip], capture_output=True)
+    for cam_ip in enumerate(CAM_IPs):
+        ping = subprocess.run(["ping", "-c", "2", cam_ip], capture_output=True) #Send 2 ping packets
         if ping.returncode != 0:
-            print(f"Camera {i} at {cam_ip} not reachable."); sys.exit(1)
+            print(f"Camera at {cam_ip} not reachable."); sys.exit(1)
         rtsp = subprocess.run(["nc", "-z", "-w", "3", cam_ip, RTSP_PORT], capture_output=True)
         if rtsp.returncode != 0:
-            print(f"RTSP port not reachable for camera {i} at {cam_ip}."); sys.exit(1)
+            print(f"RTSP port not reachable for camera at {cam_ip}."); sys.exit(1)
 
 
 def build_pipeline():
@@ -60,9 +60,14 @@ def build_pipeline():
         )
     return " ".join(parts)
 
+def extract_timestamp(buffer_with_header):
+    """Extract timestamp from buffer header"""
+    timestamp_ns = struct.unpack('>Q', buffer_with_header[:8])[0]
+    h264_data = buffer_with_header[8:]
+    return timestamp_ns, h264_data
 
-def make_probe(cam_idx):
-    def on_buffer(pad, info):
+def make_probe():
+    def on_buffer(info):
         buf = info.get_buffer()
 
         # ── Stamp GPS wall time into buffer ───────────────────────────────────
