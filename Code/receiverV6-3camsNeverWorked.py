@@ -53,11 +53,15 @@ def make_entry_probe(cam_idx, transit_writer, transit_file):
 
         # ── Network transit: record absolute time + RTP seq ───────────────────
         rtp_buf = GstRtp.RTPBuffer()
-        mapped = GstRtp.rtp_buffer_map(buf, Gst.MapFlags.READ, rtp_buf)
+        mapped = rtp_buf.map(buf, Gst.MapFlags.READ)
         if mapped:
-            seq = rtp_buf.get_seq()
+            seq = read_rtp_seq(buf)
+            if seq is not None:
+                abs_time = time.time()
+                transit_writer.writerow([f"{abs_time:.6f}", cam_idx, seq])
+                transit_file.flush()
             rtp_buf.unmap()
-            abs_time = time.time()  # GPS-synced wall clock — comparable across machines
+            abs_time = time.time()
             transit_writer.writerow([f"{abs_time:.6f}", cam_idx, seq])
             transit_file.flush()
 
@@ -122,6 +126,22 @@ def attach_probes(pipeline, pipeline_writer, pipeline_file, transit_writer, tran
         else:
             print(f"[WARN] Could not find element sink{i}")
 
+def read_rtp_seq(buf):
+    """Safely extract RTP sequence number. Returns None if buffer is not valid RTP."""
+    rtp_buf = GstRtp.RTPBuffer()
+    try:
+        mapped = rtp_buf.map(buf, Gst.MapFlags.READ)
+        if not mapped:
+            return None
+        seq = rtp_buf.get_seq()
+        return seq
+    except Exception:
+        return None
+    finally:
+        try:
+            rtp_buf.unmap()
+        except Exception:
+            pass
 # ── Main ──────────────────────────────────────────────────────────────────────
 
 def main():
