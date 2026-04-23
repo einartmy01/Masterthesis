@@ -2,14 +2,11 @@
 import gi
 gi.require_version('Gst', '1.0')
 from gi.repository import Gst, GLib
-import time
-import csv
 import os
-import sys
-import serial
-import struct
-import threading
-import socket
+
+os.environ["GST_TRACERS"] = "latency(flags=pipeline+element)"
+os.environ["GST_DEBUG"] = "GST_TRACERS:7"
+os.environ["GST_DEBUG_FILE"] = "logs/latency_receiver_report.log"
 
 # ── Config ────────────────────────────────────────────────────────────────────
 RTP_PORTS   = ["5000", "5002", "5004"] # List of UDP ports to listen for video streams
@@ -25,6 +22,7 @@ def build_pipeline():
             f'rtph264depay name=depay{i} ! '
             f'h264parse name=parse{i} ! '
             f'avdec_h264 name=decoder{i} ! '
+            f'identity silent-false !'
             f'autovideosink sync=false name=sink{i}'
         )
     return " ".join(parts)

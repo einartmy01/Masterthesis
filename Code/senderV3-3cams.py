@@ -2,14 +2,13 @@
 import gi
 gi.require_version('Gst', '1.0')
 from gi.repository import Gst, GLib
-import time
-import csv
 import os
 import subprocess
 import sys
-import serial
-import struct
-import threading
+
+os.environ["GST_TRACERS"] = "latency(flags=pipeline+element)"
+os.environ["GST_DEBUG"] = "GST_TRACERS:7"
+os.environ["GST_DEBUG_FILE"] = "latency_sender_report.log"
 
 # ── Config ────────────────────────────────────────────────────────────────────
 CAM_IP0      = "192.168.0.100"
@@ -35,9 +34,9 @@ def setup_network():
         subprocess.run(["sudo", "ip", "addr", "add", f"{LOCAL_IPS[i]}", "dev", INTERFACES[i]], check=True)
         subprocess.run(["sudo", "ip", "link", "set", INTERFACES[i], "up"], check=True)
 
-def check_camera():
+def check_cameras():
     print("Checking camera reachability...")
-    for cam_ip in enumerate(CAM_IPs):
+    for i, cam_ip in enumerate(CAM_IPs):
         ping = subprocess.run(["ping", "-c", "2", cam_ip], capture_output=True)
         if ping.returncode != 0:
             print(f"Camera at {cam_ip} not reachable."); sys.exit(1)
@@ -53,6 +52,7 @@ def build_pipeline():
             f'protocols=tcp latency=0 name=src{i} ! '
             f'rtph264depay name=depay{i} ! '
             f'rtph264pay pt=96 config-interval=1 name=pay{i} ! '
+            f'identity silent-false !' 
             f'udpsink host={RECEIVER_IP} port={RTP_PORTS[i]} sync=false async=false'
         )
     return " ".join(parts)
@@ -62,7 +62,7 @@ def build_pipeline():
 def main():
 
     setup_network()
-    check_camera()
+    check_cameras()
 
     os.makedirs("logs", exist_ok=True)
     Gst.init(None)
