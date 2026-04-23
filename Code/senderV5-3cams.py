@@ -28,7 +28,7 @@ RTP_PORTS    = ["5000", "5002", "5004"]
 
 def open_csv_log():
     os.makedirs("logs", exist_ok=True)
-    timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M")
+    timestamp = datetime.now().strftime("%d-%m_%H-%M")
     path = f"logs/sender_latency_{timestamp}.csv"
     f = open(path, "w", newline="")
     writer = csv.writer(f)
@@ -47,12 +47,11 @@ def make_entry_probe(cam_idx):
     return probe_cb
 
 def make_exit_probe(cam_idx, csv_writer, csv_file):
-    def probe_cb(pad, info):
+    def probe_cb(pad, info):cam_idx
         t_entry = entry_times.get(cam_idx)
         if t_entry is not None:
             latency_ms = (time.monotonic() - t_entry) * 1000
             wall_time = datetime.now().strftime("%H:%M:%S.%f")[:-3]
-            print(f"[CAM {cam_idx}] sender pipeline latency: {latency_ms:.2f} ms")
             csv_writer.writerow([wall_time, cam_idx, f"{latency_ms:.4f}"])
             csv_file.flush()
         return Gst.PadProbeReturn.OK
