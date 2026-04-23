@@ -8,7 +8,8 @@ from datetime import datetime
 
 import gi
 gi.require_version('Gst', '1.0')
-from gi.repository import Gst, GLib
+gi.require_version('GstRtp', '1.0')
+from gi.repository import Gst, GstRtp, GLib
 
 # ── Config ────────────────────────────────────────────────────────────────────
 CAM_IP0      = "192.168.0.100"
@@ -26,34 +27,65 @@ RTP_PORTS    = ["5000", "5002", "5004"]
 
 # ── CSV logging setup ─────────────────────────────────────────────────────────
 
-def open_csv_log():
+def open_csv_logs():
     os.makedirs("logs", exist_ok=True)
     timestamp = datetime.now().strftime("%d-%m_%H-%M")
-    path = f"logs/sender_latency_{timestamp}.csv"
-    f = open(path, "w", newline="")
-    writer = csv.writer(f)
-    writer.writerow(["wall_time", "cam_index", "latency_ms"])
-    print(f"Logging to: {path}")
-    return f, writer
+
+    # Internal pipeline latency log (depay → pay, same as before)
+    pipeline_path = f"logs/sender_pipeline_latency_{timestamp}.csv"
+    pipeline_f = open(pipeline_path, "w", newline="")
+    pipeline_writer = csv.writer(pipeline_f)
+    pipeline_writer.writerow(["wall_time", "cam_index", "latency_ms"])
+
+    # Network transit log — absolute time + RTP seq so receiver can match
+    transit_path = f"logs/sender_transit_{timestamp}.csv"
+    transit_f = open(transit_path, "w", newline="")
+    transit_writer = csv.writer(transit_f)
+    transit_writer.writerow(["abs_time", "cam_index", "rtp_seq"])
+
+    print(f"Pipeline latency log : {pipeline_path}")
+    print(f"Transit log          : {transit_path}")
+    return (pipeline_f, pipeline_writer), (transit_f, transit_writer)
 
 # ── Latency probes ────────────────────────────────────────────────────────────
 
-entry_times = {}
+entry_times = {}  # cam_idx -> monotonic time at depay sink (for pipeline latency)
 
 def make_entry_probe(cam_idx):
+    """Marks when a buffer enters the depay element (pipeline latency start)."""
     def probe_cb(pad, info):
         entry_times[cam_idx] = time.monotonic()
         return Gst.PadProbeReturn.OK
     return probe_cb
 
-def make_exit_probe(cam_idx, csv_writer, csv_file):
+def make_exit_probe(cam_idx, pipeline_writer, pipeline_file, transit_writer, transit_file):
+    """
+    Fires when a buffer leaves rtph264pay toward udpsink.
+    - Logs pipeline-internal latency (monotonic delta from entry probe).
+    - Logs absolute wall-clock time + RTP sequence number for network transit matching.
+    """
     def probe_cb(pad, info):
+        buf = info.get_buffer()
+
+        # ── Pipeline latency ──────────────────────────────────────────────────
         t_entry = entry_times.get(cam_idx)
         if t_entry is not None:
             latency_ms = (time.monotonic() - t_entry) * 1000
             wall_time = datetime.now().strftime("%H:%M:%S.%f")[:-3]
-            csv_writer.writerow([wall_time, cam_idx, f"{latency_ms:.4f}"])
-            csv_file.flush()
+            print(f"[CAM {cam_idx}] sender pipeline latency: {latency_ms:.2f} ms")
+            pipeline_writer.writerow([wall_time, cam_idx, f"{latency_ms:.4f}"])
+            pipeline_file.flush()
+
+        # ── Network transit: record absolute time + RTP seq ───────────────────
+        rtp_buf = GstRtp.RTPBuffer()
+        mapped = GstRtp.rtp_buffer_map(buf, Gst.MapFlags.READ, rtp_buf)
+        if mapped:
+            seq = rtp_buf.get_seq()
+            rtp_buf.unmap()
+            abs_time = time.time()  # GPS-synced wall clock — comparable across machines
+            transit_writer.writerow([f"{abs_time:.6f}", cam_idx, seq])
+            transit_file.flush()
+
         return Gst.PadProbeReturn.OK
     return probe_cb
 
@@ -88,7 +120,7 @@ def build_pipeline():
         )
     return " ".join(parts)
 
-def attach_probes(pipeline, csv_writer, csv_file):
+def attach_probes(pipeline, pipeline_writer, pipeline_file, transit_writer, transit_file):
     for i in range(len(CAM_IPs)):
         depay = pipeline.get_by_name(f"depay{i}")
         if depay:
@@ -104,7 +136,10 @@ def attach_probes(pipeline, csv_writer, csv_file):
         if pay:
             src_pad = pay.get_static_pad("src")
             if src_pad:
-                src_pad.add_probe(Gst.PadProbeType.BUFFER, make_exit_probe(i, csv_writer, csv_file))
+                src_pad.add_probe(
+                    Gst.PadProbeType.BUFFER,
+                    make_exit_probe(i, pipeline_writer, pipeline_file, transit_writer, transit_file)
+                )
             else:
                 print(f"[WARN] Could not get src pad for pay{i}")
         else:
@@ -116,16 +151,16 @@ def main():
     setup_network()
     check_cameras()
 
-    csv_file, csv_writer = open_csv_log()
+    (pipeline_file, pipeline_writer), (transit_file, transit_writer) = open_csv_logs()
 
     Gst.init(None)
     pipeline_str = build_pipeline()
     pipeline = Gst.parse_launch(pipeline_str)
 
-    attach_probes(pipeline, csv_writer, csv_file)
+    attach_probes(pipeline, pipeline_writer, pipeline_file, transit_writer, transit_file)
 
     pipeline.set_state(Gst.State.PLAYING)
-    print("Sender running — latency will print per buffer per camera.")
+    print("Sender running — logging pipeline latency and RTP transit timestamps.")
     print("Press Ctrl+C to stop.")
 
     loop = GLib.MainLoop()
@@ -135,8 +170,9 @@ def main():
         print("\nStopping...")
     finally:
         pipeline.set_state(Gst.State.NULL)
-        csv_file.close()
-        print("CSV log saved.")
+        pipeline_file.close()
+        transit_file.close()
+        print("CSV logs saved.")
 
 if __name__ == "__main__":
     main()
