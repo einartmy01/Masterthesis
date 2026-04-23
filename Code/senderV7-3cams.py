@@ -4,12 +4,12 @@ import subprocess
 import sys
 import time
 import csv
+import struct
 from datetime import datetime
 
 import gi
 gi.require_version('Gst', '1.0')
-gi.require_version('GstRtp', '1.0')
-from gi.repository import Gst, GstRtp, GLib
+from gi.repository import Gst, GLib
 
 # ── Config ────────────────────────────────────────────────────────────────────
 CAM_IP0      = "192.168.0.100"
@@ -25,19 +25,55 @@ RECEIVER_IP  = "172.30.154.249"
 RTP_PORTS    = ["5000", "5002", "5004"]
 # ─────────────────────────────────────────────────────────────────────────────
 
+# ── Safe RTP sequence number reader ──────────────────────────────────────────
+#
+# The RTP fixed header is 12 bytes:
+#   Byte 0:   V(2) P(1) X(1) CC(4)
+#   Byte 1:   M(1) PT(7)
+#   Bytes 2-3: Sequence Number  <-- what we want, big-endian uint16
+#   Bytes 4-7: Timestamp
+#   Bytes 8-11: SSRC
+#
+# We read raw bytes directly with Gst.Buffer.map() — no GstRtp bindings needed.
+# This is safe because Gst.Buffer.map/unmap is stable in the Python GI layer.
+
+def read_rtp_seq(buf):
+    """
+    Extracts the RTP sequence number by reading raw buffer bytes.
+    Returns None if the buffer is too small or mapping fails.
+    Never raises — all errors return None silently.
+    """
+    info = None
+    try:
+        success, info = buf.map(Gst.MapFlags.READ)
+        if not success or info is None:
+            return None
+        data = info.data
+        if len(data) < 4:
+            return None
+        # Bytes 2-3 are the sequence number, big-endian
+        seq = struct.unpack_from('!H', data, 2)[0]
+        return seq
+    except Exception:
+        return None
+    finally:
+        if info is not None:
+            try:
+                buf.unmap(info)
+            except Exception:
+                pass
+
 # ── CSV logging setup ─────────────────────────────────────────────────────────
 
 def open_csv_logs():
     os.makedirs("logs", exist_ok=True)
-    timestamp = datetime.now().strftime("%d-%m_%H-%M")
+    timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M")
 
-    # Internal pipeline latency log (depay → pay, same as before)
     pipeline_path = f"logs/sender_pipeline_latency_{timestamp}.csv"
     pipeline_f = open(pipeline_path, "w", newline="")
     pipeline_writer = csv.writer(pipeline_f)
     pipeline_writer.writerow(["wall_time", "cam_index", "latency_ms"])
 
-    # Network transit log — absolute time + RTP seq so receiver can match
     transit_path = f"logs/sender_transit_{timestamp}.csv"
     transit_f = open(transit_path, "w", newline="")
     transit_writer = csv.writer(transit_f)
@@ -49,10 +85,10 @@ def open_csv_logs():
 
 # ── Latency probes ────────────────────────────────────────────────────────────
 
-entry_times = {}  # cam_idx -> monotonic time at depay sink (for pipeline latency)
+entry_times = {}
 
 def make_entry_probe(cam_idx):
-    """Marks when a buffer enters the depay element (pipeline latency start)."""
+    """Records monotonic time when a buffer enters rtph264depay (pipeline latency start)."""
     def probe_cb(pad, info):
         entry_times[cam_idx] = time.monotonic()
         return Gst.PadProbeReturn.OK
@@ -61,11 +97,13 @@ def make_entry_probe(cam_idx):
 def make_exit_probe(cam_idx, pipeline_writer, pipeline_file, transit_writer, transit_file):
     """
     Fires when a buffer leaves rtph264pay toward udpsink.
-    - Logs pipeline-internal latency (monotonic delta from entry probe).
-    - Logs absolute wall-clock time + RTP sequence number for network transit matching.
+    - Logs pipeline-internal latency (monotonic delta).
+    - Reads RTP seq from raw bytes and logs absolute time for network transit matching.
     """
     def probe_cb(pad, info):
         buf = info.get_buffer()
+        if buf is None:
+            return Gst.PadProbeReturn.OK
 
         # ── Pipeline latency ──────────────────────────────────────────────────
         t_entry = entry_times.get(cam_idx)
@@ -76,13 +114,10 @@ def make_exit_probe(cam_idx, pipeline_writer, pipeline_file, transit_writer, tra
             pipeline_writer.writerow([wall_time, cam_idx, f"{latency_ms:.4f}"])
             pipeline_file.flush()
 
-        # ── Network transit: record absolute time + RTP seq ───────────────────
-        rtp_buf = GstRtp.RTPBuffer()
-        mapped = GstRtp.rtp_buffer_map(buf, Gst.MapFlags.READ, rtp_buf)
-        if mapped:
-            seq = rtp_buf.get_seq()
-            rtp_buf.unmap()
-            abs_time = time.time()  # GPS-synced wall clock — comparable across machines
+        # ── Network transit: read seq from raw RTP header bytes ───────────────
+        seq = read_rtp_seq(buf)
+        if seq is not None:
+            abs_time = time.time()  # GPS-disciplined wall clock
             transit_writer.writerow([f"{abs_time:.6f}", cam_idx, seq])
             transit_file.flush()
 
