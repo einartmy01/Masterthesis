@@ -1,15 +1,15 @@
 #!/usr/bin/env python3
-import gi
-gi.require_version('Gst', '1.0')
-from gi.repository import Gst, GLib
 import os
 import subprocess
 import sys
 
 os.environ["GST_TRACERS"] = "latency(flags=pipeline+element)"
 os.environ["GST_DEBUG"] = "GST_TRACERS:7"
-os.environ["GST_DEBUG_FILE"] = "latency_sender_report.log"
+os.environ["GST_DEBUG_FILE"] = "logs/latency_sender_report.log"
 
+import gi
+gi.require_version('Gst', '1.0')
+from gi.repository import Gst, GLib
 # ── Config ────────────────────────────────────────────────────────────────────
 CAM_IP0      = "192.168.0.100"
 CAM_IP1      = "192.168.1.101"
@@ -52,7 +52,7 @@ def build_pipeline():
             f'protocols=tcp latency=0 name=src{i} ! '
             f'rtph264depay name=depay{i} ! '
             f'rtph264pay pt=96 config-interval=1 name=pay{i} ! '
-            f'identity silent-false !' 
+            f'identity silent=false ! ' 
             f'udpsink host={RECEIVER_IP} port={RTP_PORTS[i]} sync=false async=false'
         )
     return " ".join(parts)
