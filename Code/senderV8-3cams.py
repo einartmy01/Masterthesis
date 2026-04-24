@@ -88,7 +88,7 @@ def open_csv_logs():
 entry_times = {}
 
 def make_entry_probe(cam_idx):
-    """Records monotonic time when a buffer enters rtph264depay (pipeline latency start)."""
+    """Records monotonic time when a buffer enters rtph264pay (now per RTP packet, not per frame)."""
     def probe_cb(pad, info):
         entry_times[cam_idx] = time.monotonic()
         return Gst.PadProbeReturn.OK
@@ -151,31 +151,33 @@ def build_pipeline():
             f'protocols=tcp latency=0 name=src{i} ! '
             f'rtph264depay name=depay{i} ! '
             f'rtph264pay pt=96 config-interval=1 name=pay{i} ! '
-            f'udpsink host={RECEIVER_IP} port={RTP_PORTS[i]} sync=false async=false name=udpsink{i}'
+            f'udpsink host={RECEIVER_IP} port={RTP_PORTS[i]} sync=false async=false'
         )
     return " ".join(parts)
 
 def attach_probes(pipeline, pipeline_writer, pipeline_file, transit_writer, transit_file):
     for i in range(len(CAM_IPs)):
-        depay = pipeline.get_by_name(f"depay{i}")
-        if depay:
-            sink_pad = depay.get_static_pad("sink")
-            if sink_pad:
-                sink_pad.add_probe(Gst.PadProbeType.BUFFER, make_entry_probe(i))
-            else:
-                print(f"[WARN] Could not get sink pad for depay{i}")
-        else:
-            print(f"[WARN] Could not find element depay{i}")
+        pay = pipeline.get_by_name(f"pay{i}")
+        if not pay:
+            print(f"[WARN] Could not find element pay{i}")
+            continue
 
-        # REPLACE with a probe on udpsink's sink pad:
-        udpsink = pipeline.get_by_name(f"sink{i}")  # rename udpsink to sink{i} in build_pipeline first
-        if udpsink:
-            sink_pad = udpsink.get_static_pad("sink")
-            if sink_pad:
-                sink_pad.add_probe(
-                    Gst.PadProbeType.BUFFER,
-                    make_exit_probe(i, pipeline_writer, pipeline_file, transit_writer, transit_file)
-                )
+        # Entry probe on pay SINK pad — fires once per RTP packet entering the payloader
+        pay_sink = pay.get_static_pad("sink")
+        if pay_sink:
+            pay_sink.add_probe(Gst.PadProbeType.BUFFER, make_entry_probe(i))
+        else:
+            print(f"[WARN] Could not get sink pad for pay{i}")
+
+        # Exit probe on pay SRC pad — fires once per RTP packet leaving the payloader
+        pay_src = pay.get_static_pad("src")
+        if pay_src:
+            pay_src.add_probe(
+                Gst.PadProbeType.BUFFER,
+                make_exit_probe(i, pipeline_writer, pipeline_file, transit_writer, transit_file)
+            )
+        else:
+            print(f"[WARN] Could not get src pad for pay{i}")
 
 # ── Main ──────────────────────────────────────────────────────────────────────
 
