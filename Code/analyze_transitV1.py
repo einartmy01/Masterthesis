@@ -6,8 +6,7 @@ Computes network transit latency by joining sender and receiver transit CSVs
 on (cam_index, rtp_seq). Run this offline after collecting logs from both machines.
 
 Usage:
-    python3 analyze_transit.py sender_transit_2026-04-23_14-35.csv \
-                                receiver_transit_2026-04-23_14-35.csv
+    python3 analyze_transit.py logs/sender_transit_2026-04-23_14-35.csv logs/receiver_transit_2026-04-23_14-35.csv
 
 Output:
     - Summary statistics printed to terminal (per camera)
