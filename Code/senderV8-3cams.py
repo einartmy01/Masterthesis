@@ -112,7 +112,7 @@ def build_pipeline():
             f'protocols=tcp latency=0 name=src{i} ! '
             f'rtph264depay name=depay{i} ! '
             f'rtph264pay pt=96 config-interval=1 name=pay{i} ! '
-            f'udpsink host={RECEIVER_IP} port={RTP_PORTS[i]} sync=false async=false'
+            f'udpsink host={RECEIVER_IP} port={RTP_PORTS[i]} sync=false async=false name=udpsink{i}'
         )
     return " ".join(parts)
 
@@ -177,18 +177,19 @@ def attach_probes(pipeline, pipeline_writer, pipeline_file, transit_writer, tran
             print(f"[WARN] Could not find element depay{i}")
 
         # Transit: pay src pad — fires per RTP packet, matches receiver UDP packet count
-        pay = pipeline.get_by_name(f"pay{i}")
-        if pay:
-            pay_src = pay.get_static_pad("src")
-            if pay_src:
-                pay_src.add_probe(
-                    Gst.PadProbeType.BUFFER,
+        # Transit: udpsink sink pad with BUFFER_LIST support
+        udpsink = pipeline.get_by_name(f"udpsink{i}")
+        if udpsink:
+            sink_pad = udpsink.get_static_pad("sink")
+            if sink_pad:
+                sink_pad.add_probe(
+                    Gst.PadProbeType.BUFFER | Gst.PadProbeType.BUFFER_LIST,
                     make_transit_probe(i, transit_writer, transit_file)
                 )
             else:
-                print(f"[WARN] Could not get src pad for pay{i}")
+                print(f"[WARN] Could not get sink pad for udpsink{i}")
         else:
-            print(f"[WARN] Could not find element pay{i}")
+            print(f"[WARN] Could not find element udpsink{i}")
 
 # ── Main ──────────────────────────────────────────────────────────────────────
 
