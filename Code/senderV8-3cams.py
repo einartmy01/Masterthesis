@@ -83,46 +83,7 @@ def open_csv_logs():
     print(f"Transit log          : {transit_path}")
     return (pipeline_f, pipeline_writer), (transit_f, transit_writer)
 
-# ── Latency probes ────────────────────────────────────────────────────────────
 
-entry_times = {}
-
-def make_entry_probe(cam_idx):
-    """Records monotonic time when a buffer enters rtph264pay (now per RTP packet, not per frame)."""
-    def probe_cb(pad, info):
-        entry_times[cam_idx] = time.monotonic()
-        return Gst.PadProbeReturn.OK
-    return probe_cb
-
-def make_exit_probe(cam_idx, pipeline_writer, pipeline_file, transit_writer, transit_file):
-    """
-    Fires when a buffer leaves rtph264pay toward udpsink.
-    - Logs pipeline-internal latency (monotonic delta).
-    - Reads RTP seq from raw bytes and logs absolute time for network transit matching.
-    """
-    def probe_cb(pad, info):
-        buf = info.get_buffer()
-        if buf is None:
-            return Gst.PadProbeReturn.OK
-
-        # ── Pipeline latency ──────────────────────────────────────────────────
-        t_entry = entry_times.get(cam_idx)
-        if t_entry is not None:
-            latency_ms = (time.monotonic() - t_entry) * 1000
-            wall_time = datetime.now().strftime("%H:%M:%S.%f")[:-3]
-            print(f"[CAM {cam_idx}] sender pipeline latency: {latency_ms:.2f} ms")
-            pipeline_writer.writerow([wall_time, cam_idx, f"{latency_ms:.4f}"])
-            pipeline_file.flush()
-
-        # ── Network transit: read seq from raw RTP header bytes ───────────────
-        seq = read_rtp_seq(buf)
-        if seq is not None:
-            abs_time = time.time()  # GPS-disciplined wall clock
-            transit_writer.writerow([f"{abs_time:.6f}", cam_idx, seq])
-            transit_file.flush()
-
-        return Gst.PadProbeReturn.OK
-    return probe_cb
 
 # ── Network setup ─────────────────────────────────────────────────────────────
 
@@ -155,29 +116,79 @@ def build_pipeline():
         )
     return " ".join(parts)
 
+# ── Latency Probe setup ─────────────────────────────────────────────────────────────
+
+entry_times = {}
+
+def make_entry_probe(cam_idx):
+    """Records monotonic time when a buffer enters rtph264depay."""
+    def probe_cb(pad, info):
+        entry_times[cam_idx] = time.monotonic()
+        return Gst.PadProbeReturn.OK
+    return probe_cb
+
+def make_pipeline_exit_probe(cam_idx, pipeline_writer, pipeline_file):
+    """Fires on depay src pad — logs depay processing latency per frame."""
+    def probe_cb(pad, info):
+        t_entry = entry_times.get(cam_idx)
+        if t_entry is not None:
+            latency_ms = (time.monotonic() - t_entry) * 1000
+            wall_time = datetime.now().strftime("%H:%M:%S.%f")[:-3]
+            print(f"[CAM {cam_idx}] sender pipeline latency: {latency_ms:.2f} ms")
+            pipeline_writer.writerow([wall_time, cam_idx, f"{latency_ms:.4f}"])
+            pipeline_file.flush()
+        return Gst.PadProbeReturn.OK
+    return probe_cb
+
+def make_transit_probe(cam_idx, transit_writer, transit_file):
+    """Fires on pay src pad — once per RTP packet out, logs abs time + seq."""
+    def probe_cb(pad, info):
+        buf = info.get_buffer()
+        if buf is None:
+            return Gst.PadProbeReturn.OK
+        seq = read_rtp_seq(buf)
+        if seq is not None:
+            abs_time = time.time()
+            transit_writer.writerow([f"{abs_time:.6f}", cam_idx, seq])
+            transit_file.flush()
+        return Gst.PadProbeReturn.OK
+    return probe_cb
+
 def attach_probes(pipeline, pipeline_writer, pipeline_file, transit_writer, transit_file):
     for i in range(len(CAM_IPs)):
+        # Pipeline latency: depay sink → depay src (clean 1-to-1, no packet splitting)
+        depay = pipeline.get_by_name(f"depay{i}")
+        if depay:
+            sink_pad = depay.get_static_pad("sink")
+            if sink_pad:
+                sink_pad.add_probe(Gst.PadProbeType.BUFFER, make_entry_probe(i))
+            else:
+                print(f"[WARN] Could not get sink pad for depay{i}")
+
+            src_pad = depay.get_static_pad("src")
+            if src_pad:
+                src_pad.add_probe(
+                    Gst.PadProbeType.BUFFER,
+                    make_pipeline_exit_probe(i, pipeline_writer, pipeline_file)
+                )
+            else:
+                print(f"[WARN] Could not get src pad for depay{i}")
+        else:
+            print(f"[WARN] Could not find element depay{i}")
+
+        # Transit: pay src pad — fires per RTP packet, matches receiver UDP packet count
         pay = pipeline.get_by_name(f"pay{i}")
-        if not pay:
+        if pay:
+            pay_src = pay.get_static_pad("src")
+            if pay_src:
+                pay_src.add_probe(
+                    Gst.PadProbeType.BUFFER,
+                    make_transit_probe(i, transit_writer, transit_file)
+                )
+            else:
+                print(f"[WARN] Could not get src pad for pay{i}")
+        else:
             print(f"[WARN] Could not find element pay{i}")
-            continue
-
-        # Entry probe on pay SINK pad — fires once per RTP packet entering the payloader
-        pay_sink = pay.get_static_pad("sink")
-        if pay_sink:
-            pay_sink.add_probe(Gst.PadProbeType.BUFFER, make_entry_probe(i))
-        else:
-            print(f"[WARN] Could not get sink pad for pay{i}")
-
-        # Exit probe on pay SRC pad — fires once per RTP packet leaving the payloader
-        pay_src = pay.get_static_pad("src")
-        if pay_src:
-            pay_src.add_probe(
-                Gst.PadProbeType.BUFFER,
-                make_exit_probe(i, pipeline_writer, pipeline_file, transit_writer, transit_file)
-            )
-        else:
-            print(f"[WARN] Could not get src pad for pay{i}")
 
 # ── Main ──────────────────────────────────────────────────────────────────────
 
