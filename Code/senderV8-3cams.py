@@ -141,16 +141,28 @@ def make_pipeline_exit_probe(cam_idx, pipeline_writer, pipeline_file):
     return probe_cb
 
 def make_transit_probe(cam_idx, transit_writer, transit_file):
-    """Fires on pay src pad — once per RTP packet out, logs abs time + seq."""
-    def probe_cb(pad, info):
-        buf = info.get_buffer()
-        if buf is None:
-            return Gst.PadProbeReturn.OK
+    def process_buf(buf):
         seq = read_rtp_seq(buf)
         if seq is not None:
             abs_time = time.time()
             transit_writer.writerow([f"{abs_time:.6f}", cam_idx, seq])
             transit_file.flush()
+
+    def probe_cb(pad, info):
+        # Try single buffer first
+        buf = info.get_buffer()
+        if buf is not None:
+            process_buf(buf)
+            return Gst.PadProbeReturn.OK
+
+        # Fall through to buffer list
+        buf_list = info.get_buffer_list()
+        if buf_list is not None:
+            for j in range(buf_list.length()):
+                buf = buf_list.get(j)
+                if buf is not None:
+                    process_buf(buf)
+
         return Gst.PadProbeReturn.OK
     return probe_cb
 
