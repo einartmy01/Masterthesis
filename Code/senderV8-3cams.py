@@ -67,14 +67,18 @@ def read_rtp_seq(buf):
 
 def open_csv_logs():
     os.makedirs("logs", exist_ok=True)
-    timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M")
+    os.makedirs("logs/pipeline", exist_ok=True)
+    os.makedirs("logs/pipeline/sender", exist_ok=True)
+    os.makedirs("logs/transit", exist_ok=True)
 
-    pipeline_path = f"logs/sender_pipeline_latency_{timestamp}.csv"
+    timestamp = datetime.now().strftime("%d.%m-%H:%M")
+
+    pipeline_path = f"logs/pipeline/sender/sender_pipeline_latency_{timestamp}.csv"
     pipeline_f = open(pipeline_path, "w", newline="")
     pipeline_writer = csv.writer(pipeline_f)
     pipeline_writer.writerow(["wall_time", "cam_index", "latency_ms"])
 
-    transit_path = f"logs/sender_transit_{timestamp}.csv"
+    transit_path = f"logs/transit/sender_transit_{timestamp}.csv"
     transit_f = open(transit_path, "w", newline="")
     transit_writer = csv.writer(transit_f)
     transit_writer.writerow(["abs_time", "cam_index", "rtp_seq"])
@@ -97,10 +101,10 @@ def setup_network():
 def check_cameras():
     print("Checking camera reachability...")
     for i, cam_ip in enumerate(CAM_IPs):
-        ping = subprocess.run(["ping", "-c", "2", cam_ip], capture_output=True)
+        ping = subprocess.run(["ping", "-c", "2", cam_ip], capture_output=True) #c and 2 is capping at 2 pings
         if ping.returncode != 0:
             print(f"Camera at {cam_ip} not reachable."); sys.exit(1)
-        rtsp = subprocess.run(["nc", "-z", "-w", "3", cam_ip, RTSP_PORT], capture_output=True)
+        rtsp = subprocess.run(["nc", "-z", "-w", "3", cam_ip, RTSP_PORT], capture_output=True)#Check if port is open
         if rtsp.returncode != 0:
             print(f"RTSP port not reachable for camera at {cam_ip}."); sys.exit(1)
 
@@ -122,19 +126,18 @@ entry_times = {}
 
 def make_entry_probe(cam_idx):
     """Records monotonic time when a buffer enters rtph264depay."""
-    def probe_cb(pad, info):
+    def probe_cb():
         entry_times[cam_idx] = time.monotonic()
         return Gst.PadProbeReturn.OK
     return probe_cb
 
 def make_pipeline_exit_probe(cam_idx, pipeline_writer, pipeline_file):
     """Fires on depay src pad — logs depay processing latency per frame."""
-    def probe_cb(pad, info):
+    def probe_cb():
         t_entry = entry_times.get(cam_idx)
         if t_entry is not None:
             latency_ms = (time.monotonic() - t_entry) * 1000
             wall_time = datetime.now().strftime("%H:%M:%S.%f")[:-3]
-            print(f"[CAM {cam_idx}] sender pipeline latency: {latency_ms:.2f} ms")
             pipeline_writer.writerow([wall_time, cam_idx, f"{latency_ms:.4f}"])
             pipeline_file.flush()
         return Gst.PadProbeReturn.OK
@@ -148,7 +151,7 @@ def make_transit_probe(cam_idx, transit_writer, transit_file):
             transit_writer.writerow([f"{abs_time:.6f}", cam_idx, seq])
             transit_file.flush()
 
-    def probe_cb(pad, info):
+    def probe_cb(info):
         # Try single buffer first
         buf = info.get_buffer()
         if buf is not None:

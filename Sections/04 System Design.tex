@@ -72,6 +72,7 @@ Channel 1 carries RTCP (Control and monitoring QoS, Sync streams, provides feedb
 Real-Time Streaming Protocol control the stream. Using NetCat (needs download) to check if the RTSP port is open
 
 Pulls the stream from the camera over RTSP/TCP, with no jitter buffer ``latency = 0``
+
 Camera sends:     |--||--||--||--||--||--|    (perfectly even)
 Network delivers: |--| |---||--| |----||--|   (uneven gaps)
 

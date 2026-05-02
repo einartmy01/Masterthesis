@@ -55,14 +55,18 @@ def read_rtp_seq(buf):
 
 def open_csv_logs():
     os.makedirs("logs", exist_ok=True)
-    timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M")
+    os.makedirs("logs/pipeline", exist_ok=True)
+    os.makedirs("logs/pipeline/receiver", exist_ok=True)
+    os.makedirs("logs/transit", exist_ok=True)
 
-    pipeline_path = f"logs/receiver_pipeline_latency_{timestamp}.csv"
+    timestamp = datetime.now().strftime("%d.%m-%H:%M")
+
+    pipeline_path = f"logs/pipeline/receiver/receiver_pipeline_latency_{timestamp}.csv"
     pipeline_f = open(pipeline_path, "w", newline="")
     pipeline_writer = csv.writer(pipeline_f)
     pipeline_writer.writerow(["wall_time", "cam_index", "latency_ms"])
 
-    transit_path = f"logs/receiver_transit_{timestamp}.csv"
+    transit_path = f"logs/transit/receiver_transit_{timestamp}.csv"
     transit_f = open(transit_path, "w", newline="")
     transit_writer = csv.writer(transit_f)
     transit_writer.writerow(["abs_time", "cam_index", "rtp_seq"])
