@@ -125,8 +125,8 @@ def main():
 
     # ── Save combined CSV ─────────────────────────────────────────────────────
     os.makedirs("logs", exist_ok=True)
-    timestamp   = datetime.now().strftime("%Y-%m-%d_%H-%M")
-    output_path = f"logs/transit_analysis_{timestamp}.csv"
+    timestamp   = datetime.now().strftime("%d.%m-%H:%M")
+    output_path = f"logs/transit/transit_analysis_{timestamp}.csv"
 
     with open(output_path, "w", newline="") as f:
         writer = csv.writer(f)
