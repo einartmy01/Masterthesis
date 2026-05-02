@@ -106,7 +106,6 @@ def make_exit_probe(cam_idx, pipeline_writer, pipeline_file):
         if t_entry is not None:
             latency_ms = (time.monotonic() - t_entry) * 1000
             wall_time = datetime.now().strftime("%H:%M:%S.%f")[:-3]
-            print(f"[CAM {cam_idx}] receiver pipeline latency: {latency_ms:.2f} ms")
             pipeline_writer.writerow([wall_time, cam_idx, f"{latency_ms:.4f}"])
             pipeline_file.flush()
         return Gst.PadProbeReturn.OK
