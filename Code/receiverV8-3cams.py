@@ -71,12 +71,12 @@ def open_csv_logs():
 
     timestamp = datetime.now().strftime("%d.%m-%H:%M")
 
-    pipeline_path = f"logs/pipeline/receiver/receiver_pipeline_latency_{timestamp}.csv"
+    pipeline_path = f"logs/pipeline/receiver/rec_pipe_{timestamp}.csv"
     pipeline_f    = open(pipeline_path, "w", newline="")
     pipeline_writer = csv.writer(pipeline_f)
     pipeline_writer.writerow(["wall_time", "cam_index", "latency_ms"])
 
-    transit_path = f"logs/transit/receiver_transit_{timestamp}.csv"
+    transit_path = f"logs/transit/rec_transit_{timestamp}.csv"
     transit_f    = open(transit_path, "w", newline="")
     transit_writer = csv.writer(transit_f)
     transit_writer.writerow(["abs_time", "cam_index", "rtp_seq"])
