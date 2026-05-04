@@ -256,6 +256,7 @@ def make_t1_probe(cam_idx):
         if rec is None:
             return Gst.PadProbeReturn.OK
         _seg_a[pts] = (rec[0], _mono(), None)  # preserve t0, set t1
+        print("t1")
         return Gst.PadProbeReturn.OK
     return probe_cb
 
@@ -268,12 +269,13 @@ def make_t2_probe(cam_idx):
     _seg_a            = seg_a[cam_idx]
     _last_pre_pay_pts = last_pre_pay_pts
     _mono             = time.monotonic
-
+    
     def probe_cb(pad, info):
         buf = info.get_buffer()
         if buf is None:
             return Gst.PadProbeReturn.OK
         pts = buf.pts
+        print(f"t2 pts={pts} rec={_seg_a.get(pts)}")
         if pts == Gst.CLOCK_TIME_NONE:
             return Gst.PadProbeReturn.OK
         rec = _seg_a.get(pts)
@@ -281,6 +283,7 @@ def make_t2_probe(cam_idx):
             return Gst.PadProbeReturn.OK
         _seg_a[pts] = (rec[0], rec[1], _mono())  # complete: (t0, t1, t2)
         _last_pre_pay_pts[cam_idx] = pts
+        print("t2")
         return Gst.PadProbeReturn.OK
     return probe_cb
 
@@ -303,6 +306,7 @@ def make_t3_probe(cam_idx):
         if len(_seg_b) >= MAX_TRACKED:
             _purge(_seg_b)
         _seg_b[pts] = (_mono(), None)  # (t3, t4=pending)
+        print("t3")
         return Gst.PadProbeReturn.OK
     return probe_cb
 
@@ -337,6 +341,7 @@ def make_t4_probe(cam_idx):
             if len(_post_to_pre) >= MAX_TRACKED:
                 _purge(_post_to_pre)
             _post_to_pre[post_pts] = pre_pts  # bridge for t5
+            print(f"t4 cam{cam_idx} post_pts={post_pts} pre_pts={pre_pts}")
         return Gst.PadProbeReturn.OK
     return probe_cb
 
@@ -362,7 +367,6 @@ def make_final_probe(cam_idx):
         post_pts = buf.pts
         if post_pts == Gst.CLOCK_TIME_NONE:
             return
-
         # Look up the pre-pay PTS directly from the post-pay PTS.
         # This mapping was built at t4 where both were simultaneously known.
         pre_pts = _post_to_pre.pop(post_pts, None)
