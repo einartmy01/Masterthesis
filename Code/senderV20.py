@@ -105,7 +105,7 @@ def open_csv_logs():
         "dropped_nals",
     ])
 
-    transit_path   = f"logs/transit/sender_transit_{timestamp}.csv"
+    transit_path   = f"logs/transit/send_transit_{timestamp}.csv"
     transit_file   = open(transit_path, "w", newline="")
     transit_writer = csv.writer(transit_file)
     transit_writer.writerow(["abs_time", "cam_index", "rtp_seq"])
