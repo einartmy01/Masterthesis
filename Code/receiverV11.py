@@ -25,8 +25,8 @@ def build_pipeline():
             f'caps="application/x-rtp, media=video, encoding-name=H264, payload=96" name=src{i} ! '
             f'rtph264depay name=depay{i} ! '
             f'h264parse name=parse{i} ! '
-            f'avdec_h264 name=decoder{i} ! '
-            f'queue max-size-buffers=1 max-size-bytes=0 max-size-time=0 leaky=downstream name=q_post{i} ! '
+            f'avdec_h264 skip-frame=5 name=decoder{i} ! '
+            f'queue max-size-buffers=3 max-size-bytes=0 max-size-time=0 leaky=downstream name=q_post{i} ! '
             f'autovideosink sync=false name=sink{i}'
         )
     return " ".join(parts)
@@ -207,8 +207,8 @@ def make_sink_probe(cam_idx):
     _mono          = time.monotonic
     _dec_in_queue  = dec_in_queues[cam_idx]
     _full_in_queue = full_in_queues[cam_idx]
-
     def process_buf():
+
         t_now = _mono()
         now   = datetime.now().strftime("%H:%M:%S.%f")[:-3]
 
