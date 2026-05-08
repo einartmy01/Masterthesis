@@ -131,12 +131,14 @@ def make_udpsrc_probe(cam_idx):
     _full_in_queue = full_in_queues[cam_idx]
 
     def probe_cb(pad, info):
+        #print(f"udpsrc probe fired for cam{cam_idx}")
         buf = info.get_buffer()
         if buf is None:
             return Gst.PadProbeReturn.OK
         seq, marker = read_rtp_header(buf)
         if seq is None:
             return Gst.PadProbeReturn.OK
+        #print(f"udpsrc probe fired for cam{cam_idx}, seq={seq}, marker={marker}")
         transit_queue.append((f"{_time():.6f}", cam_idx, seq))
         if marker:
             t = _mono()
