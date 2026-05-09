@@ -1,0 +1,354 @@
+{
+  "suffix": "07.05-15:45",
+  "generated_at": "2026-05-09T10:04:32",
+  "files": {
+    "network": "rec_network_07.05-15:45.csv",
+    "full": "rec_full_07.05-15:45.csv",
+    "decoder": "rec_decoder_07.05-15:45.csv"
+  },
+  "overview": {
+    "network": {
+      "rows": 25906,
+      "duration_s": 352.164,
+      "start": "15:46:06.096000",
+      "end": "15:51:58.260000",
+      "cams": [
+        0,
+        1,
+        2
+      ]
+    },
+    "full": {
+      "rows": 25644,
+      "duration_s": 342.107,
+      "start": "15:46:16.155000",
+      "end": "15:51:58.262000",
+      "cams": [
+        0,
+        1,
+        2
+      ]
+    },
+    "decoder": {
+      "rows": 25650,
+      "duration_s": 352.215,
+      "start": "15:46:06.047000",
+      "end": "15:51:58.262000",
+      "cams": [
+        0,
+        1,
+        2
+      ]
+    }
+  },
+  "network_latency": {
+    "global": {
+      "mean": 0.0463,
+      "std": 0.0469,
+      "min": 0.0095,
+      "max": 1.1506,
+      "p50": 0.0353,
+      "p90": 0.0925,
+      "p95": 0.1329,
+      "p99": 0.2371,
+      "spikes_above_1.0": 1,
+      "spikes_above_1.0_pct": 0.004,
+      "spikes_above_5.0": 0,
+      "spikes_above_5.0_pct": 0.0
+    },
+    "per_cam": {
+      "0": {
+        "mean": 0.0525,
+        "std": 0.054,
+        "min": 0.0095,
+        "max": 1.1506,
+        "p50": 0.0371,
+        "p90": 0.1078,
+        "p95": 0.1488,
+        "p99": 0.2621,
+        "spikes_above_1.0": 1,
+        "spikes_above_1.0_pct": 0.011,
+        "spikes_above_5.0": 0,
+        "spikes_above_5.0_pct": 0.0
+      },
+      "1": {
+        "mean": 0.0491,
+        "std": 0.0472,
+        "min": 0.0122,
+        "max": 0.9069,
+        "p50": 0.0364,
+        "p90": 0.0991,
+        "p95": 0.1428,
+        "p99": 0.246,
+        "spikes_above_1.0": 0,
+        "spikes_above_1.0_pct": 0.0,
+        "spikes_above_5.0": 0,
+        "spikes_above_5.0_pct": 0.0
+      },
+      "2": {
+        "mean": 0.0371,
+        "std": 0.0361,
+        "min": 0.012,
+        "max": 0.9704,
+        "p50": 0.0265,
+        "p90": 0.0625,
+        "p95": 0.0937,
+        "p99": 0.1833,
+        "spikes_above_1.0": 0,
+        "spikes_above_1.0_pct": 0.0,
+        "spikes_above_5.0": 0,
+        "spikes_above_5.0_pct": 0.0
+      }
+    }
+  },
+  "network_rtp_gaps": {
+    "0": {
+      "rtp_range": [
+        5,
+        65534
+      ],
+      "mean_step": 7.446,
+      "gaps_above_15": 159,
+      "max_gap": 115
+    },
+    "1": {
+      "rtp_range": [
+        1,
+        65527
+      ],
+      "mean_step": 7.663,
+      "gaps_above_15": 81,
+      "max_gap": 142
+    },
+    "2": {
+      "rtp_range": [
+        4,
+        65527
+      ],
+      "mean_step": 7.663,
+      "gaps_above_15": 76,
+      "max_gap": 132
+    }
+  },
+  "full_latency": {
+    "global": {
+      "mean": 3.3357,
+      "std": 1.7544,
+      "min": 0.0793,
+      "max": 38.2304,
+      "p50": 2.9708,
+      "p90": 3.9544,
+      "p95": 4.7707,
+      "p99": 12.9641,
+      "spikes_above_5.0": 1155,
+      "spikes_above_5.0_pct": 4.504,
+      "spikes_above_20.0": 23,
+      "spikes_above_20.0_pct": 0.09
+    },
+    "per_cam": {
+      "0": {
+        "mean": 3.334,
+        "std": 1.7993,
+        "min": 0.0793,
+        "max": 38.2304,
+        "p50": 2.92,
+        "p90": 4.0072,
+        "p95": 5.8319,
+        "p99": 12.0565,
+        "spikes_above_5.0": 488,
+        "spikes_above_5.0_pct": 5.71,
+        "spikes_above_20.0": 8,
+        "spikes_above_20.0_pct": 0.094
+      },
+      "1": {
+        "mean": 3.3511,
+        "std": 1.7654,
+        "min": 0.1121,
+        "max": 36.3377,
+        "p50": 3.0179,
+        "p90": 3.957,
+        "p95": 4.622,
+        "p99": 13.675,
+        "spikes_above_5.0": 333,
+        "spikes_above_5.0_pct": 3.896,
+        "spikes_above_20.0": 8,
+        "spikes_above_20.0_pct": 0.094
+      },
+      "2": {
+        "mean": 3.322,
+        "std": 1.6972,
+        "min": 0.3929,
+        "max": 28.209,
+        "p50": 2.9748,
+        "p90": 3.9163,
+        "p95": 4.5923,
+        "p99": 13.3759,
+        "spikes_above_5.0": 334,
+        "spikes_above_5.0_pct": 3.906,
+        "spikes_above_20.0": 7,
+        "spikes_above_20.0_pct": 0.082
+      }
+    }
+  },
+  "decoder_latency": {
+    "global": {
+      "mean": 3.229,
+      "std": 1.736,
+      "min": 0.1973,
+      "max": 37.9774,
+      "p50": 2.8751,
+      "p90": 3.7948,
+      "p95": 4.5623,
+      "p99": 12.8403,
+      "spikes_above_20.0": 19,
+      "spikes_above_20.0_pct": 0.074,
+      "spikes_above_50.0": 0,
+      "spikes_above_50.0_pct": 0.0
+    },
+    "per_cam": {
+      "0": {
+        "mean": 3.2156,
+        "std": 1.7798,
+        "min": 0.1973,
+        "max": 37.9774,
+        "p50": 2.8161,
+        "p90": 3.8236,
+        "p95": 5.5947,
+        "p99": 11.917,
+        "spikes_above_20.0": 7,
+        "spikes_above_20.0_pct": 0.082,
+        "spikes_above_50.0": 0,
+        "spikes_above_50.0_pct": 0.0
+      },
+      "1": {
+        "mean": 3.2406,
+        "std": 1.7482,
+        "min": 1.8881,
+        "max": 35.6677,
+        "p50": 2.9205,
+        "p90": 3.7936,
+        "p95": 4.4202,
+        "p99": 13.6864,
+        "spikes_above_20.0": 7,
+        "spikes_above_20.0_pct": 0.082,
+        "spikes_above_50.0": 0,
+        "spikes_above_50.0_pct": 0.0
+      },
+      "2": {
+        "mean": 3.2307,
+        "std": 1.6786,
+        "min": 0.3352,
+        "max": 27.9164,
+        "p50": 2.8932,
+        "p90": 3.7792,
+        "p95": 4.4236,
+        "p99": 13.2519,
+        "spikes_above_20.0": 5,
+        "spikes_above_20.0_pct": 0.058,
+        "spikes_above_50.0": 0,
+        "spikes_above_50.0_pct": 0.0
+      }
+    }
+  },
+  "dropped": {
+    "network": {
+      "total": 0,
+      "rows_with_drops": 0,
+      "per_cam": {
+        "0": 0,
+        "1": 0,
+        "2": 0
+      }
+    },
+    "full": {
+      "total": 262,
+      "rows_with_drops": 7,
+      "per_cam": {
+        "0": 256,
+        "1": 4,
+        "2": 2
+      }
+    },
+    "decoder": {
+      "total": 259,
+      "rows_with_drops": 4,
+      "per_cam": {
+        "0": 254,
+        "1": 3,
+        "2": 2
+      }
+    }
+  },
+  "drop_impact_full": {
+    "clean": {
+      "n": 25637,
+      "mean": 3.3363,
+      "p50": 2.9709,
+      "p95": 4.7702,
+      "p99": 12.9651,
+      "max": 38.2304
+    },
+    "dropped": {
+      "n": 7,
+      "mean": 1.0457,
+      "p50": 0.289,
+      "p95": 4.2212,
+      "p99": 5.4672,
+      "max": 5.7787
+    },
+    "delta_mean_ms": -2.2906,
+    "delta_p99_ms": -7.4979
+  },
+  "drop_impact_decoder": {
+    "clean": {
+      "n": 25646,
+      "mean": 3.2292,
+      "p50": 2.8753,
+      "p95": 4.561,
+      "p99": 12.8406,
+      "max": 37.9774
+    },
+    "dropped": {
+      "n": 4,
+      "mean": 1.6369,
+      "p50": 0.4138,
+      "p95": 4.7679,
+      "p99": 5.3715,
+      "max": 5.5224
+    },
+    "delta_mean_ms": -1.5923,
+    "delta_p99_ms": -7.4691
+  },
+  "throughput": {
+    "network": {
+      "mean": 73.39,
+      "min": 15,
+      "max": 106,
+      "low_seconds": 11
+    },
+    "full": {
+      "mean": 74.76,
+      "min": 15,
+      "max": 106,
+      "low_seconds": 1
+    },
+    "decoder": {
+      "mean": 74.56,
+      "min": 1,
+      "max": 106,
+      "low_seconds": 2
+    }
+  },
+  "health": {
+    "status": "ISSUES",
+    "issues": [
+      "WARNING  [full] 0.09% of rows exceed 20.0 ms",
+      "WARNING  [full] 262 dropped packets across 7 rows",
+      "WARNING  [decoder] 259 dropped packets across 4 rows",
+      "NOTICE   [network] cam 0: 159 RTP gaps > 15",
+      "NOTICE   [network] cam 1: 81 RTP gaps > 15",
+      "NOTICE   [network] cam 2: 76 RTP gaps > 15",
+      "NOTICE   [network] 11 seconds with very low throughput"
+    ]
+  }
+}

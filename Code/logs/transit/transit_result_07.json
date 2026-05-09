@@ -1,0 +1,84 @@
+{
+  "send_file": "send_transit_07.05-15:45.csv",
+  "rec_file": "rec_transit_07.05-15:45.csv",
+  "generated_at": "2026-05-09T10:46:59",
+  "matching": {
+    "send_packets": 400904,
+    "rec_packets": 400717,
+    "matched": 400717,
+    "unmatched": 187,
+    "loss_pct": 0.047
+  },
+  "transit_global": {
+    "n": 400717,
+    "mean_ms": 67.7208,
+    "std_ms": 42.6686,
+    "min_ms": 27.2851,
+    "max_ms": 675.2539,
+    "p50": 57.6839,
+    "p90": 108.716,
+    "p95": 138.0456,
+    "p99": 232.8659,
+    "spikes_above_100.0ms": 49197,
+    "spikes_above_100.0ms_pct": 12.277,
+    "spikes_above_500.0ms": 331,
+    "spikes_above_500.0ms_pct": 0.083
+  },
+  "transit_per_cam": {
+    "0": {
+      "n": 133628,
+      "mean_ms": 64.9131,
+      "std_ms": 38.3388,
+      "min_ms": 27.2851,
+      "max_ms": 659.481,
+      "p50": 57.333,
+      "p90": 95.5244,
+      "p95": 122.1138,
+      "p99": 216.9099,
+      "spikes_above_100.0ms": 11913,
+      "spikes_above_100.0ms_pct": 8.915,
+      "spikes_above_500.0ms": 80,
+      "spikes_above_500.0ms_pct": 0.06
+    },
+    "1": {
+      "n": 133536,
+      "mean_ms": 68.9293,
+      "std_ms": 43.4015,
+      "min_ms": 27.442,
+      "max_ms": 656.06,
+      "p50": 58.5914,
+      "p90": 109.5315,
+      "p95": 139.984,
+      "p99": 241.1616,
+      "spikes_above_100.0ms": 17282,
+      "spikes_above_100.0ms_pct": 12.942,
+      "spikes_above_500.0ms": 96,
+      "spikes_above_500.0ms_pct": 0.072
+    },
+    "2": {
+      "n": 133553,
+      "mean_ms": 69.3216,
+      "std_ms": 45.7883,
+      "min_ms": 27.5109,
+      "max_ms": 675.2539,
+      "p50": 57.1568,
+      "p90": 119.761,
+      "p95": 148.6142,
+      "p99": 234.1437,
+      "spikes_above_100.0ms": 20002,
+      "spikes_above_100.0ms_pct": 14.977,
+      "spikes_above_500.0ms": 155,
+      "spikes_above_500.0ms_pct": 0.116
+    }
+  },
+  "clock_sync": {
+    "negative_transit_count": 0,
+    "min_transit_ms": 27.2851
+  },
+  "health": {
+    "status": "ISSUES",
+    "issues": [
+      "WARNING  0.08% of packets exceed 500.0 ms transit"
+    ]
+  }
+}

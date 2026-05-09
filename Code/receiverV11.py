@@ -33,16 +33,16 @@ def build_pipeline():
 
 # ── Background writer ─────────────────────────────────────────────────────────
 
-network_queue = deque()  # udpsrc → depay
-decoder_queue = deque()  # h264parse → autovideosink
-full_queue    = deque()  # udpsrc → autovideosink
+depay_queue = deque()  # udpsrc src → depay src
+decoder_queue = deque()  # h264parse src → autovideosink sink
+full_queue    = deque()  # udpsrc src → autovideosink sink
 transit_queue = deque()  # every RTP packet
 
-def _writer_thread(network_writer, decoder_writer, full_writer, transit_writer):
+def _writer_thread(depay_writer, decoder_writer, full_writer, transit_writer):
     while True:
         wrote = False
-        while network_queue:
-            network_writer.writerow(network_queue.popleft())
+        while depay_queue:
+            depay_writer.writerow(depay_queue.popleft())
             wrote = True
         while decoder_queue:
             decoder_writer.writerow(decoder_queue.popleft())
@@ -56,10 +56,10 @@ def _writer_thread(network_writer, decoder_writer, full_writer, transit_writer):
         if not wrote:
             time.sleep(0.005)
 
-def start_writer_thread(network_writer, decoder_writer, full_writer, transit_writer):
+def start_writer_thread(depay_writer, decoder_writer, full_writer, transit_writer):
     t = threading.Thread(
         target=_writer_thread,
-        args=(network_writer, decoder_writer, full_writer, transit_writer),
+        args=(depay_writer, decoder_writer, full_writer, transit_writer),
         daemon=True
     )
     t.start()
@@ -72,10 +72,10 @@ def open_csv_logs():
 
     timestamp = datetime.now().strftime("%d.%m-%H:%M")
 
-    network_path   = f"logs/pipeline/receiver/rec_network_{timestamp}.csv"
-    network_f      = open(network_path, "w", newline="")
-    network_writer = csv.writer(network_f)
-    network_writer.writerow(["wall_time", "cam_index", "rtp_seq", "network_ms", "dropped"])
+    depay_path   = f"logs/pipeline/receiver/rec_depay_{timestamp}.csv"
+    depay_f      = open(depay_path, "w", newline="")
+    depay_writer = csv.writer(depay_f)
+    depay_writer.writerow(["wall_time", "cam_index", "rtp_seq", "depay_ms", "dropped"])
 
     decoder_path   = f"logs/pipeline/receiver/rec_decoder_{timestamp}.csv"
     decoder_f      = open(decoder_path, "w", newline="")
@@ -92,11 +92,11 @@ def open_csv_logs():
     transit_writer = csv.writer(transit_f)
     transit_writer.writerow(["abs_time", "cam_index", "rtp_seq"])
 
-    print(f"Network latency log  : {network_path}")
+    print(f"depay latency log  : {depay_path}")
     print(f"Decoder latency log  : {decoder_path}")
     print(f"Full latency log     : {full_path}")
     print(f"Transit log          : {transit_path}")
-    return (network_f, network_writer), (decoder_f, decoder_writer), (full_f, full_writer), (transit_f, transit_writer)
+    return (depay_f, depay_writer), (decoder_f, decoder_writer), (full_f, full_writer), (transit_f, transit_writer)
 
 # ── RTP header reader ─────────────────────────────────────────────────────────
 
@@ -115,45 +115,45 @@ def read_rtp_header(buf):
 
 # ── Timing state ──────────────────────────────────────────────────────────────
 
-net_in_queues  = [deque() for _ in RTP_PORTS]  # udpsrc → depay
+depay_in_queues  = [deque() for _ in RTP_PORTS]  # udpsrc → depay
 dec_in_queues  = [deque() for _ in RTP_PORTS]  # h264parse → autovideosink
 full_in_queues = [deque() for _ in RTP_PORTS]  # udpsrc → autovideosink
 
 # ── Probes ────────────────────────────────────────────────────────────────────
 
 def make_udpsrc_probe(cam_idx):
-    """Fires on udpsrc src pad — RTP header available.
-    Logs every packet to transit. Pushes timing entry on marked packets
-    into both net_in_queue and full_in_queue."""
     _mono          = time.monotonic
     _time          = time.time
-    _net_in_queue  = net_in_queues[cam_idx]
+    _depay_in_queue  = depay_in_queues[cam_idx]
     _full_in_queue = full_in_queues[cam_idx]
+    expecting_first = [True]  # True = next packet is first of new frame
 
     def probe_cb(pad, info):
-        #print(f"udpsrc probe fired for cam{cam_idx}")
         buf = info.get_buffer()
         if buf is None:
             return Gst.PadProbeReturn.OK
         seq, marker = read_rtp_header(buf)
         if seq is None:
             return Gst.PadProbeReturn.OK
-        #print(f"udpsrc probe fired for cam{cam_idx}, seq={seq}, marker={marker}")
+
         transit_queue.append((f"{_time():.6f}", cam_idx, seq))
-        if marker:
+
+        if expecting_first[0]:
             t = _mono()
-            _net_in_queue.append((t, seq))
+            _depay_in_queue.append((t, seq))
             _full_in_queue.append(t)
+            expecting_first[0] = False
+
+        if marker:
+            expecting_first[0] = True  # next packet starts a new frame
+
         return Gst.PadProbeReturn.OK
     return probe_cb
 
 
 def make_depay_probe(cam_idx):
-    """Fires on depay src pad.
-    On first fire clears all deques to discard stale startup timestamps.
-    Afterwards drains net_in_queue and logs network_ms + dropped."""
     _mono          = time.monotonic
-    _net_in_queue  = net_in_queues[cam_idx]
+    _depay_in_queue  = depay_in_queues[cam_idx]
     _dec_in_queue  = dec_in_queues[cam_idx]
     _full_in_queue = full_in_queues[cam_idx]
     initialized    = [False]
@@ -161,24 +161,24 @@ def make_depay_probe(cam_idx):
 
     def probe_cb(pad, info):
         buf = info.get_buffer()
-        if buf is None or not _net_in_queue:
+        if buf is None or not _depay_in_queue:
             return Gst.PadProbeReturn.OK
         if not initialized[0]:
-            _net_in_queue.clear()
+            _depay_in_queue.clear()
             _dec_in_queue.clear()
             _full_in_queue.clear()
             initialized[0] = True
             return Gst.PadProbeReturn.OK
-        while len(_net_in_queue) > 1:
-            _net_in_queue.popleft()
+        while len(_depay_in_queue) > 1:
+            _depay_in_queue.popleft()
             dropped[0] += 1
-        t_start, seq = _net_in_queue.popleft()
-        network_ms = (_mono() - t_start) * 1000
-        network_queue.append((
+        t_start, seq = _depay_in_queue.popleft()
+        depay_ms = (_mono() - t_start) * 1000
+        depay_queue.append((
             datetime.now().strftime("%H:%M:%S.%f")[:-3],
             cam_idx,
             seq,
-            f"{network_ms:.4f}",
+            f"{depay_ms:.4f}",
             dropped[0],
         ))
         return Gst.PadProbeReturn.OK
@@ -190,12 +190,17 @@ def make_parse_probe(cam_idx):
     Pushes a timing entry into dec_in_queue."""
     _mono         = time.monotonic
     _dec_in_queue = dec_in_queues[cam_idx]
+    fire_count = [0]
+    last_print = [time.monotonic()]
 
     def probe_cb(pad, info):
-        buf = info.get_buffer()
-        if buf is None:
-            return Gst.PadProbeReturn.OK
-        _dec_in_queue.append(_mono())
+        fire_count[0] += 1
+        now = time.monotonic()
+        if now - last_print[0] >= 1.0:
+            print(f"cam{cam_idx} parse fires/sec: {fire_count[0]}")
+            fire_count[0] = 0
+            last_print[0] = now
+        _dec_in_queue.append(now)
         return Gst.PadProbeReturn.OK
     return probe_cb
 
@@ -260,15 +265,15 @@ def attach_probes(pipeline):
 # ── Main ──────────────────────────────────────────────────────────────────────
 
 def main():
-    (network_file, network_writer), (decoder_file, decoder_writer), (full_file, full_writer), (transit_file, transit_writer) = open_csv_logs()
-    start_writer_thread(network_writer, decoder_writer, full_writer, transit_writer)
+    (depay_file, depay_writer), (decoder_file, decoder_writer), (full_file, full_writer), (transit_file, transit_writer) = open_csv_logs()
+    start_writer_thread(depay_writer, decoder_writer, full_writer, transit_writer)
 
     Gst.init(None)
     pipeline = Gst.parse_launch(build_pipeline())
     attach_probes(pipeline)
 
     pipeline.set_state(Gst.State.PLAYING)
-    print("Receiver started — logging network, decoder, full, and transit latency.")
+    print("Receiver started — logging depay, decoder, full, and transit latency.")
     print("Press Ctrl+C to stop.")
 
     loop = GLib.MainLoop()
@@ -278,12 +283,19 @@ def main():
         print("\nStopping...")
     finally:
         pipeline.set_state(Gst.State.NULL)
-        time.sleep(0.1)
-        network_file.flush()
+        for row in depay_queue:
+            depay_writer.writerow(row)
+        for row in decoder_queue:
+            decoder_writer.writerow(row)
+        for row in full_queue:
+            full_writer.writerow(row)
+        for row in transit_queue:
+            transit_writer.writerow(row)
+        depay_file.flush()
         decoder_file.flush()
         full_file.flush()
         transit_file.flush()
-        network_file.close()
+        depay_file.close()
         decoder_file.close()
         full_file.close()
         transit_file.close()
