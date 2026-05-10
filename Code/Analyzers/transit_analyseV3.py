@@ -277,6 +277,10 @@ def analyse(send_path: Path, rec_path: Path, send_suf: str, rec_suf: str) -> dic
             transit_ms = (rec_records[key] - t_send) * 1000
             cam, seq   = key
             matched.append((cam, seq, transit_ms))
+    for key, t_rec in rec_records.items():
+        if key not in send_records:
+            cam, seq = key
+            cprint(f"  [WARN] Unmatched rec record: cam={cam} seq={seq} abs_time={t_rec:.4f}", YELLOW)
 
     n_send    = len(send_records)
     n_rec     = len(rec_records)
