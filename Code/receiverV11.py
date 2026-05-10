@@ -190,16 +190,10 @@ def make_parse_probe(cam_idx):
     Pushes a timing entry into dec_in_queue."""
     _mono         = time.monotonic
     _dec_in_queue = dec_in_queues[cam_idx]
-    fire_count = [0]
-    last_print = [time.monotonic()]
+
 
     def probe_cb(pad, info):
-        fire_count[0] += 1
         now = time.monotonic()
-        if now - last_print[0] >= 1.0:
-            print(f"cam{cam_idx} parse fires/sec: {fire_count[0]}")
-            fire_count[0] = 0
-            last_print[0] = now
         _dec_in_queue.append(now)
         return Gst.PadProbeReturn.OK
     return probe_cb
