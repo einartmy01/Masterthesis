@@ -13,29 +13,30 @@ from gi.repository import Gst, GLib
 
 # ── Config ────────────────────────────────────────────────────────────────────
 RTP_PORTS = ["5000", "5002", "5004"]
+SENDER_IP = "100.70.208.109"
 # ─────────────────────────────────────────────────────────────────────────────
 
 # ── Pipeline ──────────────────────────────────────────────────────────────────
+#            f'xvimagesink sync=false name=sink{i}'
 
 def build_pipeline():
     parts = []
     for i, port in enumerate(RTP_PORTS):
         parts.append(
-            f'udpsrc port={port} '
-            f'caps="application/x-rtp, media=video, encoding-name=H264, payload=96" name=src{i} ! '
-            f'rtph264depay name=depay{i} ! '
+            f'tcpclientsrc host={SENDER_IP} port={port} name=src{i} ! '
+            f'gdpdepay name=depay{i} ! '
             f'h264parse name=parse{i} ! '
-            f'avdec_h264 name=decoder{i} ! '
+            f'avdec_h264 max-threads=1 skip-frame=default name=decoder{i} ! '
             f'queue max-size-buffers=3 max-size-bytes=0 max-size-time=0 leaky=downstream name=q_post{i} ! '
-            f'autovideosink sync=false name=sink{i}'
+            f'xvimagesink sync=false name=sink{i}'
         )
     return " ".join(parts)
 
 # ── Background writer ─────────────────────────────────────────────────────────
 
-depay_queue = deque()  # udpsrc src → depay src
-decoder_queue = deque()  # h264parse src → autovideosink sink
-full_queue    = deque()  # udpsrc src → autovideosink sink
+depay_queue   = deque()  # tcpclientsrc src → gdpdepay src
+decoder_queue = deque()  # h264parse src → xvimagesink sink
+full_queue    = deque()  # tcpclientsrc src → xvimagesink sink
 transit_queue = deque()  # every RTP packet
 
 def _writer_thread(depay_writer, decoder_writer, full_writer, transit_writer):
@@ -115,13 +116,13 @@ def read_rtp_header(buf):
 
 # ── Timing state ──────────────────────────────────────────────────────────────
 
-depay_in_queues  = [deque() for _ in RTP_PORTS]  # udpsrc → depay
+depay_in_queues  = [deque() for _ in RTP_PORTS]  # tcpsrc → depay
 dec_in_queues  = [deque() for _ in RTP_PORTS]  # h264parse → autovideosink
-full_in_queues = [deque() for _ in RTP_PORTS]  # udpsrc → autovideosink
+full_in_queues = [deque() for _ in RTP_PORTS]  # tcpsrc → autovideosink
 
 # ── Probes ────────────────────────────────────────────────────────────────────
 
-def make_udpsrc_probe(cam_idx):
+def make_tcpsrc_probe(cam_idx):
     _mono          = time.monotonic
     _time          = time.time
     _depay_in_queue  = depay_in_queues[cam_idx]
@@ -243,7 +244,7 @@ def make_sink_probe(cam_idx):
 def attach_probes(pipeline):
     for i in range(len(RTP_PORTS)):
         pipeline.get_by_name(f"src{i}").get_static_pad("src").add_probe(
-            Gst.PadProbeType.BUFFER, make_udpsrc_probe(i)
+            Gst.PadProbeType.BUFFER, make_tcpsrc_probe(i)
         )
         pipeline.get_by_name(f"depay{i}").get_static_pad("src").add_probe(
             Gst.PadProbeType.BUFFER, make_depay_probe(i)
