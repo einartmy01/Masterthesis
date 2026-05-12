@@ -17,7 +17,7 @@ RTSP_PORT    = "554"
 INTERFACES   = ["eth0", "eth1", "enp0s31f6"]
 LOCAL_IPS    = ["192.168.0.50/24", "192.168.1.50/24", "192.168.2.50/24"]
 #RECEIVER_IP  = "172.30.154.249"
-RECEIVER_IP = "100.98.143.100"
+RECEIVER_IP  = "100.92.97.93"
 RTP_PORTS    = ["5000", "5002", "5004"]
 # ─────────────────────────────────────────────────────────────────────────────
 
@@ -41,7 +41,6 @@ def check_cameras():
 # ── Pipeline ──────────────────────────────────────────────────────────────────
 
 def build_pipeline():
-
     parts = []
     for i, cam_ip in enumerate(CAM_IPs):
         parts.append(
@@ -54,6 +53,7 @@ def build_pipeline():
             f'udpsink host={RECEIVER_IP} port={RTP_PORTS[i]} sync=false async=false name=udpsink{i}'
         )
     return " ".join(parts)
+
 # ── Main ──────────────────────────────────────────────────────────────────────
 
 def main():
