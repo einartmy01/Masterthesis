@@ -48,7 +48,6 @@ def check_cameras():
 # ── Pipeline ──────────────────────────────────────────────────────────────────
 
 def build_pipeline():
-
     parts = []
     for i, cam_ip in enumerate(CAM_IPs):
         parts.append(
