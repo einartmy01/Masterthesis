@@ -1,32 +1,11 @@
 #!/usr/bin/env python3
-"""
-analyse_transit.py
-──────────────────
-Computes network transit latency by joining sender and receiver transit CSVs
-on (cam_index, rtp_seq). Matches files by timestamp suffix with ±1 min wiggle.
-
-File naming convention:
-    ../logs/transit/send_transit_DD.MM-HH:MM.csv
-    ../logs/transit/rec_transit_DD.MM-HH:MM.csv
-
-Usage:
-    python3 analyse_transit.py                        # newest matched pair
-    python3 analyse_transit.py 07.05-15:45            # specific suffix (send or rec)
-    python3 analyse_transit.py path/to/send_transit_07.05-15:45.csv  # explicit file
-
-Output:
-    - Colour-coded terminal summary (per camera + overall)
-    - CSV saved to ../logs/transit/transit_result_DD.MM-HH:MM.csv
-    - JSON report saved to ../logs/transit/transit_result_DD.MM-HH:MM.json
-"""
-
 import sys
 import re
 import csv
 import json
 import os
 from pathlib import Path
-from datetime import datetime, timedelta
+from datetime import datetime
 from collections import defaultdict
 
 import numpy as np
@@ -40,7 +19,7 @@ WIGGLE_MINUTES    = 1          # max allowed timestamp difference between pair
 TRANSIT_WARN_MS   = 100.0      # yellow flag above this
 TRANSIT_CRIT_MS   = 500.0      # red flag above this
 RTP_GAP_THRESHOLD = 15
-SKIP_FIRST_N_ROWS = 10000      # skip N rows from the start of each CSV (e.g. 100 to skip warmup)
+SKIP_FIRST_N_ROWS = 1000      # skip N rows from the start of each CSV (e.g. 100 to skip warmup)
 
 # RTP rollover
 MAX_SEQ      = 65536
@@ -77,11 +56,9 @@ def section(title):
 SUFFIX_RE  = re.compile(r"(?:send|rec)_transit_(\d{2}\.\d{2}-\d{2}:\d{2})\.csv$")
 
 def parse_suffix(suffix: str) -> datetime:
-    """Parse DD.MM-HH:MM into a datetime (year=2000, irrelevant)."""
     return datetime.strptime(suffix, "%d.%m-%H:%M")
 
 def suffix_minutes(suffix: str) -> int:
-    """Suffix as total minutes (day*1440 + hour*60 + min) for easy delta."""
     dt = parse_suffix(suffix)
     return dt.day * 1440 + dt.hour * 60 + dt.minute
 
@@ -89,7 +66,6 @@ def minutes_apart(s1: str, s2: str) -> int:
     return abs(suffix_minutes(s1) - suffix_minutes(s2))
 
 def find_all_suffixes(log_dir: Path) -> tuple[list[str], list[str]]:
-    """Return (send_suffixes, rec_suffixes) found in log_dir."""
     send, rec = [], []
     for f in log_dir.glob("*.csv"):
         m = SUFFIX_RE.match(f.name)
@@ -104,11 +80,6 @@ def find_all_suffixes(log_dir: Path) -> tuple[list[str], list[str]]:
 
 def best_pair(send_suffixes: list[str], rec_suffixes: list[str],
               wiggle: int = WIGGLE_MINUTES) -> tuple[str, str] | None:
-    """
-    Find the best send/rec pair: exact timestamp match (delta=0) wins over
-    wiggle matches. Within each tier, pick by newest file mtime.
-    Returns None if no pair found within wiggle minutes.
-    """
     def pair_mtime(pair):
         ss, rs = pair
         return max(
@@ -132,12 +103,6 @@ def best_pair(send_suffixes: list[str], rec_suffixes: list[str],
     return None
 
 def resolve_pair(arg: str | None, log_dir: Path) -> tuple[Path, Path, str, str]:
-    """
-    Returns (send_path, rec_path, send_suffix, rec_suffix).
-    arg = None         → newest matched pair
-    arg = 'DD.MM-HH:MM' → treat as send suffix, find best rec match
-    arg = path         → extract suffix, find best match for the other side
-    """
     if arg is None:
         send_suf, rec_suf = find_all_suffixes(log_dir)
         pair = best_pair(send_suf, rec_suf)
@@ -401,10 +366,8 @@ def analyse(send_path: Path, rec_path: Path, send_suf: str, rec_suf: str) -> dic
 # ──────────────────────────────────────────────────────────────────────────────
 
 def save_outputs(matched: list, report: dict, log_dir: Path, send_suf: str):
-    timestamp   = datetime.now().strftime("%d.%m-%H:%M")
-    base        = log_dir / f"transit_result_{send_suf}"
-    csv_path    = base.with_suffix(".csv")
-    json_path   = base.with_suffix(".json")
+    csv_path    = log_dir / f"transit_result_{send_suf}.csv"
+    json_path   = log_dir / f"transit_result_{send_suf}.json"
 
     # CSV
     with open(csv_path, "w", newline="") as f:

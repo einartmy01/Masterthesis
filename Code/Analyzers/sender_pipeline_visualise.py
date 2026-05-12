@@ -2,279 +2,249 @@
 """
 sender_pipeline_visualise.py
 ────────────────────────────
-Visualises sender pipeline log files from logs/pipeline/sender/.
+Saves one PNG per graph into graphs/sender/<timestamp>/
 
 Usage:
-    python sender_pipeline_visualise.py                  # newest file
+    python sender_pipeline_visualise.py                  # newest log file
     python sender_pipeline_visualise.py <path/to/file>   # specific file
-
-Output:
-    - Opens an interactive matplotlib dashboard
-    - Saves a PNG next to the log file (same name, .png extension)
 """
 
 import sys
 from pathlib import Path
+from datetime import datetime
 
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-import matplotlib.gridspec as gridspec
-from matplotlib.ticker import MaxNLocator
 
 
 # ── Configuration ─────────────────────────────────────────────────────────────
 
-LOG_DIR = Path("../logs/pipeline/sender")
+LOG_DIR            = Path("../logs/pipeline/sender")
+OUTPUT_DIR         = Path("graphs/sender")
 
-LATENCY_WARN_MS   = 1.0     # Rows above this are flagged as spikes
-LATENCY_CRIT_MS   = 2.0     # Rows above this are flagged as critical spikes
-RTP_GAP_THRESHOLD = 15      # RTP seq jumps larger than this are flagged as gaps
+SKIP_FIRST_SECONDS = 10      # Cut this many seconds from the start
+LATENCY_WARN_MS    = 1.0    # Warning threshold line on latency plots
+LATENCY_CRIT_MS    = 2.0    # Critical threshold line on latency plots
+LATENCY_IQR_FENCE  = 500.0    # Remove latency outliers beyond IQR * this value
+ROLLING_WINDOW     = 30     # Smoothing window (number of rows) on time-series
+THROUGHPUT_BIN     = "1s"   # Bucket size for rows/sec: "1s", "500ms", etc.
 
-SKIP_FIRST_SECONDS  = 10     # Ignore rows from the start of the recording
-LATENCY_OUTLIER_IQR = 6.0   # Drop latency values above median + N*IQR
-DROP_OUTLIER_IQR    = 6.0   # Drop dropped_nals values above median + N*IQR
-
-FIGURE_SIZE      = (20, 14)
-THROUGHPUT_BIN   = "1s"     # Pandas offset alias for throughput bucketing
-ROLLING_WINDOW   = 30       # Rows for rolling-mean overlay on latency plot
-
-COLOUR_PALETTE   = ["#4e8cff", "#ff6b6b", "#51cf66", "#ffd43b", "#cc5de8"]
-COLOUR_WARN      = "#ffd43b"
-COLOUR_CRIT      = "#ff6b6b"
-COLOUR_OK        = "#51cf66"
-COLOUR_GRID      = "#2a2a3a"
-BACKGROUND       = "#12121c"
-PANEL_BACKGROUND = "#1a1a2e"
-TEXT_COLOUR      = "#e0e0f0"
+COLOURS     = ["#4472C4", "#ED7D31", "#70AD47", "#FFC000", "#7030A0"]
+WARN_COLOUR = "#FFC000"
+CRIT_COLOUR = "#C00000"
 
 
-# ── File loading ───────────────────────────────────────────────────────────────
+# ── Loading and filtering ──────────────────────────────────────────────────────
 
-def find_newest_log(log_dir: Path) -> Path:
+def find_newest_log(log_dir):
     files = list(log_dir.glob("*.csv"))
     if not files:
-        raise FileNotFoundError(f"No CSV files found in {log_dir}")
+        raise FileNotFoundError(f"No CSV files in {log_dir}")
     return max(files, key=lambda p: p.stat().st_mtime)
 
 
-def load_and_parse_log(path: Path) -> pd.DataFrame:
+def load_log(path):
     df = pd.read_csv(path)
-
-    required_columns = {"wall_time", "cam", "rtp_seq", "pipeline_ms", "dropped_nals"}
-    missing = required_columns - set(df.columns)
-    if missing:
-        raise ValueError(f"Missing columns: {missing}")
-
     try:
         df["wall_time"] = pd.to_datetime(df["wall_time"], format="%H:%M:%S.%f")
     except Exception:
         df["wall_time"] = pd.to_datetime(df["wall_time"])
-
-    df = df.sort_values("wall_time").reset_index(drop=True)
-    return df
+    return df.sort_values("wall_time").reset_index(drop=True)
 
 
-# ── Filtering / cleaning ───────────────────────────────────────────────────────
-
-def drop_early_timestamps(df: pd.DataFrame, seconds: float) -> pd.DataFrame:
-    cutoff = df["wall_time"].min() + pd.Timedelta(seconds=seconds)
+def skip_early_rows(df):
+    cutoff = df["wall_time"].min() + pd.Timedelta(seconds=SKIP_FIRST_SECONDS)
     return df[df["wall_time"] >= cutoff].reset_index(drop=True)
 
 
-def remove_latency_outliers(series: pd.Series, iqr_multiplier: float) -> pd.Series:
+def remove_latency_outliers(series):
     q1, q3 = series.quantile(0.25), series.quantile(0.75)
-    upper_fence = q3 + iqr_multiplier * (q3 - q1)
-    return series[series <= upper_fence]
+    upper  = q3 + LATENCY_IQR_FENCE * (q3 - q1)
+    return series[series <= upper]
 
 
-def remove_drop_outliers(df: pd.DataFrame, iqr_multiplier: float) -> pd.DataFrame:
-    col = df["dropped_nals"]
-    q1, q3 = col.quantile(0.25), col.quantile(0.75)
-    upper_fence = q3 + iqr_multiplier * (q3 - q1)
-    return df[col <= upper_fence].reset_index(drop=True)
+def elapsed_seconds(time_series):
+    return (time_series - time_series.min()).dt.total_seconds()
 
 
-# ── Theme helpers ──────────────────────────────────────────────────────────────
+# ── Shared plot helpers ────────────────────────────────────────────────────────
 
-def apply_dark_theme():
-    plt.rcParams.update({
-        "figure.facecolor":  BACKGROUND,
-        "axes.facecolor":    PANEL_BACKGROUND,
-        "axes.edgecolor":    COLOUR_GRID,
-        "axes.labelcolor":   TEXT_COLOUR,
-        "xtick.color":       TEXT_COLOUR,
-        "ytick.color":       TEXT_COLOUR,
-        "text.color":        TEXT_COLOUR,
-        "grid.color":        COLOUR_GRID,
-        "grid.linewidth":    0.6,
-        "legend.facecolor":  PANEL_BACKGROUND,
-        "legend.edgecolor":  COLOUR_GRID,
-        "font.family":       "monospace",
-    })
+def new_figure(title):
+    fig, ax = plt.subplots(figsize=(12, 5))
+    ax.set_title(title, fontsize=11, pad=10)
+    ax.grid(True, linestyle="--", alpha=0.4)
+    return fig, ax
 
 
-def style_axis(ax, title: str, xlabel: str = "", ylabel: str = ""):
-    ax.set_title(title, fontsize=10, color=TEXT_COLOUR, pad=8, loc="left", fontweight="bold")
-    ax.set_xlabel(xlabel, fontsize=8)
-    ax.set_ylabel(ylabel, fontsize=8)
-    ax.grid(True, axis="both", linestyle="--", alpha=0.4)
-    ax.tick_params(labelsize=7)
+def add_threshold_lines(ax):
+    ax.axhline(LATENCY_WARN_MS, color=WARN_COLOUR, linestyle="--", linewidth=1.2, label=f"Warn {LATENCY_WARN_MS} ms")
+    ax.axhline(LATENCY_CRIT_MS, color=CRIT_COLOUR, linestyle="--", linewidth=1.2, label=f"Crit {LATENCY_CRIT_MS} ms")
 
 
-# ── Individual plots ───────────────────────────────────────────────────────────
-
-def plot_latency_over_time(ax, df: pd.DataFrame, camera_ids: list):
-    for idx, cam_id in enumerate(camera_ids):
-        cam_df   = df[df["cam"] == cam_id].copy()
-        elapsed  = (cam_df["wall_time"] - cam_df["wall_time"].min()).dt.total_seconds()
-        latency  = remove_latency_outliers(cam_df["pipeline_ms"], LATENCY_OUTLIER_IQR)
-        colour   = COLOUR_PALETTE[idx % len(COLOUR_PALETTE)]
-
-        ax.scatter(elapsed[:len(latency)], latency, s=1.5, alpha=0.35, color=colour)
-
-        rolling = latency.rolling(ROLLING_WINDOW, min_periods=1).mean()
-        ax.plot(elapsed[:len(rolling)], rolling, lw=1.5, color=colour, label=f"Cam {cam_id}")
-
-    ax.axhline(LATENCY_WARN_MS, color=COLOUR_WARN, lw=1, linestyle="--", alpha=0.8, label=f"Warn {LATENCY_WARN_MS} ms")
-    ax.axhline(LATENCY_CRIT_MS, color=COLOUR_CRIT, lw=1, linestyle="--", alpha=0.8, label=f"Crit {LATENCY_CRIT_MS} ms")
-    ax.legend(fontsize=7, markerscale=4)
-    style_axis(ax, "Pipeline Latency Over Time", xlabel="Elapsed (s)", ylabel="pipeline_ms")
+def save(fig, output_dir, filename):
+    fig.tight_layout()
+    fig.savefig(output_dir / filename, dpi=150)
+    plt.close(fig)
+    print(f"  Saved: {filename}")
 
 
-def plot_latency_histogram(ax, df: pd.DataFrame, camera_ids: list):
-    for idx, cam_id in enumerate(camera_ids):
-        cam_ms  = df[df["cam"] == cam_id]["pipeline_ms"]
-        cleaned = remove_latency_outliers(cam_ms, LATENCY_OUTLIER_IQR)
-        colour  = COLOUR_PALETTE[idx % len(COLOUR_PALETTE)]
-        ax.hist(cleaned, bins=80, alpha=0.55, color=colour, label=f"Cam {cam_id}", edgecolor="none")
+# ── Graphs ─────────────────────────────────────────────────────────────────────
 
-    ax.axvline(LATENCY_WARN_MS, color=COLOUR_WARN, lw=1.2, linestyle="--")
-    ax.axvline(LATENCY_CRIT_MS, color=COLOUR_CRIT, lw=1.2, linestyle="--")
-    ax.legend(fontsize=7)
-    style_axis(ax, "Latency Distribution", xlabel="pipeline_ms", ylabel="Count")
+def graph_latency_over_time(df, camera_ids, output_dir):
+    fig, ax = new_figure("Pipeline Latency Over Time")
 
+    for i, cam in enumerate(camera_ids):
+        cam_df  = df[df["cam"] == cam]
+        elapsed = elapsed_seconds(cam_df["wall_time"])
+        latency = remove_latency_outliers(cam_df["pipeline_ms"])
+        colour  = COLOURS[i % len(COLOURS)]
 
-def plot_latency_boxplot(ax, df: pd.DataFrame, camera_ids: list):
-    data    = [remove_latency_outliers(df[df["cam"] == c]["pipeline_ms"], LATENCY_OUTLIER_IQR)
-               for c in camera_ids]
-    labels  = [f"Cam {c}" for c in camera_ids]
-    colours = [COLOUR_PALETTE[i % len(COLOUR_PALETTE)] for i in range(len(camera_ids))]
+        ax.scatter(elapsed.iloc[:len(latency)], latency, s=2, alpha=0.3, color=colour)
+        rolling = latency.rolling(ROLLING_WINDOW, min_periods=ROLLING_WINDOW).mean()
+        ax.plot(elapsed.iloc[:len(rolling)], rolling, lw=1.8, color=colour, label=f"Cam {cam}")
 
-    bp = ax.boxplot(data, labels=labels, patch_artist=True, widths=0.5,
-                    medianprops=dict(color="white", lw=2),
-                    whiskerprops=dict(color=TEXT_COLOUR),
-                    capprops=dict(color=TEXT_COLOUR),
-                    flierprops=dict(marker=".", color=TEXT_COLOUR, markersize=2, alpha=0.3))
-
-    for patch, colour in zip(bp["boxes"], colours):
-        patch.set_facecolor(colour)
-        patch.set_alpha(0.6)
-
-    ax.axhline(LATENCY_WARN_MS, color=COLOUR_WARN, lw=1, linestyle="--", alpha=0.8)
-    ax.axhline(LATENCY_CRIT_MS, color=COLOUR_CRIT, lw=1, linestyle="--", alpha=0.8)
-    style_axis(ax, "Latency per Camera (box = IQR)", ylabel="pipeline_ms")
+    add_threshold_lines(ax)
+    ax.set_xlabel("Elapsed (s)")
+    ax.set_ylabel("pipeline_ms")
+    ax.legend()
+    save(fig, output_dir, "latency_over_time.png")
 
 
-def plot_dropped_nals_over_time(ax, df: pd.DataFrame, camera_ids: list):
-    cleaned_df = remove_drop_outliers(df, DROP_OUTLIER_IQR)
+def graph_latency_histogram(df, camera_ids, output_dir):
+    fig, ax = new_figure("Latency Distribution")
 
-    for idx, cam_id in enumerate(camera_ids):
-        cam_df  = cleaned_df[cleaned_df["cam"] == cam_id]
-        elapsed = (cam_df["wall_time"] - cam_df["wall_time"].min()).dt.total_seconds()
-        colour  = COLOUR_PALETTE[idx % len(COLOUR_PALETTE)]
-        ax.bar(elapsed, cam_df["dropped_nals"], width=0.4, alpha=0.7, color=colour, label=f"Cam {cam_id}")
+    for i, cam in enumerate(camera_ids):
+        latency = remove_latency_outliers(df[df["cam"] == cam]["pipeline_ms"])
+        ax.hist(latency, bins=80, alpha=0.55, color=COLOURS[i % len(COLOURS)], label=f"Cam {cam}")
 
-    ax.legend(fontsize=7)
-    style_axis(ax, "Dropped NALs Over Time", xlabel="Elapsed (s)", ylabel="dropped_nals")
-    ax.yaxis.set_major_locator(MaxNLocator(integer=True))
-
-
-def plot_throughput_over_time(ax, df: pd.DataFrame, camera_ids: list):
-    df_copy = df.copy()
-    df_copy["second"] = df_copy["wall_time"].dt.floor(THROUGHPUT_BIN)
-
-    for idx, cam_id in enumerate(camera_ids):
-        cam_tput = df_copy[df_copy["cam"] == cam_id].groupby("second").size()
-        elapsed  = (cam_tput.index - cam_tput.index.min()).total_seconds()
-        colour   = COLOUR_PALETTE[idx % len(COLOUR_PALETTE)]
-        ax.plot(elapsed, cam_tput.values, lw=1.2, color=colour, label=f"Cam {cam_id}", alpha=0.85)
-
-    mean_tput = df_copy.groupby("second").size().mean()
-    ax.axhline(mean_tput, color=TEXT_COLOUR, lw=0.8, linestyle=":", alpha=0.5, label="Overall mean")
-    ax.legend(fontsize=7)
-    style_axis(ax, f"Throughput ({THROUGHPUT_BIN} buckets)", xlabel="Elapsed (s)", ylabel="Rows/s")
+    add_threshold_lines(ax)
+    ax.set_xlabel("pipeline_ms")
+    ax.set_ylabel("Count")
+    ax.legend()
+    save(fig, output_dir, "latency_histogram.png")
 
 
-def plot_rtp_sequence(ax, df: pd.DataFrame, camera_ids: list):
-    for idx, cam_id in enumerate(camera_ids):
-        cam_df  = df[df["cam"] == cam_id].sort_values("wall_time")
-        elapsed = (cam_df["wall_time"] - cam_df["wall_time"].min()).dt.total_seconds()
-        colour  = COLOUR_PALETTE[idx % len(COLOUR_PALETTE)]
-        ax.plot(elapsed, cam_df["rtp_seq"].values, lw=1, color=colour, label=f"Cam {cam_id}", alpha=0.85)
+def graph_latency_percentiles(df, camera_ids, output_dir):
+    fig, ax = new_figure("Latency Percentiles per Camera")
 
-    ax.legend(fontsize=7)
-    style_axis(ax, "RTP Sequence Number Over Time", xlabel="Elapsed (s)", ylabel="rtp_seq")
-
-
-def plot_percentile_bars(ax, df: pd.DataFrame, camera_ids: list):
     percentiles = [50, 90, 95, 99]
     x           = np.arange(len(percentiles))
     bar_width   = 0.8 / len(camera_ids)
 
-    for idx, cam_id in enumerate(camera_ids):
-        cam_ms  = remove_latency_outliers(df[df["cam"] == cam_id]["pipeline_ms"], LATENCY_OUTLIER_IQR)
-        values  = [float(np.percentile(cam_ms, p)) for p in percentiles]
-        colour  = COLOUR_PALETTE[idx % len(COLOUR_PALETTE)]
-        offset  = (idx - len(camera_ids) / 2 + 0.5) * bar_width
-        bars    = ax.bar(x + offset, values, bar_width * 0.9, color=colour, alpha=0.8, label=f"Cam {cam_id}")
+    for i, cam in enumerate(camera_ids):
+        latency = remove_latency_outliers(df[df["cam"] == cam]["pipeline_ms"])
+        values  = [float(np.percentile(latency, p)) for p in percentiles]
+        offset  = (i - len(camera_ids) / 2 + 0.5) * bar_width
+        bars    = ax.bar(x + offset, values, bar_width * 0.9, color=COLOURS[i % len(COLOURS)], alpha=0.8, label=f"Cam {cam}")
 
         for bar, val in zip(bars, values):
-            ax.text(bar.get_x() + bar.get_width() / 2, bar.get_height() + 0.005,
-                    f"{val:.3f}", ha="center", va="bottom", fontsize=6, color=TEXT_COLOUR)
+            ax.text(bar.get_x() + bar.get_width() / 2, bar.get_height() + 0.003,
+                    f"{val:.3f}", ha="center", va="bottom", fontsize=7)
 
     ax.set_xticks(x)
     ax.set_xticklabels([f"p{p}" for p in percentiles])
-    ax.axhline(LATENCY_WARN_MS, color=COLOUR_WARN, lw=1, linestyle="--", alpha=0.7)
-    ax.axhline(LATENCY_CRIT_MS, color=COLOUR_CRIT, lw=1, linestyle="--", alpha=0.7)
-    ax.legend(fontsize=7)
-    style_axis(ax, "Latency Percentiles per Camera", ylabel="pipeline_ms")
+    ax.axhline(LATENCY_WARN_MS, color=WARN_COLOUR, linestyle="--", linewidth=1)
+    ax.axhline(LATENCY_CRIT_MS, color=CRIT_COLOUR, linestyle="--", linewidth=1)
+    ax.set_ylabel("pipeline_ms")
+    ax.legend()
+    save(fig, output_dir, "latency_percentiles.png")
 
 
-# ── Dashboard assembly ─────────────────────────────────────────────────────────
+def graph_throughput(df, camera_ids, output_dir):
+    fig, ax = new_figure(f"Throughput per Camera ({THROUGHPUT_BIN} buckets)")
 
-def build_dashboard(df: pd.DataFrame, file_path: Path):
-    apply_dark_theme()
+    df_copy = df.copy()
+    df_copy["bucket"] = df_copy["wall_time"].dt.floor(THROUGHPUT_BIN)
 
-    camera_ids = sorted(df["cam"].unique().tolist())
-    duration_s = (df["wall_time"].max() - df["wall_time"].min()).total_seconds()
+    for i, cam in enumerate(camera_ids):
+        tput    = df_copy[df_copy["cam"] == cam].groupby("bucket").size()
+        tput    = tput.iloc[1:-1]  # drop first and last partial buckets
+        elapsed = elapsed_seconds(tput.index.to_series())
+        ax.plot(elapsed, tput.values, lw=1.5, color=COLOURS[i % len(COLOURS)], label=f"Cam {cam}")
 
-    fig = plt.figure(figsize=FIGURE_SIZE)
-    fig.patch.set_facecolor(BACKGROUND)
+    ax.set_xlabel("Elapsed (s)")
+    ax.set_ylabel("Rows/s")
+    ax.set_ylim(20, 30)
+    ax.legend()
+    save(fig, output_dir, "throughput.png")
 
-    header_text = (
-        f"  {file_path.name}   |   "
-        f"Cameras: {camera_ids}   |   "
-        f"Duration: {duration_s:.1f}s   |   "
-        f"Rows: {len(df):,}   |   "
-        f"Warn >{LATENCY_WARN_MS}ms  Crit >{LATENCY_CRIT_MS}ms   |   "
-        f"Skip first {SKIP_FIRST_SECONDS}s  ·  Outlier fence IQR×{LATENCY_OUTLIER_IQR}"
-    )
-    fig.suptitle(header_text, fontsize=8, color=TEXT_COLOUR, x=0.01, ha="left",
-                 fontfamily="monospace", y=0.99)
 
-    gs = gridspec.GridSpec(3, 3, figure=fig, hspace=0.55, wspace=0.35,
-                           left=0.06, right=0.97, top=0.95, bottom=0.05)
+def graph_dropped_nals(df, camera_ids, output_dir):
+    fig, ax = new_figure("Dropped NALs Over Time")
 
-    plot_latency_over_time(   fig.add_subplot(gs[0, :2]), df, camera_ids)
-    plot_latency_histogram(   fig.add_subplot(gs[0, 2]),  df, camera_ids)
-    plot_throughput_over_time(fig.add_subplot(gs[1, :2]), df, camera_ids)
-    plot_latency_boxplot(     fig.add_subplot(gs[1, 2]),  df, camera_ids)
-    plot_rtp_sequence(        fig.add_subplot(gs[2, 0]),  df, camera_ids)
-    plot_dropped_nals_over_time(fig.add_subplot(gs[2, 1]), df, camera_ids)
-    plot_percentile_bars(     fig.add_subplot(gs[2, 2]),  df, camera_ids)
+    full_elapsed = elapsed_seconds(df["wall_time"])
+    x_max = full_elapsed.max()
 
-    return fig
+    for i, cam in enumerate(camera_ids):
+        cam_df  = df[df["cam"] == cam]
+        drops   = cam_df[cam_df["dropped_nals"] > 0]
+        elapsed = (drops["wall_time"] - df["wall_time"].min()).dt.total_seconds()
+        ax.bar(elapsed, drops["dropped_nals"], width=0.4, color=COLOURS[i % len(COLOURS)], alpha=0.7, label=f"Cam {cam}")
+
+    ax.set_xlim(0, x_max)
+    ax.set_xlabel("Elapsed (s)")
+    ax.set_ylabel("dropped_nals")
+    ax.legend()
+    save(fig, output_dir, "dropped_nals.png")
+
+
+def graph_summary_table(df, camera_ids, output_dir):
+    per_cam = {}
+    for cam in camera_ids:
+        lat = df[df["cam"] == cam]["pipeline_ms"]
+        per_cam[cam] = {"mean": lat.mean(), "min": lat.min(), "max": lat.max()}
+
+    bar_labels = [f"Cam {c}" for c in camera_ids] + ["All"]
+    all_lat    = df["pipeline_ms"]
+
+    mins  = [per_cam[c]["min"]  for c in camera_ids] + [all_lat.min()]
+    maxs  = [per_cam[c]["max"]  for c in camera_ids] + [all_lat.max()]
+    means = [per_cam[c]["mean"] for c in camera_ids] + [all_lat.mean()]
+
+    n_bars  = len(bar_labels)
+    colours = [COLOURS[i % len(COLOURS)] for i in range(n_bars)]
+    x       = np.arange(n_bars)
+    bar_w   = 0.6
+
+    fig, axes = plt.subplots(1, 3, figsize=(max(14, n_bars * 1.5 + 6), 5), sharey=False)
+    fig.suptitle("Pipeline Latency Summary (ms)", fontsize=12, fontweight="bold")
+
+    for ax, stat_vals, stat_label in zip(axes, [mins, maxs, means], ["Min", "Max", "Mean"]):
+        bars = ax.bar(x, stat_vals, bar_w, color=colours, alpha=0.82, edgecolor="white", linewidth=0.5)
+        for bar, val in zip(bars, stat_vals):
+            ax.text(bar.get_x() + bar.get_width() / 2, bar.get_height() / 2,
+                    f"{val:.3f}", ha="center", va="center", fontsize=8, color="white", fontweight="bold")
+        ax.set_title(stat_label, fontsize=11, fontweight="bold")
+        ax.set_xticks(x)
+        ax.set_xticklabels(bar_labels, rotation=20, ha="right", fontsize=9)
+        ax.set_ylabel("ms")
+        ax.grid(True, axis="y", linestyle="--", alpha=0.4)
+        ax.spines["top"].set_visible(False)
+        ax.spines["right"].set_visible(False)
+
+    handles = [plt.Rectangle((0, 0), 1, 1, color=colours[i]) for i in range(n_bars)]
+    fig.legend(handles, bar_labels, title="Camera", fontsize=8, title_fontsize=8,
+               loc="lower center", ncol=n_bars, bbox_to_anchor=(0.5, -0.02))
+
+    fig.tight_layout(rect=[0, 0.08, 1, 1])
+    fig.savefig(output_dir / "summary_table.png", dpi=150, bbox_inches="tight")
+    plt.close(fig)
+    print("  Saved: summary_table.png")
+
+
+def graph_rtp_sequence(df, camera_ids, output_dir):
+    fig, ax = new_figure("RTP Sequence Number Over Time")
+
+    for i, cam in enumerate(camera_ids):
+        cam_df  = df[df["cam"] == cam].sort_values("wall_time")
+        elapsed = elapsed_seconds(cam_df["wall_time"])
+        ax.plot(elapsed, cam_df["rtp_seq"].values, lw=1.2, color=COLOURS[i % len(COLOURS)], label=f"Cam {cam}")
+
+    ax.set_xlabel("Elapsed (s)")
+    ax.set_ylabel("rtp_seq")
+    ax.legend()
+    save(fig, output_dir, "rtp_sequence.png")
 
 
 # ── Main ───────────────────────────────────────────────────────────────────────
@@ -282,22 +252,28 @@ def build_dashboard(df: pd.DataFrame, file_path: Path):
 def main():
     if len(sys.argv) > 1:
         file_path = Path(sys.argv[1])
-        if not file_path.exists():
-            raise FileNotFoundError(f"File not found: {file_path}")
     else:
         file_path = find_newest_log(LOG_DIR)
 
-    df = load_and_parse_log(file_path)
-    df = drop_early_timestamps(df, SKIP_FIRST_SECONDS)
+    print(f"Loading: {file_path}")
 
-    fig = build_dashboard(df, file_path)
-    graph_path = "/graphs/sender/"
-    output_path = graph_path.with_suffix(".png")
-    fig.savefig(output_path, dpi=150, bbox_inches="tight", facecolor=BACKGROUND)
+    df         = load_log(file_path)
+    df         = skip_early_rows(df)
+    camera_ids = sorted(df["cam"].unique().tolist())
 
-    plt.tight_layout()
-    plt.show()
+    timestamp  = file_path.stem
+    output_dir = OUTPUT_DIR / timestamp
+    output_dir.mkdir(parents=True, exist_ok=True)
 
+    print(f"Saving graphs to: {output_dir}\n")
+
+    graph_latency_over_time(df, camera_ids, output_dir)
+    graph_latency_histogram(df, camera_ids, output_dir)
+    graph_latency_percentiles(df, camera_ids, output_dir)
+    graph_throughput(df, camera_ids, output_dir)
+    graph_dropped_nals(df, camera_ids, output_dir)
+    graph_rtp_sequence(df, camera_ids, output_dir)
+    graph_summary_table(df, camera_ids, output_dir)
 
 if __name__ == "__main__":
     main()
