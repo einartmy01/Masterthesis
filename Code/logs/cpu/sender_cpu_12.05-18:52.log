@@ -1,0 +1,8 @@
+Linux 7.0.0-15-generic (bruker-ThinkPad-P14s-Gen-3) 	05/12/2026 	_x86_64_	(16 CPU)
+
+06:52:52 PM   UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+06:52:53 PM     0     18918  430.69   30.69    0.00    0.00  461.39     6  python3
+06:52:54 PM     0     18918  483.00    7.00    0.00    0.00  490.00     6  python3
+06:52:55 PM     0     18918  518.00   11.00    0.00    0.00  529.00     6  python3
+
+Average:        0     18918  477.08   16.28    0.00    0.00  493.36     -  python3
