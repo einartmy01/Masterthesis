@@ -17,14 +17,16 @@ from gi.repository import Gst, GLib
 CAM_IP0      = "192.168.0.100"
 CAM_IP1      = "192.168.1.101"
 CAM_IP2      = "192.168.2.102"
-CAM_IPs      = [CAM_IP0, CAM_IP1, CAM_IP2]
+CAM_IPs      = [CAM_IP0,CAM_IP1, CAM_IP2]
 USER         = "admin"
 PASS         = "NilsNils"
 RTSP_PORT    = "554"
-INTERFACES   = ["eth0", "eth1", "enp0s31f6"]
+#INTERFACES   = ["eth0", "eth1", "enp0s31f6"]
+INTERFACES   = ["enx0c3796ba2d67","enx0c3796ba2d6a", "enp0s31f6"]
 LOCAL_IPS    = ["192.168.0.50/24", "192.168.1.50/24", "192.168.2.50/24"]
-#RECEIVER_IP  = "172.30.154.249"
-RECEIVER_IP  = "100.92.97.93"
+#RECEIVER_IP  = "172.30.154.249" # Private laptop
+#RECEIVER_IP  = "100.92.97.93" # Thinkpad laptop
+RECEIVER_IP   = "100.70.208.109" # DELL laptop
 RTP_PORTS    = ["5000", "5002", "5004"]
 # ─────────────────────────────────────────────────────────────────────────────
 
@@ -88,11 +90,10 @@ def start_writer_thread(pipeline_writer, transit_writer):
 
 # ── CSV logging setup ─────────────────────────────────────────────────────────
 
-def open_csv_logs():
+def open_csv_logs(timestamp):
     os.makedirs("logs/pipeline/sender", exist_ok=True)
     os.makedirs("logs/transit", exist_ok=True)
 
-    timestamp = datetime.now().strftime("%d.%m-%H:%M")
 
     pipeline_path   = f"logs/pipeline/sender/send_pipe_{timestamp}.csv"
     pipeline_file   = open(pipeline_path, "w", newline="")
@@ -111,6 +112,40 @@ def open_csv_logs():
     transit_writer.writerow(["abs_time", "cam_index", "rtp_seq"])
 
     return (pipeline_file, pipeline_writer), (transit_file, transit_writer)
+
+# ── Throughput logging ────────────────────────────────────────────────────────
+
+def throughput_logger(interfaces, interval=1.0):
+    os.makedirs("logs/throughput", exist_ok=True)
+    timestamp = datetime.now().strftime("%d.%m-%H:%M")
+    path = f"logs/throughput/sender_throughput_{timestamp}.csv"
+    with open(path, "w", newline="") as f:
+        w = csv.writer(f)
+        w.writerow(["wall_time", "iface", "tx_mbps", "rx_mbps"])
+        prev = {}
+        while True:
+            with open("/proc/net/dev") as nd:
+                for line in nd:
+                    parts = line.split()
+                    if not parts:
+                        continue
+                    iface = parts[0].rstrip(":")
+                    if iface not in interfaces:
+                        continue
+                    rx, tx = int(parts[1]), int(parts[9])
+                    if iface in prev:
+                        pr, pt = prev[iface]
+                        tx_mbps = (tx - pt) * 8 / interval / 1_000_000
+                        rx_mbps = (rx - pr) * 8 / interval / 1_000_000
+                        w.writerow([
+                            datetime.now().strftime("%H:%M:%S"),
+                            iface,
+                            f"{tx_mbps:.3f}",
+                            f"{rx_mbps:.3f}",
+                        ])
+                    prev[iface] = (rx, tx)
+            f.flush()
+            time.sleep(interval)
 
 # ── RTP header reader ─────────────────────────────────────────────────────────
 
@@ -217,12 +252,29 @@ def main():
     setup_network()
     check_cameras()
 
-    (pipeline_file, pipeline_writer), (transit_file, transit_writer) = open_csv_logs()
+    timestamp = datetime.now().strftime("%d.%m-%H:%M")
+
+    (pipeline_file, pipeline_writer), (transit_file, transit_writer) = open_csv_logs(timestamp)
     start_writer_thread(pipeline_writer, transit_writer)
 
     Gst.init(None)
     pipeline = Gst.parse_launch(build_pipeline())
     attach_probes(pipeline)
+
+    # CPU logging with mpstat in background
+    cpu_log = open(f"logs/cpu_sender_{timestamp}.log", "w")
+    cpu_proc = subprocess.Popen(
+        ["mpstat", "-P", "ALL", "1"],
+        stdout=cpu_log, stderr=subprocess.DEVNULL
+    )
+    
+    # Throughput logging in background
+    throughput_thread = threading.Thread(
+        target=throughput_logger,
+        args=(INTERFACES, 1.0),
+        daemon=True
+    )
+    throughput_thread.start()
 
     pipeline.set_state(Gst.State.PLAYING)
     print("Sender running — logging per-stage latency and RTP transit timestamps.")
@@ -240,6 +292,9 @@ def main():
         transit_file.flush()
         pipeline_file.close()
         transit_file.close()
+        cpu_proc.terminate()
+        cpu_proc.wait()
+        cpu_log.close()
         print("CSV logs saved.")
 
 if __name__ == "__main__":
