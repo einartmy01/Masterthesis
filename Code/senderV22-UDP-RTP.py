@@ -16,13 +16,13 @@ from gi.repository import Gst, GLib
 # ── Config ────────────────────────────────────────────────────────────────────
 CAM_IP0        = "192.168.0.100"
 CAM_IP1        = "192.168.1.101"
-CAM_IP2        = "192.168.2.102"
+CAM_IP2        = "192.168.3.103"
 CAM_IPs        = [CAM_IP0, CAM_IP1, CAM_IP2]
 USER           = "admin"
 PASS           = "NilsNils"
 RTSP_PORT      = "554"
 INTERFACES     = ["enx0c3796ba2d67", "enx0c3796ba2d6a", "enp0s31f6"]
-LOCAL_IPS      = ["192.168.0.50/24", "192.168.1.50/24", "192.168.2.50/24"]
+LOCAL_IPS      = ["192.168.0.50/24", "192.168.1.50/24", "192.168.3.50/24"]
 #RECEIVER_IP   = "172.30.154.249" # Private laptop
 #RECEIVER_IP   = "100.92.97.93"  # Thinkpad laptop
 RECEIVER_IP    = "100.70.208.109" # DELL laptop
@@ -38,6 +38,8 @@ def setup_network():
         subprocess.run(["sudo", "ip", "addr", "flush", "dev", INTERFACES[i]], check=True)
         subprocess.run(["sudo", "ip", "addr", "add", LOCAL_IPS[i], "dev", INTERFACES[i]], check=True)
         subprocess.run(["sudo", "ip", "link", "set", INTERFACES[i], "up"], check=True)
+    #subprocess.run(["sudo", "ip", "route", "add", "192.168.2.1", "dev", "enxe694d23adffb"], check=True)
+
 
 def check_cameras():
     print("Checking camera reachability...")
