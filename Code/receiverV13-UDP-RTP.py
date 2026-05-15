@@ -166,23 +166,16 @@ def make_udpsrc_probe(cam_idx):
         if seq is None:
             return Gst.PadProbeReturn.OK
 
-        if expecting_first[0]:
+        if marker:
             frame_counter[0] += 1
             fidx = frame_counter[0]
-            t    = _mono()
-
-            _full_q.append((t, fidx))
-
             transit_csv_queue.append((
                 f"{_wtime():.6f}",
                 cam_idx,
                 fidx,
                 seq,
             ))
-            expecting_first[0] = False
-
-        if marker:
-            expecting_first[0] = True
+            _full_q.append((_mono(), fidx))
 
         return Gst.PadProbeReturn.OK
     return probe_cb
