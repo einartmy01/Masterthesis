@@ -38,7 +38,6 @@ def setup_network():
         subprocess.run(["sudo", "ip", "addr", "flush", "dev", INTERFACES[i]], check=True)
         subprocess.run(["sudo", "ip", "addr", "add", LOCAL_IPS[i], "dev", INTERFACES[i]], check=True)
         subprocess.run(["sudo", "ip", "link", "set", INTERFACES[i], "up"], check=True)
-    #subprocess.run(["sudo", "ip", "route", "add", "192.168.2.1", "dev", "enxe694d23adffb"], check=True)
 
 
 def check_cameras():
