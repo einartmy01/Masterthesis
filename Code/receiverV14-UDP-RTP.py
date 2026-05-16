@@ -28,11 +28,6 @@ BRISQUE_SAMPLE_EVERY = 5
 # ── Pipeline ──────────────────────────────────────────────────────────────────
 
 def build_pipeline():
-    """
-    For each camera we tee the decoded video into:
-      - xvimagesink  (display, unchanged)
-      - appsink      (BRISQUE quality measurement)
-    """
     parts = []
     for i, port in enumerate(RTP_PORTS):
         parts.append(
@@ -105,7 +100,7 @@ def open_csv_logs():
     full_path = f"logs/pipeline/receiver/rec_full_{ts}.csv"
     full_f    = open(full_path, "w", newline="")
     full_w    = csv.writer(full_f)
-    full_w.writerow(["wall_time", "cam_index", "frame_in", "frame_out", "full_ms", "skipped"])
+    full_w.writerow(["wall_time", "cam_index", "full_ms", "skipped"])
 
     transit_path = f"logs/transit/rec_transit_{ts}.csv"
     transit_f    = open(transit_path, "w", newline="")
@@ -145,7 +140,7 @@ def read_rtp_header(buf):
 
 # ── Per-camera timing state ───────────────────────────────────────────────────
 
-full_in_queues = [deque() for _ in RTP_PORTS]   # (mono_t, frame_in)
+full_in_queues = [deque() for _ in RTP_PORTS]   # mono_t
 
 
 # ── udpsrc probe — one timestamp per frame ────────────────────────────────────
@@ -155,7 +150,6 @@ def make_udpsrc_probe(cam_idx):
     _wtime          = time.time
     _full_q         = full_in_queues[cam_idx]
     expecting_first = [True]
-    frame_counter   = [0]
 
     def probe_cb(pad, info):
         buf = info.get_buffer()
@@ -175,10 +169,7 @@ def make_udpsrc_probe(cam_idx):
 
         # ── Pipeline latency: first NAL of each frame only ───────────────────
         if expecting_first[0]:
-            frame_counter[0] += 1
-            fidx = frame_counter[0]
-            t    = _mono()
-            _full_q.append((t, fidx))
+            _full_q.append(_mono())
             expecting_first[0] = False
 
         if marker:
@@ -193,7 +184,6 @@ def make_udpsrc_probe(cam_idx):
 def make_sink_probe(cam_idx):
     _mono        = time.monotonic
     _full_q      = full_in_queues[cam_idx]
-    frame_out    = [0]
     initialized  = [False]
 
     def process_one_frame():
@@ -212,16 +202,13 @@ def make_sink_probe(cam_idx):
             _full_q.popleft()
             skipped += 1
 
-        t_start, frame_in = _full_q.popleft()
-        frame_out[0] += 1
+        t_start = _full_q.popleft()
 
         full_ms = (t_now - t_start) * 1000
 
         full_csv_queue.append((
             datetime.now().strftime("%H:%M:%S.%f")[:-3],
             cam_idx,
-            frame_in,
-            frame_out[0],
             f"{full_ms:.4f}",
             skipped,
         ))
