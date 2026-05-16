@@ -5,14 +5,14 @@ analyse_receiver_pipeline.py
 Analyses receiver pipeline logs from ../logs/pipeline/receiver/.
 
 Expects three files per test run, matched by date+time suffix:
-    rec_network_DD.MM-HH:MM.csv
+    rec_depay_DD.MM-HH:MM.csv
     rec_full_DD.MM-HH:MM.csv
     rec_decoder_DD.MM-HH:MM.csv
 
 Usage:
     python analyse_receiver_pipeline.py                    # newest matched set
     python analyse_receiver_pipeline.py 07.05-15:45       # specific suffix
-    python analyse_receiver_pipeline.py path/to/rec_network_07.05-15:45.csv  # any one file of the set
+    python analyse_receiver_pipeline.py path/to/rec_depay_07.05-15:45.csv  # any one file of the set
 
 Output:
     - Colour-coded terminal summary
@@ -35,12 +35,12 @@ import numpy as np
 
 LOG_DIR = Path("../logs/pipeline/receiver")
 
-NETWORK_MS_WARN  = 1.0
-NETWORK_MS_CRIT  = 5.0
-FULL_MS_WARN     = 5.0
-FULL_MS_CRIT     = 20.0
-DECODER_MS_WARN  = 20.0
-DECODER_MS_CRIT  = 50.0
+DEPAY_MS_WARN  = 1.0
+DEPAY_MS_CRIT  = 5.0
+DECODER_MS_WARN  = 5.0
+DECODER_MS_CRIT  = 20.0
+FULL_MS_WARN     = 10.0
+FULL_MS_CRIT     = 25.0
 RTP_GAP_THRESHOLD = 15
 
 # ──────────────────────────────────────────────────────────────────────────────
@@ -71,7 +71,7 @@ def section(title):
 # File discovery & validation
 # ──────────────────────────────────────────────────────────────────────────────
 
-SUFFIX_RE = re.compile(r"rec_(?:network|full|decoder)_(\d{2}\.\d{2}-\d{2}:\d{2})\.csv$")
+SUFFIX_RE = re.compile(r"rec_(?:depay|full|decoder)_(\d{2}\.\d{2}-\d{2}:\d{2})\.csv$")
 
 def all_suffixes(log_dir: Path) -> list[str]:
     """Return all unique date-time suffixes that have all three files present."""
@@ -81,10 +81,10 @@ def all_suffixes(log_dir: Path) -> list[str]:
         if m:
             suffix = m.group(1)
             # extract log type: rec_<type>_<suffix>.csv → strip suffix, strip "rec_"
-            log_type = f.name[4:].replace(f"_{suffix}.csv", "")  # network / full / decoder
+            log_type = f.name[4:].replace(f"_{suffix}.csv", "")  # depay / full / decoder
             found.setdefault(suffix, set()).add(log_type)
     complete = [s for s, kinds in found.items()
-                if {"network", "full", "decoder"}.issubset(kinds)]
+                if {"depay", "full", "decoder"}.issubset(kinds)]
     return sorted(complete)
 
 
@@ -92,20 +92,20 @@ def newest_suffix(log_dir: Path) -> str:
     suffixes = all_suffixes(log_dir)
     if not suffixes:
         raise FileNotFoundError(
-            f"No complete rec_network/full/decoder triplet found in {log_dir}"
+            f"No complete rec_depay/full/decoder triplet found in {log_dir}"
         )
     # Pick by newest mtime among the three files of each suffix
     def triplet_mtime(s):
         return max(
             (log_dir / f"rec_{k}_{s}.csv").stat().st_mtime
-            for k in ("network", "full", "decoder")
+            for k in ("depay", "full", "decoder")
         )
     return max(suffixes, key=triplet_mtime)
 
 
 def resolve_suffix(arg: str | None, log_dir: Path) -> tuple[str, Path, Path, Path]:
     """
-    Return (suffix, network_path, full_path, decoder_path).
+    Return (suffix, depay_path, full_path, decoder_path).
     arg can be None (newest), a bare suffix, or a path to any one of the three files.
     """
     if arg is None:
@@ -122,7 +122,7 @@ def resolve_suffix(arg: str | None, log_dir: Path) -> tuple[str, Path, Path, Pat
         else:
             suffix = arg  # bare suffix passed directly
 
-    paths = {k: log_dir / f"rec_{k}_{suffix}.csv" for k in ("network", "full", "decoder")}
+    paths = {k: log_dir / f"rec_{k}_{suffix}.csv" for k in ("depay", "full", "decoder")}
     missing = [k for k, p in paths.items() if not p.exists()]
     if missing:
         raise FileNotFoundError(
@@ -134,7 +134,7 @@ def resolve_suffix(arg: str | None, log_dir: Path) -> tuple[str, Path, Path, Pat
     for k, p in paths.items():
         cprint(f"       {k:10}: {p.name}", GREY)
 
-    return suffix, paths["network"], paths["full"], paths["decoder"]
+    return suffix, paths["depay"], paths["full"], paths["decoder"]
 
 
 # ──────────────────────────────────────────────────────────────────────────────
@@ -283,7 +283,7 @@ def analyse(suffix, net: pd.DataFrame, full: pd.DataFrame, dec: pd.DataFrame,
         "suffix": suffix,
         "generated_at": datetime.now().isoformat(timespec="seconds"),
         "files": {
-            "network": net_path.name,
+            "depay": net_path.name,
             "full":    net_path.with_name(f"rec_full_{suffix}.csv").name,
             "decoder": net_path.with_name(f"rec_decoder_{suffix}.csv").name,
         }
@@ -303,27 +303,39 @@ def analyse(suffix, net: pd.DataFrame, full: pd.DataFrame, dec: pd.DataFrame,
         }
 
     report["overview"] = {k: overview(df, k)
-                          for k, df in [("network", net), ("full", full), ("decoder", dec)]}
+                          for k, df in [("depay", net), ("full", full), ("decoder", dec)]}
 
     w = 12
     cprint(f"  {'log':22}  {'rows':>{w}}  {'duration':>{w}}  {'start':>{w}}  {'end':>{w}}", bold=True)
-    for label, df in [("network", net), ("full", full), ("decoder", dec)]:
+    for label, df in [("depay", net), ("full", full), ("decoder", dec)]:
         o = report["overview"][label]
         print(f"  {label:22}  {o['rows']:>{w},}  {o['duration_s']:>{w}.1f}s"
               f"  {o['start']:>{w}}  {o['end']:>{w}}")
 
-    # ── Network latency ───────────────────────────────────────────────────────
-    section("NETWORK LATENCY  (network_ms)")
-    net_stats = spike_stats(net["network_ms"], NETWORK_MS_WARN, NETWORK_MS_CRIT)
-    print_latency_block(net_stats, NETWORK_MS_WARN, NETWORK_MS_CRIT)
-    report["network_latency"] = {"global": net_stats}
+    # ── depay latency ───────────────────────────────────────────────────────
+    section("DEPAY LATENCY  (depay_ms)")
+    net_stats = spike_stats(net["depay_ms"], DEPAY_MS_WARN, DEPAY_MS_CRIT)
+    print_latency_block(net_stats, DEPAY_MS_WARN, DEPAY_MS_CRIT)
+    report["depay_latency"] = {"global": net_stats}
 
-    section("NETWORK LATENCY — per camera")
-    report["network_latency"]["per_cam"] = per_cam_latency(
-        net, "network_ms", NETWORK_MS_WARN, NETWORK_MS_CRIT)
+    section("DEPAY LATENCY — per camera")
+    report["depay_latency"]["per_cam"] = per_cam_latency(
+        net, "depay_ms", DEPAY_MS_WARN, DEPAY_MS_CRIT)
 
-    section("NETWORK — RTP SEQUENCE GAPS")
-    report["network_rtp_gaps"] = rtp_gap_section(net)
+    section("DEPAY — RTP SEQUENCE GAPS")
+    report["depay_rtp_gaps"] = rtp_gap_section(net)
+
+
+    # ── Decoder latency ───────────────────────────────────────────────────────
+    section("DECODER LATENCY  (decoder_ms)")
+    dec_stats = spike_stats(dec["decoder_ms"], DECODER_MS_WARN, DECODER_MS_CRIT)
+    print_latency_block(dec_stats, DECODER_MS_WARN, DECODER_MS_CRIT)
+    report["decoder_latency"] = {"global": dec_stats}
+
+    section("DECODER LATENCY — per camera")
+    report["decoder_latency"]["per_cam"] = per_cam_latency(
+        dec, "decoder_ms", DECODER_MS_WARN, DECODER_MS_CRIT)
+    
 
     # ── Full pipeline latency ─────────────────────────────────────────────────
     section("FULL PIPELINE LATENCY  (full_ms)")
@@ -335,20 +347,11 @@ def analyse(suffix, net: pd.DataFrame, full: pd.DataFrame, dec: pd.DataFrame,
     report["full_latency"]["per_cam"] = per_cam_latency(
         full, "full_ms", FULL_MS_WARN, FULL_MS_CRIT)
 
-    # ── Decoder latency ───────────────────────────────────────────────────────
-    section("DECODER LATENCY  (decoder_ms)")
-    dec_stats = spike_stats(dec["decoder_ms"], DECODER_MS_WARN, DECODER_MS_CRIT)
-    print_latency_block(dec_stats, DECODER_MS_WARN, DECODER_MS_CRIT)
-    report["decoder_latency"] = {"global": dec_stats}
-
-    section("DECODER LATENCY — per camera")
-    report["decoder_latency"]["per_cam"] = per_cam_latency(
-        dec, "decoder_ms", DECODER_MS_WARN, DECODER_MS_CRIT)
 
     # ── Dropped packets ───────────────────────────────────────────────────────
     section("DROPPED PACKETS — all logs")
     report["dropped"] = {
-        "network": drop_summary(net,  "rec_network"),
+        "depay": drop_summary(net,  "rec_depay"),
         "full":    drop_summary(full, "rec_full"),
         "decoder": drop_summary(dec,  "rec_decoder"),
     }
@@ -363,7 +366,7 @@ def analyse(suffix, net: pd.DataFrame, full: pd.DataFrame, dec: pd.DataFrame,
     # ── Throughput ────────────────────────────────────────────────────────────
     section("THROUGHPUT (rows/sec per log)")
     report["throughput"] = {}
-    for label, df in [("network", net), ("full", full), ("decoder", dec)]:
+    for label, df in [("depay", net), ("full", full), ("decoder", dec)]:
         df2 = df.copy()
         df2["second"] = df2["wall_time"].dt.floor("s")
         tput = df2.groupby("second").size()
@@ -384,7 +387,7 @@ def analyse(suffix, net: pd.DataFrame, full: pd.DataFrame, dec: pd.DataFrame,
 
     issues = []
     for log_name, ms_col, warn, crit, stats in [
-        ("network",  "network_ms", NETWORK_MS_WARN,  NETWORK_MS_CRIT,  net_stats),
+        ("depay",  "depay_ms", DEPAY_MS_WARN,  DEPAY_MS_CRIT,  net_stats),
         ("full",     "full_ms",    FULL_MS_WARN,      FULL_MS_CRIT,     full_stats),
         ("decoder",  "decoder_ms", DECODER_MS_WARN,   DECODER_MS_CRIT,  dec_stats),
     ]:
@@ -400,10 +403,10 @@ def analyse(suffix, net: pd.DataFrame, full: pd.DataFrame, dec: pd.DataFrame,
             issues.append(f"WARNING  [{log_name}] {d['total']} dropped packets "
                           f"across {d['rows_with_drops']} rows")
 
-    for cam_id, g in report["network_rtp_gaps"].items():
+    for cam_id, g in report["depay_rtp_gaps"].items():
         n = g[f"gaps_above_{RTP_GAP_THRESHOLD}"]
         if n > 0:
-            issues.append(f"NOTICE   [network] cam {cam_id}: {n} RTP gaps > {RTP_GAP_THRESHOLD}")
+            issues.append(f"NOTICE   [depay] cam {cam_id}: {n} RTP gaps > {RTP_GAP_THRESHOLD}")
 
     for label, t in report["throughput"].items():
         if t["low_seconds"] > 5:

@@ -35,8 +35,8 @@ RTP_PORTS      = ["5000", "5002", "5004"]
 def setup_network():
     print("Configuring sender network...")
     for i in range(len(CAM_IPs)):
-        subprocess.run(["sudo", "ip", "addr", "flush", "dev", INTERFACES[i]], check=True)
-        subprocess.run(["sudo", "ip", "addr", "add", LOCAL_IPS[i], "dev", INTERFACES[i]], check=True)
+        #subprocess.run(["sudo", "ip", "addr", "flush", "dev", INTERFACES[i]], check=True)
+        subprocess.run(["sudo", "ip", "addr", "replace", LOCAL_IPS[i], "dev", INTERFACES[i]], check=True)
         subprocess.run(["sudo", "ip", "link", "set", INTERFACES[i], "up"], check=True)
 
 
@@ -59,9 +59,9 @@ def build_pipeline():
             f'rtph264depay name=depay{i} ! '
             f'h264parse ! '
             f'queue max-size-buffers=2 max-size-bytes=0 max-size-time=0 leaky=downstream ! '
-            f'avdec_h264 max-threads=1 ! '
+            f'avdec_h264 ! '
             f'videoconvert ! '
-            f'x264enc tune=zerolatency bitrate=5000 speed-preset=ultrafast key-int-max=30 ! '
+            f'x264enc tune=zerolatency bitrate=8000 speed-preset=ultrafast key-int-max=30 threads=0 ! '
             f'h264parse ! '
             f'queue max-size-buffers=2 max-size-bytes=0 max-size-time=0 leaky=downstream ! '
             f'rtph264pay config-interval=1 pt=96 name=pay{i} ! '
@@ -257,7 +257,7 @@ def main():
     os.makedirs("logs/cpu", exist_ok=True)
     cpu_log = open(f"logs/cpu/sender_cpu_{timestamp}.log", "w")
     cpu_proc = subprocess.Popen(
-        ["pidstat", "-u", "-p", str(os.getpid()), "1"],
+        ["sar", "-u", "ALL", "1"], 
         stdout=cpu_log,
         stderr=subprocess.DEVNULL,
     )

@@ -1,0 +1,82 @@
+{
+  "send_file": "send_transit_10.05-14:01.csv",
+  "rec_file": "rec_transit_10.05-14:01.csv",
+  "generated_at": "2026-05-10T15:10:19",
+  "matching": {
+    "send_packets": 147736,
+    "rec_packets": 147238,
+    "matched": 147238,
+    "unmatched": 498,
+    "loss_pct": 0.337
+  },
+  "transit_global": {
+    "n": 147238,
+    "mean_ms": 21.798,
+    "std_ms": 24.2525,
+    "min_ms": 5.5041,
+    "max_ms": 236.7702,
+    "p50": 12.6891,
+    "p90": 44.107,
+    "p95": 63.3798,
+    "p99": 148.0913,
+    "spikes_above_100.0ms": 2825,
+    "spikes_above_100.0ms_pct": 1.919,
+    "spikes_above_500.0ms": 0,
+    "spikes_above_500.0ms_pct": 0.0
+  },
+  "transit_per_cam": {
+    "0": {
+      "n": 49113,
+      "mean_ms": 24.5193,
+      "std_ms": 25.7701,
+      "min_ms": 6.0608,
+      "max_ms": 219.0108,
+      "p50": 13.1218,
+      "p90": 54.1818,
+      "p95": 70.5555,
+      "p99": 148.3118,
+      "spikes_above_100.0ms": 969,
+      "spikes_above_100.0ms_pct": 1.973,
+      "spikes_above_500.0ms": 0,
+      "spikes_above_500.0ms_pct": 0.0
+    },
+    "1": {
+      "n": 49094,
+      "mean_ms": 21.5137,
+      "std_ms": 24.6797,
+      "min_ms": 5.5041,
+      "max_ms": 236.6872,
+      "p50": 12.6444,
+      "p90": 43.4417,
+      "p95": 62.4227,
+      "p99": 144.5645,
+      "spikes_above_100.0ms": 1078,
+      "spikes_above_100.0ms_pct": 2.196,
+      "spikes_above_500.0ms": 0,
+      "spikes_above_500.0ms_pct": 0.0
+    },
+    "2": {
+      "n": 49031,
+      "mean_ms": 19.3567,
+      "std_ms": 21.8576,
+      "min_ms": 5.8129,
+      "max_ms": 236.7702,
+      "p50": 12.4712,
+      "p90": 34.27,
+      "p95": 49.8354,
+      "p99": 150.1308,
+      "spikes_above_100.0ms": 778,
+      "spikes_above_100.0ms_pct": 1.587,
+      "spikes_above_500.0ms": 0,
+      "spikes_above_500.0ms_pct": 0.0
+    }
+  },
+  "clock_sync": {
+    "negative_transit_count": 0,
+    "min_transit_ms": 5.5041
+  },
+  "health": {
+    "status": "OK",
+    "issues": []
+  }
+}
