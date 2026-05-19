@@ -16,15 +16,14 @@ def build_pipeline():
     for i, port in enumerate(RTP_PORTS):
         parts.append(
             f'udpsrc port={port} '
-            f'caps="application/x-rtp, media=video, encoding-name=H264, payload=96" name=src{i} ! '
-            f'rtph264depay name=depay{i} ! '
-            f'h264parse name=parse{i} ! '
-            f'avdec_h264 max-threads=1 skip-frame=default name=decoder{i} ! '
-            f'queue max-size-buffers=3 max-size-bytes=0 max-size-time=0 leaky=downstream name=q_post{i} ! '
-            f'xvimagesink sync=false name=sink{i}'
+            f'caps="application/x-rtp, media=video, encoding-name=H264, payload=96" ! '
+            f'rtph264depay ! '
+            f'h264parse ! '
+            f'avdec_h264 max-threads=1 ! '
+            f'queue max-size-buffers=3 max-size-bytes=0 max-size-time=0 leaky=downstream ! '
+            f'xvimagesink sync=false'
         )
     return " ".join(parts)
-
 # ── Main ──────────────────────────────────────────────────────────────────────
 
 def main():
