@@ -35,8 +35,8 @@ RTP_PORTS      = ["5000", "5002", "5004"]
 def setup_network():
     print("Configuring sender network...")
     for i in range(len(CAM_IPs)):
-        #subprocess.run(["sudo", "ip", "addr", "flush", "dev", INTERFACES[i]], check=True)
-        subprocess.run(["sudo", "ip", "addr", "replace", LOCAL_IPS[i], "dev", INTERFACES[i]], check=True)
+        subprocess.run(["sudo", "ip", "addr", "flush", "dev", INTERFACES[i]], check=True)
+        subprocess.run(["sudo", "ip", "addr", "add", LOCAL_IPS[i], "dev", INTERFACES[i]], check=True)
         subprocess.run(["sudo", "ip", "link", "set", INTERFACES[i], "up"], check=True)
 
 
