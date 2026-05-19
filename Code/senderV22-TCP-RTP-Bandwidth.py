@@ -28,7 +28,89 @@ LOCAL_IPS      = ["192.168.0.50/24", "192.168.1.50/24", "192.168.3.50/24"]
 RECEIVER_IP    = "100.70.208.109" # DELL laptop
 RECEIVER_IFACE = "tailscale0"     # outbound interface to receiver (ip route get 100.70.208.109)
 RTP_PORTS      = ["5000", "5002", "5004"]
+
+# ── Bandwidth limit config ────────────────────────────────────────────────────
+# Set to 0 to disable. This is the effective RTP budget you want in Mbit/s.
+# The script accounts for Tailscale/WireGuard overhead automatically (~8%).
+# Your 3-camera pipeline at bitrate=8000 produces ~24 Mbit/s nominal.
+# Suggested test values: 22.0
+BANDWIDTH_LIMIT_MBIT = 18.0
 # ─────────────────────────────────────────────────────────────────────────────
+
+# ── Bandwidth shaping (tc tbf on outbound interface) ─────────────────────────
+
+# Tailscale wraps packets in WireGuard/UDP/IP — roughly 8% overhead.
+# We inflate the tc rate by this factor so the dial-in number reflects
+# the actual RTP budget, not the encrypted-wire budget.
+TAILSCALE_OVERHEAD_RATIO = 1.08
+
+
+def set_bandwidth_limit(iface: str, rate_mbit: float):
+    """
+    Apply a token-bucket rate limit on *iface*.
+    rate_mbit is the desired *effective RTP* throughput.
+    Pass rate_mbit=0 to remove any existing limit.
+    """
+    # Always delete first — avoids 'qdisc already exists' errors on re-runs
+    # and ensures a clean slate even if a previous run crashed without cleanup.
+    subprocess.run(
+        ["sudo", "tc", "qdisc", "del", "dev", iface, "root"],
+        capture_output=True   # suppress harmless error if no qdisc exists yet
+    )
+
+    if rate_mbit <= 0:
+        print(f"[tc] No bandwidth limit on {iface}")
+        return
+
+    wire_rate_mbit = rate_mbit * TAILSCALE_OVERHEAD_RATIO
+
+    # Burst: at least one full MTU (1500 B), otherwise ~10 ms worth of data.
+    # Too small a burst causes the shaper to drop rather than pace, which
+    # looks like random loss instead of smooth throttling.
+    burst_bytes = max(int(wire_rate_mbit * 1_000_000 / 8 / 100), 1500)
+
+    # latency: max time a packet may wait in the tbf queue before being dropped.
+    # 10ms keeps the queue short — excess packets drop instead of queueing,
+    # which matches real network bottleneck behaviour.
+    result = subprocess.run([
+        "sudo", "tc", "qdisc", "add", "dev", iface, "root",
+        "tbf",
+        "rate",    f"{wire_rate_mbit:.3f}mbit",
+        "burst",   str(burst_bytes),
+        "latency", "10ms",
+    ], capture_output=True, text=True)
+
+    if result.returncode != 0:
+        print(f"[tc] WARNING: failed to apply limit — {result.stderr.strip()}")
+        print(f"[tc] Continuing WITHOUT bandwidth limit.")
+        return
+
+    print(f"[tc] Bandwidth limit active:")
+    print(f"     RTP budget : {rate_mbit:.1f} Mbit/s")
+    print(f"     Wire rate  : {wire_rate_mbit:.2f} Mbit/s (includes Tailscale overhead)")
+    print(f"     Burst      : {burst_bytes} bytes")
+    print(f"     Interface  : {iface}")
+
+
+def clear_bandwidth_limit(iface: str):
+    """Remove any tc qdisc on *iface*. Safe to call even if none is set."""
+    subprocess.run(
+        ["sudo", "tc", "qdisc", "del", "dev", iface, "root"],
+        capture_output=True
+    )
+    print(f"[tc] Bandwidth limit cleared on {iface}")
+
+
+def verify_bandwidth_limit(iface: str):
+    """
+    Print the active tc config — called after set_bandwidth_limit() so you can
+    confirm shaping is live in the terminal output before the pipeline starts.
+    """
+    result = subprocess.run(
+        ["tc", "-s", "qdisc", "show", "dev", iface],
+        capture_output=True, text=True
+    )
+    print(f"[tc] Active qdisc on {iface}:\n{result.stdout.strip()}")
 
 # ── Network setup ─────────────────────────────────────────────────────────────
 
@@ -38,6 +120,11 @@ def setup_network():
         subprocess.run(["sudo", "ip", "addr", "flush", "dev", INTERFACES[i]], check=True)
         subprocess.run(["sudo", "ip", "addr", "add", LOCAL_IPS[i], "dev", INTERFACES[i]], check=True)
         subprocess.run(["sudo", "ip", "link", "set", INTERFACES[i], "up"], check=True)
+
+    # Apply outbound shaping on the receiver-facing interface.
+    # Done here so it's active before the pipeline starts producing traffic.
+    set_bandwidth_limit(RECEIVER_IFACE, BANDWIDTH_LIMIT_MBIT)
+    verify_bandwidth_limit(RECEIVER_IFACE)
 
 
 def check_cameras():
@@ -65,9 +152,11 @@ def build_pipeline():
             f'h264parse ! '
             f'queue max-size-buffers=2 max-size-bytes=0 max-size-time=0 leaky=downstream ! '
             f'rtph264pay config-interval=1 pt=96 name=pay{i} ! '
-            f'udpsink host={RECEIVER_IP} port={RTP_PORTS[i]} sync=false async=false name=udpsink{i}'
+            f'rtpstreampay ! '
+            f'tcpserversink host=0.0.0.0 port={RTP_PORTS[i]} sync=false async=false name=tcpsink{i}'
         )
     return " ".join(parts)
+
 # ── Background writer ─────────────────────────────────────────────────────────
 
 pipeline_queue = deque()
@@ -227,14 +316,14 @@ def make_probe_out(cam_idx):
 def attach_probes(pipeline):
     for i in range(len(CAM_IPs)):
         depay = pipeline.get_by_name(f"depay{i}")
-        sink  = pipeline.get_by_name(f"udpsink{i}")
+        pay   = pipeline.get_by_name(f"pay{i}")
 
         # IN — depay sink (incoming RTP, timestamps on marked/last packets of frame)
         depay.get_static_pad("sink").add_probe(
             Gst.PadProbeType.BUFFER, make_probe_in(i))
 
-        # OUT — udpsink sink (outgoing RTP, logs pipeline_ms on marked packets)
-        sink.get_static_pad("sink").add_probe(
+        # OUT — pay src (plain RTP before rtpstreampay adds 4-byte length prefix)
+        pay.get_static_pad("src").add_probe(
             Gst.PadProbeType.BUFFER | Gst.PadProbeType.BUFFER_LIST,
             make_probe_out(i))
 
@@ -253,11 +342,11 @@ def main():
     pipeline = Gst.parse_launch(build_pipeline())
     attach_probes(pipeline)
 
-    # ── CPU logging — pidstat, one line/sec for this process only ────────────
+    # ── CPU logging — sar, one line/sec ──────────────────────────────────────
     os.makedirs("logs/cpu", exist_ok=True)
     cpu_log = open(f"logs/cpu/sender_cpu_{timestamp}.log", "w")
     cpu_proc = subprocess.Popen(
-        ["sar", "-u", "ALL", "1"], 
+        ["sar", "-u", "ALL", "1"],
         stdout=cpu_log,
         stderr=subprocess.DEVNULL,
     )
@@ -272,6 +361,10 @@ def main():
 
     pipeline.set_state(Gst.State.PLAYING)
     print("Sender running — logging pipeline latency, transit, CPU, and outbound throughput.")
+    if BANDWIDTH_LIMIT_MBIT > 0:
+        print(f"Bandwidth limit : {BANDWIDTH_LIMIT_MBIT:.1f} Mbit/s (effective RTP budget)")
+    else:
+        print("Bandwidth limit : none")
     print("Press Ctrl+C to stop.")
 
     loop = GLib.MainLoop()
@@ -281,6 +374,7 @@ def main():
         print("\nStopping...")
     finally:
         pipeline.set_state(Gst.State.NULL)
+        clear_bandwidth_limit(RECEIVER_IFACE)   # always clean up, even on crash
         time.sleep(0.1)  # let writer thread drain
         pipeline_file.flush()
         transit_file.flush()

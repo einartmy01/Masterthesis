@@ -65,7 +65,8 @@ def build_pipeline():
             f'h264parse ! '
             f'queue max-size-buffers=2 max-size-bytes=0 max-size-time=0 leaky=downstream ! '
             f'rtph264pay config-interval=1 pt=96 name=pay{i} ! '
-            f'udpsink host={RECEIVER_IP} port={RTP_PORTS[i]} sync=false async=false name=udpsink{i}'
+            f'rtpstreampay ! '
+            f'tcpserversink host=0.0.0.0 port={RTP_PORTS[i]} sync=false async=false name=tcpsink{i}'
         )
     return " ".join(parts)
 # ── Background writer ─────────────────────────────────────────────────────────
@@ -227,14 +228,14 @@ def make_probe_out(cam_idx):
 def attach_probes(pipeline):
     for i in range(len(CAM_IPs)):
         depay = pipeline.get_by_name(f"depay{i}")
-        sink  = pipeline.get_by_name(f"udpsink{i}")
+        pay   = pipeline.get_by_name(f"pay{i}")
 
         # IN — depay sink (incoming RTP, timestamps on marked/last packets of frame)
         depay.get_static_pad("sink").add_probe(
             Gst.PadProbeType.BUFFER, make_probe_in(i))
 
-        # OUT — udpsink sink (outgoing RTP, logs pipeline_ms on marked packets)
-        sink.get_static_pad("sink").add_probe(
+        # OUT — pay src (plain RTP before rtpstreampay adds 4-byte length prefix)
+        pay.get_static_pad("src").add_probe(
             Gst.PadProbeType.BUFFER | Gst.PadProbeType.BUFFER_LIST,
             make_probe_out(i))
 

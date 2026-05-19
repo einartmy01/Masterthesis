@@ -61,6 +61,7 @@ def build_pipeline():
             f'queue max-size-buffers=2 max-size-bytes=0 max-size-time=0 leaky=downstream ! '
             f'avdec_h264 ! '
             f'videoconvert ! '
+            f'videoscale ! video/x-raw,width=1920,height=1080 ! '
             f'x264enc tune=zerolatency bitrate=8000 speed-preset=ultrafast key-int-max=30 threads=0 ! '
             f'h264parse ! '
             f'queue max-size-buffers=2 max-size-bytes=0 max-size-time=0 leaky=downstream ! '

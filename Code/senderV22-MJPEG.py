@@ -61,10 +61,10 @@ def build_pipeline():
             f'queue max-size-buffers=2 max-size-bytes=0 max-size-time=0 leaky=downstream ! '
             f'avdec_h264 ! '
             f'videoconvert ! '
-            f'x264enc tune=zerolatency bitrate=8000 speed-preset=ultrafast key-int-max=30 threads=0 ! '
-            f'h264parse ! '
+            f'videoscale ! video/x-raw,width=1920,height=1080 ! '
+            f'jpegenc quality=85 ! '
             f'queue max-size-buffers=2 max-size-bytes=0 max-size-time=0 leaky=downstream ! '
-            f'rtph264pay config-interval=1 pt=96 name=pay{i} ! '
+            f'rtpjpegpay name=pay{i} ! '
             f'udpsink host={RECEIVER_IP} port={RTP_PORTS[i]} sync=false async=false name=udpsink{i}'
         )
     return " ".join(parts)

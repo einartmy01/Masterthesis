@@ -28,6 +28,8 @@ LOCAL_IPS      = ["192.168.0.50/24", "192.168.1.50/24", "192.168.3.50/24"]
 RECEIVER_IP    = "100.70.208.109" # DELL laptop
 RECEIVER_IFACE = "tailscale0"     # outbound interface to receiver (ip route get 100.70.208.109)
 RTP_PORTS      = ["5000", "5002", "5004"]
+SRTP_KEY       = "4142434445464748494A4B4C4D4E4F505152535455565758595A31323334"
+SRTP_SSRC      = [1111111111, 2222222222, 3333333333]
 # ─────────────────────────────────────────────────────────────────────────────
 
 # ── Network setup ─────────────────────────────────────────────────────────────
@@ -65,6 +67,9 @@ def build_pipeline():
             f'h264parse ! '
             f'queue max-size-buffers=2 max-size-bytes=0 max-size-time=0 leaky=downstream ! '
             f'rtph264pay config-interval=1 pt=96 name=pay{i} ! '
+            f'application/x-rtp,payload=(int)96,ssrc=(uint){SRTP_SSRC[i]} ! '
+            f'srtpenc key="{SRTP_KEY}" rtp-cipher=aes-128-icm rtp-auth=hmac-sha1-80 '
+            f'rtcp-cipher=aes-128-icm rtcp-auth=hmac-sha1-80 ! '
             f'udpsink host={RECEIVER_IP} port={RTP_PORTS[i]} sync=false async=false name=udpsink{i}'
         )
     return " ".join(parts)
