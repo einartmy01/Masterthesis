@@ -61,7 +61,7 @@ def build_pipeline():
             f'queue max-size-buffers=2 max-size-bytes=0 max-size-time=0 leaky=downstream ! '
             f'avdec_h264 ! '
             f'videoconvert ! '
-            f'x264enc tune=zerolatency bitrate=8000 speed-preset=ultrafast key-int-max=30 threads=0 ! '
+            f'x264enc tune=zerolatency bitrate=8000 speed-preset=ultrafast key-int-max=15 threads=0 ! '
             f'h264parse ! '
             f'queue max-size-buffers=2 max-size-bytes=0 max-size-time=0 leaky=downstream ! '
             f'rtph264pay config-interval=1 pt=96 name=pay{i} ! '
