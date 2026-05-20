@@ -1,15 +1,183 @@
 \section{Theory}
 This chapter presents the theoretical background needed to understand the work carried out in this thesis. It covers the principles of Automatic Train Operation and the role of remote driving within that framework, the fundamentals of video streaming including codecs and transport protocols, an introduction to GStreamer as the core technology used in the pipeline, the main sources of latency in a streaming system, and relevant characteristics of the communication technologies used in testing.
 
-\subsection{ATO}
-\subsubsection{Grades of Automation}
-\subsubsection{Role of Remote Driving in Automated Railway Systems}
-\subsubsection{Remote Driving in GoA Levels}
+\subsection{Remote Train Operations}\label{sec:rto}
+ 
+Remote Train Operations (RTO) refers to the ability to monitor and control a train from a location
+outside the cab, typically a centralised control room, using live video feeds and remote control
+interfaces. As railways move toward higher levels of automation, RTO has become an important
+part of safe and practical deployment. It allows human operators to intervene when automated
+systems encounter situations they cannot handle on their own, and it serves as a required fallback
+layer for trains operating without a driver or on-board staff\cite{jurgensen2025, fp2r2dato2023d5_4}.
+ 
+% ─────────────────────────────────────────────────────────────────────────────
+\subsubsection{Grades of Automation}\label{subsec:goa}
+ 
+The Grade of Automation (GoA) is a classification system defined in the international standard
+IEC~62290--1 that describes how much of the train's operation is handled automatically versus by
+a human\cite{iec62290}. The standard defines five levels, from GoA~0 to GoA~4, where each
+higher level shifts more responsibility from the driver to the automated system. Table~\ref{tab:goa}
+summarises the levels.
+ 
+\begin{table}[h]
+\centering
+\caption{Grades of Automation as defined in IEC~62290--1\cite{iec62290, uitp2018}.}\label{tab:goa}
+    \begin{tabular}{p{1.2cm} p{2.8cm} p{8cm}}
+    \toprule
+    \textbf{GoA} & \textbf{Name} & \textbf{Description} \\
+    \midrule
+    GoA 0 & On-sight operation   & Fully manual with no automatic protection.\\
+    GoA 1 & Manual operation     & Driver controls the train; Automatic Train Protection (ATP) enforces speed limits and safe separation.\\
+    GoA 2 & Semi-automated (STO) & ATO handles acceleration and braking; a driver remains on board for doors, obstacle response, and degraded modes.\\
+    GoA 3 & Driverless (DTO)     & No driver needed in normal operation. On-board staff may be present for passenger assistance and emergencies. \\
+    GoA 4 & Unattended (UTO)     & Fully automatic operation with no staff on board. Remote supervision and control are required for incidents. \\
+    \bottomrule
+    \end{tabular}
+\end{table}
+ 
+RTO is most relevant from GoA~3 upward. At GoA~3, on-board staff can still respond to incidents
+directly, but remote oversight is used for operational management. At GoA~4, where no staff
+are on board, RTO becomes the primary mechanism for human intervention when automated
+systems fail or encounter unexpected conditions\cite{europesrail2025_d3, orr2024}.
+ 
+% ─────────────────────────────────────────────────────────────────────────────
+\subsubsection{Role of Video in Remote Operation}\label{subsec:video-role}
+ 
+A remote operator who cannot physically see or hear the train must rely entirely on what the system provides. In practice, this means live video from cameras mounted on or near the train is
+the most important source of situational awareness\cite{brandenburger2023, kozarevic2025}.
+Without a stable and clear video feed, the operator cannot assess track conditions, detect
+obstacles, interpret signals, or make safe decisions about speed and braking.
+ 
+Research on human factors in remote driving consistently shows that video quality has a direct effect on operator performance. Studies on bitrate, frame rate, and resolution indicate that reductions in bitrate lead to measurable drops in both reaction speed and accuracy, while changes in frame rate have a smaller effect within typical operating ranges\cite{brandenburger2023}. This suggests that encoding and transmission choices in the video pipeline are not just technical decisions but directly influence operational safety.
+ 
+Beyond individual video quality, remote train driving typically requires multiple simultaneous camera views. A camera facing forward is needed for obstacle and signal detection, while side and rear cameras support door operations, platform supervision, and shunting tasks\cite{fp2r2dato2023d5_4, jurgensen2025}. The system developed in this thesis streams three concurrent camera feeds, reflecting this multi-view requirement.
+ 
+% ─────────────────────────────────────────────────────────────────────────────
+\subsubsection{Latency Requirements and Regulations}\label{subsec:latency-reqs}
+ 
+Latency is the central performance parameter in any RTO video system. If the delay between what
+happens on the track and what the operator sees on screen is too large, safe intervention becomes
+impossible. The challenge is that no single, universally agreed threshold exists for railway
+remote operation, and most values currently used in the field are borrowed from research on
+cars, drones, and cranes\cite{myhrvold2025}.
+ 
+The most relevant regulatory reference comes from 3GPP TS~22.289, a technical specification
+developed in cooperation with the International Union of Railways (UIC) and the European
+Telecommunications Standards Institute (ETSI)\cite{3gppts22289}. It classifies remote video
+control at GoA~3 and GoA~4 as \textit{Very Critical Video Communication} and sets a target
+end-to-end latency of \(\leq 100\)~ms at speeds up to 500~km/h, or \(\leq 10\)~ms at speeds
+up to 40~km/h, with a reliability requirement of 99.9\% and a data rate of 10--20~Mbps. These
+values are defined at the communication interface and are not yet formally adopted into ERA's
+Technical Specifications for Interoperability (TSIs)\cite{3gppts22289}.
+ 
+Empirical studies from railway demonstrations report glass-to-glass (G2G) latency values of
+340--380~ms for tramway remote driving using commercial systems\cite{fp2r2dato2024d41_2},
+while the Kozarevic study at NTNU measured an average of around 212~ms using a GPS-synchronised
+measurement method\cite{kozarevic2025}. Human factors research from other vehicle domains
+suggests that operators begin to adjust their behaviour at delays above 250--300~ms, and that
+latency variability can be more disruptive than a consistently higher but stable delay\cite{myhrvold2025, neumeier2019}.
+ 
+These findings together motivate the work in this thesis. To build and evaluate a custom
+streaming pipeline where each component of the latency budget can be measured, understood,
+and optimised, rather than relying on a black-box commercial system.
 
-\subsection{Video Streaming Fundamentals}
-\subsubsection{Codecs}
-\subsubsection{RTP}
-\subsubsection{UDP}
+ 
+% ─────────────────────────────────────────────────────────────────────────────
+\subsection{Video Streaming}\label{sec:video-streaming}
+ Video streaming is the continuous transmission of video data from a source to a receiver over
+a network, allowing the receiver to display the content in real time without storing the full
+recording first\cite{sodagar2011}. In a remote train operation context, this means live footage
+from cameras on or near the train is captured, compressed, sent across a network, and displayed
+on the operator's screen with as little delay as possible.
+ 
+A video streaming system can be thought of as a chain of components, each with its own role. At the sending end, raw video is captured by a camera and handed to an encoder, which
+compresses it into a format suitable for transmission. The compressed data is then packaged
+into a transport protocol and sent across the network. At the receiving end, the process is
+reversed: packets are reassembled, decoded back into raw frames, and rendered on screen.
+The choices made at each step, which codec, which protocol, which network directly
+affect the end-to-end latency and video quality that the remote operator experiences\cite{myhrvold2025, mejias2024}.
+
+\subsection{Video Codecs}\label{subsec:codecs}
+\subsubsection{H.264}\label{subsubsec:h264}
+H.264, also known as Advanced Video Coding (AVC), is a video compression standard developed jointly by the ITU-T Video Coding Experts Group and the ISO/IEC Moving Picture Experts Group\cite{wiegand2003}. It has become the dominant codec for real-time video applications including video conferencing, IP surveillance, and live streaming, due to its balance between compression efficiency, computational cost, and broad hardware support\cite{sullivan2004}.
+ 
+The codec reduces redundancy across two dimensions. Within a single frame, intra-frame prediction estimates pixel values from neighbouring blocks and stores only the difference. Across consecutive frames, inter-frame prediction identifies how blocks have moved and stores motion vectors rather than full pixel data, allowing H.264 to represent video at significantly lower bitrates than older standards such as MPEG-2 while maintaining comparable visual quality\cite{wiegand2003}.
+ 
+A key concept is the Group of Pictures (GOP), which defines how often a full intra-coded frame, called an I-frame, appears in the stream. I-frames can be decoded independently without reference to other frames, making them essential for stream recovery after packet loss. For real-time applications, short GOP intervals are preferred to reduce both start-up delay and recovery time, at the cost of a slightly higher average bitrate\cite{sullivan2004}.
+
+
+\subsubsection{H.265}\label{subsubsec:h265}
+H.265, also known as High Efficiency Video Coding (HEVC) and formally standardised as ITU-T~H.265 and ISO/IEC~23008--2, is the successor to H.264 developed jointly by the same two standardisation bodies and published in 2013\cite{sullivan2012hevc}. Its primary goal was to achieve roughly 50\% better compression compared to H.264 at equivalent visual quality, making it particularly attractive for high resolution content and bandwidth constrained networks\cite{ohm2012}.
+ 
+HEVC achieves its efficiency gains by replacing the fixed 16$\times$16 macroblock structure of H.264 with a flexible Coding Tree Unit (CTU) architecture that supports block sizes up to 64$\times$64 pixels. Larger blocks handle uniform image regions efficiently, while smaller blocks are used in areas with fine detail or motion. This adaptive structure allows the encoder to allocate coding effort where it is most needed, reducing the total number of bits required to represent a frame at a given quality level\cite{sullivan2012hevc}.
+ 
+The main difference compared to H.264 is computational cost. Encoding with H.265 can require significantly more processing power, which increases encoding latency and places greater demand on the sender hardware\cite{ohm2012}. In a real-time remote operation context this is a relevant concern, as any added encoding delay directly contributes to the total end-to-end latency experienced by the operator. For this reason H.265 is included in this thesis as a comparison codec, to evaluate whether its bandwidth savings justify the additional encoding overhead under the test conditions used.
+
+\subsubsection{MJPEG}\label{subsubsec:mjpeg}
+Motion JPEG (MJPEG) is a video format in which each frame is compressed independently as a JPEG image, with no reference to any other frame in the sequence\cite{wikipedia_mjpeg}. This purely intraframe approach contrasts with H.264 and H.265, which both rely on temporal prediction across frames to achieve compression.
+ 
+Because each frame is self-contained, MJPEG has two notable properties relevant to remote operation. First, packet loss affects only the frame it occurs in, with no propagation of errors to subsequent frames. Second, encoding and decoding complexity is low and predictable, as the encoder processes each frame in isolation without any lookahead or motion estimation\cite{econ2024}. These properties can result in lower and more consistent encoding latency compared to inter-frame codecs under the same hardware conditions.
+ 
+The main limitation of MJPEG is its high bandwidth consumption. Without temporal compression, every frame must carry its full spatial data, which results in bitrates several times higher than H.264 at equivalent quality\cite{kaknjo2018videolatency}. This makes MJPEG less suitable for constrained or variable networks, where the higher data rate increases the risk of congestion and packet loss. In this thesis MJPEG is tested as a reference point to understand how the absence of inter-frame prediction affects the overall latency and quality measurements of the streaming pipeline.
+
+\subsection{Transport Protocols}\label{subsec:transport-protocols}
+ 
+\subsubsection{RTP and SRTP}\label{subsubsec:rtp-srtp}
+ 
+\subsubsection{UDP and TCP}\label{subsubsec:udp-tcp}
+ 
+\subsection{Streaming Parameters}\label{subsec:streaming-params}
+ 
+\subsubsection{Bandwidth}\label{subsubsec:bandwidth}
+ 
+\subsubsection{Resolution}\label{subsubsec:resolution}
+ 
+% ─────────────────────────────────────────────────────────────────────────────
+\subsection{Latency Sources in the Streaming Pipeline}\label{sec:latency-sources}
+ 
+\subsubsection{Capturing}\label{subsec:capturing}
+ 
+\subsubsection{Encoding}\label{subsec:encoding}
+ 
+\subsubsection{Transmitting}\label{subsec:transmitting}
+ 
+\subsubsection{Decoding}\label{subsec:decoding}
+ 
+\subsubsection{Rendering}\label{subsec:rendering}
+ 
+% ─────────────────────────────────────────────────────────────────────────────
+\subsection{GStreamer}\label{sec:gstreamer}
+ 
+\subsubsection{Pipeline and Elements}\label{subsec:pipeline-elements}
+ 
+\subsubsection{Pads}\label{subsec:pads}
+ 
+\subsubsection{Sinks}\label{subsec:sinks}
+ 
+\subsubsection{Probes}\label{subsec:probes}
+ 
+% ─────────────────────────────────────────────────────────────────────────────
+\subsection{Network and Communication}\label{sec:network}
+ 
+\subsubsection{Wi-Fi}\label{subsec:wifi}
+ 
+\subsubsection{Cellular and 5G}\label{subsec:5g}
+ 
+\subsubsection{Tailscale}\label{subsec:tailscale}
+ 
+% ─────────────────────────────────────────────────────────────────────────────
+\subsection{Performance Metrics}\label{sec:metrics}
+ 
+\subsubsection{Latency}\label{subsec:latency-metric}
+ 
+\subsubsection{Packet Loss}\label{subsec:packet-loss}
+ 
+\subsubsection{Throughput}\label{subsec:throughput}
+ 
+\subsubsection{CPU Usage}\label{subsec:cpu}
+ 
+\subsubsection{Visual Quality}\label{subsec:visual-quality}
+
 \subsection{GStreamer}
 GStreamer is an open-source multimedia framework that allows developers to build pipelines for processing and transmitting audio and video streams. It is widely used in both research and industry due to its flexibility, broad codec support, and active community [source]. Unlike closed commercial solutions, GStreamer provides full access to every stage of the streaming process, making it well suited for experimentation and performance tuning.
 
@@ -18,13 +186,3 @@ The core concept in GStreamer is the pipeline, which is a chain of processing el
 Pipelines in GStreamer can be constructed and launched directly from the command line using the gst-launch-1.0 tool, or built programmatically using languages such as Python through the GStreamer Python bindings. For this project, both approaches are used, with Python providing the flexibility to control pipeline behaviour, handle events, and integrate latency measurement logic alongside the streaming process [source].
 
 What makes GStreamer particularly relevant for this thesis is the level of control and transparency it offers. Every element in the pipeline can be monitored and tuned, latency can be measured at specific points, and configurations can be changed and tested systematically. This makes it a practical and powerful foundation for building a low-latency video streaming system for remote train operation.
-\subsection{Latency Sources in Streaming Pipeline}
-\subsubsection{Capturing}
-\subsubsection{Encoding}
-\subsubsection{Transmitting}
-\subsubsection{Decoding}
-\subsubsection{Rendering}
-
-\subsection{Cellular Communications}
-\subsubsection{5G URLLC}
-\subsubsection{Wi-Fi}

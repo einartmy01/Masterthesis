@@ -2364,6 +2364,41 @@
     <bcf:datasource type="file" datatype="bibtex" glob="false">references.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
+    <bcf:citekey order="2" intorder="1">jurgensen2025</bcf:citekey>
+    <bcf:citekey order="2" intorder="2">fp2r2dato2023d5_4</bcf:citekey>
+    <bcf:citekey order="3" intorder="1">iec62290</bcf:citekey>
+    <bcf:citekey order="4" intorder="1">iec62290</bcf:citekey>
+    <bcf:citekey order="4" intorder="2">uitp2018</bcf:citekey>
+    <bcf:citekey order="5" intorder="1">iec62290</bcf:citekey>
+    <bcf:citekey order="5" intorder="2">uitp2018</bcf:citekey>
+    <bcf:citekey order="6" intorder="1">europesrail2025_d3</bcf:citekey>
+    <bcf:citekey order="6" intorder="2">orr2024</bcf:citekey>
+    <bcf:citekey order="7" intorder="1">brandenburger2023</bcf:citekey>
+    <bcf:citekey order="7" intorder="2">kozarevic2025</bcf:citekey>
+    <bcf:citekey order="8" intorder="1">brandenburger2023</bcf:citekey>
+    <bcf:citekey order="9" intorder="1">fp2r2dato2023d5_4</bcf:citekey>
+    <bcf:citekey order="9" intorder="2">jurgensen2025</bcf:citekey>
+    <bcf:citekey order="10" intorder="1">myhrvold2025</bcf:citekey>
+    <bcf:citekey order="11" intorder="1">3gppts22289</bcf:citekey>
+    <bcf:citekey order="12" intorder="1">3gppts22289</bcf:citekey>
+    <bcf:citekey order="13" intorder="1">fp2r2dato2024d41_2</bcf:citekey>
+    <bcf:citekey order="14" intorder="1">kozarevic2025</bcf:citekey>
+    <bcf:citekey order="15" intorder="1">myhrvold2025</bcf:citekey>
+    <bcf:citekey order="15" intorder="2">neumeier2019</bcf:citekey>
+    <bcf:citekey order="16" intorder="1">sodagar2011</bcf:citekey>
+    <bcf:citekey order="17" intorder="1">myhrvold2025</bcf:citekey>
+    <bcf:citekey order="17" intorder="2">mejias2024</bcf:citekey>
+    <bcf:citekey order="18" intorder="1">wiegand2003</bcf:citekey>
+    <bcf:citekey order="19" intorder="1">sullivan2004</bcf:citekey>
+    <bcf:citekey order="20" intorder="1">wiegand2003</bcf:citekey>
+    <bcf:citekey order="21" intorder="1">sullivan2004</bcf:citekey>
+    <bcf:citekey order="22" intorder="1">sullivan2012hevc</bcf:citekey>
+    <bcf:citekey order="23" intorder="1">ohm2012</bcf:citekey>
+    <bcf:citekey order="24" intorder="1">sullivan2012hevc</bcf:citekey>
+    <bcf:citekey order="25" intorder="1">ohm2012</bcf:citekey>
+    <bcf:citekey order="26" intorder="1">wikipedia_mjpeg</bcf:citekey>
+    <bcf:citekey order="27" intorder="1">econ2024</bcf:citekey>
+    <bcf:citekey order="28" intorder="1">kaknjo2018videolatency</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">
