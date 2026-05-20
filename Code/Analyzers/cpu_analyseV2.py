@@ -87,40 +87,36 @@ def stats(values):
     }
 
 
-def plot(timestamps, cpu_total, cpu_usr, cpu_system, s, filepath):
+def plot(timestamps, cpu_total, cpu_usr, cpu_system, s, filepath, script_dir, timestamp):
     x = list(range(len(cpu_total)))
 
     fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(14, 8), sharex=True,
                                     gridspec_kw={"height_ratios": [3, 1]})
-    fig.patch.set_facecolor("#1e1e2e")
-    for ax in (ax1, ax2):
-        ax.set_facecolor("#1e1e2e")
-        ax.spines[:].set_color("#313244")
-        ax.grid(axis="y", color="#313244", linewidth=0.6)
-        ax.tick_params(colors="#cdd6f4")
 
     # ── Top chart: total CPU ──────────────────────────────────────────────────
-    ax1.plot(x, cpu_total, color="#89b4fa", linewidth=1.2, label="Total %CPU (all cores)")
-    ax1.fill_between(x, cpu_total, alpha=0.15, color="#89b4fa")
+    ax1.plot(x, cpu_total, color="#4C9BE8", linewidth=1.2, label="Total %CPU (all cores)")
+    ax1.fill_between(x, cpu_total, alpha=0.15, color="#4C9BE8")
 
-    ax1.axhline(s["mean"], color="#a6e3a1", linewidth=1.2, linestyle="--",
+    ax1.axhline(s["mean"], color="#E8954C", linewidth=1.5, linestyle="--",
                 label=f"Mean  {s['mean']:.1f}%")
-    ax1.axhline(s["p95"],  color="#f38ba8", linewidth=1.2, linestyle=":",
+    ax1.axhline(s["p95"],  color="#D94F4F", linewidth=1.5, linestyle=":",
                 label=f"P95   {s['p95']:.1f}%")
-    ax1.axhline(s["max"],  color="#fab387", linewidth=1.0, linestyle="-.",
+    ax1.axhline(s["max"],  color="#B56DBD", linewidth=1.0, linestyle="-.",
                 label=f"Max   {s['max']:.1f}%")
-    ax1.axhline(s["min"],  color="#94e2d5", linewidth=1.0, linestyle="-.",
+    ax1.axhline(s["min"],  color="#6DBD6D", linewidth=1.0, linestyle="-.",
                 label=f"Min   {s['min']:.1f}%")
 
     ax1.set_ylim(0, 105)
     ax1.yaxis.set_major_formatter(ticker.FormatStrFormatter("%.0f%%"))
-    ax1.set_ylabel("Total CPU %", color="#cdd6f4", fontsize=9)
+    ax1.yaxis.set_minor_locator(ticker.AutoMinorLocator())
+    ax1.set_ylabel("Total CPU %", fontsize=9)
     ax1.set_title(
         f"System CPU Usage (all cores combined) — {os.path.basename(filepath)}\n"
         f"(first {SKIP_SECONDS}s skipped,  {s['count']} samples)",
-        color="#cdd6f4", fontsize=11, pad=8)
-    ax1.legend(loc="upper right", fontsize=8,
-               facecolor="#313244", edgecolor="#45475a", labelcolor="#cdd6f4")
+        fontsize=11, pad=8)
+    ax1.legend(loc="upper right", fontsize=8)
+    ax1.grid(True, which="major", linestyle="--", alpha=0.4)
+    ax1.grid(True, which="minor", linestyle=":",  alpha=0.2)
 
     # Stats box
     box_text = (f"Samples : {s['count']}\n"
@@ -131,31 +127,33 @@ def plot(timestamps, cpu_total, cpu_usr, cpu_system, s, filepath):
                 f"Std dev : {s['std']:.2f}%")
     ax1.text(0.01, 0.97, box_text, transform=ax1.transAxes,
              verticalalignment="top", fontsize=8, fontfamily="monospace",
-             color="#cdd6f4",
-             bbox=dict(boxstyle="round,pad=0.5", facecolor="#313244", edgecolor="#45475a"))
+             bbox=dict(boxstyle="round,pad=0.5", facecolor="white", edgecolor="#cccccc", alpha=0.8))
 
     # ── Bottom chart: usr vs system breakdown ─────────────────────────────────
-    ax2.plot(x, cpu_usr,    color="#cba6f7", linewidth=1.0, label="%usr")
-    ax2.plot(x, cpu_system, color="#f38ba8", linewidth=1.0, label="%system")
-    ax2.fill_between(x, cpu_usr,    alpha=0.15, color="#cba6f7")
-    ax2.fill_between(x, cpu_system, alpha=0.15, color="#f38ba8")
-    ax2.set_ylabel("Breakdown %", color="#cdd6f4", fontsize=9)
+    ax2.plot(x, cpu_usr,    color="#4C9BE8", linewidth=1.0, label="%usr")
+    ax2.plot(x, cpu_system, color="#FF5722", linewidth=1.0, label="%system")
+    ax2.fill_between(x, cpu_usr,    alpha=0.15, color="#4C9BE8")
+    ax2.fill_between(x, cpu_system, alpha=0.15, color="#FF5722")
+    ax2.set_ylabel("Breakdown %", fontsize=9)
     ax2.yaxis.set_major_formatter(ticker.FormatStrFormatter("%.0f%%"))
-    ax2.legend(loc="upper right", fontsize=8,
-               facecolor="#313244", edgecolor="#45475a", labelcolor="#cdd6f4")
+    ax2.yaxis.set_minor_locator(ticker.AutoMinorLocator())
+    ax2.legend(loc="upper right", fontsize=8)
+    ax2.grid(True, which="major", linestyle="--", alpha=0.4)
+    ax2.grid(True, which="minor", linestyle=":",  alpha=0.2)
 
     # ── X-axis ticks ──────────────────────────────────────────────────────────
     step = max(1, len(x) // 20)
     tick_pos    = x[::step]
     tick_labels = [timestamps[i] for i in tick_pos]
     ax2.set_xticks(tick_pos)
-    ax2.set_xticklabels(tick_labels, rotation=45, ha="right",
-                        fontsize=7, color="#cdd6f4")
-    ax2.set_xlabel("Time", color="#cdd6f4", fontsize=9)
+    ax2.set_xticklabels(tick_labels, rotation=45, ha="right", fontsize=7)
+    ax2.set_xlabel("Time", fontsize=9)
 
     plt.tight_layout()
 
-    out = filepath.replace(".log", "").replace(".csv", "") + "_analysis.png"
+    out_dir = os.path.join(script_dir, "graphs", timestamp)
+    os.makedirs(out_dir, exist_ok=True)
+    out = os.path.join(out_dir, f"sender_cpu_{timestamp}_analysis.png")
     plt.savefig(out, dpi=150, bbox_inches="tight")
     print(f"Graph saved → {out}")
     plt.show()
@@ -195,7 +193,8 @@ def main():
     print(f"  Std dev : {s['std']:.2f}%")
     print(f"{'─'*35}\n")
 
-    plot(timestamps, cpu_total, cpu_usr, cpu_system, s, log_path)
+    timestamp = suffix.replace(".log", "").replace(".csv", "")
+    plot(timestamps, cpu_total, cpu_usr, cpu_system, s, log_path, script_dir, timestamp)
 
 
 if __name__ == "__main__":

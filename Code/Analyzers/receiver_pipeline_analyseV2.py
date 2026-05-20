@@ -113,6 +113,15 @@ def main():
     ax2.set_title("Latency distribution")
 
     plt.tight_layout()
+
+    # Save under graphs/<timestamp>/
+    timestamp = filename.replace(".csv", "")
+    out_dir   = os.path.join(script_dir, "graphs", timestamp)
+    os.makedirs(out_dir, exist_ok=True)
+    out_name  = f"receiver_pipeline_{timestamp}_analysis.png"
+    out_path  = os.path.join(out_dir, out_name)
+    plt.savefig(out_path, dpi=150)
+    print(f"Graph saved → {out_path}")
     plt.show()
 
 
