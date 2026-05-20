@@ -34,7 +34,7 @@ RTP_PORTS      = ["5000", "5002", "5004"]
 # The script accounts for Tailscale/WireGuard overhead automatically (~8%).
 # Your 3-camera pipeline at bitrate=8000 produces ~24 Mbit/s nominal.
 # Suggested test values: 22.0
-BANDWIDTH_LIMIT_MBIT = 22.0
+BANDWIDTH_LIMIT_MBIT = 18.0
 # ─────────────────────────────────────────────────────────────────────────────
 
 # ── Bandwidth shaping (tc tbf on outbound interface) ─────────────────────────
