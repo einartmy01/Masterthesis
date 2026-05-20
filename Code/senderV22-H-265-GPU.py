@@ -50,6 +50,26 @@ def check_cameras():
 
 # ── Pipeline ──────────────────────────────────────────────────────────────────
 
+# def build_pipeline():  # v1 — CPU decode, deprecated nvh265enc preset names
+#     parts = []
+#     for i, cam_ip in enumerate(CAM_IPs):
+#         parts.append(
+#             f'rtspsrc location="rtsp://{USER}:{PASS}@{cam_ip}:{RTSP_PORT}/Streaming/Channels/101" '
+#             f'protocols=tcp latency=0 name=src{i} ! '
+#             f'rtph264depay name=depay{i} ! '
+#             f'h264parse config-interval=-1 ! '
+#             f'queue max-size-buffers=4 max-size-bytes=0 max-size-time=0 leaky=downstream name=decode_q{i} ! '
+#             f'avdec_h264 ! '
+#             f'videoconvert ! '
+#             f'videoscale ! video/x-raw,format=NV12,width=1920,height=1080 ! '
+#             f'nvh265enc zerolatency=true bitrate=8000 gop-size=15 preset=low-latency rc-mode=cbr ! '
+#             f'h265parse config-interval=-1 ! '
+#             f'queue max-size-buffers=2 max-size-bytes=0 max-size-time=0 leaky=downstream name=encode_q{i} ! '
+#             f'rtph265pay config-interval=-1 pt=96 mtu=1200 name=pay{i} ! '
+#             f'udpsink host={RECEIVER_IP} port={RTP_PORTS[i]} sync=false async=false name=udpsink{i}'
+#         )
+#     return " ".join(parts)
+
 def build_pipeline():
     parts = []
     for i, cam_ip in enumerate(CAM_IPs):
@@ -57,15 +77,17 @@ def build_pipeline():
             f'rtspsrc location="rtsp://{USER}:{PASS}@{cam_ip}:{RTSP_PORT}/Streaming/Channels/101" '
             f'protocols=tcp latency=0 name=src{i} ! '
             f'rtph264depay name=depay{i} ! '
-            f'h264parse ! '
-            f'queue max-size-buffers=2 max-size-bytes=0 max-size-time=0 leaky=downstream ! '
-            f'avdec_h264 ! '
-            f'videoconvert ! '
-            f'videoscale ! video/x-raw,width=1920,height=1080 ! '
-            f'x265enc tune=zerolatency bitrate=8000 speed-preset=ultrafast key-int-max=30 threads=0 ! '
-            f'h265parse ! '
-            f'queue max-size-buffers=2 max-size-bytes=0 max-size-time=0 leaky=downstream ! '
-            f'rtph265pay config-interval=1 pt=96 name=pay{i} ! '
+            f'h264parse config-interval=-1 ! '
+            f'queue max-size-buffers=4 max-size-bytes=0 max-size-time=0 leaky=downstream name=decode_q{i} ! '
+            f'nvh264dec ! cudadownload ! '
+            f'videoconvert ! videoscale ! '
+            f'video/x-raw,format=NV12,width=1920,height=1080 ! '
+            f'nvh265enc zerolatency=true bitrate=4000 gop-size=10 '
+            f'preset=p1 tune=ultra-low-latency rc-mode=cbr '
+            f'repeat-sequence-header=true strict-gop=true aud=false '
+            f'multi-pass=disabled num-slices=4 ! '
+            f'h265parse config-interval=-1 ! '
+            f'rtph265pay config-interval=-1 pt=96 mtu=1200 name=pay{i} ! '
             f'udpsink host={RECEIVER_IP} port={RTP_PORTS[i]} sync=false async=false name=udpsink{i}'
         )
     return " ".join(parts)
