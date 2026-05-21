@@ -42,7 +42,7 @@ def build_pipeline():
 
             # ── Display branch (unchanged from V12) ──────────────────────────
             f'tee{i}. ! '
-            f'queue max-size-buffers=3 max-size-bytes=0 max-size-time=0 leaky=downstream name=q_post{i} ! '
+            f'queue max-size-buffers=1 max-size-bytes=0 max-size-time=0 leaky=downstream name=q_post{i} ! '
             f'xvimagesink sync=false name=sink{i} '
 
             # ── Quality branch ───────────────────────────────────────────────
@@ -50,7 +50,7 @@ def build_pipeline():
             # drop=true + max-buffers=1 means appsink never blocks the pipeline;
             # it simply discards frames it cannot keep up with.
             f'tee{i}. ! '
-            f'queue max-size-buffers=2 leaky=downstream ! '
+            f'queue max-size-buffers=1 leaky=downstream ! '
             f'videoconvert ! '
             f'video/x-raw,format=BGR ! '
             f'appsink name=qsink{i} emit-signals=true drop=true max-buffers=1'

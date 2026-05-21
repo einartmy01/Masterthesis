@@ -162,9 +162,12 @@ def main():
 
     plt.tight_layout()
 
-    # Save next to the script
-    out_name = f"throughput_{suffix.replace(':', '-').replace('/', '_')}.png"
-    out_path = os.path.join(script_dir, out_name)
+    # Save under graphs/<timestamp>/
+    timestamp = suffix.replace(".csv", "")
+    out_dir   = os.path.join(script_dir, "graphs", timestamp)
+    os.makedirs(out_dir, exist_ok=True)
+    out_name  = f"throughput_{timestamp.replace(':', '-').replace('/', '_')}.png"
+    out_path  = os.path.join(out_dir, out_name)
     plt.savefig(out_path, dpi=150)
     print(f"Graph saved → {out_path}")
     plt.show()

@@ -104,9 +104,12 @@ ax2.grid(True, alpha=0.3, axis="y")
 
 plt.tight_layout()
 
-# Save next to the input file
-out_name = "transit_result_" + filename.replace(".csv", "") + "_analysis.png"
-out_path = os.path.join(os.path.dirname(file_path), out_name)
+# Save under graphs/<timestamp>/
+timestamp = filename.replace(".csv", "")
+out_dir   = os.path.join(script_dir, "graphs", timestamp)
+os.makedirs(out_dir, exist_ok=True)
+out_name  = "transit_result_" + timestamp + "_analysis.png"
+out_path  = os.path.join(out_dir, out_name)
 plt.savefig(out_path, dpi=150)
 print(f"\nGraph saved: {out_path}")
 plt.show()

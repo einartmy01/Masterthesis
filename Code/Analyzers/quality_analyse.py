@@ -5,6 +5,7 @@ Usage:
 """
 
 import sys
+import os
 import pandas as pd
 import matplotlib.pyplot as plt
 import matplotlib.ticker as ticker
@@ -73,6 +74,10 @@ axes[-1].set_xlabel("Sample index")
 fig.suptitle("BRISQUE Video Quality per Camera", fontsize=14, fontweight="bold", y=1.01)
 fig.tight_layout()
 
-out = f"quality_plot_{sys.argv[1].replace('.csv', '')}.png"
+timestamp = sys.argv[1].replace(".csv", "")
+script_dir = os.path.dirname(os.path.abspath(__file__))
+out_dir    = os.path.join(script_dir, "graphs", timestamp)
+os.makedirs(out_dir, exist_ok=True)
+out        = os.path.join(out_dir, f"quality_plot_{timestamp}.png")
 fig.savefig(out, dpi=150, bbox_inches="tight")
 print(f"Plot saved → {out}")
