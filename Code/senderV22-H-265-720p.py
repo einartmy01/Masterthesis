@@ -15,8 +15,8 @@ from gi.repository import Gst, GLib
 
 # ── Config ────────────────────────────────────────────────────────────────────
 CAM_IP0        = "192.168.0.100"
-CAM_IP1        = "192.168.1.101"
-CAM_IP2        = "192.168.3.103"
+CAM_IP1        = "192.168.0.101"
+CAM_IP2        = "192.168.0.102"
 CAM_IPs        = [CAM_IP0, CAM_IP1, CAM_IP2]
 USER           = "admin"
 PASS           = "NilsNils"
@@ -83,7 +83,7 @@ def build_pipeline():
             f'videoconvert ! '
             f'videoscale method=bilinear ! '
             f'video/x-raw,format=I420,width=1280,height=720 ! '
-            f'x265enc tune=zerolatency speed-preset=ultrafast bitrate=4000 key-int-max=15 '
+            f'x265enc tune=zerolatency speed-preset=ultrafast bitrate=6000 key-int-max=15 '
             f'option-string="bframes=0:no-open-gop=1:repeat-headers=1" ! '
             f'h265parse config-interval=-1 ! '
             f'queue max-size-buffers=4 max-size-bytes=0 max-size-time=0 leaky=downstream name=encode_q{i} ! '
@@ -264,7 +264,7 @@ def attach_probes(pipeline):
 # ── Main ──────────────────────────────────────────────────────────────────────
 
 def main():
-    setup_network()
+    #setup_network()
     check_cameras()
 
     timestamp = datetime.now().strftime("%d.%m-%H:%M")

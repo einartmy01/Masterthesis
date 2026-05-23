@@ -15,8 +15,8 @@ from gi.repository import Gst, GLib
 
 # ── Config ────────────────────────────────────────────────────────────────────
 CAM_IP0        = "192.168.0.100"
-CAM_IP1        = "192.168.1.101"
-CAM_IP2        = "192.168.3.103"
+CAM_IP1        = "192.168.0.101"
+CAM_IP2        = "192.168.0.102"
 CAM_IPs        = [CAM_IP0, CAM_IP1, CAM_IP2]
 USER           = "admin"
 PASS           = "NilsNils"
@@ -241,7 +241,7 @@ def attach_probes(pipeline):
 # ── Main ──────────────────────────────────────────────────────────────────────
 
 def main():
-    setup_network()
+    #setup_network()
     check_cameras()
 
     timestamp = datetime.now().strftime("%d.%m-%H:%M")

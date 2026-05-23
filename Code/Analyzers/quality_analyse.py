@@ -27,22 +27,28 @@ t0     = df["wall_time"].min()
 cutoff = t0 + pd.Timedelta(seconds=SKIP_SECONDS)
 before = len(df)
 df     = df[df["wall_time"] >= cutoff].reset_index(drop=True)
-print(f"Skipped first {SKIP_SECONDS}s ({before - len(df)} rows dropped, {len(df)} remain).")
+skip_line = f"Skipped first {SKIP_SECONDS}s ({before - len(df)} rows dropped, {len(df)} remain)."
+print(skip_line)
 
 # ── Stats ─────────────────────────────────────────────────────────────────────
-print(f"\n{'─'*52}")
-print(f"{'Camera':<10} {'Mean':>8} {'Min':>8} {'Max':>8} {'P95':>8}  {'Samples':>8}")
-print(f"{'─'*52}")
+stat_lines = [
+    f"{'─'*52}",
+    f"{'Camera':<10} {'Mean':>8} {'Min':>8} {'Max':>8} {'P95':>8}  {'Samples':>8}",
+    f"{'─'*52}",
+]
 for cam, g in df.groupby("cam_index"):
     s = g["brisque_score"]
-    print(f"  Cam {cam:<5}  {s.mean():>8.2f} {s.min():>8.2f} {s.max():>8.2f} "
-          f"{s.quantile(0.95):>8.2f}  {len(s):>8}")
+    stat_lines.append(f"  Cam {cam:<5}  {s.mean():>8.2f} {s.min():>8.2f} {s.max():>8.2f} "
+                      f"{s.quantile(0.95):>8.2f}  {len(s):>8}")
 s = df["brisque_score"]
-print(f"{'─'*52}")
-print(f"  {'ALL':<7}  {s.mean():>8.2f} {s.min():>8.2f} {s.max():>8.2f} "
-      f"{s.quantile(0.95):>8.2f}  {len(s):>8}")
-print(f"{'─'*52}")
-print("  BRISQUE: 0–100, lower = better quality.\n")
+stat_lines += [
+    f"{'─'*52}",
+    f"  {'ALL':<7}  {s.mean():>8.2f} {s.min():>8.2f} {s.max():>8.2f} "
+    f"{s.quantile(0.95):>8.2f}  {len(s):>8}",
+    f"{'─'*52}",
+    "  BRISQUE: 0–100, lower = better quality.",
+]
+print("\n" + "\n".join(stat_lines) + "\n")
 
 # ── Plot ──────────────────────────────────────────────────────────────────────
 cameras = sorted(df["cam_index"].unique())
@@ -81,3 +87,10 @@ os.makedirs(out_dir, exist_ok=True)
 out        = os.path.join(out_dir, f"quality_plot_{timestamp}.png")
 fig.savefig(out, dpi=150, bbox_inches="tight")
 print(f"Plot saved → {out}")
+
+txt_path = os.path.join(out_dir, f"quality_stats_{timestamp}.txt")
+with open(txt_path, "w") as f:
+    f.write(f"BRISQUE Quality Stats  –  {sys.argv[1]}\n\n")
+    f.write(skip_line + "\n\n")
+    f.write("\n".join(stat_lines) + "\n")
+print(f"Stats saved → {txt_path}")

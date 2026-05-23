@@ -184,17 +184,28 @@ def main():
 
     s = stats(cpu_total)
 
-    print(f"\n{'─'*35}")
-    print(f"  Samples : {s['count']}")
-    print(f"  Mean    : {s['mean']:.2f}%")
-    print(f"  Min     : {s['min']:.2f}%")
-    print(f"  Max     : {s['max']:.2f}%")
-    print(f"  P95     : {s['p95']:.2f}%")
-    print(f"  Std dev : {s['std']:.2f}%")
-    print(f"{'─'*35}\n")
+    stat_lines = [
+        f"{'─'*35}",
+        f"  Samples : {s['count']}",
+        f"  Mean    : {s['mean']:.2f}%",
+        f"  Min     : {s['min']:.2f}%",
+        f"  Max     : {s['max']:.2f}%",
+        f"  P95     : {s['p95']:.2f}%",
+        f"  Std dev : {s['std']:.2f}%",
+        f"{'─'*35}",
+    ]
+    print("\n" + "\n".join(stat_lines) + "\n")
 
     timestamp = suffix.replace(".log", "").replace(".csv", "")
     plot(timestamps, cpu_total, cpu_usr, cpu_system, s, log_path, script_dir, timestamp)
+
+    out_dir  = os.path.join(script_dir, "graphs", timestamp)
+    txt_path = os.path.join(out_dir, f"sender_cpu_{timestamp}_stats.txt")
+    with open(txt_path, "w") as f:
+        f.write(f"CPU Stats  –  {suffix}\n\n")
+        f.write(f"Skipped first {SKIP_SECONDS} seconds\n\n")
+        f.write("\n".join(stat_lines) + "\n")
+    print(f"Stats saved → {txt_path}")
 
 
 if __name__ == "__main__":

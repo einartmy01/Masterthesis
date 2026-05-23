@@ -114,20 +114,21 @@ def main():
     values = [r[1] for r in rows]
     st     = compute_stats(values)
 
-    # ── print stats ──────────────────────────────────────────────────────────
+    # ── stats lines ──────────────────────────────────────────────────────────
     label_w = 10
-    print()
-    print("=" * 42)
-    print(f"  Throughput stats  –  {suffix}")
-    print("=" * 42)
-    print(f"  {'Samples':<{label_w}} {st['count']}")
-    print(f"  {'Mean':<{label_w}} {st['mean']:.3f} Mbps")
-    print(f"  {'Min':<{label_w}} {st['min']:.3f} Mbps")
-    print(f"  {'Max':<{label_w}} {st['max']:.3f} Mbps")
-    print(f"  {'P95':<{label_w}} {st['p95']:.3f} Mbps")
-    print(f"  {'Std dev':<{label_w}} {st['stdev']:.3f} Mbps")
-    print("=" * 42)
-    print()
+    stat_lines = [
+        "=" * 42,
+        f"  Throughput stats  –  {suffix}",
+        "=" * 42,
+        f"  {'Samples':<{label_w}} {st['count']}",
+        f"  {'Mean':<{label_w}} {st['mean']:.3f} Mbps",
+        f"  {'Min':<{label_w}} {st['min']:.3f} Mbps",
+        f"  {'Max':<{label_w}} {st['max']:.3f} Mbps",
+        f"  {'P95':<{label_w}} {st['p95']:.3f} Mbps",
+        f"  {'Std dev':<{label_w}} {st['stdev']:.3f} Mbps",
+        "=" * 42,
+    ]
+    print("\n" + "\n".join(stat_lines) + "\n")
 
     # ── plot ─────────────────────────────────────────────────────────────────
     fig, ax = plt.subplots(figsize=(14, 5))
@@ -170,6 +171,13 @@ def main():
     out_path  = os.path.join(out_dir, out_name)
     plt.savefig(out_path, dpi=150)
     print(f"Graph saved → {out_path}")
+
+    txt_name = f"throughput_{timestamp.replace(':', '-').replace('/', '_')}_stats.txt"
+    txt_path = os.path.join(out_dir, txt_name)
+    with open(txt_path, "w") as f:
+        f.write("\n".join(stat_lines) + "\n")
+    print(f"Stats saved → {txt_path}")
+
     plt.show()
 
 
