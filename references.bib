@@ -103,8 +103,8 @@
   volume  = {18},
   number  = {4},
   pages   = {62--67},
-  url     = {https://ieeexplore.ieee.org/document/5751395},
-  urldate = {2026-05-20}
+  url     = {https://ieeexplore.ieee.org/document/6077864},
+  urldate = {2026-02-15}
 } % God generell kilde for video streaming som konsept og pipeline-beskrivelse
 
 @article{wiegand2003,
@@ -116,7 +116,7 @@
   number  = {7},
   pages   = {560--576},
   url     = {https://ieeexplore.ieee.org/document/1218189},
-  urldate = {2026-05-20}
+  urldate = {2026-02-10}
 } % Primærkilde for H.264 standarden, intra/inter-prediksjon og GOP-struktur
 
 @article{sullivan2004,
@@ -125,17 +125,9 @@
   journal = {Proceedings of SPIE},
   year    = {2004},
   volume  = {5558},
-  url     = {https://www.semanticscholar.org/paper/27c3343314940d32536158095113f5711e9d47c8},
+  url     = {https://www.ijcaonline.org/archives/volume181/number14/aljammas-2018-ijca-917575.pdf},
   urldate = {2026-05-20}
 } % Oversikt over H.264 profiler, GOP og sammenligning med eldre standarder
-
-@misc{x264dev,
-  author  = {Holmer, Erik},
-  title   = {A slow introduction to x264},
-  year    = {2010},
-  url     = {http://x264dev.multimedia.cx/archives/249},
-  urldate = {2026-05-20}
-} % x264 utviklerblogg om tune=zerolatency og lav-latens konfigurasjoner
 
 @article{sullivan2012hevc,
   author  = {Sullivan, Gary J. and Ohm, Jens-Rainer and Han, Woo-Jin and Wiegand, Thomas},
@@ -146,7 +138,7 @@
   number  = {12},
   pages   = {1649--1668},
   url     = {https://ieeexplore.ieee.org/document/6316136},
-  urldate = {2026-05-20}
+  urldate = {2026-02-10}
 } % Primærkilde for HEVC standarden, CTU-struktur og kompresjonseffektivitet
 
 @article{ohm2012,
@@ -158,7 +150,7 @@
   number  = {12},
   pages   = {1669--1684},
   url     = {https://ieeexplore.ieee.org/document/6317158},
-  urldate = {2026-05-20}
+  urldate = {2026-02-10}
 } % Sammenligning av H.264 og H.265 kompresjon og beregningskostnad
 @article{kaknjo2018videolatency,
   author  = {Admir Kaknjo and Muzaffar Rao and Edin Omerdi{\'c} and Luke Robinson and Daniel Toal and Thomas Newe},
@@ -173,7 +165,7 @@
   title   = {Motion {JPEG}},
   year    = {2026},
   url     = {https://en.wikipedia.org/wiki/Motion_JPEG},
-  urldate = {2026-05-20}
+  urldate = {2026-02-15}
 } % Generell oversikt over MJPEG, intraframe-kompresjon og egenskaper
 
 @misc{econ2024,
@@ -181,5 +173,284 @@
   title   = {A Comprehensive Study: {MJPEG} and {H.264} Compression in Embedded Vision},
   year    = {2024},
   url     = {https://www.e-consystems.com/blog/camera/technology/a-comprehensive-study-mjpeg-and-h-264-compression-in-embedded-vision/},
-  urldate = {2026-05-20}
+  urldate = {2026-02-15}
 } % MJPEG lav enkodingskompleksitet og egnethet for sanntidsapplikasjoner
+@techreport{rfc3550,
+  author      = {Schulzrinne, Henning and Casner, Stephen and Frederick, Ron and Jacobson, Van},
+  title       = {{RFC} 3550: {RTP}: A Transport Protocol for Real-Time Applications},
+  institution = {IETF},
+  year        = {2003},
+  url         = {https://www.rfc-editor.org/rfc/rfc3550},
+  urldate     = {2026-02-10}
+} % Primærkilde for RTP-standarden, sekvensnummer, tidsstempel og markeringsbit
+
+@techreport{rfc3711,
+  author      = {Baugher, Mark and McGrew, David and Naslund, Mats and Carrara, Elisabetta and Norrman, Karl},
+  title       = {{RFC} 3711: The Secure Real-time Transport Protocol ({SRTP})},
+  institution = {IETF},
+  year        = {2004},
+  url         = {https://www.rfc-editor.org/rfc/rfc3711},
+  urldate     = {2026-04-05}
+} % Primærkilde for SRTP, AES-kryptering og autentisering med lav overhead
+@techreport{rfc768,
+  author      = {Postel, Jon},
+  title       = {{RFC} 768: User Datagram Protocol},
+  institution = {IETF},
+  year        = {1980},
+  url         = {https://datatracker.ietf.org/doc/html/rfc768},
+  urldate     = {2026-03-17}
+} % Primærkilde for UDP-standarden, header-format og ingen leveringsgaranti
+
+@book{forouzan2012,
+  author    = {Forouzan, Behrouz A.},
+  title     = {Data Communications and Networking},
+  edition   = {5},
+  publisher = {McGraw-Hill},
+  year      = {2012},
+  url       = {https://jcer.in/jcer-docs/E-Learning/Digital%20Library%20/E-Books/Data-Communications-and-Network-5e.pdf},
+  urldate   = {2026-03-17},
+} % Lærebok som forklarer UDP egnethet for sanntidsapplikasjoner
+@techreport{rfc793,
+  author      = {Postel, Jon},
+  title       = {{RFC} 793: Transmission Control Protocol},
+  institution = {IETF},
+  year        = {1981},
+  url         = {https://www.rfc-editor.org/rfc/rfc793},
+  urldate     = {2026-05-20}
+} % Primærkilde for TCP-standarden, tilkoblingsorientering og retransmisjon
+@article{pinson2012,
+  author  = {Pinson, Margaret H. and Wolf, Stephen},
+  title   = {The Relationship Among Video Quality, Screen Resolution, and Bit Rate},
+  journal = {IEEE Transactions on Broadcasting},
+  year    = {2012},
+  volume  = {58},
+  number  = {2},
+  pages   = {258--262},
+  url     = {https://ieeexplore.ieee.org/document/5729848},
+  urldate = {2026-05-14}
+} % IEEE studie på forholdet mellom oppløsning, bitrate og opplevd kvalitet (MOS)
+@misc{vocal_nal,
+  author  = {{VOCAL Technologies}},
+  title   = {What are {H.264} {NAL} Units?},
+  year    = {2023},
+  url     = {https://vocal.com/video-codecs/itu-h-264/what-are-h-264-nal-units/},
+  urldate = {2026-02-13}
+} % Forklaring av VCL og non-VCL NAL enheter, SPS og PPS
+
+@techreport{rfc6184,
+  author      = {Wang, Ye-Kui and Even, Roni and Kristensen, Thomas and Jesup, Randell},
+  title       = {{RFC} 6184: {RTP} Payload Format for {H.264} Video},
+  institution = {IETF},
+  year        = {2011},
+  url         = {https://www.rfc-editor.org/rfc/rfc6184},
+  urldate     = {2026-02-13}
+} % Definerer hvordan H.264 NAL-enheter pakkes inn i RTP-pakker og fragmentering
+@article{seeling2014,
+  author  = {Seeling, Patrick and Reisslein, Martin},
+  title   = {Video Traffic Characteristics of Modern Encoding Standards: {H.264/AVC} with {SVC} and {MVC} Extensions and {H.265/HEVC}},
+  journal = {The Scientific World Journal},
+  year    = {2014},
+  url     = {https://pmc.ncbi.nlm.nih.gov/articles/PMC3951063/},
+  urldate = {2026-02-13}
+} % I, P og B-frame typer og GOP-struktur i H.264 og H.265
+@inproceedings{dobrian2011,
+  author    = {Dobrian, Florin and Sekar, Vyas and Awan, Asad and Stoica, Ion and Joseph, Dilip and Ganjam, Aditya and Zhan, Jibin and Zhang, Hui},
+  title     = {Understanding the Impact of Video Quality on User Engagement},
+  booktitle = {ACM SIGCOMM},
+  year      = {2011},
+  url       = {https://dl.acm.org/doi/10.1145/2018436.2018478},
+  urldate   = {2026-05-20}
+} % Brukt for glass-to-glass latens og akkumulering av forsinkelse gjennom pipeline
+@article{kaknjo2018,
+  author  = {Admir Kaknjo and Muzaffar Rao and Edin Omerdi{\'c} and Luke Robinson and Daniel Toal and Thomas Newe},
+  title   = {Real-Time Video Latency Measurement between a Robot and Its Remote Control Station: Causes and Mitigation},
+  journal = {Wireless Communications and Mobile Computing},
+  year    = {2018},
+  url     = {https://www.researchgate.net/publication/329369713_Real-Time_Video_Latency_Measurement_between_a_Robot_and_Its_Remote_Control_Station_Causes_and_Mitigation},
+  urldate = {2025-10-15}
+} % Målemetodikk for end-to-end video latens og identifisering av flaskehalser
+@misc{axis2024,
+  author  = {{Axis Communications}},
+  title   = {Latency in Live Network Video Surveillance},
+  year    = {2024},
+  url     = {https://www.axis.com/dam/public/9d/e4/5d/latency-in-live-network-video-surveillance-en-US-190945.pdf},
+  urldate = {2026-05-20}
+} % Whitepaper om kildene til forsinkelse i nettverksvideoovervåking, inkludert sensor og kamera
+@article{hamidouche2022,
+  author  = {Hamidouche, Wassim and Ott, Mickaël and Déforges, Olivier and Menard, Daniel},
+  title   = {Image and Video Coding Techniques for Ultra-low Latency},
+  journal = {ACM Computing Surveys},
+  year    = {2022},
+  volume  = {55},
+  number  = {3},
+  url     = {https://dl.acm.org/doi/10.1145/3512342},
+  urldate = {2026-05-20}
+} % B-frames og lookahead som kilde til enkodingsforsinkelse i sanntidssystemer
+@article{leray2018,
+  author  = {Leray, Pierre and Forget, Julien and Behm, Guillaume and Cauneau, François and Mariano-Goulart, Denis},
+  title   = {Ultrahigh temporal resolution of visual presentation using gaming monitors and {G-Sync}},
+  journal = {Behavior Research Methods},
+  year    = {2018},
+  volume  = {50},
+  pages   = {26--38},
+  url     = {https://link.springer.com/article/10.3758/s13428-017-1003-6},
+  urldate = {2026-05-20}
+} % Skjermens oppdateringsfrekvens og forsinkelse mellom bildeklargjøring og visning
+@misc{gstreamer_intro,
+  author  = {{GStreamer Project}},
+  title   = {What is {GStreamer}?},
+  year    = {2024},
+  url     = {https://gstreamer.freedesktop.org/documentation/application-development/introduction/gstreamer.html},
+  urldate = {2026-05-20}
+} % Offisiell GStreamer introduksjon, opprinnelse og overordnet arkitekturbeskrivelse
+@misc{gstreamer_elements,
+  author  = {{GStreamer Project}},
+  title   = {Elements},
+  year    = {2024},
+  url     = {https://gstreamer.freedesktop.org/documentation/application-development/basics/elements.html},
+  urldate = {2026-05-20}
+} % Offisiell dokumentasjon for GStreamer-elementer, pipeline-struktur og tilstandsmaskin
+@misc{gstreamer_pads,
+  author  = {{GStreamer Project}},
+  title   = {Pads and Capabilities},
+  year    = {2024},
+  url     = {https://gstreamer.freedesktop.org/documentation/application-development/basics/pads.html},
+  urldate = {2026-05-20}
+} % Offisiell dokumentasjon for pads, retning, kapabilitetsforhandling og dynamiske pads
+@misc{gstreamer_sink,
+  author  = {{GStreamer Project}},
+  title   = {Sink Elements},
+  year    = {2024},
+  url     = {https://gstreamer.freedesktop.org/documentation/additional/design/element-sink.html},
+  urldate = {2026-05-20}
+} % Offisiell dokumentasjon for sink-elementer, synkronisering og tilstandshåndtering
+@misc{gstreamer_probes,
+  author  = {{GStreamer Project}},
+  title   = {Probes},
+  year    = {2024},
+  url     = {https://gstreamer.freedesktop.org/documentation/additional/design/probes.html},
+  urldate = {2026-05-20}
+} % Offisiell dokumentasjon for probes, callback-typer og dataflytovervåking
+
+@misc{gstreamer_pipeline_manip,
+  author  = {{GStreamer Project}},
+  title   = {Pipeline Manipulation},
+  year    = {2024},
+  url     = {https://gstreamer.freedesktop.org/documentation/application-development/advanced/pipeline-manipulation.html},
+  urldate = {2026-05-20}
+} % Offisiell dokumentasjon for avansert pipeline-manipulasjon og bruk av probes til tidsmåling
+@misc{ieee80211,
+  author       = {{IEEE}},
+  title        = {{IEEE} 802.11-2020: {IEEE} Standard for Information Technology -- Telecommunications and Information Exchange Between Systems -- Local and Metropolitan Area Networks -- Specific Requirements Part 11: Wireless {LAN} Medium Access Control {(MAC)} and Physical Layer {(PHY)} Specifications},
+  year         = {2020},
+  url          = {https://standards.ieee.org/ieee/802.11/7028/},
+  urldate      = {2026-05-20}
+} % IEEE 802.11 standarden for Wi-Fi, frekvensbånd og kanalstruktur
+
+@article{bankov2019,
+  author  = {Bankov, Dmitry and Khorov, Evgeny and Lyakhov, Andrey and Sandal, Mark},
+  title   = {Enabling Real-Time Applications in {Wi-Fi} Networks},
+  journal = {International Journal of Distributed Sensor Networks},
+  year    = {2019},
+  url     = {https://journals.sagepub.com/doi/full/10.1177/1550147719845312},
+  urldate = {2026-05-20}
+} % Wi-Fi kanalkonkurranse og forsinkelse i sanntidsapplikasjoner
+@article{ouden2022,
+  author  = {J. Ouden and V. Ho and T. Smagt},
+  title   = {Design and Evaluation of Remote Driving Architecture on 4G and 5G Mobile Networks},
+  year    = {2022},
+  url     = {https://www.frontiersin.org/journals/future-transportation/articles/10.3389/ffutr.2021.801567/full},
+  urldate = {2025-12-05}
+}
+@article{li2018urllc,
+  author  = {Li, Zexian and Uusitalo, Mikko A. and Shariatmadari, Hamidreza and Singh, Bikramjit},
+  title   = {{5G} {URLLC}: Design Challenges and System Concepts},
+  journal = {IEEE 15th International Symposium on Wireless Communication Systems},
+  year    = {2018},
+  url     = {https://ieeexplore.ieee.org/document/8491078},
+  urldate = {2026-05-20}
+} % 5G tjenestekategorier, URLLC krav og latensmål
+
+@article{schulz2017urllc,
+  author  = {Schulz, Philipp and Matthe, Maximilian and Klessig, Henrik and Simsek, Meryem and Fettweis, Gerhard and Ansari, Junaid and Ashraf, Shehzad Ali and Almeroth, Bjorn and Voigt, Jens and Riedel, Ingo and Puschmann, Andreas and Mitschke, Adam and Iqbal, Mujtaba and Ratajczak, Thomas and Marsch, Patrick},
+  title   = {Latency Critical {IoT} Applications in {5G}: Perspective on the Design of Radio Interface and Network Architecture},
+  journal = {IEEE Communications Magazine},
+  year    = {2017},
+  volume  = {55},
+  number  = {2},
+  pages   = {70--78},
+  url     = {https://ieeexplore.ieee.org/document/7842391},
+  urldate = {2026-05-20}
+} % 5G NR kortere TTI og sammenligning med 4G LTE for sanntidskommunikasjon
+@misc{tailscale_what,
+  author  = {{Tailscale Inc.}},
+  title   = {What is Tailscale?},
+  year    = {2024},
+  url     = {https://tailscale.com/kb/1151/what-is-tailscale},
+  urldate = {2026-05-20}
+} % Offisiell Tailscale dokumentasjon, mesh-nettverk, WireGuard og koordineringsserver
+
+@inproceedings{donenfeld2017wireguard,
+  author    = {Donenfeld, Jason A.},
+  title     = {{WireGuard}: Next Generation Kernel Network Tunnel},
+  booktitle = {Network and Distributed System Security Symposium (NDSS)},
+  year      = {2017},
+  url       = {https://www.ndss-symposium.org/ndss2017/ndss-2017-programme/wireguard-next-generation-kernel-network-tunnel/},
+  urldate   = {2026-05-20}
+} % WireGuard protokollen, kryptering og lav overhead sammenlignet med eldre VPN
+@inproceedings{calyam2012,
+  author    = {Calyam, Prasad and Ekambaram, Vignesh and Berryman, Allan and Van Beusekom, Rodney},
+  title     = {A Loss and Recovery Model for {RTP} Media Streams},
+  booktitle = {IEEE International Conference on Communications},
+  year      = {2012},
+  url       = {https://ieeexplore.ieee.org/document/6364439},
+  urldate   = {2026-05-20}
+} % RTP pakketap og effekt på inter-frame kodet video
+
+@article{pekec2023,
+  author  = {Pekec, Slobodan and Vucic, Dragan and Blagojevic, Vladimir},
+  title   = {Impact of Packet Loss Rate on Quality of Compressed High Resolution Videos},
+  journal = {Sensors},
+  year    = {2023},
+  url     = {https://pmc.ncbi.nlm.nih.gov/articles/PMC10007065/},
+  urldate = {2026-05-20}
+} % Effekt av pakketap på H.264 og H.265 video fra 0 til 1% tap
+@misc{linode_sar,
+  author  = {{Linode}},
+  title   = {How to Use the System Activity Reporter ({sar})},
+  year    = {2021},
+  url     = {https://www.linode.com/docs/guides/how-to-use-sar/},
+  urldate = {2026-05-20}
+} % SAR verktøy for CPU-overvåking, intervallmåling og rapportformat
+
+@book{richardson2010,
+  author    = {Richardson, Iain E.},
+  title     = {The H.264 Advanced Video Compression Standard},
+  edition   = {2},
+  publisher = {Wiley},
+  year      = {2010},
+  url       = {https://last.hit.bme.hu/download/vidtech/k%C3%B6nyvek/Iain%20E.%20Richardson%20-%20H264%20(2nd%20edition).pdf}
+} % CPU-belastning fra enkoding og effekt på sanntidsytelse
+@article{mittal2012,
+  author  = {Mittal, Anish and Moorthy, Anush Krishna and Bovik, Alan Conrad},
+  title   = {No-Reference Image Quality Assessment in the Spatial Domain},
+  journal = {IEEE Transactions on Image Processing},
+  year    = {2012},
+  volume  = {21},
+  number  = {12},
+  pages   = {4695--4708},
+  url     = {https://live.ece.utexas.edu/publications/2012/TIP%20BRISQUE.pdf},
+  urldate = {2026-05-20}
+} % Primærkilde for BRISQUE, naturlig scenestatistikk og treningsbasert kvalitetsvurdering
+
+@article{sara2019,
+  author  = {Sara, Umme and Akter, Morium and Uddin, Mohammad Shorif},
+  title   = {Image Quality Assessment through {FSIM}, {SSIM}, {MSE} and {PSNR}: A Comparative Study},
+  journal = {Journal of Computer and Communications},
+  year    = {2019},
+  volume  = {7},
+  number  = {3},
+  pages   = {8--18},
+  url     = {https://www.scirp.org/journal/paperinformation?paperid=90911},
+  urldate = {2026-05-20}
+} % Sammenligning av full-reference IQA-metoder, PSNR og SSIM forklart
