@@ -48,16 +48,20 @@ def main():
     df       = df[df["wall_time"] >= cutoff].copy()
     after    = len(df)
 
-    print(f"⏩  Skipping first {IGNORE_FIRST_SECONDS}s  ({before - after} rows removed, {after} rows kept)")
+    skip_line = f"Skipping first {IGNORE_FIRST_SECONDS}s  ({before - after} rows removed, {after} rows kept)"
+    print(f"⏩  {skip_line}")
 
     # ── DROP SUMMARY (before filtering them out) ─────────────────────────────
     dropped_rows  = (df["dropped_nals"] > 0).sum()
     dropped_total = df["dropped_nals"].sum()
 
-    print(f"\n{'─'*45}")
-    print(f"  Rows with dropped NALs : {dropped_rows}")
-    print(f"  Total NALs dropped     : {dropped_total}")
-    print(f"{'─'*45}")
+    drop_lines = [
+        f"{'─'*45}",
+        f"  Rows with dropped NALs : {dropped_rows}",
+        f"  Total NALs dropped     : {dropped_total}",
+        f"{'─'*45}",
+    ]
+    print("\n" + "\n".join(drop_lines))
 
     # ── FILTER OUT DROP ROWS FOR STATS ───────────────────────────────────────
     clean = df[df["dropped_nals"] == 0]["pipeline_ms"]
@@ -73,13 +77,16 @@ def main():
     mx   = clean.max()
     cnt  = len(clean)
 
-    print(f"\n  pipeline_ms stats  (n={cnt:,} clean rows)")
-    print(f"{'─'*45}")
-    print(f"  Mean  : {mean:>10.3f} ms")
-    print(f"  Min   : {mn:>10.3f} ms")
-    print(f"  Max   : {mx:>10.3f} ms")
-    print(f"  P95   : {p95:>10.3f} ms")
-    print(f"{'─'*45}\n")
+    stat_lines = [
+        f"  pipeline_ms stats  (n={cnt:,} clean rows)",
+        f"{'─'*45}",
+        f"  Mean  : {mean:>10.3f} ms",
+        f"  Min   : {mn:>10.3f} ms",
+        f"  Max   : {mx:>10.3f} ms",
+        f"  P95   : {p95:>10.3f} ms",
+        f"{'─'*45}",
+    ]
+    print("\n" + "\n".join(stat_lines) + "\n")
 
     # ── GRAPH ─────────────────────────────────────────────────────────────────
     # Convert wall_time to seconds-since-start for the x-axis
@@ -120,6 +127,15 @@ def main():
     out_path  = os.path.join(out_dir, out_name)
     plt.savefig(out_path, dpi=150)
     print(f"Graph saved → {out_path}")
+
+    txt_path = os.path.join(out_dir, f"sender_pipeline_{timestamp}_stats.txt")
+    with open(txt_path, "w") as f:
+        f.write(f"Sender Pipeline Stats  –  {filename}\n\n")
+        f.write(skip_line + "\n\n")
+        f.write("\n".join(drop_lines) + "\n\n")
+        f.write("\n".join(stat_lines) + "\n")
+    print(f"Stats saved → {txt_path}")
+
     plt.show()
 
 

@@ -62,15 +62,18 @@ stats = {
     "Std Dev": ms.std(),
 }
 
-print("─" * 35)
-print(f"  {'Stat':<10} {'Value':>12}")
-print("─" * 35)
+lines = [
+    "─" * 35,
+    f"  {'Stat':<10} {'Value':>12}",
+    "─" * 35,
+]
 for name, val in stats.items():
     if name == "Count":
-        print(f"  {name:<10} {val:>12,}")
+        lines.append(f"  {name:<10} {val:>12,}")
     else:
-        print(f"  {name:<10} {val:>11.2f} ms")
-print("─" * 35)
+        lines.append(f"  {name:<10} {val:>11.2f} ms")
+lines.append("─" * 35)
+print("\n".join(lines))
 
 
 # ── 4. Graph ──────────────────────────────────────────────────────────────────
@@ -112,4 +115,11 @@ out_name  = "transit_result_" + timestamp + "_analysis.png"
 out_path  = os.path.join(out_dir, out_name)
 plt.savefig(out_path, dpi=150)
 print(f"\nGraph saved: {out_path}")
+
+txt_path = os.path.join(out_dir, "transit_result_" + timestamp + "_stats.txt")
+with open(txt_path, "w") as f:
+    f.write(f"Transit Time Stats  –  {filename}\n\n")
+    f.write("\n".join(lines) + "\n")
+print(f"Stats saved: {txt_path}")
+
 plt.show()

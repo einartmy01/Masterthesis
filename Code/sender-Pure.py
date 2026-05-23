@@ -57,7 +57,7 @@ def build_pipeline():
 # ── Main ──────────────────────────────────────────────────────────────────────
 
 def main():
-    setup_network()
+    #setup_network()
     check_cameras()
 
     Gst.init(None)
