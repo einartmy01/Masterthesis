@@ -32,8 +32,7 @@ def main():
     pipeline = Gst.parse_launch(build_pipeline())
 
     pipeline.set_state(Gst.State.PLAYING)
-    print("Receiver started")
-    print("Press Ctrl+C to stop.")
+    print("Receiver started - Press Ctrl+C to stop.")
 
     loop = GLib.MainLoop()
     try:
