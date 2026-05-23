@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.3.16)  20 MAY 2026 22:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.3.16)  22 MAY 2026 21:52
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1226,7 +1226,7 @@ Package gensymb Info: Using \textmu for \micro on input line 10.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 (././title.tex
-<./Images/NTNU_logo.png, id=282, 426.393pt x 110.5731pt>
+<./Images/NTNU_logo.png, id=290, 426.393pt x 110.5731pt>
 File: ./Images/NTNU_logo.png Graphic file (type png)
 <use ./Images/NTNU_logo.png>
 Package pdftex.def Info: ./Images/NTNU_logo.png  used on input line 9.
@@ -1258,64 +1258,76 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has b
 <to be read again> 
                    \relax 
 l.21 
-      [1] [2] Excluding 'comment' comment.) [3] (./Sections/03 Theory.tex [4] [5] [6] [7]
-Overfull \vbox (87.34114pt too high) has occurred while \output is active []
-
- [8]) [9] (./Sections/04 System Design.tex
-<Images/PhysicalSetup.png, id=502, 1195.46625pt x 633.36626pt>
+      [1] [2] Excluding 'comment' comment.) [3] (./Sections/03 Theory.tex [4] [5] [6] [7] [8] [9] [10] [11] [12] [13] [14]) [15] (./Sections/04 System Design.tex
+<Images/PhysicalSetup.png, id=656, 1195.46625pt x 633.36626pt>
 File: Images/PhysicalSetup.png Graphic file (type png)
 <use Images/PhysicalSetup.png>
 Package pdftex.def Info: Images/PhysicalSetup.png  used on input line 22.
 (pdftex.def)             Requested size: 384.10959pt x 203.5028pt.
-<Images/ApplicationAndTransportSetup.png, id=503, 1414.28375pt x 739.76375pt>
+<Images/ApplicationAndTransportSetup.png, id=657, 1414.28375pt x 739.76375pt>
 File: Images/ApplicationAndTransportSetup.png Graphic file (type png)
 <use Images/ApplicationAndTransportSetup.png>
 Package pdftex.def Info: Images/ApplicationAndTransportSetup.png  used on input line 27.
 (pdftex.def)             Requested size: 384.10959pt x 200.91281pt.
-<Images/SequenceDiagramCompCam.png, id=504, 996.72375pt x 709.65125pt>
+<Images/SequenceDiagramCompCam.png, id=658, 996.72375pt x 709.65125pt>
 File: Images/SequenceDiagramCompCam.png Graphic file (type png)
 <use Images/SequenceDiagramCompCam.png>
 Package pdftex.def Info: Images/SequenceDiagramCompCam.png  used on input line 32.
 (pdftex.def)             Requested size: 384.10959pt x 273.47104pt.
- [10 <./Images/PhysicalSetup.png>] [11 <./Images/ApplicationAndTransportSetup.png>]) [12 <./Images/SequenceDiagramCompCam.png>] (./Sections/05 Methodology.tex [13] [14]) [15] (./Sections/06 Results.tex) [16] (./Sections/20 Conclusion.tex) [17]
+ [16 <./Images/PhysicalSetup.png>] [17 <./Images/ApplicationAndTransportSetup.png>]) [18 <./Images/SequenceDiagramCompCam.png>] (./Sections/05 Methodology.tex [19] [20]) [21] (./Sections/06 Results.tex) [22] (./Sections/20 Conclusion.tex) [23]
 Overfull \hbox (0.21512pt too wide) in paragraph at lines 45--45
 []\OT1/cmr/m/n/10 Inzirillo Francesco et al. \OT1/cmr/m/it/10 D5.4 - Doc-u-ment-a-tion of use cases for Re-mote Driv-ing\OT1/cmr/m/n/10 . FP2R2DATO
  []
 
-
-Overfull \hbox (82.04663pt too wide) in paragraph at lines 45--45
-\OT1/cmr/m/it/10 of SPIE \OT1/cmr/m/n/10 5558 (2004). \OT1/cmr/m/sc/10 url\OT1/cmr/m/n/10 : [][]$\OT1/cmss/m/n/10 https : / / www . semanticscholar . org / paper / 27c3343314940d32536158095113f5711e9d47c8$[][]
- []
-
-[18]
+[24]
 Overfull \hbox (27.14835pt too wide) in paragraph at lines 45--45
 \OT1/cmss/m/n/10 Video[]Latency[]Measurement[]between[]a[]Robot[]and[]Its[]Remote[]Control[]Station[]Causes[]and[]Mitigation$[][]
  []
 
-[19] (out/main.aux)
+
+Overfull \hbox (5.96739pt too wide) in paragraph at lines 45--45
+[]\OT1/cmr/m/n/10 Jon Postel. \OT1/cmr/m/it/10 RFC 768: User Da-ta-gram Pro-tocol\OT1/cmr/m/n/10 . Tech. rep. IETF, 1980. \OT1/cmr/m/sc/10 url\OT1/cmr/m/n/10 : [][]$\OT1/cmss/m/n/10 https : / / datatracker .
+ []
+
+
+Overfull \hbox (27.14835pt too wide) in paragraph at lines 45--45
+\OT1/cmss/m/n/10 Video[]Latency[]Measurement[]between[]a[]Robot[]and[]Its[]Remote[]Control[]Station[]Causes[]and[]Mitigation$[][]
+ []
+
+[25]
+Overfull \hbox (12.4204pt too wide) in paragraph at lines 45--45
+[]\OT1/cmr/m/n/10 GStreamer Pro-ject. \OT1/cmr/m/it/10 Sink Ele-ments\OT1/cmr/m/n/10 . 2024. \OT1/cmr/m/sc/10 url\OT1/cmr/m/n/10 : [][]$\OT1/cmss/m/n/10 https : / / gstreamer . freedesktop . org / documentation /
+ []
+
+[26]
+Overfull \hbox (3.58064pt too wide) in paragraph at lines 45--45
+[]\OT1/cmr/m/n/10 Umme Sara, Morium Ak-ter and Mo-hammad Shorif Ud-din. `  Im-age Qual-ity As-sess-ment through
+ []
+
+[27] (out/main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 4306BBD236D567751A0EC53930AA765C;9651.
+(rerunfilecheck)             Checksum: 20BAF5FCE39B4888C1102FCA31C9E654;9849.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 42522 strings out of 474222
- 879176 string characters out of 5748733
- 1947975 words of memory out of 5000000
- 63982 multiletter control sequences out of 15000+600000
- 567855 words of font info for 70 fonts, out of 8000000 for 9000
+ 42674 strings out of 474222
+ 884427 string characters out of 5748733
+ 1953975 words of memory out of 5000000
+ 64090 multiletter control sequences out of 15000+600000
+ 568023 words of font info for 71 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  117i,12n,121p,1154b,3016s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on out/main.pdf (25 pages, 529763 bytes).
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on out/main.pdf (33 pages, 585584 bytes).
 PDF statistics:
- 660 PDF objects out of 1000 (max. 8388607)
- 595 compressed objects within 6 object streams
- 123 named destinations out of 1000 (max. 500000)
- 585 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 892 PDF objects out of 1000 (max. 8388607)
+ 814 compressed objects within 9 object streams
+ 166 named destinations out of 1000 (max. 500000)
+ 601 words of extra memory for PDF output out of 10000 (max. 10000000)
 
