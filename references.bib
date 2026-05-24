@@ -339,6 +339,8 @@
   url     = {https://gstreamer.freedesktop.org/documentation/application-development/advanced/pipeline-manipulation.html},
   urldate = {2026-05-20}
 } % Offisiell dokumentasjon for avansert pipeline-manipulasjon og bruk av probes til tidsmåling
+
+% DENNE MÅ SJEKKES PÅ NTNU VPN
 @misc{ieee80211,
   author       = {{IEEE}},
   title        = {{IEEE} 802.11-2020: {IEEE} Standard for Information Technology -- Telecommunications and Information Exchange Between Systems -- Local and Metropolitan Area Networks -- Specific Requirements Part 11: Wireless {LAN} Medium Access Control {(MAC)} and Physical Layer {(PHY)} Specifications},
@@ -431,6 +433,13 @@
   year      = {2010},
   url       = {https://last.hit.bme.hu/download/vidtech/k%C3%B6nyvek/Iain%20E.%20Richardson%20-%20H264%20(2nd%20edition).pdf}
 } % CPU-belastning fra enkoding og effekt på sanntidsytelse
+@phdthesis{blomqvist2018,
+  author    = {Blomqvist, Timo},
+  title     = {Video latency in a vehicle's remoteoperating system},
+  publisher = {Metropolia University of Applied Sciences},
+  year      = {2018},
+  url       = {https://www.theseus.fi/bitstream/handle/10024/157223/blomqvist_timo.pdf?sequence=1&isAllowed=y}
+} % CPU-belastning fra enkoding og effekt på sanntidsytelse
 @article{mittal2012,
   author  = {Mittal, Anish and Moorthy, Anush Krishna and Bovik, Alan Conrad},
   title   = {No-Reference Image Quality Assessment in the Spatial Domain},
@@ -454,3 +463,68 @@
   url     = {https://www.scirp.org/journal/paperinformation?paperid=90911},
   urldate = {2026-05-20}
 } % Sammenligning av full-reference IQA-metoder, PSNR og SSIM forklart
+@article{vannicola2012,
+  author  = {Vannicola, Joseph and Beard, Ronald and White, J. and Senior, Kenneth and Largay, Michael and Beard, Robert},
+  title   = {{GPS} Time Transfer: Applications to the {US} Naval Observatory Two-Way Satellite Time and Frequency Transfer},
+  journal = {IEEE Transactions on Ultrasonics, Ferroelectrics, and Frequency Control},
+  year    = {2012},
+  volume  = {59},
+  number  = {12},
+  pages   = {2625--2634},
+  url     = {https://ieeexplore.ieee.org/document/6378481},
+  urldate = {2026-04-14}
+} % GPS atomklokker, klokkeavdrift mellom maskiner og PPS nøyaktighet
+
+@book{misra2011,
+  author    = {Misra, Pratap and Enge, Per},
+  title     = {Global Positioning System: Signals, Measurements, and Performance},
+  edition   = {2},
+  publisher = {Ganga-Jamuna Press},
+  year      = {2011},
+  url       = {https://www.amazon.com/Global-Positioning-System-Measurements-Performance/dp/0970954417}
+} % GPS-systemet, tidssynkronisering fra satellittsignaler og UTC-sporbarhet
+
+@article{sesia2010,
+  author  = {Sesia, Ilaria and Pierozzi, Marco and Tavella, Patrizia},
+  title   = {{GPS} and {IEEE} 1588 Synchronization for the Measurement of Synchrophasors in Electric Power Systems},
+  journal = {Computer Standards and Interfaces},
+  year    = {2010},
+  volume  = {33},
+  number  = {2},
+  pages   = {176--181},
+  url     = {https://www.sciencedirect.com/science/article/abs/pii/S0920548910000875},
+  urldate = {2026-04-14}
+} % GPS PPS nøyaktighet, sub-mikrosekund klokkedisiplinering av systemklokke
+
+@techreport{rfc5905,
+  author      = {Mills, David and Martin, Jim and Burbank, Jack and Kasch, William},
+  title       = {{RFC} 5905: Network Time Protocol Version 4 -- Reference and Implementation Guide},
+  institution = {IETF},
+  year        = {2010},
+  url         = {https://www.rfc-editor.org/rfc/rfc5905},
+  urldate     = {2026-03-18}
+} % NTP v4 standard, firepunkts tidsstempel og offset-estimering
+
+@misc{chronyproject,
+  author  = {{Chrony Project}},
+  title   = {Chrony -- Configuration Examples and Accuracy},
+  year    = {2024},
+  url     = {https://chrony-project.org/examples.html},
+  urldate = {2026-04-02}
+} % Offisiell Chrony dokumentasjon, frekvenskorrigering og nøyaktighet over internett
+
+@misc{redhat2024chrony,
+  author  = {{Red Hat}},
+  title   = {Configuring Time Synchronization -- {Red Hat Enterprise Linux} 9},
+  year    = {2024},
+  url     = {https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/9/html/configuring_basic_system_settings/configuring-time-synchronization_configuring-basic-system-settings},
+  urldate = {2026-03-25}
+} % Chrony nøyaktighet over LAN og internett, pool.ntp.org
+
+@misc{redhat2024hw,
+  author  = {{Red Hat}},
+  title   = {Chrony with Hardware Timestamping -- {Red Hat Enterprise Linux} 10},
+  year    = {2024},
+  url     = {https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/10/html/configuring_time_synchronization/chrony-with-hw-timestamping},
+  urldate = {2026-03-25}
+} % Hardware timestamping med Chrony, sub-mikrosekund nøyaktighet på LAN
