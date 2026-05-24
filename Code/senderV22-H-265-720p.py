@@ -83,7 +83,7 @@ def build_pipeline():
             f'videoconvert ! '
             f'videoscale method=bilinear ! '
             f'video/x-raw,format=I420,width=1280,height=720 ! '
-            f'x265enc tune=zerolatency speed-preset=ultrafast bitrate=6000 key-int-max=15 '
+            f'x265enc tune=zerolatency speed-preset=ultrafast bitrate=8200 key-int-max=15 '
             f'option-string="bframes=0:no-open-gop=1:repeat-headers=1" ! '
             f'h265parse config-interval=-1 ! '
             f'queue max-size-buffers=4 max-size-bytes=0 max-size-time=0 leaky=downstream name=encode_q{i} ! '

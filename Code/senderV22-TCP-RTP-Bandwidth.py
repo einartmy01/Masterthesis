@@ -123,8 +123,7 @@ def setup_network():
 
     # Apply outbound shaping on the receiver-facing interface.
     # Done here so it's active before the pipeline starts producing traffic.
-    set_bandwidth_limit(RECEIVER_IFACE, BANDWIDTH_LIMIT_MBIT)
-    verify_bandwidth_limit(RECEIVER_IFACE)
+
 
 
 def check_cameras():
@@ -148,7 +147,7 @@ def build_pipeline():
             f'queue max-size-buffers=2 max-size-bytes=0 max-size-time=0 leaky=downstream ! '
             f'avdec_h264 ! '
             f'videoconvert ! '
-            f'x264enc tune=zerolatency bitrate=6000 speed-preset=ultrafast key-int-max=15 threads=0 ! '
+            f'x264enc tune=zerolatency bitrate=8200 speed-preset=ultrafast key-int-max=15 threads=0 ! '
             f'h264parse ! '
             f'queue max-size-buffers=2 max-size-bytes=0 max-size-time=0 leaky=downstream ! '
             f'rtph264pay config-interval=1 pt=96 name=pay{i} ! '
@@ -331,6 +330,8 @@ def attach_probes(pipeline):
 
 def main():
     #setup_network()
+    set_bandwidth_limit(RECEIVER_IFACE, BANDWIDTH_LIMIT_MBIT)
+    verify_bandwidth_limit(RECEIVER_IFACE)
     check_cameras()
 
     timestamp = datetime.now().strftime("%d.%m-%H:%M")
