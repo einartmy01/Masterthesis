@@ -15,8 +15,8 @@ from gi.repository import Gst, GLib
 
 # ── Config ────────────────────────────────────────────────────────────────────
 CAM_IP0        = "192.168.0.100"
-CAM_IP1        = "192.168.1.101"
-CAM_IP2        = "192.168.3.103"
+CAM_IP1        = "192.168.0.101"
+CAM_IP2        = "192.168.0.102"
 CAM_IPs        = [CAM_IP0, CAM_IP1, CAM_IP2]
 USER           = "admin"
 PASS           = "NilsNils"
@@ -34,7 +34,7 @@ RTP_PORTS      = ["5000", "5002", "5004"]
 # The script accounts for Tailscale/WireGuard overhead automatically (~8%).
 # Your 3-camera pipeline at bitrate=8000 produces ~24 Mbit/s nominal.
 # Suggested test values: 22.0
-BANDWIDTH_LIMIT_MBIT = 18.0
+BANDWIDTH_LIMIT_MBIT = 12.0
 # ─────────────────────────────────────────────────────────────────────────────
 
 # ── Bandwidth shaping (tc tbf on outbound interface) ─────────────────────────
@@ -123,8 +123,7 @@ def setup_network():
 
     # Apply outbound shaping on the receiver-facing interface.
     # Done here so it's active before the pipeline starts producing traffic.
-    set_bandwidth_limit(RECEIVER_IFACE, BANDWIDTH_LIMIT_MBIT)
-    verify_bandwidth_limit(RECEIVER_IFACE)
+
 
 
 def check_cameras():
@@ -148,7 +147,7 @@ def build_pipeline():
             f'queue max-size-buffers=2 max-size-bytes=0 max-size-time=0 leaky=downstream ! '
             f'avdec_h264 ! '
             f'videoconvert ! '
-            f'x264enc tune=zerolatency bitrate=8000 speed-preset=ultrafast key-int-max=15 threads=0 ! '
+            f'x264enc tune=zerolatency bitrate=8200 speed-preset=ultrafast key-int-max=15 threads=0 ! '
             f'h264parse ! '
             f'queue max-size-buffers=2 max-size-bytes=0 max-size-time=0 leaky=downstream ! '
             f'rtph264pay config-interval=1 pt=96 name=pay{i} ! '
@@ -329,7 +328,9 @@ def attach_probes(pipeline):
 # ── Main ──────────────────────────────────────────────────────────────────────
 
 def main():
-    setup_network()
+    #setup_network()
+    set_bandwidth_limit(RECEIVER_IFACE, BANDWIDTH_LIMIT_MBIT)
+    verify_bandwidth_limit(RECEIVER_IFACE)
     check_cameras()
 
     timestamp = datetime.now().strftime("%d.%m-%H:%M")

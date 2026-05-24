@@ -15,8 +15,8 @@ from gi.repository import Gst, GLib
 
 # ── Config ────────────────────────────────────────────────────────────────────
 CAM_IP0        = "192.168.0.100"
-CAM_IP1        = "192.168.1.101"
-CAM_IP2        = "192.168.3.103"
+CAM_IP1        = "192.168.0.101"
+CAM_IP2        = "192.168.0.102"
 CAM_IPs        = [CAM_IP0, CAM_IP1, CAM_IP2]
 USER           = "admin"
 PASS           = "NilsNils"
@@ -82,7 +82,7 @@ def build_pipeline():
             f'nvh264dec ! cudadownload ! '
             f'videoconvert ! videoscale ! '
             f'video/x-raw,format=NV12,width=1920,height=1080 ! '
-            f'nvh265enc zerolatency=true bitrate=4000 gop-size=10 '
+            f'nvh265enc zerolatency=true bitrate=8200 gop-size=10 '
             f'preset=p1 tune=ultra-low-latency rc-mode=cbr '
             f'repeat-sequence-header=true strict-gop=true aud=false '
             f'multi-pass=disabled num-slices=4 ! '
@@ -264,7 +264,7 @@ def attach_probes(pipeline):
 # ── Main ──────────────────────────────────────────────────────────────────────
 
 def main():
-    setup_network()
+    #setup_network()
     check_cameras()
 
     timestamp = datetime.now().strftime("%d.%m-%H:%M")
