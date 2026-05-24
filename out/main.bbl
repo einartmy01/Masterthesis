@@ -461,6 +461,346 @@
       \verb https://dl.acm.org/doi/pdf/10.1145/3342197.3344534
       \endverb
     \endentry
+    \entry{vannicola2012}{article}{}
+      \name{author}{6}{}{%
+        {{hash=2b29fee3615317ad2554a5e4cb700113}{%
+           family={Vannicola},
+           familyi={V\bibinitperiod},
+           given={Joseph},
+           giveni={J\bibinitperiod}}}%
+        {{hash=da3f4a7cb857fdad55c0a438f376c595}{%
+           family={Beard},
+           familyi={B\bibinitperiod},
+           given={Ronald},
+           giveni={R\bibinitperiod}}}%
+        {{hash=a9f4cc958c009962d650d40c93c7d397}{%
+           family={White},
+           familyi={W\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=e37c9996f568b4a4dde86bfc8f743495}{%
+           family={Senior},
+           familyi={S\bibinitperiod},
+           given={Kenneth},
+           giveni={K\bibinitperiod}}}%
+        {{hash=8ef0fc3da8039fe9d9cc614c0d230a7a}{%
+           family={Largay},
+           familyi={L\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+        {{hash=0cd75572efcafabbd1fb499fc76e221c}{%
+           family={Beard},
+           familyi={B\bibinitperiod},
+           given={Robert},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{424977b7cdd6e61752aff56665e2395a}
+      \strng{fullhash}{890afd9a8a1ad87dbda008c312cb95d7}
+      \strng{bibnamehash}{424977b7cdd6e61752aff56665e2395a}
+      \strng{authorbibnamehash}{424977b7cdd6e61752aff56665e2395a}
+      \strng{authornamehash}{424977b7cdd6e61752aff56665e2395a}
+      \strng{authorfullhash}{890afd9a8a1ad87dbda008c312cb95d7}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Ultrasonics, Ferroelectrics, and Frequency Control}
+      \field{number}{12}
+      \field{title}{{GPS} Time Transfer: Applications to the {US} Naval Observatory Two-Way Satellite Time and Frequency Transfer}
+      \field{urlday}{14}
+      \field{urlmonth}{4}
+      \field{urlyear}{2026}
+      \field{volume}{59}
+      \field{year}{2012}
+      \field{urldateera}{ce}
+      \field{pages}{2625\bibrangedash 2634}
+      \range{pages}{10}
+      \verb{urlraw}
+      \verb https://ieeexplore.ieee.org/document/6378481
+      \endverb
+      \verb{url}
+      \verb https://ieeexplore.ieee.org/document/6378481
+      \endverb
+    \endentry
+    \entry{misra2011}{book}{}
+      \name{author}{2}{}{%
+        {{hash=dea7a47016ffef1ba4d9247167187255}{%
+           family={Misra},
+           familyi={M\bibinitperiod},
+           given={Pratap},
+           giveni={P\bibinitperiod}}}%
+        {{hash=d1f03e41902631e4ef274a6a749fca7e}{%
+           family={Enge},
+           familyi={E\bibinitperiod},
+           given={Per},
+           giveni={P\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Ganga-Jamuna Press}%
+      }
+      \strng{namehash}{431df6603cfa4e1eba84d547576caf59}
+      \strng{fullhash}{431df6603cfa4e1eba84d547576caf59}
+      \strng{bibnamehash}{431df6603cfa4e1eba84d547576caf59}
+      \strng{authorbibnamehash}{431df6603cfa4e1eba84d547576caf59}
+      \strng{authornamehash}{431df6603cfa4e1eba84d547576caf59}
+      \strng{authorfullhash}{431df6603cfa4e1eba84d547576caf59}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{2}
+      \field{title}{Global Positioning System: Signals, Measurements, and Performance}
+      \field{year}{2011}
+      \verb{urlraw}
+      \verb https://www.amazon.com/Global-Positioning-System-Measurements-Performance/dp/0970954417
+      \endverb
+      \verb{url}
+      \verb https://www.amazon.com/Global-Positioning-System-Measurements-Performance/dp/0970954417
+      \endverb
+    \endentry
+    \entry{sesia2010}{article}{}
+      \name{author}{3}{}{%
+        {{hash=c725f34c7ac6e5d04e33f5981fd6d8ac}{%
+           family={Sesia},
+           familyi={S\bibinitperiod},
+           given={Ilaria},
+           giveni={I\bibinitperiod}}}%
+        {{hash=71cb90e16d7c9c522426b133389268d3}{%
+           family={Pierozzi},
+           familyi={P\bibinitperiod},
+           given={Marco},
+           giveni={M\bibinitperiod}}}%
+        {{hash=73a234e1328e0a8353a9fa0715d2d682}{%
+           family={Tavella},
+           familyi={T\bibinitperiod},
+           given={Patrizia},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{491214c75e2af3bf32a6085e4ba69896}
+      \strng{fullhash}{9a9a01eabc18693e181ae289875c9f68}
+      \strng{bibnamehash}{9a9a01eabc18693e181ae289875c9f68}
+      \strng{authorbibnamehash}{9a9a01eabc18693e181ae289875c9f68}
+      \strng{authornamehash}{491214c75e2af3bf32a6085e4ba69896}
+      \strng{authorfullhash}{9a9a01eabc18693e181ae289875c9f68}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Computer Standards and Interfaces}
+      \field{number}{2}
+      \field{title}{{GPS} and {IEEE} 1588 Synchronization for the Measurement of Synchrophasors in Electric Power Systems}
+      \field{urlday}{14}
+      \field{urlmonth}{4}
+      \field{urlyear}{2026}
+      \field{volume}{33}
+      \field{year}{2010}
+      \field{urldateera}{ce}
+      \field{pages}{176\bibrangedash 181}
+      \range{pages}{6}
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/abs/pii/S0920548910000875
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/abs/pii/S0920548910000875
+      \endverb
+    \endentry
+    \entry{kaknjo2018}{article}{}
+      \name{author}{6}{}{%
+        {{hash=cdee6fd19a9ef69102627cc64cacceb5}{%
+           family={Kaknjo},
+           familyi={K\bibinitperiod},
+           given={Admir},
+           giveni={A\bibinitperiod}}}%
+        {{hash=1a03957b8c4a010d21a9cefe8944bf79}{%
+           family={Rao},
+           familyi={R\bibinitperiod},
+           given={Muzaffar},
+           giveni={M\bibinitperiod}}}%
+        {{hash=4a2de7a7acab0db9e3c1ca24b91a3a4d}{%
+           family={Omerdić},
+           familyi={O\bibinitperiod},
+           given={Edin},
+           giveni={E\bibinitperiod}}}%
+        {{hash=1872932a6e4175afd1a7a0e33e0a8668}{%
+           family={Robinson},
+           familyi={R\bibinitperiod},
+           given={Luke},
+           giveni={L\bibinitperiod}}}%
+        {{hash=8a67f70bbbaf64ebf461e54bbc8c9082}{%
+           family={Toal},
+           familyi={T\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod}}}%
+        {{hash=55556b8026750ad8ad390371a4976dcc}{%
+           family={Newe},
+           familyi={N\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{b3a64faa8dc0c1b5ccf96afa15c9a280}
+      \strng{fullhash}{a6ea819838a42d964debbe1597c9cc44}
+      \strng{bibnamehash}{b3a64faa8dc0c1b5ccf96afa15c9a280}
+      \strng{authorbibnamehash}{b3a64faa8dc0c1b5ccf96afa15c9a280}
+      \strng{authornamehash}{b3a64faa8dc0c1b5ccf96afa15c9a280}
+      \strng{authorfullhash}{a6ea819838a42d964debbe1597c9cc44}
+      \field{extraname}{1}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Wireless Communications and Mobile Computing}
+      \field{title}{Real-Time Video Latency Measurement between a Robot and Its Remote Control Station: Causes and Mitigation}
+      \field{urlday}{15}
+      \field{urlmonth}{10}
+      \field{urlyear}{2025}
+      \field{year}{2018}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.researchgate.net/publication/329369713_Real-Time_Video_Latency_Measurement_between_a_Robot_and_Its_Remote_Control_Station_Causes_and_Mitigation
+      \endverb
+      \verb{url}
+      \verb https://www.researchgate.net/publication/329369713_Real-Time_Video_Latency_Measurement_between_a_Robot_and_Its_Remote_Control_Station_Causes_and_Mitigation
+      \endverb
+    \endentry
+    \entry{rfc5905}{report}{}
+      \name{author}{4}{}{%
+        {{hash=67cf25c28d3d14ac90e4bac4283c4e25}{%
+           family={Mills},
+           familyi={M\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=d92960ce8af51df6a98cb4d73cac8d45}{%
+           family={Martin},
+           familyi={M\bibinitperiod},
+           given={Jim},
+           giveni={J\bibinitperiod}}}%
+        {{hash=629d5f26f5cc701aa28b66fd40163351}{%
+           family={Burbank},
+           familyi={B\bibinitperiod},
+           given={Jack},
+           giveni={J\bibinitperiod}}}%
+        {{hash=0d4a6596a9df44c93bd825ef1f79070f}{%
+           family={Kasch},
+           familyi={K\bibinitperiod},
+           given={William},
+           giveni={W\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {IETF}%
+      }
+      \strng{namehash}{d73dad64f8e4dcb01bcbd3adf0919c70}
+      \strng{fullhash}{d966c2962fb94f328ae876ce52eb22cf}
+      \strng{bibnamehash}{d73dad64f8e4dcb01bcbd3adf0919c70}
+      \strng{authorbibnamehash}{d73dad64f8e4dcb01bcbd3adf0919c70}
+      \strng{authornamehash}{d73dad64f8e4dcb01bcbd3adf0919c70}
+      \strng{authorfullhash}{d966c2962fb94f328ae876ce52eb22cf}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{RFC} 5905: Network Time Protocol Version 4 -- Reference and Implementation Guide}
+      \field{type}{techreport}
+      \field{urlday}{18}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{year}{2010}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.rfc-editor.org/rfc/rfc5905
+      \endverb
+      \verb{url}
+      \verb https://www.rfc-editor.org/rfc/rfc5905
+      \endverb
+    \endentry
+    \entry{chronyproject}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=e75dfa4d220e2ca378bf876cf587cef3}{%
+           family={{Chrony Project}},
+           familyi={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{e75dfa4d220e2ca378bf876cf587cef3}
+      \strng{fullhash}{e75dfa4d220e2ca378bf876cf587cef3}
+      \strng{bibnamehash}{e75dfa4d220e2ca378bf876cf587cef3}
+      \strng{authorbibnamehash}{e75dfa4d220e2ca378bf876cf587cef3}
+      \strng{authornamehash}{e75dfa4d220e2ca378bf876cf587cef3}
+      \strng{authorfullhash}{e75dfa4d220e2ca378bf876cf587cef3}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Chrony -- Configuration Examples and Accuracy}
+      \field{urlday}{2}
+      \field{urlmonth}{4}
+      \field{urlyear}{2026}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://chrony-project.org/examples.html
+      \endverb
+      \verb{url}
+      \verb https://chrony-project.org/examples.html
+      \endverb
+    \endentry
+    \entry{redhat2024chrony}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=a82007c47b25723539a00ff94e8b3d27}{%
+           family={{Red Hat}},
+           familyi={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{a82007c47b25723539a00ff94e8b3d27}
+      \strng{fullhash}{a82007c47b25723539a00ff94e8b3d27}
+      \strng{bibnamehash}{a82007c47b25723539a00ff94e8b3d27}
+      \strng{authorbibnamehash}{a82007c47b25723539a00ff94e8b3d27}
+      \strng{authornamehash}{a82007c47b25723539a00ff94e8b3d27}
+      \strng{authorfullhash}{a82007c47b25723539a00ff94e8b3d27}
+      \field{extraname}{1}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Configuring Time Synchronization -- {Red Hat Enterprise Linux} 9}
+      \field{urlday}{25}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/9/html/configuring_basic_system_settings/configuring-time-synchronization_configuring-basic-system-settings
+      \endverb
+      \verb{url}
+      \verb https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/9/html/configuring_basic_system_settings/configuring-time-synchronization_configuring-basic-system-settings
+      \endverb
+    \endentry
+    \entry{redhat2024hw}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=a82007c47b25723539a00ff94e8b3d27}{%
+           family={{Red Hat}},
+           familyi={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{a82007c47b25723539a00ff94e8b3d27}
+      \strng{fullhash}{a82007c47b25723539a00ff94e8b3d27}
+      \strng{bibnamehash}{a82007c47b25723539a00ff94e8b3d27}
+      \strng{authorbibnamehash}{a82007c47b25723539a00ff94e8b3d27}
+      \strng{authornamehash}{a82007c47b25723539a00ff94e8b3d27}
+      \strng{authorfullhash}{a82007c47b25723539a00ff94e8b3d27}
+      \field{extraname}{2}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Chrony with Hardware Timestamping -- {Red Hat Enterprise Linux} 10}
+      \field{urlday}{25}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/10/html/configuring_time_synchronization/chrony-with-hw-timestamping
+      \endverb
+      \verb{url}
+      \verb https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/10/html/configuring_time_synchronization/chrony-with-hw-timestamping
+      \endverb
+    \endentry
     \entry{sodagar2011}{article}{}
       \name{author}{1}{}{%
         {{hash=5d30a174757f946c3c6f8a4ada9c0aa4}{%
@@ -475,8 +815,8 @@
       \strng{authorbibnamehash}{5d30a174757f946c3c6f8a4ada9c0aa4}
       \strng{authornamehash}{5d30a174757f946c3c6f8a4ada9c0aa4}
       \strng{authorfullhash}{5d30a174757f946c3c6f8a4ada9c0aa4}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{IEEE MultiMedia}
@@ -536,8 +876,8 @@
       \strng{authorbibnamehash}{73f293b416c504fd7a0bb6bf1bc77344}
       \strng{authornamehash}{73f293b416c504fd7a0bb6bf1bc77344}
       \strng{authorfullhash}{5e2d5183a1f9a0d478750fbfd8a23475}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Towards Railways Remote Driving: Analysis of Video Streaming Latency and Adaptive Rate Control}
@@ -551,6 +891,68 @@
       \endverb
       \verb{url}
       \verb https://ieeexplore.ieee.org/document/10597107
+      \endverb
+    \endentry
+    \entry{blomqvist2018}{thesis}{}
+      \name{author}{1}{}{%
+        {{hash=df3ab482758c34fcff708307ab5ceae6}{%
+           family={Blomqvist},
+           familyi={B\bibinitperiod},
+           given={Timo},
+           giveni={T\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Metropolia University of Applied Sciences}%
+      }
+      \strng{namehash}{df3ab482758c34fcff708307ab5ceae6}
+      \strng{fullhash}{df3ab482758c34fcff708307ab5ceae6}
+      \strng{bibnamehash}{df3ab482758c34fcff708307ab5ceae6}
+      \strng{authorbibnamehash}{df3ab482758c34fcff708307ab5ceae6}
+      \strng{authornamehash}{df3ab482758c34fcff708307ab5ceae6}
+      \strng{authorfullhash}{df3ab482758c34fcff708307ab5ceae6}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Video latency in a vehicle's remoteoperating system}
+      \field{type}{phdthesis}
+      \field{year}{2018}
+      \verb{urlraw}
+      \verb https://www.theseus.fi/bitstream/handle/10024/157223/blomqvist_timo.pdf?sequence=1&isAllowed=y
+      \endverb
+      \verb{url}
+      \verb https://www.theseus.fi/bitstream/handle/10024/157223/blomqvist_timo.pdf?sequence=1&isAllowed=y
+      \endverb
+    \endentry
+    \entry{richardson2010}{book}{}
+      \name{author}{1}{}{%
+        {{hash=ae8eff41307018d950f00d2fe157263a}{%
+           family={Richardson},
+           familyi={R\bibinitperiod},
+           given={Iain\bibnamedelima E.},
+           giveni={I\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Wiley}%
+      }
+      \strng{namehash}{ae8eff41307018d950f00d2fe157263a}
+      \strng{fullhash}{ae8eff41307018d950f00d2fe157263a}
+      \strng{bibnamehash}{ae8eff41307018d950f00d2fe157263a}
+      \strng{authorbibnamehash}{ae8eff41307018d950f00d2fe157263a}
+      \strng{authornamehash}{ae8eff41307018d950f00d2fe157263a}
+      \strng{authorfullhash}{ae8eff41307018d950f00d2fe157263a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{2}
+      \field{title}{The H.264 Advanced Video Compression Standard}
+      \field{year}{2010}
+      \verb{urlraw}
+      \verb https://last.hit.bme.hu/download/vidtech/k%C3%B6nyvek/Iain%20E.%20Richardson%20-%20H264%20(2nd%20edition).pdf
+      \endverb
+      \verb{url}
+      \verb https://last.hit.bme.hu/download/vidtech/k%C3%B6nyvek/Iain%20E.%20Richardson%20-%20H264%20(2nd%20edition).pdf
       \endverb
     \endentry
     \entry{wiegand2003}{article}{}
@@ -582,8 +984,8 @@
       \strng{authorbibnamehash}{f6974a0ad43b69734541904026b2606f}
       \strng{authornamehash}{f6974a0ad43b69734541904026b2606f}
       \strng{authorfullhash}{b42838bba92dee010d3ddbd59a2d6108}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{IEEE Transactions on Circuits and Systems for Video Technology}
@@ -629,8 +1031,8 @@
       \strng{authornamehash}{2b3bbffda8fb8bb1119ee446d01162a6}
       \strng{authorfullhash}{a78ecf185336a38b5817be339261c5e5}
       \field{extraname}{1}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Proceedings of SPIE}
@@ -678,8 +1080,8 @@
       \strng{authornamehash}{2b3bbffda8fb8bb1119ee446d01162a6}
       \strng{authorfullhash}{bb840e1adf12078ab79d8441d58e9329}
       \field{extraname}{2}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{IEEE Transactions on Circuits and Systems for Video Technology}
@@ -734,8 +1136,8 @@
       \strng{authorbibnamehash}{a06c56ad9acc558e2d3c1402518a019b}
       \strng{authornamehash}{a06c56ad9acc558e2d3c1402518a019b}
       \strng{authorfullhash}{1e7f32ea9b1b5e8a9578a72d1d2cce6b}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{IEEE Transactions on Circuits and Systems for Video Technology}
@@ -775,8 +1177,8 @@
       \strng{authorbibnamehash}{5c4f9829489d29b50f6a7485288961a3}
       \strng{authornamehash}{5c4f9829489d29b50f6a7485288961a3}
       \strng{authorfullhash}{5c4f9829489d29b50f6a7485288961a3}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{The Scientific World Journal}
@@ -805,8 +1207,8 @@
       \strng{authorbibnamehash}{6b42258f12a2f2612fe9097b9f75df07}
       \strng{authornamehash}{6b42258f12a2f2612fe9097b9f75df07}
       \strng{authorfullhash}{6b42258f12a2f2612fe9097b9f75df07}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{What are {H.264} {NAL} Units?}
@@ -854,8 +1256,8 @@
       \strng{authorbibnamehash}{256d4bd88e5baa9ce54a836d927b09c5}
       \strng{authornamehash}{256d4bd88e5baa9ce54a836d927b09c5}
       \strng{authorfullhash}{2bf7a5afe1d74a11a5f409c9dbe3ac5b}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{{RFC} 6184: {RTP} Payload Format for {H.264} Video}
@@ -884,8 +1286,8 @@
       \strng{authorbibnamehash}{b6aea1a416c89509a7df1cbb69249cb6}
       \strng{authornamehash}{b6aea1a416c89509a7df1cbb69249cb6}
       \strng{authorfullhash}{b6aea1a416c89509a7df1cbb69249cb6}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Motion {JPEG}}
@@ -913,8 +1315,8 @@
       \strng{authorbibnamehash}{80515e4dbf7673974d64c04fb9e1e068}
       \strng{authornamehash}{80515e4dbf7673974d64c04fb9e1e068}
       \strng{authorfullhash}{80515e4dbf7673974d64c04fb9e1e068}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{A Comprehensive Study: {MJPEG} and {H.264} Compression in Embedded Vision}
@@ -969,9 +1371,9 @@
       \strng{authorbibnamehash}{b3a64faa8dc0c1b5ccf96afa15c9a280}
       \strng{authornamehash}{b3a64faa8dc0c1b5ccf96afa15c9a280}
       \strng{authorfullhash}{a6ea819838a42d964debbe1597c9cc44}
-      \field{extraname}{1}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{extraname}{2}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Wireless Communications and Mobile Computing}
@@ -1020,8 +1422,8 @@
       \strng{authorbibnamehash}{0150750bbb8cb68136503c10f12bbcd0}
       \strng{authornamehash}{0150750bbb8cb68136503c10f12bbcd0}
       \strng{authorfullhash}{84b179379b9c953397b2d4405c26b971}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{{RFC} 3550: {RTP}: A Transport Protocol for Real-Time Applications}
@@ -1075,8 +1477,8 @@
       \strng{authorbibnamehash}{8942c44d41e06e6549e72ccad4d7679e}
       \strng{authornamehash}{8942c44d41e06e6549e72ccad4d7679e}
       \strng{authorfullhash}{4a6a46b0ffa5d3c2cfb43a90da5c4537}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{{RFC} 3711: The Secure Real-time Transport Protocol ({SRTP})}
@@ -1111,8 +1513,8 @@
       \strng{authornamehash}{02b8dba2b9241ee3cbe59775cce0328d}
       \strng{authorfullhash}{02b8dba2b9241ee3cbe59775cce0328d}
       \field{extraname}{1}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{{RFC} 768: User Datagram Protocol}
@@ -1146,8 +1548,8 @@
       \strng{authorbibnamehash}{15fe25340ae8cf0fe75afb7426a1df18}
       \strng{authornamehash}{15fe25340ae8cf0fe75afb7426a1df18}
       \strng{authorfullhash}{15fe25340ae8cf0fe75afb7426a1df18}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{5}
@@ -1182,8 +1584,8 @@
       \strng{authornamehash}{02b8dba2b9241ee3cbe59775cce0328d}
       \strng{authorfullhash}{02b8dba2b9241ee3cbe59775cce0328d}
       \field{extraname}{2}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{{RFC} 793: Transmission Control Protocol}
@@ -1219,8 +1621,8 @@
       \strng{authorbibnamehash}{d2bff179278f878d488af06632cc15d1}
       \strng{authornamehash}{d2bff179278f878d488af06632cc15d1}
       \strng{authorfullhash}{d2bff179278f878d488af06632cc15d1}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{IEEE Transactions on Broadcasting}
@@ -1290,8 +1692,8 @@
       \strng{authorbibnamehash}{dae5bff63ccb436973d2e14a7bd9e294}
       \strng{authornamehash}{dae5bff63ccb436973d2e14a7bd9e294}
       \strng{authorfullhash}{1a0f63fa5cf9a36e46485b73d827f2d4}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{ACM SIGCOMM}
@@ -1308,64 +1710,6 @@
       \verb https://dl.acm.org/doi/10.1145/2018436.2018478
       \endverb
     \endentry
-    \entry{kaknjo2018}{article}{}
-      \name{author}{6}{}{%
-        {{hash=cdee6fd19a9ef69102627cc64cacceb5}{%
-           family={Kaknjo},
-           familyi={K\bibinitperiod},
-           given={Admir},
-           giveni={A\bibinitperiod}}}%
-        {{hash=1a03957b8c4a010d21a9cefe8944bf79}{%
-           family={Rao},
-           familyi={R\bibinitperiod},
-           given={Muzaffar},
-           giveni={M\bibinitperiod}}}%
-        {{hash=4a2de7a7acab0db9e3c1ca24b91a3a4d}{%
-           family={Omerdić},
-           familyi={O\bibinitperiod},
-           given={Edin},
-           giveni={E\bibinitperiod}}}%
-        {{hash=1872932a6e4175afd1a7a0e33e0a8668}{%
-           family={Robinson},
-           familyi={R\bibinitperiod},
-           given={Luke},
-           giveni={L\bibinitperiod}}}%
-        {{hash=8a67f70bbbaf64ebf461e54bbc8c9082}{%
-           family={Toal},
-           familyi={T\bibinitperiod},
-           given={Daniel},
-           giveni={D\bibinitperiod}}}%
-        {{hash=55556b8026750ad8ad390371a4976dcc}{%
-           family={Newe},
-           familyi={N\bibinitperiod},
-           given={Thomas},
-           giveni={T\bibinitperiod}}}%
-      }
-      \strng{namehash}{b3a64faa8dc0c1b5ccf96afa15c9a280}
-      \strng{fullhash}{a6ea819838a42d964debbe1597c9cc44}
-      \strng{bibnamehash}{b3a64faa8dc0c1b5ccf96afa15c9a280}
-      \strng{authorbibnamehash}{b3a64faa8dc0c1b5ccf96afa15c9a280}
-      \strng{authornamehash}{b3a64faa8dc0c1b5ccf96afa15c9a280}
-      \strng{authorfullhash}{a6ea819838a42d964debbe1597c9cc44}
-      \field{extraname}{2}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Wireless Communications and Mobile Computing}
-      \field{title}{Real-Time Video Latency Measurement between a Robot and Its Remote Control Station: Causes and Mitigation}
-      \field{urlday}{15}
-      \field{urlmonth}{10}
-      \field{urlyear}{2025}
-      \field{year}{2018}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://www.researchgate.net/publication/329369713_Real-Time_Video_Latency_Measurement_between_a_Robot_and_Its_Remote_Control_Station_Causes_and_Mitigation
-      \endverb
-      \verb{url}
-      \verb https://www.researchgate.net/publication/329369713_Real-Time_Video_Latency_Measurement_between_a_Robot_and_Its_Remote_Control_Station_Causes_and_Mitigation
-      \endverb
-    \endentry
     \entry{axis2024}{misc}{}
       \name{author}{1}{}{%
         {{hash=ac6b150c08134b28b0c1299d9cf7c9cc}{%
@@ -1378,8 +1722,8 @@
       \strng{authorbibnamehash}{ac6b150c08134b28b0c1299d9cf7c9cc}
       \strng{authornamehash}{ac6b150c08134b28b0c1299d9cf7c9cc}
       \strng{authorfullhash}{ac6b150c08134b28b0c1299d9cf7c9cc}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Latency in Live Network Video Surveillance}
@@ -1424,8 +1768,8 @@
       \strng{authorbibnamehash}{e920566dc49cc473d6ae40fbba938f45}
       \strng{authornamehash}{e920566dc49cc473d6ae40fbba938f45}
       \strng{authorfullhash}{9bd8315bd76635e87f41b55e8021cfc4}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{ACM Computing Surveys}
@@ -1478,8 +1822,8 @@
       \strng{authorbibnamehash}{fb9a36434d55b7b4bca7c65dd0731eda}
       \strng{authornamehash}{fb9a36434d55b7b4bca7c65dd0731eda}
       \strng{authorfullhash}{e321d42a8dfcf8583a941cc2b519e042}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Behavior Research Methods}
@@ -1512,8 +1856,8 @@
       \strng{authornamehash}{80a4452c4c56105df98a0fcc5ba3da4f}
       \strng{authorfullhash}{80a4452c4c56105df98a0fcc5ba3da4f}
       \field{extraname}{1}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{What is {GStreamer}?}
@@ -1542,8 +1886,8 @@
       \strng{authornamehash}{80a4452c4c56105df98a0fcc5ba3da4f}
       \strng{authorfullhash}{80a4452c4c56105df98a0fcc5ba3da4f}
       \field{extraname}{2}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Elements}
@@ -1572,8 +1916,8 @@
       \strng{authornamehash}{80a4452c4c56105df98a0fcc5ba3da4f}
       \strng{authorfullhash}{80a4452c4c56105df98a0fcc5ba3da4f}
       \field{extraname}{3}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Pads and Capabilities}
@@ -1602,8 +1946,8 @@
       \strng{authornamehash}{80a4452c4c56105df98a0fcc5ba3da4f}
       \strng{authorfullhash}{80a4452c4c56105df98a0fcc5ba3da4f}
       \field{extraname}{4}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Sink Elements}
@@ -1632,8 +1976,8 @@
       \strng{authornamehash}{80a4452c4c56105df98a0fcc5ba3da4f}
       \strng{authorfullhash}{80a4452c4c56105df98a0fcc5ba3da4f}
       \field{extraname}{5}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Probes}
@@ -1662,8 +2006,8 @@
       \strng{authornamehash}{80a4452c4c56105df98a0fcc5ba3da4f}
       \strng{authorfullhash}{80a4452c4c56105df98a0fcc5ba3da4f}
       \field{extraname}{6}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Pipeline Manipulation}
@@ -1691,8 +2035,8 @@
       \strng{authorbibnamehash}{472abfae8142fdb6f39d081303e8af85}
       \strng{authornamehash}{472abfae8142fdb6f39d081303e8af85}
       \strng{authorfullhash}{472abfae8142fdb6f39d081303e8af85}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{{IEEE} 802.11-2020: {IEEE} Standard for Information Technology -- Telecommunications and Information Exchange Between Systems -- Local and Metropolitan Area Networks -- Specific Requirements Part 11: Wireless {LAN} Medium Access Control {(MAC)} and Physical Layer {(PHY)} Specifications}
@@ -1737,8 +2081,8 @@
       \strng{authorbibnamehash}{9cb6012b549f394fecb0255e1dfe72d2}
       \strng{authornamehash}{9cb6012b549f394fecb0255e1dfe72d2}
       \strng{authorfullhash}{487857e6d7863898473f7a6be1230916}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{International Journal of Distributed Sensor Networks}
@@ -1784,8 +2128,8 @@
       \strng{authorbibnamehash}{6e8484cf8c9bbaa278343e039988a414}
       \strng{authornamehash}{6e8484cf8c9bbaa278343e039988a414}
       \strng{authorfullhash}{2685aa5aa1bb8e7d1e68d5f3cfcce8ae}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{IEEE 15th International Symposium on Wireless Communication Systems}
@@ -1886,8 +2230,8 @@
       \strng{authorbibnamehash}{844255532f85be030d027e2f7b12fb77}
       \strng{authornamehash}{844255532f85be030d027e2f7b12fb77}
       \strng{authorfullhash}{0a8e93c755e4fbe0d38d9d6f4f97095d}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{IEEE Communications Magazine}
@@ -1932,8 +2276,8 @@
       \strng{authorbibnamehash}{bdb9202365b836107f576d4bb876d514}
       \strng{authornamehash}{b30013ffbf0e8f6d3d0e662e04f89264}
       \strng{authorfullhash}{bdb9202365b836107f576d4bb876d514}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Design and Evaluation of Remote Driving Architecture on 4G and 5G Mobile Networks}
@@ -1961,8 +2305,8 @@
       \strng{authorbibnamehash}{d305e68eda6161d1053e75db0f0542d0}
       \strng{authornamehash}{d305e68eda6161d1053e75db0f0542d0}
       \strng{authorfullhash}{d305e68eda6161d1053e75db0f0542d0}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{What is Tailscale?}
@@ -1992,8 +2336,8 @@
       \strng{authorbibnamehash}{89a0a14a69a648cd9d137add3308425b}
       \strng{authornamehash}{89a0a14a69a648cd9d137add3308425b}
       \strng{authorfullhash}{89a0a14a69a648cd9d137add3308425b}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Network and Distributed System Security Symposium (NDSS)}
@@ -2039,8 +2383,8 @@
       \strng{authorbibnamehash}{9a16862f62729b7921189ef1d22e4af9}
       \strng{authornamehash}{9a16862f62729b7921189ef1d22e4af9}
       \strng{authorfullhash}{ae123201489ea1704acfe0bd7a553111}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{IEEE International Conference on Communications}
@@ -2081,8 +2425,8 @@
       \strng{authorbibnamehash}{28256aa2bccb5339ba12f80fefd0e66d}
       \strng{authornamehash}{2c96881667fd015f667d221ec7b4ca30}
       \strng{authorfullhash}{28256aa2bccb5339ba12f80fefd0e66d}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Sensors}
@@ -2126,37 +2470,6 @@
       \endverb
       \verb{url}
       \verb https://www.linode.com/docs/guides/how-to-use-sar/
-      \endverb
-    \endentry
-    \entry{richardson2010}{book}{}
-      \name{author}{1}{}{%
-        {{hash=ae8eff41307018d950f00d2fe157263a}{%
-           family={Richardson},
-           familyi={R\bibinitperiod},
-           given={Iain\bibnamedelima E.},
-           giveni={I\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {Wiley}%
-      }
-      \strng{namehash}{ae8eff41307018d950f00d2fe157263a}
-      \strng{fullhash}{ae8eff41307018d950f00d2fe157263a}
-      \strng{bibnamehash}{ae8eff41307018d950f00d2fe157263a}
-      \strng{authorbibnamehash}{ae8eff41307018d950f00d2fe157263a}
-      \strng{authornamehash}{ae8eff41307018d950f00d2fe157263a}
-      \strng{authorfullhash}{ae8eff41307018d950f00d2fe157263a}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{edition}{2}
-      \field{title}{The H.264 Advanced Video Compression Standard}
-      \field{year}{2010}
-      \verb{urlraw}
-      \verb https://www.wiley.com/en-us/The+H+264+Advanced+Video+Compression+Standard%2C+2nd+Edition-p-9780470516928
-      \endverb
-      \verb{url}
-      \verb https://www.wiley.com/en-us/The+H+264+Advanced+Video+Compression+Standard%2C+2nd+Edition-p-9780470516928
       \endverb
     \endentry
     \entry{sara2019}{article}{}
@@ -2252,6 +2565,7 @@
       \endverb
     \endentry
   \enddatalist
+  \missing{europesrail2024_d41}
 \endrefsection
 \endinput
 
