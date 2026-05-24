@@ -62,7 +62,7 @@ def build_pipeline():
             f'avdec_h264 ! '
             f'videoconvert ! '
             f'videoscale ! video/x-raw,width=1920,height=1080 ! '
-            f'x265enc tune=zerolatency qp=30 speed-preset=ultrafast key-int-max=15 ! '
+            f'x265enc tune=zerolatency bitrate=6000 speed-preset=ultrafast key-int-max=15 ! '
             f'h265parse ! '
             f'queue max-size-buffers=2 max-size-bytes=0 max-size-time=0 leaky=downstream ! '
             f'rtph265pay config-interval=1 pt=96 name=pay{i} ! '

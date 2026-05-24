@@ -62,7 +62,7 @@ def build_pipeline():
             f'avdec_h264 ! '
             f'videoconvert ! '
             f'videoscale ! video/x-raw,width=1280,height=720 ! '
-            f'jpegenc quality=45 ! '
+            f'jpegenc quality=50 ! '
             f'queue max-size-buffers=2 max-size-bytes=0 max-size-time=0 leaky=downstream ! '
             f'rtpjpegpay name=pay{i} ! '
             f'udpsink host={RECEIVER_IP} port={RTP_PORTS[i]} sync=false async=false name=udpsink{i}'
