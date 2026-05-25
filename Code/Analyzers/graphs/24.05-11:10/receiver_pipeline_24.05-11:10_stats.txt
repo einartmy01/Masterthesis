@@ -1,0 +1,16 @@
+Receiver Pipeline Stats  –  24.05-11:10.csv
+
+Skipping first 10s  (732 rows removed, 8803 rows kept)
+
+─────────────────────────────────────────────
+  Rows with skipped frames : 265
+  Total frames skipped     : 297
+─────────────────────────────────────────────
+
+  full_ms stats  (n=8,538 clean rows)
+─────────────────────────────────────────────
+  Mean  :     13.172 ms
+  Min   :      0.057 ms
+  Max   :    541.661 ms
+  P95   :     26.086 ms
+─────────────────────────────────────────────

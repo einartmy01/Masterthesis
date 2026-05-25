@@ -30,47 +30,50 @@ RTO is most relevant from GoA~3 upward. At GoA~3, on-board staff can still respo
  
 % ─────────────────────────────────────────────────────────────────────────────
 \subsubsection{Role of Video in Remote Operation}\label{subsec:video-role}
- 
+
 A remote operator who cannot physically see or hear the train must rely entirely on what the system provides. In practice, this means live video from cameras mounted on or near the train is the most important source of situational awareness~\cite{brandenburger2023, kozarevic2025}. Without a stable and clear video feed, the operator cannot assess track conditions, detect obstacles, interpret signals, or make safe decisions about speed and braking.
  
 Research on human factors in remote driving consistently shows that video quality has a direct effect on operator performance. Studies on bitrate, frame rate, and resolution indicate that reductions in bitrate lead to measurable drops in both reaction speed and accuracy, while changes in frame rate have a smaller effect within typical operating ranges~\cite{brandenburger2023}. This suggests that encoding and transmission choices in the video pipeline are not just technical decisions but directly influence operational safety.
+
+
+
+Beyond individual video quality, remote train driving typically requires multiple simultaneous camera views. A camera facing straight forward is needed for obstacle and signal detection, while side cameras support the operators experience, needed for immersivenes of speed and movement like you can see a Figure~\ref{fig:trippelmonitor}~\cite{fp2r2dato2023d5_4, jurgensen2025, neumeier2019}.
  
-Beyond individual video quality, remote train driving typically requires multiple simultaneous camera views. A camera facing forward is needed for obstacle and signal detection, while side and rear cameras support door operations, platform supervision, and shunting tasks~\cite{fp2r2dato2023d5_4, jurgensen2025}. The system developed in this thesis streams three concurrent camera feeds, reflecting this multi-view requirement.
- 
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.4\textwidth]{Images/ThreeMonitorSetup.png}
+    \caption{Three-screen teleoperation simulator setup used by Neumeier et al.\ to evaluate the effect of latency on remote driving performance~\cite{neumeier2019}.}\label{fig:trippelmonitor}
+\end{figure}
 % ─────────────────────────────────────────────────────────────────────────────
 \subsubsection{Latency Requirements and Regulations}\label{subsec:latency-reqs}
  
-Latency is the central performance parameter in any RTO video system. If the delay between what happens on the track and what the operator sees on screen is too large, safe intervention becomes impossible. The challenge is that no single, universally agreed threshold exists for railway remote operation, and most values currently used in the field are borrowed from research on cars, drones, and cranes~\cite{myhrvold2025}.
+Latency is a central performance parameter in a RTO video system. If the delay between what happens on the track and what the operator sees on screen is too large, safe intervention becomes impossible. As of now, a big challenge is that no single universally agreed threshold exists for remote train operation, and most values currently used in the field are borrowed from research on cars, drones, and cranes~\cite{myhrvold2025}.
  
 The most relevant regulatory reference comes from 3GPP TS~22.289, a technical specification developed in cooperation with the International Union of Railways (UIC) and the European Telecommunications Standards Institute (ETSI)~\cite{3gppts22289}. It classifies remote video control at GoA~3 and GoA~4 as \textit{Very Critical Video Communication} and sets a target end-to-end latency of \(\leq 100\)~ms at speeds up to 500~km/h, or \(\leq 10\)~ms at speeds up to 40~km/h, with a reliability requirement of 99.9\% and a data rate of 10--20~Mbps. These values are defined at the communication interface and are not yet formally adopted into ERA's Technical Specifications for Interoperability (TSIs)~\cite{3gppts22289}.
  
-Empirical studies from railway demonstrations report glass-to-glass (G2G) latency values of 340--380~ms for tramway remote driving using commercial systems~\cite{fp2r2dato2024d41_2}, while the Kozarevic study at NTNU measured an average of around 212~ms using a GPS-synchronised measurement method~\cite{kozarevic2025}. Human factors research from other vehicle domains suggests that operators begin to adjust their behaviour at delays above 250--300~ms, and that latency variability can be more disruptive than a consistently higher but stable delay~\cite{myhrvold2025, neumeier2019}.
- 
+Empirical studies from railway demonstrations report glass-to-glass (G2G) latency values of 340--380~ms for tramway remote driving using commercial systems~\cite{fp2r2dato2024d41_2}, while the Kozarevic study at NTNU measured an average of around 212~ms using a GPS-synchronised measurement method~\cite{kozarevic2025}. Human factors research from other vehicle domains suggests that operators begin to adjust their behaviour at delays above 250--300~ms, and that latency variability can also be more disruptive than a consistently higher but stable delay~\cite{myhrvold2025, neumeier2019}.
+
 Together, these findings motivate the work in this thesis: to build and evaluate a custom streaming pipeline where each component of the latency budget can be measured, understood, and optimised, rather than relying on a black-box commercial system.
 
-\subsection{Clock Synchronisation}
-\label{subsec:clock-sync}
+\subsection{Clock Synchronisation}\label{subsec:clock-sync}
 
-Accurate latency measurement between two separate machines requires that both share a common time reference. Each computer maintains an internal clock driven by a local hardware oscillator. Even at identical nominal frequencies, two independent oscillators will accumulate a growing offset over time due to differences in temperature, aging, and manufacturing tolerances~\cite{vannicola2012}. When a timestamp recorded on one machine is compared against a timestamp recorded on another, any offset between the two clocks appears directly in the measured result. Depending on the magnitude of the drift, this error can easily exceed the latency values being measured, making clock synchronisation a prerequisite for accurate one-way delay measurement.
+Accurate latency measurement between two separate machines requires that both share a common time reference. Each computer maintains an internal clock driven by a local hardware oscillator. Even at identical nominal frequencies, two independent oscillators will accumulate a growing offset over time due to differences in temperature, aging, and manufacturing tolerances~\cite{vannicola2012}. When a timestamp recorded on one machine is compared against a timestamp recorded on another, any offset between the two clocks appears directly in the measured result. Depending on the magnitude of the drift, this error can easily exceed the latency values being measured, making clock synchronisation a requirement for accurate one-way delay measurement.
 
 \subsubsection{GPS-Based Clock Synchronisation}\label{subsubsec:gps-sync}
 
-The Global Positioning System (GPS) operates a constellation of satellites that each carry onboard atomic clocks traceable to Coordinated Universal Time (UTC). Each satellite broadcasts a navigation message containing the current time along with parameters allowing a receiver to compute the signal propagation delay from the satellite to the receiver. By combining signals from at least four satellites and solving for the receiver position and clock offset simultaneously, a GPS receiver can derive a precise absolute time reference~\cite{misra2011}.
+The Global Positioning System (GPS) operates satellites that each carry onboard atomic clocks traceable to Coordinated Universal Time (UTC). Each satellite broadcasts a navigation message containing the current time along with parameters allowing a receiver to compute the signal propagation delay from the satellite to the receiver. By combining signals from at least four satellites and solving for the receiver position and clock offset simultaneously, a GPS receiver can derive a precise absolute time reference~\cite{misra2011}.
 
-A widely used timing output from GPS receivers is the pulse-per-second (PPS) signal. This is a periodic electrical pulse whose rising edge is aligned to the UTC second boundary. Commercial GPS receivers designed for timing applications typically achieve a PPS accuracy of 100 nanoseconds or better relative to UTC, and precision timing receivers can reach the range of tens of nanoseconds under stable conditions~\cite{vannicola2012, sesia2010}. The PPS signal provides a hardware-level time reference that is independent of network conditions and available continuously as long as the receiver has a clear view of the sky.
+A common timing output from GPS receivers is the pulse-per-second (PPS) signal. This is a periodic electrical pulse whose rising edge is aligned to the UTC second boundary. Commercial GPS receivers designed for timing applications typically achieve a PPS accuracy of 100 nanoseconds or better relative to UTC, and precision timing receivers can reach the range of tens of nanoseconds under stable conditions~\cite{vannicola2012, sesia2010}. The PPS signal provides a hardware-level time reference that is independent of network conditions and available continuously as long as the receiver has a clear view of the sky.
 
-When a computer's operating system is disciplined by a GPS PPS signal, the kernel timestamps each incoming pulse and uses the known UTC alignment to adjust the phase and frequency of the system clock continuously. The resulting clock closely tracks UTC, with residual errors typically in the sub-microsecond range~\cite{sesia2010}. For latency measurements in a video streaming system where delays are on the order of tens to hundreds of milliseconds, this accuracy level means that clock error contributes negligibly to the measured values. GPS-based synchronisation is therefore used in studies where high measurement precision is required and where both endpoints can be equipped with a GPS receiver, as seen in the latency measurement work of Kaknjo et al.~\cite{kaknjo2018} and the tramway remote driving tests reported in FP2R2DATO D41.2~\cite{europesrail2024_d41}.
+When a computer's operating system is disciplined by a GPS PPS signal, the kernel timestamps each incoming pulse and uses the known UTC alignment to adjust the phase and frequency of the system clock continuously. The resulting clock closely tracks UTC, with residual errors typically in the sub-microsecond range~\cite{sesia2010}. For latency measurements in a video streaming system where delays are on the order of tens to hundreds of milliseconds, this accuracy level means that clock error contributes negligibly to the measured values. GPS-based synchronisation is therefore used in studies where high measurement precision is required and where both endpoints can be equipped with a GPS receiver, as seen in the latency measurement work of Kaknjo et al.~\cite{kaknjo2018} and the tramway remote driving tests reported in FP2R2DATO D41.2~\cite{fp2r2dato2024d41_2}.
 
-\subsubsection{Network-Based Clock Synchronisation with Chrony}
-\label{subsubsec:chrony-sync}
+\subsubsection{Network-Based Clock Synchronisation with Chrony}\label{subsubsec:chrony-sync}
 
 When a hardware GPS reference is not available, clock synchronisation can be achieved over a network using the Network Time Protocol (NTP). NTP operates by exchanging timestamped packets between a client and one or more time servers. The client records the time it sent the request, the time the server received it, the time the server sent its reply, and the time the client received the reply. From these four timestamps, NTP estimates the round-trip propagation delay and uses half of that value to approximate the one-way delay, computing a correction to the local clock~\cite{rfc5905}.
 
 Chrony is an NTP implementation for Linux systems that is designed to maintain accurate synchronisation under variable network conditions. Rather than making abrupt step corrections to the clock, Chrony adjusts the frequency of the local oscillator continuously, which reduces disruption to running processes and improves long-term stability~\cite{chronyproject}. It also tracks the estimated error of each configured time source and selects the most reliable one based on a combination of stratum, distance, and measured jitter.
 
 When synchronised to public internet time servers such as those provided by the \texttt{pool.ntp.org} project, Chrony typically achieves a clock accuracy within a few milliseconds over an internet connection. On a local area network under stable conditions the accuracy improves to tens of microseconds, and with hardware timestamping enabled on the network interface, where the network card rather than the kernel records packet arrival and departure times, sub-microsecond accuracy is possible~\cite{redhat2024chrony, redhat2024hw}.
-
-The \texttt{chronyc tracking} command reports the current estimated offset between the local clock and its reference source, the root mean square offset over recent history, and the estimated residual frequency error. These values give a practical indication of whether the synchronisation quality is sufficient for the measurement being performed. For one-way latency measurements over an internet link, the typical accuracy of a few milliseconds introduces an uncertainty that is small relative to the latency values being measured in streaming systems, but non-negligible when attempting to resolve differences at the single-millisecond level.
 % ─────────────────────────────────────────────────────────────────────────────
 \subsection{Video Streaming}\label{sec:video-streaming}
 Video streaming is the continuous transmission of video data from a source to a receiver over a network, allowing the receiver to display the content in real time without storing the full recording first~\cite{sodagar2011}. In a remote train operation context, this means live footage from cameras on or near the train is captured, compressed, sent across a network, and displayed on the operator's screen with as little delay as possible.
@@ -91,6 +94,12 @@ An important concept is the Group of Pictures (GOP), which defines how often a f
 H.265, also known as High Efficiency Video Coding (HEVC) and formally standardised as ITU-T~H.265 and ISO/IEC~23008--2, is the successor to H.264 published in 2013~\cite{sullivan2012hevc}. Its primary goal was to achieve roughly 50\% better compression compared to H.264 at equivalent visual quality~\cite{ohm2012}.
  
 HEVC achieves its efficiency gains by replacing the fixed 16$\times$16 macroblock structure of H.264 with a flexible Coding Tree Unit (CTU) architecture that supports block sizes up to 64$\times$64 pixels. Larger blocks handle uniform image regions efficiently, while smaller blocks are used in areas with fine detail or motion. This adaptive structure allows the encoder to allocate coding effort where it is most needed, reducing the total number of bits required to represent a frame at a given quality level~\cite{sullivan2012hevc}.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.4\textwidth]{Images/264265HEVC.png}
+    \caption{~\cite{blomqvist2018}.}\label{fig:264v265encoding}
+\end{figure}
 
 The main difference compared to H.264 is computational cost. Encoding with H.265 requires significantly more processing power, which increases encoding time and places greater demand on the sender hardware~\cite{ohm2012}.
 

@@ -27,6 +27,7 @@ from collections import defaultdict
 # ──────────────────────────────────────────────────────────────────────────────
 
 LOG_DIR        = Path("../logs/transit")
+GRAPHS_DIR     = Path("graphs")
 WIGGLE_MINUTES = 1      # max allowed timestamp difference between matched pair
 SKIP_FIRST_N_SECONDS = 10.0   # skip rows whose abs_time falls in the first N
                                # seconds after the earliest abs_time in the file
@@ -245,8 +246,7 @@ def load_transit(path: Path, skip_seconds: float) -> dict:
 
     skipped = sum(1 for _, _, t in raw_rows if t < cutoff)
     kept    = len(raw_rows) - skipped
-    print(f"[INFO] {path.name}: {len(raw_rows):,} rows read, "
-          f"{skipped:,} skipped (first {skip_seconds}s), {kept:,} kept")
+    print(f"[INFO] {path.name}: {len(raw_rows):,} rows read, {skipped:,} skipped (first {skip_seconds}s), {kept:,} kept")
 
     return records
 
@@ -259,7 +259,7 @@ def combine(send_path: Path, rec_path: Path,
             send_suf: str, skip_seconds: float) -> Path:
 
     send_records = load_transit(send_path, skip_seconds)
-    rec_records  = load_transit(rec_path,  skip_seconds)
+    rec_records  = load_transit(rec_path,  0.0)
 
     matched = []
     for key, t_send in send_records.items():
@@ -271,13 +271,51 @@ def combine(send_path: Path, rec_path: Path,
     n_send    = len(send_records)
     n_rec     = len(rec_records)
     n_matched = len(matched)
+    rec_only  = n_rec - n_matched   # receiver packets with no matching sender
+    eff_rec   = n_rec - rec_only    # == n_matched
     n_lost    = n_send - n_matched
     loss_pct  = 100 * n_lost / n_send if n_send > 0 else 0.0
 
-    print(f"[INFO] send packets : {n_send:,}")
-    print(f"[INFO] rec  packets : {n_rec:,}")
-    print(f"[INFO] matched      : {n_matched:,}")
-    print(f"[INFO] unmatched    : {n_lost:,}  ({loss_pct:.2f}%)")
+    transit_values = [t for _, _, t in matched]
+    min_transit    = min(transit_values)
+    max_transit    = max(transit_values)
+    mean_transit   = sum(transit_values) / len(transit_values)
+
+    stat_lines = [
+        f"Sender packets       : {n_send:,}",
+        f"Receiver packets     : {n_rec:,}  (raw)",
+        f"  - no-sender pkts   : {rec_only:,}",
+        f"  = effective rec    : {eff_rec:,}",
+        f"Matched              : {n_matched:,}",
+        f"Packet loss          : {n_lost:,}  ({loss_pct:.2f}%)",
+        f"",
+        f"Transit (ms) — raw",
+        f"  Min                : {min_transit:.4f}",
+        f"  Max                : {max_transit:.4f}",
+        f"  Mean               : {mean_transit:.4f}",
+    ]
+
+    negative_min = min_transit < 0
+    if negative_min:
+        offset  = -min_transit
+        adj_min = 0.0
+        adj_max      = max_transit + offset
+        adj_mean     = mean_transit + offset
+        stat_lines += [
+            f"",
+            f"Transit (ms) — adjusted (offset +{offset:.4f} ms, min→0)",
+            f"  NOTE: CSV uses adjusted values",
+            f"  Min                : {adj_min:.4f}",
+            f"  Max                : {adj_max:.4f}",
+            f"  Mean               : {adj_mean:.4f}",
+        ]
+
+    out_dir = GRAPHS_DIR / send_suf
+    out_dir.mkdir(parents=True, exist_ok=True)
+    stats_path = out_dir / f"transit_stats_{send_suf}.txt"
+    with open(stats_path, "w") as f:
+        f.write("\n".join(stat_lines) + "\n")
+    print(f"[OK]   Stats TXT     : {stats_path}")
 
     if n_matched == 0:
         print("[ERROR] No matching RTP sequence numbers found. "
@@ -288,9 +326,16 @@ def combine(send_path: Path, rec_path: Path,
     with open(out_path, "w", newline="") as f:
         writer = csv.writer(f)
         writer.writerow(["cam_index", "rtp_seq", "transit_ms"])
-        for cam, seq, transit_ms in sorted(matched):
+        if negative_min:
+            rows = [(cam, seq, t + offset) for cam, seq, t in sorted(matched)]
+        else:
+            rows = sorted(matched)
+        for cam, seq, transit_ms in rows:
             writer.writerow([cam, seq, f"{transit_ms:.4f}"])
 
+    if negative_min:
+        print(f"[INFO] Negative min transit detected ({min_transit:.4f} ms); "
+              f"CSV values offset by +{offset:.4f} ms")
     print(f"[OK]   Result CSV   : {out_path}")
     return out_path
 

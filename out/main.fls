@@ -509,8 +509,18 @@ INPUT ./Sections/03 Theory.tex
 INPUT ./Sections/03 Theory.tex
 INPUT ./Sections/03 Theory.tex
 INPUT ./Sections/03 Theory.tex
+INPUT ./Images/ThreeMonitorSetup.png
+INPUT ./Images/ThreeMonitorSetup.png
+INPUT Images/ThreeMonitorSetup.png
+INPUT ./Images/ThreeMonitorSetup.png
+INPUT ./Images/ThreeMonitorSetup.png
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmti10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmtt10.tfm
+INPUT ./Images/264265HEVC.png
+INPUT ./Images/264265HEVC.png
+INPUT Images/264265HEVC.png
+INPUT ./Images/264265HEVC.png
+INPUT ./Images/264265HEVC.png
 INPUT ./Sections/04 System Design.tex
 INPUT ./Sections/04 System Design.tex
 INPUT ./Sections/04 System Design.tex

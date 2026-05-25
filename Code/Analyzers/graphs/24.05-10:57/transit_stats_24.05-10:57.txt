@@ -1,0 +1,17 @@
+Sender packets       : 471,167
+Receiver packets     : 496,794  (raw)
+  - no-sender pkts   : 30,106
+  = effective rec    : 466,688
+Matched              : 466,688
+Packet loss          : 4,479  (0.95%)
+
+Transit (ms) — raw
+  Min                : -5.2581
+  Max                : 530.9741
+  Mean               : 27.5121
+
+Transit (ms) — adjusted (offset +5.2581 ms, min→0)
+  NOTE: CSV uses adjusted values
+  Min                : 0.0000
+  Max                : 536.2322
+  Mean               : 32.7701

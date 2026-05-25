@@ -1,0 +1,16 @@
+Sender Pipeline Stats  –  24.05-14:03.csv
+
+Skipping first 10s  (703 rows removed, 9674 rows kept)
+
+─────────────────────────────────────────────
+  Rows with dropped NALs : 639
+  Total NALs dropped     : 865
+─────────────────────────────────────────────
+
+  pipeline_ms stats  (n=9,035 clean rows)
+─────────────────────────────────────────────
+  Mean  :      9.309 ms
+  Min   :      0.095 ms
+  Max   :     26.031 ms
+  P95   :     13.902 ms
+─────────────────────────────────────────────

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.3.16)  24 MAY 2026 11:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.3.16)  24 MAY 2026 16:16
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1144,15 +1144,7 @@ Package biblatex Info: Automatic encoding selection.
 
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'main.bbl' found.
- (out/main.bbl
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                europesrail2024_d41
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-)
+ (out/main.bbl)
 Package biblatex Info: Reference section=0 on input line 10.
 Package biblatex Info: Reference segment=0 on input line 10.
 Package caption Info: Begin \AtBeginDocument code.
@@ -1266,22 +1258,30 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has b
 <to be read again> 
                    \relax 
 l.21 
-      [1] [2] Excluding 'comment' comment.) [3] (./Sections/03 Theory.tex [4] [5]
-
-LaTeX Warning: Citation 'europesrail2024_d41' on page 6 undefined on input line 62.
-
-[6] [7] [8] [9] [10] [11] [12] [13] [14] [15]) [16] [17] (./Sections/04 System Design.tex
-<Images/PhysicalSetup.png, id=699, 1195.46625pt x 633.36626pt>
+      [1] [2] Excluding 'comment' comment.) [3] (./Sections/03 Theory.tex [4]
+<Images/ThreeMonitorSetup.png, id=480, 583.17876pt x 364.36125pt>
+File: Images/ThreeMonitorSetup.png Graphic file (type png)
+<use Images/ThreeMonitorSetup.png>
+Package pdftex.def Info: Images/ThreeMonitorSetup.png  used on input line 44.
+(pdftex.def)             Requested size: 170.71393pt x 106.65723pt.
+ [5 <./Images/ThreeMonitorSetup.png>] [6] [7]
+<Images/264265HEVC.png, id=548, 1040.88875pt x 348.30125pt>
+File: Images/264265HEVC.png Graphic file (type png)
+<use Images/264265HEVC.png>
+Package pdftex.def Info: Images/264265HEVC.png  used on input line 100.
+(pdftex.def)             Requested size: 170.71393pt x 57.12177pt.
+ [8 <./Images/264265HEVC.png>] [9] [10] [11] [12] [13] [14] [15] [16]) [17] (./Sections/04 System Design.tex
+<Images/PhysicalSetup.png, id=717, 1195.46625pt x 633.36626pt>
 File: Images/PhysicalSetup.png Graphic file (type png)
 <use Images/PhysicalSetup.png>
 Package pdftex.def Info: Images/PhysicalSetup.png  used on input line 22.
 (pdftex.def)             Requested size: 384.10959pt x 203.5028pt.
-<Images/ApplicationAndTransportSetup.png, id=700, 1414.28375pt x 739.76375pt>
+<Images/ApplicationAndTransportSetup.png, id=718, 1414.28375pt x 739.76375pt>
 File: Images/ApplicationAndTransportSetup.png Graphic file (type png)
 <use Images/ApplicationAndTransportSetup.png>
 Package pdftex.def Info: Images/ApplicationAndTransportSetup.png  used on input line 27.
 (pdftex.def)             Requested size: 384.10959pt x 200.91281pt.
-<Images/SequenceDiagramCompCam.png, id=701, 996.72375pt x 709.65125pt>
+<Images/SequenceDiagramCompCam.png, id=719, 996.72375pt x 709.65125pt>
 File: Images/SequenceDiagramCompCam.png Graphic file (type png)
 <use Images/SequenceDiagramCompCam.png>
 Package pdftex.def Info: Images/SequenceDiagramCompCam.png  used on input line 32.
@@ -1328,18 +1328,18 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 42719 strings out of 474222
- 885865 string characters out of 5748733
+ 42737 strings out of 474222
+ 886372 string characters out of 5748733
  1953975 words of memory out of 5000000
- 64122 multiletter control sequences out of 15000+600000
+ 64136 multiletter control sequences out of 15000+600000
  568023 words of font info for 71 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  117i,12n,121p,1154b,3016s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on out/main.pdf (35 pages, 597428 bytes).
+Output written on out/main.pdf (35 pages, 1400946 bytes).
 PDF statistics:
- 953 PDF objects out of 1000 (max. 8388607)
- 873 compressed objects within 9 object streams
- 179 named destinations out of 1000 (max. 500000)
- 625 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 973 PDF objects out of 1000 (max. 8388607)
+ 887 compressed objects within 9 object streams
+ 181 named destinations out of 1000 (max. 500000)
+ 635 words of extra memory for PDF output out of 10000 (max. 10000000)
 

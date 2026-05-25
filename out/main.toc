@@ -13,44 +13,44 @@
 \contentsline {subsubsection}{\numberline {2.1.1}Grades of Automation}{4}{subsubsection.2.1.1}%
 \contentsline {subsubsection}{\numberline {2.1.2}Role of Video in Remote Operation}{4}{subsubsection.2.1.2}%
 \contentsline {subsubsection}{\numberline {2.1.3}Latency Requirements and Regulations}{5}{subsubsection.2.1.3}%
-\contentsline {subsection}{\numberline {2.2}Clock Synchronisation}{5}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.2}Clock Synchronisation}{6}{subsection.2.2}%
 \contentsline {subsubsection}{\numberline {2.2.1}GPS-Based Clock Synchronisation}{6}{subsubsection.2.2.1}%
 \contentsline {subsubsection}{\numberline {2.2.2}Network-Based Clock Synchronisation with Chrony}{6}{subsubsection.2.2.2}%
 \contentsline {subsection}{\numberline {2.3}Video Streaming}{7}{subsection.2.3}%
 \contentsline {subsection}{\numberline {2.4}Video Compression}{7}{subsection.2.4}%
 \contentsline {subsubsection}{\numberline {2.4.1}H.264}{7}{subsubsection.2.4.1}%
-\contentsline {subsubsection}{\numberline {2.4.2}H.265}{7}{subsubsection.2.4.2}%
+\contentsline {subsubsection}{\numberline {2.4.2}H.265}{8}{subsubsection.2.4.2}%
 \contentsline {subsubsection}{\numberline {2.4.3}Frame Types}{8}{subsubsection.2.4.3}%
 \contentsline {subsubsection}{\numberline {2.4.4}NAL Units}{8}{subsubsection.2.4.4}%
-\contentsline {subsubsection}{\numberline {2.4.5}MJPEG}{8}{subsubsection.2.4.5}%
+\contentsline {subsubsection}{\numberline {2.4.5}MJPEG}{9}{subsubsection.2.4.5}%
 \contentsline {subsection}{\numberline {2.5}Transport Protocols}{9}{subsection.2.5}%
 \contentsline {subsubsection}{\numberline {2.5.1}RTP and SRTP}{9}{subsubsection.2.5.1}%
 \contentsline {subsubsection}{\numberline {2.5.2}UDP}{9}{subsubsection.2.5.2}%
-\contentsline {subsubsection}{\numberline {2.5.3}TCP}{9}{subsubsection.2.5.3}%
+\contentsline {subsubsection}{\numberline {2.5.3}TCP}{10}{subsubsection.2.5.3}%
 \contentsline {subsection}{\numberline {2.6}Streaming Parameters}{10}{subsection.2.6}%
 \contentsline {subsubsection}{\numberline {2.6.1}Bandwidth}{10}{subsubsection.2.6.1}%
 \contentsline {subsubsection}{\numberline {2.6.2}Resolution}{10}{subsubsection.2.6.2}%
 \contentsline {subsection}{\numberline {2.7}Latency Sources in a Video Streaming Pipeline}{10}{subsection.2.7}%
-\contentsline {subsubsection}{\numberline {2.7.1}Capturing}{10}{subsubsection.2.7.1}%
+\contentsline {subsubsection}{\numberline {2.7.1}Capturing}{11}{subsubsection.2.7.1}%
 \contentsline {subsubsection}{\numberline {2.7.2}Encoding}{11}{subsubsection.2.7.2}%
 \contentsline {subsubsection}{\numberline {2.7.3}Transmitting}{11}{subsubsection.2.7.3}%
-\contentsline {subsubsection}{\numberline {2.7.4}Decoding}{11}{subsubsection.2.7.4}%
+\contentsline {subsubsection}{\numberline {2.7.4}Decoding}{12}{subsubsection.2.7.4}%
 \contentsline {subsubsection}{\numberline {2.7.5}Rendering}{12}{subsubsection.2.7.5}%
 \contentsline {subsection}{\numberline {2.8}GStreamer}{12}{subsection.2.8}%
-\contentsline {subsubsection}{\numberline {2.8.1}Pipeline and Elements}{12}{subsubsection.2.8.1}%
+\contentsline {subsubsection}{\numberline {2.8.1}Pipeline and Elements}{13}{subsubsection.2.8.1}%
 \contentsline {subsubsection}{\numberline {2.8.2}Pads}{13}{subsubsection.2.8.2}%
 \contentsline {subsubsection}{\numberline {2.8.3}Sinks}{13}{subsubsection.2.8.3}%
-\contentsline {subsubsection}{\numberline {2.8.4}Probes}{13}{subsubsection.2.8.4}%
+\contentsline {subsubsection}{\numberline {2.8.4}Probes}{14}{subsubsection.2.8.4}%
 \contentsline {subsection}{\numberline {2.9}Network and Communication}{14}{subsection.2.9}%
 \contentsline {subsubsection}{\numberline {2.9.1}Wi-Fi}{14}{subsubsection.2.9.1}%
 \contentsline {subsubsection}{\numberline {2.9.2}Cellular and 5G}{14}{subsubsection.2.9.2}%
-\contentsline {subsubsection}{\numberline {2.9.3}Tailscale}{14}{subsubsection.2.9.3}%
+\contentsline {subsubsection}{\numberline {2.9.3}Tailscale}{15}{subsubsection.2.9.3}%
 \contentsline {subsection}{\numberline {2.10}Performance Metrics}{15}{subsection.2.10}%
 \contentsline {subsubsection}{\numberline {2.10.1}Latency}{15}{subsubsection.2.10.1}%
-\contentsline {subsubsection}{\numberline {2.10.2}Packet Loss}{15}{subsubsection.2.10.2}%
+\contentsline {subsubsection}{\numberline {2.10.2}Packet Loss}{16}{subsubsection.2.10.2}%
 \contentsline {subsubsection}{\numberline {2.10.3}Throughput}{16}{subsubsection.2.10.3}%
 \contentsline {subsubsection}{\numberline {2.10.4}CPU Usage}{16}{subsubsection.2.10.4}%
-\contentsline {subsubsection}{\numberline {2.10.5}Visual Quality}{16}{subsubsection.2.10.5}%
+\contentsline {subsubsection}{\numberline {2.10.5}Visual Quality}{17}{subsubsection.2.10.5}%
 \contentsline {section}{\numberline {3}System Design}{18}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Requirements}{18}{subsection.3.1}%
 \contentsline {subsection}{\numberline {3.2}Architecture}{18}{subsection.3.2}%

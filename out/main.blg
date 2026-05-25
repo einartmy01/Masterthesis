@@ -1,17 +1,15 @@
 [0] Config.pm:307> INFO - This is Biber 2.19
 [0] Config.pm:310> INFO - Logfile is 'out/main.blg'
-[34] biber:340> INFO - === Sun May 24, 2026, 11:43:24
-[43] Biber.pm:419> INFO - Reading 'out/main.bcf'
-[78] Biber.pm:979> INFO - Found 63 citekeys in bib section 0
-[85] Biber.pm:4419> INFO - Processing section 0
-[90] Biber.pm:4610> INFO - Looking for bibtex file 'references.bib' for section 0
-[92] bibtex.pm:1713> INFO - LaTeX decoding ...
-[114] bibtex.pm:1519> INFO - Found BibTeX data source 'references.bib'
-[331] UCollate.pm:68> INFO - Overriding locale 'en-GB' defaults 'variable = shifted' with 'variable = non-ignorable'
-[331] UCollate.pm:68> INFO - Overriding locale 'en-GB' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[331] Biber.pm:4239> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-GB'
-[331] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-GB'
-[349] bbl.pm:660> INFO - Writing 'out/main.bbl' with encoding 'UTF-8'
-[361] bbl.pm:763> INFO - Output to out/main.bbl
-[361] Biber.pm:131> WARN - I didn't find a database entry for 'europesrail2024_d41' (section 0)
-[361] Biber.pm:133> INFO - WARNINGS: 1
+[71] biber:340> INFO - === Sun May 24, 2026, 16:15:58
+[85] Biber.pm:419> INFO - Reading 'out/main.bcf'
+[155] Biber.pm:979> INFO - Found 62 citekeys in bib section 0
+[167] Biber.pm:4419> INFO - Processing section 0
+[178] Biber.pm:4610> INFO - Looking for bibtex file 'references.bib' for section 0
+[181] bibtex.pm:1713> INFO - LaTeX decoding ...
+[225] bibtex.pm:1519> INFO - Found BibTeX data source 'references.bib'
+[632] UCollate.pm:68> INFO - Overriding locale 'en-GB' defaults 'variable = shifted' with 'variable = non-ignorable'
+[632] UCollate.pm:68> INFO - Overriding locale 'en-GB' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[632] Biber.pm:4239> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-GB'
+[632] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-GB'
+[667] bbl.pm:660> INFO - Writing 'out/main.bbl' with encoding 'UTF-8'
+[688] bbl.pm:763> INFO - Output to out/main.bbl

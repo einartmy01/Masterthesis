@@ -4,11 +4,11 @@ Transit Time Stats  –  24.05-11:15.csv
   Stat              Value
 ───────────────────────────────────
   Count           122,034
-  Mean             44.28 ms
-  Min              -2.11 ms
-  Max             527.10 ms
-  P50              23.37 ms
-  P95             143.33 ms
-  P99             321.67 ms
+  Mean             46.39 ms
+  Min               0.00 ms
+  Max             529.21 ms
+  P50              25.48 ms
+  P95             145.44 ms
+  P99             323.77 ms
   Std Dev          57.08 ms
 ───────────────────────────────────

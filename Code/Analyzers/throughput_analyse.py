@@ -22,6 +22,7 @@ import os
 import csv
 import statistics
 import re
+from datetime import datetime
 import matplotlib.pyplot as plt
 import matplotlib.ticker as ticker
 
@@ -34,8 +35,8 @@ def die(msg: str):
 
 
 def parse_file(path: str):
-    """Return (skip_seconds, rows) where rows = list of (wall_time, tx_mbps)."""
-    skip_seconds = 0
+    """Return (skip_seconds, rows) where rows = list of (wall_time_str, tx_mbps, parsed_time)."""
+    skip_seconds = 10  # default: always skip first 10 s warm-up
     rows = []
 
     with open(path, newline="") as fh:
@@ -59,9 +60,10 @@ def parse_file(path: str):
                 continue
             try:
                 tx = float(parts[2])
+                t  = datetime.strptime(parts[0].strip(), "%H:%M:%S")
             except ValueError:
                 continue
-            rows.append((parts[0].strip(), tx))
+            rows.append((parts[0].strip(), tx, t))
 
     return skip_seconds, rows
 
@@ -102,10 +104,11 @@ def main():
     if not rows:
         die("No data rows found in file.")
 
-    # Drop the first N rows (warm-up)
+    # Drop warm-up rows based on elapsed wall time
     if skip_seconds > 0:
+        t0 = rows[0][2]
+        rows = [r for r in rows if (r[2] - t0).seconds >= skip_seconds]
         print(f"Skipping first {skip_seconds} second(s) of data (warm-up).")
-        rows = rows[skip_seconds:]
 
     if not rows:
         die("No data left after skipping warm-up rows.")
