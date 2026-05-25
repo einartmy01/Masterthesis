@@ -1,0 +1,13 @@
+Sender observations  : 331,481
+Receiver observations: 134,213
+  - warmup/no-sender : 38,088
+Matched              : 96,125
+Unmatched (loss est) : 38,088  (28.38%)
+
+Transit (ms)
+  Min                : 0.1490
+  Max                : 114219.4841
+  Mean               : 38679.1304
+  P50                : 35265.3761
+  P95                : 87939.8620
+  P99                : 102374.3911

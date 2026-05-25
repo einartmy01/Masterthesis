@@ -36,8 +36,8 @@
       \strng{authorbibnamehash}{8338c031c310ec89e27849de49b2e102}
       \strng{authornamehash}{8338c031c310ec89e27849de49b2e102}
       \strng{authorfullhash}{8338c031c310ec89e27849de49b2e102}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Remote Control for Rail Vehicles}
@@ -74,8 +74,8 @@
       \strng{authorbibnamehash}{768a361049aefb367d9a989af2448510}
       \strng{authornamehash}{768a361049aefb367d9a989af2448510}
       \strng{authorfullhash}{768a361049aefb367d9a989af2448510}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{D5.4 - Documentation of use cases for Remote Driving}
@@ -108,8 +108,8 @@
       \strng{authorbibnamehash}{dd17c6e87cb58188cabe57d8b0d283df}
       \strng{authornamehash}{dd17c6e87cb58188cabe57d8b0d283df}
       \strng{authorfullhash}{dd17c6e87cb58188cabe57d8b0d283df}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{IEC 62290-1:2025 -Railway applications - Urban guided transport management and command/control systems - Part 3: System requirements specification}
@@ -140,8 +140,8 @@
       \strng{authorbibnamehash}{ed5616019213d3251db24236cadd32e0}
       \strng{authornamehash}{ed5616019213d3251db24236cadd32e0}
       \strng{authorfullhash}{ed5616019213d3251db24236cadd32e0}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{World Report on Metro Automation}
@@ -174,8 +174,8 @@
       \strng{authorbibnamehash}{cf26edcee75c089db47e7b4b4a491eab}
       \strng{authornamehash}{cf26edcee75c089db47e7b4b4a491eab}
       \strng{authorfullhash}{cf26edcee75c089db47e7b4b4a491eab}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{D3.1 -- Use Cases and Scenarios for {ATO} in Different {GoA} Demos for {G1} Regional Lines}
@@ -215,8 +215,8 @@
       \strng{authorbibnamehash}{4f12bc02fc1befd6ce4fcec124b4479e}
       \strng{authornamehash}{4f12bc02fc1befd6ce4fcec124b4479e}
       \strng{authorfullhash}{4f12bc02fc1befd6ce4fcec124b4479e}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Railway Safety Principles and Factors for Safe Operation of {GoA4} {UTO}}
@@ -260,8 +260,8 @@
       \strng{authorbibnamehash}{a012e850a5b727d6e5e9eb28fb1b7a20}
       \strng{authornamehash}{a6ab8d587636550d84bac7c72d6337b5}
       \strng{authorfullhash}{a012e850a5b727d6e5e9eb28fb1b7a20}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Effects of Video Quality on Perception and Reaction Time in Video-based Remote Train Control}
@@ -294,8 +294,8 @@
       \strng{authorbibnamehash}{2245206624b7fba66a1b22e91547f5ca}
       \strng{authornamehash}{2245206624b7fba66a1b22e91547f5ca}
       \strng{authorfullhash}{2245206624b7fba66a1b22e91547f5ca}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Developing Remote Control as a Fallback System: An Iterative Approach}
@@ -754,8 +754,8 @@
       \strng{authornamehash}{a82007c47b25723539a00ff94e8b3d27}
       \strng{authorfullhash}{a82007c47b25723539a00ff94e8b3d27}
       \field{extraname}{1}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Configuring Time Synchronization -- {Red Hat Enterprise Linux} 9}
@@ -784,8 +784,8 @@
       \strng{authornamehash}{a82007c47b25723539a00ff94e8b3d27}
       \strng{authorfullhash}{a82007c47b25723539a00ff94e8b3d27}
       \field{extraname}{2}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Chrony with Hardware Timestamping -- {Red Hat Enterprise Linux} 10}
@@ -815,8 +815,8 @@
       \strng{authorbibnamehash}{5d30a174757f946c3c6f8a4ada9c0aa4}
       \strng{authornamehash}{5d30a174757f946c3c6f8a4ada9c0aa4}
       \strng{authorfullhash}{5d30a174757f946c3c6f8a4ada9c0aa4}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{IEEE MultiMedia}
@@ -955,6 +955,41 @@
       \verb https://last.hit.bme.hu/download/vidtech/k%C3%B6nyvek/Iain%20E.%20Richardson%20-%20H264%20(2nd%20edition).pdf
       \endverb
     \endentry
+    \entry{kondoz2010}{book}{}
+      \name{author}{1}{}{%
+        {{hash=0d95937cdeb2888ba9c06c5c0d1d8460}{%
+           family={Kondoz},
+           familyi={K\bibinitperiod},
+           given={Ahmet},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Wiley}%
+      }
+      \strng{namehash}{0d95937cdeb2888ba9c06c5c0d1d8460}
+      \strng{fullhash}{0d95937cdeb2888ba9c06c5c0d1d8460}
+      \strng{bibnamehash}{0d95937cdeb2888ba9c06c5c0d1d8460}
+      \strng{authorbibnamehash}{0d95937cdeb2888ba9c06c5c0d1d8460}
+      \strng{authornamehash}{0d95937cdeb2888ba9c06c5c0d1d8460}
+      \strng{authorfullhash}{0d95937cdeb2888ba9c06c5c0d1d8460}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9780470740576}
+      \field{title}{Visual Media Coding and Transmission}
+      \field{urlday}{8}
+      \field{urlmonth}{4}
+      \field{urlyear}{2026}
+      \field{year}{2010}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.oreilly.com/library/view/visual-media-coding/9780470740576/
+      \endverb
+      \verb{url}
+      \verb https://www.oreilly.com/library/view/visual-media-coding/9780470740576/
+      \endverb
+    \endentry
     \entry{wiegand2003}{article}{}
       \name{author}{4}{}{%
         {{hash=0a42920957ef8d58a2d10f5d46385a09}{%
@@ -1080,8 +1115,8 @@
       \strng{authornamehash}{2b3bbffda8fb8bb1119ee446d01162a6}
       \strng{authorfullhash}{bb840e1adf12078ab79d8441d58e9329}
       \field{extraname}{2}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{IEEE Transactions on Circuits and Systems for Video Technology}
@@ -1136,8 +1171,8 @@
       \strng{authorbibnamehash}{a06c56ad9acc558e2d3c1402518a019b}
       \strng{authornamehash}{a06c56ad9acc558e2d3c1402518a019b}
       \strng{authorfullhash}{1e7f32ea9b1b5e8a9578a72d1d2cce6b}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{IEEE Transactions on Circuits and Systems for Video Technology}
@@ -1207,8 +1242,8 @@
       \strng{authorbibnamehash}{6b42258f12a2f2612fe9097b9f75df07}
       \strng{authornamehash}{6b42258f12a2f2612fe9097b9f75df07}
       \strng{authorfullhash}{6b42258f12a2f2612fe9097b9f75df07}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{What are {H.264} {NAL} Units?}
@@ -1256,8 +1291,8 @@
       \strng{authorbibnamehash}{256d4bd88e5baa9ce54a836d927b09c5}
       \strng{authornamehash}{256d4bd88e5baa9ce54a836d927b09c5}
       \strng{authorfullhash}{2bf7a5afe1d74a11a5f409c9dbe3ac5b}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{{RFC} 6184: {RTP} Payload Format for {H.264} Video}
@@ -1286,8 +1321,8 @@
       \strng{authorbibnamehash}{b6aea1a416c89509a7df1cbb69249cb6}
       \strng{authornamehash}{b6aea1a416c89509a7df1cbb69249cb6}
       \strng{authorfullhash}{b6aea1a416c89509a7df1cbb69249cb6}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Motion {JPEG}}
@@ -1315,8 +1350,8 @@
       \strng{authorbibnamehash}{80515e4dbf7673974d64c04fb9e1e068}
       \strng{authornamehash}{80515e4dbf7673974d64c04fb9e1e068}
       \strng{authorfullhash}{80515e4dbf7673974d64c04fb9e1e068}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{A Comprehensive Study: {MJPEG} and {H.264} Compression in Embedded Vision}
@@ -1372,8 +1407,8 @@
       \strng{authornamehash}{b3a64faa8dc0c1b5ccf96afa15c9a280}
       \strng{authorfullhash}{a6ea819838a42d964debbe1597c9cc44}
       \field{extraname}{2}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Wireless Communications and Mobile Computing}
@@ -1513,8 +1548,8 @@
       \strng{authornamehash}{02b8dba2b9241ee3cbe59775cce0328d}
       \strng{authorfullhash}{02b8dba2b9241ee3cbe59775cce0328d}
       \field{extraname}{1}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{{RFC} 768: User Datagram Protocol}
@@ -1548,8 +1583,8 @@
       \strng{authorbibnamehash}{15fe25340ae8cf0fe75afb7426a1df18}
       \strng{authornamehash}{15fe25340ae8cf0fe75afb7426a1df18}
       \strng{authorfullhash}{15fe25340ae8cf0fe75afb7426a1df18}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{5}
@@ -1584,8 +1619,8 @@
       \strng{authornamehash}{02b8dba2b9241ee3cbe59775cce0328d}
       \strng{authorfullhash}{02b8dba2b9241ee3cbe59775cce0328d}
       \field{extraname}{2}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{{RFC} 793: Transmission Control Protocol}
@@ -1692,8 +1727,8 @@
       \strng{authorbibnamehash}{dae5bff63ccb436973d2e14a7bd9e294}
       \strng{authornamehash}{dae5bff63ccb436973d2e14a7bd9e294}
       \strng{authorfullhash}{1a0f63fa5cf9a36e46485b73d827f2d4}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{ACM SIGCOMM}
@@ -1722,8 +1757,8 @@
       \strng{authorbibnamehash}{ac6b150c08134b28b0c1299d9cf7c9cc}
       \strng{authornamehash}{ac6b150c08134b28b0c1299d9cf7c9cc}
       \strng{authorfullhash}{ac6b150c08134b28b0c1299d9cf7c9cc}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Latency in Live Network Video Surveillance}
@@ -1886,8 +1921,8 @@
       \strng{authornamehash}{80a4452c4c56105df98a0fcc5ba3da4f}
       \strng{authorfullhash}{80a4452c4c56105df98a0fcc5ba3da4f}
       \field{extraname}{2}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Elements}
@@ -1916,8 +1951,8 @@
       \strng{authornamehash}{80a4452c4c56105df98a0fcc5ba3da4f}
       \strng{authorfullhash}{80a4452c4c56105df98a0fcc5ba3da4f}
       \field{extraname}{3}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Pads and Capabilities}
@@ -1976,8 +2011,8 @@
       \strng{authornamehash}{80a4452c4c56105df98a0fcc5ba3da4f}
       \strng{authorfullhash}{80a4452c4c56105df98a0fcc5ba3da4f}
       \field{extraname}{5}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Probes}
@@ -2006,8 +2041,8 @@
       \strng{authornamehash}{80a4452c4c56105df98a0fcc5ba3da4f}
       \strng{authorfullhash}{80a4452c4c56105df98a0fcc5ba3da4f}
       \field{extraname}{6}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Pipeline Manipulation}
@@ -2035,8 +2070,8 @@
       \strng{authorbibnamehash}{472abfae8142fdb6f39d081303e8af85}
       \strng{authornamehash}{472abfae8142fdb6f39d081303e8af85}
       \strng{authorfullhash}{472abfae8142fdb6f39d081303e8af85}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{{IEEE} 802.11-2020: {IEEE} Standard for Information Technology -- Telecommunications and Information Exchange Between Systems -- Local and Metropolitan Area Networks -- Specific Requirements Part 11: Wireless {LAN} Medium Access Control {(MAC)} and Physical Layer {(PHY)} Specifications}
@@ -2081,8 +2116,8 @@
       \strng{authorbibnamehash}{9cb6012b549f394fecb0255e1dfe72d2}
       \strng{authornamehash}{9cb6012b549f394fecb0255e1dfe72d2}
       \strng{authorfullhash}{487857e6d7863898473f7a6be1230916}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{International Journal of Distributed Sensor Networks}
@@ -2128,8 +2163,8 @@
       \strng{authorbibnamehash}{6e8484cf8c9bbaa278343e039988a414}
       \strng{authornamehash}{6e8484cf8c9bbaa278343e039988a414}
       \strng{authorfullhash}{2685aa5aa1bb8e7d1e68d5f3cfcce8ae}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{IEEE 15th International Symposium on Wireless Communication Systems}

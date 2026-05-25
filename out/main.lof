@@ -1,6 +1,8 @@
 \babel@toc {british}{}\relax 
-\contentsline {figure}{\numberline {1}{\ignorespaces Three-screen teleoperation simulator setup used by Neumeier et al.\ to evaluate the effect of latency on remote driving performance~\blx@tocontentsinit {0}\cite {neumeier2019}.}}{5}{figure.caption.2}%
-\contentsline {figure}{\numberline {2}{\ignorespaces ~\blx@tocontentsinit {0}\cite {blomqvist2018}.}}{8}{figure.caption.3}%
-\contentsline {figure}{\numberline {3}{\ignorespaces Physical Setup of Project}}{18}{figure.caption.4}%
-\contentsline {figure}{\numberline {4}{\ignorespaces Application and Transport layer Setup of Project}}{19}{figure.caption.5}%
-\contentsline {figure}{\numberline {5}{\ignorespaces Sequence Diagram between Sender and Camera before active Stream}}{20}{figure.caption.6}%
+\contentsline {figure}{\numberline {1}{\ignorespaces Three monitor tele operation simulator setup used by Neumeier et al.\ to evaluate the effect of latency on remote driving performance~\blx@tocontentsinit {0}\cite {neumeier2019}.}}{5}{figure.caption.2}%
+\contentsline {figure}{\numberline {2}{\ignorespaces Spatial redundancy~\blx@tocontentsinit {0}\cite {kondoz2010}.}}{7}{figure.caption.3}%
+\contentsline {figure}{\numberline {3}{\ignorespaces Temporal redundancy~\blx@tocontentsinit {0}\cite {kondoz2010}.}}{7}{figure.caption.3}%
+\contentsline {figure}{\numberline {4}{\ignorespaces Difference between HEVC, H.265 technology, and H.264 of methdod for encoding~\blx@tocontentsinit {0}\cite {blomqvist2018}.}}{8}{figure.caption.4}%
+\contentsline {figure}{\numberline {5}{\ignorespaces Physical Setup of Project}}{18}{figure.caption.5}%
+\contentsline {figure}{\numberline {6}{\ignorespaces Application and Transport layer Setup of Project}}{19}{figure.caption.6}%
+\contentsline {figure}{\numberline {7}{\ignorespaces Sequence Diagram between Sender and Camera before active Stream}}{20}{figure.caption.7}%

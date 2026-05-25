@@ -516,6 +516,16 @@ INPUT ./Images/ThreeMonitorSetup.png
 INPUT ./Images/ThreeMonitorSetup.png
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmti10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmtt10.tfm
+INPUT ./Images/SpatialRed.png
+INPUT ./Images/SpatialRed.png
+INPUT Images/SpatialRed.png
+INPUT ./Images/SpatialRed.png
+INPUT ./Images/SpatialRed.png
+INPUT ./Images/TemperoalRed.png
+INPUT ./Images/TemperoalRed.png
+INPUT Images/TemperoalRed.png
+INPUT ./Images/TemperoalRed.png
+INPUT ./Images/TemperoalRed.png
 INPUT ./Images/264265HEVC.png
 INPUT ./Images/264265HEVC.png
 INPUT Images/264265HEVC.png

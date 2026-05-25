@@ -18,6 +18,7 @@ import sys
 import re
 import csv
 import os
+import bisect
 from pathlib import Path
 from datetime import datetime
 from collections import defaultdict

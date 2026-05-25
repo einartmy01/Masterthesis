@@ -42,7 +42,7 @@ Beyond individual video quality, remote train driving typically requires multipl
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.4\textwidth]{Images/ThreeMonitorSetup.png}
-    \caption{Three-screen teleoperation simulator setup used by Neumeier et al.\ to evaluate the effect of latency on remote driving performance~\cite{neumeier2019}.}\label{fig:trippelmonitor}
+    \caption{Three monitor tele operation simulator setup used by Neumeier et al.\ to evaluate the effect of latency on remote driving performance~\cite{neumeier2019}.}\label{fig:trippelmonitor}
 \end{figure}
 % ─────────────────────────────────────────────────────────────────────────────
 \subsubsection{Latency Requirements and Regulations}\label{subsec:latency-reqs}
@@ -81,7 +81,22 @@ Video streaming is the continuous transmission of video data from a source to a 
 A video streaming system can be thought of as a chain of components, each with its own role. At the sending end, raw video is captured by a camera and handed to an encoder, which compresses it into a format suitable for transmission. The compressed data is then packaged into a transport protocol and sent across the network. At the receiving end, the process is reversed: packets are reassembled, decoded back into raw frames, and rendered on screen. The choices made at each step, which codec, which protocol, which network directly affect the end-to-end latency and video quality that the remote operator experiences~\cite{myhrvold2025, mejias2024}.
 
 \subsection{Video Compression}\label{subsec:codecs}
-Video compression works by removing redundancy from the raw video signal. There are two main redundancy that codecs use for compression. Spatial redundancy exists within a single frame where neighbouring pixels often have similar values. Temporal redundancy exists across frames where much of the image remains unchanged between one frame and the next. A video encoder exploits both types of redundancy to represent the video with fewer bits than the original raw data. Compression can be lossless where the original data can be perfectly reconstructed, or lossy where some information is discarded in exchange for a much smaller file size. Most video streaming applications use lossy compression, as lossless video requires far more bandwidth than most networks can provide~\cite{blomqvist2018, richardson2010}.
+Video compression works by removing redundancy from the raw video signal. There are two main redundancy that codecs use for compression. Spatial redundancy exists within a single frame where neighbouring pixels often have similar values, as you can see at Figure~\ref{fig:spatial-redundancy} where the background and some of the skin share the same colour. Temporal redundancy exists across frames where much of the image remains unchanged between one frame and the next, as you can see at Figure~\ref{fig:temporal-redundancy} where only the people move, while the background and table stay still. A video encoder exploits both types of redundancy to represent the video with fewer bits than the original raw data. Compression can be lossless where the original data can be perfectly reconstructed, or lossy where some information is discarded in exchange for a much smaller file size. Most video streaming applications use lossy compression, as lossless video requires far more bandwidth than most networks can provide~\cite{blomqvist2018, richardson2010}.
+
+\begin{figure}[h]
+    \centering
+    \begin{minipage}{0.35\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Images/SpatialRed.png}
+        \caption{Spatial redundancy~\cite{kondoz2010}.}\label{fig:spatial-redundancy}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.6\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Images/TemperoalRed.png}
+        \caption{Temporal redundancy~\cite{kondoz2010}.}\label{fig:temporal-redundancy}
+    \end{minipage}
+\end{figure}
 
 \subsubsection{H.264}\label{subsubsec:h264}
 H.264, also known as Advanced Video Coding (AVC), is a video compression standard developed jointly by the ITU-T Video Coding Experts Group and the ISO/IEC Moving Picture Experts Group~\cite{wiegand2003}. It has become the dominant codec for real-time video applications including video conferencing, IP surveillance, and live streaming, due to its balance between compression efficiency, computational cost, and broad hardware support~\cite{sullivan2004}.
@@ -93,15 +108,15 @@ An important concept is the Group of Pictures (GOP), which defines how often a f
 \subsubsection{H.265}\label{subsubsec:h265}
 H.265, also known as High Efficiency Video Coding (HEVC) and formally standardised as ITU-T~H.265 and ISO/IEC~23008--2, is the successor to H.264 published in 2013~\cite{sullivan2012hevc}. Its primary goal was to achieve roughly 50\% better compression compared to H.264 at equivalent visual quality~\cite{ohm2012}.
  
-HEVC achieves its efficiency gains by replacing the fixed 16$\times$16 macroblock structure of H.264 with a flexible Coding Tree Unit (CTU) architecture that supports block sizes up to 64$\times$64 pixels. Larger blocks handle uniform image regions efficiently, while smaller blocks are used in areas with fine detail or motion. This adaptive structure allows the encoder to allocate coding effort where it is most needed, reducing the total number of bits required to represent a frame at a given quality level~\cite{sullivan2012hevc}.
+HEVC achieves its efficiency gains by replacing the fixed 16$\times$16 macroblock structure of H.264 with a flexible Coding Tree Unit (CTU) architecture that supports block sizes up to 64$\times$64 pixels as you can see in Figure~\ref{fig:264v265encoding}. Larger blocks handle uniform image regions efficiently, while smaller blocks are used in areas with fine detail or motion. This adaptive structure allows the encoder to allocate coding effort where it is most needed, reducing the total number of bits required to represent a frame at a given quality level~\cite{sullivan2012hevc}.
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.4\textwidth]{Images/264265HEVC.png}
-    \caption{~\cite{blomqvist2018}.}\label{fig:264v265encoding}
+    \includegraphics[width=0.8\textwidth]{Images/264265HEVC.png}
+    \caption{Difference between HEVC, H.265 technology, and H.264 of methdod for encoding~\cite{blomqvist2018}.}\label{fig:264v265encoding}
 \end{figure}
 
-The main difference compared to H.264 is computational cost. Encoding with H.265 requires significantly more processing power, which increases encoding time and places greater demand on the sender hardware~\cite{ohm2012}.
+Another difference compared to H.264 is computational cost. Encoding with H.265 requires significantly more processing power, which increases encoding time and places greater demand on the sender hardware~\cite{ohm2012}.
 
 
 \subsubsection{Frame Types}\label{subsubsec:frametypes}
@@ -117,7 +132,6 @@ The sequence of frame types between two consecutive I-frames is called a Group o
 Both H.264 and H.265 organise their encoded bitstream through a Network Abstraction Layer (NAL). The NAL divides the encoded data into discrete units called NAL units, each consisting of a header that identifies the type of data it contains, followed by the payload~\cite{wiegand2003}. There are two categories: Video Coding Layer (VCL) NAL units carry the compressed image data, while non-VCL NAL units carry decoder configuration information, most importantly the Sequence Parameter Set (SPS) and Picture Parameter Set (PPS). The SPS contains configuration that applies to the entire video sequence such as resolution and profile, while the PPS contains parameters applying to individual pictures such as entropy coding mode. A decoder must receive both before it can decode any VCL data~\cite{vocal_nal}.
  
 When H.264 or H.265 is carried over RTP, each NAL unit is mapped to one or more RTP packets. If a NAL unit exceeds the network maximum transmission unit (MTU), it is fragmented across multiple consecutive RTP packets. The RTP marker bit is set on the last packet of a complete frame, signalling to the receiver that all data for that frame has arrived~\cite{rfc6184}.
-
 
 \subsubsection{MJPEG}\label{subsubsec:mjpeg}
 Motion JPEG (MJPEG) is a video format in which each frame is compressed independently as a JPEG image, with no reference to any other frame in the sequence~\cite{wikipedia_mjpeg}. This purely intraframe approach contrasts with H.264 and H.265, which both rely on temporal prediction across frames to achieve compression.
