@@ -53,28 +53,6 @@ The most relevant regulatory reference comes from 3GPP TS~22.289, a technical sp
  
 Empirical studies from railway demonstrations report glass-to-glass (G2G) latency values of 340--380~ms for tramway remote driving using commercial systems~\cite{fp2r2dato2024d41_2}, while the Kozarevic study at NTNU measured an average of around 212~ms using a GPS-synchronised measurement method~\cite{kozarevic2025}. Human factors research from other vehicle domains suggests that operators begin to adjust their behaviour at delays above 250--300~ms, and that latency variability can also be more disruptive than a consistently higher but stable delay~\cite{myhrvold2025, neumeier2019}.
 
-Together, these findings motivate the work in this thesis: to build and evaluate a custom streaming pipeline where each component of the latency budget can be measured, understood, and optimised, rather than relying on a black-box commercial system.
-
-\subsection{Clock Synchronisation}\label{subsec:clock-sync}
-
-Accurate latency measurement between two separate machines requires that both share a common time reference. Each computer maintains an internal clock driven by a local hardware oscillator. Even at identical nominal frequencies, two independent oscillators will accumulate a growing offset over time due to differences in temperature, aging, and manufacturing tolerances~\cite{vannicola2012}. When a timestamp recorded on one machine is compared against a timestamp recorded on another, any offset between the two clocks appears directly in the measured result. Depending on the magnitude of the drift, this error can easily exceed the latency values being measured, making clock synchronisation a requirement for accurate one-way delay measurement.
-
-\subsubsection{GPS-Based Clock Synchronisation}\label{subsubsec:gps-sync}
-
-The Global Positioning System (GPS) operates satellites that each carry onboard atomic clocks traceable to Coordinated Universal Time (UTC). Each satellite broadcasts a navigation message containing the current time along with parameters allowing a receiver to compute the signal propagation delay from the satellite to the receiver. By combining signals from at least four satellites and solving for the receiver position and clock offset simultaneously, a GPS receiver can derive a precise absolute time reference~\cite{misra2011}.
-
-A common timing output from GPS receivers is the pulse-per-second (PPS) signal. This is a periodic electrical pulse whose rising edge is aligned to the UTC second boundary. Commercial GPS receivers designed for timing applications typically achieve a PPS accuracy of 100 nanoseconds or better relative to UTC, and precision timing receivers can reach the range of tens of nanoseconds under stable conditions~\cite{vannicola2012, sesia2010}. The PPS signal provides a hardware-level time reference that is independent of network conditions and available continuously as long as the receiver has a clear view of the sky.
-
-When a computer's operating system is disciplined by a GPS PPS signal, the kernel timestamps each incoming pulse and uses the known UTC alignment to adjust the phase and frequency of the system clock continuously. The resulting clock closely tracks UTC, with residual errors typically in the sub-microsecond range~\cite{sesia2010}. For latency measurements in a video streaming system where delays are on the order of tens to hundreds of milliseconds, this accuracy level means that clock error contributes negligibly to the measured values. GPS-based synchronisation is therefore used in studies where high measurement precision is required and where both endpoints can be equipped with a GPS receiver, as seen in the latency measurement work of Kaknjo et al.~\cite{kaknjo2018} and the tramway remote driving tests reported in FP2R2DATO D41.2~\cite{fp2r2dato2024d41_2}.
-
-\subsubsection{Network-Based Clock Synchronisation with Chrony}\label{subsubsec:chrony-sync}
-
-When a hardware GPS reference is not available, clock synchronisation can be achieved over a network using the Network Time Protocol (NTP). NTP operates by exchanging timestamped packets between a client and one or more time servers. The client records the time it sent the request, the time the server received it, the time the server sent its reply, and the time the client received the reply. From these four timestamps, NTP estimates the round-trip propagation delay and uses half of that value to approximate the one-way delay, computing a correction to the local clock~\cite{rfc5905}.
-
-Chrony is an NTP implementation for Linux systems that is designed to maintain accurate synchronisation under variable network conditions. Rather than making abrupt step corrections to the clock, Chrony adjusts the frequency of the local oscillator continuously, which reduces disruption to running processes and improves long-term stability~\cite{chronyproject}. It also tracks the estimated error of each configured time source and selects the most reliable one based on a combination of stratum, distance, and measured jitter.
-
-When synchronised to public internet time servers such as those provided by the \texttt{pool.ntp.org} project, Chrony typically achieves a clock accuracy within a few milliseconds over an internet connection. On a local area network under stable conditions the accuracy improves to tens of microseconds, and with hardware timestamping enabled on the network interface, where the network card rather than the kernel records packet arrival and departure times, sub-microsecond accuracy is possible~\cite{redhat2024chrony, redhat2024hw}.
-% ─────────────────────────────────────────────────────────────────────────────
 \subsection{Video Streaming}\label{sec:video-streaming}
 Video streaming is the continuous transmission of video data from a source to a receiver over a network, allowing the receiver to display the content in real time without storing the full recording first~\cite{sodagar2011}. In a remote train operation context, this means live footage from cameras on or near the train is captured, compressed, sent across a network, and displayed on the operator's screen with as little delay as possible.
  
@@ -173,6 +151,7 @@ Resolution defines the number of pixels in each video frame, expressed as width 
 For a given codec and bitrate, increasing resolution without increasing the bitrate results in more compression per pixel, which can reduce sharpness and introduce visible artefacts. Conversely, a high resolution with a sufficiently high bitrate produces a clearer image. The 3GPP Rel-16 specification for video based remote railway control recommends a minimum of 1920$\times$1080 at 30 frames per second as the target output quality~\cite{mejias2024}.
 
 % ─────────────────────────────────────────────────────────────────────────────
+
 \subsection{Latency Sources in a Video Streaming Pipeline}\label{sec:latency-sources}
 The total delay from when a video frame is captured by a camera to when it is displayed on the operator's screen is commonly referred to as glass-to-glass latency. This delay does not originate from a single component but accumulates across each stage of the streaming pipeline~\cite{dobrian2011}. Understanding where latency is introduced at each stage is necessary for identifying bottlenecks and evaluating the overall performance of a streaming system.
  
@@ -218,6 +197,28 @@ The rendering application may also hold frames in a buffer before handing them t
 
  
 % ─────────────────────────────────────────────────────────────────────────────
+
+\subsection{Clock Synchronisation}\label{subsec:clock-sync}
+
+Accurate latency measurement between two separate machines requires that both share a common time reference. Each computer maintains an internal clock driven by a local hardware oscillator. Even at identical nominal frequencies, two independent oscillators will accumulate a growing offset over time due to differences in temperature, aging, and manufacturing tolerances~\cite{vannicola2012}. When a timestamp recorded on one machine is compared against a timestamp recorded on another, any offset between the two clocks appears directly in the measured result. Depending on the magnitude of the drift, this error can easily exceed the latency values being measured, making clock synchronisation a requirement for accurate one-way delay measurement.
+
+\subsubsection{GPS-Based Clock Synchronisation}\label{subsubsec:gps-sync}
+
+The Global Positioning System (GPS) operates satellites that each carry onboard atomic clocks traceable to Coordinated Universal Time (UTC). Each satellite broadcasts a navigation message containing the current time along with parameters allowing a receiver to compute the signal propagation delay from the satellite to the receiver. By combining signals from at least four satellites and solving for the receiver position and clock offset simultaneously, a GPS receiver can derive a precise absolute time reference~\cite{misra2011}.
+
+A common timing output from GPS receivers is the pulse-per-second (PPS) signal. This is a periodic electrical pulse whose rising edge is aligned to the UTC second boundary. Commercial GPS receivers designed for timing applications typically achieve a PPS accuracy of 100 nanoseconds or better relative to UTC, and precision timing receivers can reach the range of tens of nanoseconds under stable conditions~\cite{vannicola2012, sesia2010}. The PPS signal provides a hardware-level time reference that is independent of network conditions and available continuously as long as the receiver has a clear view of the sky.
+
+When a computer's operating system is disciplined by a GPS PPS signal, the kernel timestamps each incoming pulse and uses the known UTC alignment to adjust the phase and frequency of the system clock continuously. The resulting clock closely tracks UTC, with residual errors typically in the sub-microsecond range~\cite{sesia2010}. For latency measurements in a video streaming system where delays are on the order of tens to hundreds of milliseconds, this accuracy level means that clock error contributes negligibly to the measured values. GPS-based synchronisation is therefore used in studies where high measurement precision is required and where both endpoints can be equipped with a GPS receiver, as seen in the latency measurement work of Kaknjo et al.~\cite{kaknjo2018} and the tramway remote driving tests reported in FP2R2DATO D41.2~\cite{fp2r2dato2024d41_2}.
+
+\subsubsection{Network-Based Clock Synchronisation with Chrony}\label{subsubsec:chrony-sync}
+
+When a hardware GPS reference is not available, clock synchronisation can be achieved over a network using the Network Time Protocol (NTP). NTP operates by exchanging timestamped packets between a client and one or more time servers. The client records the time it sent the request, the time the server received it, the time the server sent its reply, and the time the client received the reply. From these four timestamps, NTP estimates the round-trip propagation delay and uses half of that value to approximate the one-way delay, computing a correction to the local clock~\cite{rfc5905}.
+
+Chrony is an NTP implementation for Linux systems that is designed to maintain accurate synchronisation under variable network conditions. Rather than making abrupt step corrections to the clock, Chrony adjusts the frequency of the local oscillator continuously, which reduces disruption to running processes and improves long-term stability~\cite{chronyproject}. It also tracks the estimated error of each configured time source and selects the most reliable one based on a combination of stratum, distance, and measured jitter.
+
+When synchronised to public internet time servers such as those provided by the \texttt{pool.ntp.org} project, Chrony typically achieves a clock accuracy within a few milliseconds over an internet connection. On a local area network under stable conditions the accuracy improves to tens of microseconds, and with hardware timestamping enabled on the network interface, where the network card rather than the kernel records packet arrival and departure times, sub-microsecond accuracy is possible~\cite{redhat2024chrony, redhat2024hw}.
+% ─────────────────────────────────────────────────────────────────────────────
+
 \subsection{GStreamer}\label{sec:gstreamer}
 GStreamer is an open source multimedia framework written in C that allows developers to construct pipelines of media processing components~\cite{gstreamer_intro}. It was originally developed at the Oregon Graduate Institute in 1999 and has since become a widely used foundation for applications ranging from media playback and transcoding to real-time video streaming and computer vision~\cite{gstreamer_intro}. The framework is built around a modular, plugin based architecture where each processing step is provided by a plugin, and individual components can be combined freely to form a complete processing chain suited to the application at hand.
  
@@ -255,6 +256,7 @@ A probe is installed on a pad using the \texttt{gst\_pad\_add\_probe} function, 
 Probes are particularly useful for latency measurement, as they allow the application to record a timestamp at one pad when data enters the pipeline and another timestamp at a downstream pad when the processed data exits. The difference between the two timestamps represents the processing time between those two points in the pipeline~\cite{gstreamer_pipeline_manip}.
 
 % ─────────────────────────────────────────────────────────────────────────────
+
 \subsection{Network and Communication}\label{sec:network}
 The network connecting between the sender and receiver is a important part of any remote operation system. The choice of network technology affects how much data can be sent, how quickly it arrives, and how stable the connection is under varying conditions. The following subsections cover the network technologies relevant to this thesis.
  
@@ -279,6 +281,7 @@ WireGuard, which handles the actual data transfer, adds encryption and authentic
 
  
 % ─────────────────────────────────────────────────────────────────────────────
+
 \subsection{Performance Metrics}\label{sec:metrics}
 Evaluating a video streaming system requires measuring several aspects of its behaviour under different conditions. The metrics covered in this section are latency, packet loss, throughput, CPU usage, and visual quality. Together they give a picture of how the system performs from both a network and a visual standpoint.
 

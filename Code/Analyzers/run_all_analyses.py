@@ -24,7 +24,7 @@ GRAPHS_DIR = SCRIPT_DIR / "graphs"
 
 THROUGHPUT_SCRIPT      = SCRIPT_DIR / "throughput_analyse.py"
 TRANSIT_RESULT_SCRIPT  = SCRIPT_DIR / "transit_analyseV5.py"
-COMBINE_TRANSIT_SCRIPT = SCRIPT_DIR / "combine_transit.py"
+COMBINE_TRANSIT_SCRIPT = SCRIPT_DIR / "combine_transitV2.py"
 CPU_SCRIPT             = SCRIPT_DIR / "cpu_analyseV2.py"
 QUALITY_SCRIPT         = SCRIPT_DIR / "quality_analyse.py"
 RECEIVER_PIPE_SCRIPT   = SCRIPT_DIR / "receiver_pipeline_analyseV2.py"

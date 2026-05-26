@@ -3,11 +3,11 @@
 As trains become automated, the need for operators to monitor and control them remotely is growing. To do this safely, the operator needs a live video feed from the train that is stable and fast enough to react to what is happening on the track. This thesis looks at how such a video streaming system can be built, tested and evaluated, with a focus on finding configurations that work well for remote train operation.
 
 \subsection{Background and Motivation}
-As the railway sector transitions toward higher Grades of Automation (GoA), particularly GoA 3 and GoA 4, remote driving becomes an increasingly critical operational capability. Remote driving is not only a natural consequence of reduced onboard personnel at higher GoA levels, but serves as a mandatory safety layer within the ATO architecture enabling operators to intervene when automated systems encounter situations they cannot resolve independently, such as unexpected track conditions or degraded operational modes [source].
+As the railway sector transitions toward higher Grades of Automation (GoA), particularly GoA 3 and GoA 4, remote driving becomes an increasingly critical operational capability. Remote driving is not only a natural consequence of reduced onboard personnel at higher GoA levels, but serves as a mandatory safety layer within the ATO architecture enabling operators to intervene when automated systems encounter situations they cannot resolve independently, such as unexpected track conditions or degraded operational modes~\cite{orr2024, europesrail2025_d3}.
 
-A fundamental requirement for safe remote driving is the availability of reliable, low-latency video streaming. When the operator is physically separated from the train, the video feed becomes the primary source of situational awareness, and its quality and responsiveness directly determine whether timely and safe intervention is possible [source]. Industry experience further demonstrates that remote operation can support a range of practical tasks including shunting, depot movements, and vehicle preparation provided that the communication link meets sufficient performance criteria [source].
+A fundamental requirement for safe remote driving is the availability of reliable, low-latency video streaming. When the operator is physically separated from the train, the video feed becomes the primary source of situational awareness, and its quality and responsiveness directly determine whether timely and safe intervention is possible~\cite{mejias2024, myhrvold2025}. Industry experience further demonstrates that remote operation can support a range of practical tasks including shunting, depot movements, and vehicle preparation provided that the communication link meets sufficient performance criteria~\cite{fp2r2dato2023d5_4}.
 
-Understanding the relationship between latency and human perception is equally important in this context. Research on human factors in remote operation indicates that video delay, bitrate, and stream stability all influence an operator's ability to detect obstacles, interpret dynamic scenes, and execute corrective actions under time pressure [source]. Identifying the latency boundaries within which safe remote operation remains feasible is therefore a key step toward enabling higher automation levels in railway systems.
+Understanding the relationship between latency and human perception is equally important in this context. Research on human factors in remote operation indicates that video delay, bitrate, and stream stability all influence an operator's ability to detect obstacles, interpret dynamic scenes, and execute corrective actions under time pressure~\cite{brandenburger2023, neumeier2019}. Identifying the latency boundaries where safe remote operation remains usable is therefore a key step toward enabling higher automation levels in railway systems~\cite{myhrvold2025}.
 
 This thesis is developed within an ongoing research collaboration at NTNU, in partnership with VTI and other European railway organizations, contributing to the technical groundwork required to make remote train driving a safe and practical reality in future railway deployments.
 
@@ -58,6 +58,62 @@ The thesis does not include formal safety certification or a RAMS analysis in ac
 With RAMS:
 The system is developed with reference to EN 50126, the European railway standard for reliability, availability, maintainability and safety. While a full RAMS analysis is beyond the scope of a single master thesis, relevant safety considerations from the standard are used to inform design decisions and contextualize the results within a safety critical operational environment.
 \end{comment}
+
+\subsection{Research Methodology}
+\subsubsection{Literature and Knowledge acquisition}
+The knowledge needed to carry out this thesis was acquired through an iterative process that combined systematic literature review with hands-on practical exploration. This approach, often referred to as an Iterative Literature and Practice-Driven Approach, is characterized by a continuous cycle where theory and practice inform each other rather than following a strict linear sequence [Wohlin et al. (2012)]. Instead of completing all literature review before beginning practical work, the two activities run in parallel, with new practical challenges prompting targeted literature searches and new theoretical insights shaping the direction of experiments. This makes it particularly well suited for applied engineering research where the problem space is not fully known at the outset and understanding develops gradually through doing [Hevner et al. (2004) Saunders et al. (2019) ].
+
+The process began by identifying the core knowledge areas required before any development could start. This included understanding the operational context of remote train operation and Automatic Train Operation, the fundamentals of video streaming and relevant transport protocols, and the capabilities and structure of GStreamer as a framework. These areas formed the initial scope of the literature review and gave enough grounding to begin practical work.
+
+Academic literature was gathered primarily through Google Scholar and IEEE Xplore, using search terms related to low-latency video streaming, remote train operation, GStreamer pipeline design, and network performance for real-time applications. Sources were selected based on relevance to the problem, publication quality, and recency where applicable. In addition to academic papers, official technical documentation was used extensively, particularly the GStreamer documentation and protocol specifications for RTP and UDP, which provided the practical detail that academic sources alone could not cover.
+
+Once a sufficient theoretical foundation was in place, practical exploration began through hands-on work with GStreamer. Building and testing pipelines from the command line and through Python quickly revealed challenges that existing literature did not fully address, such as specific configuration trade-offs, unexpected latency behavior, and hardware compatibility issues. Each of these practical obstacles prompted a return to the literature, this time with more precise and targeted questions. New findings were then brought back into the development process, tested, and evaluated against real behaviour.
+
+This cycle of reading, building, observing, and searching again repeated throughout the entire development phase. The result is that the theoretical foundation of this thesis did not precede the practical work, but grew alongside it, shaped by the specific demands of the problem at hand.
+
+
+
+\subsubsection{Search Strategy and Databases}
+A multi-platform search approach was utilized to retrieve a wide array of high-quality sources. The primary databases included:
+
+\begin{itemize}
+    \item Scopus: For retrieving peer-reviewed, impactful scientific articles.
+    \item Google Scholar: For broader academic and institutional literature.
+    \item GStreamer docs: For specifics on GStreamer development.
+\end{itemize}
+
+
+
+\subsubsection{Inclusion Criteria}
+To ensure the study is based on the relevant and current information, specific criteria were applied to filter the search results. Given the rapid pace of technological change, a focus was placed on recent publications. Where modern papers have referenced to older papers, I have include some as to say and show where certain numbers are coming from and how they have influenced results.
+
+\begin{table}[h]
+    \centering
+    \caption{Inclusion Criteria for Literature Review}\label{tab:inclusion_criteria}
+    \begin{tabular}{|c|p{8cm}|}
+        \hline
+        ID & Inclusion Criteria (IC) \\
+        \hline
+        IC1 & Publication Date: Between 2020-2026 \\
+        \hline
+        IC2 & Language: Written in English \\
+        \hline
+        IC3 & Document Type: Primarily "Article", "Conference Paper" or "Thesis"\\
+        \hline
+    \end{tabular}
+\end{table}
+
+
+\subsubsection{Search Queries and Refinement}
+
+Several digital tools as mentioned below were used for this paper. The main purpose of the usage was to enhance clarity, assisting in latex, and in general increase quality. Specifics include writing reference list in correct format. Structuring sentences and paragraphs. Checking for typos and grammatical errors.
+
+\begin{itemize}
+    \item OpenAI's ChatGPT: Employed as a helpful resource for LaTeX formatting suggestions, generating structured content (tables and lists), translating between Norwegian and English, and reviewing text for synonyms and restructuring ideas to ensure arguments were effectively communicated.
+    \item Google Gemini: Used for similar fields as ChatGPT, but also for general proofreading, and refining sentence structure and tone to maintain a high standard of academic writing.
+    \item Anthropic's Claude.ai for discussion and development of script syntax.
+    \item Visual Studio Code: was used as the main LaTeX editor because of its powerful extensions for LaTeX support, syntax highlighting, and version control integration.
+\end{itemize}
 
 \subsection{Outline of Structure}
 The remainder of this thesis is organized as follows:
