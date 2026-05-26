@@ -81,7 +81,7 @@ def build_pipeline():
             f'queue max-size-buffers=4 max-size-bytes=0 max-size-time=0 leaky=downstream name=decode_q{i} ! '
             f'nvh264dec ! cudadownload ! '
             f'videoconvert ! videoscale ! '
-            f'video/x-raw,format=NV12,width=1920,height=1080 ! '
+            f'video/x-raw,format=NV12,width=1920,height=1080,format=NV12 ! '
             f'nvh265enc zerolatency=true bitrate=8200 gop-size=10 '
             f'preset=p1 tune=ultra-low-latency rc-mode=cbr '
             f'repeat-sequence-header=true strict-gop=true aud=false '
