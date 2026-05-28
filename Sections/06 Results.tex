@@ -69,16 +69,16 @@ The codec configuration tests examine how codec choice, resolution, and encoding
     \centering
     \caption{Overview of codec configuration test setups.}
     \label{tab:codec_overview}
-    \begin{tabular}{@{}lllll@{}}
+    \begin{tabular}{@{}lcccl@{}}
         \toprule
         \textbf{Test} & \textbf{Codec} & \textbf{Resolution} & \textbf{Encoding} & \textbf{Purpose} \\
         \midrule
         C1 & H.264        & 1080p & CPU & Baseline \\
-        C2 & H.264        & 1080p & CPU & No transcoding \\
+        C2 & H.264        & 1080p & \-- & No transcoding \\
         C3 & H.264        & 720p  & CPU & Resolution effect \\
         C4 & H.264        & 1080p & GPU & GPU vs.\ CPU (H.264) \\
         C5 & H.265        & 1080p & CPU & H.265 vs.\ H.264 \\
-        C6 & H.265        & 1080p & CPU & No transcoding (H.265) \\
+        C6 & H.265        & 1080p & \-- & No transcoding (H.265) \\
         C7 & H.265        & 720p  & CPU & Resolution effect (H.265) \\
         C8 & H.265        & 1080p & GPU & GPU vs.\ CPU (H.265) \\
         C9 & MJPEG        & 1080p & CPU & MJPEG vs.\ H.264 \\
