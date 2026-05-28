@@ -1,6 +1,8 @@
 {
   "latex-workshop.latex.autoBuild.run": "onSave",
   "latex-workshop.view.pdf.viewer": "tab",
+  "latex-workshop.chktex.enabled": false,
+
 
   "latex-workshop.latex.tools": [
     {
@@ -42,6 +44,7 @@
     "Böhmer",
     "Brandenburger",
     "Brandernburger",
+    "BRISQUE",
     "Brunnström",
     "CBTC",
     "chktex",

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.3.16)  28 MAY 2026 17:22
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.3.16)  28 MAY 2026 20:27
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1107,7 +1107,14 @@ Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'british'.
- (out/main.aux)
+ (out/main.aux
+
+LaTeX Warning: Label `tab:transport_overview' multiply defined.
+
+
+LaTeX Warning: Label `tab:codec_overview' multiply defined.
+
+)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
@@ -1226,7 +1233,7 @@ Package gensymb Info: Using \textmu for \micro on input line 10.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 (././title.tex
-<./Images/NTNU_logo.png, id=423, 426.393pt x 110.5731pt>
+<./Images/NTNU_logo.png, id=390, 426.393pt x 110.5731pt>
 File: ./Images/NTNU_logo.png Graphic file (type png)
 <use ./Images/NTNU_logo.png>
 Package pdftex.def Info: ./Images/NTNU_logo.png  used on input line 9.
@@ -1241,11 +1248,11 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 LaTeX Font Info:    Trying to load font information for U+msb on input line 5.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [3] [4] [5])
+) [3] [4])
 \tf@toc=\write9
 \openout9 = `main.toc'.
 
- (out/main.lof)
+ (out/main.lof [5])
 \tf@lof=\write10
 \openout10 = `main.lof'.
 
@@ -1259,121 +1266,113 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has b
                    \relax 
 l.21 
       [1] [2] Excluding 'comment' comment. Excluding 'comment' comment. Excluding 'comment' comment. Excluding 'comment' comment.) [3] (./Sections/03 Theory.tex [4]
-<Images/Theory/ThreeMonitorSetup.png, id=718, 583.17876pt x 364.36125pt>
+<Images/Theory/ThreeMonitorSetup.png, id=676, 583.17876pt x 364.36125pt>
 File: Images/Theory/ThreeMonitorSetup.png Graphic file (type png)
 <use Images/Theory/ThreeMonitorSetup.png>
 Package pdftex.def Info: Images/Theory/ThreeMonitorSetup.png  used on input line 44.
 (pdftex.def)             Requested size: 170.71393pt x 106.65723pt.
  [5 <./Images/Theory/ThreeMonitorSetup.png>]
-<Images/Theory/SpatialRed.png, id=746, 288.07625pt x 293.095pt>
+<Images/Theory/SpatialRed.png, id=704, 288.07625pt x 293.095pt>
 File: Images/Theory/SpatialRed.png Graphic file (type png)
 <use Images/Theory/SpatialRed.png>
 Package pdftex.def Info: Images/Theory/SpatialRed.png  used on input line 68.
 (pdftex.def)             Requested size: 149.37956pt x 151.9854pt.
-<Images/Theory/TemperoalRed.png, id=749, 557.08125pt x 251.94125pt>
+<Images/Theory/TemperoalRed.png, id=707, 557.08125pt x 251.94125pt>
 File: Images/Theory/TemperoalRed.png Graphic file (type png)
 <use Images/Theory/TemperoalRed.png>
 Package pdftex.def Info: Images/Theory/TemperoalRed.png  used on input line 74.
 (pdftex.def)             Requested size: 256.0774pt x 115.81364pt.
  [6 <./Images/Theory/SpatialRed.png> <./Images/Theory/TemperoalRed.png>]
-<Images/Theory/264265HEVC.png, id=770, 1040.88875pt x 348.30125pt>
+<Images/Theory/264265HEVC.png, id=728, 1040.88875pt x 348.30125pt>
 File: Images/Theory/264265HEVC.png Graphic file (type png)
 <use Images/Theory/264265HEVC.png>
 Package pdftex.def Info: Images/Theory/264265HEVC.png  used on input line 93.
 (pdftex.def)             Requested size: 341.43436pt x 114.24886pt.
  [7 <./Images/Theory/264265HEVC.png>] [8] [9] [10] [11] [12] [13] [14] [15] [16]) [17] (./Sections/04 System Design.tex
-<Images/System/PhysicalSetup.png, id=965, 1195.46625pt x 633.36626pt>
+<Images/System/PhysicalSetup.png, id=923, 1195.46625pt x 633.36626pt>
 File: Images/System/PhysicalSetup.png Graphic file (type png)
 <use Images/System/PhysicalSetup.png>
 Package pdftex.def Info: Images/System/PhysicalSetup.png  used on input line 26.
 (pdftex.def)             Requested size: 384.10959pt x 203.5028pt.
-<Images/System/ApplicationAndTransportSetup.png, id=966, 1414.28375pt x 739.76375pt>
+<Images/System/ApplicationAndTransportSetup.png, id=924, 1414.28375pt x 739.76375pt>
 File: Images/System/ApplicationAndTransportSetup.png Graphic file (type png)
 <use Images/System/ApplicationAndTransportSetup.png>
 Package pdftex.def Info: Images/System/ApplicationAndTransportSetup.png  used on input line 31.
 (pdftex.def)             Requested size: 384.10959pt x 200.91281pt.
-<Images/System/SequenceDiagramCompCam.png, id=967, 996.72375pt x 709.65125pt>
+<Images/System/SequenceDiagramCompCam.png, id=925, 996.72375pt x 709.65125pt>
 File: Images/System/SequenceDiagramCompCam.png Graphic file (type png)
 <use Images/System/SequenceDiagramCompCam.png>
 Package pdftex.def Info: Images/System/SequenceDiagramCompCam.png  used on input line 36.
 (pdftex.def)             Requested size: 384.10959pt x 273.47104pt.
- (./Sections/Tables/IPSetup.tex) [18] [19 <./Images/System/PhysicalSetup.png> <./Images/System/ApplicationAndTransportSetup.png>]) [20 <./Images/System/SequenceDiagramCompCam.png>] [21] (./Sections/05 Methodology.tex (./Sections/Tables/TransportExpSchedule.tex) (./Sections/Tables/CodecExpSchedule.tex) [22]
-<Images/Test&Equipment/Road.png, id=996, 565.11125pt x 914.41624pt>
+ (./Sections/Tables/IPSetup.tex) [18] [19 <./Images/System/PhysicalSetup.png> <./Images/System/ApplicationAndTransportSetup.png>]) [20 <./Images/System/SequenceDiagramCompCam.png>] [21] (./Sections/05 Methodology.tex (./Sections/Tables/TransportExpSchedule.tex) [22] (./Sections/Tables/CodecExpSchedule.tex)
+<Images/Test&Equipment/LabSetup.jpg, id=953, 4015.0pt x 2260.445pt>
+File: Images/Test&Equipment/LabSetup.jpg Graphic file (type jpg)
+<use Images/Test&Equipment/LabSetup.jpg>
+Package pdftex.def Info: Images/Test&Equipment/LabSetup.jpg  used on input line 45.
+(pdftex.def)             Requested size: 384.10959pt x 216.22765pt.
+ [23]
+<Images/Test&Equipment/Road.png, id=960, 565.11125pt x 914.41624pt>
 File: Images/Test&Equipment/Road.png Graphic file (type png)
 <use Images/Test&Equipment/Road.png>
-Package pdftex.def Info: Images/Test&Equipment/Road.png  used on input line 46.
+Package pdftex.def Info: Images/Test&Equipment/Road.png  used on input line 54.
 (pdftex.def)             Requested size: 128.0387pt x 207.17192pt.
- [23]
-
-LaTeX Warning: Reference `XXX' on page 24 undefined on input line 51.
-
-(./Sections/Tables/CameraValues.tex) (./Sections/Tables/FixedValues.tex) [24 <./Images/Test&Equipment/Road.png>] (./Sections/Tables/TestEquipment.tex
-
-LaTeX Warning: Reference `fig:powersupply' on page 25 undefined on input line 20.
 
 
+LaTeX Warning: Reference `XXX' on page 24 undefined on input line 59.
+
+(./Sections/Tables/CameraValues.tex [24 <./Images/Test&Equipment/LabSetup.jpg> <./Images/Test&Equipment/Road.png>]) (./Sections/Tables/FixedValues.tex) (./Sections/Tables/TestEquipment.tex
 Overfull \hbox (17.20233pt too wide) in paragraph at lines 4--23
  [][] 
  []
 
-)
-<Images/Test&Equipment/Cam0Outside (Copy).jpg, id=1019, 4015.0pt x 2260.445pt>
+) [25]
+<Images/Test&Equipment/Cam0Outside (Copy).jpg, id=981, 4015.0pt x 2260.445pt>
 File: Images/Test&Equipment/Cam0Outside (Copy).jpg Graphic file (type jpg)
 <use Images/Test&Equipment/Cam0Outside (Copy).jpg>
-Package pdftex.def Info: Images/Test&Equipment/Cam0Outside (Copy).jpg  used on input line 75.
+Package pdftex.def Info: Images/Test&Equipment/Cam0Outside (Copy).jpg  used on input line 83.
 (pdftex.def)             Requested size: 136.57634pt x 76.8817pt.
-<Images/Test&Equipment/Cam1Outside (Copy).jpg, id=1020, 4015.0pt x 2260.445pt>
+<Images/Test&Equipment/Cam1Outside (Copy).jpg, id=982, 4015.0pt x 2260.445pt>
 File: Images/Test&Equipment/Cam1Outside (Copy).jpg Graphic file (type jpg)
 <use Images/Test&Equipment/Cam1Outside (Copy).jpg>
-Package pdftex.def Info: Images/Test&Equipment/Cam1Outside (Copy).jpg  used on input line 81.
+Package pdftex.def Info: Images/Test&Equipment/Cam1Outside (Copy).jpg  used on input line 89.
 (pdftex.def)             Requested size: 136.57634pt x 76.8817pt.
-<Images/Test&Equipment/Cam2Outside (Copy).jpg, id=1021, 4015.0pt x 2260.445pt>
+<Images/Test&Equipment/Cam2Outside (Copy).jpg, id=983, 4015.0pt x 2260.445pt>
 File: Images/Test&Equipment/Cam2Outside (Copy).jpg Graphic file (type jpg)
 <use Images/Test&Equipment/Cam2Outside (Copy).jpg>
-Package pdftex.def Info: Images/Test&Equipment/Cam2Outside (Copy).jpg  used on input line 87.
+Package pdftex.def Info: Images/Test&Equipment/Cam2Outside (Copy).jpg  used on input line 95.
 (pdftex.def)             Requested size: 136.57634pt x 76.8817pt.
-<Images/Test&Equipment/DashboardView.jpg, id=1022, 4015.0pt x 2260.445pt>
+<Images/Test&Equipment/DashboardView.jpg, id=984, 4015.0pt x 2260.445pt>
 File: Images/Test&Equipment/DashboardView.jpg Graphic file (type jpg)
 <use Images/Test&Equipment/DashboardView.jpg>
-Package pdftex.def Info: Images/Test&Equipment/DashboardView.jpg  used on input line 95.
+Package pdftex.def Info: Images/Test&Equipment/DashboardView.jpg  used on input line 103.
 (pdftex.def)             Requested size: 384.10959pt x 216.22765pt.
-<Images/Test&Equipment/Computers.jpg, id=1023, 4015.0pt x 2260.445pt>
+<Images/Test&Equipment/Computers.jpg, id=985, 4015.0pt x 2260.445pt>
 File: Images/Test&Equipment/Computers.jpg Graphic file (type jpg)
 <use Images/Test&Equipment/Computers.jpg>
-Package pdftex.def Info: Images/Test&Equipment/Computers.jpg  used on input line 101.
+Package pdftex.def Info: Images/Test&Equipment/Computers.jpg  used on input line 109.
 (pdftex.def)             Requested size: 384.10959pt x 216.22765pt.
- [25 <./Images/Test&Equipment/Cam0Outside (Copy).jpg> <./Images/Test&Equipment/Cam1Outside (Copy).jpg> <./Images/Test&Equipment/Cam2Outside (Copy).jpg>]
-<Images/Test&Equipment/CarSetup2.jpg, id=1029, 4015.0pt x 2260.445pt>
+<Images/Test&Equipment/CarSetup2.jpg, id=986, 4015.0pt x 2260.445pt>
 File: Images/Test&Equipment/CarSetup2.jpg Graphic file (type jpg)
 <use Images/Test&Equipment/CarSetup2.jpg>
-Package pdftex.def Info: Images/Test&Equipment/CarSetup2.jpg  used on input line 107.
+Package pdftex.def Info: Images/Test&Equipment/CarSetup2.jpg  used on input line 115.
 (pdftex.def)             Requested size: 384.10959pt x 216.22765pt.
-<Images/Test&Equipment/NetworkModem.jpg, id=1030, 2248.4pt x 3022.29124pt>
+ [26 <./Images/Test&Equipment/Cam0Outside (Copy).jpg> <./Images/Test&Equipment/Cam1Outside (Copy).jpg> <./Images/Test&Equipment/Cam2Outside (Copy).jpg> <./Images/Test&Equipment/DashboardView.jpg>]
+<Images/Test&Equipment/NetworkModem.jpg, id=992, 2248.4pt x 3022.29124pt>
 File: Images/Test&Equipment/NetworkModem.jpg Graphic file (type jpg)
 <use Images/Test&Equipment/NetworkModem.jpg>
-Package pdftex.def Info: Images/Test&Equipment/NetworkModem.jpg  used on input line 115.
+Package pdftex.def Info: Images/Test&Equipment/NetworkModem.jpg  used on input line 123.
 (pdftex.def)             Requested size: 149.37956pt x 200.79077pt.
-<Images/Test&Equipment/NetworkSwitch.jpg, id=1031, 4015.0pt x 2260.445pt>
+<Images/Test&Equipment/NetworkSwitch.jpg, id=993, 4015.0pt x 2260.445pt>
 File: Images/Test&Equipment/NetworkSwitch.jpg Graphic file (type jpg)
 <use Images/Test&Equipment/NetworkSwitch.jpg>
-Package pdftex.def Info: Images/Test&Equipment/NetworkSwitch.jpg  used on input line 122.
+Package pdftex.def Info: Images/Test&Equipment/NetworkSwitch.jpg  used on input line 130.
 (pdftex.def)             Requested size: 234.73653pt x 132.13719pt.
- [26 <./Images/Test&Equipment/DashboardView.jpg> <./Images/Test&Equipment/Computers.jpg>]
-<Images/Test&Equipment/LabSetup.jpg, id=1036, 4015.0pt x 2260.445pt>
-File: Images/Test&Equipment/LabSetup.jpg Graphic file (type jpg)
-<use Images/Test&Equipment/LabSetup.jpg>
-Package pdftex.def Info: Images/Test&Equipment/LabSetup.jpg  used on input line 138.
-(pdftex.def)             Requested size: 384.10959pt x 216.22765pt.
- [27 <./Images/Test&Equipment/CarSetup2.jpg> <./Images/Test&Equipment/NetworkModem.jpg> <./Images/Test&Equipment/NetworkSwitch.jpg>] Excluding 'comment' comment.) [28 <./Images/Test&Equipment/LabSetup.jpg>] [29] (./Sections/06 Results.tex
-
-LaTeX Warning: Reference `tab:' on page 30 undefined on input line 9.
-
-(./Sections/Tables/Results/T-send-latency.tex) (./Sections/Tables/Results/T-transit-latency.tex) (./Sections/Tables/Results/T-rec-latency.tex) [30] (./Sections/Tables/Results/T-end-latency.tex) (./Sections/Tables/Results/T-packetloss.tex) (./Sections/Tables/Results/T-throughput.tex) [31] (./Sections/Tables/Results/T-cpu.tex) (./Sections/Tables/Results/T-quality.tex) [32] (./Sections/Tables/Results/C-send-latency.tex) (./Sections/Tables/Results/C-transit-latency.tex) (./Sections/Tables/Results/C-rec-latency.tex) [33] (./Sections/Tables/Results/C-end-latency.tex) (./Sections/Tables/Results/C-packetloss.tex) (./Sections/Tables/Results/C-throughput.tex) [34] (./Sections/Tables/Results/C-cpu.tex) (./Sections/Tables/Results/C-quality.tex) [35]) [36] (./Sections/07 Discussion.tex) [37] (./Sections/20 Conclusion.tex) [38]
+ [27 <./Images/Test&Equipment/Computers.jpg> <./Images/Test&Equipment/CarSetup2.jpg>] Excluding 'comment' comment.) [28 <./Images/Test&Equipment/NetworkModem.jpg> <./Images/Test&Equipment/NetworkSwitch.jpg>] [29] (./Sections/06 Results.tex (./Sections/Tables/TransportExpSchedule.tex) (./Sections/Tables/CodecExpSchedule.tex) [30] (./Sections/Tables/Results/T-send-latency.tex) (./Sections/Tables/Results/C-send-latency.tex) (./Sections/Tables/Results/T-transit-latency.tex) (./Sections/Tables/Results/C-transit-latency.tex) [31] (./Sections/Tables/Results/T-rec-latency.tex) (./Sections/Tables/Results/C-rec-latency.tex) (./Sections/Tables/Results/T-end-latency.tex) (./Sections/Tables/Results/C-end-latency.tex) [32] (./Sections/Tables/Results/T-packetloss.tex) (./Sections/Tables/Results/C-packetloss.tex) (./Sections/Tables/Results/T-throughput.tex [33]) (./Sections/Tables/Results/C-throughput.tex) (./Sections/Tables/Results/T-cpu.tex) (./Sections/Tables/Results/C-cpu.tex) [34] (./Sections/Tables/Results/T-quality.tex) (./Sections/Tables/Results/C-quality.tex)) [35] (./Sections/07 Discussion.tex) [36] (./Sections/20 Conclusion.tex) [37]
 Overfull \hbox (0.21512pt too wide) in paragraph at lines 45--45
 []\OT1/cmr/m/n/10 Inzirillo Francesco et al. \OT1/cmr/m/it/10 D5.4 - Doc-u-ment-a-tion of use cases for Re-mote Driv-ing\OT1/cmr/m/n/10 . FP2R2DATO
  []
 
-[39]
+[38]
 Overfull \hbox (27.14835pt too wide) in paragraph at lines 45--45
 \OT1/cmss/m/n/10 Video[]Latency[]Measurement[]between[]a[]Robot[]and[]Its[]Remote[]Control[]Station[]Causes[]and[]Mitigation$[][]
  []
@@ -1388,17 +1387,17 @@ Overfull \hbox (27.14835pt too wide) in paragraph at lines 45--45
 \OT1/cmss/m/n/10 Video[]Latency[]Measurement[]between[]a[]Robot[]and[]Its[]Remote[]Control[]Station[]Causes[]and[]Mitigation$[][]
  []
 
-[40]
+[39]
 Overfull \hbox (12.4204pt too wide) in paragraph at lines 45--45
 []\OT1/cmr/m/n/10 GStreamer Pro-ject. \OT1/cmr/m/it/10 Sink Ele-ments\OT1/cmr/m/n/10 . 2024. \OT1/cmr/m/sc/10 url\OT1/cmr/m/n/10 : [][]$\OT1/cmss/m/n/10 https : / / gstreamer . freedesktop . org / documentation /
  []
 
-[41]
+[40]
 Overfull \hbox (3.58064pt too wide) in paragraph at lines 45--45
 []\OT1/cmr/m/n/10 Umme Sara, Morium Ak-ter and Mo-hammad Shorif Ud-din. `  Im-age Qual-ity As-sess-ment through
  []
 
-[42] (out/main.aux)
+[41] (out/main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
@@ -1407,25 +1406,28 @@ L3 programming layer <2024-01-22>
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 51A26B60E981CBC0E93E3A819D5AAE6E;15271.
+(rerunfilecheck)             Checksum: B2490CDE99238D15E0C612A7950C5FF7;13839.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 43170 strings out of 474222
- 899498 string characters out of 5748733
+ 43145 strings out of 474222
+ 899014 string characters out of 5748733
  1956975 words of memory out of 5000000
- 64399 multiletter control sequences out of 15000+600000
+ 64379 multiletter control sequences out of 15000+600000
  568621 words of font info for 73 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  117i,12n,121p,1178b,3016s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on out/main.pdf (50 pages, 39881023 bytes).
+Output written on out/main.pdf (49 pages, 39876127 bytes).
 PDF statistics:
- 1341 PDF objects out of 1440 (max. 8388607)
- 1215 compressed objects within 13 object streams
- 259 named destinations out of 1000 (max. 500000)
- 935 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1293 PDF objects out of 1440 (max. 8388607)
+ 1169 compressed objects within 12 object streams
+ 250 named destinations out of 1000 (max. 500000)
+ 871 words of extra memory for PDF output out of 10000 (max. 10000000)
 

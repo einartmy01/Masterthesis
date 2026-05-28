@@ -1,27 +1,20 @@
 \begin{table}[H]
     \centering
-    \caption{Codec Experiment Schedule}\label{tab:codec_schedule}
-    \begin{tabular}{|l|l|c|l|}
-    \hline
-    \textbf{Test} & \textbf{Codec} & \textbf{Resolution} & \textbf{Purpose} \\
-    \hline
-    C1 & H.264         & 1080p & Baseline \\
-    \hline
-    C2 & H.264 No transcoding  & 1080p & Effect of no Transcoding \\
-    \hline
-    C3 & H.264         & 720p  & Resolution effect on H.264 \\
-    \hline
-    C4 & H.264 w/ GPU  & 1080p & Compare GPU v CPU Encoding for H.264 \\
-    \hline
-    C5 & H.265         & 1080p & Compare H.264 v H.265 \\ 
-    \hline
-    C6 & H.265 No transcoding & 1080p & Effect of no Transcoding \\
-    \hline
-    C7 & H.265         & 720p  & Resolution effect on H.265 \\
-    \hline
-    C8 & H.265 w/ GPU  & 1080p & Compare GPU v CPU encoding for H.265 \\
-    \hline
-    C9 & MJPEG         & 1080p & Compare MJPEG v H.264 \\
-    \hline
+    \caption{Overview of codec configuration test setups.}
+    \label{tab:codec_overview}
+    \begin{tabular}{@{}lccccl@{}}
+        \toprule
+        \textbf{Test} & \textbf{Codec} & \textbf{Resolution} & \textbf{Transcoding} & \textbf{Encoding} & \textbf{Purpose} \\
+        \midrule
+        C1 & H.264        & 1080p & Yes & CPU & Baseline \\
+        C2 & H.264        & 1080p & No  & \-- & No transcoding \\
+        C3 & H.264        & 720p  & Yes & CPU & Resolution effect \\
+        C4 & H.264        & 1080p & Yes & GPU & Compare GPU and CPU\\
+        C5 & H.265        & 1080p & Yes & CPU & Compare H.265 and H.264 \\
+        C6 & H.265        & 1080p & No  & \-- & No transcoding \\
+        C7 & H.265        & 720p  & Yes & CPU & Resolution effect \\
+        C8 & H.265        & 1080p & Yes & GPU & Compare GPU and CPU  \\
+        C9 & MJPEG        & 1080p & Yes & CPU & Compare MJPEG and H.264 \\
+        \bottomrule
     \end{tabular}
 \end{table}

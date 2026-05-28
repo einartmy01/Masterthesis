@@ -1,6 +1,8 @@
 \begin{table}[H]
     \centering
     \caption{End-to-end latency statistics for codec configuration experiment}\label{tab:end_codec_latency}
+    \begin{minipage}{\linewidth}
+    \centering
     \begin{tabular}{|l|l|c|c|c|c|}
     \hline
     \textbf{Test} & \textbf{Equipment} & \textbf{Mean [ms]} & \textbf{Min [ms]} & \textbf{Max [ms]} & \textbf{95p [ms]} \\
@@ -24,6 +26,7 @@
     C9 & MJPEG & 193.143 & 7.669 & 1491.819 & 521.959  \\
     \hline
     \end{tabular}
-    \vspace{2pt}
-    {\footnotesize * Transit latency for C4 is substituted with the measured transit latency of C8, which had the nearest matching throughput (26.187 vs.\ 26.267~Mbps).}
+    \vspace{3pt}
+    \par\noindent{\footnotesize * Transit latency for C4 is substituted with the measured transit latency of C8, which had the nearest matching throughput (26.187 vs.\ 26.267~Mbps).}
+    \end{minipage}
 \end{table}

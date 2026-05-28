@@ -17,7 +17,6 @@ The experimental design follows the One Factor At a Time (OFAT) strategy. This m
 The factors tested in this thesis are codec, resolution, transport protocol, encryption, bandwidth condition and encoding method. While GStreamer allows a large number of additional parameters to be adjusted, such as buffer sizes, queue configurations, bitrate control modes and keyframe intervals, expanding the test matrix further was not feasible within the time constraints of a single master thesis. The chosen parameters are considered sufficient to identify the most significant performance differences relevant to the use case.
 
 \input{Sections/Tables/TransportExpSchedule.tex}
-\input{Sections/Tables/CodecExpSchedule.tex}
 
 \begin{itemize}
     \item \textbf{T2}: As described in Chapter~\ref{chap:systemdesign} the pipeline used for most of the tests are transcoded. For this reason, a test with no transcoding, just passthrough of the video stream was deemed useful to compare how much effect the transcoding has on the video, especially compression and latency. 
@@ -25,7 +24,9 @@ The factors tested in this thesis are codec, resolution, transport protocol, enc
     \item \textbf{T4}: To decide which of the transport protocols most suitable for a RTO system, a test with comparison is needed.
     \item \textbf{T5/T6}: To simulate real life conditions with unstable and unpredictable bandwidth along train tracks. Evaluating both transport under bandwidth limitations is necessary to get a fuller picture.
 \end{itemize}
- 
+
+\input{Sections/Tables/CodecExpSchedule.tex}
+
 \begin{itemize}
     \item \textbf{C2}: A no transcoding run will be very important especially when looking at the effect of which encoder to use. 
     \item \textbf{C3}: When operating a remote vehicle through a video stream, quality is important. For that reason i have added a 720p encoding to the experiment. As it can decrease workload of encoder and maybe keep quality better and stable.
@@ -38,9 +39,16 @@ The factors tested in this thesis are codec, resolution, transport protocol, enc
 \end{itemize}
  
 For test T1-T6, a lab experiment was deemed adequate as the tested scenarios are not as effected by real world test, aspect as moving modem or moving video have little effect on the transport layer and the comparison will still hold for lab environment.
-The outcomes measured for each configuration are end-to-end latency, CPU usage and visual quality. Packet loss and throughput are also recorded for configurations that involve simulated poor network conditions. All configurations are described in the following section.
+The outcomes measured for each configuration are end-to-end latency, CPU usage and visual quality. Packet loss and throughput are also recorded for configurations that involve simulated poor network conditions. All configurations are described in the following section. 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{Images/Test&Equipment/LabSetup.jpg}
+    \caption{Setup for lab experiment tests}
+    \label{fig:labsetup}
+\end{figure}
+
 % Describe the experimental design, variables, and planning.
-As this experiment was design to mimic a remote train operation, but with a car as replacement, picking route for test was crucial. The route had to include surroundings similar as a tramway track. The route as shown at Figure~\ref{fig:road} display the route that every test was performed on. The road stretched from Klæbuveien 125, 7031 Trondheim to the roundabout at Klæbuveien 128 and back again. This specific route was chosen for a set of factors. It provides dynamic surrounding containing of open view, close trees and building. It is a low traffic road, allowing stable speed crucial to measure performance under movement and open view for the surrounding. The road is very flat //Possible photo// and straight forward, as was evaluated to mimic most of train tracks and views from a locomotive. It also provided 
+As this experiment was design to mimic a remote train operation, but with a car as replacement, picking route for the experiment was crucial. The route had to include surroundings similar as a tramway track. The route as shown at Figure~\ref{fig:road} display the route that every test was performed on. The road stretched from Klæbuveien 125, 7031 Trondheim to the roundabout at Klæbuveien 128 and back again. This specific route was chosen for a set of factors. It provides dynamic surrounding containing of open view, close trees and building. It is a low traffic road, allowing stable speed crucial to measure performance under movement and open view for the surrounding. The road is very flat //Possible photo// and straight forward, as was evaluated to mimic most of train tracks and views from a locomotive. It also provided 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.3\textwidth]{Images/Test&Equipment/Road.png}
@@ -133,12 +141,7 @@ All the the test equipment is listed below in Table~\ref{tab:test_equipment}. Th
 %     \caption{Power supply for experiment}
 %     \label{fig:powersupply}
 % \end{figure}
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.9\textwidth]{Images/Test&Equipment/LabSetup.jpg}
-    \caption{Setup for lab experiment tests}
-    \label{fig:labsetup}
-\end{figure}
+
 
 % \begin{figure}[H]
 %     \centering

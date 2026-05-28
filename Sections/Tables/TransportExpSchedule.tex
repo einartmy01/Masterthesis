@@ -1,21 +1,17 @@
 \begin{table}[H]
     \centering
-    \caption{Transport Experiment Schedule}\label{tab:transport_schedule}
-    \begin{tabular}{|l|l|c|l|}
-    \hline
-    \textbf{Test} & \textbf{Transport} & \textbf{Bandwidth} & \textbf{Purpose} \\
-    \hline
-    T1 & UDP \-- RTP           & Unlimited & Baseline \\
-    \hline
-    T2 & UDP \-- RTP No Transcode & Unlimited & Effect of no Transcoding\\
-    \hline
-    T3 & UDP \-- SRTP          & Unlimited & Effect of Encryption  \\
-    \hline
-    T4 & TCP \-- RTP           & Unlimited & Compare TCP v UDP \\
-    \hline
-    T5 & UDP \-- RTP           & Poor      & Bandwidth effect on UDP \\
-    \hline
-    T6 & TCP \-- RTP           & Poor      & Bandwidth effect on TCP \\
-    \hline
+    \caption{Overview of transport protocol test setups.}
+    \label{tab:transport_overview}
+    \begin{tabular}{@{}lccccl@{}}
+        \toprule
+        \textbf{Test} & \textbf{Protocol} & \textbf{Payload} & \textbf{Transcoding} & \textbf{Bandwidth} & \textbf{Purpose} \\
+        \midrule
+        T1 & UDP & RTP  & Yes & Unlimited & Baseline \\
+        T2 & UDP & RTP  & No  & Unlimited & No-transcoding effect \\
+        T3 & UDP & SRTP & Yes & Unlimited & Encryption effect \\
+        T4 & TCP & RTP  & Yes & Unlimited & Compare TCP and UDP \\
+        T5 & UDP & RTP  & Yes & Poor      & Bandwidth effect on UDP \\
+        T6 & TCP & RTP  & Yes & Poor      & Bandwidth effect on TCP \\
+        \bottomrule
     \end{tabular}
 \end{table}

@@ -2,147 +2,89 @@
 
 This chapter presents the experimental results obtained from two groups of experiments. The transport protocol tests (T1-T6) and the codec configuration tests (C1-C9). Each group is evaluated across the five metrics system latency, packet loss rate, throughput, CPU usage on the sender, and visual quality. Interpretation and comparison are reserved for Chapter~\ref{sec:discussion}.
 
-Test C4 (H.264 GPU encoding) is missing transit logger data due to a logging error during the experiment. Transit latency for test C4 is therefore missing, but in result of end-to-end latency result from test XX, as it match throughput and should therefore have very similar transit latency, is used to create a comparable result.
+Transit latency data for C4 is unavailable due to a logging error during that test run. For the end-to-end result, the transit latency of C8 is used as a substitute for C4, as C8 had the closest matching throughput at 26.187~Mbps compared to C4's 26.267~Mbps, a difference of only 0.08~Mbps. Both tests also share GPU-accelerated encoding, making their network load profiles directly comparable. The C4 end-to-end result is marked with an asterisk (*) in Table~\ref{tab:end_codec_latency}.
 
-\subsection{Transport Protocol Tests (T1-T6)}\label{subsec:results_transport}
+For the unlimited bandwidth, a test of network was performed. The sender computer had a 112 Mbps Upload speed and the receiver had 148~Mbps Download speed. During the poor test, a value of 18 Mbps constrain on the Upload speed was used.
 
-The transport protocol tests examine how the choice of transport layer protocol, encryption, and available bandwidth affect streaming performance. Table~\ref{tab:} provides an overview of all six transport test configurations.
+The transport protocol tests examine how the choice of transport layer protocol, encryption, and available bandwidth affect streaming performance. Table~\ref{tab:transport_overview} provides an overview of all six transport test configurations. 
 
-\subsubsection{System Latency}\label{subsubsec:transport_latency}
+\input{Sections/Tables/TransportExpSchedule.tex}
 
-The latency result is split up into multiple steps. Sender latency, Transit latency and lastly Receiver latency. Combined they give out a full end-to-end latency. All the latencies of the system was measured using timestamps at the sender and receiver. T1 served as the baseline configuration. Table~\ref{tab:send_transport_latency} summarises the mean, minimum, maximum and 95\% percentile of latency in sender for each transport test.
+The codec configuration tests examine how codec choice, resolution, and encoding hardware affect streaming performance. All tests used UDP - RTP transport with unlimited bandwidth, isolating codec-related variables from transport effects. Also take a look at Table~\ref{tab:camera_stream_config} for set values of the cameras that entered the computer and was passed along for the \textit{No transcoding} tests. Table~\ref{tab:codec_overview} provides an overview of all nine configurations. C1 served as the baseline configuration. 
 
+\input{Sections/Tables/CodecExpSchedule.tex}
+
+
+\subsection{System Latency}\label{subsec:system_latency}
+
+The latency result is split up into multiple steps. Sender latency, Transit latency and lastly Receiver latency. Combined they give out a full end-to-end latency. All the latencies of the system was measured using timestamps at the sender and receiver. T1 and C1 served as the baseline configurations. Table~\ref{tab:send_transport_latency} summarises the mean, minimum, maximum and 95\% percentile of latency in sender for each transport test.
+
+The no-transcode configurations (C2 and C6) have no sender pipeline stage and are therefore reported as N/A in the sender table. Table~\ref{tab:send_codec_latency} summarises the mean, minimum, maximum and 95\% percentile of latency in the sender pipeline for each codec test.
+
+\textbf{Sender pipeline:}
 %Image of just sender pipeline
 \input{Sections/Tables/Results/T-send-latency.tex}
+
+\input{Sections/Tables/Results/C-send-latency.tex}
+
+\textbf{Transit:}
+
+Before the experiment a clock offset error check was completed. For the transport protocol test it resulted in a uncertainty of total 7 ms. Which is major effect on the results. Because of this clock offset, all the UDP test resulted in a negative transit latency. For this reason, the values has been adjusted so the lowest transit latency has been added to all the measurements. Making minimum 0~ms and making max, measured maximum + distance between 0 and measured minimum. The real results for min, and the shift of entire transit measurement was, T1: -4.48, T2: -2.06, T3: -5.26, T5: -2.17. Even with the clock offset, these test was performed on same offset, which mean that the results are comparable. For a more realistic numbers for transit latency for UDP with RTP see Table~\ref{tab:transit_codec_latency} as all the codec tests used UDP and RTP.
 
 %Image of transit
 \input{Sections/Tables/Results/T-transit-latency.tex}
 
+\input{Sections/Tables/Results/C-transit-latency.tex}
+
+\textbf{Receiver pipeline:}
+
 %Image of just receiver pipeline
 \input{Sections/Tables/Results/T-rec-latency.tex}
 
+\input{Sections/Tables/Results/C-rec-latency.tex}
+
+\textbf{End-to-End:}
 %Image of a combined end to end latency
 \input{Sections/Tables/Results/T-end-latency.tex}
 
+\input{Sections/Tables/Results/C-end-latency.tex}
 
 
-% TODO: Insert box plot or bar chart comparing latency across T1--T6.
-% \begin{figure}[ht]
-%     \centering
-%     \includegraphics[width=0.85\textwidth]{figures/transport_latency_boxplot.pdf}
-%     \caption{Distribution of end-to-end latency for transport protocol tests T1--T6.}
-%     \label{fig:transport_latency_boxplot}
-% \end{figure}
+\subsection{Packet Loss Rate}\label{subsec:packet_loss}
 
-\subsubsection{Packet Loss Rate}\label{subsubsec:transport_packetloss}
-
-Packet loss was calculated from RTP sequence numbers by logging ever packet sent and every packet received and matching the loggings and calculate how many packets the sender sent that was not received. For the entire experiment no excess packages was received that was not sent, symbolising a stable receiver logging.
+Packet loss was calculated from RTP sequence numbers by logging every packet sent and every packet received, then matching the logs to determine how many packets sent by the sender were not received. For the entire experiment no excess packets were received that were not sent, indicating stable receiver logging. Packet loss data for C4 is unavailable due to the same logging error that affected transit data.
 
 \input{Sections/Tables/Results/T-packetloss.tex}
 
-\subsubsection{Throughput}\label{subsubsec:transport_throughput}
+\input{Sections/Tables/Results/C-packetloss.tex}
 
-Throughput was logged at the sender side and reflects the volume of encoded video data leaving the pipeline per second. Under unlimited bandwidth conditions (T1--T4), throughput reflects the natural output of the encoder with a bandwidth of "XXX". Under the poor bandwidth condition (T5 and T6), throughput is additionally constrained by the available link capacity. The output measured is included the Tailscale wrapping adding a small percentage to the packets size, this is adjusted for in the constraint tests (T5 and T6) by adding a buffer at the constraint.
+
+\subsection{Throughput}\label{subsec:results_throughput}
+
+Throughput was logged at the sender side and reflects the volume of encoded video data leaving the pipeline per second. Under unlimited bandwidth conditions (T1-T4), throughput reflects the natural output of the encoder with a bandwidth of over 100~Mbps. Under the poor bandwidth condition (T5 and T6), throughput is additionally constrained by the available capacity of 18~Mbps. The output measured is included the Tailscale wrapping adding a small percentage to the packets size, this is adjusted for in the constraint tests (T5 and T6) by adding a buffer at the constraint.
 
 \input{Sections/Tables/Results/T-throughput.tex}
 
+\input{Sections/Tables/Results/C-throughput.tex}
 
-\subsubsection{CPU Usage on Sender}\label{subsubsec:transport_cpu}
 
-CPU usage was sampled at regular intervals during each test using the \texttt{sar} utility from the \texttt{sysstat} package. The values reported represent the average user-space CPU load across all cores during the active streaming period. Differences between T1 and T3 isolate the computational overhead of SRTP encryption.
+\subsection{CPU Usage on Sender}\label{subsec:cpu_usage}
+
+CPU usage was sampled at regular intervals during each test using the \texttt{sar} utility from the \texttt{sysstat} package. The values reported represent the total CPU load across all cores during the active streaming period. 
+The no-transcode configurations C2 and C6 have no encoding step and are therefore reported as N/A.
 
 \input{Sections/Tables/Results/T-cpu.tex}
 
-\subsubsection{Visual Quality}\label{subsubsec:transport_quality}
+\input{Sections/Tables/Results/C-cpu.tex}
 
-Visual quality was assessed on captured frames using the BRISQUE no-reference image quality metric. Lower BRISQUE scores indicate better perceptual quality. Under poor bandwidth conditions (T5 and T6), compression artefacts and frame losses are expected to increase BRISQUE scores relative to the unlimited bandwidth baseline.
+
+\subsection{Visual Quality}\label{subsec:visual_quality}
+
+Visual quality was assessed on captured frames using the BRISQUE no-reference image quality metric. Lower BRISQUE scores indicate better perceptual quality. Individual measurements where done per camera and the scores are aggregated across all three cameras per test.
 
 \input{Sections/Tables/Results/T-quality.tex}
 
-
-\subsection{Codec Configuration Tests (C1--C9)}
-\label{sec:results_codec}
-
-The codec configuration tests examine how codec choice, resolution, and encoding hardware affect streaming performance. All tests used UDP--RTP transport with unlimited bandwidth, isolating codec-related variables from transport effects. Table~\ref{tab:codec_overview} provides an overview of all nine configurations. C1 served as the baseline configuration.
-
-\begin{table}[ht]
-    \centering
-    \caption{Overview of codec configuration test setups.}
-    \label{tab:codec_overview}
-    \begin{tabular}{@{}lcccl@{}}
-        \toprule
-        \textbf{Test} & \textbf{Codec} & \textbf{Resolution} & \textbf{Encoding} & \textbf{Purpose} \\
-        \midrule
-        C1 & H.264        & 1080p & CPU & Baseline \\
-        C2 & H.264        & 1080p & \-- & No transcoding \\
-        C3 & H.264        & 720p  & CPU & Resolution effect \\
-        C4 & H.264        & 1080p & GPU & GPU vs.\ CPU (H.264) \\
-        C5 & H.265        & 1080p & CPU & H.265 vs.\ H.264 \\
-        C6 & H.265        & 1080p & \-- & No transcoding (H.265) \\
-        C7 & H.265        & 720p  & CPU & Resolution effect (H.265) \\
-        C8 & H.265        & 1080p & GPU & GPU vs.\ CPU (H.265) \\
-        C9 & MJPEG        & 1080p & CPU & MJPEG vs.\ H.264 \\
-        \bottomrule
-    \end{tabular}
-\end{table}
-
-% -- 5.2.1 --------------------------------------------------
-\subsubsection{System Latency}\label{subsubsec:codec_latency}
-
-The latency result is split up into multiple steps. Sender latency, Transit latency and lastly Receiver latency. Combined they give out a full end-to-end latency. All latencies were measured using timestamps at the sender and receiver. C1 served as the baseline configuration. The no-transcode configurations (C2 and C6) have no sender pipeline stage and are therefore reported as N/A in the sender table. Transit latency data for C4 is unavailable due to a logging error during that test run. For the end-to-end result, the transit latency of C8 is used as a substitute for C4, as C8 had the closest matching throughput at 26.187~Mbps compared to C4's 26.267~Mbps, a difference of only 0.08~Mbps. Both tests also share GPU-accelerated encoding, making their network load profiles directly comparable. The C4 end-to-end result is marked with an asterisk (*) in Table~\ref{tab:end_codec_latency}. Table~\ref{tab:send_codec_latency} summarises the mean, minimum, maximum and 95\% percentile of latency in the sender pipeline for each codec test.
-
-\input{Sections/Tables/Results/C-send-latency.tex}
-
-\input{Sections/Tables/Results/C-transit-latency.tex}
-
-\input{Sections/Tables/Results/C-rec-latency.tex}
-
-\input{Sections/Tables/Results/C-end-latency.tex}
-
-\subsubsection{Packet Loss Rate}\label{subsubsec:codec_packetloss}
-
-Packet loss was calculated from RTP sequence numbers by logging every packet sent and every packet received and matching the logs to calculate how many packets sent by the sender were not received. Packet loss data for C4 is unavailable due to the same logging error that affected transit data.
-
-\input{Sections/Tables/Results/C-packetloss.tex}
-
-\subsubsection{Throughput}\label{subsubsec:codec_throughput}
-
-Throughput was logged at the sender side and reflects the volume of encoded video data leaving the pipeline per second. Codec choice had a substantial impact on throughput. MJPEG (C9) produced significantly higher throughput due to intra-frame-only encoding, while H.265 CPU configurations (C5, C7) produced lower throughput driven by the higher compression ratio of HEVC.
-
-\input{Sections/Tables/Results/C-throughput.tex}
-
-\subsubsection{CPU Usage on Sender}\label{subsubsec:codec_cpu}
-
-CPU usage was sampled at regular intervals during each test using the \texttt{sar} utility from the \texttt{sysstat} package. The values reported represent the average user-space CPU load across all cores during the active streaming period. The no-transcode configurations (C2, C6) have no encoding step and are therefore reported as N/A.
-
-\input{Sections/Tables/Results/C-cpu.tex}
-
-\subsubsection{Visual Quality}\label{subsubsec:codec_quality}
-
-Visual quality was assessed on captured frames using the BRISQUE no-reference image quality metric. Lower BRISQUE scores indicate better perceptual quality. Scores are aggregated across all three cameras per test.
-
 \input{Sections/Tables/Results/C-quality.tex}
 
-
-\subsection{Summary of Key Results}\label{sec:results_summary}
-
-Table~\ref{tab:results_summary} consolidates the best-performing configuration for each metric across both test groups. Configurations are ranked by each metric independently; no single configuration dominates across all dimensions.
-
-\begin{table}[ht]
-    \centering
-    \caption{Summary of best-performing configurations per metric.}
-    \label{tab:results_summary}
-    \begin{tabular}{@{}lll@{}}
-        \toprule
-        \textbf{Metric} & \textbf{Best (Transport)} & \textbf{Best (Codec)} \\
-        \midrule
-        End-to-end latency  & -- & -- \\
-        Packet loss rate    & -- & -- \\
-        Actual throughput   & -- & -- \\
-        CPU usage (sender)  & -- & -- \\
-        Visual quality      & -- & -- \\
-        \bottomrule
-    \end{tabular}
-\end{table}
 
 Interpretation of these findings, including their implications for remote train operation and comparison against the 3GPP TS~22.289 latency threshold, is provided in Chapter~\ref{sec:discussion}.
