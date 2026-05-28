@@ -16,5 +16,2612 @@
   {}
 \endgroup
 
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global}
+    \entry{orr2024}{report}{}
+      \name{author}{2}{}{%
+        {{hash=45eb0ed253b261cc43ee22cc2dfc947d}{%
+           family={Rail},
+           familyi={R\bibinitperiod},
+           given={Office},
+           giveni={O\bibinitperiod},
+           prefix={of},
+           prefixi={o\bibinitperiod}}}%
+        {{hash=d11aed2ff81f20a2e2b7e0cf06ee1a37}{%
+           family={Road},
+           familyi={R\bibinitperiod}}}%
+      }
+      \list{institution}{2}{%
+        {Office of Rail}%
+        {Road}%
+      }
+      \strng{namehash}{4f12bc02fc1befd6ce4fcec124b4479e}
+      \strng{fullhash}{4f12bc02fc1befd6ce4fcec124b4479e}
+      \strng{bibnamehash}{4f12bc02fc1befd6ce4fcec124b4479e}
+      \strng{authorbibnamehash}{4f12bc02fc1befd6ce4fcec124b4479e}
+      \strng{authornamehash}{4f12bc02fc1befd6ce4fcec124b4479e}
+      \strng{authorfullhash}{4f12bc02fc1befd6ce4fcec124b4479e}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Railway Safety Principles and Factors for Safe Operation of {GoA4} {UTO}}
+      \field{type}{techreport}
+      \field{urlday}{20}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.orr.gov.uk/sites/default/files/2024-07/railway-safety-principles-factors-for-safe-operation-of-goa4-uto.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.orr.gov.uk/sites/default/files/2024-07/railway-safety-principles-factors-for-safe-operation-of-goa4-uto.pdf
+      \endverb
+    \endentry
+    \entry{europesrail2025_d3}{report}{}
+      \name{author}{1}{}{%
+        {{hash=cf26edcee75c089db47e7b4b4a491eab}{%
+           family={WP3},
+           familyi={W\bibinitperiod},
+           given={Europe's\bibnamedelimb Rail\bibnamedelima FP6},
+           giveni={E\bibinitperiod\bibinitdelim R\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Europe's Rail}%
+      }
+      \strng{namehash}{cf26edcee75c089db47e7b4b4a491eab}
+      \strng{fullhash}{cf26edcee75c089db47e7b4b4a491eab}
+      \strng{bibnamehash}{cf26edcee75c089db47e7b4b4a491eab}
+      \strng{authorbibnamehash}{cf26edcee75c089db47e7b4b4a491eab}
+      \strng{authornamehash}{cf26edcee75c089db47e7b4b4a491eab}
+      \strng{authorfullhash}{cf26edcee75c089db47e7b4b4a491eab}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{D3.1 -- Use Cases and Scenarios for {ATO} in Different {GoA} Demos for {G1} Regional Lines}
+      \field{type}{techreport}
+      \field{urlday}{20}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://rail-research.europa.eu/rail-projects/outputs/d3-1-uc-and-scenarios-for-ato-in-different-goa-demos-for-g1-regional-lines/
+      \endverb
+      \verb{url}
+      \verb https://rail-research.europa.eu/rail-projects/outputs/d3-1-uc-and-scenarios-for-ato-in-different-goa-demos-for-g1-regional-lines/
+      \endverb
+    \endentry
+    \entry{mejias2024}{report}{}
+      \name{author}{6}{}{%
+        {{hash=826d33cd0a14c7180865f96fc30aacf1}{%
+           family={Mejías},
+           familyi={M\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod}}}%
+        {{hash=260a31583a6369af1f43a17fbcfc876e}{%
+           family={Fernández},
+           familyi={F\bibinitperiod},
+           given={Z.},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=0b2fa02ee6b0b2300a4742d14ad4613c}{%
+           family={Viola},
+           familyi={V\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+        {{hash=46081ac0f9584a56165185e9be2ee4f4}{%
+           family={Aramburu},
+           familyi={A\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=6cba38aaf5431b875a3c0fbd45b9fcf2}{%
+           family={Lopez},
+           familyi={L\bibinitperiod},
+           given={I.},
+           giveni={I\bibinitperiod}}}%
+        {{hash=e5091ff4b22fd906359d4eb468c7dbe8}{%
+           family={Diaz},
+           familyi={D\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{73f293b416c504fd7a0bb6bf1bc77344}
+      \strng{fullhash}{5e2d5183a1f9a0d478750fbfd8a23475}
+      \strng{bibnamehash}{73f293b416c504fd7a0bb6bf1bc77344}
+      \strng{authorbibnamehash}{73f293b416c504fd7a0bb6bf1bc77344}
+      \strng{authornamehash}{73f293b416c504fd7a0bb6bf1bc77344}
+      \strng{authorfullhash}{5e2d5183a1f9a0d478750fbfd8a23475}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Towards Railways Remote Driving: Analysis of Video Streaming Latency and Adaptive Rate Control}
+      \field{urlday}{6}
+      \field{urlmonth}{12}
+      \field{urlyear}{2025}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://ieeexplore.ieee.org/document/10597107
+      \endverb
+      \verb{url}
+      \verb https://ieeexplore.ieee.org/document/10597107
+      \endverb
+    \endentry
+    \entry{myhrvold2025}{thesis}{}
+      \name{author}{1}{}{%
+        {{hash=92da55e337e228f296b39883e5363631}{%
+           family={Myhrvold},
+           familyi={M\bibinitperiod},
+           given={Einar\bibnamedelima Thingstad},
+           giveni={E\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {NTNU}%
+      }
+      \strng{namehash}{92da55e337e228f296b39883e5363631}
+      \strng{fullhash}{92da55e337e228f296b39883e5363631}
+      \strng{bibnamehash}{92da55e337e228f296b39883e5363631}
+      \strng{authorbibnamehash}{92da55e337e228f296b39883e5363631}
+      \strng{authornamehash}{92da55e337e228f296b39883e5363631}
+      \strng{authorfullhash}{92da55e337e228f296b39883e5363631}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Latency for Remote Control in ATO a Scoping Review}
+      \field{type}{phdthesis}
+      \field{year}{2025}
+    \endentry
+    \entry{fp2r2dato2023d5_4}{report}{}
+      \name{author}{1}{}{%
+        {{hash=768a361049aefb367d9a989af2448510}{%
+           family={al.},
+           familyi={a\bibinitperiod},
+           given={Inzirillo\bibnamedelima Francesco},
+           giveni={I\bibinitperiod\bibinitdelim F\bibinitperiod},
+           prefix={et},
+           prefixi={e\bibinitperiod}}}%
+      }
+      \list{institution}{2}{%
+        {FP2R2DATO}%
+        {Europe's Rail}%
+      }
+      \strng{namehash}{768a361049aefb367d9a989af2448510}
+      \strng{fullhash}{768a361049aefb367d9a989af2448510}
+      \strng{bibnamehash}{768a361049aefb367d9a989af2448510}
+      \strng{authorbibnamehash}{768a361049aefb367d9a989af2448510}
+      \strng{authornamehash}{768a361049aefb367d9a989af2448510}
+      \strng{authorfullhash}{768a361049aefb367d9a989af2448510}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{D5.4 - Documentation of use cases for Remote Driving}
+      \field{urlday}{8}
+      \field{urlmonth}{12}
+      \field{urlyear}{2025}
+      \field{year}{2023}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://rail-research.europa.eu/wp-content/uploads/2025/07/D5.4-%E2%80%93-Documentation-of-use-cases-for-Remote-Driving.pdf
+      \endverb
+      \verb{url}
+      \verb https://rail-research.europa.eu/wp-content/uploads/2025/07/D5.4-%E2%80%93-Documentation-of-use-cases-for-Remote-Driving.pdf
+      \endverb
+    \endentry
+    \entry{brandenburger2023}{report}{}
+      \name{author}{3}{}{%
+        {{hash=9c8c650c0c317ba42080dc0d88101b41}{%
+           family={Brandenburger},
+           familyi={B\bibinitperiod},
+           given={Niels},
+           giveni={N\bibinitperiod}}}%
+        {{hash=8719edb5ef604d1aaeffa05902a1872c}{%
+           family={Strauß},
+           familyi={S\bibinitperiod},
+           given={Friedrich\bibnamedelima Maximilian},
+           giveni={F\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=081ca7d691f30ccf1096e20e9ac3812e}{%
+           family={Naumann},
+           familyi={N\bibinitperiod},
+           given={Anja},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {DLR}%
+      }
+      \strng{namehash}{a6ab8d587636550d84bac7c72d6337b5}
+      \strng{fullhash}{a012e850a5b727d6e5e9eb28fb1b7a20}
+      \strng{bibnamehash}{a012e850a5b727d6e5e9eb28fb1b7a20}
+      \strng{authorbibnamehash}{a012e850a5b727d6e5e9eb28fb1b7a20}
+      \strng{authornamehash}{a6ab8d587636550d84bac7c72d6337b5}
+      \strng{authorfullhash}{a012e850a5b727d6e5e9eb28fb1b7a20}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Effects of Video Quality on Perception and Reaction Time in Video-based Remote Train Control}
+      \field{urlday}{5}
+      \field{urlmonth}{12}
+      \field{urlyear}{2025}
+      \field{year}{2023}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://elib.dlr.de/194929/1/PresentationHFES2023_DLR.pdf
+      \endverb
+      \verb{url}
+      \verb https://elib.dlr.de/194929/1/PresentationHFES2023_DLR.pdf
+      \endverb
+    \endentry
+    \entry{neumeier2019}{article}{}
+      \name{author}{6}{}{%
+        {{hash=58d8c47f49b37c3bd5b9dfc6bd356fbc}{%
+           family={Neumeier},
+           familyi={N\bibinitperiod},
+           given={Stefan},
+           giveni={S\bibinitperiod}}}%
+        {{hash=8ba1eb81dea1e9c59806cc3d9b60d2e2}{%
+           family={Wintersberger},
+           familyi={W\bibinitperiod},
+           given={Philipp},
+           giveni={P\bibinitperiod}}}%
+        {{hash=5d326ec3af4b243e89d4e507dff80c60}{%
+           family={Frison},
+           familyi={F\bibinitperiod},
+           given={Anna-Katharina},
+           giveni={A\bibinithyphendelim K\bibinitperiod}}}%
+        {{hash=1168bd2f9b23e2da5333b7b5f0c61d50}{%
+           family={Becher},
+           familyi={B\bibinitperiod},
+           given={Armin},
+           giveni={A\bibinitperiod}}}%
+        {{hash=1ddde25a4b31270d5280010c1e5d3d8b}{%
+           family={Facchi},
+           familyi={F\bibinitperiod},
+           given={Christian},
+           giveni={C\bibinitperiod}}}%
+        {{hash=46506a558ca5db239d944a960d60453d}{%
+           family={Riener},
+           familyi={R\bibinitperiod},
+           given={Andreas},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{9f2f1453729ea907d73aa7b63e1638d7}
+      \strng{fullhash}{51f3359b2fcc0590d32a87d2362146ed}
+      \strng{bibnamehash}{9f2f1453729ea907d73aa7b63e1638d7}
+      \strng{authorbibnamehash}{9f2f1453729ea907d73aa7b63e1638d7}
+      \strng{authornamehash}{9f2f1453729ea907d73aa7b63e1638d7}
+      \strng{authorfullhash}{51f3359b2fcc0590d32a87d2362146ed}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Teleoperation: The Holy Grail to Solve Problems of Automated Driving? Sure, but Latency Matters}
+      \field{urlday}{15}
+      \field{urlmonth}{10}
+      \field{urlyear}{2025}
+      \field{year}{2019}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://dl.acm.org/doi/pdf/10.1145/3342197.3344534
+      \endverb
+      \verb{url}
+      \verb https://dl.acm.org/doi/pdf/10.1145/3342197.3344534
+      \endverb
+    \endentry
+    \entry{jurgensen2025}{thesis}{}
+      \name{author}{1}{}{%
+        {{hash=8338c031c310ec89e27849de49b2e102}{%
+           family={Jürgensen},
+           familyi={J\bibinitperiod},
+           given={Simon},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {University of Kiel}%
+      }
+      \strng{namehash}{8338c031c310ec89e27849de49b2e102}
+      \strng{fullhash}{8338c031c310ec89e27849de49b2e102}
+      \strng{bibnamehash}{8338c031c310ec89e27849de49b2e102}
+      \strng{authorbibnamehash}{8338c031c310ec89e27849de49b2e102}
+      \strng{authornamehash}{8338c031c310ec89e27849de49b2e102}
+      \strng{authorfullhash}{8338c031c310ec89e27849de49b2e102}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Remote Control for Rail Vehicles}
+      \field{type}{phdthesis}
+      \field{urlday}{15}
+      \field{urlmonth}{10}
+      \field{urlyear}{2025}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://rtsys.informatik.uni-kiel.de/~biblio/downloads/theses/sij-bt.pdf
+      \endverb
+      \verb{url}
+      \verb https://rtsys.informatik.uni-kiel.de/~biblio/downloads/theses/sij-bt.pdf
+      \endverb
+    \endentry
+    \entry{iec62290}{report}{}
+      \name{author}{1}{}{%
+        {{hash=dd17c6e87cb58188cabe57d8b0d283df}{%
+           family={(IEC)},
+           familyi={(\bibinitperiod},
+           given={International\bibnamedelimb Electrotechnical\bibnamedelima Commission},
+           giveni={I\bibinitperiod\bibinitdelim E\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {IEC}%
+      }
+      \strng{namehash}{dd17c6e87cb58188cabe57d8b0d283df}
+      \strng{fullhash}{dd17c6e87cb58188cabe57d8b0d283df}
+      \strng{bibnamehash}{dd17c6e87cb58188cabe57d8b0d283df}
+      \strng{authorbibnamehash}{dd17c6e87cb58188cabe57d8b0d283df}
+      \strng{authornamehash}{dd17c6e87cb58188cabe57d8b0d283df}
+      \strng{authorfullhash}{dd17c6e87cb58188cabe57d8b0d283df}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{IEC 62290-1:2025 -Railway applications - Urban guided transport management and command/control systems - Part 3: System requirements specification}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://online.standard.no/nb/nek-iec-62290-3-2025
+      \endverb
+      \verb{url}
+      \verb https://online.standard.no/nb/nek-iec-62290-3-2025
+      \endverb
+    \endentry
+    \entry{uitp2018}{report}{}
+      \name{author}{1}{}{%
+        {{hash=ed5616019213d3251db24236cadd32e0}{%
+           family={Public\bibnamedelimb Transport\bibnamedelima (UITP)},
+           familyi={P\bibinitperiod\bibinitdelim T\bibinitperiod\bibinitdelim (\bibinitperiod},
+           given={International\bibnamedelima Association},
+           giveni={I\bibinitperiod\bibinitdelim A\bibinitperiod},
+           prefix={of},
+           prefixi={o\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {UITP}%
+      }
+      \strng{namehash}{ed5616019213d3251db24236cadd32e0}
+      \strng{fullhash}{ed5616019213d3251db24236cadd32e0}
+      \strng{bibnamehash}{ed5616019213d3251db24236cadd32e0}
+      \strng{authorbibnamehash}{ed5616019213d3251db24236cadd32e0}
+      \strng{authornamehash}{ed5616019213d3251db24236cadd32e0}
+      \strng{authorfullhash}{ed5616019213d3251db24236cadd32e0}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{World Report on Metro Automation}
+      \field{urlday}{15}
+      \field{urlmonth}{10}
+      \field{urlyear}{2025}
+      \field{year}{2018}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.uitp.org/publications/world-report-on-metro-automation/
+      \endverb
+      \verb{url}
+      \verb https://www.uitp.org/publications/world-report-on-metro-automation/
+      \endverb
+    \endentry
+    \entry{kozarevic2025}{thesis}{}
+      \name{author}{1}{}{%
+        {{hash=2245206624b7fba66a1b22e91547f5ca}{%
+           family={Kozarevic},
+           familyi={K\bibinitperiod},
+           given={Emilia\bibnamedelima Salvesen},
+           giveni={E\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {NTNU}%
+      }
+      \strng{namehash}{2245206624b7fba66a1b22e91547f5ca}
+      \strng{fullhash}{2245206624b7fba66a1b22e91547f5ca}
+      \strng{bibnamehash}{2245206624b7fba66a1b22e91547f5ca}
+      \strng{authorbibnamehash}{2245206624b7fba66a1b22e91547f5ca}
+      \strng{authornamehash}{2245206624b7fba66a1b22e91547f5ca}
+      \strng{authorfullhash}{2245206624b7fba66a1b22e91547f5ca}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Developing Remote Control as a Fallback System: An Iterative Approach}
+      \field{type}{phdthesis}
+      \field{year}{2025}
+    \endentry
+    \entry{3gppts22289}{report}{}
+      \name{author}{1}{}{%
+        {{hash=d35591bdf12c3515b328845fbce3fac8}{%
+           family={ETSI},
+           familyi={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{d35591bdf12c3515b328845fbce3fac8}
+      \strng{fullhash}{d35591bdf12c3515b328845fbce3fac8}
+      \strng{bibnamehash}{d35591bdf12c3515b328845fbce3fac8}
+      \strng{authorbibnamehash}{d35591bdf12c3515b328845fbce3fac8}
+      \strng{authornamehash}{d35591bdf12c3515b328845fbce3fac8}
+      \strng{authorfullhash}{d35591bdf12c3515b328845fbce3fac8}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{ETSI TS 122 289 V17.0.0 LTE 5G Mobile communication system for railways 3GPP TS 22.289 version 17.0.0 Release 17}
+      \field{type}{techreport}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb https://www.etsi.org/deliver/etsi_ts/122200_122299/122289/17.00.00_60/ts_122289v170000p.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.etsi.org/deliver/etsi_ts/122200_122299/122289/17.00.00_60/ts_122289v170000p.pdf
+      \endverb
+    \endentry
+    \entry{fp2r2dato2024d41_2}{report}{}
+      \name{author}{4}{}{%
+        {{hash=cd886c93b757b80473e29e30971e6127}{%
+           family={Vela},
+           familyi={V\bibinitperiod},
+           given={Nacho\bibnamedelima Celaya},
+           giveni={N\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=4f2e0e22b36a99a94af9f34dc7bc5638}{%
+           family={Mugueta},
+           familyi={M\bibinitperiod},
+           given={Itziar},
+           giveni={I\bibinitperiod}}}%
+        {{hash=43e813f219df5c31fbb8050ea2cea7a9}{%
+           family={Goya},
+           familyi={G\bibinitperiod},
+           given={Jon},
+           giveni={J\bibinitperiod}}}%
+        {{hash=c9bc18f8836f14ab0cb87ed9fdcc6890}{%
+           family={Klago},
+           familyi={K\bibinitperiod},
+           given={Dusan\bibnamedelima Patrick},
+           giveni={D\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+      }
+      \list{institution}{4}{%
+        {CAF}%
+        {STR}%
+        {FP2R2DATO}%
+        {Europe's Rail}%
+      }
+      \strng{namehash}{00166582324c5f20794040aea22faa72}
+      \strng{fullhash}{d21653a27ea9b4091f5a8caf58f2f819}
+      \strng{bibnamehash}{00166582324c5f20794040aea22faa72}
+      \strng{authorbibnamehash}{00166582324c5f20794040aea22faa72}
+      \strng{authornamehash}{00166582324c5f20794040aea22faa72}
+      \strng{authorfullhash}{d21653a27ea9b4091f5a8caf58f2f819}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{D41.2 - Testing reports and assessment}
+      \field{urlday}{7}
+      \field{urlmonth}{12}
+      \field{urlyear}{2025}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://rail-research.europa.eu/wp-content/uploads/2025/02/D41.2-Testing-reports-assessment.pdf
+      \endverb
+      \verb{url}
+      \verb https://rail-research.europa.eu/wp-content/uploads/2025/02/D41.2-Testing-reports-assessment.pdf
+      \endverb
+    \endentry
+    \entry{sodagar2011}{article}{}
+      \name{author}{1}{}{%
+        {{hash=5d30a174757f946c3c6f8a4ada9c0aa4}{%
+           family={Sodagar},
+           familyi={S\bibinitperiod},
+           given={Iraj},
+           giveni={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{5d30a174757f946c3c6f8a4ada9c0aa4}
+      \strng{fullhash}{5d30a174757f946c3c6f8a4ada9c0aa4}
+      \strng{bibnamehash}{5d30a174757f946c3c6f8a4ada9c0aa4}
+      \strng{authorbibnamehash}{5d30a174757f946c3c6f8a4ada9c0aa4}
+      \strng{authornamehash}{5d30a174757f946c3c6f8a4ada9c0aa4}
+      \strng{authorfullhash}{5d30a174757f946c3c6f8a4ada9c0aa4}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE MultiMedia}
+      \field{number}{4}
+      \field{title}{The {MPEG-DASH} Standard for Multimedia Streaming Over the Internet}
+      \field{urlday}{15}
+      \field{urlmonth}{2}
+      \field{urlyear}{2026}
+      \field{volume}{18}
+      \field{year}{2011}
+      \field{urldateera}{ce}
+      \field{pages}{62\bibrangedash 67}
+      \range{pages}{6}
+      \verb{urlraw}
+      \verb https://ieeexplore.ieee.org/document/6077864
+      \endverb
+      \verb{url}
+      \verb https://ieeexplore.ieee.org/document/6077864
+      \endverb
+    \endentry
+    \entry{blomqvist2018}{thesis}{}
+      \name{author}{1}{}{%
+        {{hash=df3ab482758c34fcff708307ab5ceae6}{%
+           family={Blomqvist},
+           familyi={B\bibinitperiod},
+           given={Timo},
+           giveni={T\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Metropolia University of Applied Sciences}%
+      }
+      \strng{namehash}{df3ab482758c34fcff708307ab5ceae6}
+      \strng{fullhash}{df3ab482758c34fcff708307ab5ceae6}
+      \strng{bibnamehash}{df3ab482758c34fcff708307ab5ceae6}
+      \strng{authorbibnamehash}{df3ab482758c34fcff708307ab5ceae6}
+      \strng{authornamehash}{df3ab482758c34fcff708307ab5ceae6}
+      \strng{authorfullhash}{df3ab482758c34fcff708307ab5ceae6}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Video latency in a vehicle's remoteoperating system}
+      \field{type}{phdthesis}
+      \field{year}{2018}
+      \verb{urlraw}
+      \verb https://www.theseus.fi/bitstream/handle/10024/157223/blomqvist_timo.pdf?sequence=1&isAllowed=y
+      \endverb
+      \verb{url}
+      \verb https://www.theseus.fi/bitstream/handle/10024/157223/blomqvist_timo.pdf?sequence=1&isAllowed=y
+      \endverb
+    \endentry
+    \entry{richardson2010}{book}{}
+      \name{author}{1}{}{%
+        {{hash=ae8eff41307018d950f00d2fe157263a}{%
+           family={Richardson},
+           familyi={R\bibinitperiod},
+           given={Iain\bibnamedelima E.},
+           giveni={I\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Wiley}%
+      }
+      \strng{namehash}{ae8eff41307018d950f00d2fe157263a}
+      \strng{fullhash}{ae8eff41307018d950f00d2fe157263a}
+      \strng{bibnamehash}{ae8eff41307018d950f00d2fe157263a}
+      \strng{authorbibnamehash}{ae8eff41307018d950f00d2fe157263a}
+      \strng{authornamehash}{ae8eff41307018d950f00d2fe157263a}
+      \strng{authorfullhash}{ae8eff41307018d950f00d2fe157263a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{2}
+      \field{title}{The H.264 Advanced Video Compression Standard}
+      \field{year}{2010}
+      \verb{urlraw}
+      \verb https://last.hit.bme.hu/download/vidtech/k%C3%B6nyvek/Iain%20E.%20Richardson%20-%20H264%20(2nd%20edition).pdf
+      \endverb
+      \verb{url}
+      \verb https://last.hit.bme.hu/download/vidtech/k%C3%B6nyvek/Iain%20E.%20Richardson%20-%20H264%20(2nd%20edition).pdf
+      \endverb
+    \endentry
+    \entry{kondoz2010}{book}{}
+      \name{author}{1}{}{%
+        {{hash=0d95937cdeb2888ba9c06c5c0d1d8460}{%
+           family={Kondoz},
+           familyi={K\bibinitperiod},
+           given={Ahmet},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Wiley}%
+      }
+      \strng{namehash}{0d95937cdeb2888ba9c06c5c0d1d8460}
+      \strng{fullhash}{0d95937cdeb2888ba9c06c5c0d1d8460}
+      \strng{bibnamehash}{0d95937cdeb2888ba9c06c5c0d1d8460}
+      \strng{authorbibnamehash}{0d95937cdeb2888ba9c06c5c0d1d8460}
+      \strng{authornamehash}{0d95937cdeb2888ba9c06c5c0d1d8460}
+      \strng{authorfullhash}{0d95937cdeb2888ba9c06c5c0d1d8460}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9780470740576}
+      \field{title}{Visual Media Coding and Transmission}
+      \field{urlday}{8}
+      \field{urlmonth}{4}
+      \field{urlyear}{2026}
+      \field{year}{2010}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.oreilly.com/library/view/visual-media-coding/9780470740576/
+      \endverb
+      \verb{url}
+      \verb https://www.oreilly.com/library/view/visual-media-coding/9780470740576/
+      \endverb
+    \endentry
+    \entry{wiegand2003}{article}{}
+      \name{author}{4}{}{%
+        {{hash=0a42920957ef8d58a2d10f5d46385a09}{%
+           family={Wiegand},
+           familyi={W\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod}}}%
+        {{hash=250e65846e0a4808878c862a83418772}{%
+           family={Sullivan},
+           familyi={S\bibinitperiod},
+           given={Gary\bibnamedelima J.},
+           giveni={G\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=20788e3633aa927ca26e013e776e653d}{%
+           family={Bjontegaard},
+           familyi={B\bibinitperiod},
+           given={Gisle},
+           giveni={G\bibinitperiod}}}%
+        {{hash=78751742f33be265702a527345925354}{%
+           family={Luthra},
+           familyi={L\bibinitperiod},
+           given={Ajay},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{f6974a0ad43b69734541904026b2606f}
+      \strng{fullhash}{b42838bba92dee010d3ddbd59a2d6108}
+      \strng{bibnamehash}{f6974a0ad43b69734541904026b2606f}
+      \strng{authorbibnamehash}{f6974a0ad43b69734541904026b2606f}
+      \strng{authornamehash}{f6974a0ad43b69734541904026b2606f}
+      \strng{authorfullhash}{b42838bba92dee010d3ddbd59a2d6108}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Circuits and Systems for Video Technology}
+      \field{number}{7}
+      \field{title}{Overview of the {H.264/AVC} Video Coding Standard}
+      \field{urlday}{10}
+      \field{urlmonth}{2}
+      \field{urlyear}{2026}
+      \field{volume}{13}
+      \field{year}{2003}
+      \field{urldateera}{ce}
+      \field{pages}{560\bibrangedash 576}
+      \range{pages}{17}
+      \verb{urlraw}
+      \verb https://ieeexplore.ieee.org/document/1218189
+      \endverb
+      \verb{url}
+      \verb https://ieeexplore.ieee.org/document/1218189
+      \endverb
+    \endentry
+    \entry{sullivan2004}{article}{}
+      \name{author}{3}{}{%
+        {{hash=250e65846e0a4808878c862a83418772}{%
+           family={Sullivan},
+           familyi={S\bibinitperiod},
+           given={Gary\bibnamedelima J.},
+           giveni={G\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=21266c063c35f0196a6bf308b1bed536}{%
+           family={Topiwala},
+           familyi={T\bibinitperiod},
+           given={Pankaj},
+           giveni={P\bibinitperiod}}}%
+        {{hash=78751742f33be265702a527345925354}{%
+           family={Luthra},
+           familyi={L\bibinitperiod},
+           given={Ajay},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{2b3bbffda8fb8bb1119ee446d01162a6}
+      \strng{fullhash}{a78ecf185336a38b5817be339261c5e5}
+      \strng{bibnamehash}{a78ecf185336a38b5817be339261c5e5}
+      \strng{authorbibnamehash}{a78ecf185336a38b5817be339261c5e5}
+      \strng{authornamehash}{2b3bbffda8fb8bb1119ee446d01162a6}
+      \strng{authorfullhash}{a78ecf185336a38b5817be339261c5e5}
+      \field{extraname}{1}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Proceedings of SPIE}
+      \field{title}{The {H.264/AVC} Advanced Video Coding Standard: Overview and Introduction to the Fidelity Range Extensions}
+      \field{urlday}{20}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{volume}{5558}
+      \field{year}{2004}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.ijcaonline.org/archives/volume181/number14/aljammas-2018-ijca-917575.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.ijcaonline.org/archives/volume181/number14/aljammas-2018-ijca-917575.pdf
+      \endverb
+    \endentry
+    \entry{sullivan2012hevc}{article}{}
+      \name{author}{4}{}{%
+        {{hash=250e65846e0a4808878c862a83418772}{%
+           family={Sullivan},
+           familyi={S\bibinitperiod},
+           given={Gary\bibnamedelima J.},
+           giveni={G\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=d9d8244828a82d17000f8c0092258a9b}{%
+           family={Ohm},
+           familyi={O\bibinitperiod},
+           given={Jens-Rainer},
+           giveni={J\bibinithyphendelim R\bibinitperiod}}}%
+        {{hash=2cb5b5047fbf3a160d2a25fff1127c4d}{%
+           family={Han},
+           familyi={H\bibinitperiod},
+           given={Woo-Jin},
+           giveni={W\bibinithyphendelim J\bibinitperiod}}}%
+        {{hash=0a42920957ef8d58a2d10f5d46385a09}{%
+           family={Wiegand},
+           familyi={W\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{2b3bbffda8fb8bb1119ee446d01162a6}
+      \strng{fullhash}{bb840e1adf12078ab79d8441d58e9329}
+      \strng{bibnamehash}{2b3bbffda8fb8bb1119ee446d01162a6}
+      \strng{authorbibnamehash}{2b3bbffda8fb8bb1119ee446d01162a6}
+      \strng{authornamehash}{2b3bbffda8fb8bb1119ee446d01162a6}
+      \strng{authorfullhash}{bb840e1adf12078ab79d8441d58e9329}
+      \field{extraname}{2}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Circuits and Systems for Video Technology}
+      \field{number}{12}
+      \field{title}{Overview of the High Efficiency Video Coding {(HEVC)} Standard}
+      \field{urlday}{10}
+      \field{urlmonth}{2}
+      \field{urlyear}{2026}
+      \field{volume}{22}
+      \field{year}{2012}
+      \field{urldateera}{ce}
+      \field{pages}{1649\bibrangedash 1668}
+      \range{pages}{20}
+      \verb{urlraw}
+      \verb https://ieeexplore.ieee.org/document/6316136
+      \endverb
+      \verb{url}
+      \verb https://ieeexplore.ieee.org/document/6316136
+      \endverb
+    \endentry
+    \entry{ohm2012}{article}{}
+      \name{author}{5}{}{%
+        {{hash=d9d8244828a82d17000f8c0092258a9b}{%
+           family={Ohm},
+           familyi={O\bibinitperiod},
+           given={Jens-Rainer},
+           giveni={J\bibinithyphendelim R\bibinitperiod}}}%
+        {{hash=250e65846e0a4808878c862a83418772}{%
+           family={Sullivan},
+           familyi={S\bibinitperiod},
+           given={Gary\bibnamedelima J.},
+           giveni={G\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=534b71fc47379493391141f374f2e3be}{%
+           family={Schwarz},
+           familyi={S\bibinitperiod},
+           given={Heiko},
+           giveni={H\bibinitperiod}}}%
+        {{hash=00c28607ceb20192639c52d139ed40d4}{%
+           family={Tan},
+           familyi={T\bibinitperiod},
+           given={Thiow\bibnamedelima Keng},
+           giveni={T\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=0a42920957ef8d58a2d10f5d46385a09}{%
+           family={Wiegand},
+           familyi={W\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{a06c56ad9acc558e2d3c1402518a019b}
+      \strng{fullhash}{1e7f32ea9b1b5e8a9578a72d1d2cce6b}
+      \strng{bibnamehash}{a06c56ad9acc558e2d3c1402518a019b}
+      \strng{authorbibnamehash}{a06c56ad9acc558e2d3c1402518a019b}
+      \strng{authornamehash}{a06c56ad9acc558e2d3c1402518a019b}
+      \strng{authorfullhash}{1e7f32ea9b1b5e8a9578a72d1d2cce6b}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Circuits and Systems for Video Technology}
+      \field{number}{12}
+      \field{title}{Comparison of the Coding Efficiency of Video Coding Standards Including High Efficiency Video Coding {(HEVC)}}
+      \field{urlday}{10}
+      \field{urlmonth}{2}
+      \field{urlyear}{2026}
+      \field{volume}{22}
+      \field{year}{2012}
+      \field{urldateera}{ce}
+      \field{pages}{1669\bibrangedash 1684}
+      \range{pages}{16}
+      \verb{urlraw}
+      \verb https://ieeexplore.ieee.org/document/6317158
+      \endverb
+      \verb{url}
+      \verb https://ieeexplore.ieee.org/document/6317158
+      \endverb
+    \endentry
+    \entry{seeling2014}{article}{}
+      \name{author}{2}{}{%
+        {{hash=f92a6fbf5e9f626de8994429f0a3a087}{%
+           family={Seeling},
+           familyi={S\bibinitperiod},
+           given={Patrick},
+           giveni={P\bibinitperiod}}}%
+        {{hash=e5883236e64d11b6c74c9bddea54c831}{%
+           family={Reisslein},
+           familyi={R\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{5c4f9829489d29b50f6a7485288961a3}
+      \strng{fullhash}{5c4f9829489d29b50f6a7485288961a3}
+      \strng{bibnamehash}{5c4f9829489d29b50f6a7485288961a3}
+      \strng{authorbibnamehash}{5c4f9829489d29b50f6a7485288961a3}
+      \strng{authornamehash}{5c4f9829489d29b50f6a7485288961a3}
+      \strng{authorfullhash}{5c4f9829489d29b50f6a7485288961a3}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Scientific World Journal}
+      \field{title}{Video Traffic Characteristics of Modern Encoding Standards: {H.264/AVC} with {SVC} and {MVC} Extensions and {H.265/HEVC}}
+      \field{urlday}{13}
+      \field{urlmonth}{2}
+      \field{urlyear}{2026}
+      \field{year}{2014}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://pmc.ncbi.nlm.nih.gov/articles/PMC3951063/
+      \endverb
+      \verb{url}
+      \verb https://pmc.ncbi.nlm.nih.gov/articles/PMC3951063/
+      \endverb
+    \endentry
+    \entry{vocal_nal}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=6b42258f12a2f2612fe9097b9f75df07}{%
+           family={{VOCAL Technologies}},
+           familyi={V\bibinitperiod}}}%
+      }
+      \strng{namehash}{6b42258f12a2f2612fe9097b9f75df07}
+      \strng{fullhash}{6b42258f12a2f2612fe9097b9f75df07}
+      \strng{bibnamehash}{6b42258f12a2f2612fe9097b9f75df07}
+      \strng{authorbibnamehash}{6b42258f12a2f2612fe9097b9f75df07}
+      \strng{authornamehash}{6b42258f12a2f2612fe9097b9f75df07}
+      \strng{authorfullhash}{6b42258f12a2f2612fe9097b9f75df07}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{What are {H.264} {NAL} Units?}
+      \field{urlday}{13}
+      \field{urlmonth}{2}
+      \field{urlyear}{2026}
+      \field{year}{2023}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://vocal.com/video-codecs/itu-h-264/what-are-h-264-nal-units/
+      \endverb
+      \verb{url}
+      \verb https://vocal.com/video-codecs/itu-h-264/what-are-h-264-nal-units/
+      \endverb
+    \endentry
+    \entry{rfc6184}{report}{}
+      \name{author}{4}{}{%
+        {{hash=18450409abacc34d651f65d53e7e989e}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Ye-Kui},
+           giveni={Y\bibinithyphendelim K\bibinitperiod}}}%
+        {{hash=7cfd203a51f0bfad9d12cfbec92e3325}{%
+           family={Even},
+           familyi={E\bibinitperiod},
+           given={Roni},
+           giveni={R\bibinitperiod}}}%
+        {{hash=45aceea8d87e54afe314a8250249e56d}{%
+           family={Kristensen},
+           familyi={K\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod}}}%
+        {{hash=c6baf1c85936b41246fbf7d9f2e925f1}{%
+           family={Jesup},
+           familyi={J\bibinitperiod},
+           given={Randell},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {IETF}%
+      }
+      \strng{namehash}{256d4bd88e5baa9ce54a836d927b09c5}
+      \strng{fullhash}{2bf7a5afe1d74a11a5f409c9dbe3ac5b}
+      \strng{bibnamehash}{256d4bd88e5baa9ce54a836d927b09c5}
+      \strng{authorbibnamehash}{256d4bd88e5baa9ce54a836d927b09c5}
+      \strng{authornamehash}{256d4bd88e5baa9ce54a836d927b09c5}
+      \strng{authorfullhash}{2bf7a5afe1d74a11a5f409c9dbe3ac5b}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{RFC} 6184: {RTP} Payload Format for {H.264} Video}
+      \field{type}{techreport}
+      \field{urlday}{13}
+      \field{urlmonth}{2}
+      \field{urlyear}{2026}
+      \field{year}{2011}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.rfc-editor.org/rfc/rfc6184
+      \endverb
+      \verb{url}
+      \verb https://www.rfc-editor.org/rfc/rfc6184
+      \endverb
+    \endentry
+    \entry{wikipedia_mjpeg}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=b6aea1a416c89509a7df1cbb69249cb6}{%
+           family={{Wikipedia contributors}},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{fullhash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{bibnamehash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{authorbibnamehash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{authornamehash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{authorfullhash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Motion {JPEG}}
+      \field{urlday}{15}
+      \field{urlmonth}{2}
+      \field{urlyear}{2026}
+      \field{year}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://en.wikipedia.org/wiki/Motion_JPEG
+      \endverb
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/Motion_JPEG
+      \endverb
+    \endentry
+    \entry{econ2024}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=80515e4dbf7673974d64c04fb9e1e068}{%
+           family={{e-con Systems}},
+           familyi={e\bibinitperiod}}}%
+      }
+      \strng{namehash}{80515e4dbf7673974d64c04fb9e1e068}
+      \strng{fullhash}{80515e4dbf7673974d64c04fb9e1e068}
+      \strng{bibnamehash}{80515e4dbf7673974d64c04fb9e1e068}
+      \strng{authorbibnamehash}{80515e4dbf7673974d64c04fb9e1e068}
+      \strng{authornamehash}{80515e4dbf7673974d64c04fb9e1e068}
+      \strng{authorfullhash}{80515e4dbf7673974d64c04fb9e1e068}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{A Comprehensive Study: {MJPEG} and {H.264} Compression in Embedded Vision}
+      \field{urlday}{15}
+      \field{urlmonth}{2}
+      \field{urlyear}{2026}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.e-consystems.com/blog/camera/technology/a-comprehensive-study-mjpeg-and-h-264-compression-in-embedded-vision/
+      \endverb
+      \verb{url}
+      \verb https://www.e-consystems.com/blog/camera/technology/a-comprehensive-study-mjpeg-and-h-264-compression-in-embedded-vision/
+      \endverb
+    \endentry
+    \entry{kaknjo2018videolatency}{article}{}
+      \name{author}{6}{}{%
+        {{hash=cdee6fd19a9ef69102627cc64cacceb5}{%
+           family={Kaknjo},
+           familyi={K\bibinitperiod},
+           given={Admir},
+           giveni={A\bibinitperiod}}}%
+        {{hash=1a03957b8c4a010d21a9cefe8944bf79}{%
+           family={Rao},
+           familyi={R\bibinitperiod},
+           given={Muzaffar},
+           giveni={M\bibinitperiod}}}%
+        {{hash=4a2de7a7acab0db9e3c1ca24b91a3a4d}{%
+           family={Omerdić},
+           familyi={O\bibinitperiod},
+           given={Edin},
+           giveni={E\bibinitperiod}}}%
+        {{hash=1872932a6e4175afd1a7a0e33e0a8668}{%
+           family={Robinson},
+           familyi={R\bibinitperiod},
+           given={Luke},
+           giveni={L\bibinitperiod}}}%
+        {{hash=8a67f70bbbaf64ebf461e54bbc8c9082}{%
+           family={Toal},
+           familyi={T\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod}}}%
+        {{hash=55556b8026750ad8ad390371a4976dcc}{%
+           family={Newe},
+           familyi={N\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{b3a64faa8dc0c1b5ccf96afa15c9a280}
+      \strng{fullhash}{a6ea819838a42d964debbe1597c9cc44}
+      \strng{bibnamehash}{b3a64faa8dc0c1b5ccf96afa15c9a280}
+      \strng{authorbibnamehash}{b3a64faa8dc0c1b5ccf96afa15c9a280}
+      \strng{authornamehash}{b3a64faa8dc0c1b5ccf96afa15c9a280}
+      \strng{authorfullhash}{a6ea819838a42d964debbe1597c9cc44}
+      \field{extraname}{1}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Wireless Communications and Mobile Computing}
+      \field{title}{Real-Time Video Latency Measurement between a Robot and Its Remote Control Station: Causes and Mitigation}
+      \field{urlday}{15}
+      \field{urlmonth}{10}
+      \field{urlyear}{2025}
+      \field{year}{2018}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.researchgate.net/publication/329369713_Real-Time_Video_Latency_Measurement_between_a_Robot_and_Its_Remote_Control_Station_Causes_and_Mitigation
+      \endverb
+      \verb{url}
+      \verb https://www.researchgate.net/publication/329369713_Real-Time_Video_Latency_Measurement_between_a_Robot_and_Its_Remote_Control_Station_Causes_and_Mitigation
+      \endverb
+    \endentry
+    \entry{rfc3550}{report}{}
+      \name{author}{4}{}{%
+        {{hash=c520fc132510d84b39cdc7763de73842}{%
+           family={Schulzrinne},
+           familyi={S\bibinitperiod},
+           given={Henning},
+           giveni={H\bibinitperiod}}}%
+        {{hash=ea908d76fcf5132ae27fc21ea61b9d01}{%
+           family={Casner},
+           familyi={C\bibinitperiod},
+           given={Stephen},
+           giveni={S\bibinitperiod}}}%
+        {{hash=a57010710d96bbf9ff58322b08d0d4bd}{%
+           family={Frederick},
+           familyi={F\bibinitperiod},
+           given={Ron},
+           giveni={R\bibinitperiod}}}%
+        {{hash=2191d887ae31ebf1ef43a77dc25834c4}{%
+           family={Jacobson},
+           familyi={J\bibinitperiod},
+           given={Van},
+           giveni={V\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {IETF}%
+      }
+      \strng{namehash}{0150750bbb8cb68136503c10f12bbcd0}
+      \strng{fullhash}{84b179379b9c953397b2d4405c26b971}
+      \strng{bibnamehash}{0150750bbb8cb68136503c10f12bbcd0}
+      \strng{authorbibnamehash}{0150750bbb8cb68136503c10f12bbcd0}
+      \strng{authornamehash}{0150750bbb8cb68136503c10f12bbcd0}
+      \strng{authorfullhash}{84b179379b9c953397b2d4405c26b971}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{RFC} 3550: {RTP}: A Transport Protocol for Real-Time Applications}
+      \field{type}{techreport}
+      \field{urlday}{10}
+      \field{urlmonth}{2}
+      \field{urlyear}{2026}
+      \field{year}{2003}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.rfc-editor.org/rfc/rfc3550
+      \endverb
+      \verb{url}
+      \verb https://www.rfc-editor.org/rfc/rfc3550
+      \endverb
+    \endentry
+    \entry{rfc3711}{report}{}
+      \name{author}{5}{}{%
+        {{hash=3ca8ac2a7a38f2e39ef1649de8ff1f04}{%
+           family={Baugher},
+           familyi={B\bibinitperiod},
+           given={Mark},
+           giveni={M\bibinitperiod}}}%
+        {{hash=4cb5d99766cf40a6044fcb57acee36a0}{%
+           family={McGrew},
+           familyi={M\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=3c48ea0149c50199080dac1978e37973}{%
+           family={Naslund},
+           familyi={N\bibinitperiod},
+           given={Mats},
+           giveni={M\bibinitperiod}}}%
+        {{hash=6df36977f6c577e07bae9cd7dbdab4d2}{%
+           family={Carrara},
+           familyi={C\bibinitperiod},
+           given={Elisabetta},
+           giveni={E\bibinitperiod}}}%
+        {{hash=5646ed3ac4a7d0e1184576cdc72b7298}{%
+           family={Norrman},
+           familyi={N\bibinitperiod},
+           given={Karl},
+           giveni={K\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {IETF}%
+      }
+      \strng{namehash}{8942c44d41e06e6549e72ccad4d7679e}
+      \strng{fullhash}{4a6a46b0ffa5d3c2cfb43a90da5c4537}
+      \strng{bibnamehash}{8942c44d41e06e6549e72ccad4d7679e}
+      \strng{authorbibnamehash}{8942c44d41e06e6549e72ccad4d7679e}
+      \strng{authornamehash}{8942c44d41e06e6549e72ccad4d7679e}
+      \strng{authorfullhash}{4a6a46b0ffa5d3c2cfb43a90da5c4537}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{RFC} 3711: The Secure Real-time Transport Protocol ({SRTP})}
+      \field{type}{techreport}
+      \field{urlday}{5}
+      \field{urlmonth}{4}
+      \field{urlyear}{2026}
+      \field{year}{2004}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.rfc-editor.org/rfc/rfc3711
+      \endverb
+      \verb{url}
+      \verb https://www.rfc-editor.org/rfc/rfc3711
+      \endverb
+    \endentry
+    \entry{rfc768}{report}{}
+      \name{author}{1}{}{%
+        {{hash=02b8dba2b9241ee3cbe59775cce0328d}{%
+           family={Postel},
+           familyi={P\bibinitperiod},
+           given={Jon},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {IETF}%
+      }
+      \strng{namehash}{02b8dba2b9241ee3cbe59775cce0328d}
+      \strng{fullhash}{02b8dba2b9241ee3cbe59775cce0328d}
+      \strng{bibnamehash}{02b8dba2b9241ee3cbe59775cce0328d}
+      \strng{authorbibnamehash}{02b8dba2b9241ee3cbe59775cce0328d}
+      \strng{authornamehash}{02b8dba2b9241ee3cbe59775cce0328d}
+      \strng{authorfullhash}{02b8dba2b9241ee3cbe59775cce0328d}
+      \field{extraname}{1}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{RFC} 768: User Datagram Protocol}
+      \field{type}{techreport}
+      \field{urlday}{17}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{year}{1980}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://datatracker.ietf.org/doc/html/rfc768
+      \endverb
+      \verb{url}
+      \verb https://datatracker.ietf.org/doc/html/rfc768
+      \endverb
+    \endentry
+    \entry{forouzan2012}{book}{}
+      \name{author}{1}{}{%
+        {{hash=15fe25340ae8cf0fe75afb7426a1df18}{%
+           family={Forouzan},
+           familyi={F\bibinitperiod},
+           given={Behrouz\bibnamedelima A.},
+           giveni={B\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {McGraw-Hill}%
+      }
+      \strng{namehash}{15fe25340ae8cf0fe75afb7426a1df18}
+      \strng{fullhash}{15fe25340ae8cf0fe75afb7426a1df18}
+      \strng{bibnamehash}{15fe25340ae8cf0fe75afb7426a1df18}
+      \strng{authorbibnamehash}{15fe25340ae8cf0fe75afb7426a1df18}
+      \strng{authornamehash}{15fe25340ae8cf0fe75afb7426a1df18}
+      \strng{authorfullhash}{15fe25340ae8cf0fe75afb7426a1df18}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{5}
+      \field{title}{Data Communications and Networking}
+      \field{urlday}{17}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{year}{2012}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://jcer.in/jcer-docs/E-Learning/Digital%20Library%20/E-Books/Data-Communications-and-Network-5e.pdf
+      \endverb
+      \verb{url}
+      \verb https://jcer.in/jcer-docs/E-Learning/Digital%20Library%20/E-Books/Data-Communications-and-Network-5e.pdf
+      \endverb
+    \endentry
+    \entry{rfc793}{report}{}
+      \name{author}{1}{}{%
+        {{hash=02b8dba2b9241ee3cbe59775cce0328d}{%
+           family={Postel},
+           familyi={P\bibinitperiod},
+           given={Jon},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {IETF}%
+      }
+      \strng{namehash}{02b8dba2b9241ee3cbe59775cce0328d}
+      \strng{fullhash}{02b8dba2b9241ee3cbe59775cce0328d}
+      \strng{bibnamehash}{02b8dba2b9241ee3cbe59775cce0328d}
+      \strng{authorbibnamehash}{02b8dba2b9241ee3cbe59775cce0328d}
+      \strng{authornamehash}{02b8dba2b9241ee3cbe59775cce0328d}
+      \strng{authorfullhash}{02b8dba2b9241ee3cbe59775cce0328d}
+      \field{extraname}{2}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{RFC} 793: Transmission Control Protocol}
+      \field{type}{techreport}
+      \field{urlday}{20}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{1981}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.rfc-editor.org/rfc/rfc793
+      \endverb
+      \verb{url}
+      \verb https://www.rfc-editor.org/rfc/rfc793
+      \endverb
+    \endentry
+    \entry{pinson2012}{article}{}
+      \name{author}{2}{}{%
+        {{hash=dfbbb175e9f9392279af48c17b9299cb}{%
+           family={Pinson},
+           familyi={P\bibinitperiod},
+           given={Margaret\bibnamedelima H.},
+           giveni={M\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=619b9ab1dedef3fdfed10aba124e93a1}{%
+           family={Wolf},
+           familyi={W\bibinitperiod},
+           given={Stephen},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{d2bff179278f878d488af06632cc15d1}
+      \strng{fullhash}{d2bff179278f878d488af06632cc15d1}
+      \strng{bibnamehash}{d2bff179278f878d488af06632cc15d1}
+      \strng{authorbibnamehash}{d2bff179278f878d488af06632cc15d1}
+      \strng{authornamehash}{d2bff179278f878d488af06632cc15d1}
+      \strng{authorfullhash}{d2bff179278f878d488af06632cc15d1}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Broadcasting}
+      \field{number}{2}
+      \field{title}{The Relationship Among Video Quality, Screen Resolution, and Bit Rate}
+      \field{urlday}{14}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{volume}{58}
+      \field{year}{2012}
+      \field{urldateera}{ce}
+      \field{pages}{258\bibrangedash 262}
+      \range{pages}{5}
+      \verb{urlraw}
+      \verb https://ieeexplore.ieee.org/document/5729848
+      \endverb
+      \verb{url}
+      \verb https://ieeexplore.ieee.org/document/5729848
+      \endverb
+    \endentry
+    \entry{dobrian2011}{inproceedings}{}
+      \name{author}{8}{}{%
+        {{hash=9889eddd692c8b5140d51cf0bcd0abce}{%
+           family={Dobrian},
+           familyi={D\bibinitperiod},
+           given={Florin},
+           giveni={F\bibinitperiod}}}%
+        {{hash=34ad4080185ac636279aca77d791b8cc}{%
+           family={Sekar},
+           familyi={S\bibinitperiod},
+           given={Vyas},
+           giveni={V\bibinitperiod}}}%
+        {{hash=228c74311646b031c28fdd1597e151ab}{%
+           family={Awan},
+           familyi={A\bibinitperiod},
+           given={Asad},
+           giveni={A\bibinitperiod}}}%
+        {{hash=51d9ef26181e2e8a9dc546b401e0bb26}{%
+           family={Stoica},
+           familyi={S\bibinitperiod},
+           given={Ion},
+           giveni={I\bibinitperiod}}}%
+        {{hash=6a7ee2df1612c203f1ab4c95582404c2}{%
+           family={Joseph},
+           familyi={J\bibinitperiod},
+           given={Dilip},
+           giveni={D\bibinitperiod}}}%
+        {{hash=6b75af4dd6ab638ddca3d223e1cd3a9b}{%
+           family={Ganjam},
+           familyi={G\bibinitperiod},
+           given={Aditya},
+           giveni={A\bibinitperiod}}}%
+        {{hash=0d018db4b7c8dab5512c9758f45ee682}{%
+           family={Zhan},
+           familyi={Z\bibinitperiod},
+           given={Jibin},
+           giveni={J\bibinitperiod}}}%
+        {{hash=0f5b8b674eea6432492c32e093925682}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Hui},
+           giveni={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{dae5bff63ccb436973d2e14a7bd9e294}
+      \strng{fullhash}{1a0f63fa5cf9a36e46485b73d827f2d4}
+      \strng{bibnamehash}{dae5bff63ccb436973d2e14a7bd9e294}
+      \strng{authorbibnamehash}{dae5bff63ccb436973d2e14a7bd9e294}
+      \strng{authornamehash}{dae5bff63ccb436973d2e14a7bd9e294}
+      \strng{authorfullhash}{1a0f63fa5cf9a36e46485b73d827f2d4}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{ACM SIGCOMM}
+      \field{title}{Understanding the Impact of Video Quality on User Engagement}
+      \field{urlday}{20}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2011}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://dl.acm.org/doi/10.1145/2018436.2018478
+      \endverb
+      \verb{url}
+      \verb https://dl.acm.org/doi/10.1145/2018436.2018478
+      \endverb
+    \endentry
+    \entry{kaknjo2018}{article}{}
+      \name{author}{6}{}{%
+        {{hash=cdee6fd19a9ef69102627cc64cacceb5}{%
+           family={Kaknjo},
+           familyi={K\bibinitperiod},
+           given={Admir},
+           giveni={A\bibinitperiod}}}%
+        {{hash=1a03957b8c4a010d21a9cefe8944bf79}{%
+           family={Rao},
+           familyi={R\bibinitperiod},
+           given={Muzaffar},
+           giveni={M\bibinitperiod}}}%
+        {{hash=4a2de7a7acab0db9e3c1ca24b91a3a4d}{%
+           family={Omerdić},
+           familyi={O\bibinitperiod},
+           given={Edin},
+           giveni={E\bibinitperiod}}}%
+        {{hash=1872932a6e4175afd1a7a0e33e0a8668}{%
+           family={Robinson},
+           familyi={R\bibinitperiod},
+           given={Luke},
+           giveni={L\bibinitperiod}}}%
+        {{hash=8a67f70bbbaf64ebf461e54bbc8c9082}{%
+           family={Toal},
+           familyi={T\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod}}}%
+        {{hash=55556b8026750ad8ad390371a4976dcc}{%
+           family={Newe},
+           familyi={N\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{b3a64faa8dc0c1b5ccf96afa15c9a280}
+      \strng{fullhash}{a6ea819838a42d964debbe1597c9cc44}
+      \strng{bibnamehash}{b3a64faa8dc0c1b5ccf96afa15c9a280}
+      \strng{authorbibnamehash}{b3a64faa8dc0c1b5ccf96afa15c9a280}
+      \strng{authornamehash}{b3a64faa8dc0c1b5ccf96afa15c9a280}
+      \strng{authorfullhash}{a6ea819838a42d964debbe1597c9cc44}
+      \field{extraname}{2}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Wireless Communications and Mobile Computing}
+      \field{title}{Real-Time Video Latency Measurement between a Robot and Its Remote Control Station: Causes and Mitigation}
+      \field{urlday}{15}
+      \field{urlmonth}{10}
+      \field{urlyear}{2025}
+      \field{year}{2018}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.researchgate.net/publication/329369713_Real-Time_Video_Latency_Measurement_between_a_Robot_and_Its_Remote_Control_Station_Causes_and_Mitigation
+      \endverb
+      \verb{url}
+      \verb https://www.researchgate.net/publication/329369713_Real-Time_Video_Latency_Measurement_between_a_Robot_and_Its_Remote_Control_Station_Causes_and_Mitigation
+      \endverb
+    \endentry
+    \entry{axis2024}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=ac6b150c08134b28b0c1299d9cf7c9cc}{%
+           family={{Axis Communications}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{ac6b150c08134b28b0c1299d9cf7c9cc}
+      \strng{fullhash}{ac6b150c08134b28b0c1299d9cf7c9cc}
+      \strng{bibnamehash}{ac6b150c08134b28b0c1299d9cf7c9cc}
+      \strng{authorbibnamehash}{ac6b150c08134b28b0c1299d9cf7c9cc}
+      \strng{authornamehash}{ac6b150c08134b28b0c1299d9cf7c9cc}
+      \strng{authorfullhash}{ac6b150c08134b28b0c1299d9cf7c9cc}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Latency in Live Network Video Surveillance}
+      \field{urlday}{20}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.axis.com/dam/public/9d/e4/5d/latency-in-live-network-video-surveillance-en-US-190945.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.axis.com/dam/public/9d/e4/5d/latency-in-live-network-video-surveillance-en-US-190945.pdf
+      \endverb
+    \endentry
+    \entry{hamidouche2022}{article}{}
+      \name{author}{4}{}{%
+        {{hash=c0c1cc6a252acbaba75f3a8472fad4d2}{%
+           family={Hamidouche},
+           familyi={H\bibinitperiod},
+           given={Wassim},
+           giveni={W\bibinitperiod}}}%
+        {{hash=6c8fd2c624874770a741bae641b790f9}{%
+           family={Ott},
+           familyi={O\bibinitperiod},
+           given={Mickaël},
+           giveni={M\bibinitperiod}}}%
+        {{hash=3ffac9c184ccc4b5eb2ba3b66af295c4}{%
+           family={Déforges},
+           familyi={D\bibinitperiod},
+           given={Olivier},
+           giveni={O\bibinitperiod}}}%
+        {{hash=7aeac56cc97165216d05fd786815cd3e}{%
+           family={Menard},
+           familyi={M\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{e920566dc49cc473d6ae40fbba938f45}
+      \strng{fullhash}{9bd8315bd76635e87f41b55e8021cfc4}
+      \strng{bibnamehash}{e920566dc49cc473d6ae40fbba938f45}
+      \strng{authorbibnamehash}{e920566dc49cc473d6ae40fbba938f45}
+      \strng{authornamehash}{e920566dc49cc473d6ae40fbba938f45}
+      \strng{authorfullhash}{9bd8315bd76635e87f41b55e8021cfc4}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{ACM Computing Surveys}
+      \field{number}{3}
+      \field{title}{Image and Video Coding Techniques for Ultra-low Latency}
+      \field{urlday}{20}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{volume}{55}
+      \field{year}{2022}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://dl.acm.org/doi/10.1145/3512342
+      \endverb
+      \verb{url}
+      \verb https://dl.acm.org/doi/10.1145/3512342
+      \endverb
+    \endentry
+    \entry{leray2018}{article}{}
+      \name{author}{5}{}{%
+        {{hash=d6f738adf02962cbce80b0f5428981d4}{%
+           family={Leray},
+           familyi={L\bibinitperiod},
+           given={Pierre},
+           giveni={P\bibinitperiod}}}%
+        {{hash=31a68cc0d8791e9411ca8db5865f13a5}{%
+           family={Forget},
+           familyi={F\bibinitperiod},
+           given={Julien},
+           giveni={J\bibinitperiod}}}%
+        {{hash=65f8dedd1278a48d0905e68368d4bb4e}{%
+           family={Behm},
+           familyi={B\bibinitperiod},
+           given={Guillaume},
+           giveni={G\bibinitperiod}}}%
+        {{hash=3caa753eeca9261790a8f811558f9920}{%
+           family={Cauneau},
+           familyi={C\bibinitperiod},
+           given={François},
+           giveni={F\bibinitperiod}}}%
+        {{hash=7afeb0f6abf85e7f4da81002bc067871}{%
+           family={Mariano-Goulart},
+           familyi={M\bibinithyphendelim G\bibinitperiod},
+           given={Denis},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{fb9a36434d55b7b4bca7c65dd0731eda}
+      \strng{fullhash}{e321d42a8dfcf8583a941cc2b519e042}
+      \strng{bibnamehash}{fb9a36434d55b7b4bca7c65dd0731eda}
+      \strng{authorbibnamehash}{fb9a36434d55b7b4bca7c65dd0731eda}
+      \strng{authornamehash}{fb9a36434d55b7b4bca7c65dd0731eda}
+      \strng{authorfullhash}{e321d42a8dfcf8583a941cc2b519e042}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Behavior Research Methods}
+      \field{title}{Ultrahigh temporal resolution of visual presentation using gaming monitors and {G-Sync}}
+      \field{urlday}{20}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{volume}{50}
+      \field{year}{2018}
+      \field{urldateera}{ce}
+      \field{pages}{26\bibrangedash 38}
+      \range{pages}{13}
+      \verb{urlraw}
+      \verb https://link.springer.com/article/10.3758/s13428-017-1003-6
+      \endverb
+      \verb{url}
+      \verb https://link.springer.com/article/10.3758/s13428-017-1003-6
+      \endverb
+    \endentry
+    \entry{vannicola2012}{article}{}
+      \name{author}{6}{}{%
+        {{hash=2b29fee3615317ad2554a5e4cb700113}{%
+           family={Vannicola},
+           familyi={V\bibinitperiod},
+           given={Joseph},
+           giveni={J\bibinitperiod}}}%
+        {{hash=da3f4a7cb857fdad55c0a438f376c595}{%
+           family={Beard},
+           familyi={B\bibinitperiod},
+           given={Ronald},
+           giveni={R\bibinitperiod}}}%
+        {{hash=a9f4cc958c009962d650d40c93c7d397}{%
+           family={White},
+           familyi={W\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=e37c9996f568b4a4dde86bfc8f743495}{%
+           family={Senior},
+           familyi={S\bibinitperiod},
+           given={Kenneth},
+           giveni={K\bibinitperiod}}}%
+        {{hash=8ef0fc3da8039fe9d9cc614c0d230a7a}{%
+           family={Largay},
+           familyi={L\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+        {{hash=0cd75572efcafabbd1fb499fc76e221c}{%
+           family={Beard},
+           familyi={B\bibinitperiod},
+           given={Robert},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{424977b7cdd6e61752aff56665e2395a}
+      \strng{fullhash}{890afd9a8a1ad87dbda008c312cb95d7}
+      \strng{bibnamehash}{424977b7cdd6e61752aff56665e2395a}
+      \strng{authorbibnamehash}{424977b7cdd6e61752aff56665e2395a}
+      \strng{authornamehash}{424977b7cdd6e61752aff56665e2395a}
+      \strng{authorfullhash}{890afd9a8a1ad87dbda008c312cb95d7}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Ultrasonics, Ferroelectrics, and Frequency Control}
+      \field{number}{12}
+      \field{title}{{GPS} Time Transfer: Applications to the {US} Naval Observatory Two-Way Satellite Time and Frequency Transfer}
+      \field{urlday}{14}
+      \field{urlmonth}{4}
+      \field{urlyear}{2026}
+      \field{volume}{59}
+      \field{year}{2012}
+      \field{urldateera}{ce}
+      \field{pages}{2625\bibrangedash 2634}
+      \range{pages}{10}
+      \verb{urlraw}
+      \verb https://ieeexplore.ieee.org/document/6378481
+      \endverb
+      \verb{url}
+      \verb https://ieeexplore.ieee.org/document/6378481
+      \endverb
+    \endentry
+    \entry{misra2011}{book}{}
+      \name{author}{2}{}{%
+        {{hash=dea7a47016ffef1ba4d9247167187255}{%
+           family={Misra},
+           familyi={M\bibinitperiod},
+           given={Pratap},
+           giveni={P\bibinitperiod}}}%
+        {{hash=d1f03e41902631e4ef274a6a749fca7e}{%
+           family={Enge},
+           familyi={E\bibinitperiod},
+           given={Per},
+           giveni={P\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Ganga-Jamuna Press}%
+      }
+      \strng{namehash}{431df6603cfa4e1eba84d547576caf59}
+      \strng{fullhash}{431df6603cfa4e1eba84d547576caf59}
+      \strng{bibnamehash}{431df6603cfa4e1eba84d547576caf59}
+      \strng{authorbibnamehash}{431df6603cfa4e1eba84d547576caf59}
+      \strng{authornamehash}{431df6603cfa4e1eba84d547576caf59}
+      \strng{authorfullhash}{431df6603cfa4e1eba84d547576caf59}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{2}
+      \field{title}{Global Positioning System: Signals, Measurements, and Performance}
+      \field{year}{2011}
+      \verb{urlraw}
+      \verb https://www.amazon.com/Global-Positioning-System-Measurements-Performance/dp/0970954417
+      \endverb
+      \verb{url}
+      \verb https://www.amazon.com/Global-Positioning-System-Measurements-Performance/dp/0970954417
+      \endverb
+    \endentry
+    \entry{sesia2010}{article}{}
+      \name{author}{3}{}{%
+        {{hash=c725f34c7ac6e5d04e33f5981fd6d8ac}{%
+           family={Sesia},
+           familyi={S\bibinitperiod},
+           given={Ilaria},
+           giveni={I\bibinitperiod}}}%
+        {{hash=71cb90e16d7c9c522426b133389268d3}{%
+           family={Pierozzi},
+           familyi={P\bibinitperiod},
+           given={Marco},
+           giveni={M\bibinitperiod}}}%
+        {{hash=73a234e1328e0a8353a9fa0715d2d682}{%
+           family={Tavella},
+           familyi={T\bibinitperiod},
+           given={Patrizia},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{491214c75e2af3bf32a6085e4ba69896}
+      \strng{fullhash}{9a9a01eabc18693e181ae289875c9f68}
+      \strng{bibnamehash}{9a9a01eabc18693e181ae289875c9f68}
+      \strng{authorbibnamehash}{9a9a01eabc18693e181ae289875c9f68}
+      \strng{authornamehash}{491214c75e2af3bf32a6085e4ba69896}
+      \strng{authorfullhash}{9a9a01eabc18693e181ae289875c9f68}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Computer Standards and Interfaces}
+      \field{number}{2}
+      \field{title}{{GPS} and {IEEE} 1588 Synchronization for the Measurement of Synchrophasors in Electric Power Systems}
+      \field{urlday}{14}
+      \field{urlmonth}{4}
+      \field{urlyear}{2026}
+      \field{volume}{33}
+      \field{year}{2010}
+      \field{urldateera}{ce}
+      \field{pages}{176\bibrangedash 181}
+      \range{pages}{6}
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/abs/pii/S0920548910000875
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/abs/pii/S0920548910000875
+      \endverb
+    \endentry
+    \entry{rfc5905}{report}{}
+      \name{author}{4}{}{%
+        {{hash=67cf25c28d3d14ac90e4bac4283c4e25}{%
+           family={Mills},
+           familyi={M\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=d92960ce8af51df6a98cb4d73cac8d45}{%
+           family={Martin},
+           familyi={M\bibinitperiod},
+           given={Jim},
+           giveni={J\bibinitperiod}}}%
+        {{hash=629d5f26f5cc701aa28b66fd40163351}{%
+           family={Burbank},
+           familyi={B\bibinitperiod},
+           given={Jack},
+           giveni={J\bibinitperiod}}}%
+        {{hash=0d4a6596a9df44c93bd825ef1f79070f}{%
+           family={Kasch},
+           familyi={K\bibinitperiod},
+           given={William},
+           giveni={W\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {IETF}%
+      }
+      \strng{namehash}{d73dad64f8e4dcb01bcbd3adf0919c70}
+      \strng{fullhash}{d966c2962fb94f328ae876ce52eb22cf}
+      \strng{bibnamehash}{d73dad64f8e4dcb01bcbd3adf0919c70}
+      \strng{authorbibnamehash}{d73dad64f8e4dcb01bcbd3adf0919c70}
+      \strng{authornamehash}{d73dad64f8e4dcb01bcbd3adf0919c70}
+      \strng{authorfullhash}{d966c2962fb94f328ae876ce52eb22cf}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{RFC} 5905: Network Time Protocol Version 4 -- Reference and Implementation Guide}
+      \field{type}{techreport}
+      \field{urlday}{18}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{year}{2010}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.rfc-editor.org/rfc/rfc5905
+      \endverb
+      \verb{url}
+      \verb https://www.rfc-editor.org/rfc/rfc5905
+      \endverb
+    \endentry
+    \entry{chronyproject}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=e75dfa4d220e2ca378bf876cf587cef3}{%
+           family={{Chrony Project}},
+           familyi={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{e75dfa4d220e2ca378bf876cf587cef3}
+      \strng{fullhash}{e75dfa4d220e2ca378bf876cf587cef3}
+      \strng{bibnamehash}{e75dfa4d220e2ca378bf876cf587cef3}
+      \strng{authorbibnamehash}{e75dfa4d220e2ca378bf876cf587cef3}
+      \strng{authornamehash}{e75dfa4d220e2ca378bf876cf587cef3}
+      \strng{authorfullhash}{e75dfa4d220e2ca378bf876cf587cef3}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Chrony -- Configuration Examples and Accuracy}
+      \field{urlday}{2}
+      \field{urlmonth}{4}
+      \field{urlyear}{2026}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://chrony-project.org/examples.html
+      \endverb
+      \verb{url}
+      \verb https://chrony-project.org/examples.html
+      \endverb
+    \endentry
+    \entry{redhat2024chrony}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=a82007c47b25723539a00ff94e8b3d27}{%
+           family={{Red Hat}},
+           familyi={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{a82007c47b25723539a00ff94e8b3d27}
+      \strng{fullhash}{a82007c47b25723539a00ff94e8b3d27}
+      \strng{bibnamehash}{a82007c47b25723539a00ff94e8b3d27}
+      \strng{authorbibnamehash}{a82007c47b25723539a00ff94e8b3d27}
+      \strng{authornamehash}{a82007c47b25723539a00ff94e8b3d27}
+      \strng{authorfullhash}{a82007c47b25723539a00ff94e8b3d27}
+      \field{extraname}{1}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Configuring Time Synchronization -- {Red Hat Enterprise Linux} 9}
+      \field{urlday}{25}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/9/html/configuring_basic_system_settings/configuring-time-synchronization_configuring-basic-system-settings
+      \endverb
+      \verb{url}
+      \verb https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/9/html/configuring_basic_system_settings/configuring-time-synchronization_configuring-basic-system-settings
+      \endverb
+    \endentry
+    \entry{redhat2024hw}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=a82007c47b25723539a00ff94e8b3d27}{%
+           family={{Red Hat}},
+           familyi={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{a82007c47b25723539a00ff94e8b3d27}
+      \strng{fullhash}{a82007c47b25723539a00ff94e8b3d27}
+      \strng{bibnamehash}{a82007c47b25723539a00ff94e8b3d27}
+      \strng{authorbibnamehash}{a82007c47b25723539a00ff94e8b3d27}
+      \strng{authornamehash}{a82007c47b25723539a00ff94e8b3d27}
+      \strng{authorfullhash}{a82007c47b25723539a00ff94e8b3d27}
+      \field{extraname}{2}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Chrony with Hardware Timestamping -- {Red Hat Enterprise Linux} 10}
+      \field{urlday}{25}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/10/html/configuring_time_synchronization/chrony-with-hw-timestamping
+      \endverb
+      \verb{url}
+      \verb https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/10/html/configuring_time_synchronization/chrony-with-hw-timestamping
+      \endverb
+    \endentry
+    \entry{gstreamer_intro}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=80a4452c4c56105df98a0fcc5ba3da4f}{%
+           family={{GStreamer Project}},
+           familyi={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{80a4452c4c56105df98a0fcc5ba3da4f}
+      \strng{fullhash}{80a4452c4c56105df98a0fcc5ba3da4f}
+      \strng{bibnamehash}{80a4452c4c56105df98a0fcc5ba3da4f}
+      \strng{authorbibnamehash}{80a4452c4c56105df98a0fcc5ba3da4f}
+      \strng{authornamehash}{80a4452c4c56105df98a0fcc5ba3da4f}
+      \strng{authorfullhash}{80a4452c4c56105df98a0fcc5ba3da4f}
+      \field{extraname}{1}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{What is {GStreamer}?}
+      \field{urlday}{20}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://gstreamer.freedesktop.org/documentation/application-development/introduction/gstreamer.html
+      \endverb
+      \verb{url}
+      \verb https://gstreamer.freedesktop.org/documentation/application-development/introduction/gstreamer.html
+      \endverb
+    \endentry
+    \entry{gstreamer_elements}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=80a4452c4c56105df98a0fcc5ba3da4f}{%
+           family={{GStreamer Project}},
+           familyi={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{80a4452c4c56105df98a0fcc5ba3da4f}
+      \strng{fullhash}{80a4452c4c56105df98a0fcc5ba3da4f}
+      \strng{bibnamehash}{80a4452c4c56105df98a0fcc5ba3da4f}
+      \strng{authorbibnamehash}{80a4452c4c56105df98a0fcc5ba3da4f}
+      \strng{authornamehash}{80a4452c4c56105df98a0fcc5ba3da4f}
+      \strng{authorfullhash}{80a4452c4c56105df98a0fcc5ba3da4f}
+      \field{extraname}{2}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Elements}
+      \field{urlday}{20}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://gstreamer.freedesktop.org/documentation/application-development/basics/elements.html
+      \endverb
+      \verb{url}
+      \verb https://gstreamer.freedesktop.org/documentation/application-development/basics/elements.html
+      \endverb
+    \endentry
+    \entry{gstreamer_pads}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=80a4452c4c56105df98a0fcc5ba3da4f}{%
+           family={{GStreamer Project}},
+           familyi={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{80a4452c4c56105df98a0fcc5ba3da4f}
+      \strng{fullhash}{80a4452c4c56105df98a0fcc5ba3da4f}
+      \strng{bibnamehash}{80a4452c4c56105df98a0fcc5ba3da4f}
+      \strng{authorbibnamehash}{80a4452c4c56105df98a0fcc5ba3da4f}
+      \strng{authornamehash}{80a4452c4c56105df98a0fcc5ba3da4f}
+      \strng{authorfullhash}{80a4452c4c56105df98a0fcc5ba3da4f}
+      \field{extraname}{3}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Pads and Capabilities}
+      \field{urlday}{20}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://gstreamer.freedesktop.org/documentation/application-development/basics/pads.html
+      \endverb
+      \verb{url}
+      \verb https://gstreamer.freedesktop.org/documentation/application-development/basics/pads.html
+      \endverb
+    \endentry
+    \entry{gstreamer_sink}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=80a4452c4c56105df98a0fcc5ba3da4f}{%
+           family={{GStreamer Project}},
+           familyi={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{80a4452c4c56105df98a0fcc5ba3da4f}
+      \strng{fullhash}{80a4452c4c56105df98a0fcc5ba3da4f}
+      \strng{bibnamehash}{80a4452c4c56105df98a0fcc5ba3da4f}
+      \strng{authorbibnamehash}{80a4452c4c56105df98a0fcc5ba3da4f}
+      \strng{authornamehash}{80a4452c4c56105df98a0fcc5ba3da4f}
+      \strng{authorfullhash}{80a4452c4c56105df98a0fcc5ba3da4f}
+      \field{extraname}{4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Sink Elements}
+      \field{urlday}{20}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://gstreamer.freedesktop.org/documentation/additional/design/element-sink.html
+      \endverb
+      \verb{url}
+      \verb https://gstreamer.freedesktop.org/documentation/additional/design/element-sink.html
+      \endverb
+    \endentry
+    \entry{gstreamer_probes}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=80a4452c4c56105df98a0fcc5ba3da4f}{%
+           family={{GStreamer Project}},
+           familyi={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{80a4452c4c56105df98a0fcc5ba3da4f}
+      \strng{fullhash}{80a4452c4c56105df98a0fcc5ba3da4f}
+      \strng{bibnamehash}{80a4452c4c56105df98a0fcc5ba3da4f}
+      \strng{authorbibnamehash}{80a4452c4c56105df98a0fcc5ba3da4f}
+      \strng{authornamehash}{80a4452c4c56105df98a0fcc5ba3da4f}
+      \strng{authorfullhash}{80a4452c4c56105df98a0fcc5ba3da4f}
+      \field{extraname}{5}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Probes}
+      \field{urlday}{20}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://gstreamer.freedesktop.org/documentation/additional/design/probes.html
+      \endverb
+      \verb{url}
+      \verb https://gstreamer.freedesktop.org/documentation/additional/design/probes.html
+      \endverb
+    \endentry
+    \entry{gstreamer_pipeline_manip}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=80a4452c4c56105df98a0fcc5ba3da4f}{%
+           family={{GStreamer Project}},
+           familyi={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{80a4452c4c56105df98a0fcc5ba3da4f}
+      \strng{fullhash}{80a4452c4c56105df98a0fcc5ba3da4f}
+      \strng{bibnamehash}{80a4452c4c56105df98a0fcc5ba3da4f}
+      \strng{authorbibnamehash}{80a4452c4c56105df98a0fcc5ba3da4f}
+      \strng{authornamehash}{80a4452c4c56105df98a0fcc5ba3da4f}
+      \strng{authorfullhash}{80a4452c4c56105df98a0fcc5ba3da4f}
+      \field{extraname}{6}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Pipeline Manipulation}
+      \field{urlday}{20}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://gstreamer.freedesktop.org/documentation/application-development/advanced/pipeline-manipulation.html
+      \endverb
+      \verb{url}
+      \verb https://gstreamer.freedesktop.org/documentation/application-development/advanced/pipeline-manipulation.html
+      \endverb
+    \endentry
+    \entry{ieee80211}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=472abfae8142fdb6f39d081303e8af85}{%
+           family={{IEEE}},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{472abfae8142fdb6f39d081303e8af85}
+      \strng{fullhash}{472abfae8142fdb6f39d081303e8af85}
+      \strng{bibnamehash}{472abfae8142fdb6f39d081303e8af85}
+      \strng{authorbibnamehash}{472abfae8142fdb6f39d081303e8af85}
+      \strng{authornamehash}{472abfae8142fdb6f39d081303e8af85}
+      \strng{authorfullhash}{472abfae8142fdb6f39d081303e8af85}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{IEEE} 802.11-2020: {IEEE} Standard for Information Technology -- Telecommunications and Information Exchange Between Systems -- Local and Metropolitan Area Networks -- Specific Requirements Part 11: Wireless {LAN} Medium Access Control {(MAC)} and Physical Layer {(PHY)} Specifications}
+      \field{urlday}{20}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2020}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://standards.ieee.org/ieee/802.11/7028/
+      \endverb
+      \verb{url}
+      \verb https://standards.ieee.org/ieee/802.11/7028/
+      \endverb
+    \endentry
+    \entry{bankov2019}{article}{}
+      \name{author}{4}{}{%
+        {{hash=9cc8d2f2851afa2764017dbc0f34743c}{%
+           family={Bankov},
+           familyi={B\bibinitperiod},
+           given={Dmitry},
+           giveni={D\bibinitperiod}}}%
+        {{hash=3d6d193438373e25a9966ed2855bccbd}{%
+           family={Khorov},
+           familyi={K\bibinitperiod},
+           given={Evgeny},
+           giveni={E\bibinitperiod}}}%
+        {{hash=138d3df365f8773603199ee1fdb15203}{%
+           family={Lyakhov},
+           familyi={L\bibinitperiod},
+           given={Andrey},
+           giveni={A\bibinitperiod}}}%
+        {{hash=b9b2615ef62b901d613302b3d031b7cc}{%
+           family={Sandal},
+           familyi={S\bibinitperiod},
+           given={Mark},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{9cb6012b549f394fecb0255e1dfe72d2}
+      \strng{fullhash}{487857e6d7863898473f7a6be1230916}
+      \strng{bibnamehash}{9cb6012b549f394fecb0255e1dfe72d2}
+      \strng{authorbibnamehash}{9cb6012b549f394fecb0255e1dfe72d2}
+      \strng{authornamehash}{9cb6012b549f394fecb0255e1dfe72d2}
+      \strng{authorfullhash}{487857e6d7863898473f7a6be1230916}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{International Journal of Distributed Sensor Networks}
+      \field{title}{Enabling Real-Time Applications in {Wi-Fi} Networks}
+      \field{urlday}{20}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2019}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://journals.sagepub.com/doi/full/10.1177/1550147719845312
+      \endverb
+      \verb{url}
+      \verb https://journals.sagepub.com/doi/full/10.1177/1550147719845312
+      \endverb
+    \endentry
+    \entry{li2018urllc}{article}{}
+      \name{author}{4}{}{%
+        {{hash=c6f416e6451069f390ab14b0f9f81ac2}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Zexian},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=0f287ea1143f441b34fcc2b1bc139c1c}{%
+           family={Uusitalo},
+           familyi={U\bibinitperiod},
+           given={Mikko\bibnamedelima A.},
+           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=ed99c2f983b3973b8a7da4a58eeb7bd4}{%
+           family={Shariatmadari},
+           familyi={S\bibinitperiod},
+           given={Hamidreza},
+           giveni={H\bibinitperiod}}}%
+        {{hash=30cc44a647e83bdbbd327996ecbb08bc}{%
+           family={Singh},
+           familyi={S\bibinitperiod},
+           given={Bikramjit},
+           giveni={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{6e8484cf8c9bbaa278343e039988a414}
+      \strng{fullhash}{2685aa5aa1bb8e7d1e68d5f3cfcce8ae}
+      \strng{bibnamehash}{6e8484cf8c9bbaa278343e039988a414}
+      \strng{authorbibnamehash}{6e8484cf8c9bbaa278343e039988a414}
+      \strng{authornamehash}{6e8484cf8c9bbaa278343e039988a414}
+      \strng{authorfullhash}{2685aa5aa1bb8e7d1e68d5f3cfcce8ae}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE 15th International Symposium on Wireless Communication Systems}
+      \field{title}{{5G} {URLLC}: Design Challenges and System Concepts}
+      \field{urlday}{20}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2018}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://ieeexplore.ieee.org/document/8491078
+      \endverb
+      \verb{url}
+      \verb https://ieeexplore.ieee.org/document/8491078
+      \endverb
+    \endentry
+    \entry{schulz2017urllc}{article}{}
+      \name{author}{15}{}{%
+        {{hash=6ec09003ecd62f1a438a30bb0c8e0dff}{%
+           family={Schulz},
+           familyi={S\bibinitperiod},
+           given={Philipp},
+           giveni={P\bibinitperiod}}}%
+        {{hash=b0ef6eaa11f27e0a6afbbb85663ed5bd}{%
+           family={Matthe},
+           familyi={M\bibinitperiod},
+           given={Maximilian},
+           giveni={M\bibinitperiod}}}%
+        {{hash=6c1ddb2b94463975a7473d35f720b506}{%
+           family={Klessig},
+           familyi={K\bibinitperiod},
+           given={Henrik},
+           giveni={H\bibinitperiod}}}%
+        {{hash=e8f526e71b80226ef6cae57e9d4d7799}{%
+           family={Simsek},
+           familyi={S\bibinitperiod},
+           given={Meryem},
+           giveni={M\bibinitperiod}}}%
+        {{hash=0a752d0525dc811f67df86d62d136d0b}{%
+           family={Fettweis},
+           familyi={F\bibinitperiod},
+           given={Gerhard},
+           giveni={G\bibinitperiod}}}%
+        {{hash=009dcfc5b4a4c0674246410176de5ff2}{%
+           family={Ansari},
+           familyi={A\bibinitperiod},
+           given={Junaid},
+           giveni={J\bibinitperiod}}}%
+        {{hash=5946b1ed3617cb9aad5a32ca3db29712}{%
+           family={Ashraf},
+           familyi={A\bibinitperiod},
+           given={Shehzad\bibnamedelima Ali},
+           giveni={S\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=c40f6a08567f182b71ed82123922fda9}{%
+           family={Almeroth},
+           familyi={A\bibinitperiod},
+           given={Bjorn},
+           giveni={B\bibinitperiod}}}%
+        {{hash=0224196bcb436676ae4e1cce35c719e4}{%
+           family={Voigt},
+           familyi={V\bibinitperiod},
+           given={Jens},
+           giveni={J\bibinitperiod}}}%
+        {{hash=ec1b3af8f6d2c965b2c10bc9c020e096}{%
+           family={Riedel},
+           familyi={R\bibinitperiod},
+           given={Ingo},
+           giveni={I\bibinitperiod}}}%
+        {{hash=408f7a6322f53394a64233e351f49571}{%
+           family={Puschmann},
+           familyi={P\bibinitperiod},
+           given={Andreas},
+           giveni={A\bibinitperiod}}}%
+        {{hash=21e1fdf55e108ea032e0c01e95c3309d}{%
+           family={Mitschke},
+           familyi={M\bibinitperiod},
+           given={Adam},
+           giveni={A\bibinitperiod}}}%
+        {{hash=723ca8c613a12573fce834ca8ccb7737}{%
+           family={Iqbal},
+           familyi={I\bibinitperiod},
+           given={Mujtaba},
+           giveni={M\bibinitperiod}}}%
+        {{hash=5d3afb0096e44b06dbd00cc6852d044d}{%
+           family={Ratajczak},
+           familyi={R\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod}}}%
+        {{hash=cdf65484b5012a2935c13dec51a1b5d6}{%
+           family={Marsch},
+           familyi={M\bibinitperiod},
+           given={Patrick},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{844255532f85be030d027e2f7b12fb77}
+      \strng{fullhash}{0a8e93c755e4fbe0d38d9d6f4f97095d}
+      \strng{bibnamehash}{844255532f85be030d027e2f7b12fb77}
+      \strng{authorbibnamehash}{844255532f85be030d027e2f7b12fb77}
+      \strng{authornamehash}{844255532f85be030d027e2f7b12fb77}
+      \strng{authorfullhash}{0a8e93c755e4fbe0d38d9d6f4f97095d}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Communications Magazine}
+      \field{number}{2}
+      \field{title}{Latency Critical {IoT} Applications in {5G}: Perspective on the Design of Radio Interface and Network Architecture}
+      \field{urlday}{20}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{volume}{55}
+      \field{year}{2017}
+      \field{urldateera}{ce}
+      \field{pages}{70\bibrangedash 78}
+      \range{pages}{9}
+      \verb{urlraw}
+      \verb https://ieeexplore.ieee.org/document/7842391
+      \endverb
+      \verb{url}
+      \verb https://ieeexplore.ieee.org/document/7842391
+      \endverb
+    \endentry
+    \entry{ouden2022}{article}{}
+      \name{author}{3}{}{%
+        {{hash=ed59d4f633b8cbd964aa4332c99fa19f}{%
+           family={Ouden},
+           familyi={O\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=b905feae43d8dd86aafb8ca21b3c767f}{%
+           family={Ho},
+           familyi={H\bibinitperiod},
+           given={V.},
+           giveni={V\bibinitperiod}}}%
+        {{hash=5cd0360088e505196c64b183a43babd6}{%
+           family={Smagt},
+           familyi={S\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{b30013ffbf0e8f6d3d0e662e04f89264}
+      \strng{fullhash}{bdb9202365b836107f576d4bb876d514}
+      \strng{bibnamehash}{bdb9202365b836107f576d4bb876d514}
+      \strng{authorbibnamehash}{bdb9202365b836107f576d4bb876d514}
+      \strng{authornamehash}{b30013ffbf0e8f6d3d0e662e04f89264}
+      \strng{authorfullhash}{bdb9202365b836107f576d4bb876d514}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Design and Evaluation of Remote Driving Architecture on 4G and 5G Mobile Networks}
+      \field{urlday}{5}
+      \field{urlmonth}{12}
+      \field{urlyear}{2025}
+      \field{year}{2022}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.frontiersin.org/journals/future-transportation/articles/10.3389/ffutr.2021.801567/full
+      \endverb
+      \verb{url}
+      \verb https://www.frontiersin.org/journals/future-transportation/articles/10.3389/ffutr.2021.801567/full
+      \endverb
+    \endentry
+    \entry{tailscale_what}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=d305e68eda6161d1053e75db0f0542d0}{%
+           family={{Tailscale Inc.}},
+           familyi={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{d305e68eda6161d1053e75db0f0542d0}
+      \strng{fullhash}{d305e68eda6161d1053e75db0f0542d0}
+      \strng{bibnamehash}{d305e68eda6161d1053e75db0f0542d0}
+      \strng{authorbibnamehash}{d305e68eda6161d1053e75db0f0542d0}
+      \strng{authornamehash}{d305e68eda6161d1053e75db0f0542d0}
+      \strng{authorfullhash}{d305e68eda6161d1053e75db0f0542d0}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{What is Tailscale?}
+      \field{urlday}{20}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://tailscale.com/kb/1151/what-is-tailscale
+      \endverb
+      \verb{url}
+      \verb https://tailscale.com/kb/1151/what-is-tailscale
+      \endverb
+    \endentry
+    \entry{donenfeld2017wireguard}{inproceedings}{}
+      \name{author}{1}{}{%
+        {{hash=89a0a14a69a648cd9d137add3308425b}{%
+           family={Donenfeld},
+           familyi={D\bibinitperiod},
+           given={Jason\bibnamedelima A.},
+           giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{89a0a14a69a648cd9d137add3308425b}
+      \strng{fullhash}{89a0a14a69a648cd9d137add3308425b}
+      \strng{bibnamehash}{89a0a14a69a648cd9d137add3308425b}
+      \strng{authorbibnamehash}{89a0a14a69a648cd9d137add3308425b}
+      \strng{authornamehash}{89a0a14a69a648cd9d137add3308425b}
+      \strng{authorfullhash}{89a0a14a69a648cd9d137add3308425b}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Network and Distributed System Security Symposium (NDSS)}
+      \field{title}{{WireGuard}: Next Generation Kernel Network Tunnel}
+      \field{urlday}{20}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2017}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.ndss-symposium.org/ndss2017/ndss-2017-programme/wireguard-next-generation-kernel-network-tunnel/
+      \endverb
+      \verb{url}
+      \verb https://www.ndss-symposium.org/ndss2017/ndss-2017-programme/wireguard-next-generation-kernel-network-tunnel/
+      \endverb
+    \endentry
+    \entry{calyam2012}{inproceedings}{}
+      \name{author}{4}{}{%
+        {{hash=a108069be6af101355d42d32dd6a3ac9}{%
+           family={Calyam},
+           familyi={C\bibinitperiod},
+           given={Prasad},
+           giveni={P\bibinitperiod}}}%
+        {{hash=e55ad303199ad5d6f966c662021c362d}{%
+           family={Ekambaram},
+           familyi={E\bibinitperiod},
+           given={Vignesh},
+           giveni={V\bibinitperiod}}}%
+        {{hash=86a36c79bc550a731425d2e9c9b23612}{%
+           family={Berryman},
+           familyi={B\bibinitperiod},
+           given={Allan},
+           giveni={A\bibinitperiod}}}%
+        {{hash=6f96de3f6542298cea55e6e8c667c340}{%
+           family={Van\bibnamedelima Beusekom},
+           familyi={V\bibinitperiod\bibinitdelim B\bibinitperiod},
+           given={Rodney},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{9a16862f62729b7921189ef1d22e4af9}
+      \strng{fullhash}{ae123201489ea1704acfe0bd7a553111}
+      \strng{bibnamehash}{9a16862f62729b7921189ef1d22e4af9}
+      \strng{authorbibnamehash}{9a16862f62729b7921189ef1d22e4af9}
+      \strng{authornamehash}{9a16862f62729b7921189ef1d22e4af9}
+      \strng{authorfullhash}{ae123201489ea1704acfe0bd7a553111}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{IEEE International Conference on Communications}
+      \field{title}{A Loss and Recovery Model for {RTP} Media Streams}
+      \field{urlday}{20}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2012}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://ieeexplore.ieee.org/document/6364439
+      \endverb
+      \verb{url}
+      \verb https://ieeexplore.ieee.org/document/6364439
+      \endverb
+    \endentry
+    \entry{pekec2023}{article}{}
+      \name{author}{3}{}{%
+        {{hash=53fd7715f971e8078c8051eea1cd3080}{%
+           family={Pekec},
+           familyi={P\bibinitperiod},
+           given={Slobodan},
+           giveni={S\bibinitperiod}}}%
+        {{hash=b758b9d08a49887c3f523934244e25eb}{%
+           family={Vucic},
+           familyi={V\bibinitperiod},
+           given={Dragan},
+           giveni={D\bibinitperiod}}}%
+        {{hash=50a03c05c82f034384fc25f4e026f210}{%
+           family={Blagojevic},
+           familyi={B\bibinitperiod},
+           given={Vladimir},
+           giveni={V\bibinitperiod}}}%
+      }
+      \strng{namehash}{2c96881667fd015f667d221ec7b4ca30}
+      \strng{fullhash}{28256aa2bccb5339ba12f80fefd0e66d}
+      \strng{bibnamehash}{28256aa2bccb5339ba12f80fefd0e66d}
+      \strng{authorbibnamehash}{28256aa2bccb5339ba12f80fefd0e66d}
+      \strng{authornamehash}{2c96881667fd015f667d221ec7b4ca30}
+      \strng{authorfullhash}{28256aa2bccb5339ba12f80fefd0e66d}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Sensors}
+      \field{title}{Impact of Packet Loss Rate on Quality of Compressed High Resolution Videos}
+      \field{urlday}{20}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2023}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://pmc.ncbi.nlm.nih.gov/articles/PMC10007065/
+      \endverb
+      \verb{url}
+      \verb https://pmc.ncbi.nlm.nih.gov/articles/PMC10007065/
+      \endverb
+    \endentry
+    \entry{linode_sar}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=3cee0d5c7f164d42c35d0964f36d7b51}{%
+           family={{Linode}},
+           familyi={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{3cee0d5c7f164d42c35d0964f36d7b51}
+      \strng{fullhash}{3cee0d5c7f164d42c35d0964f36d7b51}
+      \strng{bibnamehash}{3cee0d5c7f164d42c35d0964f36d7b51}
+      \strng{authorbibnamehash}{3cee0d5c7f164d42c35d0964f36d7b51}
+      \strng{authornamehash}{3cee0d5c7f164d42c35d0964f36d7b51}
+      \strng{authorfullhash}{3cee0d5c7f164d42c35d0964f36d7b51}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{How to Use the System Activity Reporter ({sar})}
+      \field{urlday}{20}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2021}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.linode.com/docs/guides/how-to-use-sar/
+      \endverb
+      \verb{url}
+      \verb https://www.linode.com/docs/guides/how-to-use-sar/
+      \endverb
+    \endentry
+    \entry{sara2019}{article}{}
+      \name{author}{3}{}{%
+        {{hash=bac74c079939c08e62ec4a024acf109e}{%
+           family={Sara},
+           familyi={S\bibinitperiod},
+           given={Umme},
+           giveni={U\bibinitperiod}}}%
+        {{hash=d24ec121fdcaebf5e4885d41ba57cf31}{%
+           family={Akter},
+           familyi={A\bibinitperiod},
+           given={Morium},
+           giveni={M\bibinitperiod}}}%
+        {{hash=5ce83ba4caef2e38a8c3c89aa49f1e71}{%
+           family={Uddin},
+           familyi={U\bibinitperiod},
+           given={Mohammad\bibnamedelima Shorif},
+           giveni={M\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \strng{namehash}{a488872b9cb5d38cb36458da87a28ad8}
+      \strng{fullhash}{392689362eb0e1b9e9f90614345aa43e}
+      \strng{bibnamehash}{392689362eb0e1b9e9f90614345aa43e}
+      \strng{authorbibnamehash}{392689362eb0e1b9e9f90614345aa43e}
+      \strng{authornamehash}{a488872b9cb5d38cb36458da87a28ad8}
+      \strng{authorfullhash}{392689362eb0e1b9e9f90614345aa43e}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Computer and Communications}
+      \field{number}{3}
+      \field{title}{Image Quality Assessment through {FSIM}, {SSIM}, {MSE} and {PSNR}: A Comparative Study}
+      \field{urlday}{20}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{volume}{7}
+      \field{year}{2019}
+      \field{urldateera}{ce}
+      \field{pages}{8\bibrangedash 18}
+      \range{pages}{11}
+      \verb{urlraw}
+      \verb https://www.scirp.org/journal/paperinformation?paperid=90911
+      \endverb
+      \verb{url}
+      \verb https://www.scirp.org/journal/paperinformation?paperid=90911
+      \endverb
+    \endentry
+    \entry{mittal2012}{article}{}
+      \name{author}{3}{}{%
+        {{hash=5140f90dfa1ff2db127d5ad357e881ea}{%
+           family={Mittal},
+           familyi={M\bibinitperiod},
+           given={Anish},
+           giveni={A\bibinitperiod}}}%
+        {{hash=3af593b8b14233bbb066d767c7328d37}{%
+           family={Moorthy},
+           familyi={M\bibinitperiod},
+           given={Anush\bibnamedelima Krishna},
+           giveni={A\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=1e2de997cf1c7cee7631262a0088dc8c}{%
+           family={Bovik},
+           familyi={B\bibinitperiod},
+           given={Alan\bibnamedelima Conrad},
+           giveni={A\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+      }
+      \strng{namehash}{50dd36f3e8067f1024d2048746a2495a}
+      \strng{fullhash}{d8b8f3f53a03d5f8924ffabd5cc01572}
+      \strng{bibnamehash}{d8b8f3f53a03d5f8924ffabd5cc01572}
+      \strng{authorbibnamehash}{d8b8f3f53a03d5f8924ffabd5cc01572}
+      \strng{authornamehash}{50dd36f3e8067f1024d2048746a2495a}
+      \strng{authorfullhash}{d8b8f3f53a03d5f8924ffabd5cc01572}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Image Processing}
+      \field{number}{12}
+      \field{title}{No-Reference Image Quality Assessment in the Spatial Domain}
+      \field{urlday}{20}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{volume}{21}
+      \field{year}{2012}
+      \field{urldateera}{ce}
+      \field{pages}{4695\bibrangedash 4708}
+      \range{pages}{14}
+      \verb{urlraw}
+      \verb https://live.ece.utexas.edu/publications/2012/TIP%20BRISQUE.pdf
+      \endverb
+      \verb{url}
+      \verb https://live.ece.utexas.edu/publications/2012/TIP%20BRISQUE.pdf
+      \endverb
+    \endentry
+    \entry{montgomery2017}{book}{}
+      \name{author}{1}{}{%
+        {{hash=7d4a838891cb5c31eb1e3e089777efa0}{%
+           family={Montgomery},
+           familyi={M\bibinitperiod},
+           given={Douglas\bibnamedelima C.},
+           giveni={D\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+      }
+      \strng{namehash}{7d4a838891cb5c31eb1e3e089777efa0}
+      \strng{fullhash}{7d4a838891cb5c31eb1e3e089777efa0}
+      \strng{bibnamehash}{7d4a838891cb5c31eb1e3e089777efa0}
+      \strng{authorbibnamehash}{7d4a838891cb5c31eb1e3e089777efa0}
+      \strng{authornamehash}{7d4a838891cb5c31eb1e3e089777efa0}
+      \strng{authorfullhash}{7d4a838891cb5c31eb1e3e089777efa0}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{9th}
+      \field{title}{Design and Analysis of Experiments}
+      \field{year}{2017}
+    \endentry
+  \enddatalist
+\endrefsection
 \endinput
 

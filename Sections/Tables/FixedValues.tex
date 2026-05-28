@@ -1,0 +1,42 @@
+\begin{table}[h] % chktex 44
+    \centering
+    \caption{Fixed Configuration Values for the Video Streaming System}
+    \label{tab:fixed_values}
+    \begin{tabular}{|l|c|l|}
+    \hline
+    \textbf{Parameter} & 
+    \textbf{Value} & 
+    \textbf{Notes} \\
+    \hline
+    Number of cameras   & 3 & --- \\
+    \hline
+    RTSP port           & 554 & TCP connection \\
+    \hline
+    RTSP stream path    & \texttt{/Streaming/Channels/101} & Per camera \\
+    \hline
+    RTSP source latency & 0 ms & --- \\
+    \hline
+    Target bitrate      & 8200 kbps & Per camera \\
+    \hline
+    Key-frame interval (I-frame)  & 15 & frames \\
+    \hline
+    Encoder tune & zerolatency & H.264/H.265 \\
+    \hline
+    Encoder speed preset & ultrafast & H.264/H.265 \\
+    \hline
+    H.264 Profile & Baseline & --- \\
+    \hline
+    RTP payload type & 96 & Dynamic PT (H.264/H.265) \\
+    \hline
+    RTP payload type & 26 & Static PT (MJPEG)  \\
+    \hline
+    RTP config-interval & 1 & SPS/PPS per keyframe \\
+    \hline
+    UDP sink sync & false & No clock sync \\
+    \hline
+    Sender queue size buffer & 2 frames & leaky downstream \\
+    \hline
+    Receiver queue size buffer & 1 frame & leaky downstream \\
+    \hline
+    \end{tabular}
+\end{table}

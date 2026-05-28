@@ -1,0 +1,27 @@
+\begin{table}[H]
+    \centering
+    \caption{Codec Experiment Schedule}\label{tab:codec_schedule}
+    \begin{tabular}{|l|l|c|l|}
+    \hline
+    \textbf{Test} & \textbf{Codec} & \textbf{Resolution} & \textbf{Purpose} \\
+    \hline
+    C1 & H.264         & 1080p & Baseline \\
+    \hline
+    C2 & H.264 No transcoding  & 1080p & Effect of no Transcoding \\
+    \hline
+    C3 & H.264         & 720p  & Resolution effect on H.264 \\
+    \hline
+    C4 & H.264 w/ GPU  & 1080p & Compare GPU v CPU Encoding for H.264 \\
+    \hline
+    C5 & H.265         & 1080p & Compare H.264 v H.265 \\ 
+    \hline
+    C6 & H.265 No transcoding & 1080p & Effect of no Transcoding \\
+    \hline
+    C7 & H.265         & 720p  & Resolution effect on H.265 \\
+    \hline
+    C8 & H.265 w/ GPU  & 1080p & Compare GPU v CPU encoding for H.265 \\
+    \hline
+    C9 & MJPEG         & 1080p & Compare MJPEG v H.264 \\
+    \hline
+    \end{tabular}
+\end{table}

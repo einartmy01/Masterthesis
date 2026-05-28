@@ -1,0 +1,21 @@
+\begin{table}[H]
+    \centering
+    \caption{Packet loss statistics for Transport experiment tests}\label{tab:packetloss_transport}
+    \begin{tabular}{|l|l|c|c|c|c|}
+    \hline
+    \textbf{Test} & \textbf{Equipment}  & \shortstack{\textbf{Sent}\\ \textbf{packages [n]}} & \shortstack{\textbf{Received}\\\textbf{packages [n]}} & \shortstack{\textbf{Packet}\\\textbf{loss [n]}} & \shortstack{\textbf{Packet}\\\textbf{loss [\%]}} \\
+    \hline
+    T1 & UDP RTP & 427,429 & 423,667 & 3,762 & 0.88\% \\
+    \hline
+    T2 & UDP RTP No Transcode & 255,418 & 254,574 & 844 & 0.33\% \\
+    \hline
+    T3 & UDP SRTP & 471,167 & 466,688 & 4,479 & 0.95\% \\
+    \hline
+    T4 & TCP RTP & 319,317 & 319,316 & 1 & 0.00\% \\
+    \hline
+    T5 & UDP RTP low bandwidth & 341,948 & 3,161 & 338,787 & 99.08\% \\
+    \hline
+    T6 & TCP RTP low bandwidth & 184,983 & 159,377 & 25,606 & 13.84\% \\
+    \hline
+    \end{tabular}
+\end{table}

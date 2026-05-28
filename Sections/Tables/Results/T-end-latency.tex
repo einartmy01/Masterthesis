@@ -1,0 +1,21 @@
+\begin{table}[H]
+    \centering
+    \caption{End-to-end latency statistics for transport protocol experiment}\label{tab:end_transport_latency}
+    \begin{tabular}{|l|l|c|c|c|c|}
+    \hline
+    \textbf{Test} & \textbf{Equipment} & \textbf{Mean [ms]} & \textbf{Min [ms]} & \textbf{Max [ms]} & \textbf{95p [ms]} \\
+    \hline
+    T1 & UDP RTP & 54.450 & 0.129 & 1110.252 & 135.460\\
+    \hline
+    T2 & UDP RTP No Transcode & 50.402 & 0.044 & 1027.766 & 153.651  \\
+    \hline
+    T3 & UDP SRTP & 59.624 & 0.124 & 1116.140 & 152.730 \\
+    \hline
+    T4 & TCP RTP & 63.249 & 3.926 & 727.341 & 159.575  \\
+    \hline
+    T5 & UDP RTP low bandwidth & 162667.534 & 0.135 & 291298.476 & 259548.801\\
+    \hline
+    T6 & TCP RTP low bandwidth & 9504.362 & 1940.910 & 35797.761 & 30329.290 \\
+    \hline
+    \end{tabular}
+\end{table}

@@ -6,33 +6,153 @@
 
 
 \subsection{Experimental Methodology}
-This chapter describes how the experimental work in this thesis was designed, conducted, and evaluated. It covers the design of experiments, the test setup and equipment used and the procedure followed during testing.
+This subchapter describes how the experimental work in this thesis was designed, conducted, and evaluated. It covers the design of experiments, the test setup and equipment used and the procedure followed during testing.
 
-% Introduce the experimental methodology and objectives.
+The experiments in this thesis are designed to evaluate how different pipeline configurations affect end-to-end streaming latency, video quality and resource usage. To do this in a structured way, the work draws on the principles of Design of Experiments (DoE), which is a structured way of planning which tests to run and in what order so that the results can accurately portray what has been tested. Rather than testing things randomly or by intuition, DoE ensures that the variables you care about are tested systematically and that the conclusions you draw are based on the data and not on chance~\cite{montgomery2017}.
+
+The experimental design follows the One Factor At a Time (OFAT) strategy. This means one variable is changed between configurations while all others are kept at a fixed baseline value. Montgomery describes OFAT as a well established approach when the goal is to understand the individual contribution of each factor separately~\cite{montgomery2017}. However, even with just changing a factor at the time, some of the testing move over to measure how some of the different factors also interact with each other.
 
 \subsubsection{Design of Experiments}
-The experiments in this thesis are designed to evaluate how different pipeline configurations affect end-to-end streaming latency, video quality and resource usage. To do this in a structured way, the work draws on the principles of Design of Experiments (DoE), which is a formal framework for planning tests so that the results can be interpreted clearly and with confidence \cite{montgomery2017}.
-
-The experimental design follows the One Factor At a Time (OFAT) strategy. This means one variable is changed between configurations while all others are kept at a fixed baseline value. Montgomery describes OFAT as a well established approach when the goal is to understand the individual contribution of each factor separately, rather than exploring how factors interact with each other \cite{montgomery2017}.
 
 The factors tested in this thesis are codec, resolution, transport protocol, encryption, bandwidth condition and encoding method. While GStreamer allows a large number of additional parameters to be adjusted, such as buffer sizes, queue configurations, bitrate control modes and keyframe intervals, expanding the test matrix further was not feasible within the time constraints of a single master thesis. The chosen parameters are considered sufficient to identify the most significant performance differences relevant to the use case.
 
+\input{Sections/Tables/TransportExpSchedule.tex}
+\input{Sections/Tables/CodecExpSchedule.tex}
+
+\begin{itemize}
+    \item \textbf{T2}: As described in Chapter~\ref{chap:systemdesign} the pipeline used for most of the tests are transcoded. For this reason, a test with no transcoding, just passthrough of the video stream was deemed useful to compare how much effect the transcoding has on the video, especially compression and latency. 
+    \item \textbf{T3}: As this project will eventually be used for critical infrastructure of a country, security issues will be much more important and therefore a test with encrypted stream was found reasonable.
+    \item \textbf{T4}: To decide which of the transport protocols most suitable for a RTO system, a test with comparison is needed.
+    \item \textbf{T5/T6}: To simulate real life conditions with unstable and unpredictable bandwidth along train tracks. Evaluating both transport under bandwidth limitations is necessary to get a fuller picture.
+\end{itemize}
+ 
+\begin{itemize}
+    \item \textbf{C2}: A no transcoding run will be very important especially when looking at the effect of which encoder to use. 
+    \item \textbf{C3}: When operating a remote vehicle through a video stream, quality is important. For that reason i have added a 720p encoding to the experiment. As it can decrease workload of encoder and maybe keep quality better and stable.
+    \item \textbf{C4}: Encoding is a heavy process, comparing results where GPU is used to help reduce the workload of the CPU is vital to decide what equipment to use forward.
+    \item \textbf{C5}: To compare two of the most common encoders. An very important choice to make for a video stream is which encoder. It will also work of some sort of baseline for H.265 when we move on to change other component changes.
+    \item \textbf{C6}: Adding a comparable no transcoding test with H.265 is crucial for the result will be directly comparable with test C2, and more close to real scenario of remote operations.
+    \item \textbf{C7}: Compare how H.265 handle 720p compared to H.264 will give valuable data to decide between H.264 and H.265 if a lower resolution is preferred. 
+    \item \textbf{C8}: As H.265 encoding is more complicated and extensive workload, using a GPU to relieve the CPU of the workload will be import for the choice of equipment used.
+    \item \textbf{C9}: To compare to another encoding and video stream strategy. 
+\end{itemize}
+ 
+For test T1-T6, a lab experiment was deemed adequate as the tested scenarios are not as effected by real world test, aspect as moving modem or moving video have little effect on the transport layer and the comparison will still hold for lab environment.
 The outcomes measured for each configuration are end-to-end latency, CPU usage and visual quality. Packet loss and throughput are also recorded for configurations that involve simulated poor network conditions. All configurations are described in the following section.
 % Describe the experimental design, variables, and planning.
+As this experiment was design to mimic a remote train operation, but with a car as replacement, picking route for test was crucial. The route had to include surroundings similar as a tramway track. The route as shown at Figure~\ref{fig:road} display the route that every test was performed on. The road stretched from Klæbuveien 125, 7031 Trondheim to the roundabout at Klæbuveien 128 and back again. This specific route was chosen for a set of factors. It provides dynamic surrounding containing of open view, close trees and building. It is a low traffic road, allowing stable speed crucial to measure performance under movement and open view for the surrounding. The road is very flat //Possible photo// and straight forward, as was evaluated to mimic most of train tracks and views from a locomotive. It also provided 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.3\textwidth]{Images/Test&Equipment/Road.png}
+    \caption{Route used for experiment}
+    \label{fig:road}
+\end{figure}
 
-\paragraph{Table}
-% Insert experiment design table here.
+To be able to execute the tests two people was needed. The first person was responsible for starting the sender, drive the route and end the sender script. The second person was responsible for starting and ending the receiver and notify if any abnormalities occurred. In the Figure~\ref{XXX} is the main physical setup of the experiment.
+%Make a diagram of the test setup
+
+
+
+All the cameras was set at configuration to the values at Table~\ref{tab:camera_stream_config} before entering the sender computer. Except for the C6 test as it demanded Video encoding to be H.265.
+
+\input{Sections/Tables/CameraValues.tex}
+
+For all the possible values that GStreamer allows to adjust when designing a video stream pipeline, the values of Table~\ref{tab:fixed_values} was set standard for each of the test except when the test specifies something else. This to ensure the methodology of OFAT where only one factor was changed at the time. These values was also chosen after an iterative design process explain in Chapter~\ref{chap:systemdesign}.
+
+\input{Sections/Tables/FixedValues}
+
 
 \subsubsection{Test Setup and Equipment}
 
-% Describe the hardware, software, instruments, and setup used.
+All the the test equipment is listed below in Table~\ref{tab:test_equipment}. The cameras was mounted on the car dashboard with small pieces of ducktape to ensure stable recording. The modem was also placed there as you can see in Figure~\ref{fig:dashboardview} to ensure good connection. The sender computer an was connected with Cat 6 cables and placed stable in the passenger seat for the duration of the experiment as shown in Figure~\ref{fig:carsetup}. The receiver was placed at NTNU lab location for the full duration as it would simulate closest to a control room of a remote operation.
 
-\paragraph{Table}
-% Insert equipment/setup table here.
+\input{Sections/Tables/TestEquipment.tex}
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}[b]{0.32\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Images/Test&Equipment/Cam0Outside (Copy).jpg}
+        \caption{Cam 0}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.32\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Images/Test&Equipment/Cam1Outside (Copy).jpg}
+        \caption{Cam 1}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.32\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Images/Test&Equipment/Cam2Outside (Copy).jpg}
+        \caption{Cam 2}
+    \end{subfigure}
+    \caption{Cameras outside view}
+    \label{fig:camerasfromoutside}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{Images/Test&Equipment/DashboardView.jpg}
+    \caption{Dashboard view from inside the car}
+    \label{fig:dashboardview}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{Images/Test&Equipment/Computers.jpg}
+    \caption{Computers used in all tests}
+    \label{fig:computers}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{Images/Test&Equipment/CarSetup2.jpg}
+    \caption{Car setup for experiment}
+    \label{fig:carsetup}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}[b]{0.35\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Images/Test&Equipment/NetworkModem.jpg}
+        \caption{Network Modem TRB500}
+        \label{fig:modem}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.55\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Images/Test&Equipment/NetworkSwitch.jpg}
+        \caption{Network Switch TP-Link TL-SG108E}
+        \label{fig:switch}
+    \end{subfigure}
+    \caption{Network Switch and Network Modem}
+    \label{fig:networkequipment}
+\end{figure}
+
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=0.9\textwidth]{Images/Test&Equipment/PowerSupply.jpg}
+%     \caption{Power supply for experiment}
+%     \label{fig:powersupply}
+% \end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{Images/Test&Equipment/LabSetup.jpg}
+    \caption{Setup for lab experiment tests}
+    \label{fig:labsetup}
+\end{figure}
+
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=0.6\textwidth]{Images/Test&Equipment/ReceiverComputer.jpeg}
+%     \caption{Receiver computer receiving images}
+%     \label{fig:receiver}
+% \end{figure}
+
+
 
 \subsubsection{Test Procedure}
 
-% Explain the step-by-step testing procedure.
+Steps of test procedure.
+The car was set up ready for the test. A phone connection was established between the Person S in the car, and Person R at NTNU. Communication and agreement of which test was established. A test run to warmup the cameras, encoder and decoder. Then receiver was started ready to receive video stream and logging was initiated, then the sender was activated with its own logger. The car was then put out to the road and ran the route. When returned, the sender was turned off and receiver the same. Log files was saved and confirmation of next test was agreed upon before repeating the process for C1-C9. C6 was delayed as it demanded new configuration of the cameras, with a break of a couple minutes before proceeding as the rest of the tests.
 
 \subsubsection{Controlling for Unmeasured and Hidden Variables}
 
@@ -40,6 +160,7 @@ The outcomes measured for each configuration are end-to-end latency, CPU usage a
 
 \subsection{Measurement Methodology}
 
+Logging and calculations, how was it logged, method?
 % Describe the measurement methodology used in the project.
 
 \subsubsection{How You Used That Design During Testing}
@@ -99,7 +220,4 @@ The experimental research component covers the testing and evaluation phase. Dra
 Together these two approaches reflect the dual nature of the thesis: it is both a development project and a measurement study, and the methodology is designed to support both goals.
 
 \end{comment}
-
-\subsection{Experimental Methodology}
-\subsubsection{Measurement Method}
 

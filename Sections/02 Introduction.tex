@@ -48,7 +48,7 @@ The scope of this thesis covers the design, implementation and experimental eval
 
 The experimental evaluation focuses on the parameters identified as most relevant to remote train operation based on prior research [source: prosjektoppgave], and selected based on time and hardware availability. The configurations tested include codec selection (H.264, H.265 and MJPEG), transport protocol (UDP and TCP), encryption overhead (SRTP), bandwidth conditions, resolution, and GPU versus CPU based encoding. While GStreamer allows a large number of additional parameters to be adjusted, such as buffer sizes, queue configurations, bitrate control modes and keyframe intervals, expanding the test matrix further was not feasible within the time constraints of a single master thesis. The chosen parameters are considered sufficient to identify the most significant performance differences relevant to the use case.
 
-Latency is measured end to end between the point where an RTP packet enters the sender pipeline and the point where the corresponding decoded frame arrives at the receiver display sink. Camera capture latency and screen rendering latency are not included in these measurements, as they occur outside the instrumented portion of the pipeline and are considered largely constant across configurations. Clock synchronization between the sender and receiver relies on internet based time sources, introducing a small margin of uncertainty estimated at a few milliseconds, which is acknowledged when interpreting absolute latency values.
+Latency is measured end to end between the point where an RTP packet enters the sender pipeline and the point where the corresponding decoded frame arrives at the receiver display sink. Camera capture latency and screen rendering latency are not included in these measurements, as they occur outside the instrumented part of the pipeline and are considered largely constant across configurations. Clock synchronization between the sender and receiver relies on internet based time sources, introducing a small margin of uncertainty estimated at a few milliseconds, which is acknowledged when interpreting absolute latency values.
 
 The thesis does not include testing on an actual operational train. A moving vehicle was used to simulate train conditions, but real world railway infrastructure, operational speeds, and trackside network coverage are outside the scope of this work and represent a natural next step for future validation.
 
@@ -60,8 +60,10 @@ The system is developed with reference to EN 50126, the European railway standar
 \end{comment}
 
 \subsection{Research Methodology}
+\begin{comment}
+
 \subsubsection{Literature and Knowledge acquisition}
-The knowledge needed to carry out this thesis was acquired through an iterative process that combined systematic literature review with hands-on practical exploration. This approach, often referred to as an Iterative Literature and Practice-Driven Approach, is characterized by a continuous cycle where theory and practice inform each other rather than following a strict linear sequence [Wohlin et al. (2012)]. Instead of completing all literature review before beginning practical work, the two activities run in parallel, with new practical challenges prompting targeted literature searches and new theoretical insights shaping the direction of experiments. This makes it particularly well suited for applied engineering research where the problem space is not fully known at the outset and understanding develops gradually through doing [Hevner et al. (2004) Saunders et al. (2019) ].
+The knowledge needed to carry out this thesis was acquired through an iterative process that combined systematic literature review with hands-on practical exploration. This approach, often referred to as an Iterative Literature and Practice-Driven Approach, is characterized by a continuous cycle where theory and practice inform each other rather than following a strict linear sequence~\cite{wohlin2012}. Instead of completing all literature review before beginning practical work, the two activities run in parallel, with new practical challenges prompting targeted literature searches and new theoretical insights shaping the direction of experiments. This makes it particularly well suited for applied engineering research where the problem space is not fully known at the outset and understanding develops gradually through doing.% [Hevner et al. (2004) Saunders et al. (2019) ].
 
 The process began by identifying the core knowledge areas required before any development could start. This included understanding the operational context of remote train operation and Automatic Train Operation, the fundamentals of video streaming and relevant transport protocols, and the capabilities and structure of GStreamer as a framework. These areas formed the initial scope of the literature review and gave enough grounding to begin practical work.
 
@@ -70,6 +72,7 @@ Academic literature was gathered primarily through Google Scholar and IEEE Xplor
 Once a sufficient theoretical foundation was in place, practical exploration began through hands-on work with GStreamer. Building and testing pipelines from the command line and through Python quickly revealed challenges that existing literature did not fully address, such as specific configuration trade-offs, unexpected latency behavior, and hardware compatibility issues. Each of these practical obstacles prompted a return to the literature, this time with more precise and targeted questions. New findings were then brought back into the development process, tested, and evaluated against real behaviour.
 
 This cycle of reading, building, observing, and searching again repeated throughout the entire development phase. The result is that the theoretical foundation of this thesis did not precede the practical work, but grew alongside it, shaped by the specific demands of the problem at hand.
+\end{comment}
 
 
 
@@ -105,6 +108,7 @@ To ensure the study is based on the relevant and current information, specific c
 
 
 \subsubsection{Search Queries and Refinement}
+\begin{comment}
 
 Several digital tools as mentioned below were used for this paper. The main purpose of the usage was to enhance clarity, assisting in latex, and in general increase quality. Specifics include writing reference list in correct format. Structuring sentences and paragraphs. Checking for typos and grammatical errors.
 
@@ -114,8 +118,11 @@ Several digital tools as mentioned below were used for this paper. The main purp
     \item Anthropic's Claude.ai for discussion and development of script syntax.
     \item Visual Studio Code: was used as the main LaTeX editor because of its powerful extensions for LaTeX support, syntax highlighting, and version control integration.
 \end{itemize}
+\end{comment}
 
 \subsection{Outline of Structure}
+\begin{comment}
+
 The remainder of this thesis is organized as follows:
 
 Chapter 2 presents the theoretical background underlying the work. This includes an overview of Automatic Train Operation and the role of remote driving at higher GoA levels, fundamentals of video streaming including codecs, transport protocols and payloading, an introduction to GStreamer and its core concepts, the main sources of latency in a streaming pipeline, relevant aspects of cellular and WiFi communication, and the metrics used to evaluate streaming performance.
@@ -129,3 +136,4 @@ Chapter 5 presents the experimental results. This covers a comparison of GStream
 Chapter 6 interprets and reflects on the results in relation to the research questions and the broader context of remote train operation.
 
 Chapter 7 summarizes the key findings and contributions of the thesis and outlines directions for future work, including testing on real railway infrastructure and further expansion of the configuration space.
+\end{comment}

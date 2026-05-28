@@ -1,8 +1,15 @@
 \babel@toc {british}{}\relax 
-\contentsline {figure}{\numberline {1}{\ignorespaces Three monitor tele operation simulator setup used by Neumeier et al.\ to evaluate the effect of latency on remote driving performance~\blx@tocontentsinit {0}\cite {neumeier2019}.}}{7}{figure.caption.3}%
-\contentsline {figure}{\numberline {2}{\ignorespaces Spatial redundancy~\blx@tocontentsinit {0}\cite {kondoz2010}.}}{8}{figure.caption.4}%
-\contentsline {figure}{\numberline {3}{\ignorespaces Temporal redundancy~\blx@tocontentsinit {0}\cite {kondoz2010}.}}{8}{figure.caption.4}%
-\contentsline {figure}{\numberline {4}{\ignorespaces Difference between HEVC, H.265 technology, and H.264 of methdod for encoding~\blx@tocontentsinit {0}\cite {blomqvist2018}.}}{9}{figure.caption.5}%
-\contentsline {figure}{\numberline {5}{\ignorespaces Physical Setup of Project}}{21}{figure.caption.6}%
-\contentsline {figure}{\numberline {6}{\ignorespaces Application and Transport layer Setup of Project}}{21}{figure.caption.7}%
-\contentsline {figure}{\numberline {7}{\ignorespaces Sequence Diagram between Sender and Camera before active Stream}}{22}{figure.caption.8}%
+\contentsline {figure}{\numberline {1}{\ignorespaces Three monitor tele operation simulator setup used by Neumeier et al.\ to evaluate the effect of latency on remote driving performance~\blx@tocontentsinit {0}\cite {neumeier2019}.}}{5}{figure.caption.3}%
+\contentsline {figure}{\numberline {2}{\ignorespaces Spatial redundancy~\blx@tocontentsinit {0}\cite {kondoz2010}.}}{6}{figure.caption.4}%
+\contentsline {figure}{\numberline {3}{\ignorespaces Temporal redundancy~\blx@tocontentsinit {0}\cite {kondoz2010}.}}{6}{figure.caption.4}%
+\contentsline {figure}{\numberline {4}{\ignorespaces Difference between HEVC, H.265 technology, and H.264 of methdod for encoding~\blx@tocontentsinit {0}\cite {blomqvist2018}.}}{7}{figure.caption.5}%
+\contentsline {figure}{\numberline {5}{\ignorespaces Physical Setup of Project}}{19}{figure.caption.6}%
+\contentsline {figure}{\numberline {6}{\ignorespaces Application and Transport layer Setup of Project}}{19}{figure.caption.7}%
+\contentsline {figure}{\numberline {7}{\ignorespaces Sequence Diagram between Sender and Camera before active Stream}}{20}{figure.caption.8}%
+\contentsline {figure}{\numberline {8}{\ignorespaces Route used for experiment}}{24}{figure.caption.12}%
+\contentsline {figure}{\numberline {9}{\ignorespaces Cameras outside view}}{25}{figure.caption.16}%
+\contentsline {figure}{\numberline {10}{\ignorespaces Dashboard view from inside the car}}{26}{figure.caption.17}%
+\contentsline {figure}{\numberline {11}{\ignorespaces Computers used in all tests}}{26}{figure.caption.18}%
+\contentsline {figure}{\numberline {12}{\ignorespaces Car setup for experiment}}{27}{figure.caption.19}%
+\contentsline {figure}{\numberline {13}{\ignorespaces Network Switch and Network Modem}}{27}{figure.caption.20}%
+\contentsline {figure}{\numberline {14}{\ignorespaces Setup for lab experiment tests}}{28}{figure.caption.21}%

@@ -1,0 +1,29 @@
+\begin{table}[H]
+    \centering
+    \caption{End-to-end latency statistics for codec configuration experiment}\label{tab:end_codec_latency}
+    \begin{tabular}{|l|l|c|c|c|c|}
+    \hline
+    \textbf{Test} & \textbf{Equipment} & \textbf{Mean [ms]} & \textbf{Min [ms]} & \textbf{Max [ms]} & \textbf{95p [ms]} \\
+    \hline
+    C1 & H.264 Baseline & 75.413 & 0.822 & 1148.923 & 175.838\\
+    \hline
+    C2 & H.264 No Transcode & 49.388 & 1.397 & 1061.807 & 127.313  \\
+    \hline
+    C3 & H.264 720p & 83.201 & 1.308 & 3282.287 & 180.338 \\
+    \hline
+    C4* & H.264 w/ GPU & 69.131 & 0.471 & 1071.768 & 181.877  \\
+    \hline
+    C5 & H.265 & 88.421 & 2.814 & 1260.000 & 216.629\\
+    \hline
+    C6 & H.265 No Transcode & 56.764 & 1.648 & 1117.141 & 137.009 \\
+    \hline
+    C7 & H.265 720p & 87.135 & 2.826 & 1440.926 & 205.924 \\
+    \hline
+    C8 & H.265 w/ GPU & 64.795 & 4.757 & 1093.532 & 175.455 \\
+    \hline
+    C9 & MJPEG & 193.143 & 7.669 & 1491.819 & 521.959  \\
+    \hline
+    \end{tabular}
+    \vspace{2pt}
+    {\footnotesize * Transit latency for C4 is substituted with the measured transit latency of C8, which had the nearest matching throughput (26.187 vs.\ 26.267~Mbps).}
+\end{table}

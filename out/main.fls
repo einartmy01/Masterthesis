@@ -509,27 +509,27 @@ INPUT ./Sections/03 Theory.tex
 INPUT ./Sections/03 Theory.tex
 INPUT ./Sections/03 Theory.tex
 INPUT ./Sections/03 Theory.tex
-INPUT ./Images/ThreeMonitorSetup.png
-INPUT ./Images/ThreeMonitorSetup.png
-INPUT Images/ThreeMonitorSetup.png
-INPUT ./Images/ThreeMonitorSetup.png
-INPUT ./Images/ThreeMonitorSetup.png
+INPUT ./Images/Theory/ThreeMonitorSetup.png
+INPUT ./Images/Theory/ThreeMonitorSetup.png
+INPUT Images/Theory/ThreeMonitorSetup.png
+INPUT ./Images/Theory/ThreeMonitorSetup.png
+INPUT ./Images/Theory/ThreeMonitorSetup.png
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmti10.tfm
-INPUT ./Images/SpatialRed.png
-INPUT ./Images/SpatialRed.png
-INPUT Images/SpatialRed.png
-INPUT ./Images/SpatialRed.png
-INPUT ./Images/SpatialRed.png
-INPUT ./Images/TemperoalRed.png
-INPUT ./Images/TemperoalRed.png
-INPUT Images/TemperoalRed.png
-INPUT ./Images/TemperoalRed.png
-INPUT ./Images/TemperoalRed.png
-INPUT ./Images/264265HEVC.png
-INPUT ./Images/264265HEVC.png
-INPUT Images/264265HEVC.png
-INPUT ./Images/264265HEVC.png
-INPUT ./Images/264265HEVC.png
+INPUT ./Images/Theory/SpatialRed.png
+INPUT ./Images/Theory/SpatialRed.png
+INPUT Images/Theory/SpatialRed.png
+INPUT ./Images/Theory/SpatialRed.png
+INPUT ./Images/Theory/SpatialRed.png
+INPUT ./Images/Theory/TemperoalRed.png
+INPUT ./Images/Theory/TemperoalRed.png
+INPUT Images/Theory/TemperoalRed.png
+INPUT ./Images/Theory/TemperoalRed.png
+INPUT ./Images/Theory/TemperoalRed.png
+INPUT ./Images/Theory/264265HEVC.png
+INPUT ./Images/Theory/264265HEVC.png
+INPUT Images/Theory/264265HEVC.png
+INPUT ./Images/Theory/264265HEVC.png
+INPUT ./Images/Theory/264265HEVC.png
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmtt10.tfm
 INPUT ./Sections/04 System Design.tex
 INPUT ./Sections/04 System Design.tex
@@ -537,33 +537,180 @@ INPUT ./Sections/04 System Design.tex
 INPUT ./Sections/04 System Design.tex
 INPUT ./Sections/04 System Design.tex
 INPUT ./Sections/04 System Design.tex
-INPUT ./Images/PhysicalSetup.png
-INPUT ./Images/PhysicalSetup.png
-INPUT Images/PhysicalSetup.png
-INPUT ./Images/PhysicalSetup.png
-INPUT ./Images/PhysicalSetup.png
-INPUT ./Images/ApplicationAndTransportSetup.png
-INPUT ./Images/ApplicationAndTransportSetup.png
-INPUT Images/ApplicationAndTransportSetup.png
-INPUT ./Images/ApplicationAndTransportSetup.png
-INPUT ./Images/ApplicationAndTransportSetup.png
-INPUT ./Images/SequenceDiagramCompCam.png
-INPUT ./Images/SequenceDiagramCompCam.png
-INPUT Images/SequenceDiagramCompCam.png
-INPUT ./Images/SequenceDiagramCompCam.png
-INPUT ./Images/SequenceDiagramCompCam.png
+INPUT ./Images/System/PhysicalSetup.png
+INPUT ./Images/System/PhysicalSetup.png
+INPUT Images/System/PhysicalSetup.png
+INPUT ./Images/System/PhysicalSetup.png
+INPUT ./Images/System/PhysicalSetup.png
+INPUT ./Images/System/ApplicationAndTransportSetup.png
+INPUT ./Images/System/ApplicationAndTransportSetup.png
+INPUT Images/System/ApplicationAndTransportSetup.png
+INPUT ./Images/System/ApplicationAndTransportSetup.png
+INPUT ./Images/System/ApplicationAndTransportSetup.png
+INPUT ./Images/System/SequenceDiagramCompCam.png
+INPUT ./Images/System/SequenceDiagramCompCam.png
+INPUT Images/System/SequenceDiagramCompCam.png
+INPUT ./Images/System/SequenceDiagramCompCam.png
+INPUT ./Images/System/SequenceDiagramCompCam.png
+INPUT ./Sections/Tables/IPSetup.tex
+INPUT Sections/Tables/IPSetup.tex
+INPUT ./Sections/Tables/IPSetup.tex
+INPUT Sections/Tables/IPSetup.tex
 INPUT ./Sections/05 Methodology.tex
 INPUT ./Sections/05 Methodology.tex
 INPUT ./Sections/05 Methodology.tex
 INPUT ./Sections/05 Methodology.tex
 INPUT ./Sections/05 Methodology.tex
 INPUT ./Sections/05 Methodology.tex
+INPUT ./Sections/Tables/TransportExpSchedule.tex
+INPUT Sections/Tables/TransportExpSchedule.tex
+INPUT ./Sections/Tables/TransportExpSchedule.tex
+INPUT Sections/Tables/TransportExpSchedule.tex
+INPUT ./Sections/Tables/CodecExpSchedule.tex
+INPUT Sections/Tables/CodecExpSchedule.tex
+INPUT ./Sections/Tables/CodecExpSchedule.tex
+INPUT Sections/Tables/CodecExpSchedule.tex
+INPUT ./Images/Test&Equipment/Road.png
+INPUT ./Images/Test&Equipment/Road.png
+INPUT Images/Test&Equipment/Road.png
+INPUT ./Images/Test&Equipment/Road.png
+INPUT ./Images/Test&Equipment/Road.png
+INPUT ./Sections/Tables/CameraValues.tex
+INPUT Sections/Tables/CameraValues.tex
+INPUT ./Sections/Tables/CameraValues.tex
+INPUT Sections/Tables/CameraValues.tex
+INPUT ./Sections/Tables/FixedValues.tex
+INPUT ./Sections/Tables/FixedValues.tex
+INPUT Sections/Tables/FixedValues.tex
+INPUT ./Sections/Tables/FixedValues.tex
+INPUT ./Sections/Tables/FixedValues.tex
+INPUT Sections/Tables/FixedValues.tex
+INPUT ./Sections/Tables/TestEquipment.tex
+INPUT Sections/Tables/TestEquipment.tex
+INPUT ./Sections/Tables/TestEquipment.tex
+INPUT Sections/Tables/TestEquipment.tex
+INPUT ./Images/Test&Equipment/Cam0Outside (Copy).jpg
+INPUT ./Images/Test&Equipment/Cam0Outside (Copy).jpg
+INPUT Images/Test&Equipment/Cam0Outside (Copy).jpg
+INPUT ./Images/Test&Equipment/Cam0Outside (Copy).jpg
+INPUT ./Images/Test&Equipment/Cam0Outside (Copy).jpg
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr9.tfm
+INPUT ./Images/Test&Equipment/Cam1Outside (Copy).jpg
+INPUT ./Images/Test&Equipment/Cam1Outside (Copy).jpg
+INPUT Images/Test&Equipment/Cam1Outside (Copy).jpg
+INPUT ./Images/Test&Equipment/Cam1Outside (Copy).jpg
+INPUT ./Images/Test&Equipment/Cam1Outside (Copy).jpg
+INPUT ./Images/Test&Equipment/Cam2Outside (Copy).jpg
+INPUT ./Images/Test&Equipment/Cam2Outside (Copy).jpg
+INPUT Images/Test&Equipment/Cam2Outside (Copy).jpg
+INPUT ./Images/Test&Equipment/Cam2Outside (Copy).jpg
+INPUT ./Images/Test&Equipment/Cam2Outside (Copy).jpg
+INPUT ./Images/Test&Equipment/DashboardView.jpg
+INPUT ./Images/Test&Equipment/DashboardView.jpg
+INPUT Images/Test&Equipment/DashboardView.jpg
+INPUT ./Images/Test&Equipment/DashboardView.jpg
+INPUT ./Images/Test&Equipment/DashboardView.jpg
+INPUT ./Images/Test&Equipment/Computers.jpg
+INPUT ./Images/Test&Equipment/Computers.jpg
+INPUT Images/Test&Equipment/Computers.jpg
+INPUT ./Images/Test&Equipment/Computers.jpg
+INPUT ./Images/Test&Equipment/Computers.jpg
+INPUT ./Images/Test&Equipment/CarSetup2.jpg
+INPUT ./Images/Test&Equipment/CarSetup2.jpg
+INPUT Images/Test&Equipment/CarSetup2.jpg
+INPUT ./Images/Test&Equipment/CarSetup2.jpg
+INPUT ./Images/Test&Equipment/CarSetup2.jpg
+INPUT ./Images/Test&Equipment/NetworkModem.jpg
+INPUT ./Images/Test&Equipment/NetworkModem.jpg
+INPUT Images/Test&Equipment/NetworkModem.jpg
+INPUT ./Images/Test&Equipment/NetworkModem.jpg
+INPUT ./Images/Test&Equipment/NetworkModem.jpg
+INPUT ./Images/Test&Equipment/NetworkSwitch.jpg
+INPUT ./Images/Test&Equipment/NetworkSwitch.jpg
+INPUT Images/Test&Equipment/NetworkSwitch.jpg
+INPUT ./Images/Test&Equipment/NetworkSwitch.jpg
+INPUT ./Images/Test&Equipment/NetworkSwitch.jpg
+INPUT ./Images/Test&Equipment/LabSetup.jpg
+INPUT ./Images/Test&Equipment/LabSetup.jpg
+INPUT Images/Test&Equipment/LabSetup.jpg
+INPUT ./Images/Test&Equipment/LabSetup.jpg
+INPUT ./Images/Test&Equipment/LabSetup.jpg
 INPUT ./Sections/06 Results.tex
 INPUT ./Sections/06 Results.tex
 INPUT ./Sections/06 Results.tex
 INPUT ./Sections/06 Results.tex
 INPUT ./Sections/06 Results.tex
 INPUT ./Sections/06 Results.tex
+INPUT ./Sections/Tables/Results/T-send-latency.tex
+INPUT Sections/Tables/Results/T-send-latency.tex
+INPUT ./Sections/Tables/Results/T-send-latency.tex
+INPUT Sections/Tables/Results/T-send-latency.tex
+INPUT ./Sections/Tables/Results/T-transit-latency.tex
+INPUT Sections/Tables/Results/T-transit-latency.tex
+INPUT ./Sections/Tables/Results/T-transit-latency.tex
+INPUT Sections/Tables/Results/T-transit-latency.tex
+INPUT ./Sections/Tables/Results/T-rec-latency.tex
+INPUT Sections/Tables/Results/T-rec-latency.tex
+INPUT ./Sections/Tables/Results/T-rec-latency.tex
+INPUT Sections/Tables/Results/T-rec-latency.tex
+INPUT ./Sections/Tables/Results/T-end-latency.tex
+INPUT Sections/Tables/Results/T-end-latency.tex
+INPUT ./Sections/Tables/Results/T-end-latency.tex
+INPUT Sections/Tables/Results/T-end-latency.tex
+INPUT ./Sections/Tables/Results/T-packetloss.tex
+INPUT Sections/Tables/Results/T-packetloss.tex
+INPUT ./Sections/Tables/Results/T-packetloss.tex
+INPUT Sections/Tables/Results/T-packetloss.tex
+INPUT ./Sections/Tables/Results/T-throughput.tex
+INPUT Sections/Tables/Results/T-throughput.tex
+INPUT ./Sections/Tables/Results/T-throughput.tex
+INPUT Sections/Tables/Results/T-throughput.tex
+INPUT ./Sections/Tables/Results/T-cpu.tex
+INPUT Sections/Tables/Results/T-cpu.tex
+INPUT ./Sections/Tables/Results/T-cpu.tex
+INPUT Sections/Tables/Results/T-cpu.tex
+INPUT ./Sections/Tables/Results/T-quality.tex
+INPUT Sections/Tables/Results/T-quality.tex
+INPUT ./Sections/Tables/Results/T-quality.tex
+INPUT Sections/Tables/Results/T-quality.tex
+INPUT ./Sections/Tables/Results/C-send-latency.tex
+INPUT Sections/Tables/Results/C-send-latency.tex
+INPUT ./Sections/Tables/Results/C-send-latency.tex
+INPUT Sections/Tables/Results/C-send-latency.tex
+INPUT ./Sections/Tables/Results/C-transit-latency.tex
+INPUT Sections/Tables/Results/C-transit-latency.tex
+INPUT ./Sections/Tables/Results/C-transit-latency.tex
+INPUT Sections/Tables/Results/C-transit-latency.tex
+INPUT ./Sections/Tables/Results/C-rec-latency.tex
+INPUT Sections/Tables/Results/C-rec-latency.tex
+INPUT ./Sections/Tables/Results/C-rec-latency.tex
+INPUT Sections/Tables/Results/C-rec-latency.tex
+INPUT ./Sections/Tables/Results/C-end-latency.tex
+INPUT Sections/Tables/Results/C-end-latency.tex
+INPUT ./Sections/Tables/Results/C-end-latency.tex
+INPUT Sections/Tables/Results/C-end-latency.tex
+INPUT ./Sections/Tables/Results/C-packetloss.tex
+INPUT Sections/Tables/Results/C-packetloss.tex
+INPUT ./Sections/Tables/Results/C-packetloss.tex
+INPUT Sections/Tables/Results/C-packetloss.tex
+INPUT ./Sections/Tables/Results/C-throughput.tex
+INPUT Sections/Tables/Results/C-throughput.tex
+INPUT ./Sections/Tables/Results/C-throughput.tex
+INPUT Sections/Tables/Results/C-throughput.tex
+INPUT ./Sections/Tables/Results/C-cpu.tex
+INPUT Sections/Tables/Results/C-cpu.tex
+INPUT ./Sections/Tables/Results/C-cpu.tex
+INPUT Sections/Tables/Results/C-cpu.tex
+INPUT ./Sections/Tables/Results/C-quality.tex
+INPUT Sections/Tables/Results/C-quality.tex
+INPUT ./Sections/Tables/Results/C-quality.tex
+INPUT Sections/Tables/Results/C-quality.tex
+INPUT ./Sections/07 Discussion.tex
+INPUT ./Sections/07 Discussion.tex
+INPUT ./Sections/07 Discussion.tex
+INPUT ./Sections/07 Discussion.tex
+INPUT ./Sections/07 Discussion.tex
+INPUT ./Sections/07 Discussion.tex
 INPUT ./Sections/20 Conclusion.tex
 INPUT ./Sections/20 Conclusion.tex
 INPUT ./Sections/20 Conclusion.tex
@@ -583,6 +730,7 @@ INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb
