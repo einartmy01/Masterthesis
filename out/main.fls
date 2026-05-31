@@ -531,31 +531,61 @@ INPUT Images/Theory/264265HEVC.png
 INPUT ./Images/Theory/264265HEVC.png
 INPUT ./Images/Theory/264265HEVC.png
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmtt10.tfm
+INPUT ./Images/Theory/BRISQUEResult.png
+INPUT ./Images/Theory/BRISQUEResult.png
+INPUT Images/Theory/BRISQUEResult.png
+INPUT ./Images/Theory/BRISQUEResult.png
+INPUT ./Images/Theory/BRISQUEResult.png
 INPUT ./Sections/04 System Design.tex
 INPUT ./Sections/04 System Design.tex
 INPUT ./Sections/04 System Design.tex
 INPUT ./Sections/04 System Design.tex
 INPUT ./Sections/04 System Design.tex
 INPUT ./Sections/04 System Design.tex
-INPUT ./Images/System/PhysicalSetup.png
-INPUT ./Images/System/PhysicalSetup.png
-INPUT Images/System/PhysicalSetup.png
-INPUT ./Images/System/PhysicalSetup.png
-INPUT ./Images/System/PhysicalSetup.png
-INPUT ./Images/System/ApplicationAndTransportSetup.png
-INPUT ./Images/System/ApplicationAndTransportSetup.png
-INPUT Images/System/ApplicationAndTransportSetup.png
-INPUT ./Images/System/ApplicationAndTransportSetup.png
-INPUT ./Images/System/ApplicationAndTransportSetup.png
+INPUT ./Images/System/PhysicalSetup2.png
+INPUT ./Images/System/PhysicalSetup2.png
+INPUT Images/System/PhysicalSetup2.png
+INPUT ./Images/System/PhysicalSetup2.png
+INPUT ./Images/System/PhysicalSetup2.png
+INPUT ./Images/System/ApplicationAndTransportSetup2.png
+INPUT ./Images/System/ApplicationAndTransportSetup2.png
+INPUT Images/System/ApplicationAndTransportSetup2.png
+INPUT ./Images/System/ApplicationAndTransportSetup2.png
+INPUT ./Images/System/ApplicationAndTransportSetup2.png
+INPUT ./Sections/Tables/IPSetup.tex
+INPUT Sections/Tables/IPSetup.tex
+INPUT ./Sections/Tables/IPSetup.tex
+INPUT Sections/Tables/IPSetup.tex
 INPUT ./Images/System/SequenceDiagramCompCam.png
 INPUT ./Images/System/SequenceDiagramCompCam.png
 INPUT Images/System/SequenceDiagramCompCam.png
 INPUT ./Images/System/SequenceDiagramCompCam.png
 INPUT ./Images/System/SequenceDiagramCompCam.png
-INPUT ./Sections/Tables/IPSetup.tex
-INPUT Sections/Tables/IPSetup.tex
-INPUT ./Sections/Tables/IPSetup.tex
-INPUT Sections/Tables/IPSetup.tex
+INPUT ./Images/System/SenderPipeline.png
+INPUT ./Images/System/SenderPipeline.png
+INPUT Images/System/SenderPipeline.png
+INPUT ./Images/System/SenderPipeline.png
+INPUT ./Images/System/SenderPipeline.png
+INPUT ./Images/System/ReceiverPipeline.png
+INPUT ./Images/System/ReceiverPipeline.png
+INPUT Images/System/ReceiverPipeline.png
+INPUT ./Images/System/ReceiverPipeline.png
+INPUT ./Images/System/ReceiverPipeline.png
+INPUT ./Images/System/SenderProbes.png
+INPUT ./Images/System/SenderProbes.png
+INPUT Images/System/SenderProbes.png
+INPUT ./Images/System/SenderProbes.png
+INPUT ./Images/System/SenderProbes.png
+INPUT ./Images/System/ReceiverProbes.png
+INPUT ./Images/System/ReceiverProbes.png
+INPUT Images/System/ReceiverProbes.png
+INPUT ./Images/System/ReceiverProbes.png
+INPUT ./Images/System/ReceiverProbes.png
+INPUT ./Images/System/BRISQUEProbe.png
+INPUT ./Images/System/BRISQUEProbe.png
+INPUT Images/System/BRISQUEProbe.png
+INPUT ./Images/System/BRISQUEProbe.png
+INPUT ./Images/System/BRISQUEProbe.png
 INPUT ./Sections/05 Methodology.tex
 INPUT ./Sections/05 Methodology.tex
 INPUT ./Sections/05 Methodology.tex
@@ -733,8 +763,10 @@ OUTPUT out/main.run.xml
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb

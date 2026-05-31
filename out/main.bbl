@@ -42,8 +42,8 @@
       \strng{authorbibnamehash}{4f12bc02fc1befd6ce4fcec124b4479e}
       \strng{authornamehash}{4f12bc02fc1befd6ce4fcec124b4479e}
       \strng{authorfullhash}{4f12bc02fc1befd6ce4fcec124b4479e}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Railway Safety Principles and Factors for Safe Operation of {GoA4} {UTO}}
@@ -77,8 +77,8 @@
       \strng{authorbibnamehash}{cf26edcee75c089db47e7b4b4a491eab}
       \strng{authornamehash}{cf26edcee75c089db47e7b4b4a491eab}
       \strng{authorfullhash}{cf26edcee75c089db47e7b4b4a491eab}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{D3.1 -- Use Cases and Scenarios for {ATO} in Different {GoA} Demos for {G1} Regional Lines}
@@ -134,8 +134,8 @@
       \strng{authorbibnamehash}{73f293b416c504fd7a0bb6bf1bc77344}
       \strng{authornamehash}{73f293b416c504fd7a0bb6bf1bc77344}
       \strng{authorfullhash}{5e2d5183a1f9a0d478750fbfd8a23475}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Towards Railways Remote Driving: Analysis of Video Streaming Latency and Adaptive Rate Control}
@@ -168,8 +168,8 @@
       \strng{authorbibnamehash}{92da55e337e228f296b39883e5363631}
       \strng{authornamehash}{92da55e337e228f296b39883e5363631}
       \strng{authorfullhash}{92da55e337e228f296b39883e5363631}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Latency for Remote Control in ATO a Scoping Review}
@@ -196,8 +196,8 @@
       \strng{authorbibnamehash}{768a361049aefb367d9a989af2448510}
       \strng{authornamehash}{768a361049aefb367d9a989af2448510}
       \strng{authorfullhash}{768a361049aefb367d9a989af2448510}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{D5.4 - Documentation of use cases for Remote Driving}
@@ -240,8 +240,8 @@
       \strng{authorbibnamehash}{a012e850a5b727d6e5e9eb28fb1b7a20}
       \strng{authornamehash}{a6ab8d587636550d84bac7c72d6337b5}
       \strng{authorfullhash}{a012e850a5b727d6e5e9eb28fb1b7a20}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Effects of Video Quality on Perception and Reaction Time in Video-based Remote Train Control}
@@ -296,8 +296,8 @@
       \strng{authorbibnamehash}{9f2f1453729ea907d73aa7b63e1638d7}
       \strng{authornamehash}{9f2f1453729ea907d73aa7b63e1638d7}
       \strng{authorfullhash}{51f3359b2fcc0590d32a87d2362146ed}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Teleoperation: The Holy Grail to Solve Problems of Automated Driving? Sure, but Latency Matters}
@@ -370,7 +370,11 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{IEC 62290-1:2025 -Railway applications - Urban guided transport management and command/control systems - Part 3: System requirements specification}
+      \field{urlday}{10}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
       \field{year}{2025}
+      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://online.standard.no/nb/nek-iec-62290-3-2025
       \endverb
@@ -457,7 +461,11 @@
       \field{labeltitlesource}{title}
       \field{title}{ETSI TS 122 289 V17.0.0 LTE 5G Mobile communication system for railways 3GPP TS 22.289 version 17.0.0 Release 17}
       \field{type}{techreport}
+      \field{urlday}{20}
+      \field{urlmonth}{2}
+      \field{urlyear}{2026}
       \field{year}{2022}
+      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://www.etsi.org/deliver/etsi_ts/122200_122299/122289/17.00.00_60/ts_122289v170000p.pdf
       \endverb
@@ -536,7 +544,6 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{IEEE MultiMedia}
-      \field{number}{4}
       \field{title}{The {MPEG-DASH} Standard for Multimedia Streaming Over the Internet}
       \field{urlday}{15}
       \field{urlmonth}{2}
@@ -544,8 +551,6 @@
       \field{volume}{18}
       \field{year}{2011}
       \field{urldateera}{ce}
-      \field{pages}{62\bibrangedash 67}
-      \range{pages}{6}
       \verb{urlraw}
       \verb https://ieeexplore.ieee.org/document/6077864
       \endverb
@@ -561,22 +566,23 @@
            given={Timo},
            giveni={T\bibinitperiod}}}%
       }
-      \list{publisher}{1}{%
-        {Metropolia University of Applied Sciences}%
-      }
       \strng{namehash}{df3ab482758c34fcff708307ab5ceae6}
       \strng{fullhash}{df3ab482758c34fcff708307ab5ceae6}
       \strng{bibnamehash}{df3ab482758c34fcff708307ab5ceae6}
       \strng{authorbibnamehash}{df3ab482758c34fcff708307ab5ceae6}
       \strng{authornamehash}{df3ab482758c34fcff708307ab5ceae6}
       \strng{authorfullhash}{df3ab482758c34fcff708307ab5ceae6}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Video latency in a vehicle's remoteoperating system}
       \field{type}{phdthesis}
+      \field{urlday}{5}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
       \field{year}{2018}
+      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://www.theseus.fi/bitstream/handle/10024/157223/blomqvist_timo.pdf?sequence=1&isAllowed=y
       \endverb
@@ -592,22 +598,23 @@
            given={Iain\bibnamedelima E.},
            giveni={I\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
       }
-      \list{publisher}{1}{%
-        {Wiley}%
-      }
       \strng{namehash}{ae8eff41307018d950f00d2fe157263a}
       \strng{fullhash}{ae8eff41307018d950f00d2fe157263a}
       \strng{bibnamehash}{ae8eff41307018d950f00d2fe157263a}
       \strng{authorbibnamehash}{ae8eff41307018d950f00d2fe157263a}
       \strng{authornamehash}{ae8eff41307018d950f00d2fe157263a}
       \strng{authorfullhash}{ae8eff41307018d950f00d2fe157263a}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{2}
       \field{title}{The H.264 Advanced Video Compression Standard}
+      \field{urlday}{15}
+      \field{urlmonth}{4}
+      \field{urlyear}{2026}
       \field{year}{2010}
+      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://last.hit.bme.hu/download/vidtech/k%C3%B6nyvek/Iain%20E.%20Richardson%20-%20H264%20(2nd%20edition).pdf
       \endverb
@@ -622,9 +629,6 @@
            familyi={K\bibinitperiod},
            given={Ahmet},
            giveni={A\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {Wiley}%
       }
       \strng{namehash}{0d95937cdeb2888ba9c06c5c0d1d8460}
       \strng{fullhash}{0d95937cdeb2888ba9c06c5c0d1d8460}
@@ -684,7 +688,6 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{IEEE Transactions on Circuits and Systems for Video Technology}
-      \field{number}{7}
       \field{title}{Overview of the {H.264/AVC} Video Coding Standard}
       \field{urlday}{10}
       \field{urlmonth}{2}
@@ -692,8 +695,6 @@
       \field{volume}{13}
       \field{year}{2003}
       \field{urldateera}{ce}
-      \field{pages}{560\bibrangedash 576}
-      \range{pages}{17}
       \verb{urlraw}
       \verb https://ieeexplore.ieee.org/document/1218189
       \endverb
@@ -780,7 +781,6 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{IEEE Transactions on Circuits and Systems for Video Technology}
-      \field{number}{12}
       \field{title}{Overview of the High Efficiency Video Coding {(HEVC)} Standard}
       \field{urlday}{10}
       \field{urlmonth}{2}
@@ -788,8 +788,6 @@
       \field{volume}{22}
       \field{year}{2012}
       \field{urldateera}{ce}
-      \field{pages}{1649\bibrangedash 1668}
-      \range{pages}{20}
       \verb{urlraw}
       \verb https://ieeexplore.ieee.org/document/6316136
       \endverb
@@ -831,12 +829,11 @@
       \strng{authorbibnamehash}{a06c56ad9acc558e2d3c1402518a019b}
       \strng{authornamehash}{a06c56ad9acc558e2d3c1402518a019b}
       \strng{authorfullhash}{1e7f32ea9b1b5e8a9578a72d1d2cce6b}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{IEEE Transactions on Circuits and Systems for Video Technology}
-      \field{number}{12}
       \field{title}{Comparison of the Coding Efficiency of Video Coding Standards Including High Efficiency Video Coding {(HEVC)}}
       \field{urlday}{10}
       \field{urlmonth}{2}
@@ -844,8 +841,6 @@
       \field{volume}{22}
       \field{year}{2012}
       \field{urldateera}{ce}
-      \field{pages}{1669\bibrangedash 1684}
-      \range{pages}{16}
       \verb{urlraw}
       \verb https://ieeexplore.ieee.org/document/6317158
       \endverb
@@ -981,8 +976,8 @@
       \strng{authorbibnamehash}{b6aea1a416c89509a7df1cbb69249cb6}
       \strng{authornamehash}{b6aea1a416c89509a7df1cbb69249cb6}
       \strng{authorfullhash}{b6aea1a416c89509a7df1cbb69249cb6}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Motion {JPEG}}
@@ -1234,17 +1229,14 @@
            given={Behrouz\bibnamedelima A.},
            giveni={B\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
       }
-      \list{publisher}{1}{%
-        {McGraw-Hill}%
-      }
       \strng{namehash}{15fe25340ae8cf0fe75afb7426a1df18}
       \strng{fullhash}{15fe25340ae8cf0fe75afb7426a1df18}
       \strng{bibnamehash}{15fe25340ae8cf0fe75afb7426a1df18}
       \strng{authorbibnamehash}{15fe25340ae8cf0fe75afb7426a1df18}
       \strng{authornamehash}{15fe25340ae8cf0fe75afb7426a1df18}
       \strng{authorfullhash}{15fe25340ae8cf0fe75afb7426a1df18}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{5}
@@ -1321,7 +1313,6 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{IEEE Transactions on Broadcasting}
-      \field{number}{2}
       \field{title}{The Relationship Among Video Quality, Screen Resolution, and Bit Rate}
       \field{urlday}{14}
       \field{urlmonth}{5}
@@ -1329,8 +1320,6 @@
       \field{volume}{58}
       \field{year}{2012}
       \field{urldateera}{ce}
-      \field{pages}{258\bibrangedash 262}
-      \range{pages}{5}
       \verb{urlraw}
       \verb https://ieeexplore.ieee.org/document/5729848
       \endverb
@@ -1445,8 +1434,8 @@
       \strng{authornamehash}{b3a64faa8dc0c1b5ccf96afa15c9a280}
       \strng{authorfullhash}{a6ea819838a42d964debbe1597c9cc44}
       \field{extraname}{2}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Wireless Communications and Mobile Computing}
@@ -1526,7 +1515,6 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{ACM Computing Surveys}
-      \field{number}{3}
       \field{title}{Image and Video Coding Techniques for Ultra-low Latency}
       \field{urlday}{20}
       \field{urlmonth}{5}
@@ -1587,8 +1575,6 @@
       \field{volume}{50}
       \field{year}{2018}
       \field{urldateera}{ce}
-      \field{pages}{26\bibrangedash 38}
-      \range{pages}{13}
       \verb{urlraw}
       \verb https://link.springer.com/article/10.3758/s13428-017-1003-6
       \endverb
@@ -1640,7 +1626,6 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{IEEE Transactions on Ultrasonics, Ferroelectrics, and Frequency Control}
-      \field{number}{12}
       \field{title}{{GPS} Time Transfer: Applications to the {US} Naval Observatory Two-Way Satellite Time and Frequency Transfer}
       \field{urlday}{14}
       \field{urlmonth}{4}
@@ -1648,8 +1633,6 @@
       \field{volume}{59}
       \field{year}{2012}
       \field{urldateera}{ce}
-      \field{pages}{2625\bibrangedash 2634}
-      \range{pages}{10}
       \verb{urlraw}
       \verb https://ieeexplore.ieee.org/document/6378481
       \endverb
@@ -1670,9 +1653,6 @@
            given={Per},
            giveni={P\bibinitperiod}}}%
       }
-      \list{publisher}{1}{%
-        {Ganga-Jamuna Press}%
-      }
       \strng{namehash}{431df6603cfa4e1eba84d547576caf59}
       \strng{fullhash}{431df6603cfa4e1eba84d547576caf59}
       \strng{bibnamehash}{431df6603cfa4e1eba84d547576caf59}
@@ -1685,7 +1665,11 @@
       \field{labeltitlesource}{title}
       \field{edition}{2}
       \field{title}{Global Positioning System: Signals, Measurements, and Performance}
+      \field{urlday}{20}
+      \field{urlmonth}{4}
+      \field{urlyear}{2026}
       \field{year}{2011}
+      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://www.amazon.com/Global-Positioning-System-Measurements-Performance/dp/0970954417
       \endverb
@@ -1722,7 +1706,6 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Computer Standards and Interfaces}
-      \field{number}{2}
       \field{title}{{GPS} and {IEEE} 1588 Synchronization for the Measurement of Synchrophasors in Electric Power Systems}
       \field{urlday}{14}
       \field{urlmonth}{4}
@@ -1730,8 +1713,6 @@
       \field{volume}{33}
       \field{year}{2010}
       \field{urldateera}{ce}
-      \field{pages}{176\bibrangedash 181}
-      \range{pages}{6}
       \verb{urlraw}
       \verb https://www.sciencedirect.com/science/article/abs/pii/S0920548910000875
       \endverb
@@ -1951,8 +1932,8 @@
       \strng{authornamehash}{80a4452c4c56105df98a0fcc5ba3da4f}
       \strng{authorfullhash}{80a4452c4c56105df98a0fcc5ba3da4f}
       \field{extraname}{3}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Pads and Capabilities}
@@ -2270,7 +2251,6 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{IEEE Communications Magazine}
-      \field{number}{2}
       \field{title}{Latency Critical {IoT} Applications in {5G}: Perspective on the Design of Radio Interface and Network Architecture}
       \field{urlday}{20}
       \field{urlmonth}{5}
@@ -2278,8 +2258,6 @@
       \field{volume}{55}
       \field{year}{2017}
       \field{urldateera}{ce}
-      \field{pages}{70\bibrangedash 78}
-      \range{pages}{9}
       \verb{urlraw}
       \verb https://ieeexplore.ieee.org/document/7842391
       \endverb
@@ -2536,7 +2514,6 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Journal of Computer and Communications}
-      \field{number}{3}
       \field{title}{Image Quality Assessment through {FSIM}, {SSIM}, {MSE} and {PSNR}: A Comparative Study}
       \field{urlday}{20}
       \field{urlmonth}{5}
@@ -2544,8 +2521,6 @@
       \field{volume}{7}
       \field{year}{2019}
       \field{urldateera}{ce}
-      \field{pages}{8\bibrangedash 18}
-      \range{pages}{11}
       \verb{urlraw}
       \verb https://www.scirp.org/journal/paperinformation?paperid=90911
       \endverb
@@ -2582,7 +2557,6 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{IEEE Transactions on Image Processing}
-      \field{number}{12}
       \field{title}{No-Reference Image Quality Assessment in the Spatial Domain}
       \field{urlday}{20}
       \field{urlmonth}{5}
@@ -2590,13 +2564,241 @@
       \field{volume}{21}
       \field{year}{2012}
       \field{urldateera}{ce}
-      \field{pages}{4695\bibrangedash 4708}
-      \range{pages}{14}
       \verb{urlraw}
       \verb https://live.ece.utexas.edu/publications/2012/TIP%20BRISQUE.pdf
       \endverb
       \verb{url}
       \verb https://live.ece.utexas.edu/publications/2012/TIP%20BRISQUE.pdf
+      \endverb
+    \endentry
+    \entry{pennada2023}{article}{}
+      \name{author}{5}{}{%
+        {{hash=13993c4fddedc4606b77c67012a31e89}{%
+           family={Pennada},
+           familyi={P\bibinitperiod},
+           given={Sanjeetha},
+           giveni={S\bibinitperiod}}}%
+        {{hash=19c9f0fd53d7b58c9e4c45c00f64a834}{%
+           family={Perry},
+           familyi={P\bibinitperiod},
+           given={Marcus},
+           giveni={M\bibinitperiod}}}%
+        {{hash=4dfbb346b3f7858881ef409392aff3b5}{%
+           family={McAlorum},
+           familyi={M\bibinitperiod},
+           given={Jack},
+           giveni={J\bibinitperiod}}}%
+        {{hash=14981c078e92169bbd867059dc239dd0}{%
+           family={Dow},
+           familyi={D\bibinitperiod},
+           given={Hamish},
+           giveni={H\bibinitperiod}}}%
+        {{hash=ce57cf142ad318ab97b8e1164d570cd7}{%
+           family={Dobie},
+           familyi={D\bibinitperiod},
+           given={Gordon},
+           giveni={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{d08f6a7713284bc57faf3254d818e31f}
+      \strng{fullhash}{68230b30176272e2f57d851c8a19554d}
+      \strng{bibnamehash}{d08f6a7713284bc57faf3254d818e31f}
+      \strng{authorbibnamehash}{d08f6a7713284bc57faf3254d818e31f}
+      \strng{authornamehash}{d08f6a7713284bc57faf3254d818e31f}
+      \strng{authorfullhash}{68230b30176272e2f57d851c8a19554d}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Threshold-Based {BRISQUE}-Assisted Deep Learning for Enhancing Crack Detection in Concrete Structures}
+      \field{urlday}{10}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2023}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.researchgate.net/publication/374608730_Threshold-Based_BRISQUE-Assisted_Deep_Learning_for_Enhancing_Crack_Detection_in_Concrete_Structures
+      \endverb
+      \verb{url}
+      \verb https://www.researchgate.net/publication/374608730_Threshold-Based_BRISQUE-Assisted_Deep_Learning_for_Enhancing_Crack_Detection_in_Concrete_Structures
+      \endverb
+    \endentry
+    \entry{hevner2004}{article}{}
+      \name{author}{4}{}{%
+        {{hash=e054261c7f1739e1ba1db0a45e385c1b}{%
+           family={Hevner},
+           familyi={H\bibinitperiod},
+           given={Alan\bibnamedelima R.},
+           giveni={A\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=5aec260b5b1381edc4b8ff6755f2d543}{%
+           family={March},
+           familyi={M\bibinitperiod},
+           given={Salvatore\bibnamedelima T.},
+           giveni={S\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+        {{hash=c518c214dc9e77148493e9ea47f505ab}{%
+           family={Park},
+           familyi={P\bibinitperiod},
+           given={Jinsoo},
+           giveni={J\bibinitperiod}}}%
+        {{hash=65565df90d4793da7a2f20e5e1b07345}{%
+           family={Ram},
+           familyi={R\bibinitperiod},
+           given={Sudha},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{77b3350005135e016e7a83431f326d8f}
+      \strng{fullhash}{b163bef761d9a2c79a3d232595321775}
+      \strng{bibnamehash}{77b3350005135e016e7a83431f326d8f}
+      \strng{authorbibnamehash}{77b3350005135e016e7a83431f326d8f}
+      \strng{authornamehash}{77b3350005135e016e7a83431f326d8f}
+      \strng{authorfullhash}{b163bef761d9a2c79a3d232595321775}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{MIS Quarterly}
+      \field{title}{Design Science in Information Systems Research}
+      \field{urlday}{29}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{volume}{28}
+      \field{year}{2004}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://aisel.aisnet.org/misq/vol28/iss1/6/
+      \endverb
+      \verb{url}
+      \verb https://aisel.aisnet.org/misq/vol28/iss1/6/
+      \endverb
+    \endentry
+    \entry{wohlin2012}{book}{}
+      \name{author}{6}{}{%
+        {{hash=e1ce15e2eeb53e3fc8c6035fd761594b}{%
+           family={Wohlin},
+           familyi={W\bibinitperiod},
+           given={Claes},
+           giveni={C\bibinitperiod}}}%
+        {{hash=306f73791e107dd9b83d45ee22e6b523}{%
+           family={Runeson},
+           familyi={R\bibinitperiod},
+           given={Per},
+           giveni={P\bibinitperiod}}}%
+        {{hash=4d1752e9463ffc1043c0939de72a9097}{%
+           family={Höst},
+           familyi={H\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod}}}%
+        {{hash=5dad21e576e61668b8797b95088d02dd}{%
+           family={Ohlsson},
+           familyi={O\bibinitperiod},
+           given={Magnus\bibnamedelima C.},
+           giveni={M\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=8eecf1f137629fc30fb7258aa4b03ffc}{%
+           family={Regnell},
+           familyi={R\bibinitperiod},
+           given={Björn},
+           giveni={B\bibinitperiod}}}%
+        {{hash=7eba9f830d70baeeae41735c97bbd8b2}{%
+           family={Wesslén},
+           familyi={W\bibinitperiod},
+           given={Anders},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{55ccf4d2f8f1d35fa125fcc569510989}
+      \strng{fullhash}{01ecfd973289c2623ca22a0b0b032dcf}
+      \strng{bibnamehash}{55ccf4d2f8f1d35fa125fcc569510989}
+      \strng{authorbibnamehash}{55ccf4d2f8f1d35fa125fcc569510989}
+      \strng{authornamehash}{55ccf4d2f8f1d35fa125fcc569510989}
+      \strng{authorfullhash}{01ecfd973289c2623ca22a0b0b032dcf}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{2}
+      \field{title}{Experimentation in Software Engineering}
+      \field{urlday}{29}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2012}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://link.springer.com/book/10.1007/978-3-642-29044-2
+      \endverb
+      \verb{url}
+      \verb https://link.springer.com/book/10.1007/978-3-642-29044-2
+      \endverb
+    \endentry
+    \entry{ries2011}{book}{}
+      \name{author}{1}{}{%
+        {{hash=3ae634b261ee7bc5f734840abf4408e1}{%
+           family={Ries},
+           familyi={R\bibinitperiod},
+           given={Eric},
+           giveni={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{3ae634b261ee7bc5f734840abf4408e1}
+      \strng{fullhash}{3ae634b261ee7bc5f734840abf4408e1}
+      \strng{bibnamehash}{3ae634b261ee7bc5f734840abf4408e1}
+      \strng{authorbibnamehash}{3ae634b261ee7bc5f734840abf4408e1}
+      \strng{authornamehash}{3ae634b261ee7bc5f734840abf4408e1}
+      \strng{authorfullhash}{3ae634b261ee7bc5f734840abf4408e1}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{1}
+      \field{title}{The Lean Startup: How Today's Entrepreneurs Use Continuous Innovation to Create Radically Successful Businesses}
+      \field{urlday}{29}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2011}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.penguinrandomhouse.com/books/210088/the-lean-startup-by-eric-ries/
+      \endverb
+      \verb{url}
+      \verb https://www.penguinrandomhouse.com/books/210088/the-lean-startup-by-eric-ries/
+      \endverb
+    \endentry
+    \entry{saunders2019}{book}{}
+      \name{author}{3}{}{%
+        {{hash=99e894cf98754cee31dfa720bfc7736e}{%
+           family={Saunders},
+           familyi={S\bibinitperiod},
+           given={Mark\bibnamedelimb N.\bibnamedelimi K.},
+           giveni={M\bibinitperiod\bibinitdelim N\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=22dd5982527741816d40514a6cd75f24}{%
+           family={Lewis},
+           familyi={L\bibinitperiod},
+           given={Philip},
+           giveni={P\bibinitperiod}}}%
+        {{hash=b3c76edd01e6276302e5832ac66d521d}{%
+           family={Thornhill},
+           familyi={T\bibinitperiod},
+           given={Adrian},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{e359bf54727e7fc96b69a4b3190caceb}
+      \strng{fullhash}{f058cd3adfdb0fdd12d51adda3576f90}
+      \strng{bibnamehash}{f058cd3adfdb0fdd12d51adda3576f90}
+      \strng{authorbibnamehash}{f058cd3adfdb0fdd12d51adda3576f90}
+      \strng{authornamehash}{e359bf54727e7fc96b69a4b3190caceb}
+      \strng{authorfullhash}{f058cd3adfdb0fdd12d51adda3576f90}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{8}
+      \field{title}{Research Methods for Business Students}
+      \field{urlday}{29}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2019}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://elibrary.pearson.de/book/99.150005/9781292208794
+      \endverb
+      \verb{url}
+      \verb https://elibrary.pearson.de/book/99.150005/9781292208794
       \endverb
     \endentry
     \entry{montgomery2017}{book}{}
@@ -2619,7 +2821,17 @@
       \field{labeltitlesource}{title}
       \field{edition}{9th}
       \field{title}{Design and Analysis of Experiments}
+      \field{urlday}{29}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
       \field{year}{2017}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://studentebookhub.com/wp-content/uploads/2024/preview/9781119634256.pdf
+      \endverb
+      \verb{url}
+      \verb https://studentebookhub.com/wp-content/uploads/2024/preview/9781119634256.pdf
+      \endverb
     \endentry
   \enddatalist
 \endrefsection

@@ -1,6 +1,6 @@
 \babel@toc {british}{}\relax 
 \contentsline {section}{List of Figures}{vi}{Doc-Start}%
-\contentsline {section}{List of Tables}{vi}{Doc-Start}%
+\contentsline {section}{List of Tables}{vii}{Doc-Start}%
 \contentsline {section}{\numberline {1}Introduction}{1}{section.1}%
 \contentsline {subsection}{\numberline {1.1}Background and Motivation}{1}{subsection.1.1}%
 \contentsline {subsection}{\numberline {1.2}Problem}{1}{subsection.1.2}%
@@ -55,43 +55,58 @@
 \contentsline {subsubsection}{\numberline {2.10.3}Throughput}{16}{subsubsection.2.10.3}%
 \contentsline {subsubsection}{\numberline {2.10.4}CPU Usage}{17}{subsubsection.2.10.4}%
 \contentsline {subsubsection}{\numberline {2.10.5}Visual Quality}{17}{subsubsection.2.10.5}%
-\contentsline {section}{\numberline {3}System Design}{18}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Requirements}{18}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Development Methodology}{18}{subsection.3.2}%
-\contentsline {subsubsection}{\numberline {3.2.1}Iterative design}{18}{subsubsection.3.2.1}%
-\contentsline {subsubsection}{\numberline {3.2.2}Sprints}{18}{subsubsection.3.2.2}%
-\contentsline {subsection}{\numberline {3.3}System Overiew}{18}{subsection.3.3}%
-\contentsline {subsection}{\numberline {3.4}Components}{18}{subsection.3.4}%
-\contentsline {subsection}{\numberline {3.5}Architecture}{18}{subsection.3.5}%
-\contentsline {subsection}{\numberline {3.6}Pipeline Design}{21}{subsection.3.6}%
-\contentsline {subsection}{\numberline {3.7}Measurement Design}{21}{subsection.3.7}%
-\contentsline {subsection}{\numberline {3.8}Network Setup}{21}{subsection.3.8}%
-\contentsline {section}{\numberline {4}Methodology}{22}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Research Methodology}{22}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Experimental Methodology}{22}{subsection.4.2}%
-\contentsline {subsubsection}{\numberline {4.2.1}Design of Experiments}{22}{subsubsection.4.2.1}%
-\contentsline {subsubsection}{\numberline {4.2.2}Test Setup and Equipment}{25}{subsubsection.4.2.2}%
-\contentsline {subsubsection}{\numberline {4.2.3}Test Procedure}{28}{subsubsection.4.2.3}%
-\contentsline {subsubsection}{\numberline {4.2.4}Controlling for Unmeasured and Hidden Variables}{28}{subsubsection.4.2.4}%
-\contentsline {subsection}{\numberline {4.3}Measurement Methodology}{28}{subsection.4.3}%
-\contentsline {subsubsection}{\numberline {4.3.1}How You Used That Design During Testing}{29}{subsubsection.4.3.1}%
-\contentsline {subsubsection}{\numberline {4.3.2}What Was Measured}{29}{subsubsection.4.3.2}%
-\contentsline {subsubsection}{\numberline {4.3.3}Measurement Method}{29}{subsubsection.4.3.3}%
-\contentsline {subsubsection}{\numberline {4.3.4}Accuracy and Error Sources}{29}{subsubsection.4.3.4}%
-\contentsline {subsubsection}{\numberline {4.3.5}Data Recording and Processing}{29}{subsubsection.4.3.5}%
-\contentsline {subsection}{\numberline {4.4}Statistical Analysis}{29}{subsection.4.4}%
-\contentsline {subsection}{\numberline {4.5}Limitations}{29}{subsection.4.5}%
-\contentsline {subsection}{\numberline {4.6}Reliability}{29}{subsection.4.6}%
-\contentsline {subsection}{\numberline {4.7}Validity}{29}{subsection.4.7}%
-\contentsline {subsection}{\numberline {4.8}Validity}{29}{subsection.4.8}%
-\contentsline {subsection}{\numberline {4.9}Reliability}{29}{subsection.4.9}%
-\contentsline {section}{\numberline {5}Results}{30}{section.5}%
-\contentsline {subsection}{\numberline {5.1}System Latency}{30}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}Packet Loss Rate}{33}{subsection.5.2}%
-\contentsline {subsection}{\numberline {5.3}Throughput}{33}{subsection.5.3}%
-\contentsline {subsection}{\numberline {5.4}CPU Usage on Sender}{34}{subsection.5.4}%
-\contentsline {subsection}{\numberline {5.5}Visual Quality}{35}{subsection.5.5}%
-\contentsline {section}{\numberline {6}Discussion}{36}{section.6}%
-\contentsline {section}{\numberline {7}Conclusion}{37}{section.7}%
-\contentsline {subsection}{\numberline {7.1}Evaluation of latency}{37}{subsection.7.1}%
-\contentsline {section}{References}{38}{subsection.7.1}%
+\contentsline {section}{\numberline {3}System Design}{19}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Requirements}{19}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Development Methodology}{19}{subsection.3.2}%
+\contentsline {subsubsection}{\numberline {3.2.1}Iterative Design and the Minimum Viable Product}{19}{subsubsection.3.2.1}%
+\contentsline {subsubsection}{\numberline {3.2.2}Sprints}{20}{subsubsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.3}System Overview}{20}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Components}{21}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}Architecture}{22}{subsection.3.5}%
+\contentsline {subsubsection}{\numberline {3.5.1}Network Addressing and Subnet Design}{22}{subsubsection.3.5.1}%
+\contentsline {subsubsection}{\numberline {3.5.2}Separation of Camera Network and Internet Uplink}{22}{subsubsection.3.5.2}%
+\contentsline {subsubsection}{\numberline {3.5.3}Camera to Sender}{23}{subsubsection.3.5.3}%
+\contentsline {subsubsection}{\numberline {3.5.4}Sender to Receiver}{23}{subsubsection.3.5.4}%
+\contentsline {subsubsection}{\numberline {3.5.5}Tailscale as a Network Overlay}{24}{subsubsection.3.5.5}%
+\contentsline {subsubsection}{\numberline {3.5.6}Network Setup}{24}{subsubsection.3.5.6}%
+\contentsline {subsection}{\numberline {3.6}Pipeline Design}{25}{subsection.3.6}%
+\contentsline {subsubsection}{\numberline {3.6.1}GStreamer}{25}{subsubsection.3.6.1}%
+\contentsline {subsubsection}{\numberline {3.6.2}Sender Pipeline}{25}{subsubsection.3.6.2}%
+\contentsline {subsubsection}{\numberline {3.6.3}Receiver Pipeline}{27}{subsubsection.3.6.3}%
+\contentsline {subsection}{\numberline {3.7}Measurement Design}{27}{subsection.3.7}%
+\contentsline {subsubsection}{\numberline {3.7.1}Probe Placement}{28}{subsubsection.3.7.1}%
+\contentsline {subsubsection}{\numberline {3.7.2}Latency measurment}{29}{subsubsection.3.7.2}%
+\contentsline {subsubsection}{\numberline {3.7.3}Packet loss}{29}{subsubsection.3.7.3}%
+\contentsline {subsubsection}{\numberline {3.7.4}Visual Quality Measurement}{30}{subsubsection.3.7.4}%
+\contentsline {subsubsection}{\numberline {3.7.5}CPU Usage Measurement}{30}{subsubsection.3.7.5}%
+\contentsline {subsubsection}{\numberline {3.7.6}Throughput Measurement}{31}{subsubsection.3.7.6}%
+\contentsline {subsubsection}{\numberline {3.7.7}Data Recording}{31}{subsubsection.3.7.7}%
+\contentsline {section}{\numberline {4}Methodology}{32}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Research Methodology}{32}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Experimental Methodology}{32}{subsection.4.2}%
+\contentsline {subsubsection}{\numberline {4.2.1}Design of Experiments}{32}{subsubsection.4.2.1}%
+\contentsline {subsubsection}{\numberline {4.2.2}Test Setup and Equipment}{35}{subsubsection.4.2.2}%
+\contentsline {subsubsection}{\numberline {4.2.3}Test Procedure}{38}{subsubsection.4.2.3}%
+\contentsline {subsubsection}{\numberline {4.2.4}Controlling for Unmeasured and Hidden Variables}{38}{subsubsection.4.2.4}%
+\contentsline {subsection}{\numberline {4.3}Measurement Methodology}{38}{subsection.4.3}%
+\contentsline {subsubsection}{\numberline {4.3.1}How You Used That Design During Testing}{39}{subsubsection.4.3.1}%
+\contentsline {subsubsection}{\numberline {4.3.2}What Was Measured}{39}{subsubsection.4.3.2}%
+\contentsline {subsubsection}{\numberline {4.3.3}Measurement Method}{39}{subsubsection.4.3.3}%
+\contentsline {subsubsection}{\numberline {4.3.4}Accuracy and Error Sources}{39}{subsubsection.4.3.4}%
+\contentsline {subsubsection}{\numberline {4.3.5}Data Recording and Processing}{39}{subsubsection.4.3.5}%
+\contentsline {subsection}{\numberline {4.4}Statistical Analysis}{39}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Limitations}{39}{subsection.4.5}%
+\contentsline {subsection}{\numberline {4.6}Reliability}{39}{subsection.4.6}%
+\contentsline {subsection}{\numberline {4.7}Validity}{39}{subsection.4.7}%
+\contentsline {subsection}{\numberline {4.8}Validity}{39}{subsection.4.8}%
+\contentsline {subsection}{\numberline {4.9}Reliability}{39}{subsection.4.9}%
+\contentsline {section}{\numberline {5}Results}{40}{section.5}%
+\contentsline {subsection}{\numberline {5.1}System Latency}{40}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Packet Loss Rate}{43}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Throughput}{43}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}CPU Usage on Sender}{44}{subsection.5.4}%
+\contentsline {subsection}{\numberline {5.5}Visual Quality}{45}{subsection.5.5}%
+\contentsline {section}{\numberline {6}Discussion}{46}{section.6}%
+\contentsline {section}{\numberline {7}Conclusion}{47}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Evaluation of latency}{47}{subsection.7.1}%
+\contentsline {section}{References}{48}{subsection.7.1}%
