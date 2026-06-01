@@ -2522,6 +2522,8 @@
     <bcf:citekey order="145" intorder="1">wohlin2012</bcf:citekey>
     <bcf:citekey order="146" intorder="1">montgomery2017</bcf:citekey>
     <bcf:citekey order="147" intorder="1">montgomery2017</bcf:citekey>
+    <bcf:citekey order="148" intorder="1">briscoe2016</bcf:citekey>
+    <bcf:citekey order="149" intorder="1">mejias2024</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

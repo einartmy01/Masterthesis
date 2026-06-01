@@ -17,12 +17,12 @@
 \contentsline {subsubsection}{\numberline {2.1.1}Grades of Automation}{4}{subsubsection.2.1.1}%
 \contentsline {subsubsection}{\numberline {2.1.2}Role of Video in Remote Operation}{4}{subsubsection.2.1.2}%
 \contentsline {subsubsection}{\numberline {2.1.3}Latency Requirements and Regulations}{5}{subsubsection.2.1.3}%
-\contentsline {subsection}{\numberline {2.2}Video Streaming}{5}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.2}Video Streaming}{6}{subsection.2.2}%
 \contentsline {subsection}{\numberline {2.3}Video Compression}{6}{subsection.2.3}%
 \contentsline {subsubsection}{\numberline {2.3.1}H.264}{6}{subsubsection.2.3.1}%
 \contentsline {subsubsection}{\numberline {2.3.2}H.265}{7}{subsubsection.2.3.2}%
 \contentsline {subsubsection}{\numberline {2.3.3}Frame Types}{7}{subsubsection.2.3.3}%
-\contentsline {subsubsection}{\numberline {2.3.4}NAL Units}{7}{subsubsection.2.3.4}%
+\contentsline {subsubsection}{\numberline {2.3.4}NAL Units}{8}{subsubsection.2.3.4}%
 \contentsline {subsubsection}{\numberline {2.3.5}MJPEG}{8}{subsubsection.2.3.5}%
 \contentsline {subsection}{\numberline {2.4}Transport Protocols}{8}{subsection.2.4}%
 \contentsline {subsubsection}{\numberline {2.4.1}RTP and SRTP}{8}{subsubsection.2.4.1}%
@@ -30,7 +30,7 @@
 \contentsline {subsubsection}{\numberline {2.4.3}TCP}{9}{subsubsection.2.4.3}%
 \contentsline {subsection}{\numberline {2.5}Streaming Parameters}{9}{subsection.2.5}%
 \contentsline {subsubsection}{\numberline {2.5.1}Bandwidth}{9}{subsubsection.2.5.1}%
-\contentsline {subsubsection}{\numberline {2.5.2}Resolution}{9}{subsubsection.2.5.2}%
+\contentsline {subsubsection}{\numberline {2.5.2}Resolution}{10}{subsubsection.2.5.2}%
 \contentsline {subsection}{\numberline {2.6}Latency Sources in a Video Streaming Pipeline}{10}{subsection.2.6}%
 \contentsline {subsubsection}{\numberline {2.6.1}Capturing}{10}{subsubsection.2.6.1}%
 \contentsline {subsubsection}{\numberline {2.6.2}Encoding}{10}{subsubsection.2.6.2}%
@@ -42,17 +42,17 @@
 \contentsline {subsubsection}{\numberline {2.7.2}Network-Based Clock Synchronisation with Chrony}{12}{subsubsection.2.7.2}%
 \contentsline {subsection}{\numberline {2.8}GStreamer}{13}{subsection.2.8}%
 \contentsline {subsubsection}{\numberline {2.8.1}Pipeline and Elements}{13}{subsubsection.2.8.1}%
-\contentsline {subsubsection}{\numberline {2.8.2}Pads}{13}{subsubsection.2.8.2}%
+\contentsline {subsubsection}{\numberline {2.8.2}Pads}{14}{subsubsection.2.8.2}%
 \contentsline {subsubsection}{\numberline {2.8.3}Sinks}{14}{subsubsection.2.8.3}%
 \contentsline {subsubsection}{\numberline {2.8.4}Probes}{14}{subsubsection.2.8.4}%
-\contentsline {subsection}{\numberline {2.9}Network and Communication}{14}{subsection.2.9}%
+\contentsline {subsection}{\numberline {2.9}Network and Communication}{15}{subsection.2.9}%
 \contentsline {subsubsection}{\numberline {2.9.1}Wi-Fi}{15}{subsubsection.2.9.1}%
 \contentsline {subsubsection}{\numberline {2.9.2}Cellular and 5G}{15}{subsubsection.2.9.2}%
 \contentsline {subsubsection}{\numberline {2.9.3}Tailscale}{15}{subsubsection.2.9.3}%
-\contentsline {subsection}{\numberline {2.10}Performance Metrics}{15}{subsection.2.10}%
+\contentsline {subsection}{\numberline {2.10}Performance Metrics}{16}{subsection.2.10}%
 \contentsline {subsubsection}{\numberline {2.10.1}Latency}{16}{subsubsection.2.10.1}%
 \contentsline {subsubsection}{\numberline {2.10.2}Packet Loss}{16}{subsubsection.2.10.2}%
-\contentsline {subsubsection}{\numberline {2.10.3}Throughput}{16}{subsubsection.2.10.3}%
+\contentsline {subsubsection}{\numberline {2.10.3}Throughput}{17}{subsubsection.2.10.3}%
 \contentsline {subsubsection}{\numberline {2.10.4}CPU Usage}{17}{subsubsection.2.10.4}%
 \contentsline {subsubsection}{\numberline {2.10.5}Visual Quality}{17}{subsubsection.2.10.5}%
 \contentsline {section}{\numberline {3}System Design}{19}{section.3}%
@@ -68,45 +68,62 @@
 \contentsline {subsubsection}{\numberline {3.5.3}Camera to Sender}{23}{subsubsection.3.5.3}%
 \contentsline {subsubsection}{\numberline {3.5.4}Sender to Receiver}{23}{subsubsection.3.5.4}%
 \contentsline {subsubsection}{\numberline {3.5.5}Tailscale as a Network Overlay}{24}{subsubsection.3.5.5}%
-\contentsline {subsubsection}{\numberline {3.5.6}Network Setup}{24}{subsubsection.3.5.6}%
-\contentsline {subsection}{\numberline {3.6}Pipeline Design}{25}{subsection.3.6}%
-\contentsline {subsubsection}{\numberline {3.6.1}GStreamer}{25}{subsubsection.3.6.1}%
+\contentsline {subsection}{\numberline {3.6}Pipeline Design}{24}{subsection.3.6}%
+\contentsline {subsubsection}{\numberline {3.6.1}GStreamer}{24}{subsubsection.3.6.1}%
 \contentsline {subsubsection}{\numberline {3.6.2}Sender Pipeline}{25}{subsubsection.3.6.2}%
-\contentsline {subsubsection}{\numberline {3.6.3}Receiver Pipeline}{27}{subsubsection.3.6.3}%
+\contentsline {subsubsection}{\numberline {3.6.3}Receiver Pipeline}{26}{subsubsection.3.6.3}%
 \contentsline {subsection}{\numberline {3.7}Measurement Design}{27}{subsection.3.7}%
-\contentsline {subsubsection}{\numberline {3.7.1}Probe Placement}{28}{subsubsection.3.7.1}%
-\contentsline {subsubsection}{\numberline {3.7.2}Latency measurment}{29}{subsubsection.3.7.2}%
-\contentsline {subsubsection}{\numberline {3.7.3}Packet loss}{29}{subsubsection.3.7.3}%
-\contentsline {subsubsection}{\numberline {3.7.4}Visual Quality Measurement}{30}{subsubsection.3.7.4}%
-\contentsline {subsubsection}{\numberline {3.7.5}CPU Usage Measurement}{30}{subsubsection.3.7.5}%
-\contentsline {subsubsection}{\numberline {3.7.6}Throughput Measurement}{31}{subsubsection.3.7.6}%
-\contentsline {subsubsection}{\numberline {3.7.7}Data Recording}{31}{subsubsection.3.7.7}%
-\contentsline {section}{\numberline {4}Methodology}{32}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Research Methodology}{32}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Experimental Methodology}{32}{subsection.4.2}%
-\contentsline {subsubsection}{\numberline {4.2.1}Design of Experiments}{32}{subsubsection.4.2.1}%
-\contentsline {subsubsection}{\numberline {4.2.2}Test Setup and Equipment}{35}{subsubsection.4.2.2}%
-\contentsline {subsubsection}{\numberline {4.2.3}Test Procedure}{38}{subsubsection.4.2.3}%
-\contentsline {subsubsection}{\numberline {4.2.4}Controlling for Unmeasured and Hidden Variables}{38}{subsubsection.4.2.4}%
-\contentsline {subsection}{\numberline {4.3}Measurement Methodology}{38}{subsection.4.3}%
-\contentsline {subsubsection}{\numberline {4.3.1}How You Used That Design During Testing}{39}{subsubsection.4.3.1}%
-\contentsline {subsubsection}{\numberline {4.3.2}What Was Measured}{39}{subsubsection.4.3.2}%
-\contentsline {subsubsection}{\numberline {4.3.3}Measurement Method}{39}{subsubsection.4.3.3}%
-\contentsline {subsubsection}{\numberline {4.3.4}Accuracy and Error Sources}{39}{subsubsection.4.3.4}%
-\contentsline {subsubsection}{\numberline {4.3.5}Data Recording and Processing}{39}{subsubsection.4.3.5}%
-\contentsline {subsection}{\numberline {4.4}Statistical Analysis}{39}{subsection.4.4}%
-\contentsline {subsection}{\numberline {4.5}Limitations}{39}{subsection.4.5}%
-\contentsline {subsection}{\numberline {4.6}Reliability}{39}{subsection.4.6}%
-\contentsline {subsection}{\numberline {4.7}Validity}{39}{subsection.4.7}%
-\contentsline {subsection}{\numberline {4.8}Validity}{39}{subsection.4.8}%
-\contentsline {subsection}{\numberline {4.9}Reliability}{39}{subsection.4.9}%
-\contentsline {section}{\numberline {5}Results}{40}{section.5}%
-\contentsline {subsection}{\numberline {5.1}System Latency}{40}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}Packet Loss Rate}{43}{subsection.5.2}%
-\contentsline {subsection}{\numberline {5.3}Throughput}{43}{subsection.5.3}%
-\contentsline {subsection}{\numberline {5.4}CPU Usage on Sender}{44}{subsection.5.4}%
-\contentsline {subsection}{\numberline {5.5}Visual Quality}{45}{subsection.5.5}%
-\contentsline {section}{\numberline {6}Discussion}{46}{section.6}%
-\contentsline {section}{\numberline {7}Conclusion}{47}{section.7}%
-\contentsline {subsection}{\numberline {7.1}Evaluation of latency}{47}{subsection.7.1}%
-\contentsline {section}{References}{48}{subsection.7.1}%
+\contentsline {subsubsection}{\numberline {3.7.1}Probe Placement}{27}{subsubsection.3.7.1}%
+\contentsline {subsubsection}{\numberline {3.7.2}Latency measurment}{28}{subsubsection.3.7.2}%
+\contentsline {subsubsection}{\numberline {3.7.3}Packet loss}{28}{subsubsection.3.7.3}%
+\contentsline {subsubsection}{\numberline {3.7.4}Visual Quality Measurement}{29}{subsubsection.3.7.4}%
+\contentsline {subsubsection}{\numberline {3.7.5}CPU Usage Measurement}{29}{subsubsection.3.7.5}%
+\contentsline {subsubsection}{\numberline {3.7.6}Throughput Measurement}{30}{subsubsection.3.7.6}%
+\contentsline {subsubsection}{\numberline {3.7.7}Data Recording}{30}{subsubsection.3.7.7}%
+\contentsline {section}{\numberline {4}Methodology}{31}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Research Methodology}{31}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Experimental Methodology}{31}{subsection.4.2}%
+\contentsline {subsubsection}{\numberline {4.2.1}Design of Experiments}{31}{subsubsection.4.2.1}%
+\contentsline {subsubsection}{\numberline {4.2.2}Test Setup and Equipment}{34}{subsubsection.4.2.2}%
+\contentsline {subsubsection}{\numberline {4.2.3}Test Procedure}{37}{subsubsection.4.2.3}%
+\contentsline {subsubsection}{\numberline {4.2.4}Controlling for Unmeasured and Hidden Variables}{37}{subsubsection.4.2.4}%
+\contentsline {subsection}{\numberline {4.3}Measurement Methodology}{37}{subsection.4.3}%
+\contentsline {subsubsection}{\numberline {4.3.1}How You Used That Design During Testing}{37}{subsubsection.4.3.1}%
+\contentsline {subsubsection}{\numberline {4.3.2}What Was Measured}{37}{subsubsection.4.3.2}%
+\contentsline {subsubsection}{\numberline {4.3.3}Measurement Method}{37}{subsubsection.4.3.3}%
+\contentsline {subsubsection}{\numberline {4.3.4}Accuracy and Error Sources}{37}{subsubsection.4.3.4}%
+\contentsline {subsubsection}{\numberline {4.3.5}Data Recording and Processing}{38}{subsubsection.4.3.5}%
+\contentsline {subsection}{\numberline {4.4}Statistical Analysis}{38}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Limitations}{38}{subsection.4.5}%
+\contentsline {subsection}{\numberline {4.6}Reliability}{38}{subsection.4.6}%
+\contentsline {subsection}{\numberline {4.7}Validity}{38}{subsection.4.7}%
+\contentsline {section}{\numberline {5}Results}{39}{section.5}%
+\contentsline {subsection}{\numberline {5.1}System Latency}{39}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Packet Loss Rate}{42}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Throughput}{42}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}CPU Usage on Sender}{43}{subsection.5.4}%
+\contentsline {subsection}{\numberline {5.5}Visual Quality}{44}{subsection.5.5}%
+\contentsline {section}{\numberline {6}Discussion}{45}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Addressing the Research Questions}{45}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Transport Protocol Performance }{45}{subsection.6.2}%
+\contentsline {subsubsection}{\numberline {6.2.1}UDP vs.\ TCP under Normal Conditions (T1 vs.\ T4)}{45}{subsubsection.6.2.1}%
+\contentsline {subsubsection}{\numberline {6.2.2}Cost of Encryption: SRTP Overhead (T1 vs.\ T3)}{45}{subsubsection.6.2.2}%
+\contentsline {subsubsection}{\numberline {6.2.3}Effect of Bandwidth Constraint (T5 vs.\ T6)}{45}{subsubsection.6.2.3}%
+\contentsline {subsection}{\numberline {6.3}Codec Configuration Performance}{47}{subsection.6.3}%
+\contentsline {subsubsection}{\numberline {6.3.1}The Value of Skipping Re-encoding (C2 vs.\ C1, C6 vs.\ C5)}{47}{subsubsection.6.3.1}%
+\contentsline {subsubsection}{\numberline {6.3.2}Resolution: Does 720p Help? (C3 vs.\ C1, C7 vs.\ C5)}{47}{subsubsection.6.3.2}%
+\contentsline {subsubsection}{\numberline {6.3.3}GPU Acceleration (C4 vs.\ C1, C8 vs.\ C5)}{47}{subsubsection.6.3.3}%
+\contentsline {subsubsection}{\numberline {6.3.4}H.264 vs.\ H.265 (C1 vs.\ C5, C4 vs.\ C8)}{47}{subsubsection.6.3.4}%
+\contentsline {subsubsection}{\numberline {6.3.5}MJPEG (C9)}{47}{subsubsection.6.3.5}%
+\contentsline {subsection}{\numberline {6.4}Cross-cutting Trade-offs and RQ3}{47}{subsection.6.4}%
+\contentsline {subsubsection}{\numberline {6.4.1}The Latency Quality Compromise}{47}{subsubsection.6.4.1}%
+\contentsline {subsubsection}{\numberline {6.4.2}The CPU Quality/Latency Compromise}{47}{subsubsection.6.4.2}%
+\contentsline {subsubsection}{\numberline {6.4.3}Configuration Recommendation for RTO}{47}{subsubsection.6.4.3}%
+\contentsline {subsection}{\numberline {6.5}Comparison Against RTO Latency Requirements}{47}{subsection.6.5}%
+\contentsline {subsection}{\numberline {6.6}Limitations and Methodological Reflections}{47}{subsection.6.6}%
+\contentsline {subsubsection}{\numberline {6.6.1}Measurement Validity}{47}{subsubsection.6.6.1}%
+\contentsline {subsubsection}{\numberline {6.6.2}Generalisability}{47}{subsubsection.6.6.2}%
+\contentsline {subsection}{\numberline {6.7}Relation to Prior Work}{47}{subsection.6.7}%
+\contentsline {section}{\numberline {7}Conclusion}{48}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Evaluation of latency}{48}{subsection.7.1}%
+\contentsline {section}{References}{49}{subsection.7.1}%

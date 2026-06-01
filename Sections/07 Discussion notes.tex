@@ -1,0 +1,120 @@
+\section{Discussion}\label{sec:discussion}
+
+Differences between T1 and T3 at CPU isolate the computational overhead of SRTP encryption.
+
+Discuss different scenarios and recmmendations taking utgangspunkt of the results
+
+Rain effect on BRISQUE
+
+Interresting results:
+
+T2:
+Packet loss: Lower packet loss. Could be nothing, Just less load on the network, lucky. maybe transcoding made it worse?
+Throughput: Higher Std. dev on throughput pointing to CPU creates more stable output and consistant bitrate compared to the camera encoder
+BRISQUE: General no Trancsoding resultet in a lower BRISQUE score, probably due to no re-encoding which adds ... fragments to be encoded. At the same time it did produce one of the worst ratings. But by the p95 it seem to be helping around 20 points on the Brisque score not to re-encode.
+
+T3:
+Latency: adding 1 ms to sender pipeline probably encoding work. A little worse transit, maybe due to bigger packages due to encryption. Also a couple ms decoding, probably encoding that as well. Using the p95 we get 15 ms.
+Packet loss: a little more than T1, but negligible. 
+Throughput: Tiny bit more output, again encryption, even with the aim set
+BRISQUE: Worse score, see no reason why.
+
+T4:
+Latency: Transit is about 9 ms higher on mean and 24 ms on p95, TCP buffering adding overhead.
+Packet loss: Essentially zero, only 1 packet lost, could be misscalculation or overflow. Sent it and then stopped the code. TCP retransmission doing its job.
+Throughput: Nearly the same as T1. Slightly lower std dev, TCP flow control smoothing output.
+BRISQUE: Noticeably better, ~7 points on mean and ~10 on p95. No lost packets means no corrupted frames reaching the decoder. always have keyframe
+
+T5:
+Latency: Receiver latency doubles from 15 to 30 ms mean. Frames arriving out of order or with gaps due to drops. End-to-end up ~24 ms.
+Packet loss: 47.5\% - catastrophic. UDP just drops half the stream when bandwidth is too tight.
+Throughput: Constrained to ~12 Mbps, very stable output within the cap.
+BRISQUE: Mean actually better (~5 pts), but p95 shoots up to 54 vs 44. Frames that arrive look fine, but when things go bad they go very bad.
+
+T6:
+Latency: Sender doubles from 17 ms vs 10 ms, transit is 9.4 seconds mean and 30 seconds at p95. TCP buffering everything waiting for retransmits. Completely unusable for RTO.
+Packet loss: 13.8\% despite TCP. Surprising, but TCP queues eventually overflow under sustained overload.
+Throughput: Near the 18 Mbps cap, very stable.
+CPU: More than double, 30\% mean with std dev of 11.7 and p95 at 46\%. TCP congestion control is expensive under stress.
+BRISQUE: Better than T1 (~6 pts). Same as T4, received frames are complete, it just takes 10 seconds before they arrive.
+
+C2:
+Latency: End-to-end ~26 ms lower on mean and ~48 ms on p95 compared to C1. Entirely due to no sender pipeline, both transit and receiver have negligible difference, no transcoding step to add time.
+Packet loss: Lower, 0.18\% vs 0.82\%. Same reason as T2, fewer packets total from the camera.
+BRISQUE: Better by ~7 points on mean and ~16 on p95. No re-encoding preserving the original camera quality.
+
+C3:
+Latency: Sender slightly faster (~1 ms). Transit oddly higher than C1 despite lower resolution. Probably duo to fixed bitrate.
+Throughput: Nearly identical to C1 at 720p.
+CPU: Lower, 20\% vs 27\%. Fewer pixels to process. And enough Bitrate to work with
+BRISQUE: Better mean (~7 pts), but p95 worse. Lower resolution helps on average but produces more extreme outliers.
+
+C4:
+Latency: Sender notably faster, 17 ms vs 24 ms mean. GPU pipeline encodes quicker.
+Throughput: Similar mean but higher std dev (2.8 vs 1.6). GPU encoder less consistent on bitrate.
+CPU: About half, 12\% vs 27\%. GPU doing the heavy lifting. Separate the decoding to CPU and encoding on GPU
+BRISQUE: Worse mean (~7 pts). GPU encoder trading quality for speed.
+
+C5:
+Latency: Sender and transit both a bit higher. End-to-end ~13 ms more than C1. No issue to decode 265 vs 264.
+Throughput: Much lower, ~8.5 Mbps vs 25.7 Mbps. H.265 is more efficient, but CPU is maxing out causing very variable output (std dev 4.4). 264 decoded and then 265 decode, 265 need lower bitrate so it makes sense.
+CPU: 64\% mean, std dev 13.4. CPU struggling with H.265.
+BRISQUE: Slightly better. Better compression algorithm compensating for lower bitrate.
+
+C6:
+Latency: No sender pipeline. End-to-end ~19 ms lower than C1 on mean, similar story as C2.
+Packet loss: Slightly higher than C1, 1.08\% vs 0.82\%.
+Throughput: Similar to C1, very stable (std dev 1.08). Camera H.265 encoder is consistent.
+BRISQUE: Much better, 17.6 mean vs 36.7. Best in the codec series. Camera H.265 without re-encoding is excellent.
+
+C7:
+Latency: Sender higher than C1 (29 ms vs 24 ms). 3 ms more than pure 265 for mean, and 5ms on 95p, probably from converting to 720p. Receiver a bit easier
+Throughput: About half of C1, ~12 Mbps, with high std dev (3.8). Encoder struggling to keep up. But more than baseline 265
+CPU: 68\% mean, highest in the tests. H.265 720p more expensive than H.265 1080p, probably due to bitrate control fighting to fill the lower resolution.
+BRISQUE: Much better mean (20 vs 37), but also against 265 on 33. Lower resolution H.265 scores well but why.
+
+C8:
+Latency: Sender much lower, 7 ms vs 24 ms mean. Fastest sender pipeline in the codec tests.
+Packet loss: A bit higher, 1.59\%.
+Throughput: Similar mean, extremely stable (std dev 0.88). Most consistent encoder in the tests.
+CPU: 5.9\% mean. Lowest in the tests, GPU handling everything.
+BRISQUE: Similar to C5. GPU and CPU H.265 produce comparable quality.
+
+C9:
+Latency: Transit 149 ms mean and 441 ms at p95. MJPEG frames are huge, flooding the network even on unlimited bandwidth. End-to-end 193 ms mean.
+Packet loss: 7.38\%. Bandwidth congestion from the sheer volume of data.
+Throughput: ~81 Mbps, roughly 3x everything else. Std dev 15 Mbps, very variable.
+CPU: Lower than C1, 17\% vs 27\%. MJPEG has no inter-frame compression so encoding is simpler.
+BRISQUE: Slightly worse than C1, but still good quality, which is most of the reason the throughput is so high.
+
+\subsection{Key Findings and Recommendations}\label{subsec:key-findings}
+
+Across the transport and codec experiments, several findings stand out as most operationally significant.
+
+\textbf{Avoid re-encoding when possible.}
+Transcoding the stream on the receiver side degrades visual quality noticeably. Passing the camera-encoded H.264 stream directly (C2) improved BRISQUE by up to 16 points at p95 and reduced end-to-end latency by up to 48~ms compared to the CPU-transcoded baseline (C1). Camera H.265 passthrough (C6) achieved the best image quality in the entire codec series, with a mean BRISQUE of 17.6 versus 36.7 for the baseline.
+
+\textbf{SRTP encryption adds negligible overhead.}
+Encrypting the stream with SRTP (T3) added approximately 1~ms to sender latency and had no meaningful impact on packet loss or visual quality. The marginal throughput increase was consistent with the added per-packet overhead. Encryption should therefore not be treated as a reason to forgo security in constrained environments.
+
+\textbf{GPU encoding halves CPU cost but trades image quality.}
+GPU-encoded H.264 (C4) reduced CPU load from 27\% to 12\% and produced the fastest sender pipeline in the H.264 series (7~ms vs.\ 24~ms mean). However, BRISQUE degraded by approximately 7 points, and bitrate consistency was lower (std dev 2.8 vs.\ 1.6). GPU H.265 (C8) achieved the lowest CPU usage across all tests (5.9\%) while matching software H.265 quality, making it the preferred option when computational resources are the primary constraint.
+
+\textbf{TCP is unsuitable for real-time video over lossy links.}
+Under a bandwidth constraint (T6), TCP's retransmission mechanism caused transit latency to reach 9.4~s mean and 30~s at p95, completely invalidating the stream for real-time operation. Even under unconstrained conditions (T4), TCP added 9--24~ms of latency relative to UDP. The improved BRISQUE from guaranteed delivery cannot compensate for latency that renders the feed unusable for remote operation.
+
+\textbf{Bandwidth headroom is critical for UDP reliability.}
+At 18~Mbps with a 25~Mbps stream (T5), UDP packet loss reached 47.5\%, and p95 BRISQUE climbed to 54. The mean BRISQUE appeared acceptable, but the tail behaviour indicates severe intermittent failures. A minimum bandwidth margin well above the target bitrate is required to avoid catastrophic degradation under UDP.
+
+\textbf{H.265 efficiency comes at a CPU cost without GPU acceleration.}
+Software H.265 encoding (C5) consumed 64\% CPU on average, approaching saturation, while delivering only marginal quality gains over H.264. This makes software H.265 impractical for deployment on resource-constrained platforms unless paired with a hardware encoder (C8).
+
+
+• RQ1: What end-to-end latency and video quality can be achieved in a GStreamer-based video
+streaming pipeline for remote train operation, and which codec and transport configuration
+performs best?
+• RQ2: How do network conditions, including transport protocol and available bandwidth,
+affect streaming latency and reliability in a remote train operation context?
+• RQ3: What are the practical interplay between latency, video quality, and resource usage
+across different streaming configurations, and which configuration is most suitable for remote
+train operation?

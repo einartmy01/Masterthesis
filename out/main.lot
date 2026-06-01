@@ -2,26 +2,26 @@
 \contentsline {table}{\numberline {1}{\ignorespaces Inclusion Criteria for Literature Review}}{3}{table.caption.1}%
 \contentsline {table}{\numberline {2}{\ignorespaces Grades of Automation as defined in IEC~62290--1~\blx@tocontentsinit {0}\cite {iec62290, uitp2018}.}}{4}{table.caption.2}%
 \contentsline {table}{\numberline {3}{\ignorespaces Setup for IP and Port Connection}}{23}{table.caption.9}%
-\contentsline {table}{\numberline {4}{\ignorespaces Overview of transport protocol test setups.}}{32}{table.caption.16}%
-\contentsline {table}{\numberline {5}{\ignorespaces Overview of codec configuration test setups.}}{33}{table.caption.17}%
-\contentsline {table}{\numberline {6}{\ignorespaces Camera Stream Configuration}}{35}{table.caption.20}%
-\contentsline {table}{\numberline {7}{\ignorespaces Fixed Configuration Values for the Video Streaming System}}{35}{table.caption.21}%
-\contentsline {table}{\numberline {8}{\ignorespaces Test Equipment}}{36}{table.caption.22}%
-\contentsline {table}{\numberline {9}{\ignorespaces Overview of transport protocol test setups.}}{40}{table.caption.28}%
-\contentsline {table}{\numberline {10}{\ignorespaces Overview of codec configuration test setups.}}{40}{table.caption.29}%
-\contentsline {table}{\numberline {11}{\ignorespaces Latency statistics for codecs configuration tests for Sender pipeline}}{41}{table.caption.30}%
-\contentsline {table}{\numberline {12}{\ignorespaces Latency statistics for transport protocol tests for Sender pipeline}}{41}{table.caption.31}%
-\contentsline {table}{\numberline {13}{\ignorespaces Latency statistics for transport protocol tests for Transit}}{41}{table.caption.32}%
-\contentsline {table}{\numberline {14}{\ignorespaces Latency statistics for codec configuration tests for Transit}}{42}{table.caption.33}%
-\contentsline {table}{\numberline {15}{\ignorespaces Latency statistics for transport protocol tests for Receiver pipeline}}{42}{table.caption.34}%
-\contentsline {table}{\numberline {16}{\ignorespaces Latency statistics for codec configuration tests for Receiver pipeline}}{42}{table.caption.35}%
-\contentsline {table}{\numberline {17}{\ignorespaces End-to-end latency statistics for transport protocol experiment}}{42}{table.caption.36}%
-\contentsline {table}{\numberline {18}{\ignorespaces End-to-end latency statistics for codec configuration experiment}}{43}{table.caption.37}%
-\contentsline {table}{\numberline {19}{\ignorespaces Packet loss statistics for Transport experiment tests}}{43}{table.caption.38}%
-\contentsline {table}{\numberline {20}{\ignorespaces Packet loss statistics for codec configuration experiment tests}}{43}{table.caption.39}%
-\contentsline {table}{\numberline {21}{\ignorespaces Throughput statistics for Transport experiment tests}}{44}{table.caption.40}%
-\contentsline {table}{\numberline {22}{\ignorespaces Throughput statistics for codec configuration experiment tests}}{44}{table.caption.41}%
-\contentsline {table}{\numberline {23}{\ignorespaces Sender CPU usage statistics for Transport experiment tests}}{44}{table.caption.42}%
-\contentsline {table}{\numberline {24}{\ignorespaces Sender CPU usage statistics for codec configuration experiment tests}}{45}{table.caption.43}%
-\contentsline {table}{\numberline {25}{\ignorespaces BRISQUE visual quality statistics for Transport experiment tests}}{45}{table.caption.44}%
-\contentsline {table}{\numberline {26}{\ignorespaces BRISQUE visual quality statistics for codec configuration experiment tests}}{45}{table.caption.45}%
+\contentsline {table}{\numberline {4}{\ignorespaces Overview of transport protocol test setups.}}{31}{table.caption.16}%
+\contentsline {table}{\numberline {5}{\ignorespaces Overview of codec configuration test setups.}}{32}{table.caption.17}%
+\contentsline {table}{\numberline {6}{\ignorespaces Camera Stream Configuration}}{34}{table.caption.20}%
+\contentsline {table}{\numberline {7}{\ignorespaces Fixed Configuration Values for the Video Streaming System}}{34}{table.caption.21}%
+\contentsline {table}{\numberline {8}{\ignorespaces Test Equipment}}{35}{table.caption.22}%
+\contentsline {table}{\numberline {9}{\ignorespaces Overview of transport protocol test setups.}}{39}{table.caption.28}%
+\contentsline {table}{\numberline {10}{\ignorespaces Overview of codec configuration test setups.}}{39}{table.caption.29}%
+\contentsline {table}{\numberline {11}{\ignorespaces Latency statistics for codecs configuration tests for Sender pipeline}}{40}{table.caption.30}%
+\contentsline {table}{\numberline {12}{\ignorespaces Latency statistics for transport protocol tests for Sender pipeline}}{40}{table.caption.31}%
+\contentsline {table}{\numberline {13}{\ignorespaces Latency statistics for transport protocol tests for Transit}}{40}{table.caption.32}%
+\contentsline {table}{\numberline {14}{\ignorespaces Latency statistics for codec configuration tests for Transit}}{41}{table.caption.33}%
+\contentsline {table}{\numberline {15}{\ignorespaces Latency statistics for transport protocol tests for Receiver pipeline}}{41}{table.caption.34}%
+\contentsline {table}{\numberline {16}{\ignorespaces Latency statistics for codec configuration tests for Receiver pipeline}}{41}{table.caption.35}%
+\contentsline {table}{\numberline {17}{\ignorespaces End-to-end latency statistics for transport protocol experiment}}{41}{table.caption.36}%
+\contentsline {table}{\numberline {18}{\ignorespaces End-to-end latency statistics for codec configuration experiment}}{42}{table.caption.37}%
+\contentsline {table}{\numberline {19}{\ignorespaces Packet loss statistics for Transport experiment tests}}{42}{table.caption.38}%
+\contentsline {table}{\numberline {20}{\ignorespaces Packet loss statistics for codec configuration experiment tests}}{42}{table.caption.39}%
+\contentsline {table}{\numberline {21}{\ignorespaces Throughput statistics for Transport experiment tests}}{43}{table.caption.40}%
+\contentsline {table}{\numberline {22}{\ignorespaces Throughput statistics for codec configuration experiment tests}}{43}{table.caption.41}%
+\contentsline {table}{\numberline {23}{\ignorespaces Sender CPU usage statistics for Transport experiment tests}}{43}{table.caption.42}%
+\contentsline {table}{\numberline {24}{\ignorespaces Sender CPU usage statistics for codec configuration experiment tests}}{44}{table.caption.43}%
+\contentsline {table}{\numberline {25}{\ignorespaces BRISQUE visual quality statistics for Transport experiment tests}}{44}{table.caption.44}%
+\contentsline {table}{\numberline {26}{\ignorespaces BRISQUE visual quality statistics for codec configuration experiment tests}}{44}{table.caption.45}%

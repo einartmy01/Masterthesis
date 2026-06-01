@@ -26,6 +26,7 @@ The key requirements identified for the system are:
 \end{description}
 
 % ─────────────────────────────────────────────
+
 \subsection{Development Methodology}
 
 \subsubsection{Iterative Design and the Minimum Viable Product}
@@ -47,6 +48,7 @@ Early sprints concentrated on establishing the functional baseline. This include
 Each sprint aimed to produced a testable system state, and the results from each round of testing directly shaped the priorities for the next sprint. For example, early latency measurements showed that the GStreamer jitter buffer contributed a major fixed latency, much larger percentage then assumed, which led to disabling it in the baseline configuration. This kind of short feedback loop, in which findings drive the next design decision, is a central characteristic of iterative development as described by Wohlin et al.~\cite{wohlin2012} and is what distinguishes this approach from a linear process.
 
 % ─────────────────────────────────────────────
+
 \subsection{System Overview}
 
 The system consists of two computers, a sender and a receiver connected over a 5G and Wi-Fi network, with three Hikvision IP cameras attached to the sender via dedicated a Ethernet interface using a network switch. The sender computer uses a 5G modem to connect to the receiver which is on the lab Wi-Fi. Originally a GPS-disciplined clock source was supposed to be used, due to problems of overriding computer clock it was put aside and network regulation of clock source was used with NTP servers from Google, Apple and Cloudfare.
@@ -66,6 +68,7 @@ At the application layer, the sender pulls video from each camera using RTSP ove
     \includegraphics[width=0.9\textwidth]{Images/System/ApplicationAndTransportSetup2.png}
     \caption{Application and Transport Layer Setup of Project}\label{fig:appAndTransSetup}
 \end{figure}
+
 \subsection{Components}
 
 The system is built from the following physical and software components.
@@ -116,17 +119,8 @@ The sender connects to the internet through a 5G modem using a dynamically assig
 
 Tailscale and WireGuard do introduce some additional latency compared to a direct connection, as every packet must pass through the encrypted tunnel and be processed by the WireGuard protocol on both ends before being delivered. The overhead is generally small, but it is a consistent addition to every packet and cannot be removed from the measurement results. Running all tests through Tailscale means this overhead is present equally across all configurations, so the results remain comparable to each other, but the absolute latency values will be slightly higher than what a direct connection would produce. The virtual IP layer also adds a small amount of packet size overhead to every transmitted frame, which is necessary to account for when applying the bandwidth constraints in the limited bandwidth test conditions.
 
-\subsubsection{Network Setup}
-
-During testing, the sender and receiver communicate over a local Wi-Fi network provided by a shared access point. Tailscale is installed on both machines and logged in to the same account, providing each machine with a stable 100.x.x.x address. The sender addresses all outgoing RTP streams to the receiver's Tailscale IP, which makes the setup portable: the same scripts and configuration files work regardless of which physical Wi-Fi network the machines are connected to.
-
-Firewall rules on the receiver are configured to accept inbound UDP traffic on ports 5000, 5002, and 5004 to ensure that the operating system does not silently drop incoming stream packets.
-
-For the bandwidth-limited test conditions, a software traffic shaper is applied on the sender's network interface to impose an upper bitrate limit, simulating degraded link conditions. This allows the effect of reduced available bandwidth to be evaluated in a controlled and repeatable way without depending on a naturally congested network.
-
-Originally, a plan to use ethernet connection to the receiver computer was in order. However, when running a couple of sprints and iterations, it became apparent that the constraints would not be the Wi-Fi signal at the lab. If this setup is to be test during different conditions, a check of relevant Wi-Fi capabilities is recommended and possible changes as adding direct ethernet connection to routers.
-
 % ─────────────────────────────────────────────
+
 \subsection{Pipeline Design}
 
 \subsubsection{GStreamer}

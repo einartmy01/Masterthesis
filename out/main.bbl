@@ -2660,7 +2660,6 @@
       \field{urlday}{29}
       \field{urlmonth}{5}
       \field{urlyear}{2026}
-      \field{volume}{28}
       \field{year}{2004}
       \field{urldateera}{ce}
       \verb{urlraw}
@@ -2831,6 +2830,83 @@
       \endverb
       \verb{url}
       \verb https://studentebookhub.com/wp-content/uploads/2024/preview/9781119634256.pdf
+      \endverb
+    \endentry
+    \entry{briscoe2016}{article}{}
+      \name{author}{10}{}{%
+        {{hash=7987c94c617b217241ecd867ee4686c4}{%
+           family={Briscoe},
+           familyi={B\bibinitperiod},
+           given={Bob},
+           giveni={B\bibinitperiod}}}%
+        {{hash=9843cfd8391865c184f5c70856d97f01}{%
+           family={Brunstrom},
+           familyi={B\bibinitperiod},
+           given={Anna},
+           giveni={A\bibinitperiod}}}%
+        {{hash=26e8d089c5540b0d0e73a5a9a1c394d7}{%
+           family={Petlund},
+           familyi={P\bibinitperiod},
+           given={Andreas},
+           giveni={A\bibinitperiod}}}%
+        {{hash=841bc5a53e2a0ba3e36e621b6ae7ee51}{%
+           family={Hayes},
+           familyi={H\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=730e0474a37a404c6bae112bb55d75df}{%
+           family={Ros},
+           familyi={R\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=ad389dad7da25743cbda48f202e41198}{%
+           family={Tsang},
+           familyi={T\bibinitperiod},
+           given={Ing-Jyh},
+           giveni={I\bibinithyphendelim J\bibinitperiod}}}%
+        {{hash=59b5f3836c50e92cf20fc86d7f8bbf0a}{%
+           family={Gjessing},
+           familyi={G\bibinitperiod},
+           given={Stein},
+           giveni={S\bibinitperiod}}}%
+        {{hash=cfaf384fe5d81c836f535e739e0cc823}{%
+           family={Fairhurst},
+           familyi={F\bibinitperiod},
+           given={Gorry},
+           giveni={G\bibinitperiod}}}%
+        {{hash=160890b3c15f83f00b98819b01f0ec9e}{%
+           family={Griwodz},
+           familyi={G\bibinitperiod},
+           given={Carsten},
+           giveni={C\bibinitperiod}}}%
+        {{hash=31c0ffa1a9053d2267410f40c2aaf6c7}{%
+           family={Welzl},
+           familyi={W\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{a2841748b090b2a873323a9a16497e66}
+      \strng{fullhash}{85c4beead29a6941ef8fddd34d7745b2}
+      \strng{bibnamehash}{a2841748b090b2a873323a9a16497e66}
+      \strng{authorbibnamehash}{a2841748b090b2a873323a9a16497e66}
+      \strng{authornamehash}{a2841748b090b2a873323a9a16497e66}
+      \strng{authorfullhash}{85c4beead29a6941ef8fddd34d7745b2}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Communications Surveys \& Tutorials}
+      \field{title}{Reducing Internet Latency: A Survey of Techniques and Their Merits}
+      \field{urlday}{1}
+      \field{urlmonth}{6}
+      \field{urlyear}{2026}
+      \field{year}{2016}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://ieeexplore.ieee.org/document/6967689
+      \endverb
+      \verb{url}
+      \verb https://ieeexplore.ieee.org/document/6967689
       \endverb
     \endentry
   \enddatalist
