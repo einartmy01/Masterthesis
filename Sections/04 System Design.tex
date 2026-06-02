@@ -119,7 +119,6 @@ The sender connects to the internet through a 5G modem using a dynamically assig
 
 Tailscale and WireGuard do introduce some additional latency compared to a direct connection, as every packet must pass through the encrypted tunnel and be processed by the WireGuard protocol on both ends before being delivered. The overhead is generally small, but it is a consistent addition to every packet and cannot be removed from the measurement results. Running all tests through Tailscale means this overhead is present equally across all configurations, so the results remain comparable to each other, but the absolute latency values will be slightly higher than what a direct connection would produce. The virtual IP layer also adds a small amount of packet size overhead to every transmitted frame, which is necessary to account for when applying the bandwidth constraints in the limited bandwidth test conditions.
 
-% ─────────────────────────────────────────────
 
 \subsection{Pipeline Design}
 

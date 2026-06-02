@@ -1,15 +1,18 @@
 [0] Config.pm:307> INFO - This is Biber 2.19
 [0] Config.pm:310> INFO - Logfile is 'out/main.blg'
-[43] biber:340> INFO - === Mon Jun  1, 2026, 15:43:53
-[53] Biber.pm:419> INFO - Reading 'out/main.bcf'
-[103] Biber.pm:979> INFO - Found 70 citekeys in bib section 0
-[111] Biber.pm:4419> INFO - Processing section 0
-[119] Biber.pm:4610> INFO - Looking for bibtex file 'references.bib' for section 0
-[121] bibtex.pm:1713> INFO - LaTeX decoding ...
-[151] bibtex.pm:1519> INFO - Found BibTeX data source 'references.bib'
-[450] UCollate.pm:68> INFO - Overriding locale 'en-GB' defaults 'variable = shifted' with 'variable = non-ignorable'
-[450] UCollate.pm:68> INFO - Overriding locale 'en-GB' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[450] Biber.pm:4239> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-GB'
-[450] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-GB'
-[476] bbl.pm:660> INFO - Writing 'out/main.bbl' with encoding 'UTF-8'
-[493] bbl.pm:763> INFO - Output to out/main.bbl
+[39] biber:340> INFO - === Tue Jun  2, 2026, 20:21:31
+[49] Biber.pm:419> INFO - Reading 'out/main.bcf'
+[92] Biber.pm:979> INFO - Found 72 citekeys in bib section 0
+[99] Biber.pm:4419> INFO - Processing section 0
+[106] Biber.pm:4610> INFO - Looking for bibtex file 'references.bib' for section 0
+[108] bibtex.pm:1713> INFO - LaTeX decoding ...
+[134] bibtex.pm:1519> INFO - Found BibTeX data source 'references.bib'
+[406] UCollate.pm:68> INFO - Overriding locale 'en-GB' defaults 'variable = shifted' with 'variable = non-ignorable'
+[406] UCollate.pm:68> INFO - Overriding locale 'en-GB' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[406] Biber.pm:4239> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-GB'
+[406] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-GB'
+[430] bbl.pm:660> INFO - Writing 'out/main.bbl' with encoding 'UTF-8'
+[445] bbl.pm:763> INFO - Output to out/main.bbl
+[445] Biber.pm:131> WARN - I didn't find a database entry for 'gulbrandsen_seyffarth_2024' (section 0)
+[445] Biber.pm:131> WARN - I didn't find a database entry for 'kozarevic_2025' (section 0)
+[445] Biber.pm:133> INFO - WARNINGS: 2

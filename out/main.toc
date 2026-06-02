@@ -113,17 +113,16 @@
 \contentsline {subsubsection}{\numberline {6.3.1}The Value of Skipping Re-encoding (C2 vs.\ C1, C6 vs.\ C5)}{47}{subsubsection.6.3.1}%
 \contentsline {subsubsection}{\numberline {6.3.2}Resolution: Does 720p Help? (C3 vs.\ C1, C7 vs.\ C5)}{47}{subsubsection.6.3.2}%
 \contentsline {subsubsection}{\numberline {6.3.3}GPU Acceleration (C4 vs.\ C1, C8 vs.\ C5)}{48}{subsubsection.6.3.3}%
-\contentsline {subsubsection}{\numberline {6.3.4}H.264 vs.\ H.265 (C1 \- C4 vs.\ C5 \- C8)}{48}{subsubsection.6.3.4}%
+\contentsline {subsubsection}{\numberline {6.3.4}H.264 vs.\ H.265 (C1 \- C4 vs.\ C5 \- C8)}{49}{subsubsection.6.3.4}%
 \contentsline {subsubsection}{\numberline {6.3.5}MJPEG (C9)}{49}{subsubsection.6.3.5}%
 \contentsline {subsection}{\numberline {6.4}Interplay of configurations and RQ3}{49}{subsection.6.4}%
-\contentsline {subsubsection}{\numberline {6.4.1}The Latency Quality Compromise}{49}{subsubsection.6.4.1}%
-\contentsline {subsubsection}{\numberline {6.4.2}The CPU Quality/Latency Compromise}{50}{subsubsection.6.4.2}%
-\contentsline {subsubsection}{\numberline {6.4.3}Configuration Recommendation for RTO}{50}{subsubsection.6.4.3}%
-\contentsline {subsection}{\numberline {6.5}Comparison Against RTO Latency Requirements}{50}{subsection.6.5}%
-\contentsline {subsection}{\numberline {6.6}Limitations and Methodological Reflections}{50}{subsection.6.6}%
-\contentsline {subsubsection}{\numberline {6.6.1}Measurement Validity}{50}{subsubsection.6.6.1}%
-\contentsline {subsubsection}{\numberline {6.6.2}Generalisability}{50}{subsubsection.6.6.2}%
-\contentsline {subsection}{\numberline {6.7}Relation to Prior Work}{50}{subsection.6.7}%
-\contentsline {section}{\numberline {7}Conclusion}{51}{section.7}%
-\contentsline {subsection}{\numberline {7.1}Evaluation of latency}{51}{subsection.7.1}%
-\contentsline {section}{References}{52}{subsection.7.1}%
+\contentsline {subsubsection}{\numberline {6.4.1}The Latency Quality Compromise}{50}{subsubsection.6.4.1}%
+\contentsline {subsubsection}{\numberline {6.4.2}Configuration Recommendation for RTO}{50}{subsubsection.6.4.2}%
+\contentsline {subsection}{\numberline {6.5}Comparison Against RTO Latency Requirements}{51}{subsection.6.5}%
+\contentsline {subsection}{\numberline {6.6}Limitations and Methodological Reflections}{51}{subsection.6.6}%
+\contentsline {subsubsection}{\numberline {6.6.1}Measurement Validity}{51}{subsubsection.6.6.1}%
+\contentsline {subsubsection}{\numberline {6.6.2}Generalisability}{51}{subsubsection.6.6.2}%
+\contentsline {subsection}{\numberline {6.7}Relation to Prior Work}{52}{subsection.6.7}%
+\contentsline {section}{\numberline {7}Conclusion}{53}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Evaluation of latency}{53}{subsection.7.1}%
+\contentsline {section}{References}{54}{subsection.7.1}%
