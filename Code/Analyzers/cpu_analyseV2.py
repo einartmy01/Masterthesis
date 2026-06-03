@@ -114,7 +114,7 @@ def plot(timestamps, cpu_total, cpu_usr, cpu_system, s, filepath, script_dir, ti
         f"System CPU Usage (all cores combined) — {os.path.basename(filepath)}\n"
         f"(first {SKIP_SECONDS}s skipped,  {s['count']} samples)",
         fontsize=11, pad=8)
-    ax1.legend(loc="upper right", fontsize=8)
+    ax1.legend().set_visible(False)
     ax1.grid(True, which="major", linestyle="--", alpha=0.4)
     ax1.grid(True, which="minor", linestyle=":",  alpha=0.2)
 
@@ -137,7 +137,7 @@ def plot(timestamps, cpu_total, cpu_usr, cpu_system, s, filepath, script_dir, ti
     ax2.set_ylabel("Breakdown %", fontsize=9)
     ax2.yaxis.set_major_formatter(ticker.FormatStrFormatter("%.0f%%"))
     ax2.yaxis.set_minor_locator(ticker.AutoMinorLocator())
-    ax2.legend(loc="upper right", fontsize=8)
+    ax2.legend().set_visible(False)
     ax2.grid(True, which="major", linestyle="--", alpha=0.4)
     ax2.grid(True, which="minor", linestyle=":",  alpha=0.2)
 

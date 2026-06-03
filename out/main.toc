@@ -86,44 +86,44 @@
 \contentsline {subsubsection}{\numberline {4.2.1}Design of Experiments}{31}{subsubsection.4.2.1}%
 \contentsline {subsubsection}{\numberline {4.2.2}Test Setup and Equipment}{34}{subsubsection.4.2.2}%
 \contentsline {subsubsection}{\numberline {4.2.3}Test Procedure}{36}{subsubsection.4.2.3}%
-\contentsline {subsubsection}{\numberline {4.2.4}Controlling for Unmeasured and Hidden Variables}{36}{subsubsection.4.2.4}%
-\contentsline {subsection}{\numberline {4.3}Measurement Methodology}{36}{subsection.4.3}%
-\contentsline {subsubsection}{\numberline {4.3.1}How You Used That Design During Testing}{36}{subsubsection.4.3.1}%
-\contentsline {subsubsection}{\numberline {4.3.2}What Was Measured}{36}{subsubsection.4.3.2}%
-\contentsline {subsubsection}{\numberline {4.3.3}Measurement Method}{36}{subsubsection.4.3.3}%
-\contentsline {subsubsection}{\numberline {4.3.4}Accuracy and Error Sources}{36}{subsubsection.4.3.4}%
+\contentsline {subsubsection}{\numberline {4.2.4}Controlling for Unmeasured and Hidden Variables}{37}{subsubsection.4.2.4}%
+\contentsline {subsection}{\numberline {4.3}Measurement Methodology}{37}{subsection.4.3}%
+\contentsline {subsubsection}{\numberline {4.3.1}How You Used That Design During Testing}{37}{subsubsection.4.3.1}%
+\contentsline {subsubsection}{\numberline {4.3.2}What Was Measured}{37}{subsubsection.4.3.2}%
+\contentsline {subsubsection}{\numberline {4.3.3}Measurement Method}{37}{subsubsection.4.3.3}%
+\contentsline {subsubsection}{\numberline {4.3.4}Accuracy and Error Sources}{37}{subsubsection.4.3.4}%
 \contentsline {subsubsection}{\numberline {4.3.5}Data Recording and Processing}{37}{subsubsection.4.3.5}%
 \contentsline {subsection}{\numberline {4.4}Statistical Analysis}{37}{subsection.4.4}%
 \contentsline {subsection}{\numberline {4.5}Limitations}{37}{subsection.4.5}%
 \contentsline {subsection}{\numberline {4.6}Reliability}{37}{subsection.4.6}%
 \contentsline {subsection}{\numberline {4.7}Validity}{37}{subsection.4.7}%
 \contentsline {section}{\numberline {5}Results}{38}{section.5}%
-\contentsline {subsection}{\numberline {5.1}System Latency}{38}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}Packet Loss Rate}{41}{subsection.5.2}%
-\contentsline {subsection}{\numberline {5.3}Throughput}{42}{subsection.5.3}%
-\contentsline {subsection}{\numberline {5.4}CPU Usage on Sender}{42}{subsection.5.4}%
-\contentsline {subsection}{\numberline {5.5}Visual Quality}{43}{subsection.5.5}%
-\contentsline {section}{\numberline {6}Discussion}{45}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Addressing the Research Questions}{45}{subsection.6.1}%
-\contentsline {subsubsection}{\numberline {6.1.1}Constant Glass To Glass latency}{45}{subsubsection.6.1.1}%
-\contentsline {subsection}{\numberline {6.2}Transport Protocol Performance }{45}{subsection.6.2}%
-\contentsline {subsubsection}{\numberline {6.2.1}UDP vs.\ TCP under Normal Conditions (T1 vs.\ T4)}{46}{subsubsection.6.2.1}%
-\contentsline {subsubsection}{\numberline {6.2.2}Cost of Encryption: SRTP Overhead (T1 vs.\ T3)}{46}{subsubsection.6.2.2}%
-\contentsline {subsubsection}{\numberline {6.2.3}Effect of Bandwidth Constraint (T5 vs.\ T6)}{46}{subsubsection.6.2.3}%
-\contentsline {subsection}{\numberline {6.3}Codec Configuration Performance}{48}{subsection.6.3}%
-\contentsline {subsubsection}{\numberline {6.3.1}The Value of Skipping Re-encoding (C2 vs.\ C1, C6 vs.\ C5)}{48}{subsubsection.6.3.1}%
-\contentsline {subsubsection}{\numberline {6.3.2}Resolution: Does 720p Help? (C3 vs.\ C1, C7 vs.\ C5)}{48}{subsubsection.6.3.2}%
-\contentsline {subsubsection}{\numberline {6.3.3}GPU Acceleration (C4 vs.\ C1, C8 vs.\ C5)}{49}{subsubsection.6.3.3}%
-\contentsline {subsubsection}{\numberline {6.3.4}H.264 vs.\ H.265 (C1 \- C4 vs.\ C5 \- C8)}{49}{subsubsection.6.3.4}%
-\contentsline {subsubsection}{\numberline {6.3.5}MJPEG (C9)}{50}{subsubsection.6.3.5}%
-\contentsline {subsection}{\numberline {6.4}Interplay of configurations}{50}{subsection.6.4}%
-\contentsline {subsubsection}{\numberline {6.4.1}The Latency Quality Compromise}{50}{subsubsection.6.4.1}%
-\contentsline {subsubsection}{\numberline {6.4.2}Configuration Recommendation for RTO}{51}{subsubsection.6.4.2}%
-\contentsline {subsection}{\numberline {6.5}Comparison Against RTO Latency Requirements}{51}{subsection.6.5}%
-\contentsline {subsection}{\numberline {6.6}Limitations and Methodological Reflections}{52}{subsection.6.6}%
-\contentsline {subsubsection}{\numberline {6.6.1}Measurement Validity}{52}{subsubsection.6.6.1}%
-\contentsline {subsubsection}{\numberline {6.6.2}Generalisability}{52}{subsubsection.6.6.2}%
-\contentsline {subsection}{\numberline {6.7}Relation to Prior Work}{52}{subsection.6.7}%
-\contentsline {section}{\numberline {7}Conclusion}{54}{section.7}%
-\contentsline {subsection}{\numberline {7.1}Evaluation of latency}{54}{subsection.7.1}%
-\contentsline {section}{References}{55}{subsection.7.1}%
+\contentsline {subsection}{\numberline {5.1}System Latency}{39}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Packet Loss Rate}{42}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Throughput}{43}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}CPU Usage on Sender}{44}{subsection.5.4}%
+\contentsline {subsection}{\numberline {5.5}Visual Quality}{45}{subsection.5.5}%
+\contentsline {section}{\numberline {6}Discussion}{47}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Addressing the Research Questions}{47}{subsection.6.1}%
+\contentsline {subsubsection}{\numberline {6.1.1}Constant Glass To Glass latency}{47}{subsubsection.6.1.1}%
+\contentsline {subsection}{\numberline {6.2}Transport Protocol Performance }{48}{subsection.6.2}%
+\contentsline {subsubsection}{\numberline {6.2.1}UDP vs.\ TCP under Normal Conditions (T1 vs.\ T4)}{48}{subsubsection.6.2.1}%
+\contentsline {subsubsection}{\numberline {6.2.2}Cost of Encryption: SRTP Overhead (T1 vs.\ T3)}{48}{subsubsection.6.2.2}%
+\contentsline {subsubsection}{\numberline {6.2.3}Effect of Bandwidth Constraint (T5 vs.\ T6)}{48}{subsubsection.6.2.3}%
+\contentsline {subsection}{\numberline {6.3}Codec Configuration Performance}{50}{subsection.6.3}%
+\contentsline {subsubsection}{\numberline {6.3.1}The Value of Skipping Re-encoding (C2 vs.\ C1, C6 vs.\ C5)}{50}{subsubsection.6.3.1}%
+\contentsline {subsubsection}{\numberline {6.3.2}Effects of 720p Resolution (C3 vs.\ C1, C7 vs.\ C5)}{50}{subsubsection.6.3.2}%
+\contentsline {subsubsection}{\numberline {6.3.3}GPU Acceleration (C4 vs.\ C1, C8 vs.\ C5)}{51}{subsubsection.6.3.3}%
+\contentsline {subsubsection}{\numberline {6.3.4}H.264 vs.\ H.265 (C1 \- C4 vs.\ C5 \- C8)}{51}{subsubsection.6.3.4}%
+\contentsline {subsubsection}{\numberline {6.3.5}MJPEG (C9)}{52}{subsubsection.6.3.5}%
+\contentsline {subsection}{\numberline {6.4}Interplay of configurations}{52}{subsection.6.4}%
+\contentsline {subsubsection}{\numberline {6.4.1}The Latency Quality Compromise}{52}{subsubsection.6.4.1}%
+\contentsline {subsubsection}{\numberline {6.4.2}Configuration Recommendation for RTO}{53}{subsubsection.6.4.2}%
+\contentsline {subsection}{\numberline {6.5}Comparison Against RTO Latency Requirements}{54}{subsection.6.5}%
+\contentsline {subsection}{\numberline {6.6}Limitations and Methodological Reflections}{54}{subsection.6.6}%
+\contentsline {subsubsection}{\numberline {6.6.1}Measurement Validity}{54}{subsubsection.6.6.1}%
+\contentsline {subsubsection}{\numberline {6.6.2}Generalisability}{54}{subsubsection.6.6.2}%
+\contentsline {subsection}{\numberline {6.7}Relation to Prior Work}{55}{subsection.6.7}%
+\contentsline {section}{\numberline {7}Conclusion}{56}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Evaluation of latency}{56}{subsection.7.1}%
+\contentsline {section}{References}{57}{subsection.7.1}%

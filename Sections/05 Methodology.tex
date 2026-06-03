@@ -55,9 +55,13 @@ As this experiment was design to mimic a remote train operation, but with a car 
     \label{fig:road}
 \end{figure}
 
-To be able to execute the tests two people was needed. The first person was responsible for starting the sender, drive the route and end the sender script. The second person was responsible for starting and ending the receiver and notify if any abnormalities occurred. In the Figure~\ref{XXX} is the main physical setup of the experiment.
-%Make a diagram of the test setup
-
+To be able to execute the tests two people was needed. The onboard attendant was responsible for starting the sender, drive the route and end the sender script. The remote control operator was responsible for starting and ending the receiver and notify if any abnormalities occurred. In the Figure~\ref{fig:overview} is the main physical setup of the experiment.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{Images/Test&Equipment/TestOveriewSetup.png}
+    \caption{Experiment overview of setup}
+    \label{fig:overview}
+\end{figure}
 
 
 All the cameras was set at configuration to the values at Table~\ref{tab:camera_stream_config} before entering the sender computer. Except for the C6 test as it demanded Video encoding to be H.265.
@@ -71,7 +75,7 @@ For all the possible values that GStreamer allows to adjust when designing a vid
 
 \subsubsection{Test Setup and Equipment}
 
-All the the test equipment is listed below in Table~\ref{tab:test_equipment}. The cameras was mounted on the car dashboard with small pieces of ducktape to ensure stable recording. The modem was also placed there as you can see in Figure~\ref{fig:dashboardview} to ensure good connection. The sender computer an was connected with Cat 6 cables and placed stable in the passenger seat for the duration of the experiment as shown in Figure~\ref{fig:carsetup}. The receiver was placed at NTNU lab location for the full duration as it would simulate closest to a control room of a remote operation.
+All the the test equipment is listed below in Table~\ref{tab:test_equipment}. The cameras was mounted on the car dashboard with small pieces of ducktape to ensure stable recording. The modem was also placed there as you can see in Figure~\ref{fig:carsetup} to ensure good connection. The sender computer an was connected with Cat 6 cables and placed stable in the passenger seat for the duration of the experiment as shown in Figure~\ref{fig:carsetup}. The receiver was placed at NTNU lab location for the full duration as it would simulate closest to a control room of a remote operation.
 
 \input{Sections/Tables/TestEquipment.tex}
 
@@ -154,7 +158,7 @@ All the the test equipment is listed below in Table~\ref{tab:test_equipment}. Th
 \subsubsection{Test Procedure}
 
 Steps of test procedure.
-The car was set up ready for the test. A phone connection was established between the Person S in the car, and Person R at NTNU. Communication and agreement of which test was established. A test run to warmup the cameras, encoder and decoder. Then receiver was started ready to receive video stream and logging was initiated, then the sender was activated with its own logger. The car was then put out to the road and ran the route. When returned, the sender was turned off and receiver the same. Log files was saved and confirmation of next test was agreed upon before repeating the process for C1-C9. C6 was delayed as it demanded new configuration of the cameras, with a break of a couple minutes before proceeding as the rest of the tests.
+The car was set up ready for the test. A phone connection was established between the onboard attendant in the car, and remote control operator at NTNU. Communication and agreement of which test was established. A test run to warmup the cameras, encoder and decoder. Then receiver was started ready to receive video stream and logging was initiated, then the sender was activated with its own logger. The car was then put out to the road and ran the route. When returned, the sender was turned off and receiver the same. Log files was saved and confirmation of next test was agreed upon before repeating the process for C1-C9. C6 was delayed as it demanded new configuration of the cameras, with a break of a couple minutes before proceeding as the rest of the tests.
 
 \subsubsection{Controlling for Unmeasured and Hidden Variables}
 

@@ -14,11 +14,18 @@
 \contentsline {figure}{\numberline {13}{\ignorespaces BRISQUE extended pipeline for receiver}}{29}{figure.caption.15}%
 \contentsline {figure}{\numberline {14}{\ignorespaces Setup for lab experiment tests}}{33}{figure.caption.18}%
 \contentsline {figure}{\numberline {15}{\ignorespaces Route used for experiment}}{33}{figure.caption.19}%
-\contentsline {figure}{\numberline {16}{\ignorespaces Cameras outside view}}{35}{figure.caption.23}%
-\contentsline {figure}{\numberline {17}{\ignorespaces Car setup for experiment}}{35}{figure.caption.24}%
-\contentsline {figure}{\numberline {18}{\ignorespaces Network Switch and Network Modem}}{36}{figure.caption.25}%
-\contentsline {figure}{\numberline {19}{\ignorespaces End-to-end latency distribution for T1 UDP \- RTP, lab setup.}}{41}{figure.caption.36}%
-\contentsline {figure}{\numberline {20}{\ignorespaces End-to-end latency distribution for C1 H.264, moving experiment.}}{41}{figure.caption.37}%
-\contentsline {figure}{\numberline {21}{\ignorespaces Glass-to-glass latency distribution for T1 UDP \- RTP, lab setup.}}{45}{figure.caption.46}%
-\contentsline {figure}{\numberline {22}{\ignorespaces Glass-to-glass latency distribution for C1 H.264, moving experiment.}}{45}{figure.caption.47}%
-\contentsline {figure}{\numberline {24}{\ignorespaces Graph over the transit latency for T6, TCP with poor bandwidth}}{47}{figure.caption.49}%
+\contentsline {figure}{\numberline {16}{\ignorespaces Experiment overview of setup}}{34}{figure.caption.20}%
+\contentsline {figure}{\numberline {17}{\ignorespaces Cameras outside view}}{35}{figure.caption.24}%
+\contentsline {figure}{\numberline {18}{\ignorespaces Car setup for experiment}}{36}{figure.caption.25}%
+\contentsline {figure}{\numberline {19}{\ignorespaces Network Switch and Network Modem}}{36}{figure.caption.26}%
+\contentsline {figure}{\numberline {20}{\ignorespaces Sender pipeline latency graph over time C1}}{39}{figure.caption.31}%
+\contentsline {figure}{\numberline {21}{\ignorespaces Transit latency graph over time for C1}}{40}{figure.caption.34}%
+\contentsline {figure}{\numberline {22}{\ignorespaces Receiver pipeline latency graph over time for C1}}{41}{figure.caption.37}%
+\contentsline {figure}{\numberline {23}{\ignorespaces End-to-end latency distribution for T1 UDP \- RTP, lab setup.}}{42}{figure.caption.40}%
+\contentsline {figure}{\numberline {24}{\ignorespaces End-to-end latency distribution for C1 H.264, moving experiment.}}{42}{figure.caption.41}%
+\contentsline {figure}{\numberline {25}{\ignorespaces Sender throughput graph over time for C1}}{44}{figure.caption.46}%
+\contentsline {figure}{\numberline {26}{\ignorespaces Sender CPU usage graph over time for C1}}{45}{figure.caption.49}%
+\contentsline {figure}{\numberline {27}{\ignorespaces Video Quality with BRISQUE score graph over time for C1}}{46}{figure.caption.52}%
+\contentsline {figure}{\numberline {28}{\ignorespaces Average Glass-to-glass latency distribution for T1 UDP \- RTP, lab setup.}}{47}{figure.caption.53}%
+\contentsline {figure}{\numberline {29}{\ignorespaces Average Glass-to-glass latency distribution for C1 H.264, moving experiment.}}{47}{figure.caption.54}%
+\contentsline {figure}{\numberline {31}{\ignorespaces Graph over the transit latency for T6, TCP with poor bandwidth. Red line is 95p and yellow is the mean value}}{49}{figure.caption.56}%

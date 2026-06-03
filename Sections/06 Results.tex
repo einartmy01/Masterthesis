@@ -6,13 +6,13 @@ Transit latency data for C4 is unavailable due to a logging error during that te
 
 For the unlimited bandwidth, a test of network was performed. The sender computer had a 112 Mbps Upload speed and the receiver had 148~Mbps Download speed. During the poor test, a value of 18 Mbps constrain on the Upload speed was used.
 
-The transport protocol tests examine how the choice of transport layer protocol, encryption, and available bandwidth affect streaming performance. Table~\ref{tab:transport_overview} provides an overview of all six transport test configurations. 
+The transport protocol tests examine how the choice of transport layer protocol, encryption, and available bandwidth affect streaming performance. Table~\ref{tab:transport_duration} provides an overview of all six transport test configurations including the duration of test which matches the package number for packet loss calculations. 
 
-\input{Sections/Tables/TransportExpSchedule.tex}
+\input{Sections/Tables/TransportExpDuration.tex}
 
-The codec configuration tests examine how codec choice, resolution, and encoding hardware affect streaming performance. All tests used UDP - RTP transport with unlimited bandwidth, isolating codec-related variables from transport effects. Also take a look at Table~\ref{tab:camera_stream_config} for set values of the cameras that entered the computer and was passed along for the \textit{No transcoding} tests. Table~\ref{tab:codec_overview} provides an overview of all nine configurations. C1 served as the baseline configuration. 
+The codec configuration tests examine how codec choice, resolution, and encoding hardware affect streaming performance. All tests used UDP - RTP transport with unlimited bandwidth, isolating codec-related variables from transport effects. Also take a look at Table~\ref{tab:camera_stream_config} for set values of the cameras that entered the computer and was passed along for the \textit{No transcoding} tests. Table~\ref{tab:codec_duration} provides an overview of all nine configurations. C1 served as the baseline configuration. As for the duration it gives a slight insight of how fast the car was driving as the test was completed on the same track each time. Worth noting is the fact that duration time is without the first 10 seconds dedicated to startup.
 
-\input{Sections/Tables/CodecExpSchedule.tex}
+\input{Sections/Tables/CodecExpDuration.tex}
 
 
 \subsection{System Latency}\label{subsec:system_latency}
@@ -27,6 +27,12 @@ The no-transcode configurations (C2 and C6) have no sender pipeline stage and ar
 
 \input{Sections/Tables/Results/C-send-latency.tex}
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{Code/Analyzers/graphs/C1-26.05-09:49/sender_pipeline_26.05-09:49_analysis.png}
+    \caption{Sender pipeline latency graph over time C1}\label{fig:C1SenderLatency}
+\end{figure}
+
 \textbf{Transit:}
 
 Before the experiment a clock offset error check was completed. For the transport protocol test it resulted in a uncertainty of total 7 ms. Which is major effect on the results. Because of this clock offset, all the UDP test resulted in a negative transit latency. For this reason, the values has been adjusted so the lowest transit latency has been added to all the measurements. Making minimum 0~ms and making max, measured maximum + distance between 0 and measured minimum. The real results for min, and the shift of entire transit measurement was, T1: -4.48, T2: -2.06, T3: -5.26, T5: -2.17. Even with the clock offset, these test was performed on same offset, which mean that the results are comparable. For a more realistic numbers for transit latency for UDP with RTP see Table~\ref{tab:transit_codec_latency} as all the codec tests used UDP and RTP.
@@ -36,12 +42,24 @@ Before the experiment a clock offset error check was completed. For the transpor
 
 \input{Sections/Tables/Results/C-transit-latency.tex}
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.95\textwidth]{Code/Analyzers/graphs/C1-26.05-09:49/transit_result_26.05-09:49_analysis.png}
+    \caption{Transit latency graph over time for C1}\label{fig:C1TransitLatency}
+\end{figure}
+
 \textbf{Receiver pipeline:}
 
 %Image of just receiver pipeline
 \input{Sections/Tables/Results/T-rec-latency.tex}
 
 \input{Sections/Tables/Results/C-rec-latency.tex}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{Code/Analyzers/graphs/C1-26.05-09:49/receiver_pipeline_26.05-09:49_analysis.png}
+    \caption{Receiver pipeline latency graph over time for C1}\label{fig:C1ReceiverLatency}
+\end{figure}
 
 \textbf{End-to-End:}
 %Image of a combined end to end latency
@@ -73,7 +91,6 @@ Packet loss was calculated from RTP sequence numbers by logging every packet sen
 
 \input{Sections/Tables/Results/C-packetloss.tex}
 
-
 \subsection{Throughput}\label{subsec:results_throughput}
 
 Throughput was logged at the sender side and reflects the volume of encoded video data leaving the pipeline per second. Under unlimited bandwidth conditions (T1-T4), throughput reflects the natural output of the encoder with a bandwidth of over 100~Mbps. Under the poor bandwidth condition (T5 and T6), throughput is additionally constrained by the available capacity of 18~Mbps. The output measured is included the Tailscale wrapping adding a small percentage to the packets size, this is adjusted for in the constraint tests (T5 and T6) by adding a buffer at the constraint.
@@ -81,6 +98,13 @@ Throughput was logged at the sender side and reflects the volume of encoded vide
 \input{Sections/Tables/Results/T-throughput.tex}
 
 \input{Sections/Tables/Results/C-throughput.tex}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{Code/Analyzers/graphs/C1-26.05-09:49/throughput_26.05-09-49.png}
+    \caption{Sender throughput graph over time for C1}\label{fig:C1Throughput}
+\end{figure}
+
 
 
 \subsection{CPU Usage on Sender}\label{subsec:cpu_usage}
@@ -92,6 +116,12 @@ The no-transcode configurations C2 and C6 have no encoding step and are therefor
 
 \input{Sections/Tables/Results/C-cpu.tex}
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{Code/Analyzers/graphs/C1-26.05-09:49/sender_cpu_26.05-09:49_analysis.png}
+    \caption{Sender CPU usage graph over time for C1}\label{fig:C1CPU}
+\end{figure}
+
 
 \subsection{Visual Quality}\label{subsec:visual_quality}
 
@@ -101,5 +131,10 @@ Visual quality was assessed on captured frames using the BRISQUE no-reference im
 
 \input{Sections/Tables/Results/C-quality.tex}
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{Code/Analyzers/graphs/C1-26.05-09:49/quality_plot_26.05-09:49.png}
+    \caption{Video Quality with BRISQUE score graph over time for C1}\label{fig:C1Quality}
+\end{figure}
 
 Interpretation of these findings, including their implications for remote train operation and comparison against the 3GPP TS~22.289 latency threshold, is provided in Chapter~\ref{sec:discussion}.

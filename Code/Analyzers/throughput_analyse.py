@@ -159,7 +159,7 @@ def main():
     ax.set_xlabel("Wall time", fontsize=10)
     ax.set_ylabel("Throughput (Mbps)", fontsize=10)
     ax.set_title(f"Sender throughput  –  {suffix}", fontsize=12, fontweight="bold")
-    ax.legend(loc="lower right", fontsize=9)
+    ax.legend().set_visible(False)
     ax.yaxis.set_minor_locator(ticker.AutoMinorLocator())
     ax.grid(True, which="major", linestyle="--", alpha=0.4)
     ax.grid(True, which="minor", linestyle=":",  alpha=0.2)

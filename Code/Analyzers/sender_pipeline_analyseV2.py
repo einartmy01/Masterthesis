@@ -104,7 +104,7 @@ def main():
     ax1.axhline(p95,  color="red",    linewidth=1.2, linestyle=":",  label=f"P95  {p95:.1f} ms")
     ax1.set_ylabel("pipeline_ms")
     ax1.set_xlabel("Seconds since start")
-    ax1.legend(fontsize=8, loc="upper right")
+    ax1.legend().set_visible(False)
     ax1.set_title("Pipeline latency over time (dropped rows excluded)")
 
     # -- Bottom: histogram of pipeline_ms -------------------------------------
@@ -114,7 +114,7 @@ def main():
     ax2.axvline(p95,  color="red",    linewidth=1.5, linestyle=":",  label=f"P95  {p95:.1f} ms")
     ax2.set_xlabel("pipeline_ms")
     ax2.set_ylabel("Count")
-    ax2.legend(fontsize=8, loc="upper right")
+    ax2.legend().set_visible(False)
     ax2.set_title("Latency distribution")
 
     plt.tight_layout()

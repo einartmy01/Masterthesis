@@ -1,0 +1,17 @@
+\begin{table}[H]
+    \centering
+    \caption{Transport protocol test durations.}
+    \label{tab:transport_duration}
+    \begin{tabular}{@{}lccccc@{}}
+        \toprule
+        \textbf{Test} & \textbf{Protocol} & \textbf{Payload} & \textbf{Transcoding} & \textbf{Bandwidth} & \textbf{Duration} \\
+        \midrule
+        T1 & UDP & RTP  & Yes & Unlimited & 2:33 \\
+        T2 & UDP & RTP  & No  & Unlimited & 2:08 \\
+        T3 & UDP & SRTP & Yes & Unlimited & 2:49 \\
+        T4 & TCP & RTP  & Yes & Unlimited & 1:57 \\
+        T5 & UDP & RTP  & Yes & Poor      & 2:52 \\
+        T6 & TCP & RTP  & Yes & Poor      & 1:25 \\
+        \bottomrule
+    \end{tabular}
+\end{table}

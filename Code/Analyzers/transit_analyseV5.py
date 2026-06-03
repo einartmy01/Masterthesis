@@ -89,7 +89,7 @@ ax1.axhline(stats["P95"],  color="crimson", linewidth=1.5, linestyle="--", label
 ax1.set_title("Transit Time over Packets")
 ax1.set_xlabel("Packet index")
 ax1.set_ylabel("Transit (ms)")
-ax1.legend(fontsize=9)
+ax1.legend().set_visible(False)
 ax1.yaxis.set_major_formatter(ticker.FormatStrFormatter("%.0f ms"))
 ax1.grid(True, alpha=0.3)
 
@@ -101,7 +101,7 @@ ax2.axvline(stats["P95"],  color="crimson", linewidth=2, linestyle="--", label=f
 ax2.set_title("Distribution of Transit Times")
 ax2.set_xlabel("Transit (ms)")
 ax2.set_ylabel("Count")
-ax2.legend(fontsize=9)
+ax2.legend().set_visible(False)
 ax2.xaxis.set_major_formatter(ticker.FormatStrFormatter("%.0f ms"))
 ax2.grid(True, alpha=0.3, axis="y")
 

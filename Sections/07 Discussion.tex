@@ -5,27 +5,29 @@
 This discussion chapter will interpret the result of Chapter~\ref{sec:results} through using the three research questions stated in the introduction. It will also  use the 3GPP TS $\leq$ 100~ms as a value to compare the found results to.
 
 \subsubsection{Constant Glass To Glass latency}
-Before we move onto the discussion about codecs and transport layers, a clarification most be made. As all the results discussing is end-to-end it does not include the time for the camera to capture footage, or the time for a monitor to render it. For all the configurations the camera was set to capture images at 25fps. Producing a 40~ms latency from the beginning. The monitor also at use is at 60Hz resulting in a 16.67~ms delay before showing the images. This also give some perspective of how small numbers we are logging and discussing further in this discussion chapter.
+Before we move onto the discussion about codecs and transport layers, a clarification most be made. As all the results discussing is end-to-end it does not include the time for the camera to capture footage, or the time for a monitor to render it. For all the configurations the camera was set to capture images at 25fps. Producing a worse case 40~ms \textit{latency} from the beginning. The monitor also at use is at 60Hz resulting in a worst case 16.67~ms delay before showing the images. This also give some perspective of how small numbers we are logging and discussing further in this discussion chapter.
 \[
   ms = \frac{1000}{fps} \qquad ms = \frac{1000}{Hz}
 \]
+
+The way the camera used works, is at 40~ms interval a snapshot is captured. Meaning it is not directly latency, but more a blind window where no images are captured. This is the same for monitor, that replace one row at the screen at the time, doing 60 refreshes per second. The ranges are from 0~ms to 40~ms and 0~ms to 16.67~ms and on average 20~ms 
 
 The effect of these two added latency is quite a lot. Resulting at around 50\% of the total G2G latency of the entire system when added. The figures below show clearly how much they add latency to the system.
 
 %0.65 to 0.9 when adjusted
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.85\textwidth]{Images/Discussion/TotalLatencyT1.png}
-    \caption{Glass-to-glass latency distribution for T1 UDP \- RTP, lab setup.}\label{fig:g2glatencyDistributionT1}
+    \includegraphics[width=0.85\textwidth]{Images/Discussion/TotalLatencyT1Avg.png}
+    \caption{Average Glass-to-glass latency distribution for T1 UDP \- RTP, lab setup.}\label{fig:g2glatencyDistributionT1}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.85\textwidth]{Images/Discussion/TotalLatencyC1.png}
-    \caption{Glass-to-glass latency distribution for C1 H.264, moving experiment.}\label{fig:g2glatencyDistributionC1}
+    \includegraphics[width=0.85\textwidth]{Images/Discussion/TotalLatencyC1Avg.png}
+    \caption{Average Glass-to-glass latency distribution for C1 H.264, moving experiment.}\label{fig:g2glatencyDistributionC1}
 \end{figure}
 
-When the result show how much delay the confirmed and constant elements of capturing and render is responsible for, upgrading the camera to 50~fps and a screen to 120~Hz, could save the system glass-to-glass latency more than anything of the configuration can. A sum of 20~ms and 8.3~ms, total 28.3~ms can be saved by these hardware upgrades. After that, then it is important to take the right choices of picking a stable codec with right setting, and transport system to ensure that no frames are dropped, no pixelation is created and the stream is otherwise stable for the remote operator. 
+When the result show how much delay the confirmed and constant elements of capturing and render is responsible for, upgrading the camera to 50~fps and a screen to 120~Hz, could save the system glass-to-glass latency very much and almost as much as any configuration change could do. A sum of 20~ms and 8.3~ms, total 28.3~ms can be saved for worst case by these hardware upgrades. After that, then it is important to take the right choices of picking a stable codec with right setting, and transport system to ensure that no frames are dropped, no pixelation is created and the stream is otherwise stable for the remote operator. 
 
 \subsection{Transport Protocol Performance }\label{subsec:disc_transport}
 
@@ -47,37 +49,35 @@ The completed test of SRTP really show clearly if there will be any issues to ad
 
 After running tests for both of the transport protocols with lower than expected bandwidth it is clear how both would react, and what to be aware of when choosing transport protocol for real use. With lower than expected bandwidth, which means the encoders aim to produce a bitsize of around 8~Mbps per camera when encoding and then trying to push that trough a funnel only accepting a 12/18 Mbps throughput, it struggles to deliver properly. 
 
-On one hand we have UDP maintaining a worse, but not unmanageable latency. It still has below 100~ms stream of the mean, and only 35~ms worse on the 95 percentile. However, UDP is loosing almost have of the packets at 47.49\% packet loss, which makes sense when a little over 24~Mbps is trying to be pushed threw a 12~Mbps bandwidth. Resulting in a significant worse BRISQUE score. Even with mean score being lower, it max and 95 percentile is above and that is due to it being a lab test. With such a high packet loss, movement is the element that will greatly affect BRISQUE score. And on Figure~\ref{fig:udpBRISQUEGraph1} with the graph from camera one, you can clearly see the where simulated test movement was introduced and when it rendered a still lab. This result compared to the same graph for T1 at Figure~\ref{fig:udpBRISQUEGraph2} showing a much more stable with or without movement.
+On one hand we have UDP maintaining a worse, but not unmanageable latency. It still has below 100~ms stream of the mean, and only 35~ms worse on the 95 percentile. However, UDP is loosing almost have of the packets at 47.49\% packet loss, which makes sense when a little over 24~Mbps is trying to be pushed threw a 12~Mbps bandwidth. Resulting in a significant worse BRISQUE score. Even with mean score being lower, it max and 95 percentile is above and that is due to it being a lab test. With such a high packet loss, movement is the element that will greatly affect BRISQUE score. And on Figure~\ref{fig:udpBRISQUEGraph1} where red line is 95p an blue line is mean, with the graph from camera one, you can clearly see the where simulated test movement was introduced and when it rendered a still lab. This result compared to the same graph for T1 at Figure~\ref{fig:udpBRISQUEGraph2} showing a much more stable with or without movement.
 
 \begin{figure}[H]
     \centering
-    \begin{subfigure}[b]{0.48\textwidth}
+    \begin{subfigure}[b]{0.46\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{Images/Discussion/T5UDPBandwidth.png}
-        \caption{Graph over the BRISQUE score for T5, UDP with poor bandwidth}\label{fig:udpBRISQUEGraph1}
+        \includegraphics[width=\textwidth]{Images/Discussion/T5UDPBandwidthBrisque.png}
+        \caption{Graph over the BRISQUE score for T5, UDP with poor bandwidth.}\label{fig:udpBRISQUEGraph1}
     \end{subfigure}
     \hfill
-    \begin{subfigure}[b]{0.48\textwidth}
+    \begin{subfigure}[b]{0.46\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{Images/Discussion/T1UDP.png}
-        \caption{Graph over the BRISQUE score for T1, regular UDP}\label{fig:udpBRISQUEGraph2}
+        \includegraphics[width=\textwidth]{Images/Discussion/T1UDPBrisque.png}
+        \caption{Graph over the BRISQUE score for T1, regular UDP.}\label{fig:udpBRISQUEGraph2}
     \end{subfigure}
 \end{figure}
 
 TCP under bandwidth pressure acts as expected by theory. The main issue is transit latency. Due to the low bandwidth, packets are forced to queue in network buffers, causing transit latency to increase substantially. This then also affects the sender pipeline by creating a backlog of old packets that need sending before new ones can be completed. \textit{(Is a image of sender pipe latency here wanted or is it okey)} A reduction to 18~Mbps is so bad that the average delay is 9504~ms or 9.5 seconds late. Even with TCP, we experience a packet loss of almost 14\%. Not to mention all this backlogging and extra work is making the CPU usage on the computer significantly worse, by over doubling the usage and reaching a max of over 50\% which is close to causing issues as we will discuss further when looking at codecs.
 
-It is clear that both of these are not sustainable. However they both reveal something about the choice to made when picking a transport protocol for RTO. It is known by other studies that TCP's latency does not improve over time. Meaning the TCP will deliver images in the correct order no matter how far behind the video stream is. So if the system enters an area of low bandwidth and falls behind, it will continue to stay behind when returning to a bigger bandwidth, the latency then just stays level~\cite{briscoe2016}. TCP's congestion control responds by reducing the sending window, but once buffers fill, the latency remains elevated until the congestion window eventually collapses and resets. Yet when testing this this, the best result never go beneath 3 seconds as shown in the graph on Figure~\ref{fig:tcpBandwidthGraph}
+It is clear that both of these are not sustainable. However they both reveal something about the choice to made when picking a transport protocol for RTO. It is known by other studies that TCP's latency does not improve over time. Meaning the TCP will deliver images in the correct order no matter how far behind the video stream is. So if the system enters an area of low bandwidth and falls behind, it will continue to stay behind when returning to a bigger bandwidth, the latency then just stays level~\cite{briscoe2016}. TCP's congestion control responds by reducing the sending window, but once buffers fill, the latency remains elevated until the congestion window eventually collapses and resets. Yet when testing this this, the best result never go beneath 3 seconds as shown in the graph on Figure~\ref{fig:tcpBandwidthGraph}.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.9\textwidth]{Code/Analyzers/graphs/T6 25.05-17:05/transit_result_25.05-17:05_analysis.png}
-    \caption{Graph over the transit latency for T6, TCP with poor bandwidth}\label{fig:tcpBandwidthGraph}
+    \includegraphics[width=0.9\textwidth]{Code/Analyzers/graphs/T6-25.05-17:05/transit_result_25.05-17:05_analysis.png}
+    \caption{Graph over the transit latency for T6, TCP with poor bandwidth. Red line is 95p and yellow is the mean value}\label{fig:tcpBandwidthGraph}
 \end{figure}
 
 While on the other side with UDP, the system looses packages. A lot of them, resulting in horrific experience for possible drivers both with latency an movement becoming pixelated and blurry. The difference is that UDP will restore itself. The UDP does not care at all about available bandwidth or if a package arrive. Meaning when the bandwidth is restored, the stream will adjust itself and normal operations will continue.
 
-\textit{(Should i include what is worse?)}
-\textit{(Most likely remote areas with low bandwidth, less important with accuracy)}
 The results show that knowing the route is important. Knowing the bandwidth available at all times is necessary to pick transport protocol. And if unknown, picking the lesser of the evils, which would be UDP as not restoring the video stream could be fatal for further driving.
 
 A last side note on bandwidth reach. Additional test during development phase show that the most important part is to adjust the expected bandwidth to the cameras when choosing a aimed bitrate. The experience show that if constraints are set at 12~Mbps bandwidth, and the encoder aim at 4~Mbps per camera, a much smoother and better result is achieved than what a 18~Mpbs available bandwidth and 8~Mbps per camera would do. I can recommend reading the paper of Mejías et al. \cite{mejias2024}, working on exactly such a model adjusting encoding size depending on bandwidth available.
@@ -87,12 +87,9 @@ A last side note on bandwidth reach. Additional test during development phase sh
 \subsubsection{The Value of Skipping Re-encoding (C2 vs.\ C1, C6 vs.\ C5)}\label{subsubsec:no_transcode}
 
 Both C6 and C2 of no transcoding test runs was done to see if the transcoding had any affect on the total system and results, other than just latency for the sender computer. When looking at the logging results for transit of no transcode H.265,it got a better result than baseline 265. Yet, when we see H.264 there is almost no difference. This can be quite counter intuitive as H.265 baseline also had lower throughput than the no transcode which should make it easier to transport the RTP packets. Most likely was the re-encoder maxing out the CPU, throttling itself, and producing an unusually low and unstable bitrate. Low throughput means less data in flight at any given moment, but because of the CPU saturation caused bursty, irregular packet emission. The encoder was not producing a steady stream, making the network also less unpredictable.
-And for the receiver it was reverse, these low packets was easier to decode resulting in a even end-to-end result if ignoring the sender pipeline latency.
-\textit{(How sould i write this)}
+And for the receiver it was reverse, the low packets was easier to decode resulting in a even end-to-end result if ignoring the sender pipeline latency.
 
-Transit C1 $>$ C2  \&   C5 $<$ C6
-
-Receiver C1 $<$ C2  \&  C5 $>$ C6
+\input{Sections/Tables/Results/C-notranscode-latency-summary}
 
 No conclusive result that transcoding changed anything for transit latency or receiver. But we know that around 24 to 26~ms is saved on the sender side by not transcoding.
 
@@ -102,7 +99,7 @@ However the big the difference can be observed on the BRISQUE scale. C2 dropping
 
 These result making it very clear and obvious that a no transcoding setup will be the best moving forward.
 
-\subsubsection{Resolution: Does 720p Help? (C3 vs.\ C1, C7 vs.\ C5)}\label{subsubsec:resolutionDiscussion}
+\subsubsection{Effects of 720p Resolution (C3 vs.\ C1, C7 vs.\ C5)}\label{subsubsec:resolutionDiscussion}
 
 After getting the results from both lower resolution test, there is not much difference to separate it from regular, but some effect was observed. Both 720p encoding took less time. Aiming for a lower resolution results in less work, this is also available by looking at the CPU usage of 720p on H.264, with an average of around 6\% less usage. Yet the throughput was higher on 720p, most likely from the encoding being satisfied by amount of decoding needed, while 1080p was more detailed and therefore able to lower the throughput while maintaining the higher resolution.
 

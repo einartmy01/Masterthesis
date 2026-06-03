@@ -74,7 +74,7 @@ for ax, cam, color in zip(axes, cameras, colors):
     ax.yaxis.set_minor_locator(ticker.MultipleLocator(5))
     ax.grid(True, which="major", linestyle="--", alpha=0.4)
     ax.grid(True, which="minor", linestyle=":",  alpha=0.2)
-    ax.legend(loc="upper right", fontsize=9)
+    ax.legend().set_visible(False)
 
 axes[-1].set_xlabel("Sample index")
 fig.suptitle("BRISQUE Video Quality per Camera", fontsize=14, fontweight="bold", y=1.01)
