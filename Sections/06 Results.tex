@@ -45,10 +45,25 @@ Before the experiment a clock offset error check was completed. For the transpor
 
 \textbf{End-to-End:}
 %Image of a combined end to end latency
+End-to-end (E2E) latency is calculated by adding together for each test, the mean, min, max and 95p, as there is no way of knowing which frame had the lowest receiver and which RTP packet that frame was wrapped in, and when that frame was portrayed as the output of each element in the pipeline produce so many different formats, as described in System Design.
 \input{Sections/Tables/Results/T-end-latency.tex}
 
 \input{Sections/Tables/Results/C-end-latency.tex}
 
+To better visualize where latency comes from, Figure~\ref{fig:latencyDistributionT1} and Figure~\ref{fig:latencyDistributionC1} is a diagram showing the latency distribution of T1 and C1, where the blocks are adjusted to symbolize the percentage they contribute to E2E latency.
+
+%0.65 to 0.9 when adjusted
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.65\textwidth]{Images/Results/E2ELatencyT1.png}
+    \caption{End-to-end latency distribution for T1 UDP \- RTP, lab setup.}\label{fig:latencyDistributionT1}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.65\textwidth]{Images/Results/E2ELatencyC1.png}
+    \caption{End-to-end latency distribution for C1 H.264, moving experiment.}\label{fig:latencyDistributionC1}
+\end{figure}
 
 \subsection{Packet Loss Rate}\label{subsec:packet_loss}
 

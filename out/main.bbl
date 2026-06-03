@@ -2909,9 +2909,37 @@
       \verb https://ieeexplore.ieee.org/document/6967689
       \endverb
     \endentry
+    \entry{gulbrandsenSeyffarth2024}{thesis}{}
+      \name{author}{2}{}{%
+        {{hash=0334095ed912d0233496b0f7b9b72e88}{%
+           family={Gulbrandsen},
+           familyi={G\bibinitperiod},
+           given={Sara\bibnamedelima Malme},
+           giveni={S\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=04b403b6c5638d305f4eee0c48762f9c}{%
+           family={Seyffarth},
+           familyi={S\bibinitperiod},
+           given={Torunn\bibnamedelima Elisabeth},
+           giveni={T\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {NTNU}%
+      }
+      \strng{namehash}{fa5384ffd31c8ba449eb8b1f1e1a6f01}
+      \strng{fullhash}{fa5384ffd31c8ba449eb8b1f1e1a6f01}
+      \strng{bibnamehash}{fa5384ffd31c8ba449eb8b1f1e1a6f01}
+      \strng{authorbibnamehash}{fa5384ffd31c8ba449eb8b1f1e1a6f01}
+      \strng{authornamehash}{fa5384ffd31c8ba449eb8b1f1e1a6f01}
+      \strng{authorfullhash}{fa5384ffd31c8ba449eb8b1f1e1a6f01}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Video Solution for Remote Train Operation}
+      \field{type}{phdthesis}
+      \field{year}{2024}
+    \endentry
   \enddatalist
-  \missing{gulbrandsen_seyffarth_2024}
-  \missing{kozarevic_2025}
 \endrefsection
 \endinput
 

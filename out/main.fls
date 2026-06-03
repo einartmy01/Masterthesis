@@ -640,16 +640,6 @@ INPUT ./Images/Test&Equipment/Cam2Outside (Copy).jpg
 INPUT Images/Test&Equipment/Cam2Outside (Copy).jpg
 INPUT ./Images/Test&Equipment/Cam2Outside (Copy).jpg
 INPUT ./Images/Test&Equipment/Cam2Outside (Copy).jpg
-INPUT ./Images/Test&Equipment/DashboardView.jpg
-INPUT ./Images/Test&Equipment/DashboardView.jpg
-INPUT Images/Test&Equipment/DashboardView.jpg
-INPUT ./Images/Test&Equipment/DashboardView.jpg
-INPUT ./Images/Test&Equipment/DashboardView.jpg
-INPUT ./Images/Test&Equipment/Computers.jpg
-INPUT ./Images/Test&Equipment/Computers.jpg
-INPUT Images/Test&Equipment/Computers.jpg
-INPUT ./Images/Test&Equipment/Computers.jpg
-INPUT ./Images/Test&Equipment/Computers.jpg
 INPUT ./Images/Test&Equipment/CarSetup2.jpg
 INPUT ./Images/Test&Equipment/CarSetup2.jpg
 INPUT Images/Test&Equipment/CarSetup2.jpg
@@ -708,6 +698,16 @@ INPUT Sections/Tables/Results/C-end-latency.tex
 INPUT ./Sections/Tables/Results/C-end-latency.tex
 INPUT Sections/Tables/Results/C-end-latency.tex
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr8.tfm
+INPUT ./Images/Results/E2ELatencyT1.png
+INPUT ./Images/Results/E2ELatencyT1.png
+INPUT Images/Results/E2ELatencyT1.png
+INPUT ./Images/Results/E2ELatencyT1.png
+INPUT ./Images/Results/E2ELatencyT1.png
+INPUT ./Images/Results/E2ELatencyC1.png
+INPUT ./Images/Results/E2ELatencyC1.png
+INPUT Images/Results/E2ELatencyC1.png
+INPUT ./Images/Results/E2ELatencyC1.png
+INPUT ./Images/Results/E2ELatencyC1.png
 INPUT ./Sections/Tables/Results/T-packetloss.tex
 INPUT Sections/Tables/Results/T-packetloss.tex
 INPUT ./Sections/Tables/Results/T-packetloss.tex
@@ -746,16 +746,26 @@ INPUT ./Sections/07 Discussion.tex
 INPUT ./Sections/07 Discussion.tex
 INPUT ./Sections/07 Discussion.tex
 INPUT ./Sections/07 Discussion.tex
-INPUT ./Images/T5UDPBandwidth.png
-INPUT ./Images/T5UDPBandwidth.png
-INPUT Images/T5UDPBandwidth.png
-INPUT ./Images/T5UDPBandwidth.png
-INPUT ./Images/T5UDPBandwidth.png
-INPUT ./Images/T1UDP.png
-INPUT ./Images/T1UDP.png
-INPUT Images/T1UDP.png
-INPUT ./Images/T1UDP.png
-INPUT ./Images/T1UDP.png
+INPUT ./Images/Discussion/TotalLatencyT1.png
+INPUT ./Images/Discussion/TotalLatencyT1.png
+INPUT Images/Discussion/TotalLatencyT1.png
+INPUT ./Images/Discussion/TotalLatencyT1.png
+INPUT ./Images/Discussion/TotalLatencyT1.png
+INPUT ./Images/Discussion/TotalLatencyC1.png
+INPUT ./Images/Discussion/TotalLatencyC1.png
+INPUT Images/Discussion/TotalLatencyC1.png
+INPUT ./Images/Discussion/TotalLatencyC1.png
+INPUT ./Images/Discussion/TotalLatencyC1.png
+INPUT ./Images/Discussion/T5UDPBandwidth.png
+INPUT ./Images/Discussion/T5UDPBandwidth.png
+INPUT Images/Discussion/T5UDPBandwidth.png
+INPUT ./Images/Discussion/T5UDPBandwidth.png
+INPUT ./Images/Discussion/T5UDPBandwidth.png
+INPUT ./Images/Discussion/T1UDP.png
+INPUT ./Images/Discussion/T1UDP.png
+INPUT Images/Discussion/T1UDP.png
+INPUT ./Images/Discussion/T1UDP.png
+INPUT ./Images/Discussion/T1UDP.png
 INPUT ./Code/Analyzers/graphs/T6 25.05-17:05/transit_result_25.05-17:05_analysis.png
 INPUT ./Code/Analyzers/graphs/T6 25.05-17:05/transit_result_25.05-17:05_analysis.png
 INPUT Code/Analyzers/graphs/T6 25.05-17:05/transit_result_25.05-17:05_analysis.png
