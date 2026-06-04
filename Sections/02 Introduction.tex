@@ -13,7 +13,7 @@ This thesis is developed within an ongoing research collaboration at NTNU, in pa
 
 \subsection{Problem}
 
-The current remote train operation setup relies on a commercial product, Voysys, which imposes significant limitations on the project's ability to test and develop the system further. As a closed external solution, it restricts access to the underlying pipeline, making it difficult to adjust configurations, measure internal latency, or experiment with different streaming approaches. In a research context where iterative testing and configuration control are essential, this represents a fundamental obstacle. In addition, licensing such a product over the course of a long term research project represents a considerable and ongoing cost.
+The current remote train operation setup relies on a commercial product, which imposes significant limitations on the project's ability to test and develop the system further. As a closed external solution, it restricts access to the underlying pipeline, making it difficult to adjust configurations, measure internal latency, or experiment with different streaming approaches. In a research context where iterative testing and configuration control are essential, this represents a fundamental obstacle. In addition, licensing such a product over the course of a long term research project represents a considerable and ongoing cost.
 
 At the same time, there is limited existing research that addresses video streaming specifically in the context of remote train operation. Most work on low latency video transmission is either too general or focused on other domains, leaving a gap when it comes to understanding what configurations and compromises are most suitable for railway use cases [source].
 
@@ -57,67 +57,6 @@ The thesis does not include formal safety certification or a RAMS analysis in ac
 \begin{comment}
 With RAMS:
 The system is developed with reference to EN 50126, the European railway standard for reliability, availability, maintainability and safety. While a full RAMS analysis is beyond the scope of a single master thesis, relevant safety considerations from the standard are used to inform design decisions and contextualize the results within a safety critical operational environment.
-\end{comment}
-
-\subsection{Research Methodology}
-\begin{comment}
-
-\subsubsection{Literature and Knowledge acquisition}
-The knowledge needed to carry out this thesis was acquired through an iterative process that combined systematic literature review with hands-on practical exploration. This approach, often referred to as an Iterative Literature and Practice-Driven Approach, is characterized by a continuous cycle where theory and practice inform each other rather than following a strict linear sequence~\cite{wohlin2012}. Instead of completing all literature review before beginning practical work, the two activities run in parallel, with new practical challenges prompting targeted literature searches and new theoretical insights shaping the direction of experiments. This makes it particularly well suited for applied engineering research where the problem space is not fully known at the outset and understanding develops gradually through doing.% [Hevner et al. (2004) Saunders et al. (2019) ].
-
-The process began by identifying the core knowledge areas required before any development could start. This included understanding the operational context of remote train operation and Automatic Train Operation, the fundamentals of video streaming and relevant transport protocols, and the capabilities and structure of GStreamer as a framework. These areas formed the initial scope of the literature review and gave enough grounding to begin practical work.
-
-Academic literature was gathered primarily through Google Scholar and IEEE Xplore, using search terms related to low-latency video streaming, remote train operation, GStreamer pipeline design, and network performance for real-time applications. Sources were selected based on relevance to the problem, publication quality, and recency where applicable. In addition to academic papers, official technical documentation was used extensively, particularly the GStreamer documentation and protocol specifications for RTP and UDP, which provided the practical detail that academic sources alone could not cover.
-
-Once a sufficient theoretical foundation was in place, practical exploration began through hands-on work with GStreamer. Building and testing pipelines from the command line and through Python quickly revealed challenges that existing literature did not fully address, such as specific configuration trade-offs, unexpected latency behavior, and hardware compatibility issues. Each of these practical obstacles prompted a return to the literature, this time with more precise and targeted questions. New findings were then brought back into the development process, tested, and evaluated against real behaviour.
-
-This cycle of reading, building, observing, and searching again repeated throughout the entire development phase. The result is that the theoretical foundation of this thesis did not precede the practical work, but grew alongside it, shaped by the specific demands of the problem at hand.
-\end{comment}
-
-
-
-\subsubsection{Search Strategy and Databases}
-A multi-platform search approach was utilized to retrieve a wide array of high-quality sources. The primary databases included:
-
-\begin{itemize}
-    \item Scopus: For retrieving peer-reviewed, impactful scientific articles.
-    \item Google Scholar: For broader academic and institutional literature.
-    \item GStreamer docs: For specifics on GStreamer development.
-\end{itemize}
-
-
-
-\subsubsection{Inclusion Criteria}
-To ensure the study is based on the relevant and current information, specific criteria were applied to filter the search results. Given the rapid pace of technological change, a focus was placed on recent publications. Where modern papers have referenced to older papers, I have include some as to say and show where certain numbers are coming from and how they have influenced results.
-
-\begin{table}[h]
-    \centering
-    \caption{Inclusion Criteria for Literature Review}\label{tab:inclusion_criteria}
-    \begin{tabular}{|c|p{8cm}|}
-        \hline
-        ID & Inclusion Criteria (IC) \\
-        \hline
-        IC1 & Publication Date: Between 2020-2026 \\
-        \hline
-        IC2 & Language: Written in English \\
-        \hline
-        IC3 & Document Type: Primarily "Article", "Conference Paper" or "Thesis"\\
-        \hline
-    \end{tabular}
-\end{table}
-
-
-\subsubsection{Search Queries and Refinement}
-\begin{comment}
-
-Several digital tools as mentioned below were used for this paper. The main purpose of the usage was to enhance clarity, assisting in latex, and in general increase quality. Specifics include writing reference list in correct format. Structuring sentences and paragraphs. Checking for typos and grammatical errors.
-
-\begin{itemize}
-    \item OpenAI's ChatGPT: Employed as a helpful resource for LaTeX formatting suggestions, generating structured content (tables and lists), translating between Norwegian and English, and reviewing text for synonyms and restructuring ideas to ensure arguments were effectively communicated.
-    \item Google Gemini: Used for similar fields as ChatGPT, but also for general proofreading, and refining sentence structure and tone to maintain a high standard of academic writing.
-    \item Anthropic's Claude.ai for discussion and development of script syntax.
-    \item Visual Studio Code: was used as the main LaTeX editor because of its powerful extensions for LaTeX support, syntax highlighting, and version control integration.
-\end{itemize}
 \end{comment}
 
 \subsection{Outline of Structure}

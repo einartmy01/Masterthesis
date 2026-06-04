@@ -2520,12 +2520,19 @@
     <bcf:citekey order="143" intorder="1">ries2011</bcf:citekey>
     <bcf:citekey order="144" intorder="1">saunders2019</bcf:citekey>
     <bcf:citekey order="145" intorder="1">wohlin2012</bcf:citekey>
-    <bcf:citekey order="146" intorder="1">montgomery2017</bcf:citekey>
-    <bcf:citekey order="147" intorder="1">montgomery2017</bcf:citekey>
-    <bcf:citekey order="148" intorder="1">briscoe2016</bcf:citekey>
-    <bcf:citekey order="149" intorder="1">mejias2024</bcf:citekey>
-    <bcf:citekey order="150" intorder="1">gulbrandsenSeyffarth2024</bcf:citekey>
-    <bcf:citekey order="151" intorder="1">kozarevic2025</bcf:citekey>
+    <bcf:citekey order="146" intorder="1">wohlin2012</bcf:citekey>
+    <bcf:citekey order="147" intorder="1">hevner2004</bcf:citekey>
+    <bcf:citekey order="147" intorder="2">saunders2019</bcf:citekey>
+    <bcf:citekey order="148" intorder="1">montgomery2017</bcf:citekey>
+    <bcf:citekey order="149" intorder="1">montgomery2017</bcf:citekey>
+    <bcf:citekey order="150" intorder="1">brandenburger2023</bcf:citekey>
+    <bcf:citekey order="151" intorder="1">wohlin2012</bcf:citekey>
+    <bcf:citekey order="152" intorder="1">saunders2019</bcf:citekey>
+    <bcf:citekey order="153" intorder="1">mittal2012</bcf:citekey>
+    <bcf:citekey order="154" intorder="1">briscoe2016</bcf:citekey>
+    <bcf:citekey order="155" intorder="1">mejias2024</bcf:citekey>
+    <bcf:citekey order="156" intorder="1">gulbrandsenSeyffarth2024</bcf:citekey>
+    <bcf:citekey order="157" intorder="1">kozarevic2025</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

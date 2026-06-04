@@ -119,7 +119,6 @@ The sender connects to the internet through a 5G modem using a dynamically assig
 
 Tailscale and WireGuard do introduce some additional latency compared to a direct connection, as every packet must pass through the encrypted tunnel and be processed by the WireGuard protocol on both ends before being delivered. The overhead is generally small, but it is a consistent addition to every packet and cannot be removed from the measurement results. Running all tests through Tailscale means this overhead is present equally across all configurations, so the results remain comparable to each other, but the absolute latency values will be slightly higher than what a direct connection would produce. The virtual IP layer also adds a small amount of packet size overhead to every transmitted frame, which is necessary to account for when applying the bandwidth constraints in the limited bandwidth test conditions.
 
-
 \subsection{Pipeline Design}
 
 \subsubsection{GStreamer}
@@ -180,7 +179,6 @@ The receiver pipeline for each camera stream is shown in Figure~\ref{fig:receive
 
 \textbf{xvimagesink} renders each decoded frame to the display as soon as it arrives. \texttt{sync=false} disables presentation time gating, so frames are shown immediately upon decoding rather than being held to match any clock reference.
 
-
 \subsection{Measurement Design}\label{sec:measurementdesign}
 This section describes the implementations done to get good measurements of the system. Six distinct measurements are collected during a run of the video system, this to get a proper understanding of the trade-offs and benefits of all components tested. An important aspect of all the measurement design was to try to avoid as much noise and disturbance to the main video stream. This is done by separating measurements where possible, but also avoid writing to disk during the run. Instead everything is logged locally before after stop to write it to disk, reducing contribution of workload on the computers.
 
@@ -210,11 +208,14 @@ The RTP marker bit is used to identify frame boundaries. In H.264 over RTP, the 
 \subsubsection{Latency measurment}
 For latency measurements, three separated measurements are completed to try to pinpoint where possible issues arise. The system has sender pipeline latency, receiver pipeline latency and transit latency. As mentioned in Probe Placement, both sender and receiver pipeline measurements uses Gstreamer internal pipeline measurements tools, complete avoiding any delay of clock ticks and therefore keeping a very healthy result. Each time video data is passed through the starting probe, it logs the time in a queue list. Then at the last probe it confirms that the queue matches correct. If there are to many timestamps in the queue, that means a \texttt{leaky=downstream} has gotten rid of an image, and a log of dropped image is recorded. It then compare time now and the time in the queue, calculating the full pipeline measurement.
 
-Transit latency across the network is measured by timestamping when an RTP packet leave the sender computer, and timestamping when it enters the receiver. These points of entry and exit are also the same points the sender and receiver pipeline measure internal latency to make sure of no missed end-to-end latency. The logged Transit times are compared on RTP sequence number to differentiate the packets before comparing and computing latency.
+Transit latency across the network is measured by timestamping when an RTP packet leave the sender computer, and timestamping when it enters the receiver. These points of entry and exit are also the same points the sender and receiver pipeline measure internal latency to make sure of no missed end-to-end latency. The logged transit times are compared on RTP sequence number to differentiate the packets before comparing and computing latency.
 
 \begin{equation}
   L_{\text{transit}}  = T_{\text{receiver}} - T_{\text{sender}}
 \end{equation}
+
+\subsubsection{Clock synchronisation design}
+Originally two GPS clock synchronisers were in use. They were implemented to get a more accurate transit latency by making sure that both computers are following the same clock and avoid clock shifts. In the beginning a method where the GPS signal, including time was parsed, integrated in the RTP packet and then sent was used. With further testing, the parsing and implementations of the timestamp was an additional added latency and workload for the computer, not to mention responsible for higher throughput. Another system was tested where the pipeline works in the same way as now, by using the computer timestamp to log. The idea was for the GPS clock to overwrite the internal computer clock, which worked. But unfortunately the GPS clocks had a low Hz so the overwriting only occurred a couple times per second allowing the clock to drift anyway, and introduced a unstable margin of error as it would jump from 20~ms off to 0~ms off before slowly drifting again. After that, the usage of internet NTP servers to help correct the internal clock when drifting was used. It resulted in a stable, and mild offset that could be used for measurement.
 
 \subsubsection{Packet loss}
 Packet loss uses the same logging as the transit latency. When comparing and computing the transit latency. The code counts all packets sent and received and find the difference before computing the percentage by doing difference divided by total sent. The code that computes also avoids the first 10 seconds of sender logs. This to avoid any startup issues. The receiver packets then without any sender logs for the beginning is also ignored ensuring a healthy measurement.

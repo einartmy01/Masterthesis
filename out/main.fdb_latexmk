@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber out/main"] 1780487287.27694 "out/main.bcf" "out/main.bbl" "out/main" 1780514488.32734 0
-  "out/main.bcf" 1780514488.09618 118085 e4ce17c55f55ff8911ba722307775abe "pdflatex"
-  "references.bib" 1780477091.78143 28627 981733392117865b74c4bcaca0194ef4 ""
+["biber out/main"] 1780592841.21066 "out/main.bcf" "out/main.bbl" "out/main" 1780593115.33906 0
+  "out/main.bcf" 1780593115.23632 118565 eb4e05fe0a9b0b858ca5fbbcecb6e938 "pdflatex"
+  "references.bib" 1780562682.80196 28627 981733392117865b74c4bcaca0194ef4 ""
   (generated)
   "out/main.bbl"
   "out/main.blg"
   (rewritten before read)
-["pdflatex"] 1780514480.05199 "/home/einar/Masterthesis/main.tex" "out/main.pdf" "main" 1780514488.3278 0
+["pdflatex"] 1780593110.76099 "/home/einar/Masterthesis/main.tex" "out/main.pdf" "main" 1780593115.33934 0
   "./title.tex" 1773849068.80137 772 aa8127a032c6e9b3d64e13c86d1d7484 ""
   "/etc/texmf/web2c/texmf.cnf" 1773679518.72801 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/home/einar/Masterthesis/main.tex" 1779957389.47707 972 4cd08898f9d1eea97f2e8f39086c550d ""
@@ -302,12 +302,12 @@
   "Images/Theory/ThreeMonitorSetup.png" 1779629156.54848 279909 a99ac2536852b5960b6443a889debda2 ""
   "Sections/00 Preface.tex" 1779813418.54656 1363 148061ac45091236cb3b0ab8d14865a3 ""
   "Sections/01 Abstract.tex" 1779728326.11307 97 8b42ccf779c25bd3541046b7b80a25c9 ""
-  "Sections/02 Introduction.tex" 1779969017.6973 16863 5b2433da04f32eaad0c3c4582bc017f1 ""
+  "Sections/02 Introduction.tex" 1780560831.31731 11390 bbbc9c545728cc51f38f036a9d46c9d1 ""
   "Sections/03 Theory.tex" 1780249927.15911 54395 c77c961b03c2a55f2926a6be52dfc9be ""
-  "Sections/04 System Design.tex" 1780487954.01407 33077 c223c01f240b04180254f06a58ed83c5 ""
-  "Sections/05 Methodology.tex" 1780488010.80299 14538 9da3d13f2d1b5a9ddf9c08c8e1f3ad3e ""
+  "Sections/04 System Design.tex" 1780560772.88721 34275 52009e2244c73a3c2ddface24b39140a ""
+  "Sections/05 Methodology.tex" 1780593106.0947 36760 93192c1a855461951bad0a900a48b74f ""
   "Sections/06 Results.tex" 1780514472.00955 9644 b4e213e03e18c6e2d6b376480a920d0f ""
-  "Sections/07 Discussion.tex" 1780513836.13628 35404 f6406b91b86dd6a2b7c9a3bd60fce5d6 ""
+  "Sections/07 Discussion.tex" 1780574838.87214 35639 abe124f7c74ad98a9acd3dec99af0398 ""
   "Sections/20 Conclusion.tex" 1773849216.14712 57 b202952748807037df4cf5bfec66eb7a ""
   "Sections/Tables/CameraValues.tex" 1779987292.54867 806 d026472c8c9276bed32c95f96d801dd2 ""
   "Sections/Tables/CodecExpDuration.tex" 1780510562.76076 862 84198f8479ea2652795c5f21c5bd2246 ""
@@ -335,13 +335,13 @@
   "Sections/Tables/TransportExpDuration.tex" 1780510582.56693 674 ae96b565c0a0934221bd88bdaa0bb4f8 ""
   "Sections/Tables/TransportExpSchedule.tex" 1779992695.18909 768 bc3f685c32dd974060cdd21adf3edebf ""
   "main.tex" 1779957389.47707 972 4cd08898f9d1eea97f2e8f39086c550d ""
-  "out/main.aux" 1780514488.06618 56280 6d7a8f18ee6c9ebab06ccb266a769206 "pdflatex"
-  "out/main.bbl" 1780487288.17354 117508 043ff0ceaaf838b2cffaaf1709b63673 "biber out/main"
-  "out/main.lof" 1780514488.09864 4066 953a46e466fc8258091c69e49214f1a7 "pdflatex"
-  "out/main.lot" 1780514488.09864 3645 b5676da982acaac83c3186356293bd79 "pdflatex"
-  "out/main.out" 1780514488.09318 21420 a56b10083c574759438ff1d7bd6b6f36 "pdflatex"
-  "out/main.run.xml" 1780514488.09864 2341 774b1370d7471097fc23c34b072738c2 "pdflatex"
-  "out/main.toc" 1780514488.09864 11731 f814d64c6c8e2fb9d95e8f00f0384b3b "pdflatex"
+  "out/main.aux" 1780593115.21932 56609 39c67b95c5a92970df87e2330ecc134b "pdflatex"
+  "out/main.bbl" 1780592842.08009 117508 043ff0ceaaf838b2cffaaf1709b63673 "biber out/main"
+  "out/main.lof" 1780593115.23732 4065 e50caec9dd173dd1362e877a9b8a28c5 "pdflatex"
+  "out/main.lot" 1780593115.23732 3647 c8b41bf7c8265737dc0ac71788bc78df "pdflatex"
+  "out/main.out" 1780593115.23432 21259 77c80396f67d2ddc21ebfde283a5f91e "pdflatex"
+  "out/main.run.xml" 1780593115.23732 2341 774b1370d7471097fc23c34b072738c2 "pdflatex"
+  "out/main.toc" 1780593115.23732 11650 ec1742c4f171ea4bfb125113ee693e78 "pdflatex"
   "packages.sty" 1770296721.34352 6412 0f2b982c0dbe53540c4ea207b4fcb929 ""
   "title.tex" 1773849068.80137 772 aa8127a032c6e9b3d64e13c86d1d7484 ""
   (generated)

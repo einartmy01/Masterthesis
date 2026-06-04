@@ -1,31 +1,31 @@
 \babel@toc {british}{}\relax 
-\contentsline {figure}{\numberline {1}{\ignorespaces Three monitor tele operation simulator setup used by Neumeier et al.\ to evaluate the effect of latency on remote driving performance~\blx@tocontentsinit {0}\cite {neumeier2019}.}}{5}{figure.caption.3}%
-\contentsline {figure}{\numberline {2}{\ignorespaces Spatial redundancy~\blx@tocontentsinit {0}\cite {kondoz2010}.}}{6}{figure.caption.4}%
-\contentsline {figure}{\numberline {3}{\ignorespaces Temporal redundancy~\blx@tocontentsinit {0}\cite {kondoz2010}.}}{6}{figure.caption.4}%
-\contentsline {figure}{\numberline {4}{\ignorespaces Difference between HEVC, H.265 technology, and H.264 of methdod for encoding~\blx@tocontentsinit {0}\cite {blomqvist2018}.}}{7}{figure.caption.5}%
-\contentsline {figure}{\numberline {5}{\ignorespaces Difference of BRISQUE evaluation~\blx@tocontentsinit {0}\cite {pennada2023}.}}{18}{figure.caption.6}%
-\contentsline {figure}{\numberline {6}{\ignorespaces Physical Setup of Project}}{21}{figure.caption.7}%
-\contentsline {figure}{\numberline {7}{\ignorespaces Application and Transport Layer Setup of Project}}{21}{figure.caption.8}%
-\contentsline {figure}{\numberline {8}{\ignorespaces Sequence Diagram between Sender and Camera before Active Stream}}{23}{figure.caption.10}%
-\contentsline {figure}{\numberline {9}{\ignorespaces Sender Pipeline for Each Camera Stream}}{25}{figure.caption.11}%
-\contentsline {figure}{\numberline {10}{\ignorespaces Receiver Pipeline for Each Camera Stream}}{26}{figure.caption.12}%
-\contentsline {figure}{\numberline {11}{\ignorespaces Probe Placement in Sender Pipelines}}{27}{figure.caption.13}%
-\contentsline {figure}{\numberline {12}{\ignorespaces Probe Placement in Receiver Pipelines}}{28}{figure.caption.14}%
-\contentsline {figure}{\numberline {13}{\ignorespaces BRISQUE extended pipeline for receiver}}{29}{figure.caption.15}%
-\contentsline {figure}{\numberline {14}{\ignorespaces Setup for lab experiment tests}}{33}{figure.caption.18}%
-\contentsline {figure}{\numberline {15}{\ignorespaces Route used for experiment}}{33}{figure.caption.19}%
-\contentsline {figure}{\numberline {16}{\ignorespaces Experiment overview of setup}}{34}{figure.caption.20}%
-\contentsline {figure}{\numberline {17}{\ignorespaces Cameras outside view}}{35}{figure.caption.24}%
-\contentsline {figure}{\numberline {18}{\ignorespaces Car setup for experiment}}{36}{figure.caption.25}%
-\contentsline {figure}{\numberline {19}{\ignorespaces Network Switch and Network Modem}}{36}{figure.caption.26}%
-\contentsline {figure}{\numberline {20}{\ignorespaces Sender pipeline latency graph over time C1}}{39}{figure.caption.31}%
-\contentsline {figure}{\numberline {21}{\ignorespaces Transit latency graph over time for C1}}{40}{figure.caption.34}%
-\contentsline {figure}{\numberline {22}{\ignorespaces Receiver pipeline latency graph over time for C1}}{41}{figure.caption.37}%
-\contentsline {figure}{\numberline {23}{\ignorespaces End-to-end latency distribution for T1 UDP \- RTP, lab setup.}}{42}{figure.caption.40}%
-\contentsline {figure}{\numberline {24}{\ignorespaces End-to-end latency distribution for C1 H.264, moving experiment.}}{42}{figure.caption.41}%
-\contentsline {figure}{\numberline {25}{\ignorespaces Sender throughput graph over time for C1}}{44}{figure.caption.46}%
-\contentsline {figure}{\numberline {26}{\ignorespaces Sender CPU usage graph over time for C1}}{45}{figure.caption.49}%
-\contentsline {figure}{\numberline {27}{\ignorespaces Video Quality with BRISQUE score graph over time for C1}}{46}{figure.caption.52}%
-\contentsline {figure}{\numberline {28}{\ignorespaces Average Glass-to-glass latency distribution for T1 UDP \- RTP, lab setup.}}{47}{figure.caption.53}%
-\contentsline {figure}{\numberline {29}{\ignorespaces Average Glass-to-glass latency distribution for C1 H.264, moving experiment.}}{47}{figure.caption.54}%
-\contentsline {figure}{\numberline {31}{\ignorespaces Graph over the transit latency for T6, TCP with poor bandwidth. Red line is 95p and yellow is the mean value}}{49}{figure.caption.56}%
+\contentsline {figure}{\numberline {1}{\ignorespaces Three monitor tele operation simulator setup used by Neumeier et al.\ to evaluate the effect of latency on remote driving performance~\blx@tocontentsinit {0}\cite {neumeier2019}.}}{5}{figure.caption.2}%
+\contentsline {figure}{\numberline {2}{\ignorespaces Spatial redundancy~\blx@tocontentsinit {0}\cite {kondoz2010}.}}{6}{figure.caption.3}%
+\contentsline {figure}{\numberline {3}{\ignorespaces Temporal redundancy~\blx@tocontentsinit {0}\cite {kondoz2010}.}}{6}{figure.caption.3}%
+\contentsline {figure}{\numberline {4}{\ignorespaces Difference between HEVC, H.265 technology, and H.264 of methdod for encoding~\blx@tocontentsinit {0}\cite {blomqvist2018}.}}{7}{figure.caption.4}%
+\contentsline {figure}{\numberline {5}{\ignorespaces Difference of BRISQUE evaluation~\blx@tocontentsinit {0}\cite {pennada2023}.}}{18}{figure.caption.5}%
+\contentsline {figure}{\numberline {6}{\ignorespaces Physical Setup of Project}}{21}{figure.caption.6}%
+\contentsline {figure}{\numberline {7}{\ignorespaces Application and Transport Layer Setup of Project}}{21}{figure.caption.7}%
+\contentsline {figure}{\numberline {8}{\ignorespaces Sequence Diagram between Sender and Camera before Active Stream}}{23}{figure.caption.9}%
+\contentsline {figure}{\numberline {9}{\ignorespaces Sender Pipeline for Each Camera Stream}}{25}{figure.caption.10}%
+\contentsline {figure}{\numberline {10}{\ignorespaces Receiver Pipeline for Each Camera Stream}}{26}{figure.caption.11}%
+\contentsline {figure}{\numberline {11}{\ignorespaces Probe Placement in Sender Pipelines}}{27}{figure.caption.12}%
+\contentsline {figure}{\numberline {12}{\ignorespaces Probe Placement in Receiver Pipelines}}{28}{figure.caption.13}%
+\contentsline {figure}{\numberline {13}{\ignorespaces BRISQUE extended pipeline for receiver}}{30}{figure.caption.14}%
+\contentsline {figure}{\numberline {14}{\ignorespaces Setup for lab experiment tests}}{36}{figure.caption.18}%
+\contentsline {figure}{\numberline {15}{\ignorespaces Route used for experiment}}{36}{figure.caption.19}%
+\contentsline {figure}{\numberline {16}{\ignorespaces Experiment overview of setup}}{37}{figure.caption.20}%
+\contentsline {figure}{\numberline {17}{\ignorespaces Cameras outside view}}{38}{figure.caption.24}%
+\contentsline {figure}{\numberline {18}{\ignorespaces Car setup for experiment}}{39}{figure.caption.25}%
+\contentsline {figure}{\numberline {19}{\ignorespaces Network Switch and Network Modem}}{39}{figure.caption.26}%
+\contentsline {figure}{\numberline {20}{\ignorespaces Sender pipeline latency graph over time C1}}{46}{figure.caption.31}%
+\contentsline {figure}{\numberline {21}{\ignorespaces Transit latency graph over time for C1}}{47}{figure.caption.34}%
+\contentsline {figure}{\numberline {22}{\ignorespaces Receiver pipeline latency graph over time for C1}}{48}{figure.caption.37}%
+\contentsline {figure}{\numberline {23}{\ignorespaces End-to-end latency distribution for T1 UDP \- RTP, lab setup.}}{49}{figure.caption.40}%
+\contentsline {figure}{\numberline {24}{\ignorespaces End-to-end latency distribution for C1 H.264, moving experiment.}}{49}{figure.caption.41}%
+\contentsline {figure}{\numberline {25}{\ignorespaces Sender throughput graph over time for C1}}{51}{figure.caption.46}%
+\contentsline {figure}{\numberline {26}{\ignorespaces Sender CPU usage graph over time for C1}}{52}{figure.caption.49}%
+\contentsline {figure}{\numberline {27}{\ignorespaces Video Quality with BRISQUE score graph over time for C1}}{53}{figure.caption.52}%
+\contentsline {figure}{\numberline {28}{\ignorespaces Average Glass-to-glass latency distribution for T1 UDP \- RTP, lab setup.}}{54}{figure.caption.53}%
+\contentsline {figure}{\numberline {29}{\ignorespaces Average Glass-to-glass latency distribution for C1 H.264, moving experiment.}}{54}{figure.caption.54}%
+\contentsline {figure}{\numberline {31}{\ignorespaces Graph over the transit latency for T6, TCP with poor bandwidth. Red line is 95p and yellow is the mean value}}{56}{figure.caption.56}%
