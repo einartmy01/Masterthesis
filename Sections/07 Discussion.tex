@@ -7,7 +7,7 @@ This discussion chapter will interpret the result of Chapter~\ref{sec:results} t
 \subsubsection{Constant Glass To Glass latency}
 Before we move onto the discussion about codecs and transport layers, a clarification most be made. As all the results discussing is end-to-end it does not include the time for the camera to capture footage, or the time for a monitor to render it. For all the configurations the camera was set to capture images at 25fps. Producing a worse case 40~ms \textit{latency} from the beginning. The monitor also at use is at 60Hz resulting in a worst case 16.67~ms delay before showing the images. This also give some perspective of how small numbers we are logging and discussing further in this discussion chapter.
 \[
-  ms = \frac{1000}{fps} \qquad ms = \frac{1000}{Hz}
+ ~ms = \frac{1000}{fps} \qquad~ms = \frac{1000}{Hz}
 \]
 
 The way the camera used works, is at 40~ms interval a snapshot is captured. Meaning it is not directly latency, but more a blind window where no images are captured. This is the same for monitor, that replace one row at the screen at the time, doing 60 refreshes per second. The ranges are from 0~ms to 40~ms and 0~ms to 16.67~ms and on average 20~ms 
@@ -47,7 +47,7 @@ The completed test of SRTP really show clearly if there will be any issues to ad
 
 \subsubsection{Effect of Bandwidth Constraint (T5 vs.\ T6)}\label{subsubsec:bandwidthDiscussion}
 
-After running tests for both of the transport protocols with lower than expected bandwidth it is clear how both would react, and what to be aware of when choosing transport protocol for real use. With lower than expected bandwidth, which means the encoders aim to produce a bitsize of around 8~Mbps per camera when encoding and then trying to push that trough a funnel only accepting a 12/18 Mbps throughput, it struggles to deliver properly. 
+After running tests for both of the transport protocols with lower than expected bandwidth it is clear how both would react, and what to be aware of when choosing transport protocol for real use. With lower than expected bandwidth, which means the encoders aim to produce a bitsize of around 8~Mbps per camera when encoding and then trying to push that trough a funnel only accepting a 12/18~Mbps throughput, it struggles to deliver properly. 
 
 On one hand we have UDP maintaining a worse, but not unmanageable latency. It still has below 100~ms stream of the mean, and only 35~ms worse on the 95 percentile. However, UDP is loosing almost have of the packets at 47.49\% packet loss, which makes sense when a little over 24~Mbps is trying to be pushed threw a 12~Mbps bandwidth. Resulting in a significant worse BRISQUE score. Even with mean score being lower, it max and 95 percentile is above and that is due to it being a lab test. With such a high packet loss, movement is the element that will greatly affect BRISQUE score. And on Figure~\ref{fig:udpBRISQUEGraph1} where red line is 95p an blue line is mean, with the graph from camera one, you can clearly see the where simulated test movement was introduced and when it rendered a still lab. This result compared to the same graph for T1 at Figure~\ref{fig:udpBRISQUEGraph2} showing a much more stable with or without movement.
 
@@ -66,7 +66,13 @@ On one hand we have UDP maintaining a worse, but not unmanageable latency. It st
     \end{subfigure}
 \end{figure}
 
-TCP under bandwidth pressure acts as expected by theory. The main issue is transit latency. Due to the low bandwidth, packets are forced to queue in network buffers, causing transit latency to increase substantially. This then also affects the sender pipeline by creating a backlog of old packets that need sending before new ones can be completed. \textit{(Is a image of sender pipe latency here wanted or is it okey)} A reduction to 18~Mbps is so bad that the average delay is 9504~ms or 9.5 seconds late. Even with TCP, we experience a packet loss of almost 14\%. Not to mention all this backlogging and extra work is making the CPU usage on the computer significantly worse, by over doubling the usage and reaching a max of over 50\% which is close to causing issues as we will discuss further when looking at codecs.
+TCP under bandwidth pressure acts as expected by theory. The main issue is transit latency. Due to the low bandwidth, packets are forced to queue in network buffers, causing transit latency to increase substantially. This then also affects the sender pipeline by creating a backlog of old packets that need sending before new ones can be completed as you can see in Figure~\ref{fig:tcpBandwidthSenderGraph}. A reduction to 18~Mbps is so bad that the average delay is 9504~ms or 9.5 seconds late. Even with TCP, we experience a packet loss of almost 14\%. Not to mention all this backlogging and extra work is making the CPU usage on the computer significantly worse, by over doubling the usage and reaching a max of over 50\% which is close to causing issues as we will discuss further when looking at codecs.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{Code/Analyzers/graphs/T6-25.05-17:05/sender_pipeline_25.05-17:05_analysis.png}
+    \caption{Graph over the sender pipeline latency for T6, TCP with poor bandwidth. Red line is 95p and yellow is the mean value}\label{fig:tcpBandwidthSenderGraph}
+\end{figure}
 
 It is clear that both of these are not sustainable. However they both reveal something about the choice to made when picking a transport protocol for RTO. It is known by other studies that TCP's latency does not improve over time. Meaning the TCP will deliver images in the correct order no matter how far behind the video stream is. So if the system enters an area of low bandwidth and falls behind, it will continue to stay behind when returning to a bigger bandwidth, the latency then just stays level~\cite{briscoe2016}. TCP's congestion control responds by reducing the sending window, but once buffers fill, the latency remains elevated until the congestion window eventually collapses and resets. Yet when testing this this, the best result never go beneath 3 seconds as shown in the graph on Figure~\ref{fig:tcpBandwidthGraph}.
 
@@ -118,7 +124,19 @@ The effect of video quality of GPU or CPU for H.265 is a almost nothing, they re
 
 Of all the testing and configurations, of the transcoding examples, the results of H.265 with GPU score very high. As End-to-end latency is only beaten by the No transcoding runs, and not by much either. While outclassing the regular H.265 and H.264. It has some packet loss, one of the highest, but still a low overall, resulting in a still very decent and comparable BRISQUE score. When it matches the visual quality but is easy on the computing hardware and is faster, then that might stand for one of the best results.
 
-\textit{(Maybe include the fact that there is a direct comparison on sender latency and cpu spikes)}
+The results confirm that CPU load directly affects sender pipeline latency. Figure~\ref{fig:gpuCpuUsage} shows CPU usage over time for a normal CPU configurations, and Figure~\ref{fig:cpuSenderLatency} shows the corresponding sender pipeline latency for the same runs. The two graphs together illustrate how reducing CPU load through GPU offloading translates directly into lower and more stable sender latency, validating that a hardware upgrade targeting CPU or GPU capacity would have a measurable impact on the pipeline.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{Images/Discussion/CPUusageT1.png}
+    \caption{CPU usage over time showing a usage spike for test T1.}\label{fig:gpuCpuUsage}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{Images/Discussion/SenderLatencyT1.png}
+    \caption{Sender pipeline latency over time showing latency spike for test T1.}\label{fig:cpuSenderLatency}
+\end{figure}
 
 \subsubsection{H.264 vs.\ H.265 (C1 \- C4 vs.\ C5 \- C8)}\label{subsubsec:codec_comparison}
 
@@ -140,10 +158,19 @@ The biggest upside of the MJPEG encoding is the low impact on computing hardware
 
 \subsection{Interplay of configurations}\label{subsec:discInterplay}
 
-\textit{Throughput vs Transit latency?}
+
 
 \textit{Deeper encoding makes for easier decoding?}
 
+\subsubsection{Throughput and Transit Latency}
+
+Looking at the throughput and transit latency numbers together across all configurations, the relationship between the two is not what a simple intuition would suggest. A higher throughput does not consistently produce higher transit latency, and a lower throughput does not reliably produce lower transit latency. The data tells a more nuanced story.
+
+Among the transport protocol tests, T1 carries 25.83~Mbps and achieves the lowest transit latency mean of 29.50~ms. T4 with TCP carries nearly identical throughput at 26.15~Mbps but results in a 38.66~ms mean, a 9~ms penalty that comes not from the data volume but from TCP's retransmission and acknowledgement overhead. T5, the UDP low bandwidth test, carries only 11.86~Mbps yet lands at 37.52~ms, higher than T1 despite sending significantly less data. The reason being that under bandwidth pressure the encoder struggles to produce a stable and regular packet stream, causing burst behaviour that increases queuing delay regardless of the lower average throughput.
+
+The codec results reinforce this pattern. C5 with H.265 baseline carries only 8.57~Mbps, the lowest throughput of any codec test, yet produces a transit mean of 40.94~ms with a standard deviation of 4.45~Mbps, the most unstable output. The low throughput here is not a sign of efficiency but of an encoder that is saturating the CPU, throttling itself and emitting packets irregularly. C8 with H.265 GPU carries 26.19~Mbps at a standard deviation of only 0.88~Mbps and achieves a transit mean of 35.14~ms, lower and more stable despite sending three times as much data. MJPEG at the extreme end pushes 80.87~Mbps onto the network and produces a transit mean of 148.98~ms, confirming that when throughput genuinely exceeds what the network can absorb smoothly, transit latency does follow it upward.
+
+The underlying factor is not throughput itself but the regularity of packet emission. Configurations where the encoder is under stress produce a bursty and unpredictable stream, which causes packets to queue unevenly and transit latency to rise. Configurations where the encoder has sufficient headroom, whether through GPU acceleration or through a well matched bitrate target, produce a smooth and consistent stream that the network handles with lower and more predictable delay. This means that for RTO, ensuring the sender hardware can sustain the chosen bitrate without saturation is more important for transit latency than choosing a low bitrate target in the first place.
 
 \subsubsection{The Latency Quality Compromise}\label{subsubsec:latency_quality_tradeoff}
 
@@ -159,7 +186,7 @@ An interesting configuration to look at would be a combination of H.265 and TCP,
 
 Based on all the results collected and the interplay described above, it is possible to make a clear recommendation for which configuration to move forward with.
 
-For a deployment where transcoding is needed, or the camera can provide raw video and GPU encoding is available, H.265 with GPU acceleration and UDP/RTP is the strongest overall configuration. It delivers an end-to-end mean of 64.8 ms and 95 percentile of 175.5 ms, keeps CPU at below 6\%, produces stable throughput with the lowest standard deviation of any transcoded test at 0.88 Mbps, and matches the visual quality of the much more demanding CPU H.265 baseline. 
+For a deployment where transcoding is needed, or the camera can provide raw video and GPU encoding is available, H.265 with GPU acceleration and UDP/RTP is the strongest overall configuration. It delivers an end-to-end mean of 64.8~ms and 95 percentile of 175.5~ms, keeps CPU at below 6\%, produces stable throughput with the lowest standard deviation of any transcoded test at 0.88~Mbps, and matches the visual quality of the much more demanding CPU H.265 baseline. 
 
 For a setup where there is no need for transcoding or encoding on the sender pc because the camera does the encoding, picking the internal camera encoder is important. If the camera hardware supports native H.265 output, skipping transcoding entirely on top of that would push it even further, as the no transcoding results consistently show the best quality numbers. It is even better than H.264 no transcoding option. 
 While running the system, if it is clear that motion encoding is struggling, which is likely as the train will constant be in movement. Then testing the same system with H.264 could be a solution, as H.265 works hard and uses more computing power and bits to encode moving images. 
@@ -189,12 +216,12 @@ There is also the clock synchronisation offset of approximately 7~ms that applie
  
 With all of that in mind, the configurations that pass comfortably on both mean and 95 percentile are no transcode H.264, no transcode H.265 and GPU H.265 from the codec tests, and baseline UDP, encrypted UDP and baseline TCP from the transport tests. These are the ones where the margin is large enough to still hold even when accounting for the unmeasured overhead. For a real deployment, those are the configurations where the threshold is actually met in a meaningful way, not just on paper.
 % \begin{itemize}
-%   \item State the threshold: ≤100 ms end-to-end at GoA 3/4 for speeds
+%   \item State the threshold: ≤100~ms end-to-end at GoA 3/4 for speeds
 %         up to 500 km/h. We drove at 30km/h - 40km/h
 %   \item Walk through which configurations pass and fail at mean and p95.
 %         Most H.264/H.265 configurations pass on mean, but p95 tells a
 %         more honest story.
-%   \item Discuss the clock synchronisation uncertainty (~7 ms offset in
+%   \item Discuss the clock synchronisation uncertainty (~7~ms offset in
 %         UDP tests) and what that means for absolute claims --- you were
 %         transparent about this in the Results, but here you reflect on
 %         its implication for the threshold comparison.
@@ -203,6 +230,16 @@ With all of that in mind, the configurations that pass comfortably on both mean 
 %         margin these would consume (both are roughly constant, but still
 %         real).
 % \end{itemize}
+
+{Comparison Against RTO Latency Requirements}
+
+The 3GPP TS 22.289 standard sets a target end-to-end latency of 100~ms for video communication in remote train operation at GoA 3 and GoA 4. Measured against that threshold, none of the configurations in this thesis clear it comfortably on the 95th percentile, and several do not meet it even on the mean. It would be easy to read that as a failure, but doing so misrepresents both what the threshold means and what the results actually show.
+
+The 100~ms figure is a specification target defined at the communication interface level, not a value derived from operator studies in systems like the one tested here. As noted in Section 6.6.2, whether a remote train operator can actually drive safely at 88~ms mean latency versus 64~ms is a question the numbers alone cannot answer, and no such study exists for this specific setup. The threshold is a useful reference point, not a hard cutoff with empirically validated consequences.
+
+What the results do show clearly is that several configurations come meaningfully close on the mean. T1 with UDP RTP achieves 54.45~ms, T2 with no transcoding achieves 50.40~ms, and C8 with H.265 GPU acceleration achieves 64.80~ms. These are all well beneath 100~ms on the mean, and the spread above that on the 95th percentile is largely driven by occasional network spikes that are characteristic of mobile 5G connections rather than systemic pipeline latency. The configurations that fail the threshold clearly, such as C5 with H.265 at 88.42~ms mean and C9 with MJPEG at 193.14~ms, do so for identifiable reasons that the analysis in this chapter has already addressed.
+
+The more useful frame for these results is not whether they clear 100~ms, but how much of the total glass-to-glass budget they consume. As shown in Section 6.1.1, the camera capture and monitor render alone add a worst case of 56.67~ms before the pipeline contributes anything. A pipeline mean of 54~ms on top of that already brings the full glass-to-glass latency close to or above 100~ms regardless of the configuration. Reaching the 3GPP target end to end would require not only the best pipeline configuration but also higher frame rate cameras and higher refresh rate monitors, as those hardware choices account for a larger share of the total delay than most codec or protocol decisions do.
 \end{comment}
 
 
@@ -236,4 +273,6 @@ This thesis builds directly on the work done earlier in the NTNU remote train op
  
 Kozarevic~\cite{kozarevic2025} established the remote control system as an iterative development and set up the hardware foundation that this streaming pipeline is built on top of. The move from a licensed external streaming solution to a fully custom GStreamer pipeline was one of the main objectives going into this thesis, and that transition is a direct result of the limitations identified in that work. The flexibility and openness of the new pipeline is also what made this level of experimental evaluation possible.
 
-\textit{(Should i here insert some result of Voysys and compare with mine?)}
+Kozarevic measured end-to-end video latency using a screenshot based method with GPS synchronised clocks, capturing the time difference between a timestamp visible on a local reference display and the same timestamp as it appeared through the stream at the operator end. Across all test configurations, median latency values ranged from 120~ms to 240~ms, with mean values spanning 115.4~ms to 260.8~ms depending on resolution, codec and frame rate. The best performing configuration used MJPEG at 25 fps at full HD resolution, achieving a median of 120~ms under stationary conditions in Ängelholm.
+
+Comparing those numbers to the results in this thesis, the pipeline developed here achieves substantially lower end-to-end latency across all configurations except MJPEG. The best performing configuration, H.264 no transcoding at 50.40~ms mean and G2G of around 80~ms, is less than the best median reported by Kozarevic, and even the most demanding transcoded configurations such as C5 H.265 at 88.42~ms mean E2E remain below the lowest observed values. Part of this improvement comes from the move away from commercial product to a fully custom GStreamer pipeline, which removes the latency overhead of a licensed streaming layer and gives direct control over every stage of the pipeline. Part of it also comes from measurement precision. The screenshot based method Kozarevic used introduces human and capture timing error that is difficult to quantify, while the GStreamer probe based method used here brings measurement uncertainty down to approximately 7~ms, making the numbers more directly comparable to thresholds like the 3GPP 100~ms target.

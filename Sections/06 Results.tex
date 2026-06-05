@@ -22,7 +22,7 @@ The latency result is split up into multiple steps. Sender latency, Transit late
 The no-transcode configurations (C2 and C6) have no sender pipeline stage and are therefore reported as N/A in the sender table. Table~\ref{tab:send_codec_latency} summarises the mean, minimum, maximum and 95\% percentile of latency in the sender pipeline for each codec test.
 
 \textbf{Sender pipeline:}
-%Image of just sender pipeline
+
 \input{Sections/Tables/Results/T-send-latency.tex}
 
 \input{Sections/Tables/Results/C-send-latency.tex}
@@ -37,7 +37,6 @@ The no-transcode configurations (C2 and C6) have no sender pipeline stage and ar
 
 Before the experiment a clock offset error check was completed. For the transport protocol test it resulted in a uncertainty of total 7 ms. Which is major effect on the results. Because of this clock offset, all the UDP test resulted in a negative transit latency. For this reason, the values has been adjusted so the lowest transit latency has been added to all the measurements. Making minimum 0~ms and making max, measured maximum + distance between 0 and measured minimum. The real results for min, and the shift of entire transit measurement was, T1: -4.48, T2: -2.06, T3: -5.26, T5: -2.17. Even with the clock offset, these test was performed on same offset, which mean that the results are comparable. For a more realistic numbers for transit latency for UDP with RTP see Table~\ref{tab:transit_codec_latency} as all the codec tests used UDP and RTP.
 
-%Image of transit
 \input{Sections/Tables/Results/T-transit-latency.tex}
 
 \input{Sections/Tables/Results/C-transit-latency.tex}
@@ -50,7 +49,6 @@ Before the experiment a clock offset error check was completed. For the transpor
 
 \textbf{Receiver pipeline:}
 
-%Image of just receiver pipeline
 \input{Sections/Tables/Results/T-rec-latency.tex}
 
 \input{Sections/Tables/Results/C-rec-latency.tex}
@@ -62,7 +60,7 @@ Before the experiment a clock offset error check was completed. For the transpor
 \end{figure}
 
 \textbf{End-to-End:}
-%Image of a combined end to end latency
+
 End-to-end (E2E) latency is calculated by adding together for each test, the mean, min, max and 95p, as there is no way of knowing which frame had the lowest receiver and which RTP packet that frame was wrapped in, and when that frame was portrayed as the output of each element in the pipeline produce so many different formats, as described in System Design.
 \input{Sections/Tables/Results/T-end-latency.tex}
 
