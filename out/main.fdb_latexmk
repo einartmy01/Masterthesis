@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber out/main"] 1780651949.76791 "out/main.bcf" "out/main.bbl" "out/main" 1780653577.70745 0
-  "out/main.bcf" 1780653577.48968 118565 eb4e05fe0a9b0b858ca5fbbcecb6e938 "pdflatex"
+["biber out/main"] 1780653741.13754 "out/main.bcf" "out/main.bbl" "out/main" 1780653751.54017 0
+  "out/main.bcf" 1780653751.35347 118632 d8230d98ba6ee708b862cf5c094aaec0 "pdflatex"
   "references.bib" 1780562682.80196 28627 981733392117865b74c4bcaca0194ef4 ""
   (generated)
   "out/main.bbl"
   "out/main.blg"
   (rewritten before read)
-["pdflatex"] 1780653568.67998 "/home/einar/Masterthesis/main.tex" "out/main.pdf" "main" 1780653577.70791 0
+["pdflatex"] 1780653742.66508 "/home/einar/Masterthesis/main.tex" "out/main.pdf" "main" 1780653751.54063 0
   "./title.tex" 1773849068.80137 772 aa8127a032c6e9b3d64e13c86d1d7484 ""
   "/etc/texmf/web2c/texmf.cnf" 1773679518.72801 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/home/einar/Masterthesis/main.tex" 1779957389.47707 972 4cd08898f9d1eea97f2e8f39086c550d ""
@@ -311,7 +311,7 @@
   "Sections/05 Methodology.tex" 1780593106.0947 36760 93192c1a855461951bad0a900a48b74f ""
   "Sections/06 Results.tex" 1780593225.29807 9524 ca132aa31ec479b11bb02537d203970b ""
   "Sections/07 Discussion.tex" 1780650375.36312 43278 3065b17d14dbc44793d098c3f969c354 ""
-  "Sections/20 Conclusion.tex" 1780653568.30209 8625 faaa0b8577cdf4bb223d797bf7ea6f33 ""
+  "Sections/20 Conclusion.tex" 1780653731.72339 8551 4bb17ffa3b5c08b4fb1be2e489424ccf ""
   "Sections/Tables/CameraValues.tex" 1779987292.54867 806 d026472c8c9276bed32c95f96d801dd2 ""
   "Sections/Tables/CodecExpDuration.tex" 1780510562.76076 862 84198f8479ea2652795c5f21c5bd2246 ""
   "Sections/Tables/CodecExpSchedule.tex" 1779992691.99066 988 36677c92e77f128dc5d6b378b44edcf2 ""
@@ -338,13 +338,13 @@
   "Sections/Tables/TransportExpDuration.tex" 1780510582.56693 674 ae96b565c0a0934221bd88bdaa0bb4f8 ""
   "Sections/Tables/TransportExpSchedule.tex" 1779992695.18909 768 bc3f685c32dd974060cdd21adf3edebf ""
   "main.tex" 1779957389.47707 972 4cd08898f9d1eea97f2e8f39086c550d ""
-  "out/main.aux" 1780653577.45904 57907 5276b340bb16c590cf292ea3d1cc5a05 "pdflatex"
-  "out/main.bbl" 1780651951.34291 117508 043ff0ceaaf838b2cffaaf1709b63673 "biber out/main"
-  "out/main.lof" 1780653577.49099 4546 34178c63cb1f7b48b3fd3387d3fdef5e "pdflatex"
-  "out/main.lot" 1780653577.49099 3647 33c06337145bbaba35180440e8295fd4 "pdflatex"
-  "out/main.out" 1780653577.48668 21561 613e236a5d0b78592c54f0733b7a60aa "pdflatex"
-  "out/main.run.xml" 1780653577.49099 2341 774b1370d7471097fc23c34b072738c2 "pdflatex"
-  "out/main.toc" 1780653577.49099 11829 9c00408c4949747fe1aaa0178d89894b "pdflatex"
+  "out/main.aux" 1780653751.3228 57968 903631afa7d86e4bdee3fe873b492f38 "pdflatex"
+  "out/main.bbl" 1780653742.63481 117508 043ff0ceaaf838b2cffaaf1709b63673 "biber out/main"
+  "out/main.lof" 1780653751.35503 4546 34178c63cb1f7b48b3fd3387d3fdef5e "pdflatex"
+  "out/main.lot" 1780653751.35503 3647 33c06337145bbaba35180440e8295fd4 "pdflatex"
+  "out/main.out" 1780653751.35047 21561 613e236a5d0b78592c54f0733b7a60aa "pdflatex"
+  "out/main.run.xml" 1780653751.35503 2341 774b1370d7471097fc23c34b072738c2 "pdflatex"
+  "out/main.toc" 1780653751.35503 11829 9c00408c4949747fe1aaa0178d89894b "pdflatex"
   "packages.sty" 1770296721.34352 6412 0f2b982c0dbe53540c4ea207b4fcb929 ""
   "title.tex" 1773849068.80137 772 aa8127a032c6e9b3d64e13c86d1d7484 ""
   (generated)
