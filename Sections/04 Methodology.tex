@@ -1,0 +1,304 @@
+\section{Methodology}\label{sec:methodology}
+
+\subsection{Research Methodology}
+
+\subsubsection{Literature and Knowledge acquisition}
+The knowledge needed to carry out this thesis was acquired through an iterative process that combined systematic literature review with hands-on practical exploration. This approach, often referred to as an Iterative Literature and Practice-Driven Approach, is characterized by a continuous cycle where theory and practice inform each other rather than following a strict linear sequence~\cite{wohlin2012}. Instead of completing all literature review before beginning practical work, the two activities run in parallel, with new challenges prompting the literature searches and new theoretical insights. This makes it particularly well suited for applied engineering research where the problem space is not fully known at the outset and understanding develops gradually through doing~\cite{hevner2004, saunders2019}.
+
+The process began by identifying the main topics that required knowledge before any development could start. This included understanding the current operational context of RTO and ATO, the fundamentals of video streaming and relevant transport protocols, and the capabilities and structure of GStreamer as a framework. These areas formed the initial scope of the literature review and was enough to begin practical work.
+
+Academic literature was gathered primarily through Google Scholar and IEEE Xplore, using search terms related to low-latency video streaming, remote train operation, GStreamer pipeline design, and network performance for real-time applications. Sources were selected based on relevance to the problem, publication quality, and recency where it was deemed necessary. In addition to academic papers, official technical documentation was used extensively, particularly the GStreamer documentation and protocol specifications for RTP and UDP, which provided the practical detail that academic sources alone could not cover.
+
+Once a sufficient theoretical foundation was in place, practical exploration began through work with GStreamer. Building and testing pipelines from the command line and through Python quickly revealed challenges that existing literature did not fully address, such as specific configuration trade-offs, unexpected latency behaviors, and hardware compatibility issues. Each one of these obstacles was a sign to return to the literature, this time with more precise and targeted questions. New findings were then brought back into the development process, tested, and evaluated against real behaviour.
+
+This cycle of reading, building, observing, and searching again repeated throughout the entire development phase. The result is that the theoretical foundation of this thesis did not precede the practical work, but grew alongside it, shaped by the specific demands of the problem at hand.
+
+\subsubsection{Search Strategy and Databases}
+A multi-platform search approach was utilized to retrieve a wide array of high-quality sources. The primary databases included:
+
+\begin{itemize}
+    \item Scopus: For retrieving peer-reviewed, impactful scientific articles.
+    \item Google Scholar: For broader academic and institutional literature.
+    \item GStreamer docs: For specifics on GStreamer development.
+\end{itemize}
+
+Information and usage of sites such as Stack overflow was also used during development of code basis as it is a platform for sharing and discussion coding solutions.
+
+\subsubsection{Inclusion Criteria}
+To ensure the study is based on the relevant and current information, specific criteria were applied to filter the search results. Given the rapid pace of technological change, a focus was placed on recent publications. Yet much of the information and technology used for video streaming is getting old. And when gathering information about how the technologies work, recency was not as important.
+
+\begin{table}[h]
+    \centering
+    \caption{Inclusion Criteria for Literature Review}\label{tab:inclusion_criteria}
+    \begin{tabular}{|c|p{8cm}|}
+        \hline
+        ID & Inclusion Criteria (IC) \\
+        \hline
+        IC1 & Publication Date: Between 2010-2026 \\
+        \hline
+        IC2 & Language: Written in English \\
+        \hline
+        IC3 & Document Type: Primarily "Article", "Technical document", "Conference Paper" or "Thesis"\\
+        \hline
+    \end{tabular}
+\end{table}
+
+\subsubsection{Supporting tools}
+
+Several digital tools as mentioned below were used for this paper. The main purpose of the usage was to enhance clarity, assisting in latex, and in general increase quality. Specifics include writing reference list in correct format. Structuring sentences and paragraphs. Checking for typos and grammatical errors.
+
+\begin{itemize}
+    \item Anthropic's Claude.ai for discussion and development of script syntax. Also employed as a helpful resource for LaTeX formatting suggestions, generating structured content (tables and lists), translating between Norwegian and English, and reviewing text for synonyms and restructuring ideas to ensure arguments were effectively communicated.
+    \item Google Gemini: Used for similar fields as Claude.ai, but also for general proofreading, and refining sentence structure and tone to maintain a high standard of academic writing.
+    \item Visual Studio Code: was used as the main LaTeX editor because of its powerful extensions for LaTeX support, syntax highlighting, and version control integration.
+\end{itemize}
+
+\subsection{Experimental Methodology}
+This subchapter describes how the experimental work in this thesis was designed, conducted, and evaluated. It covers the design of experiments, the test setup and equipment used and the procedure followed during testing.
+
+The experiments in this thesis are designed to evaluate how different pipeline configurations affect end-to-end streaming latency, video quality and resource usage. To do this in a structured way, the work draws on the principles of Design of Experiments (DoE), which is a structured way of planning which tests to run and in what order so that the results can accurately portray what has been tested. Rather than testing things randomly or by intuition, DoE ensures that the variables you care about are tested systematically and that the conclusions you draw are based on the data and not on chance~\cite{montgomery2017}.
+
+The experimental design follows the One Factor At a Time (OFAT) strategy. This means one variable is changed between configurations while all others are kept at a fixed baseline value. Montgomery describes OFAT as a well established approach when the goal is to understand the individual contribution of each factor separately~\cite{montgomery2017}. However, even with just changing a factor at the time, some of the testing move over to measure how some of the different factors also interact with each other.
+
+\subsubsection{Reasoning of transcoding}
+The Hikvision cameras used in this project encode video internally using either H.264 or H.265 and deliver the compressed bitstream directly over RTSP. The simplest pipeline design would be to take that bitstream, package it into RTP, and forward it to the receiver without modification. This is what a passthrough configuration does, and it is exactly what the no-transcode tests measure. However, for the majority of the experiments a passthrough approach is insufficient for two reasons.
+
+The first reason is measurability. As stated in Section~\ref{chap:systemdesign}, one of the core requirements of the system is the ability to isolate and measure the latency contribution of each individual processing stage, including the encoder. If the camera's own encoder is left to operate as a black box, the time the camera spends compressing the image is hidden inside the RTSP stream and cannot be separated from the rest of the pipeline. By pulling the compressed bitstream from the camera, decoding it back to raw frames using \texttt{avdec\_h264}, and then re-encoding with a GStreamer encoder element such as \texttt{x264enc} or \texttt{nvh264enc}, the encoding step becomes a visible and measurable stage inside the GStreamer pipeline. Probes placed before and after the encoder can then attribute latency precisely to the encoding work itself, rather than absorbing it into an unmeasured camera-side overhead.
+
+The second reason is configurability. A central purpose of the experiments is to compare the performance of different codecs, resolutions, and hardware acceleration strategies. Changing the codec from H.264 to H.265, switching from CPU encoding to GPU encoding, or altering the target resolution are all changes that can only be made by controlling the encoder directly within the pipeline. The camera's internal encoder does not expose the granular parameter access that GStreamer plugin elements do, and switching it between H.264 and H.265 requires a manual reconfiguration of the camera hardware and a test interruption, as was the case for the C6 test. Performing the encoding inside GStreamer allows codec and encoder swaps to be made entirely in software between test runs, keeping the OFAT principle intact.
+
+The no-transcode tests included in the experiment serves as a comparative role. A passthrough pipeline, where the camera's compressed video stream is forwarded directly to the receiver represents the most realistic scenario. To include these tests provides a useful reference points. The difference between a transcoded test and its corresponding no-transcode variant can therefore be interpreted as the measurable cost of the control and flexibility that transcoding enables.
+
+\subsubsection{Design of Experiments}
+
+The factors tested in this thesis are codec, resolution, transport protocol, encryption, bandwidth condition and encoding method. While GStreamer allows a large number of additional parameters to be adjusted, such as buffer sizes, queue configurations, bitrate control modes and keyframe intervals, these were excluded. The chosen parameters are considered sufficient to identify the most significant performance differences relevant to the use case. The names of the test as seen in Table~\ref{tab:transport_overview} and~\ref{tab:codec_overview} are set to T and C for Transport and Codec.
+
+\input{Sections/Tables/TransportExpSchedule.tex}
+
+\begin{itemize}
+    \item \textbf{T2}: As described in Chapter~\ref{chap:systemdesign} the pipeline used for most of the tests are transcoded. For this reason, a test with no transcoding, just passthrough of the video stream was deemed useful to compare how much effect the transcoding has on the video, especially compression and latency. 
+    \item \textbf{T3}: As this project will eventually be used for critical infrastructure of a country, security issues will be much more important and therefore a test with encrypted stream was found reasonable.
+    \item \textbf{T4}: To decide which of the transport protocols most suitable for a RTO system, a test with comparison is needed.
+    \item \textbf{T5/T6}: To simulate real life conditions with unstable and unpredictable bandwidth along train tracks. Evaluating both transport under bandwidth limitations is necessary to get a fuller picture.
+\end{itemize}
+
+\input{Sections/Tables/CodecExpSchedule.tex}
+
+\begin{itemize}
+    \item \textbf{C2}: A no transcoding run will be very important especially when looking at the effect of which encoder to use. 
+    \item \textbf{C3}: When operating a remote vehicle through a video stream, quality is important. For that reason i have added a 720p encoding to the experiment. As it can decrease workload of encoder and maybe keep quality better and stable.
+    \item \textbf{C4}: Encoding is a heavy process, comparing results where GPU is used to help reduce the workload of the CPU is vital to decide what equipment to use forward.
+    \item \textbf{C5}: To compare two of the most common encoders. An very important choice to make for a video stream is which encoder. It will also work of some sort of baseline for H.265 when we move on to change other component changes.
+    \item \textbf{C6}: Adding a comparable no transcoding test with H.265 is crucial for the result will be directly comparable with test C2, and more close to real scenario of remote operations.
+    \item \textbf{C7}: Compare how H.265 handle 720p compared to H.264 will give valuable data to decide between H.264 and H.265 if a lower resolution is preferred. 
+    \item \textbf{C8}: As H.265 encoding is more complicated and extensive workload, using a GPU to relieve the CPU of the workload will be import for the choice of equipment used.
+    \item \textbf{C9}: To compare to another encoding and video stream strategy. 
+\end{itemize}
+ 
+For test T1-T6, a lab experiment was deemed adequate as the tested scenarios are not as effected by real world test, aspect as moving modem or moving video have little effect on the transport layer and the comparison will still hold for lab environment.
+The outcomes measured for each configuration are end-to-end latency, CPU usage and visual quality. Packet loss and throughput are also recorded for configurations that involve simulated poor network conditions. All configurations are described in the following section. 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{Images/Test&Equipment/LabSetup.jpg}
+    \caption{Setup for lab experiment tests}
+    \label{fig:labsetup}
+\end{figure}
+
+As this experiment was design to mimic a remote train operation, but with a car as replacement, picking route for the experiment was crucial. The route had to include surroundings similar as a tramway track. The route as shown at Figure~\ref{fig:road} display the route that every test was performed on. The road stretched from Klæbuveien 125, 7031 Trondheim to the roundabout at Klæbuveien 128 and back again. This specific route was chosen for a set of factors. It provides dynamic surrounding containing of open view, close trees and building. It is a low traffic road, allowing stable speed crucial to measure performance under movement and open view for the surrounding. The road is very flat and straight forward, as was evaluated to mimic most of train tracks and views from a locomotive. It also provided a safe place to start, stop and prepare for next test with a parking lot right next to the road.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.3\textwidth]{Images/Test&Equipment/Road.png}
+    \caption{Route used for experiment}
+    \label{fig:road}
+\end{figure}
+
+To be able to execute the tests two people was needed. The onboard attendant was responsible for starting the sender, drive the route and end the sender script. The remote control operator was responsible for starting and ending the receiver and notify if any abnormalities occurred. In the Figure~\ref{fig:overview} is the main physical setup of the experiment.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{Images/Test&Equipment/TestOveriewSetup.png}
+    \caption{Experiment overview of setup}
+    \label{fig:overview}
+\end{figure}
+
+
+All the cameras was set at configuration to the values at Table~\ref{tab:camera_stream_config} before entering the sender computer. Except for the C6 test as it demanded Video encoding to be H.265.
+
+\input{Sections/Tables/CameraValues.tex}
+
+For all the possible values that GStreamer allows to adjust when designing a video stream pipeline, the values of Table~\ref{tab:fixed_values} was set standard for each of the test except when the test specifies something else. This to ensure the methodology of OFAT where only one factor was changed at the time. These values was also chosen after an iterative design process explain in Chapter~\ref{chap:systemdesign}.
+
+\input{Sections/Tables/FixedValues}
+
+\subsubsection{Test Setup and Equipment}
+
+All the test equipment is listed below in Table~\ref{tab:test_equipment}. The cameras was mounted on the car dashboard with small pieces of ducktape to ensure stable recording. The modem was also placed there as you can see in Figure~\ref{fig:carsetup} to ensure good connection. The sender computer an was connected with Cat 6 cables and placed stable in the passenger seat for the duration of the experiment as shown in Figure~\ref{fig:carsetup}. The receiver was placed at NTNU lab location for the full duration as it would simulate closest to a control room of a remote operation.
+
+\input{Sections/Tables/TestEquipment.tex}
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}[b]{0.32\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Images/Test&Equipment/Cam0Outside (Copy).jpg}
+        \caption{Cam 0}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.32\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Images/Test&Equipment/Cam1Outside (Copy).jpg}
+        \caption{Cam 1}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.32\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Images/Test&Equipment/Cam2Outside (Copy).jpg}
+        \caption{Cam 2}
+    \end{subfigure}
+    \caption{Cameras outside view}
+    \label{fig:camerasfromoutside}
+\end{figure}
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=0.9\textwidth]{Images/Test&Equipment/DashboardView.jpg}
+%     \caption{Dashboard view from inside the car}
+%     \label{fig:dashboardview}
+% \end{figure}
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=0.9\textwidth]{Images/Test&Equipment/Computers.jpg}
+%     \caption{Computers used in all tests}
+%     \label{fig:computers}
+% \end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{Images/Test&Equipment/CarSetup2.jpg}
+    \caption{Car setup for experiment}
+    \label{fig:carsetup}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}[b]{0.35\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Images/Test&Equipment/NetworkModem.jpg}
+        \caption{Network Modem TRB500}
+        \label{fig:modem}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.55\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Images/Test&Equipment/NetworkSwitch.jpg}
+        \caption{Network Switch TP-Link TL-SG108E}
+        \label{fig:switch}
+    \end{subfigure}
+    \caption{Network Switch and Network Modem}
+    \label{fig:networkequipment}
+\end{figure}
+
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=0.9\textwidth]{Images/Test&Equipment/PowerSupply.jpg}
+%     \caption{Power supply for experiment}
+%     \label{fig:powersupply}
+% \end{figure}
+
+
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=0.6\textwidth]{Images/Test&Equipment/ReceiverComputer.jpeg}
+%     \caption{Receiver computer receiving images}
+%     \label{fig:receiver}
+% \end{figure}
+
+\subsubsection{Test Procedure}
+The test procedure differed between the transport tests and the codec tests. The transport tests were conducted in a static lab environment, while the codec tests were conducted from a moving vehicle.
+
+For the lab test both sender and receiver computers were placed at the NTNU lab. All cameras
+were mounted and connected as described earlier in this section. Then the stream was activated and all movement was performed by the operator trying to locate difference, latency and quality on image when running.
+
+For the experiment of codecs in a moving vehicle, each test followed the same execution sequence. A phone call between the onboard attendant in the car and the remote operator at NTNU confirmed which configuration to run and that it was safe to start. A brief warmup run let the cameras, encoder and decoder reach a stable operating state. The receiver was then started first to begin logging, followed by the sender. For the codec tests the car drove the route shown in Figure~\ref{fig:road}. When the car returned, the sender was stopped first, which automatically flushed all logged data to disk, and the receiver was stopped next. This was then repeated until all codec test where complete.
+
+Test C6 with no transcode H.265 required a short break to reconfigure the cameras to native H.265 output through the Hikvision management interface before that test could proceed. For the bandwidth-limited transport tests T5 and T6, a rate limit of 12~Mbit/s and 18~Mbit/s was applied to the sender's outbound interface before the run and removed afterwards. These number were carefully selected as they manage to produce output that could be logged while still showing clearly what effect bandwidth has on the transport layer.
+
+\subsubsection{Controlling for Unmeasured and Hidden Variables}\label{subsubsec:controllingUmeasruedVariables}
+
+The most important control was the set of fixed parameter values in Table~\ref{tab:fixed_values}. These values were held constant across every run so that the pipeline configuration itself never varied, leaving only the one factor under test free to change. This is what makes the One Factor At a Time design work in practice, as any difference observed between two configurations can be traced back to the parameter that was deliberately changed rather than to some incidental change in the setup. On top of this baseline, several further controls were applied to limit the influence of factors that were not measured directly.
+
+Because the codec tests were run from a moving vehicle, the surrounding conditions could not be fully controlled, so they were instead held as consistent as possible. All nine codec tests were driven on the same route on the same day, which means any variation in cellular coverage, weather or signal strength acted on every configuration equally rather than favouring or penalising a single test. The same driver and the same driving pattern were used throughout, removing differences in speed and road behaviour as a source of variation between tests. A transit timestamp check was also performed before starting, logging a short exchange of packets to estimate how far off the clocks were, so the offset could be accounted for in the analysis and discussion.
+
+Two further controls were built into the way the data was handled rather than the way it was captured. The first 10 seconds of every log file are discarded so that pipeline startup transients do not enter any of the reported statistics, and this cutoff is applied identically across all analysis scripts so that no configuration gains an advantage from a shorter or longer warmup window. Each test also ran three cameras at once, each in its own independent GStreamer pipeline, so every configuration was measured three times concurrently under identical conditions instead of from a single observation.
+
+\subsection{Measurement and Analysis}
+
+\subsubsection{Measurment metrics}
+The five metrics collected per run are end-to-end latency, packet loss, CPU usage, throughput, and visual quality. The implementation of each is described in Section~\ref{sec:measurementdesign}. The choice of which metrics to collect was driven directly by the three research questions and the gaps identified in previous work.
+
+End-to-end latency is the primary metric of this thesis and the most critical for remote train operation. Without sufficiently low and stable latency, an operator cannot react in time to what is happening on the track, making the system unsafe regardless of image quality. Latency is split into three separate measurements, sender pipeline latency, transit latency, and receiver pipeline latency. This separation makes it possible to isolate exactly where delay is introduced so it is possible to takes steps to prevent it in the future.
+
+Throughput measures how much bandwidth each configuration demands from the mobile network connection. This is directly relevant to operational planning, as the available uplink bandwidth on a moving train varies by location, and a configuration that consistently exceeds the available capacity will produce packet loss and latency regardless of how well the pipeline is tuned. 
+
+Packet loss reflects the reliability of the network link under each configuration and is directly connected to Throughput. For UDP streams, a lost packet means visible artefacts and frozen regions, particularly when the scene is in motion and reference frames are lost. For TCP streams, lost packets are retransmitted automatically, so packet loss is instead experienced as a latency spike rather than a visual artefact. Measuring packet loss for both protocols is therefore necessary to characterise their behaviour under normal and constrained conditions, which directly addresses RQ2. 
+
+CPU usage on the sender reflects the computational cost of each encoding configuration and determines whether a given setup is practical to deploy on real hardware. Not to mention it gives insight into the camera encoding as the effects on the sender CPU will match usage on the camera encoding. An encoder that consistently drives CPU utilisation above 80--90\% leaves no headroom for background processes or transient load spikes, and when the encoder is starved of CPU time it produces frames irregularly, contributing directly to latency spikes and quality degradation. The comparison between H.264 and H.265, and between CPU and GPU acceleration, produces significantly different CPU loads, making this metric essential for RQ3.
+
+Visual quality is assessed using the BRISQUE no-reference image quality metric, which scores each decoded frame between 0 and 100. A no-reference metric is necessary here because in a live streaming context there is no original image to compare against. Research by Brandenburger et al.~\cite{brandenburger2023} has shown that reductions in video bitrate produce measurable drops in both operator reaction speed and accuracy during remote driving tasks. Prior work in this project did not systematically measure visual quality alongside latency, meaning the interplay between the two could not be quantified as directly as now. Including BRISQUE in this study allows every configuration to be evaluated on both axes simultaneously, which is the core question of RQ3.
+
+All of this factors have important interplay and trade-offs. To measure only one would mean important information could be lost and could result in picking the wrong configuration based misleading results. That is why it is important to include all of the factors when looking at total system.
+
+\subsubsection{Accuracy and Error Sources}
+
+Pipeline latency is measured using \texttt{time.monotonic} entirely on a single machine. Because the monotonic clock is never adjusted by NTP or system time changes, these measurements contain no uncertainty and are accurate to sub-millisecond resolution making a perfect measurement for millisecond analysis.
+
+Transit latency is measured by comparing timestamps logged on two separate machines, each synchronised independently to NTP servers. This introduces a clock offset between the sender and receiver. This will always cause some transit uncertainty and error. However there are measures to take to ensure a more accurate measurement and to find possible error. By adding multiple online helpers on both computers, forcing the computer to accept these clocks, have smooth adjustment and configure the clocks a while before running so they can adjust will make the clocks more accurate. There is also a way to check how far off the computer believes is maximum. And by reading these values before running the test it is possible to get an accurate possible error.
+
+BRISQUE scores are only logged every fifth decoded frame per camera to keep the receiver CPU load manageable. This means brief quality events that affect fewer than five consecutive frames may not be captured in the statistics, and individual artefacts from isolated packet loss can be missed entirely. The metric was also designed for natural still images rather than compressed video frames from a moving outdoor scene. There is also no perception test or measurement completed other than noting down rough experience of the remote operator when confirming the BRISQUE score for codec testing.
+
+\subsubsection{Data Recording and Processing}
+
+The raw log files produced during each run and the in-memory queuing design used to avoid blocking the pipeline are described in Section~\ref{sec:measurementdesign}. After each test, a suite of post-processing scripts was run to convert the raw CSV and log files into statistical summaries and graphs. The entry point is \texttt{run\_all\_analyses.py}, which automatically discovers all timestamps present in the log directories and invokes every applicable analyser for each one, with graphical display suppressed for batch processing. Each analyser writes a plain-text statistics file and a PNG graph to a timestamped subdirectory, and all raw logs are retained alongside the processed outputs.
+
+The individual analysers, which is listed in appendix, and what they compute are:
+
+\begin{itemize}
+    \item \texttt{combine\_transitV2.py} reads the sender and receiver transit CSV files, matches packets by camera index and RTP sequence number, handles the 16-bit sequence number rollover that occurs when the counter wraps from 65535 back to 0, and skips the first 10 seconds of sender data to remove startup packets from the packet loss calculation. The output is a single merged CSV of per-packet transit latencies together with packet loss statistics.
+    \item \texttt{transit\_analyseV5.py} reads that merged result and produces mean, minimum, maximum, and 95th percentile statistics alongside a time-series graph of transit latency over the run.
+    \item \texttt{sender\_pipeline\_analyseV2.py} reads the sender pipeline CSV, skips the first 10 seconds, excludes rows where a NAL unit was dropped by the leaky queue, and produces latency statistics and a graph.
+    \item \texttt{receiver\_pipeline\_analyseV2.py} reads the receiver pipeline CSV, skips the first 10 seconds and produces latency statistics and a graph.
+    \item \texttt{cpu\_analyseV2.py} parses the \texttt{sar} log produced on the sender, skips the first 10 seconds, and produces total CPU usage statistics and a time-series graph showing both overall load and the user/system breakdown.
+    \item \texttt{throughput\_analyse.py} reads the throughput CSV and produces statistics and a graph of outbound bandwidth usage over the run.
+    \item \texttt{quality\_analyse.py} reads the BRISQUE quality CSV, skips the first 5 seconds, and computes per-camera and aggregate quality statistics alongside a time based graph per camera.
+\end{itemize}
+
+\subsubsection{Statistical Analysis}
+
+The results for each metric are summarised using mean, minimum, maximum, and 95th percentile. The 95th percentile is included alongside the mean because it more honestly represents what an operator would experience during a run. A configuration with a low mean but a high 95th percentile produces frequent disruptive spikes that the average alone would not show. For metrics logged per camera, the values from all three cameras are pooled into a single sample before computing statistics, giving a result representative of the overall system rather than any individual stream. No other statistical tests are applied, as the OFAT design produces one observation per configuration and the goal is practical comparison rather than hypothesis testing.
+
+\subsection{Limitations}
+
+Due to time constraints and availability of help and material to complete experiment, each test was done only once. The configurations were validated repeatedly during development, so the results are not untested, but a single final run per configuration means unique effects on that particular day cannot be ruled out. The reason it was only performed once was due to time and the volume of logging data produced. The codec test on the road was the most demanding to execute as it required the most people and equipment, and running the lab tests over too many sessions would also risk obscuring genuine spikes in a large average. The lab results were confirmed to be consistent with previous development runs before being accepted.
+
+The transport tests were conducted in a static lab environment rather than from a moving vehicle. The decision came down to time and to the fact that transport protocol behaviour is largely determined by the network layer, not by physical movement, so a lab environment was judged sufficient for comparing UDP and TCP. A dedicated modem and cellular uplink were still used in the lab to ensure real internet conditions were present.
+
+The codec tests were conducted from a car rather than from an operational train. Access to a train was not available within the scope of this thesis, and the project is still at the prototype stage. A car was chosen as the closest practical substitute, as it provides a real mobile connection under motion without requiring coordination with train operators or access to live railway infrastructure.
+
+The hardware used in the tests was determined entirely by what was available for the project, a Lenovo ThinkPad with an Intel Core i7 and NVIDIA T550 on the sender side. No budget for additional or different hardware was available, and the configurations were therefore evaluated on fixed equipment throughout.
+
+No formal operator evaluation was carried out because the system is still a prototype and has not yet reached the maturity required for a study with professional train operators. Such a study would require safety approvals, operator availability, and coordination with a railway operator, all of which were outside the scope of this thesis.
+
+\subsection{Reliability}
+
+Wohlin et al. define reliability as the degree to which a study would yield the same results if repeated under the same conditions~\cite{wohlin2012}. The controls described in Section~\ref{subsubsec:controllingUmeasruedVariables} contribute to this directly, as fixing the route, the driver and the full set of parameter values means the conditions of each test are documented well enough to be reproduced. Beyond keeping the conditions stable, a few aspects of the study design speak specifically to whether the same numbers would appear again on a repeat run.
+
+The clearest evidence is that the configurations were carefully developed. Every configuration was built, run and validated many times over the course of development, and each produced results consistent with the final accepted run before that run was recorded as data. This gives reasonable confidence that the reported numbers reflect stable system behaviour rather than a one off artefact of a single session. Running the same physical hardware for the entire test series supports this further, since equipment differences are removed as a possible reason for one run disagreeing with another.
+
+Reliability also extends to how the data is processed, not only how it is collected. The raw logs from every run are passed through the same analysis scripts with the same fixed warmup exclusion, so a given set of logs will always yield the same statistics no matter when the analysis is run. Finally, because three independent pipelines were recorded at once for each configuration, every reported result already draws on three concurrent measurements rather than one, which acts as a small built in repeat within each test and makes a single misleading measurement less likely to survive into the results.
+
+\subsection{Validity}
+
+Saunders et al. distinguish between internal, external, and construct validity as three dimensions that together determine whether a study's conclusions can be trusted~\cite{saunders2019}.
+
+Internal validity concerns whether the observed differences in results are actually caused by the factor under test rather than by something else changing at the same time. The OFAT design directly supports this by changing one variable at a time while holding all others fixed as the values in Table~\ref{tab:fixed_values} means that differences between configurations can be attributed to the factor being varied.
+
+External validity concerns whether the findings transfer beyond the specific conditions of the study. The codec tests were conducted from a car rather than a train, and a real railway deployment differs in network coverage, speed, vibration, and cellular tower handover behaviour. Absolute latency and packet loss figures will not transfer directly to a railway environment and should be validated there before any operational use. The CPU and GPU results are also tied to the specific hardware used, and absolute percentages may not hold on a different machine.
+
+Construct validity concerns whether the measurements actually capture the concepts they are intended to represent. Pipeline latency, measured with a monotonic clock on a single machine, directly measures time spent in the processing chain and is a valid instrument for this purpose. Transit latency is a valid measure of network delay, subject to the acknowledged NTP offset. BRISQUE is used as a proxy for perceived visual quality and is a recognised no-reference image quality metric~\cite{mittal2012}, but again it was design for video stream evaluation. It also does not measure whether an operator can actually drive safely with the image presented, which is ultimately what matters for remote train operation.
+

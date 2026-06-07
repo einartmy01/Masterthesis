@@ -1,6 +1,6 @@
 \babel@toc {british}{}\relax 
-\contentsline {section}{List of Figures}{vii}{Doc-Start}%
-\contentsline {section}{List of Tables}{viii}{Doc-Start}%
+\contentsline {section}{List of Figures}{viii}{Doc-Start}%
+\contentsline {section}{List of Tables}{ix}{Doc-Start}%
 \contentsline {section}{\numberline {1}Introduction}{1}{section.1}%
 \contentsline {subsection}{\numberline {1.1}Background and Motivation}{1}{subsection.1.1}%
 \contentsline {subsection}{\numberline {1.2}Problem}{1}{subsection.1.2}%
@@ -90,12 +90,13 @@
 \contentsline {subsubsection}{\numberline {4.2.4}Test Procedure}{39}{subsubsection.4.2.4}%
 \contentsline {subsubsection}{\numberline {4.2.5}Controlling for Unmeasured and Hidden Variables}{40}{subsubsection.4.2.5}%
 \contentsline {subsection}{\numberline {4.3}Measurement and Analysis}{40}{subsection.4.3}%
-\contentsline {subsubsection}{\numberline {4.3.1}Accuracy and Error Sources}{41}{subsubsection.4.3.1}%
-\contentsline {subsubsection}{\numberline {4.3.2}Data Recording and Processing}{42}{subsubsection.4.3.2}%
-\contentsline {subsection}{\numberline {4.4}Statistical Analysis}{42}{subsection.4.4}%
-\contentsline {subsection}{\numberline {4.5}Limitations}{42}{subsection.4.5}%
-\contentsline {subsection}{\numberline {4.6}Reliability}{43}{subsection.4.6}%
-\contentsline {subsection}{\numberline {4.7}Validity}{43}{subsection.4.7}%
+\contentsline {subsubsection}{\numberline {4.3.1}Measurment metrics}{40}{subsubsection.4.3.1}%
+\contentsline {subsubsection}{\numberline {4.3.2}Accuracy and Error Sources}{41}{subsubsection.4.3.2}%
+\contentsline {subsubsection}{\numberline {4.3.3}Data Recording and Processing}{42}{subsubsection.4.3.3}%
+\contentsline {subsubsection}{\numberline {4.3.4}Statistical Analysis}{42}{subsubsection.4.3.4}%
+\contentsline {subsection}{\numberline {4.4}Limitations}{42}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Reliability}{43}{subsection.4.5}%
+\contentsline {subsection}{\numberline {4.6}Validity}{43}{subsection.4.6}%
 \contentsline {section}{\numberline {5}Results}{45}{section.5}%
 \contentsline {subsection}{\numberline {5.1}System Latency}{46}{subsection.5.1}%
 \contentsline {subsection}{\numberline {5.2}Packet Loss Rate}{49}{subsection.5.2}%
@@ -116,14 +117,13 @@
 \contentsline {subsubsection}{\numberline {6.3.4}H.264 vs.\ H.265 (C1 \- C4 vs.\ C5 \- C8)}{60}{subsubsection.6.3.4}%
 \contentsline {subsubsection}{\numberline {6.3.5}MJPEG (C9)}{60}{subsubsection.6.3.5}%
 \contentsline {subsection}{\numberline {6.4}Interplay of configurations}{60}{subsection.6.4}%
-\contentsline {subsubsection}{\numberline {6.4.1}Throughput and Transit Latency}{61}{subsubsection.6.4.1}%
+\contentsline {subsubsection}{\numberline {6.4.1}Throughput and Transit Latency}{60}{subsubsection.6.4.1}%
 \contentsline {subsubsection}{\numberline {6.4.2}The Latency Quality Compromise}{61}{subsubsection.6.4.2}%
 \contentsline {subsubsection}{\numberline {6.4.3}Configuration Recommendation for RTO}{62}{subsubsection.6.4.3}%
-\contentsline {subsection}{\numberline {6.5}Comparison Against RTO Latency Requirements}{62}{subsection.6.5}%
-\contentsline {subsection}{\numberline {6.6}Limitations and Methodological Reflections}{62}{subsection.6.6}%
-\contentsline {subsubsection}{\numberline {6.6.1}Measurement Validity}{62}{subsubsection.6.6.1}%
-\contentsline {subsubsection}{\numberline {6.6.2}Generalisability}{63}{subsubsection.6.6.2}%
-\contentsline {subsection}{\numberline {6.7}Relation to Prior Work}{63}{subsection.6.7}%
+\contentsline {subsection}{\numberline {6.5}Limitations and Methodological Reflections}{62}{subsection.6.5}%
+\contentsline {subsubsection}{\numberline {6.5.1}Measurement Validity}{62}{subsubsection.6.5.1}%
+\contentsline {subsubsection}{\numberline {6.5.2}Generalisability}{63}{subsubsection.6.5.2}%
+\contentsline {subsection}{\numberline {6.6}Relation to Prior Work}{63}{subsection.6.6}%
 \contentsline {section}{\numberline {7}Conclusion}{65}{section.7}%
 \contentsline {subsection}{\numberline {7.1}Main Findings}{65}{subsection.7.1}%
 \contentsline {subsection}{\numberline {7.2}Future Work}{66}{subsection.7.2}%

@@ -453,12 +453,12 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm
 INPUT /usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc
-INPUT ./Sections/01 Abstract.tex
-INPUT ./Sections/01 Abstract.tex
-INPUT ./Sections/01 Abstract.tex
-INPUT ./Sections/01 Abstract.tex
-INPUT ./Sections/01 Abstract.tex
-INPUT ./Sections/01 Abstract.tex
+INPUT ./Sections/001 Abstract.tex
+INPUT ./Sections/001 Abstract.tex
+INPUT ./Sections/001 Abstract.tex
+INPUT ./Sections/001 Abstract.tex
+INPUT ./Sections/001 Abstract.tex
+INPUT ./Sections/001 Abstract.tex
 INPUT out/main.toc
 INPUT out/main.toc
 INPUT out/main.toc
@@ -496,19 +496,19 @@ INPUT out/main.lot
 INPUT out/main.lot
 INPUT out/main.lot
 OUTPUT out/main.lot
-INPUT ./Sections/02 Introduction.tex
-INPUT ./Sections/02 Introduction.tex
-INPUT ./Sections/02 Introduction.tex
-INPUT ./Sections/02 Introduction.tex
-INPUT ./Sections/02 Introduction.tex
-INPUT ./Sections/02 Introduction.tex
+INPUT ./Sections/01 Introduction.tex
+INPUT ./Sections/01 Introduction.tex
+INPUT ./Sections/01 Introduction.tex
+INPUT ./Sections/01 Introduction.tex
+INPUT ./Sections/01 Introduction.tex
+INPUT ./Sections/01 Introduction.tex
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
-INPUT ./Sections/03 Theory.tex
-INPUT ./Sections/03 Theory.tex
-INPUT ./Sections/03 Theory.tex
-INPUT ./Sections/03 Theory.tex
-INPUT ./Sections/03 Theory.tex
-INPUT ./Sections/03 Theory.tex
+INPUT ./Sections/02 Theory.tex
+INPUT ./Sections/02 Theory.tex
+INPUT ./Sections/02 Theory.tex
+INPUT ./Sections/02 Theory.tex
+INPUT ./Sections/02 Theory.tex
+INPUT ./Sections/02 Theory.tex
 INPUT ./Images/Theory/ThreeMonitorSetup.png
 INPUT ./Images/Theory/ThreeMonitorSetup.png
 INPUT Images/Theory/ThreeMonitorSetup.png
@@ -536,12 +536,12 @@ INPUT ./Images/Theory/BRISQUEResult.png
 INPUT Images/Theory/BRISQUEResult.png
 INPUT ./Images/Theory/BRISQUEResult.png
 INPUT ./Images/Theory/BRISQUEResult.png
-INPUT ./Sections/04 System Design.tex
-INPUT ./Sections/04 System Design.tex
-INPUT ./Sections/04 System Design.tex
-INPUT ./Sections/04 System Design.tex
-INPUT ./Sections/04 System Design.tex
-INPUT ./Sections/04 System Design.tex
+INPUT ./Sections/03 System Design.tex
+INPUT ./Sections/03 System Design.tex
+INPUT ./Sections/03 System Design.tex
+INPUT ./Sections/03 System Design.tex
+INPUT ./Sections/03 System Design.tex
+INPUT ./Sections/03 System Design.tex
 INPUT ./Images/System/PhysicalSetup2.png
 INPUT ./Images/System/PhysicalSetup2.png
 INPUT Images/System/PhysicalSetup2.png
@@ -586,12 +586,12 @@ INPUT ./Images/System/BRISQUEProbe.png
 INPUT Images/System/BRISQUEProbe.png
 INPUT ./Images/System/BRISQUEProbe.png
 INPUT ./Images/System/BRISQUEProbe.png
-INPUT ./Sections/05 Methodology.tex
-INPUT ./Sections/05 Methodology.tex
-INPUT ./Sections/05 Methodology.tex
-INPUT ./Sections/05 Methodology.tex
-INPUT ./Sections/05 Methodology.tex
-INPUT ./Sections/05 Methodology.tex
+INPUT ./Sections/04 Methodology.tex
+INPUT ./Sections/04 Methodology.tex
+INPUT ./Sections/04 Methodology.tex
+INPUT ./Sections/04 Methodology.tex
+INPUT ./Sections/04 Methodology.tex
+INPUT ./Sections/04 Methodology.tex
 INPUT ./Sections/Tables/TransportExpSchedule.tex
 INPUT Sections/Tables/TransportExpSchedule.tex
 INPUT ./Sections/Tables/TransportExpSchedule.tex
@@ -660,12 +660,12 @@ INPUT ./Images/Test&Equipment/NetworkSwitch.jpg
 INPUT Images/Test&Equipment/NetworkSwitch.jpg
 INPUT ./Images/Test&Equipment/NetworkSwitch.jpg
 INPUT ./Images/Test&Equipment/NetworkSwitch.jpg
-INPUT ./Sections/06 Results.tex
-INPUT ./Sections/06 Results.tex
-INPUT ./Sections/06 Results.tex
-INPUT ./Sections/06 Results.tex
-INPUT ./Sections/06 Results.tex
-INPUT ./Sections/06 Results.tex
+INPUT ./Sections/05 Results.tex
+INPUT ./Sections/05 Results.tex
+INPUT ./Sections/05 Results.tex
+INPUT ./Sections/05 Results.tex
+INPUT ./Sections/05 Results.tex
+INPUT ./Sections/05 Results.tex
 INPUT ./Sections/Tables/TransportExpDuration.tex
 INPUT Sections/Tables/TransportExpDuration.tex
 INPUT ./Sections/Tables/TransportExpDuration.tex
@@ -779,12 +779,12 @@ INPUT ./Code/Analyzers/graphs/C1-26.05-09:49/quality_plot_26.05-09:49.png
 INPUT Code/Analyzers/graphs/C1-26.05-09:49/quality_plot_26.05-09:49.png
 INPUT ./Code/Analyzers/graphs/C1-26.05-09:49/quality_plot_26.05-09:49.png
 INPUT ./Code/Analyzers/graphs/C1-26.05-09:49/quality_plot_26.05-09:49.png
-INPUT ./Sections/07 Discussion.tex
-INPUT ./Sections/07 Discussion.tex
-INPUT ./Sections/07 Discussion.tex
-INPUT ./Sections/07 Discussion.tex
-INPUT ./Sections/07 Discussion.tex
-INPUT ./Sections/07 Discussion.tex
+INPUT ./Sections/06 Discussion.tex
+INPUT ./Sections/06 Discussion.tex
+INPUT ./Sections/06 Discussion.tex
+INPUT ./Sections/06 Discussion.tex
+INPUT ./Sections/06 Discussion.tex
+INPUT ./Sections/06 Discussion.tex
 INPUT ./Images/Discussion/TotalLatencyT1Avg.png
 INPUT ./Images/Discussion/TotalLatencyT1Avg.png
 INPUT Images/Discussion/TotalLatencyT1Avg.png
@@ -831,12 +831,12 @@ INPUT ./Images/Discussion/SenderLatencyT1.png
 INPUT Images/Discussion/SenderLatencyT1.png
 INPUT ./Images/Discussion/SenderLatencyT1.png
 INPUT ./Images/Discussion/SenderLatencyT1.png
-INPUT ./Sections/20 Conclusion.tex
-INPUT ./Sections/20 Conclusion.tex
-INPUT ./Sections/20 Conclusion.tex
-INPUT ./Sections/20 Conclusion.tex
-INPUT ./Sections/20 Conclusion.tex
-INPUT ./Sections/20 Conclusion.tex
+INPUT ./Sections/07 Conclusion.tex
+INPUT ./Sections/07 Conclusion.tex
+INPUT ./Sections/07 Conclusion.tex
+INPUT ./Sections/07 Conclusion.tex
+INPUT ./Sections/07 Conclusion.tex
+INPUT ./Sections/07 Conclusion.tex
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmss10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmss8.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmss8.tfm
