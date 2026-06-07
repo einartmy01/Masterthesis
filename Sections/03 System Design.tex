@@ -44,20 +44,20 @@ Development proceeded in a series of focused sprints, each targeting a specific 
 
 Early sprints concentrated on establishing the functional baseline. This included configuring the Linux environment, installing GStreamer and its required plugins, connecting a single camera over a wired Ethernet cable, achieving a live display on the receiver, and confirming that probe timestamps could be logged on both machines. Later sprints introduced support for a second and third camera, the configuration variants tested in the experimental evaluation and an attempt on GPS-based clock synchronisation that was eventually set aside in favour of network time synchronisation using NTP.
 
-Each sprint aimed to produced a testable system state, and the results from each round of testing directly shaped the priorities for the next sprint. For example, early latency measurements showed that the GStreamer jitter buffer contributed a major fixed latency, much larger percentage then assumed, which led to disabling it in the baseline configuration. This kind of short feedback loop, in which findings drive the next design decision, is a central characteristic of iterative development as described by Wohlin et al.~\cite{wohlin2012} and is what distinguishes this approach from a linear process.
+Each sprint aimed to produce a testable system state, and the results from each round of testing directly shaped the priorities for the next sprint. For example, early latency measurements showed that the GStreamer jitter buffer contributed a major fixed latency, much larger percentage than assumed, which led to disabling it in the baseline configuration. This kind of short feedback loop, in which findings drive the next design decision, is a central characteristic of iterative development as described by Wohlin et al.~\cite{wohlin2012} and is what distinguishes this approach from a linear process.
 
 % ─────────────────────────────────────────────
 
 \subsection{System Overview}
 
-The system consists of two computers, a sender and a receiver connected over a 5G and Wi-Fi network, with three Hikvision IP cameras attached to the sender via dedicated a Ethernet interface using a network switch. The sender computer uses a 5G modem to connect to the receiver which is on the lab Wi-Fi. Originally a GPS-disciplined clock source was supposed to be used, due to problems of overriding computer clock it was put aside and network regulation of clock source was used with NTP servers from Google, Apple and Cloudfare.
+The system consists of two computers, a sender and a receiver connected over a 5G and Wi-Fi network, with three Hikvision IP cameras attached to the sender via a dedicated Ethernet interface using a network switch. The sender computer uses a 5G modem to connect to the receiver which is on the lab Wi-Fi. Originally a GPS-disciplined clock source was supposed to be used, due to problems of overriding computer clock it was put aside and network regulation of clock source was used with NTP servers from Google, Apple and Cloudflare.
 
 The overall physical arrangement is shown in Figure~\ref{fig:physicalSetup}, and the application and transport layer view is shown in Figure~\ref{fig:appAndTransSetup}.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.9\textwidth]{Images/System/PhysicalSetup2.png}
-    \caption{Physical Setup of Project}\label{fig:physicalSetup}
+    \caption{Physical Setup of Project.}\label{fig:physicalSetup}
 \end{figure}
 
 At the application layer, the sender pulls video from each camera using RTSP over TCP, passing the video stream through a network switch into the same ethernet interface on the computer where it is transcoded or re encoded with the active configuration, packages the result into RTP, and transmits it to the receiver over UDP (or TCP for specific configurations). The receiver listens on a dedicated UDP port per camera, depay loads the RTP stream, decodes the video, and renders it to the display. Clock timestamps injected at the sender are compared against arrival timestamps on the receiver to compute end-to-end latency.
@@ -65,7 +65,7 @@ At the application layer, the sender pulls video from each camera using RTSP ove
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.9\textwidth]{Images/System/ApplicationAndTransportSetup2.png}
-    \caption{Application and Transport Layer Setup of Project}\label{fig:appAndTransSetup}
+    \caption{Application and Transport Layer Setup of Project.}\label{fig:appAndTransSetup}
 \end{figure}
 
 \subsection{Components}
@@ -90,7 +90,7 @@ All three cameras are connected to the sender through the TP-Link switch and sha
 
 \subsubsection{Separation of Camera Network and Internet Uplink}
 
-The sender computer uses two separate Ethernet interfaces for two fundamentally different purposes. One interface connects inward to the camera switch and carries only RTSP and RTP traffic from the cameras. The other connects outward to the 5G modem and carries the processed RTP streams toward the receiver over the internet. This separation ensures that the camera traffic and the outgoing stream traffic never compete on the same interface which can cause data loss issues and degrade teh system, and it keeps the camera subnet entirely isolated from the public network making it more secure to others tapping into camera feed.
+The sender computer uses two separate Ethernet interfaces for two fundamentally different purposes. One interface connects inward to the camera switch and carries only RTSP and RTP traffic from the cameras. The other connects outward to the 5G modem and carries the processed RTP streams toward the receiver over the internet. This separation ensures that the camera traffic and the outgoing stream traffic never compete on the same interface which can cause data loss issues and degrade the system, and it keeps the camera subnet entirely isolated from the public network making it more secure to others tapping into camera feed.
 
 \subsubsection{Camera to Sender}
 
@@ -105,7 +105,7 @@ The sequence diagram in Figure~\ref{fig:seqDiagramRTSP} illustrates the exchange
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.9\textwidth]{Images/System/SequenceDiagramCompCam.png}
-    \caption{Sequence Diagram between Sender and Camera before Active Stream}\label{fig:seqDiagramRTSP}
+    \caption{Sequence Diagram between Sender and Camera before Active Stream.}\label{fig:seqDiagramRTSP}
 \end{figure}
 
 \subsubsection{Sender to Receiver}
@@ -137,14 +137,14 @@ The sender pipeline for each camera is shown in Figure~\ref{fig:senderPipeline} 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.9\textwidth]{Images/System/SenderPipeline.png}
-    \caption{Sender Pipeline for Each Camera Stream}\label{fig:senderPipeline}
+    \caption{Sender Pipeline for Each Camera Stream.}\label{fig:senderPipeline}
 \end{figure}
 
 \textbf{rtspsrc} opens an RTSP session with the camera over TCP and pulls the incoming RTP stream. The \texttt{latency=0} is disabling the internal jitter buffer, as the wired local connection introduces negligible timing variation and buffering would only add fixed delay.
 
 \textbf{rtph264depay} strips the RTP packaging and recovers the raw H.264 NAL units.
 
-\textbf{h264parse} structures the NAL unit stream into a access units with verified parameter sets, ensuring the downstream decoder receives properly delimited frame boundaries.
+\textbf{h264parse} structures the NAL unit stream into access units with verified parameter sets, ensuring the downstream decoder receives properly delimited frame boundaries.
 
 \textbf{queue} decouples upstream and downstream elements into separate threads. This allows the previous elements to hand off the video stream to this queue and start working on the next. Creating a waiting place before avdec is ready to continue. The buffer is limited to 2 frames with \texttt{leaky=downstream}, meaning the oldest frame is dropped when the buffer is full rather than blocking the pipeline, which keeps latency bounded.
 
@@ -169,7 +169,7 @@ The receiver pipeline for each camera stream is shown in Figure~\ref{fig:receive
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.9\textwidth]{Images/System/ReceiverPipeline.png}
-    \caption{Receiver Pipeline for Each Camera Stream}\label{fig:receiverPipeline}
+    \caption{Receiver Pipeline for Each Camera Stream.}\label{fig:receiverPipeline}
 \end{figure}
 
 \textbf{udpsrc} listens on the UDP port assigned to the camera stream. The caps property explicitly declares the expected payload format, including media type, encoding name, and payload type 96, so GStreamer can negotiate the correct downstream elements without misinterpretation.
@@ -183,14 +183,14 @@ This section describes the implementations done to get good measurements of the 
 
 \subsubsection{Probe Placement}
 
-Latency within the sender and receiver pipelines is measured using GStreamer probes. A probe is a callback attached to a specific pad in the pipeline that fires for every buffer passing through that point, without modifying or interrupting the data flow. This makes probes the appropriate tool for timestamping data in motion through a live pipeline. Important to note is that a probe fires every single something passes. So its very important to choose appropriate placement. Comparing Raw H.264 NAL units to RTP packets will result in a invalid measurement, this is the reason it is not possible to measure every single element in the stream. The probe placement for both pipelines is illustrated in Figure~\ref{fig:senderProbes} and Figure~\ref{fig:receiverProbes}.
+Latency within the sender and receiver pipelines is measured using GStreamer probes. A probe is a callback attached to a specific pad in the pipeline that fires for every buffer passing through that point, without modifying or interrupting the data flow. This makes probes the appropriate tool for timestamping data in motion through a live pipeline. Important to note is that a probe fires every single time something passes. So its very important to choose appropriate placement. Comparing Raw H.264 NAL units to RTP packets will result in an invalid measurement, this is the reason it is not possible to measure every single element in the stream. The probe placement for both pipelines is illustrated in Figure~\ref{fig:senderProbes} and Figure~\ref{fig:receiverProbes}.
 
 On the sender, one probe is placed on the sink pad of \texttt{rtph264depay}, capturing a monotonic timestamp at the moment the first RTP packet of each incoming frame arrives from the camera. A second probe is placed on the sink pad of \texttt{udpsink}, capturing a timestamp and the RTP sequence number at the moment the corresponding outgoing packet is handed to the network. The difference between these two timestamps gives the sender pipeline latency for that frame.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.9\textwidth]{Images/System/SenderProbes.png}
-    \caption{Probe Placement in Sender Pipelines}\label{fig:senderProbes}
+    \caption{Probe Placement in Sender Pipelines.}\label{fig:senderProbes}
 \end{figure}
 
 On the receiver, one probe is placed on the source pad of \texttt{udpsrc}, capturing a monotonic timestamp at the moment the first RTP packet of each incoming frame arrives from the network. It also captures a transit timestamp for every RTP packet arriving. A second probe is placed on the sink pad of \texttt{xvimagesink}, capturing a timestamp at the moment the corresponding decoded frame reaches the display. The difference between these two timestamps gives the receiver pipeline latency for that frame, covering depay, parsing, decoding, and queuing on the receiver machine.
@@ -198,14 +198,14 @@ On the receiver, one probe is placed on the source pad of \texttt{udpsrc}, captu
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.9\textwidth]{Images/System/ReceiverProbes.png}
-    \caption{Probe Placement in Receiver Pipelines}\label{fig:receiverProbes}
+    \caption{Probe Placement in Receiver Pipelines.}\label{fig:receiverProbes}
 \end{figure}
 
 The RTP marker bit is used to identify frame boundaries. In H.264 over RTP, the marker bit is set on the last packet of each frame. The sender probe timestamps the first packet of a frame on the way in and the last packet of the same frame on the way out, ensuring that the pipeline latency logged per frame reflects the full time that frame spent inside the sender processing chain.
 
 
-\subsubsection{Latency measurment}
-For latency measurements, three separated measurements are completed to try to pinpoint where possible issues arise. The system has sender pipeline latency, receiver pipeline latency and transit latency. As mentioned in Probe Placement, both sender and receiver pipeline measurements uses Gstreamer internal pipeline measurements tools, complete avoiding any delay of clock ticks and therefore keeping a very healthy result. Each time video data is passed through the starting probe, it logs the time in a queue list. Then at the last probe it confirms that the queue matches correct. If there are to many timestamps in the queue, that means a \texttt{leaky=downstream} has gotten rid of an image, and a log of dropped image is recorded. It then compare time now and the time in the queue, calculating the full pipeline measurement.
+\subsubsection{Latency measurement}
+For latency measurements, three separated measurements are completed to try to pinpoint where possible issues arise. The system has sender pipeline latency, receiver pipeline latency and transit latency. As mentioned in Probe Placement, both sender and receiver pipeline measurements uses Gstreamer internal pipeline measurements tools, complete avoiding any delay of clock ticks and therefore keeping a very healthy result. Each time video data is passed through the starting probe, it logs the time in a queue list. Then at the last probe it confirms that the queue matches correctly. If there are too many timestamps in the queue, that means a \texttt{leaky=downstream} has gotten rid of an image, and a log of dropped image is recorded. It then compares time now and the time in the queue, calculating the full pipeline measurement.
 
 Transit latency across the network is measured by timestamping when an RTP packet leave the sender computer, and timestamping when it enters the receiver. These points of entry and exit are also the same points the sender and receiver pipeline measure internal latency to make sure of no missed end-to-end latency. The logged transit times are compared on RTP sequence number to differentiate the packets before comparing and computing latency.
 
@@ -214,7 +214,7 @@ Transit latency across the network is measured by timestamping when an RTP packe
 \end{equation}
 
 \subsubsection{Clock synchronisation design}
-Originally two GPS clock synchronisers were in use. They were implemented to get a more accurate transit latency by making sure that both computers are following the same clock and avoid clock shifts. In the beginning a method where the GPS signal, including time was parsed, integrated in the RTP packet and then sent was used. With further testing, the parsing and implementations of the timestamp was an additional added latency and workload for the computer, not to mention responsible for higher throughput. Another system was tested where the pipeline works in the same way as now, by using the computer timestamp to log. The idea was for the GPS clock to overwrite the internal computer clock, which worked. But unfortunately the GPS clocks had a low Hz so the overwriting only occurred a couple times per second allowing the clock to drift anyway, and introduced a unstable margin of error as it would jump from 20~ms off to 0~ms off before slowly drifting again. After that, the usage of internet NTP servers to help correct the internal clock when drifting was used. It resulted in a stable, and mild offset that could be used for measurement.
+Originally two GPS clock synchronisers were in use. They were implemented to get a more accurate transit latency by making sure that both computers are following the same clock and avoid clock shifts. In the beginning a method where the GPS signal, including time was parsed, integrated in the RTP packet and then sent was used. With further testing, the parsing and implementations of the timestamp was an additional added latency and workload for the computer, not to mention responsible for higher throughput. Another system was tested where the pipeline works in the same way as now, by using the computer timestamp to log. The idea was for the GPS clock to overwrite the internal computer clock, which worked. But unfortunately the GPS clocks had a low Hz so the overwriting only occurred a couple of times per second allowing the clock to drift anyway, and introduced an unstable margin of error as it would jump from 20~ms off to 0~ms off before slowly drifting again. After that, the usage of internet NTP servers to help correct the internal clock when drifting was used. It resulted in a stable, and mild offset that could be used for measurement.
 
 \subsubsection{Packet loss}
 Packet loss uses the same logging as the transit latency. When comparing and computing the transit latency. The code counts all packets sent and received and find the difference before computing the percentage by doing difference divided by total sent. The code that computes also avoids the first 10 seconds of sender logs. This to avoid any startup issues. The receiver packets then without any sender logs for the beginning is also ignored ensuring a healthy measurement.
@@ -232,7 +232,7 @@ A \texttt{tee} element on the receiver splits the decoded video stream after \te
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.9\textwidth]{Images/System/BRISQUEProbe.png}
-    \caption{BRISQUE extended pipeline for receiver}\label{fig:BRISQUEProbe}
+    \caption{BRISQUE extended pipeline for receiver.}\label{fig:BRISQUEProbe}
 \end{figure}
 
 \subsubsection{CPU Usage Measurement}

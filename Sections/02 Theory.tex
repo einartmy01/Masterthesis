@@ -8,7 +8,7 @@ Remote Train Operations (RTO) refer to the act of monitoring and controlling a t
 
 \subsubsection{Grades of Automation}\label{subsec:goa}
  
-The Grade of Automation (GoA) is a classification system defined in the international standard IEC~62290--1 that describes how much of the train operation is handled automatically instead of by a human~\cite{iec62290}. The standard defines five levels, from GoA~0 to GoA~4, where each higher level add more responsibility from the driver to the automated system. Table~\ref{tab:goa} summarises the levels.
+The Grade of Automation (GoA) is a classification system defined in the international standard IEC~62290--1 that describes how much of the train operation is handled automatically instead of by a human~\cite{iec62290}. The standard defines five levels, from GoA~0 to GoA~4, where each higher level adds more responsibility from the driver to the automated system. Table~\ref{tab:goa} summarises the levels.
  
 \begin{table}[h]
 \centering
@@ -34,7 +34,7 @@ A remote operator who cannot physically see or hear the train must rely entirely
  
 Research on human factors in remote driving consistently shows that video quality has a direct effect on operator performance. Studies on bitrate, frame rate, and resolution indicate that reductions in bitrate lead to measurable drops in both reaction speed and accuracy, while changes in frame rate have a smaller effect within typical operating ranges~\cite{brandenburger2023}. This suggests that encoding and transmission choices in the video pipeline are not just technical decisions but directly influence operational safety.
 
-Beyond individual video quality, remote train driving typically requires multiple simultaneous camera views. A camera facing straight forward is needed for obstacle and signal detection, while side cameras support the operators experience, needed for immersiveness of speed and movement like you can see a Figure~\ref{fig:trippelmonitor}~\cite{fp2r2dato2023d5_4, jurgensen2025, neumeier2019}.
+Beyond individual video quality, remote train driving typically requires multiple simultaneous camera views. A camera facing straight forward is needed for obstacle and signal detection, while side cameras support the operator's experience, needed for immersiveness of speed and movement like you can see a Figure~\ref{fig:trippelmonitor}~\cite{fp2r2dato2023d5_4, jurgensen2025, neumeier2019}.
  
 \begin{figure}[h]
     \centering
@@ -88,7 +88,7 @@ HEVC achieves its efficiency gains by replacing the fixed 16$\times$16 macrobloc
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.8\textwidth]{Images/Theory/264265HEVC.png}
-    \caption{Difference between HEVC, H.265 technology, and H.264 of methdod for encoding~\cite{blomqvist2018}.}\label{fig:264v265encoding}
+    \caption{Difference between HEVC, H.265 technology, and H.264 of method for encoding~\cite{blomqvist2018}.}\label{fig:264v265encoding}
 \end{figure}
 
 Another difference compared to H.264 is computational cost. Encoding with H.265 requires significantly more processing power, which increases encoding time and places greater demand on the sender hardware~\cite{ohm2012}.
@@ -255,7 +255,7 @@ Probes are particularly useful for latency measurement, as they allow the applic
 % ─────────────────────────────────────────────────────────────────────────────
 
 \subsection{Network and Communication}\label{sec:network}
-The network connecting between the sender and receiver is a important part of any remote operation system. The choice of network technology affects how much data can be sent, how quickly it arrives, and how stable the connection is under varying conditions. The following subsections cover the network technologies relevant to this thesis.
+The network connecting between the sender and receiver is an important part of any remote operation system. The choice of network technology affects how much data can be sent, how quickly it arrives, and how stable the connection is under varying conditions. The following subsections cover the network technologies relevant to this thesis.
  
 \subsubsection{Wi-Fi}\label{subsec:wifi}
 Wi-Fi is a family of wireless networking technologies based on the IEEE 802.11 standard. It allows devices to communicate over a local area network using radio frequencies, most commonly 2.4~GHz and 5~GHz~\cite{ieee80211}. The 2.4~GHz band covers longer distances but offers lower maximum data rates, while the 5~GHz band supports higher data rates over shorter distances.
