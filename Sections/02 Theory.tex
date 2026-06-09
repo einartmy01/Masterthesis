@@ -1,7 +1,7 @@
 \section{Theory}
 This chapter provides the theoretical background needed to understand the work in this thesis. Beginning with Automatic Train Operation and the role of remote driving within that framework, it covers the fundamentals of video streaming including codecs and transport protocols, introduces GStreamer as the core technology used in the pipeline, describes the main sources of latency in a streaming system, and discusses the relevant characteristics of the communication technologies used in testing.
 
-\subsection{Remote Train Operations}\label{sec:rto}
+\subsection{Remote Train Operations}\label{subsec:rto}
  
 Remote Train Operations (RTO) refer to the act of monitoring and controlling a train from a location outside the locomotive, typically a centralised control room, using live video and a remote control interface. As railways move toward higher levels of automation, RTO has become an important part of safety features and the practical deployment. It allows human operators to intervene when automated systems encounter situations they cannot handle on their own, and it serves as a required fallback layer for trains operating without a driver or without staff adequate to drive~\cite{jurgensen2025, fp2r2dato2023d5_4}.
  
@@ -30,7 +30,7 @@ RTO is most relevant from GoA~3 and upwards. At GoA~3, on-board staff can still 
  
 \subsubsection{Role of Video in Remote Operation}\label{subsec:video-role}
 
-A remote operator who cannot physically see or hear the train must rely entirely on what the system provides. In practice, this means live video from cameras mounted on or near the train is the most important source of situational awareness~\cite{brandenburger2023, kozarevic2025}. Without a stable and clear video feed, the operator cannot assess track conditions, detect obstacles, interpret signals, or make safe decisions about speed and braking.
+A remote operator who cannot physically see or hear the train must rely entirely on what the system provides. In practice, this means live video from cameras mounted on the train is the most important source of situational awareness~\cite{brandenburger2023, kozarevic2025}. Without a stable and clear video feed, the operator cannot assess track conditions, detect obstacles, interpret signals, or make safe decisions about speed and braking.
  
 Research on human factors in remote driving consistently shows that video quality has a direct effect on operator performance. Studies on bitrate, frame rate, and resolution indicate that reductions in bitrate lead to measurable drops in both reaction speed and accuracy, while changes in frame rate have a smaller effect within typical operating ranges~\cite{brandenburger2023}. This suggests that encoding and transmission choices in the video pipeline are not just technical decisions but directly influence operational safety.
 
@@ -50,7 +50,7 @@ The most relevant regulatory reference comes from 3GPP TS~22.289, a technical sp
  
 Empirical studies from railway demonstrations report glass-to-glass (G2G) latency values of 340--380~ms for tramway remote driving using commercial systems~\cite{fp2r2dato2024d41_2}, while the Kozarevic study at NTNU measured an average of around 120~ms to 240~ms using a GPS-synchronised measurement method~\cite{kozarevic2025}. Human factors research from other vehicle domains suggests that operators begin to adjust their behaviour at delays above 250--300~ms, and that latency variability can also be more disruptive than a consistently higher but stable delay~\cite{myhrvold2025, neumeier2019}.
 
-\subsection{Video Streaming}\label{sec:video-streaming}
+\subsection{Video Streaming}\label{subsec:video-streaming}
 Video streaming is the continuous transmission of video data from a source to a receiver over a network, allowing the receiver to display the content in real time without storing the full recording first~\cite{sodagar2011}. In a remote train operation context, this means live footage from cameras on or near the train is captured, compressed, sent across a network, and displayed on the operator's screen with as little delay as possible.
  
 A video streaming system can be thought of as a chain of components, each with its own role. At the sending end, raw video is captured by a camera and handed to an encoder, which compresses it into a format suitable for transmission. The compressed data is then packaged into a transport protocol and sent across the network. At the receiving end, the process is reversed and packets are reassembled, decoded back into raw frames, and rendered on screen. The choices made at each step, which codec, which protocol, which network directly affect the end-to-end latency and video quality that the remote operator experiences~\cite{myhrvold2025, mejias2024}.
@@ -78,7 +78,7 @@ H.264, also known as Advanced Video Coding (AVC), is a video compression standar
  
 The codec reduces redundancy across two dimensions. Within a single frame, intra-frame prediction estimates pixel values from neighbouring blocks and stores only the difference. Across consecutive frames, inter-frame prediction identifies how blocks have moved and stores motion vectors rather than full pixel data, allowing H.264 to represent video at significantly lower bitrates than older standards such as MPEG-2 while maintaining comparable visual quality~\cite{wiegand2003}.
  
-An important concept is the Group of Pictures (GOP), which defines how often a full intra-coded frame appears in the stream. Short GOP intervals are preferred for real-time applications to reduce both start-up delay and recovery time after packet loss, at the cost of a slightly higher average bitrate~\cite{sullivan2004}. How the encoded data is structured for network transport is described in Section~\ref{subsubsec:nal}.
+An important concept is the Group of Pictures (GOP), which defines how often a full intra-coded frame appears in the stream. Short GOP intervals are preferred for real-time applications to reduce both start-up delay and recovery time after packet loss, at the cost of a slightly higher average bitrate~\cite{sullivan2004}. How the encoded data is structured for network transport is described in Subsection NAL Units~\ref{subsubsec:nal}.
 
 \subsubsection{H.265}\label{subsubsec:h265}
 H.265, also known as High Efficiency Video Coding (HEVC) and formally standardised as ITU-T~H.265 and ISO/IEC~23008--2, is the successor to H.264 published in 2013~\cite{sullivan2012hevc}. Its primary goal was to achieve roughly 50\% better compression compared to H.264 at equivalent visual quality~\cite{ohm2012}.
@@ -148,7 +148,7 @@ Resolution defines the number of pixels in each video frame, expressed as width 
 For a given codec and bitrate, increasing resolution without increasing the bitrate results in more compression per pixel, which can reduce sharpness and introduce visible artefacts. Conversely, a high resolution with a sufficiently high bitrate produces a clearer image. The 3GPP Rel-16 specification for video based remote railway control recommends a minimum of 1920$\times$1080 at 30 frames per second as the target output quality~\cite{mejias2024}.
 
 
-\subsection{Latency Sources in a Video Streaming Pipeline}\label{sec:latency-sources}
+\subsection{Latency Sources in a Video Streaming Pipeline}\label{subsec:latency-sources}
 The total delay from when a video frame is captured by a camera to when it is displayed on the operator's screen is commonly referred to as glass-to-glass latency. This delay does not originate from a single component but accumulates across each stage of the streaming pipeline~\cite{dobrian2011}. Understanding where latency is introduced at each stage is necessary for identifying bottlenecks and evaluating the overall performance of a streaming system.
  
 The pipeline can be divided into five sequential stages: capturing, encoding, transmitting, decoding, and rendering. Each stage contributes a portion of the total delay, and the contribution of each depends on the hardware, configuration, and network conditions in use~\cite{kaknjo2018}. The following subsections describe each stage and the mechanisms through which latency is introduced.
@@ -211,7 +211,7 @@ Chrony is an NTP implementation for Linux systems that is designed to maintain a
 
 When synchronised to public internet time servers such as those provided by the \texttt{pool.ntp.org} project, Chrony typically achieves a clock accuracy within a few milliseconds over an internet connection. On a local area network under stable conditions the accuracy improves to tens of microseconds, and with hardware timestamping enabled on the network interface, where the network card rather than the kernel records packet arrival and departure times, sub-microsecond accuracy is possible~\cite{redhat2024chrony, redhat2024hw}.
 
-\subsection{GStreamer}\label{sec:gstreamer}
+\subsection{GStreamer}\label{subsec:gstreamer}
 GStreamer is an open source multimedia framework written in C that allows developers to construct pipelines of media processing components~\cite{gstreamer_intro}. It was originally developed at the Oregon Graduate Institute in 1999 and has since become a widely used foundation for applications ranging from media playback and transcoding to real-time video streaming and computer vision~\cite{gstreamer_intro}. The framework is built around a modular, plugin based architecture where each processing step is provided by a plugin, and individual components can be combined freely to form a complete processing chain suited to the application at hand.
  
 The following subsections describe the core concepts of GStreamer that are relevant to understanding how a streaming pipeline is constructed and instrumented.
@@ -248,7 +248,7 @@ A probe is installed on a pad using the \texttt{gst\_pad\_add\_probe} function, 
 Probes are particularly useful for latency measurement, as they allow the application to record a timestamp at one pad when data enters the pipeline and another timestamp at a downstream pad when the processed data exits. The difference between the two timestamps represents the processing time between those two points in the pipeline~\cite{gstreamer_pipeline_manip}.
 
 
-\subsection{Network and Communication}\label{sec:network}
+\subsection{Network and Communication}\label{subsec:network}
 The network connection between the sender and receiver is an important part of any remote operation system. The choice of network technology affects how much data can be sent, how quickly it arrives, and how stable the connection is under varying conditions. The following subsections cover the network technologies relevant to this thesis.
  
 \subsubsection{Wi-Fi}\label{subsec:wifi}
@@ -271,8 +271,8 @@ The main idea behind Tailscale is that devices connect directly to each other ra
 WireGuard, which handles the actual data transfer, adds encryption and authentication to every packet passing through the tunnel. The protocol is designed to have low overhead compared to older VPN technologies, which keeps the additional latency introduced by the encrypted tunnel small~\cite{donenfeld2017wireguard}.
 
 
-\subsection{Performance Metrics}\label{sec:metrics}
-Evaluating a video streaming system requires measuring several aspects of its behaviour under different conditions. The metrics covered in this section are latency, packet loss, throughput, CPU usage, and visual quality. Together they give a picture of how the system performs from both a network and a visual standpoint.
+\subsection{Performance Metrics}\label{subsec:metrics}
+Evaluating a video streaming system requires measuring several aspects of its behaviour under different conditions. The metrics covered in this subsection are latency, packet loss, throughput, CPU usage, and visual quality. Together they give a picture of how the system performs from both a network and a visual standpoint.
 
 \subsubsection{Latency}\label{subsec:latency-metric}
 Latency in a video streaming system is the time it takes for data to travel from one point to another. The most complete measure is glass-to-glass latency, which covers the full path from when a camera captures an image to when it appears on the operator's screen~\cite{kaknjo2018}. However, glass-to-glass latency alone does not reveal where in the pipeline the delay originates. For this reason it is common to break the total latency into smaller segments that can each be measured independently.

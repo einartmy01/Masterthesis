@@ -26,4 +26,4 @@
 \contentsline {table}{\numberline {25}{\ignorespaces Sender CPU usage statistics for codec configuration tests.}}{52}{table.caption.49}%
 \contentsline {table}{\numberline {26}{\ignorespaces BRISQUE visual quality statistics for transport protocol tests.}}{53}{table.caption.51}%
 \contentsline {table}{\numberline {27}{\ignorespaces BRISQUE visual quality statistics for codec configuration tests.}}{53}{table.caption.52}%
-\contentsline {table}{\numberline {28}{\ignorespaces Mean latency for no-transcode comparison (C1, C2, C5, C6).}}{58}{table.caption.59}%
+\contentsline {table}{\numberline {28}{\ignorespaces Mean latency for passthrough comparison (C1, C2, C5, C6).}}{58}{table.caption.59}%

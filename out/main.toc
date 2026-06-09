@@ -70,12 +70,12 @@
 \contentsline {subsubsection}{\numberline {3.6.3}Receiver Pipeline}{26}{subsubsection.3.6.3}%
 \contentsline {subsection}{\numberline {3.7}Measurement Design}{27}{subsection.3.7}%
 \contentsline {subsubsection}{\numberline {3.7.1}Probe Placement}{27}{subsubsection.3.7.1}%
-\contentsline {subsubsection}{\numberline {3.7.2}Latency measurement}{28}{subsubsection.3.7.2}%
-\contentsline {subsubsection}{\numberline {3.7.3}Clock synchronisation design}{28}{subsubsection.3.7.3}%
+\contentsline {subsubsection}{\numberline {3.7.2}Latency measurement}{29}{subsubsection.3.7.2}%
+\contentsline {subsubsection}{\numberline {3.7.3}Clock synchronisation design}{29}{subsubsection.3.7.3}%
 \contentsline {subsubsection}{\numberline {3.7.4}Packet loss}{29}{subsubsection.3.7.4}%
 \contentsline {subsubsection}{\numberline {3.7.5}Visual Quality Measurement}{29}{subsubsection.3.7.5}%
 \contentsline {subsubsection}{\numberline {3.7.6}CPU Usage Measurement}{30}{subsubsection.3.7.6}%
-\contentsline {subsubsection}{\numberline {3.7.7}Throughput Measurement}{30}{subsubsection.3.7.7}%
+\contentsline {subsubsection}{\numberline {3.7.7}Throughput Measurement}{31}{subsubsection.3.7.7}%
 \contentsline {subsubsection}{\numberline {3.7.8}Data Recording}{31}{subsubsection.3.7.8}%
 \contentsline {section}{\numberline {4}Methodology}{32}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Research Methodology}{32}{subsection.4.1}%
@@ -86,7 +86,7 @@
 \contentsline {subsection}{\numberline {4.2}Experimental Methodology}{33}{subsection.4.2}%
 \contentsline {subsubsection}{\numberline {4.2.1}Reasoning of transcoding}{34}{subsubsection.4.2.1}%
 \contentsline {subsubsection}{\numberline {4.2.2}Design of Experiments}{34}{subsubsection.4.2.2}%
-\contentsline {subsubsection}{\numberline {4.2.3}Test Setup and Equipment}{37}{subsubsection.4.2.3}%
+\contentsline {subsubsection}{\numberline {4.2.3}Test Setup and Equipment}{38}{subsubsection.4.2.3}%
 \contentsline {subsubsection}{\numberline {4.2.4}Test Procedure}{39}{subsubsection.4.2.4}%
 \contentsline {subsubsection}{\numberline {4.2.5}Controlling for Unmeasured and Hidden Variables}{40}{subsubsection.4.2.5}%
 \contentsline {subsection}{\numberline {4.3}Measurement and Analysis}{40}{subsection.4.3}%

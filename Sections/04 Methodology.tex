@@ -1,4 +1,4 @@
-\section{Methodology}\label{sec:methodology}
+\section{Methodology}\label{chap:methodology}
 
 \subsection{Research Methodology}
 
@@ -54,20 +54,20 @@ Several digital tools as mentioned below were used for this paper. The main purp
 \end{itemize}
 
 \subsection{Experimental Methodology}
-This subchapter describes how the experimental work in this thesis was designed, conducted, and evaluated. It covers the design of experiments, the test setup and equipment used and the procedure followed during testing.
+This subsection describes how the experimental work in this thesis was designed, conducted, and evaluated. It covers the design of experiments, the test setup and equipment used and the procedure followed during testing.
 
 The experiments in this thesis are designed to evaluate how different pipeline configurations affect end-to-end streaming latency, video quality and resource usage. To do this in a structured way, the work draws on the principles of Design of Experiments (DoE), which is a structured way of planning which tests to run and in what order so that the results can accurately portray what has been tested. Rather than testing things randomly or by intuition, DoE ensures that the variables you care about are tested systematically and that the conclusions you draw are based on the data and not on chance~\cite{montgomery2017}.
 
 The experimental design follows the One Factor At a Time (OFAT) strategy. This means one variable is changed between configurations while all others are kept at a fixed baseline value. Montgomery describes OFAT as a well established approach when the goal is to understand the individual contribution of each factor separately~\cite{montgomery2017}. However, even with just changing a factor at the time, some of the testing move over to measure how some of the different factors also interact with each other.
 
 \subsubsection{Reasoning of transcoding}
-The Hikvision cameras used in this project encode video internally using either H.264 or H.265 and deliver the compressed bitstream directly over RTSP. The simplest pipeline design would be to take that bitstream, package it into RTP, and forward it to the receiver without modification. This is what a passthrough configuration does, and it is exactly what the no-transcode tests measure. However, for the majority of the experiments a passthrough approach is insufficient for two reasons.
+The Hikvision cameras used in this project encode video internally using either H.264 or H.265 and deliver the compressed bitstream directly over RTSP. The simplest pipeline design would be to take that bitstream, package it into RTP, and forward it to the receiver without modification. This is what a passthrough configuration does, and it is exactly what the passthrough tests measure. However, for the majority of the experiments a passthrough approach is insufficient for two reasons.
 
-The first reason is measurability. As stated in Section~\ref{chap:systemdesign}, one of the core requirements of the system is the ability to isolate and measure the latency contribution of each individual processing stage, including the encoder. If the camera's own encoder is left to operate as a black box, the time the camera spends compressing the image is hidden inside the RTSP stream and cannot be separated from the rest of the pipeline. By pulling the compressed bitstream from the camera, decoding it back to raw frames using \texttt{avdec\_h264}, and then re-encoding with a GStreamer encoder element such as \texttt{x264enc} or \texttt{nvh264enc}, the encoding step becomes a visible and measurable stage inside the GStreamer pipeline. Probes placed before and after the encoder can then attribute latency precisely to the encoding work itself, rather than absorbing it into an unmeasured camera-side overhead.
+The first reason is measurability. As stated in Chapter~\ref{chap:systemdesign}, one of the core requirements of the system is the ability to isolate and measure the latency contribution of each individual processing stage, including the encoder. If the camera's own encoder is left to operate as a black box, the time the camera spends compressing the image is hidden inside the RTSP stream and cannot be separated from the rest of the pipeline. By pulling the compressed bitstream from the camera, decoding it back to raw frames using \texttt{avdec\_h264}, and then re-encoding with a GStreamer encoder element such as \texttt{x264enc} or \texttt{nvh264enc}, the encoding step becomes a visible and measurable stage inside the GStreamer pipeline. Probes placed before and after the encoder can then attribute latency precisely to the encoding work itself, rather than absorbing it into an unmeasured camera-side overhead.
 
 The second reason is configurability. A central purpose of the experiments is to compare the performance of different codecs, resolutions, and hardware acceleration strategies. Changing the codec from H.264 to H.265, switching from CPU encoding to GPU encoding, or altering the target resolution are all changes that can only be made by controlling the encoder directly within the pipeline. The camera's internal encoder does not expose the granular parameter access that GStreamer plugin elements do, and switching it between H.264 and H.265 requires a manual reconfiguration of the camera hardware and a test interruption, as was the case for the C6 test. Performing the encoding inside GStreamer allows codec and encoder swaps to be made entirely in software between test runs, keeping the OFAT principle intact.
 
-The no-transcode tests included in the experiment serves as a comparative role. A passthrough pipeline, where the camera's compressed video stream is forwarded directly to the receiver represents the most realistic scenario. To include these tests provides a useful reference point. The difference between a transcoded test and its corresponding no-transcode variant can therefore be interpreted as the measurable cost of the control and flexibility that transcoding enables.
+The passthrough tests included in the experiment serves as a comparative role. A passthrough pipeline, where the camera's compressed video stream is forwarded directly to the receiver represents the most realistic scenario. To include these tests provides a useful reference point and is not meant to decide which of transcoding or passthrough is the best option. The difference between a transcoded test and its corresponding passthrough variant can therefore be interpreted as the measurable cost of the control and flexibility that transcoding enables.
 
 \subsubsection{Design of Experiments}
 
@@ -76,7 +76,7 @@ The factors tested in this thesis are codec, resolution, transport protocol, enc
 \input{Sections/Tables/TransportExpSchedule.tex}
 
 \begin{itemize}
-    \item \textbf{T2}: As described in Chapter~\ref{chap:systemdesign} the pipeline used for most of the tests are transcoded. For this reason, a test with no transcoding, just passthrough of the video stream was deemed useful to compare how much effect the transcoding has on the video, especially compression and latency. 
+    \item \textbf{T2}: As described in Chapter~\ref{chap:systemdesign} the pipeline used for most of the tests are transcoded. For this reason, a test with passthrough of the video stream was deemed useful to compare how much effect the transcoding has on the video, especially compression and latency. 
     \item \textbf{T3}: As this project will eventually be used for critical infrastructure of a country, security issues will be much more important and therefore a test with encrypted stream was found reasonable.
     \item \textbf{T4}: To decide which of the transport protocols most suitable for a RTO system, a test with comparison is needed.
     \item \textbf{T5/T6}: To simulate real life conditions with unstable and unpredictable bandwidth along train tracks. Evaluating both transport under bandwidth limitations is necessary to get a fuller picture.
@@ -85,18 +85,18 @@ The factors tested in this thesis are codec, resolution, transport protocol, enc
 \input{Sections/Tables/CodecExpSchedule.tex}
 
 \begin{itemize}
-    \item \textbf{C2}: A no transcoding run will be very important especially when looking at the effect of which encoder to use. 
+    \item \textbf{C2}: A passthrough run will be very important especially when looking at the effect of which encoder to use comparing with C6, not to mention the effects of not transcoding. 
     \item \textbf{C3}: When operating a remote vehicle through a video stream, quality is important. For that reason adding a 720p encoding to the experiment was deemed necessary. As it can decrease workload of encoder and maybe keep quality better and stable.
     \item \textbf{C4}: Encoding is a heavy process, comparing results where GPU is used to help reduce the workload of the CPU is vital to decide what equipment to use forward.
     \item \textbf{C5}: To compare two of the most common encoders. A very important choice to make for a video stream is which encoder. It will also serve as some sort of baseline for H.265 when we move on to change other component changes.
-    \item \textbf{C6}: Adding a comparable no transcoding test with H.265 is crucial for the result will be directly comparable with test C2, and more close to real scenario of remote operations.
+    \item \textbf{C6}: Adding a comparable passthrough test with H.265 is crucial for the result will be directly comparable with test C2, and more close to real scenario of remote operations.
     \item \textbf{C7}: Compare how H.265 handles 720p compared to H.264 will give valuable data to decide between H.264 and H.265 if a lower resolution is preferred. 
     \item \textbf{C8}: As H.265 encoding is more complicated and extensive workload, using a GPU to relieve the CPU of the workload will be important for the choice of equipment used.
     \item \textbf{C9}: To compare to another encoding and video stream strategy. 
 \end{itemize}
  
-For test T1-T6, a lab experiment was deemed adequate as the tested scenarios are not as affected by real world tests, as aspects such as a moving modem or moving video has little effect on the transport layer and the comparison will still hold for lab environment.
-The outcomes measured for each configuration are end-to-end latency, CPU usage and visual quality. Packet loss and throughput are also recorded for configurations that involve simulated poor network conditions. All configurations are described in the following section. 
+For test T1-T6, a lab experiment was deemed adequate as the tested scenarios are not as affected by real world tests, as aspects such as a moving modem or moving video has little effect on the transport layer and the comparison will still hold for lab environment. The lab setup is as shown in Figure~\ref{fig:labsetup}.
+
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.9\textwidth]{Images/Test&Equipment/LabSetup.jpg}
@@ -104,7 +104,7 @@ The outcomes measured for each configuration are end-to-end latency, CPU usage a
     \label{fig:labsetup}
 \end{figure}
 
-As this experiment was designed to mimic a remote train operation, but with a car as replacement, picking a route for the experiment was crucial. The route had to include surroundings similar to a tramway track. The route as shown at Figure~\ref{fig:road} display the route that every test was performed on. The road stretched from Klæbuveien 125, 7031 Trondheim to the roundabout at Klæbuveien 128 and back again. This specific route was chosen for a set of factors. It provides dynamic surroundings containing open views, nearby trees and buildings. It is a low traffic road, allowing stable speed crucial to measure performance under movement and open view for the surrounding. The road is very flat and straightforward, as was evaluated to mimic most train tracks and views from a locomotive. It also provided a safe place to start, stop and prepare for next test with a parking lot right next to the road.
+As this experiment was designed to mimic a remote train operation, but with a car as replacement, picking a route for the experiment was crucial. The route had to include surroundings similar to a tramway track. The route as shown at Figure~\ref{fig:road} display the route that every codec test was performed on. The road stretched from Klæbuveien 125, 7031 Trondheim to the roundabout at Klæbuveien 128 and back again. This specific route was chosen for a set of factors. It provides dynamic surroundings containing open views, nearby trees and buildings. It is a low traffic road, allowing stable speed crucial to measure performance under movement and open view for the surrounding. The road is very flat and straightforward, as was evaluated to mimic most train tracks and views from a locomotive. It also provided a safe place to start, stop and prepare for next test with a parking lot right next to the road.
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.3\textwidth]{Images/Test&Equipment/Road.png}
@@ -121,7 +121,7 @@ To be able to execute the tests two people were needed. The onboard attendant wa
 \end{figure}
 
 
-All the cameras were set to the values in Table~\ref{tab:camera_stream_config} before entering the sender computer. Except for the C6 test as it demanded Video encoding to be H.265.
+All the camera codecs were set to the values in Table~\ref{tab:camera_stream_config} before the video stream was sent to the sender computer. Except for the H.265 passthrough test as it demanded Video encoding to be H.265.
 
 \input{Sections/Tables/CameraValues.tex}
 
@@ -213,11 +213,11 @@ All the test equipment is listed below in Table~\ref{tab:test_equipment}. The ca
 The test procedure differed between the transport tests and the codec tests. The transport tests were conducted in a static lab environment, while the codec tests were conducted from a moving vehicle.
 
 For the lab test both sender and receiver computers were placed at the NTNU lab. All cameras
-were mounted and connected as described earlier in this section. Then the stream was activated and all movement was performed by the operator trying to locate difference, latency and quality on image when running.
+were mounted and connected as described earlier in this chapter. Then the stream was activated and all movement was performed by the operator trying to locate any differences, either in latency or quality of the image when running.
 
 For the experiment of codecs in a moving vehicle, each test followed the same execution sequence. A phone call between the onboard attendant in the car and the remote operator at NTNU confirmed which configuration to run and that it was safe to start. A brief warmup run let the cameras, encoder and decoder reach a stable operating state. The receiver was then started first to begin logging, followed by the sender. For the codec tests the car drove the route shown in Figure~\ref{fig:road}. When the car returned, the sender was stopped first, which automatically flushed all logged data to disk, and the receiver was stopped next. This was then repeated until all codec tests were complete.
 
-Test C6 with no transcode H.265 required a short break to reconfigure the cameras to native H.265 output through the Hikvision management interface before that test could proceed. For the bandwidth-limited transport tests T5 and T6, a rate limit of 12~Mbit/s and 18~Mbit/s was applied to the sender's outbound interface before the run and removed afterwards. These numbers were carefully selected as they managed to produce output that could be logged while still showing what effect bandwidth has on the transport layer.
+Test C6 with passthrough H.265 required a short break to reconfigure the cameras to native H.265 output through the Hikvision management interface before that test could proceed. For the bandwidth-limited transport tests T5 and T6, a rate limit of 12~Mbit/s and 18~Mbit/s was applied to the sender's outbound interface before the run and removed afterwards. These numbers were carefully selected as they managed to produce output that could be logged while still showing what effect bandwidth has on the transport layer.
 
 \subsubsection{Controlling for Unmeasured and Hidden Variables}\label{subsubsec:controllingUmeasruedVariables}
 
@@ -230,7 +230,7 @@ Two further controls were built into the way the data was handled rather than th
 \subsection{Measurement and Analysis}
 
 \subsubsection{Measurement metrics}
-The five metrics collected per run are end-to-end latency, packet loss, CPU usage, throughput, and visual quality. The implementation of each is described in Section~\ref{sec:measurementdesign}. The choice of which metrics to collect was driven directly by the three research questions and the gaps identified in previous work.
+The five metrics collected per run are end-to-end latency, packet loss, CPU usage, throughput, and visual quality. The implementation of each is described in Subsection Measurement Design~\ref{subsec:measurementdesign}. The choice of which metrics to collect was driven directly by the three research questions and the gaps identified in previous work.
 
 End-to-end latency is the primary metric of this thesis and the most critical for remote train operation. Without sufficiently low and stable latency, an operator cannot react in time to what is happening on the track, making the system unsafe regardless of image quality. Latency is split into three separate measurements, sender pipeline latency, transit latency, and receiver pipeline latency. This separation makes it possible to isolate exactly where delay is introduced so it is possible to take steps to prevent it in the future.
 
@@ -242,7 +242,7 @@ CPU usage on the sender reflects the computational cost of each encoding configu
 
 Visual quality is assessed using the BRISQUE no-reference image quality metric, which scores each decoded frame between 0 and 100. A no-reference metric is necessary here because in a live streaming context there is no original image to compare against. Research by Brandenburger et al.~\cite{brandenburger2023} has shown that reductions in video bitrate produce measurable drops in both operator reaction speed and accuracy during remote driving tasks. Prior work in this project did not systematically measure visual quality alongside latency, meaning the interplay between the two could not be quantified as directly as now. Including BRISQUE in this study allows every configuration to be evaluated on both axes simultaneously, which is the core question of RQ3.
 
-All of these factors have important interplay and trade-offs. To measure only one would mean important information could be lost and could result in picking the wrong configuration based misleading results. That is why it is important to include all of the factors when looking at total system.
+All of these factors have important interplay and trade-offs. To measure only one would mean important information could be lost and could result in picking the wrong configuration based on misleading results. That is why it is important to include all of the factors when looking at the total system.
 
 \subsubsection{Accuracy and Error Sources}
 
@@ -254,7 +254,7 @@ BRISQUE scores are only logged every fifth decoded frame per camera to keep the 
 
 \subsubsection{Data Recording and Processing}
 
-The raw log files produced during each run and the in-memory queuing design used to avoid blocking the pipeline are described in Section~\ref{sec:measurementdesign}. After each test, a suite of post-processing scripts was run to convert the raw CSV and log files into statistical summaries and graphs. The entry point is \texttt{run\_all\_analyses.py}, which automatically discovers all timestamps present in the log directories and invokes every applicable analyser for each one, with graphical display suppressed for batch processing. Each analyser writes a plain-text statistics file and a PNG graph to a timestamped subdirectory, and all raw logs are retained alongside the processed outputs.
+The raw log files produced during each run and the in-memory queuing design used to avoid blocking the pipeline are described in Subsection~\ref{subsec:measurementdesign}. After each test, a suite of post-processing scripts was run to convert the raw CSV and log files into statistical summaries and graphs. The entry point is \texttt{run\_all\_analyses.py}, which automatically discovers all timestamps present in the log directories and invokes every applicable analyser for each one, with graphical display suppressed for batch processing. Each analyser writes a plain-text statistics file and a PNG graph to a timestamped subdirectory, and all raw logs are retained alongside the processed outputs.
 
 The individual analysers, which are listed in the appendix, and what they compute are:
 
@@ -286,7 +286,7 @@ No formal operator evaluation was carried out because the system is still a prot
 
 \subsection{Reliability}
 
-Wohlin et al. define reliability as the degree to which a study would yield the same results if repeated under the same conditions~\cite{wohlin2012}. The controls described in Section~\ref{subsubsec:controllingUmeasruedVariables} contribute to this directly, as fixing the route, the driver and the full set of parameter values means the conditions of each test are documented well enough to be reproduced. Beyond keeping the conditions stable, a few aspects of the study design speak specifically to whether the same numbers would appear again on a repeat run.
+Wohlin et al. define reliability as the degree to which a study would yield the same results if repeated under the same conditions~\cite{wohlin2012}. The controls described in Subsection~\ref{subsubsec:controllingUmeasruedVariables} contribute to this directly, as fixing the route, the driver and the full set of parameter values means the conditions of each test are documented well enough to be reproduced. Beyond keeping the conditions stable, a few aspects of the study design speak specifically to whether the same numbers would appear again on a repeat run.
 
 The clearest evidence is that the configurations were carefully developed. Every configuration was built, run and validated many times over the course of development, and each produced results consistent with the final accepted run before that run was recorded as data. This gives reasonable confidence that the reported numbers reflect stable system behaviour rather than a one off artefact of a single session. Running the same physical hardware for the entire test series supports this further, since equipment differences are removed as a possible reason for one run disagreeing with another.
 
