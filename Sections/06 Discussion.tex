@@ -10,20 +10,20 @@ Before we move onto the discussion about codecs and transport layers, a clarific
  ~ms = \frac{1000}{fps} \qquad~ms = \frac{1000}{Hz}
 \]
 
-The way the camera used works, is at 40~ms interval a snapshot is captured. Meaning it is not directly latency, but more a blind window where no images are captured. This is the same for monitor, that replace one row at the screen at the time, doing 60 refreshes per second. The ranges are from 0~ms to 40~ms and 0~ms to 16.67~ms and on average 20~ms 
+The way the camera used works, is at 40~ms interval a snapshot is captured. Meaning it is not directly latency, but more a blind window where no images are captured. This is the same for the monitor, which replaces one row on the screen at a time, doing 60 refreshes per second. The delay ranges are from 0~ms to 40~ms and 0~ms to 16.67~ms and on average 20~ms and 8.3~ms as used for Figure~\ref{fig:g2glatencyDistributionT1} and~\ref{fig:g2glatencyDistributionC1}.
 
-The effect of these two added latency is quite a lot. Resulting at around 50\% of the total G2G latency of the entire system when added. The figures below show clearly how much they add latency to the system.
+The effect of these two added latencies is quite a lot. Resulting at around 50\% of the total G2G latency of the entire system when added. The figures below show how much they add latency to the system.
 
 %0.65 to 0.9 when adjusted
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.85\textwidth]{Images/Discussion/TotalLatencyT1Avg.png}
+    \includegraphics[width=0.95\textwidth]{Images/Discussion/TotalLatencyT1Avg.png}
     \caption{Average Glass-to-glass latency distribution for T1 UDP \- RTP, lab setup.}\label{fig:g2glatencyDistributionT1}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.85\textwidth]{Images/Discussion/TotalLatencyC1Avg.png}
+    \includegraphics[width=0.95\textwidth]{Images/Discussion/TotalLatencyC1Avg.png}
     \caption{Average Glass-to-glass latency distribution for C1 H.264, moving experiment.}\label{fig:g2glatencyDistributionC1}
 \end{figure}
 
@@ -39,17 +39,17 @@ To start with the main two transport protocols, UDP and TCP. A clean run with RT
 
 However, TCP marks itself significantly better when adjusting to the visual quality. Scoring a full 7 points less, a 20\% increase in quality comparing to the UDP. It also stays more stable throughout and scoring lower on both max and the 95 percentile. No or very few corrupted frames ever reach the receiver, something which could be crucial for operation a train remotely. Even though both of the results are relatively good and most likely usable for any remote operator. The difference is still there to be used and taken advantage of if needed.
 
-These findings would indicate that when running under normal and stabile conditions, depending on what is the problem is for the RTO, you can adjust and swap the transport protocol to fit the needs. If it lacks quality of imaging, while the latency is fine, TCP might be better. However if the quality is fine for managing a train, then UDP will ensure a lower latency and more accurate steering.
+These findings would indicate that when running under normal and stable conditions, depending on what is the problem is for the RTO, it is possible to adjust and swap the transport protocol to fit the needs. If it lacks quality of imaging, while the latency is fine, TCP might be better. However if the quality is fine for managing a train, then UDP will ensure a lower latency and more accurate steering.
 
 \subsubsection{Cost of Encryption: SRTP Overhead (T1 vs.\ T3)}\label{subsubsec:srtp}
 
-The completed test of SRTP shows clearly whether there will be any issues to add safety and security to RTO. Controlling the railway infrastructure in a country needs to be both safe and reliable for people to trust it, and to prevent unauthorised people from taking control. Both from the latency test where adding an encryption to each packet could cause trouble and the workload of CPU, the result are clear. That encryption will not be an issue and is possible to implement already now in the process.
+The completed test of SRTP shows whether there will be any issues to add safety and security to RTO. Controlling the railway infrastructure in a country needs to be both safe and reliable for people to trust it, and to prevent unauthorised people from taking control. Both from the latency test where adding an encryption to each packet could cause trouble and the workload of CPU, the result are clear. That encryption will not be an issue and is possible to implement already now in the process.
 
 \subsubsection{Effect of Bandwidth Constraint (T5 vs.\ T6)}\label{subsubsec:bandwidthDiscussion}
 
 After running tests for both of the transport protocols with lower than expected bandwidth it is clear how both would react, and what to be aware of when choosing transport protocol for real use. With lower than expected bandwidth, which means the encoders aim to produce a bitsize of around 8~Mbps per camera when encoding and then trying to push that through a funnel only accepting a 12/18~Mbps throughput, it struggles to deliver properly. 
 
-On one hand we have UDP maintaining a worse, but not unmanageable latency. It still has below 100~ms stream of the mean, and only 35~ms worse on the 95 percentile. However, UDP is losing almost half of the packets at 47.49\% packet loss, which makes sense when a little over 24~Mbps is trying to be pushed through a 12~Mbps bandwidth. Resulting in a significant worse BRISQUE score. Even with mean score being lower, its max and 95 percentile is above and that is due to it being a lab test. With such a high packet loss, movement is the element that will greatly affect BRISQUE score. And on Figure~\ref{fig:udpBRISQUEGraph1} where red line is 95p an blue line is mean, with the graph from camera one, you can clearly see where simulated test movement was introduced and when it rendered a still lab. This result compared to the same graph for T1 at Figure~\ref{fig:udpBRISQUEGraph2} showing a much more stable with or without movement.
+On one hand we have UDP maintaining a worse, but not unmanageable latency. It still has below 100~ms stream of the mean, and only 35~ms worse on the 95 percentile. However, UDP is losing almost half of the packets at 47.49\% packet loss, which makes sense when a little over 24~Mbps is trying to be pushed through a 12~Mbps bandwidth. Resulting in a significant worse BRISQUE score. Even with mean score being lower, its max and 95 percentile is above and that is due to it being a lab test. With such a high packet loss, movement is the element that will greatly affect BRISQUE score. And on Figure~\ref{fig:udpBRISQUEGraph1} where red line is 95p an blue line is mean, with the graph from camera one, it is clear to see where simulated test movement was introduced and when it rendered a still lab. This result compared to the same graph for T1 at Figure~\ref{fig:udpBRISQUEGraph2} showing a much more stable with or without movement.
 
 \begin{figure}[H]
     \centering
@@ -67,19 +67,19 @@ On one hand we have UDP maintaining a worse, but not unmanageable latency. It st
     \caption{BRISQUE graphs for UDP bandwidth comparison.}
 \end{figure}
 
-TCP under bandwidth pressure acts as expected by theory. The main issue is transit latency. Due to the low bandwidth, packets are forced to queue in network buffers, causing transit latency to increase substantially. This then also affects the sender pipeline by creating a backlog of old packets that need sending before new ones can be completed as you can see in Figure~\ref{fig:tcpBandwidthSenderGraph}. A reduction to 18~Mbps is so bad that the average delay is 9504~ms or 9.5 seconds late. Even with TCP, we experience a packet loss of almost 14\%. Not to mention all this backlogging and extra work is making the CPU usage on the computer significantly worse, by over doubling the usage and reaching a max of over 50\% which is close to causing issues as we will discuss further when looking at codecs.
+TCP under bandwidth pressure acts as expected by theory. The main issue is transit latency. Due to the low bandwidth, packets are forced to queue in network buffers, causing transit latency to increase substantially. This then also affects the sender pipeline by creating a backlog of old packets that need sending before new ones can be completed as seen in Figure~\ref{fig:tcpBandwidthSenderGraph}. A reduction to 18~Mbps is so bad that the average delay is 9504~ms or 9.5 seconds late. Even with TCP, we experience a packet loss of almost 14\%. Not to mention all this backlogging and extra work is making the CPU usage on the computer significantly worse, by over doubling the usage and reaching a max of over 50\% which is close to causing issues as we will discuss further when looking at codecs.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.9\textwidth]{Code/Analyzers/graphs/T6-25.05-17:05/sender_pipeline_25.05-17:05_analysis.png}
+    \includegraphics[width=0.95\textwidth]{Code/Analyzers/graphs/T6-25.05-17:05/sender_pipeline_25.05-17:05_analysis.png}
     \caption{Graph over the sender pipeline latency for T6, TCP with poor bandwidth. Red line is 95p and yellow is the mean value.}\label{fig:tcpBandwidthSenderGraph}
 \end{figure}
 
-It is clear that both of these are not sustainable. However they both reveal something about the choice to made when picking a transport protocol for RTO. It is known by other studies that TCP's latency does not improve over time. Meaning the TCP will deliver images in the correct order no matter how far behind the video stream is. So if the system enters an area of low bandwidth and falls behind, it will continue to stay behind when returning to a bigger bandwidth, the latency then just stays level~\cite{briscoe2016}. TCP's congestion control responds by reducing the sending window, but once buffers fill, the latency remains elevated until the congestion window eventually collapses and resets. Yet when testing this, the best results never go beneath 2 seconds as shown in the graph on Figure~\ref{fig:tcpBandwidthGraph}.
+It is clear that both of these are not sustainable. However they both reveal something about the choice to make when picking a transport protocol for RTO. It is known by other studies that TCP's latency does not improve over time. Meaning the TCP will deliver images in the correct order no matter how far behind the video stream is. So if the system enters an area of low bandwidth and falls behind, it will continue to stay behind when returning to a bigger bandwidth, the latency then just stays level~\cite{briscoe2016}. TCP's congestion control responds by reducing the sending window, but once buffers fill, the latency remains elevated until the congestion window eventually collapses and resets. Yet when testing this, the best results never go beneath 2 seconds as shown in the graph on Figure~\ref{fig:tcpBandwidthGraph}.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.9\textwidth]{Code/Analyzers/graphs/T6-25.05-17:05/transit_result_25.05-17:05_analysis.png}
+    \includegraphics[width=0.95\textwidth]{Code/Analyzers/graphs/T6-25.05-17:05/transit_result_25.05-17:05_analysis.png}
     \caption{Graph over the transit latency for T6, TCP with poor bandwidth. Red line is 95p and yellow is the mean value.}\label{fig:tcpBandwidthGraph}
 \end{figure}
 
@@ -87,30 +87,30 @@ While on the other side with UDP, the system loses packets. A lot of them, resul
 
 The results show that knowing the route is important. Knowing the bandwidth available at all times is necessary to pick transport protocol. And if unknown, choosing a protocol that can stabilise again, which would be UDP, is important as not restoring the video stream could be fatal for further driving.
 
-A last side note on bandwidth reach. Additional test during development phase show that the most important part is to adjust the expected bandwidth to the cameras when choosing a aimed bitrate. The experience show that if constraints are set at 12~Mbps bandwidth, and the encoder aim at 4~Mbps per camera, a much smoother and better result is achieved than what a 18~Mpbs available bandwidth and 8~Mbps per camera would do. I can recommend reading the paper of Mejías et al. \cite{mejias2024}, working on exactly such a model adjusting encoding size depending on bandwidth available.
+A last side note on bandwidth reach. Additional test during development phase show that the most important part is to adjust the expected bandwidth to the cameras when choosing a aimed bitrate. The experience show that if constraints are set at 12~Mbps bandwidth, and the encoder aim at 4~Mbps per camera, a much smoother and better result is achieved than what a 18~Mbps available bandwidth and 8~Mbps per camera would do. For this challenge, reading the paper by Mejías et al.~\cite{mejias2024} is recommended as it is working on exactly such a model adjusting encoding size depending on bandwidth available.
 
 \subsection{Codec Configuration Performance}\label{subsec:disc_codec}
 
 \subsubsection{The Value of Skipping Re-encoding (C2 vs.\ C1, C6 vs.\ C5)}\label{subsubsec:no_transcode}
 
 Both C6 and C2 of no transcoding test runs were done to see if the transcoding had any effect on the total system and results, other than just latency for the sender computer. When looking at the logging results for transit of no transcode H.265, it got a better result than baseline H.265. Yet, when we see H.264 there is almost no difference. This can be quite counter intuitive as H.265 baseline also had lower throughput than the no transcode which should make it easier to transport the RTP packets. Most likely was the re-encoder maxing out the CPU, throttling itself, and producing an unusually low and unstable bitrate. Low throughput means less data in flight at any given moment, but because the CPU saturation caused bursty, irregular packet emission. The encoder was not producing a steady stream, making the network also more unpredictable.
-And for the receiver it was reverse, the low packets was easier to decode resulting in a even end-to-end result if ignoring the sender pipeline latency.
+And for the receiver it was reverse, the low packet count was easier to decode, resulting in an even end-to-end result if ignoring the sender pipeline latency.
 
 \input{Sections/Tables/Results/C-notranscode-latency-summary}
 
-No conclusive result that transcoding changed anything for transit latency or receiver. But we know that around 24 to 26~ms is saved on the sender side by not transcoding.
+No conclusive result that transcoding changed anything for transit or receiver latency. But we know that around 24 to 26~ms is saved on the sender side by not transcoding from Table~\ref{tab:send_codec_latency}.
 
 The packet loss seems random and inconclusive as well as the C6 has worse than C5 and C2 has better than C1. This might be because of Throughput. As No transcoding actually make better packages, but with so low throughput on C5 that might result in lower packet loss than if it was as high as the other. The reason C5 resulted in so low throughput was due to re-encoding from h264 to 265 can make the same quality just less bitrate and there was no use to fill up all available bitrate.
 
-However the big difference can be observed on the BRISQUE scale. C2 dropping 7 points mean on C1 on mean and 16 points in total on the 95 percentile. Also H.265 no transcoding achieves much higher quality with 16 points mean and 10 on the 95y  percentile. This is due to avoiding a decompression twice where there is absolutely no quality lost due to re-encoding artifacts. C6 with H.265 resulted in overall best BRISQUE score of all the outdoor car experiments. 
+However the big difference can be observed on the BRISQUE scale. C2 dropping 7 points mean on C1 on mean and 16 points in total on the 95 percentile. Also H.265 no transcoding achieves much higher quality with 16 points mean and 10 points on the 95 percentile. This is due to avoiding a decompression twice where there is absolutely no quality lost due to re-encoding artifacts. C6 with H.265 resulted in overall best BRISQUE score of all the outdoor car experiments. 
 
-These results make it very clear and obvious that a no transcoding is the best setup. And the test of No Transcode is more there to give a reminder of what the actual latency and results will look like. And that the other test with transcoding is staged in a way i get full control over the stream and can adjust and compare other settings.
+These results make it very clear and obvious that no transcoding is the best setup. And the test of No Transcode is more there to give a reminder of what the actual latency and results will look like. And that the other test with transcoding is staged in a way to get full control over the stream and can adjust and compare other settings.
 
 \subsubsection{Effects of 720p Resolution (C3 vs.\ C1, C7 vs.\ C5)}\label{subsubsec:resolutionDiscussion}
 
-After getting the results from both lower resolution test, there is not much difference to separate it from regular, but some effect was observed. Both 720p encoding took less time. Aiming for a lower resolution results in less work, this is also evident from the CPU usage of 720p on H.264, with an average of around 6\% less usage. Yet the throughput was higher on 720p, most likely from the encoding being satisfied by amount of decoding needed, while 1080p was more detailed and therefore able to lower the throughput while maintaining the higher resolution.
+After getting the results from both lower resolution tests, there is not much difference to separate it from regular, but some effect was observed. Both 720p encoding took less time. Aiming for a lower resolution results in less work, this is also evident from the CPU usage of 720p on H.264, with an average of around 6\% less usage. Yet the throughput was higher on 720p, most likely from the encoding being satisfied by the amount of decoding needed, while 1080p was more detailed and therefore able to lower the throughput while maintaining the higher resolution.
 
-The 720p with H.265 was clearly the most demanding on the CPU usage. This is because bitrate control is fighting to fill the lower resolution frame. H.264 is a computationally lighter codec to begin with. When you drop the resolution to 720p, there are simply fewer pixels to encode per frame. H.264's encoder handles that gracefully, but with H.265 encoding it to 720p it has fewer pixels of actual content to spread that bitrate target across. The encoder's rate control mechanism then has to work harder to decide how to fill the target bitrate with less source material causing the higher CPU usage.
+The 720p with H.265 was the most demanding on the CPU usage. This is because bitrate control is fighting to fill the lower resolution frame. H.264 is a computationally lighter codec to begin with. When you drop the resolution to 720p, there are simply fewer pixels to encode per frame. H.264's encoder handles that gracefully, but with H.265 encoding it to 720p it has fewer pixels of actual content to spread that bitrate target across. The encoder's rate control mechanism then has to work harder to decide how to fill the target bitrate with less source material causing the higher CPU usage.
 
 Even with the higher CPU usage and using less time, the BRISQUE score actually went better. By not overreaching and to be satisfied by a 720p resolution, a more stable stream was maintained. As 720p is still a high quality unlike 480p, there is maybe, based on these results more to gain in quality to keep a lower resolution. If it will provide a higher quality at the same bitrate or keep similar quality on a lower bitrate there is much to gain. However, computing cost and latency and depending on how high quality is needed to spot signs, obstacles and other crucial objects for a train operation is information that will affect whether it is even viable to operate a train with 720p resolution.
 
@@ -119,9 +119,9 @@ A full test with H.265 no transcoding with 720p to compare to the 1080p would be
 \subsubsection{GPU Acceleration (C4 vs.\ C1, C8 vs.\ C5)}\label{subsubsec:gpu}
 GPU acceleration for the encoding was used to see if an upgrade in machinery would be a significant improvement on the video system. Comparing GPU encoding on time, throughput, quality and not to mention CPU usage is crucial to picking the right setup for the future. 
 
-For a H.264 and H.265 encoding, GPU was extremely helpful for latency at the sender, resulting in 30\% decrease for H.264 and 70\% for the H.265. Although these numbers are high. It is important to be aware that it is still only about a 20~ms difference. Which might not be the deciding factor of a big picture system. What is interesting and one of many reasons for the low latency at sender is the fact that the GPU encoding resulted in much higher throughput than baseline H.265. The GPU encoder was more satisfied with the frames it already got, and decided to encode less, resulting in a much faster process but also much higher throughput.
+For a H.264 and H.265 encoding, GPU was extremely helpful for latency at the sender, resulting in 30\% decrease for H.264 and 70\% for H.265. Although these numbers are high, it is important to be aware that it is still only about a 20~ms difference. Which might not be the deciding factor of a big picture system. What is interesting and one of many reasons for the low latency at sender is the fact that the GPU encoding resulted in much higher throughput than baseline H.265. The GPU encoder was more satisfied with the frames it already got, and decided to encode less, resulting in a much faster process but also much higher throughput.
 
-The effect of video quality of GPU or CPU for H.265 is a almost nothing, they resulted in almost exactly the same BRISQUE scores, confirming the fact that the CPU worked a lot to keep the quality but lower the bitrate significant resulting in the latency. While GPU took only what it had to do, kept a high bitrate with the same results. While on the other side with H.264, the GPU acceleration resulted in reducing the quality. Effectively trading speed for quality.
+The effect of video quality of GPU or CPU for H.265 is almost nothing, they resulted in almost exactly the same BRISQUE scores, confirming the fact that the CPU worked a lot to keep the quality but lower the bitrate significantly, resulting in the latency. While GPU took only what it had to do, kept a high bitrate with the same results. While on the other side with H.264, the GPU acceleration resulted in reducing the quality. Effectively trading speed for quality.
 
 Of all the testing and configurations, of the transcoding examples, the results of H.265 with GPU score very high. As End-to-end latency is only beaten by the No transcoding runs, and not by much either. While outclassing the regular H.265 and H.264. It has some packet loss, one of the highest, but still a low overall, resulting in a still very decent and comparable BRISQUE score. When it matches the visual quality but is easy on the computing hardware and is faster, then that might stand for one of the best results.
 
@@ -129,19 +129,19 @@ The results confirm that CPU load directly affects sender pipeline latency. Figu
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.9\textwidth]{Images/Discussion/CPUusageT1.png}
+    \includegraphics[width=0.95\textwidth]{Images/Discussion/CPUusageT1.png}
     \caption{CPU usage over time showing a usage spike for test T1.}\label{fig:gpuCpuUsage}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.9\textwidth]{Images/Discussion/SenderLatencyT1.png}
+    \includegraphics[width=0.95\textwidth]{Images/Discussion/SenderLatencyT1.png}
     \caption{Sender pipeline latency over time showing latency spike for test T1.}\label{fig:cpuSenderLatency}
 \end{figure}
 
 \subsubsection{H.264 vs.\ H.265 (C1 \- C4 vs.\ C5 \- C8)}\label{subsubsec:codec_comparison}
 
-It is clear from the results that encoding in H.265 is significantly more workload than H.264. When choosing configuration you can pick elements that take certain directions to help. The simplest is using an assisting GPU, but the results show that expanding the resolution and allowing it to use a higher bitrate might also relief some stress on the hardware. On CPU H.265 even with the mean on a stable 68\% the times it hit max, with 80\% or above, the computer struggles. Producing worse encoding and also causing delay for the pipeline. H.264 is much gentler and never goes above 36\% at all, causing almost no stress at all for the computer and sender pipeline.
+It is clear from the results that encoding in H.265 is significantly more workload than H.264. When choosing configuration it is possible to pick elements that take certain directions to help. The simplest is using an assisting GPU, but the results show that expanding the resolution and allowing it to use a higher bitrate might also relief some stress on the hardware. On CPU H.265 even with the mean on a stable 68\% the times it hit max, with 80\% or above, the computer struggles. Producing worse encoding and also causing delay for the pipeline. H.264 is much gentler and never goes above 36\% at all, causing almost no stress at all for the computer and sender pipeline.
 
 For latency H.265 is also always slower for each of the settings except the GPU accelerated test. This is due to a higher level and more detailed way of encoding. The GPU encoder for H.265 is more advanced and more effective than the older H.264 encoder for GPU. Providing in a slightly faster end-to-end latency.
 
@@ -151,7 +151,7 @@ With the extra time used to encode for H.265, it does result in better visual qu
 
 MJPEG which was used earlier in the project due to its simplicity and high quality was also tested among H.264 and H.265, it was also one of the main reasons to transcode as the camera do not have any natural MJPEG encoding and was therefore forced to be transcoded. This is also why MJPEG was only one of the tests. During the iterative phase, it became apparent that MJPEG was going to score lower compared to the other decoders, which was the other contributing factor to keep MJPEG at only one test.
 
-With a lower grade of encoding, causing the throughput to be 80~Mbps as the mean, and spikes to reach the ceiling of the unlimited bandwidth. The transit latency increase to a 149~ms mean, and up towards 440~ms on 95 percentile. The high throughput also causing trouble for packet loss, achieving the highest of a little over 7\%. This again also directly affecting the quality which was the reason for the high throughput. Due to the delay and packet loss and because of the quality setting not being set higher than 50, the visual quality hits 40 points as average on the BRISQUE scale. 
+With a lower grade of encoding, causing the throughput to be 80~Mbps as the mean, and spikes to reach the ceiling of the unlimited bandwidth. The transit latency increased to a 149~ms mean, and up towards 440~ms on 95 percentile. The high throughput also causing trouble for packet loss, achieving the highest of a little over 7\%. This again also directly affecting the quality which was the reason for the high throughput. Due to the delay and packet loss and because of the quality setting not being set higher than 50, the visual quality hits 40 points as average on the BRISQUE scale. 
 
 The reasoning behind choosing quality of MJPEG encoder to 50 was to ensure a decent image, without trying to push the bandwidth too high. As the encoding of MJPEG is known to be less, finding the perfect balance of throughput and visual quality is very difficult and was tested multiple times during the development phase to find a decent balance. Decreasing quality at encoding would have helped the throughput and therefore both latency and packet loss, but would result in an even worse visual quality. 
 
@@ -181,12 +181,12 @@ An interesting configuration to look at would be a combination of H.265 and TCP,
 
 \subsubsection{Configuration Recommendation for RTO}\label{subsubsec:recommendation}
 
-Based on all the results collected and the interplay described above, it is possible to make a clear recommendation for which configuration to move forward with.
+Based on all the results collected and the interplay described above, it is possible to make a recommendation for which configuration to move forward with.
 
 For a deployment where transcoding is needed, or the camera can provide raw video and GPU encoding is available, H.265 with GPU acceleration and UDP/RTP is the strongest overall configuration. It delivers an end-to-end mean of 64.8~ms and 95 percentile of 175.5~ms, keeps CPU at below 6\%, produces stable throughput with the lowest standard deviation of any transcoded test at 0.88~Mbps, and matches the visual quality of the much more demanding CPU H.265 baseline. 
 
 For a setup where there is no need for transcoding or encoding on the sender pc because the camera does the encoding, picking the internal camera encoder is important. If the camera hardware supports native H.265 output, skipping transcoding entirely on top of that would push it even further, as the no transcoding results consistently show the best quality numbers. It is even better than H.264 no transcoding option. 
-While running the system, if it is clear that motion encoding is struggling, which is likely as the train will constantly be in movement. Then testing the same system with H.264 could be a solution, as H.265 works hard and uses more computing power and bits to encode moving images. 
+While running the system, if it is clear that motion encoding is struggling, which is likely as the train will constantly be in movement, then testing the same system with H.264 could be a solution, as H.265 works hard and uses more computing power and bits to encode moving images. 
 
 For the transport protocol, UDP should be the default. TCP is better for quality under stable conditions, and switching to TCP when bandwidth is known to be solid and stable is a valid choice for an operator that needs the clearest possible image. But TCP should never be the default given what was seen in the constrained bandwidth test. An operator receiving a video feed that is 9.5 seconds old has no useful information for driving a train.
 
@@ -230,13 +230,13 @@ With all of that in mind, the configurations that pass comfortably on both mean 
 
 {Comparison Against RTO Latency Requirements}
 
-The 3GPP TS 22.289 standard sets a target end-to-end latency of 100~ms for video communication in remote train operation at GoA 3 and GoA 4. Measured against that threshold, none of the configurations in this thesis clear it comfortably on the 95th percentile, and several do not meet it even on the mean. It would be easy to read that as a failure, but doing so misrepresents both what the threshold means and what the results actually show.
+The 3GPP TS 22.289 standard sets a target end-to-end latency of 100~ms for video communication in remote train operation at GoA 3 and GoA 4. Measured against that threshold, none of the configurations in this thesis clear it with margin on the 95th percentile, and several do not meet it even on the mean. It would be easy to read that as a failure, but doing so misrepresents both what the threshold means and what the results actually show.
 
 The 100~ms figure is a specification target defined at the communication interface level, not a value derived from operator studies in systems like the one tested here. As noted in Section 6.6.2, whether a remote train operator can actually drive safely at 88~ms mean latency versus 64~ms is a question the numbers alone cannot answer, and no such study exists for this specific setup. The threshold is a useful reference point, not a hard cutoff with empirically validated consequences.
 
-What the results do show clearly is that several configurations come meaningfully close on the mean. T1 with UDP RTP achieves 54.45~ms, T2 with no transcoding achieves 50.40~ms, and C8 with H.265 GPU acceleration achieves 64.80~ms. These are all well beneath 100~ms on the mean, and the spread above that on the 95th percentile is largely driven by occasional network spikes that are characteristic of mobile 5G connections rather than systemic pipeline latency. The configurations that fail the threshold clearly, such as C5 with H.265 at 88.42~ms mean and C9 with MJPEG at 193.14~ms, do so for identifiable reasons that the analysis in this chapter has already addressed.
+What the results do show is that several configurations come meaningfully close on the mean. T1 with UDP RTP achieves 54.45~ms, T2 with no transcoding achieves 50.40~ms, and C8 with H.265 GPU acceleration achieves 64.80~ms. These are all well beneath 100~ms on the mean, and the spread above that on the 95th percentile is largely driven by occasional network spikes that are characteristic of mobile 5G connections rather than systemic pipeline latency. The configurations that fail the threshold, such as C5 with H.265 at 88.42~ms mean and C9 with MJPEG at 193.14~ms, do so for identifiable reasons that the analysis in this chapter has already addressed.
 
-The more useful frame for these results is not whether they clear 100~ms, but how much of the total glass-to-glass budget they consume. As shown in Section 6.1.1, the camera capture and monitor render alone add a worst case of 56.67~ms before the pipeline contributes anything. A pipeline mean of 54~ms on top of that already brings the full glass-to-glass latency close to or above 100~ms regardless of the configuration. Reaching the 3GPP target end to end would require not only the best pipeline configuration but also higher frame rate cameras and higher refresh rate monitors, as those hardware choices account for a larger share of the total delay than most codec or protocol decisions do.
+The more useful frame for these results is not whether they clear 100~ms, but how much of the total glass-to-glass budget they consume. As shown in Section 6.1.1, the camera capture and monitor render alone add a worst case of 56.67~ms before the pipeline contributes anything. A pipeline mean of 54~ms on top of that already brings the full glass-to-glass latency close to or above 100~ms regardless of the configuration. Reaching the 3GPP target end-to-end would require not only the best pipeline configuration but also higher frame rate cameras and higher refresh rate monitors, as those hardware choices account for a larger share of the total delay than most codec or protocol decisions do.
 \end{comment}
 
 \subsection{Limitations and Methodological Reflections}\label{subsec:disc_limitations}
@@ -248,7 +248,6 @@ There are a few things in the measurement setup worth being transparent about wh
 The BRISQUE metric also has limitations worth mentioning. It is a no-reference perceptual quality metric, meaning it evaluates an image without comparing it to an original. This was necessary to use as the original image is never recorded, and can therefore never be compared to the output at control room. During outdoor testing, conditions like rain, motion blur and varying light will affect the score in ways that are not directly caused by the codec or configuration being tested. The BRISQUE scores in this thesis should be read as indicative of relative quality differences between configurations rather than as definitive quality measurements.
 
 Each final result was gathered from a single run per configuration. A video stream can fluctuate depending on network availability, scene content and CPU load, so a single run cannot rule out unusual variation on that particular moment. However, every configuration was run and validated repeatedly during development, and only runs that produced results consistent with those prior observations were accepted as final. This gives confidence that the reported values reflect stable system behaviour rather than a unique artefact. Furthermore, each test ran three independent camera pipelines simultaneously, making each reported result an average over three observations under identical conditions, which further reduces the chance of a single misleading measurement reaching the results. Relative comparisons between configurations are therefore robust and any variation in absolute values affects all configurations equally, since they shared the same hardware, conditions and measurement setup throughout.
-
 
 \subsubsection{Generalisability}\label{subsubsec:generalisability}
 

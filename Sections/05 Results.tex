@@ -17,7 +17,7 @@ The codec configuration tests examine how codec choice, resolution, and encoding
 
 \subsection{System Latency}\label{subsec:system_latency}
 
-The latency result is split up into multiple steps. Sender latency, Transit latency and lastly Receiver latency. Combined they give out a full end-to-end latency. All the latencies of the system was measured using timestamps at the sender and receiver. T1 and C1 served as the baseline configurations. Table~\ref{tab:send_transport_latency} summarises the mean, minimum, maximum and 95\% percentile of latency in sender for each transport test.
+The latency result is split up into multiple steps. Sender latency, Transit latency and lastly Receiver latency. Combined they give out a full end-to-end latency. All the latencies of the system were measured using timestamps at the sender and receiver. T1 and C1 served as the baseline configurations. Table~\ref{tab:send_transport_latency} summarises the mean, minimum, maximum and 95\% percentile of latency in sender for each transport test.
 
 The no-transcode configurations (C2 and C6) have no sender pipeline stage and are therefore reported as N/A in the sender table. Table~\ref{tab:send_codec_latency} summarises the mean, minimum, maximum and 95\% percentile of latency in the sender pipeline for each codec test.
 
@@ -29,7 +29,7 @@ The no-transcode configurations (C2 and C6) have no sender pipeline stage and ar
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.85\textwidth]{Code/Analyzers/graphs/C1-26.05-09:49/sender_pipeline_26.05-09:49_analysis.png}
+    \includegraphics[width=0.95\textwidth]{Code/Analyzers/graphs/C1-26.05-09:49/sender_pipeline_26.05-09:49_analysis.png}
     \caption{Sender pipeline latency graph over time C1.}\label{fig:C1SenderLatency}
 \end{figure}
 
@@ -59,7 +59,7 @@ Since the clock offset is a constant bias across each test run, it can be remove
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.85\textwidth]{Code/Analyzers/graphs/C1-26.05-09:49/receiver_pipeline_26.05-09:49_analysis.png}
+    \includegraphics[width=0.95\textwidth]{Code/Analyzers/graphs/C1-26.05-09:49/receiver_pipeline_26.05-09:49_analysis.png}
     \caption{Receiver pipeline latency graph over time for C1.}\label{fig:C1ReceiverLatency}
 \end{figure}
 
@@ -104,7 +104,7 @@ Throughput was logged at the sender side and reflects the volume of encoded vide
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.85\textwidth]{Code/Analyzers/graphs/C1-26.05-09:49/throughput_26.05-09-49.png}
+    \includegraphics[width=0.95\textwidth]{Code/Analyzers/graphs/C1-26.05-09:49/throughput_26.05-09-49.png}
     \caption{Sender throughput graph over time for C1.}\label{fig:C1Throughput}
 \end{figure}
 
@@ -119,13 +119,13 @@ The no-transcode configurations C2 and C6 have no encoding step and are therefor
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.85\textwidth]{Code/Analyzers/graphs/C1-26.05-09:49/sender_cpu_26.05-09:49_analysis.png}
+    \includegraphics[width=0.95\textwidth]{Code/Analyzers/graphs/C1-26.05-09:49/sender_cpu_26.05-09:49_analysis.png}
     \caption{Sender CPU usage graph over time for C1.}\label{fig:C1CPU}
 \end{figure}
 
 \subsection{Visual Quality}\label{subsec:visual_quality}
 
-Visual quality was assessed on captured frames using the BRISQUE no-reference image quality metric. Lower BRISQUE scores indicate better perceptual quality. Individual measurements where done per camera and the scores are aggregated across all three cameras per test.
+Visual quality was assessed on captured frames using the BRISQUE no-reference image quality metric. Lower BRISQUE scores indicate better perceptual quality. Individual measurements were done per camera and the scores are aggregated across all three cameras per test.
 
 \input{Sections/Tables/Results/T-quality.tex}
 
@@ -133,7 +133,7 @@ Visual quality was assessed on captured frames using the BRISQUE no-reference im
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.85\textwidth]{Code/Analyzers/graphs/C1-26.05-09:49/quality_plot_26.05-09:49.png}
+    \includegraphics[width=0.95\textwidth]{Code/Analyzers/graphs/C1-26.05-09:49/quality_plot_26.05-09:49.png}
     \caption{Video Quality with BRISQUE score graph over time for C1.}\label{fig:C1Quality}
 \end{figure}
 

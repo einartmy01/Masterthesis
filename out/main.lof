@@ -18,14 +18,14 @@
 \contentsline {figure}{\numberline {17}{\ignorespaces Cameras outside view.}}{38}{figure.caption.24}%
 \contentsline {figure}{\numberline {18}{\ignorespaces Car setup for experiment.}}{39}{figure.caption.25}%
 \contentsline {figure}{\numberline {19}{\ignorespaces Network Switch and Network Modem.}}{39}{figure.caption.26}%
-\contentsline {figure}{\numberline {20}{\ignorespaces Sender pipeline latency graph over time C1.}}{46}{figure.caption.31}%
+\contentsline {figure}{\numberline {20}{\ignorespaces Sender pipeline latency graph over time C1.}}{47}{figure.caption.31}%
 \contentsline {figure}{\numberline {21}{\ignorespaces Transit latency graph over time for C1.}}{48}{figure.caption.35}%
 \contentsline {figure}{\numberline {22}{\ignorespaces Receiver pipeline latency graph over time for C1.}}{49}{figure.caption.38}%
 \contentsline {figure}{\numberline {23}{\ignorespaces End-to-end latency distribution for T1 UDP \- RTP, lab setup.}}{50}{figure.caption.41}%
 \contentsline {figure}{\numberline {24}{\ignorespaces End-to-end latency distribution for C1 H.264, moving experiment.}}{50}{figure.caption.42}%
-\contentsline {figure}{\numberline {25}{\ignorespaces Sender throughput graph over time for C1.}}{51}{figure.caption.47}%
-\contentsline {figure}{\numberline {26}{\ignorespaces Sender CPU usage graph over time for C1.}}{52}{figure.caption.50}%
-\contentsline {figure}{\numberline {27}{\ignorespaces Video Quality with BRISQUE score graph over time for C1.}}{53}{figure.caption.53}%
+\contentsline {figure}{\numberline {25}{\ignorespaces Sender throughput graph over time for C1.}}{52}{figure.caption.47}%
+\contentsline {figure}{\numberline {26}{\ignorespaces Sender CPU usage graph over time for C1.}}{53}{figure.caption.50}%
+\contentsline {figure}{\numberline {27}{\ignorespaces Video Quality with BRISQUE score graph over time for C1.}}{54}{figure.caption.53}%
 \contentsline {figure}{\numberline {28}{\ignorespaces Average Glass-to-glass latency distribution for T1 UDP \- RTP, lab setup.}}{55}{figure.caption.54}%
 \contentsline {figure}{\numberline {29}{\ignorespaces Average Glass-to-glass latency distribution for C1 H.264, moving experiment.}}{55}{figure.caption.55}%
 \contentsline {figure}{\numberline {30}{\ignorespaces BRISQUE graphs for UDP bandwidth comparison.}}{57}{figure.caption.56}%

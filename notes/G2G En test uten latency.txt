@@ -1,6 +1,0 @@
-G2G
-En test uten latency loggin
-En test med latency loggin
-
-På den måten kan man fjerne fra pipeline latency the faktum at loggin trekker tid og kraft
-

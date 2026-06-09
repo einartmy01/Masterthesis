@@ -3,7 +3,7 @@ This chapter provides the theoretical background needed to understand the work i
 
 \subsection{Remote Train Operations}\label{sec:rto}
  
-Remote Train Operations (RTO) refer to the act of monitoring and controlling a train from a location outside the locomotive, typically a centralised control room, using live video and a remote control interface. As railways move toward higher levels of automation, RTO has become an important part of safety features and the practical deployment. It allows human operators to intervene when automated systems encounter situations they cannot handle on their own, and it serves as a required fallback layer for trains operating without a driver or staff adequate to drive~\cite{jurgensen2025, fp2r2dato2023d5_4}.
+Remote Train Operations (RTO) refer to the act of monitoring and controlling a train from a location outside the locomotive, typically a centralised control room, using live video and a remote control interface. As railways move toward higher levels of automation, RTO has become an important part of safety features and the practical deployment. It allows human operators to intervene when automated systems encounter situations they cannot handle on their own, and it serves as a required fallback layer for trains operating without a driver or without staff adequate to drive~\cite{jurgensen2025, fp2r2dato2023d5_4}.
  
 
 \subsubsection{Grades of Automation}\label{subsec:goa}
@@ -26,7 +26,7 @@ The Grade of Automation (GoA) is a classification system defined in the internat
     \end{tabular}
 \end{table}
  
-RTO is most relevant from GoA~3 upward. At GoA~3, on-board staff can still respond to incidents directly, but remote oversight is used for operational management. At GoA~4, where no staff are on board, RTO becomes the primary mechanism for human intervention when automated systems fail or encounter unexpected conditions~\cite{europesrail2025_d3, orr2024}.
+RTO is most relevant from GoA~3 and upwards. At GoA~3, on-board staff can still respond to incidents directly, but remote oversight is used for operational management. At GoA~4, where no staff are on board, RTO becomes the primary mechanism for human intervention when automated systems fail or encounter unexpected conditions~\cite{europesrail2025_d3, orr2024}.
  
 \subsubsection{Role of Video in Remote Operation}\label{subsec:video-role}
 
@@ -34,7 +34,7 @@ A remote operator who cannot physically see or hear the train must rely entirely
  
 Research on human factors in remote driving consistently shows that video quality has a direct effect on operator performance. Studies on bitrate, frame rate, and resolution indicate that reductions in bitrate lead to measurable drops in both reaction speed and accuracy, while changes in frame rate have a smaller effect within typical operating ranges~\cite{brandenburger2023}. This suggests that encoding and transmission choices in the video pipeline are not just technical decisions but directly influence operational safety.
 
-Beyond individual video quality, remote train driving typically requires multiple simultaneous camera views. A camera facing straight forward is needed for obstacle and signal detection, while side cameras support the operator's experience, needed for immersiveness of speed and movement like you can see a Figure~\ref{fig:trippelmonitor}~\cite{fp2r2dato2023d5_4, jurgensen2025, neumeier2019}.
+Beyond individual video quality, remote train driving typically requires multiple simultaneous camera views. A camera facing straight forward is needed for obstacle and signal detection, while side cameras support the operator's experience, needed for immersiveness of speed and movement as shown in Figure~\ref{fig:trippelmonitor}~\cite{fp2r2dato2023d5_4, jurgensen2025, neumeier2019}.
  
 \begin{figure}[h]
     \centering
@@ -53,10 +53,10 @@ Empirical studies from railway demonstrations report glass-to-glass (G2G) latenc
 \subsection{Video Streaming}\label{sec:video-streaming}
 Video streaming is the continuous transmission of video data from a source to a receiver over a network, allowing the receiver to display the content in real time without storing the full recording first~\cite{sodagar2011}. In a remote train operation context, this means live footage from cameras on or near the train is captured, compressed, sent across a network, and displayed on the operator's screen with as little delay as possible.
  
-A video streaming system can be thought of as a chain of components, each with its own role. At the sending end, raw video is captured by a camera and handed to an encoder, which compresses it into a format suitable for transmission. The compressed data is then packaged into a transport protocol and sent across the network. At the receiving end, the process is reversed: packets are reassembled, decoded back into raw frames, and rendered on screen. The choices made at each step, which codec, which protocol, which network directly affect the end-to-end latency and video quality that the remote operator experiences~\cite{myhrvold2025, mejias2024}.
+A video streaming system can be thought of as a chain of components, each with its own role. At the sending end, raw video is captured by a camera and handed to an encoder, which compresses it into a format suitable for transmission. The compressed data is then packaged into a transport protocol and sent across the network. At the receiving end, the process is reversed and packets are reassembled, decoded back into raw frames, and rendered on screen. The choices made at each step, which codec, which protocol, which network directly affect the end-to-end latency and video quality that the remote operator experiences~\cite{myhrvold2025, mejias2024}.
 
 \subsection{Video Compression}\label{subsec:codecs}
-Video compression works by removing redundancy from the raw video signal. There are two main redundancy that codecs use for compression. Spatial redundancy exists within a single frame where neighbouring pixels often have similar values, as you can see at Figure~\ref{fig:spatial-redundancy} where the background and some of the skin share the same colour. Temporal redundancy exists across frames where much of the image remains unchanged between one frame and the next, as you can see at Figure~\ref{fig:temporal-redundancy} where only the people move, while the background and table stay still. A video encoder exploits both types of redundancy to represent the video with fewer bits than the original raw data. Compression can be lossless where the original data can be perfectly reconstructed, or lossy where some information is discarded in exchange for a much smaller file size. Most video streaming applications use lossy compression, as lossless video requires far more bandwidth than most networks can provide~\cite{blomqvist2018, richardson2010}.
+Video compression works by removing redundancy from the raw video signal. There are two main types of redundancy that codecs use for compression. Spatial redundancy exists within a single frame where neighbouring pixels often have similar values, as shown in Figure~\ref{fig:spatial-redundancy} where the background and some of the skin share the same colour. Temporal redundancy exists across frames where much of the image remains unchanged between one frame and the next, as shown in Figure~\ref{fig:temporal-redundancy} where only the people move, while the background and table stay still. A video encoder exploits both types of redundancy to represent the video with fewer bits than the original raw data. Compression can be lossless where the original data can be perfectly reconstructed, or lossy where some information is discarded in exchange for a much smaller file size. Most video streaming applications use lossy compression, as lossless video requires far more bandwidth than most networks can provide~\cite{blomqvist2018, richardson2010}.
 
 \begin{figure}[h]
     \centering
@@ -83,7 +83,7 @@ An important concept is the Group of Pictures (GOP), which defines how often a f
 \subsubsection{H.265}\label{subsubsec:h265}
 H.265, also known as High Efficiency Video Coding (HEVC) and formally standardised as ITU-T~H.265 and ISO/IEC~23008--2, is the successor to H.264 published in 2013~\cite{sullivan2012hevc}. Its primary goal was to achieve roughly 50\% better compression compared to H.264 at equivalent visual quality~\cite{ohm2012}.
  
-HEVC achieves its efficiency gains by replacing the fixed 16$\times$16 macroblock structure of H.264 with a flexible Coding Tree Unit (CTU) architecture that supports block sizes up to 64$\times$64 pixels as you can see in Figure~\ref{fig:264v265encoding}. Larger blocks handle uniform image regions efficiently, while smaller blocks are used in areas with fine detail or motion. This adaptive structure allows the encoder to allocate coding effort where it is most needed, reducing the total number of bits required to represent a frame at a given quality level~\cite{sullivan2012hevc}.
+HEVC achieves its efficiency gains by replacing the fixed 16$\times$16 macroblock structure of H.264 with a flexible Coding Tree Unit (CTU) architecture that supports block sizes up to 64$\times$64 pixels as shown in Figure~\ref{fig:264v265encoding}. Larger blocks handle uniform image regions efficiently, while smaller blocks are used in areas with fine detail or motion. This adaptive structure allows the encoder to allocate coding effort where it is most needed, reducing the total number of bits required to represent a frame at a given quality level~\cite{sullivan2012hevc}.
 
 \begin{figure}[h]
     \centering
@@ -104,7 +104,7 @@ The sequence of frame types between two consecutive I-frames is called a Group o
 
 \subsubsection{NAL Units}\label{subsubsec:nal}
  
-Both H.264 and H.265 organise their encoded bitstream through a Network Abstraction Layer (NAL). The NAL divides the encoded data into discrete units called NAL units, each consisting of a header that identifies the type of data it contains, followed by the payload~\cite{wiegand2003}. There are two categories: Video Coding Layer (VCL) NAL units carry the compressed image data, while non-VCL NAL units carry decoder configuration information, most importantly the Sequence Parameter Set (SPS) and Picture Parameter Set (PPS). The SPS contains configuration that applies to the entire video sequence such as resolution and profile, while the PPS contains parameters applying to individual pictures such as entropy coding mode. A decoder must receive both before it can decode any VCL data~\cite{vocal_nal}.
+Both H.264 and H.265 organise their encoded bitstream through a Network Abstraction Layer (NAL). The NAL divides the encoded data into discrete units called NAL units, each consisting of a header that identifies the type of data it contains, followed by the payload~\cite{wiegand2003}. There are two categories, Video Coding Layer (VCL) NAL units carry the compressed image data, while non-VCL NAL units carry decoder configuration information, most importantly the Sequence Parameter Set (SPS) and Picture Parameter Set (PPS). The SPS contains configuration that applies to the entire video sequence such as resolution and profile, while the PPS contains parameters applying to individual pictures such as entropy coding mode. A decoder must receive both before it can decode any VCL data~\cite{vocal_nal}.
  
 When H.264 or H.265 is carried over RTP, each NAL unit is mapped to one or more RTP packets. If a NAL unit exceeds the network maximum transmission unit (MTU), it is fragmented across multiple consecutive RTP packets. The RTP marker bit is set on the last packet of a complete frame, signalling to the receiver that all data for that frame has arrived~\cite{rfc6184}.
 
@@ -137,7 +137,7 @@ TCP also implements flow control and congestion control mechanisms. Flow control
 \subsection{Streaming Parameters}\label{subsec:streaming-params}
  
 \subsubsection{Bandwidth}\label{subsubsec:bandwidth}
-Bandwidth in video streaming refers to the amount of data that can be transmitted per unit of time across a network connection, typically measured in megabits per second (Mbps). In a streaming pipeline the term bitrate is often used alongside bandwidth: bitrate describes how much data the encoder produces per second, while bandwidth describes how much the network can carry. When bitrate exceeds available bandwidth, packets accumulate in buffers or are dropped, leading to increased latency, visual degradation, or stream interruptions~\cite{sodagar2011}.
+Bandwidth in video streaming refers to the amount of data that can be transmitted per unit of time across a network connection, typically measured in megabits per second (Mbps). In a streaming pipeline the term bitrate is often used alongside bandwidth. Bitrate describes how much data the encoder produces per second, while bandwidth describes how much the network can carry. When bitrate exceeds available bandwidth, packets accumulate in buffers or are dropped, leading to increased latency, visual degradation, or stream interruptions~\cite{sodagar2011}.
  
 The required bandwidth depends on the codec, resolution, frame rate, and scene complexity. A higher bitrate generally produces better visual quality, but the relationship is not linear. Subjective testing has shown that perceived quality improves sharply at low bitrates and then levels off as bitrate increases, meaning that doubling the bitrate does not double the perceived quality~\cite{pinson2012}.
  
@@ -147,7 +147,6 @@ Resolution defines the number of pixels in each video frame, expressed as width 
  
 For a given codec and bitrate, increasing resolution without increasing the bitrate results in more compression per pixel, which can reduce sharpness and introduce visible artefacts. Conversely, a high resolution with a sufficiently high bitrate produces a clearer image. The 3GPP Rel-16 specification for video based remote railway control recommends a minimum of 1920$\times$1080 at 30 frames per second as the target output quality~\cite{mejias2024}.
 
-% ─────────────────────────────────────────────────────────────────────────────
 
 \subsection{Latency Sources in a Video Streaming Pipeline}\label{sec:latency-sources}
 The total delay from when a video frame is captured by a camera to when it is displayed on the operator's screen is commonly referred to as glass-to-glass latency. This delay does not originate from a single component but accumulates across each stage of the streaming pipeline~\cite{dobrian2011}. Understanding where latency is introduced at each stage is necessary for identifying bottlenecks and evaluating the overall performance of a streaming system.
@@ -155,7 +154,7 @@ The total delay from when a video frame is captured by a camera to when it is di
 The pipeline can be divided into five sequential stages: capturing, encoding, transmitting, decoding, and rendering. Each stage contributes a portion of the total delay, and the contribution of each depends on the hardware, configuration, and network conditions in use~\cite{kaknjo2018}. The following subsections describe each stage and the mechanisms through which latency is introduced.
 
 \subsubsection{Capturing}\label{subsec:capturing}
-Capturing latency is the delay introduced at the camera before any data enters the network pipeline. It originates from two main sources: the exposure time of the image sensor and the subsequent image processing performed inside the camera~\cite{axis2024}.
+Capturing latency is the delay introduced at the camera before any data enters the network pipeline. It originates from two main sources, the exposure time of the image sensor and the subsequent image processing performed inside the camera~\cite{axis2024}.
  
 The image sensor captures light across all its pixels during one exposure interval before converting the accumulated light energy into digital signals. At 30 frames per second the sensor collects light for approximately 33 milliseconds per frame, meaning that any event occurring just after the start of an exposure interval must wait until the end of that interval before it is registered~\cite{axis2024}. Higher frame rates reduce this waiting time proportionally.
  
@@ -177,7 +176,6 @@ Propagation delay is the time required for a signal to travel physically from th
  
 Variation in the arrival time of packets at the receiver is called jitter. When packets that were sent at regular intervals arrive with uneven spacing, the receiver cannot immediately display them in order. To compensate, a jitter buffer is used on the receiver side to hold incoming packets briefly and release them at a steady rate. While this smooths out the stream, the jitter buffer itself introduces additional fixed delay. A larger buffer tolerates more jitter but increases the total latency, while a smaller buffer reduces delay at the cost of being more sensitive to network variation~\cite{axis2024}.
 
- 
 \subsubsection{Decoding}\label{subsec:decoding}
 Decoding latency is the delay introduced while the receiver decompresses incoming NAL units back into raw video frames for display. The computational steps involved are the inverse of encoding, including entropy decoding, inverse transform, and motion compensation, and their cost depends on the codec and the hardware available~\cite{hamidouche2022}.
  
@@ -186,14 +184,12 @@ Frame reordering is another notable source of decoding delay. When B-frames are 
 When the encoder is configured without B-frames, as is common in low latency streaming, the reordering delay is eliminated and the decoder can output each frame as soon as it is decoded. The remaining decoding latency is then primarily determined by the processing time per frame, which on modern hardware is typically in the range of a few milliseconds~\cite{axis2024}.
 
 \subsubsection{Rendering}\label{subsec:rendering}
-Rendering latency is the delay introduced at the final stage of the pipeline, where a decoded frame is passed to the display and made visible to the viewer. It consists of two main components: the time required for the rendering application to prepare and present the frame to the graphics system, and the time the display itself takes to show it~\cite{axis2024}.
+
+Rendering latency is the delay introduced at the final stage of the pipeline, where a decoded frame is passed to the display and made visible to the viewer. It consists of two main components, the time required for the rendering application to prepare and present the frame to the graphics system, and the time the display itself takes to show it~\cite{axis2024}.
  
 A display can only update its image at the rate defined by its refresh rate, measured in hertz. A monitor running at 60~Hz updates 60 times per second, meaning a new image appears at most once every 16.7~milliseconds. If a decoded frame arrives just after a refresh has occurred, it must wait until the next refresh cycle before it becomes visible, introducing up to one full frame period of additional latency~\cite{leray2018}. Higher refresh rates reduce this waiting time, as the interval between refresh cycles is shorter.
  
 The rendering application may also hold frames in a buffer before handing them to the display, either to synchronise with the refresh cycle or to ensure smooth playback. This buffering adds a predictable but fixed amount of delay. Combined with the display's own internal processing time, rendering latency is typically in the range of one to two frame periods and represents the last contribution to the total glass-to-glass delay~\cite{axis2024}.
-
- 
-% ─────────────────────────────────────────────────────────────────────────────
 
 \subsection{Clock Synchronisation}\label{subsec:clock-sync}
 
@@ -214,7 +210,6 @@ When a hardware GPS reference is not available, clock synchronisation can be ach
 Chrony is an NTP implementation for Linux systems that is designed to maintain accurate synchronisation under variable network conditions. Rather than making abrupt step corrections to the clock, Chrony adjusts the frequency of the local oscillator continuously, which reduces disruption to running processes and improves long-term stability~\cite{chronyproject}. It also tracks the estimated error of each configured time source and selects the most reliable one based on a combination of stratum, distance, and measured jitter.
 
 When synchronised to public internet time servers such as those provided by the \texttt{pool.ntp.org} project, Chrony typically achieves a clock accuracy within a few milliseconds over an internet connection. On a local area network under stable conditions the accuracy improves to tens of microseconds, and with hardware timestamping enabled on the network interface, where the network card rather than the kernel records packet arrival and departure times, sub-microsecond accuracy is possible~\cite{redhat2024chrony, redhat2024hw}.
-% ─────────────────────────────────────────────────────────────────────────────
 
 \subsection{GStreamer}\label{sec:gstreamer}
 GStreamer is an open source multimedia framework written in C that allows developers to construct pipelines of media processing components~\cite{gstreamer_intro}. It was originally developed at the Oregon Graduate Institute in 1999 and has since become a widely used foundation for applications ranging from media playback and transcoding to real-time video streaming and computer vision~\cite{gstreamer_intro}. The framework is built around a modular, plugin based architecture where each processing step is provided by a plugin, and individual components can be combined freely to form a complete processing chain suited to the application at hand.
@@ -225,7 +220,7 @@ The following subsections describe the core concepts of GStreamer that are relev
 \subsubsection{Pipeline and Elements}\label{subsec:pipeline-elements}
 An element is the fundamental building block in GStreamer. Each element performs a single, specific task in the media processing chain, such as reading data from a network socket, decoding a compressed video stream, converting a pixel format, or writing frames to a display. Elements are linked together in sequence to form a pipeline, where the output of one element flows into the input of the next~\cite{gstreamer_elements}.
  
-A pipeline is a specialised container that manages a group of connected elements and coordinates their execution. It provides a shared clock that all elements use to synchronise data, and it handles state transitions for the entire graph as a unit. The three main operational states are NULL, PAUSED, and PLAYING.\@In the PLAYING state, data flows continuously from source elements through any intermediate processing elements and finally into sink elements~\cite{gstreamer_elements}.
+A pipeline is a specialised container that manages a group of connected elements and coordinates their execution. It provides a shared clock that all elements use to synchronise data, and it handles state transitions for the entire graph as a unit. The three main operational states are NULL, PAUSED, and PLAYING. In the PLAYING state, data flows continuously from source elements through any intermediate processing elements and finally into sink elements~\cite{gstreamer_elements}.
  
 Elements are broadly categorised by their role in the pipeline. Source elements produce data and have no input, for example by reading from a camera or a network port. Filter elements receive data, process it, and pass it on, covering tasks such as encoding, decoding, and format conversion. Sink elements consume data at the end of the pipeline and have no output, typically by rendering video to a screen or writing data to a socket~\cite{gstreamer_elements}. By combining elements of these three types, a complete media processing pipeline can be assembled from reusable components without writing the processing logic from scratch.
 
@@ -252,10 +247,9 @@ A probe is installed on a pad using the \texttt{gst\_pad\_add\_probe} function, 
  
 Probes are particularly useful for latency measurement, as they allow the application to record a timestamp at one pad when data enters the pipeline and another timestamp at a downstream pad when the processed data exits. The difference between the two timestamps represents the processing time between those two points in the pipeline~\cite{gstreamer_pipeline_manip}.
 
-% ─────────────────────────────────────────────────────────────────────────────
 
 \subsection{Network and Communication}\label{sec:network}
-The network connecting between the sender and receiver is an important part of any remote operation system. The choice of network technology affects how much data can be sent, how quickly it arrives, and how stable the connection is under varying conditions. The following subsections cover the network technologies relevant to this thesis.
+The network connection between the sender and receiver is an important part of any remote operation system. The choice of network technology affects how much data can be sent, how quickly it arrives, and how stable the connection is under varying conditions. The following subsections cover the network technologies relevant to this thesis.
  
 \subsubsection{Wi-Fi}\label{subsec:wifi}
 Wi-Fi is a family of wireless networking technologies based on the IEEE 802.11 standard. It allows devices to communicate over a local area network using radio frequencies, most commonly 2.4~GHz and 5~GHz~\cite{ieee80211}. The 2.4~GHz band covers longer distances but offers lower maximum data rates, while the 5~GHz band supports higher data rates over shorter distances.
@@ -276,8 +270,6 @@ The main idea behind Tailscale is that devices connect directly to each other ra
  
 WireGuard, which handles the actual data transfer, adds encryption and authentication to every packet passing through the tunnel. The protocol is designed to have low overhead compared to older VPN technologies, which keeps the additional latency introduced by the encrypted tunnel small~\cite{donenfeld2017wireguard}.
 
- 
-% ─────────────────────────────────────────────────────────────────────────────
 
 \subsection{Performance Metrics}\label{sec:metrics}
 Evaluating a video streaming system requires measuring several aspects of its behaviour under different conditions. The metrics covered in this section are latency, packet loss, throughput, CPU usage, and visual quality. Together they give a picture of how the system performs from both a network and a visual standpoint.
@@ -313,7 +305,7 @@ Visual quality in a video streaming context refers to how well the content recei
  
 Image quality assessment (IQA) methods are used to measure these effects in a consistent and repeatable way. They fall into two broad categories. Full reference methods compare a received image against an original, undistorted reference image. Common examples are Peak Signal to Noise Ratio (PSNR) and the Structural Similarity Index (SSIM), both of which quantify the difference between the two images using pixel level calculations~\cite{sara2019}. These methods require access to the original image, which is not always available in a live streaming scenario.
  
-No reference methods, also called blind quality assessment, estimate quality from the received image alone without any original to compare against~\cite{mittal2012}. One well established no reference metric is the Blind/Referenceless Image Spatial Quality Evaluator (BRISQUE), proposed by Mittal et al.~\cite{mittal2012}. BRISQUE analyses the statistical properties of the image using a model of how natural, undistorted images are expected to look. When an image contains distortions such as blur, noise, or compression artefacts, its statistical properties deviate from those of a natural image. BRISQUE quantifies this deviation and outputs a score between 0 and 100, where lower scores indicate better quality and higher scores indicate more visible distortion  as you can see in Figure~\ref{fig:brisqueResult}. The model was trained on a dataset of human quality ratings and is designed to correlate with how a human observer would rate the image~\cite{mittal2012}. BRISQUE has been confirmed in practice by Pennada et al.\ that found that images with lower BRISQUE scores consistently achieved higher AI classification accuracy, demonstrating that the metric reliably reflects the kind of quality degradation that affects downstream tasks~\cite{pennada2023}.
+No reference methods, also called blind quality assessment, estimate quality from the received image alone without any original to compare against~\cite{mittal2012}. One well established no reference metric is the Blind/Referenceless Image Spatial Quality Evaluator (BRISQUE), proposed by Mittal et al.~\cite{mittal2012}. BRISQUE analyses the statistical properties of the image using a model of how natural, undistorted images are expected to look. When an image contains distortions such as blur, noise, or compression artefacts, its statistical properties deviate from those of a natural image. BRISQUE quantifies this deviation and outputs a score between 0 and 100, where lower scores indicate better quality and higher scores indicate more visible distortion as shown in Figure~\ref{fig:brisqueResult}. The model was trained on a dataset of human quality ratings and is designed to correlate with how a human observer would rate the image~\cite{mittal2012}. BRISQUE has been confirmed in practice by Pennada et al.\ that found that images with lower BRISQUE scores consistently achieved higher AI classification accuracy, demonstrating that the metric reliably reflects the kind of quality degradation that affects downstream tasks~\cite{pennada2023}.
 
 \begin{figure}[H]
     \centering
