@@ -21,29 +21,24 @@ Before running any test, confirm the following on **both** PCs:
 
 Always use a matching sender and receiver — codec, transport, and port layout must align.
 
-### H.264
+### Codec Configuration
 
 | Test scenario | Sender script | Receiver script |
 |---|---|---|
-| **Standard** | `senderV22-H-264.py` | `receiverV14-H-264.py` |
-| **720p** | `senderV22-H-264-720p.py` | `receiverV14-H-264.py` |
-| **GPU** | `senderV22-H-264-GPU.py` | `receiverV14-H-264.py` |
-| **Minimal logged** | `sender-minimal-logged.py` | `receiverV14-H-264.py` |
+| **H.264 standard** | `senderV22-H-264.py` | `receiverV14-H-264.py` |
+| **H.264 720p** | `senderV22-H-264-720p.py` | `receiverV14-H-264.py` |
+| **H.264 GPU** | `senderV22-H-264-GPU.py` | `receiverV14-H-264.py` |
+| **H.265 standard** | `senderV22-H-265.py` | `receiverV14-H-265.py` |
+| **H.265 720p** | `senderV22-H-265-720p.py` | `receiverV14-H-265.py` |
+| **H.265 GPU** | `senderV22-H-265-GPU.py` | `receiverV14-H-265.py` |
+| **MJPEG** | `senderV22-MJPEG.py` | `receiverV14-MJPEG.py` |
+
+> `sender-Pure.py` and `sender-minimal-logged.py` are codec-agnostic — they work regardless of which receiver codec is in use. See the debug/minimal variants below.
+
+| Variant | Sender script | Receiver script |
+|---|---|---|
 | **Pure (no logging)** | `sender-Pure.py` | `receiver-Pure.py` |
-
-### H.265
-
-| Test scenario | Sender script | Receiver script |
-|---|---|---|
-| **Standard** | `senderV22-H-265.py` | `receiverV14-H-265.py` |
-| **720p** | `senderV22-H-265-720p.py` | `receiverV14-H-265.py` |
-| **GPU** | `senderV22-H-265-GPU.py` | `receiverV14-H-265.py` |
-
-### MJPEG
-
-| Test scenario | Sender script | Receiver script |
-|---|---|---|
-| **Standard** | `senderV22-MJPEG.py` | `receiverV14-MJPEG.py` |
+| **Minimal logged** | `sender-minimal-logged.py` | *(any matching receiver)* |
 
 ### Transport Protocol
 
