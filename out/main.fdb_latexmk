@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber out/main"] 1781108417.4429 "out/main.bcf" "out/main.bbl" "out/main" 1781108810.3007 0
-  "out/main.bcf" 1781108810.09198 118907 522e9a357588b743a279fe71bd1d73cd "pdflatex"
+["biber out/main"] 1781108417.4429 "out/main.bcf" "out/main.bbl" "out/main" 1781111376.75759 0
+  "out/main.bcf" 1781111376.56348 118907 522e9a357588b743a279fe71bd1d73cd "pdflatex"
   "references.bib" 1780562682.80196 28627 981733392117865b74c4bcaca0194ef4 ""
   (generated)
   "out/main.bbl"
   "out/main.blg"
   (rewritten before read)
-["pdflatex"] 1781108801.11425 "/home/einar/Masterthesis/main.tex" "out/main.pdf" "main" 1781108810.30118 0
+["pdflatex"] 1781111367.89014 "/home/einar/Masterthesis/main.tex" "out/main.pdf" "main" 1781111376.75809 0
   "/etc/texmf/web2c/texmf.cnf" 1773679518.72801 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/home/einar/Masterthesis/main.tex" 1781108659.64205 962 60e47f7cedbf942884c38e8b2b0bfd89 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -314,7 +314,7 @@
   "Images/Theory/SpatialRed.png" 1779715997.6545 86187 2155a34641fc030ccb788225ab0fcbe7 ""
   "Images/Theory/TemperoalRed.png" 1779715997.68265 107855 c1f326046ef9165d64f51cab1ba234a2 ""
   "Images/Theory/ThreeMonitorSetup.png" 1779629156.54848 279909 a99ac2536852b5960b6443a889debda2 ""
-  "Sections/00 Preface.tex" 1781108638.15913 1667 b793dc6ac034d88c0ca42fb031c7933c ""
+  "Sections/00 Preface.tex" 1781111367.49397 1808 297bde27f23b4d9cb0cda919497c9a1b ""
   "Sections/001 Abstract.tex" 1781108640.89508 4606 6c36702631ba182177b99d54874d07b8 ""
   "Sections/01 Introduction.tex" 1781108646.34211 11085 6d751c768667ac360fedea06cd359856 ""
   "Sections/02 Theory.tex" 1781108648.0689 53026 b0f9b3715fa43d29c2798f70f150e23b ""
@@ -350,14 +350,14 @@
   "Sections/Tables/TransportExpDuration.tex" 1781021444.22684 674 ae96b565c0a0934221bd88bdaa0bb4f8 ""
   "Sections/Tables/TransportExpSchedule.tex" 1781021485.07999 765 da7db8c8b372ed4f91762fa53b08f38c ""
   "main.tex" 1781108659.64205 962 60e47f7cedbf942884c38e8b2b0bfd89 ""
-  "out/main.aux" 1781108810.05598 59309 4e54f147260fc7b9d51d4b5a2152076e "pdflatex"
+  "out/main.aux" 1781111376.52648 59309 4e54f147260fc7b9d51d4b5a2152076e "pdflatex"
   "out/main.bbl" 1781108419.02507 117508 0ef14da32c042609b4014f4346cc74d1 "biber out/main"
-  "out/main.lof" 1781108810.09348 4692 311d1d14ff973244bc985a5ca154d623 "pdflatex"
-  "out/main.lot" 1781108810.09348 3767 1edd578f628c6c6bedfd2e93c34b5615 "pdflatex"
-  "out/main.out" 1781108810.08598 22158 959987f5511b073631c3b78fe368619b "pdflatex"
+  "out/main.lof" 1781111376.56596 4692 311d1d14ff973244bc985a5ca154d623 "pdflatex"
+  "out/main.lot" 1781111376.56596 3767 1edd578f628c6c6bedfd2e93c34b5615 "pdflatex"
+  "out/main.out" 1781111376.55648 22158 959987f5511b073631c3b78fe368619b "pdflatex"
   "out/main.pyg" 1781102341.37639 129 0239009554f04a2d64e7ce0fa479ec16 ""
-  "out/main.run.xml" 1781108810.09348 2341 774b1370d7471097fc23c34b072738c2 "pdflatex"
-  "out/main.toc" 1781108810.09348 12167 06d9109e4fe27997b87382a31cba7f39 "pdflatex"
+  "out/main.run.xml" 1781111376.56596 2341 774b1370d7471097fc23c34b072738c2 "pdflatex"
+  "out/main.toc" 1781111376.56596 12167 06d9109e4fe27997b87382a31cba7f39 "pdflatex"
   "packages.sty" 1770296721.34352 6412 0f2b982c0dbe53540c4ea207b4fcb929 ""
   (generated)
   "out/main.aux"
