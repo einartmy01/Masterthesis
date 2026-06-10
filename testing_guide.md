@@ -21,22 +21,45 @@ Before running any test, confirm the following on **both** PCs:
 
 Always use a matching sender and receiver — codec, transport, and port layout must align.
 
+### H.264
+
 | Test scenario | Sender script | Receiver script |
 |---|---|---|
-| **H.264 (standard)** | `senderV22-H-264.py` | `receiverV14-H-264.py` |
-| **H.264 720p** | `senderV22-H-264-720p.py` | `receiverV14-H-264.py` |
-| **H.264 GPU** | `senderV22-H-264-GPU.py` | `receiverV14-H-264.py` |
-| **H.265 (standard)** | `senderV22-H-265.py` | `receiverV14-H-265.py` |
-| **H.265 720p** | `senderV22-H-265-720p.py` | `receiverV14-H-265.py` |
-| **H.265 GPU** | `senderV22-H-265-GPU.py` | `receiverV14-H-265.py` |
-| **MJPEG** | `senderV22-MJPEG.py` | `receiverV14-MJPEG.py` |
+| **Standard** | `senderV22-H-264.py` | `receiverV14-H-264.py` |
+| **720p** | `senderV22-H-264-720p.py` | `receiverV14-H-264.py` |
+| **GPU** | `senderV22-H-264-GPU.py` | `receiverV14-H-264.py` |
+| **Minimal logged** | `sender-minimal-logged.py` | `receiverV14-H-264.py` |
+| **Pure (no logging)** | `sender-Pure.py` | `receiver-Pure.py` |
+
+### H.265
+
+| Test scenario | Sender script | Receiver script |
+|---|---|---|
+| **Standard** | `senderV22-H-265.py` | `receiverV14-H-265.py` |
+| **720p** | `senderV22-H-265-720p.py` | `receiverV14-H-265.py` |
+| **GPU** | `senderV22-H-265-GPU.py` | `receiverV14-H-265.py` |
+
+### MJPEG
+
+| Test scenario | Sender script | Receiver script |
+|---|---|---|
+| **Standard** | `senderV22-MJPEG.py` | `receiverV14-MJPEG.py` |
+
+### Transport Protocol
+
+| Test scenario | Sender script | Receiver script |
+|---|---|---|
 | **UDP/RTP** | `senderV22-UDP-RTP.py` | `receiverV14-UDP-RTP.py` |
 | **UDP/RTP bandwidth** | `senderV22-UDP-RTP-Bandwidth.py` | `receiverV14-UDP-RTP.py` |
-| **UDP/RTP no transcode** | `senderV22-UDP-RTP-No-Transcode.py` | `receiverV14-UDP-RTP.py` |
 | **UDP/SRTP** | `senderV22-UDP-SRTP.py` | `receiverV14-UDP-SRTP.py` |
-| **TCP/RTP** | `senderV22-TCP-RTP.py` | `receiverV15-TCP-RTP.py` |
-| **TCP/RTP bandwidth** | `senderV22-TCP-RTP-Bandwidth.py` | `receiverV15-TCP-RTP.py` |
-| **2 cameras** | `senderV22-H-264-2Cams.py` | `receiverV14-H-264-2Cams.py` |
+| **TCP/RTP** ⚠️ start sender first | `senderV22-TCP-RTP.py` | `receiverV15-TCP-RTP.py` |
+| **TCP/RTP bandwidth** ⚠️ start sender first | `senderV22-TCP-RTP-Bandwidth.py` | `receiverV15-TCP-RTP.py` |
+
+### Multi-Camera
+
+| Test scenario | Sender script | Receiver script |
+|---|---|---|
+| **2 cameras (H.264)** | `senderV22-H-264-2Cams.py` | `receiverV14-H-264-2Cams.py` |
 
 ---
 
@@ -70,13 +93,15 @@ python3 receiverV14-H-264.py
 
 The receiver prints its listening ports and waits for the stream. Log files are written under `logs/` as they arrive.
 
+> **TCP/RTP exception:** For `senderV22-TCP-RTP.py` and `senderV22-TCP-RTP-Bandwidth.py`, the sender acts as the TCP server — start the **sender first**, then the receiver.
+
 ### Step 3 — Start the sender (Sender PC)
 
-In a separate terminal, start the matching sender with `sudo` (required for interface configuration):
+In a separate terminal, start the matching sender with:
 
 ```bash
 cd ~/Masterthesis/Code
-sudo python3 senderV22-H-264.py
+python3 senderV22-H-264.py
 ```
 
 The sender will:
@@ -87,21 +112,6 @@ The sender will:
 ### Step 4 — Stop the test
 
 Stop both scripts with `Ctrl+C`. Stop the **sender first**, then the **receiver**, so the receiver can flush any remaining log data.
-
----
-
-## Minimal/Debug Variants
-
-These stripped-down scripts are useful for verifying connectivity without full logging:
-
-| Script | Purpose |
-|---|---|
-| `sender-Pure.py` | Sender with no logging — only forwards RTP |
-| `receiver-Pure.py` | Receiver with no logging — only displays video |
-| `sender-minimal.py` | Camera reachability check only |
-| `sender-minimal-logged.py` | Minimal sender with transit latency logging |
-
-Run these the same way as the full variants (receiver first, sender second).
 
 ---
 
