@@ -2,6 +2,7 @@
 
 This chapter describes the design of the video streaming system developed in this thesis. It outlines the requirements that shaped the system, the overall architecture and component choices, the GStreamer pipeline design for both the sender and the receiver, the approach used for timestamp-based latency measurement, and the network setup used during testing. Together, these subsections document the reasoning behind the key design decisions made throughout development.
 
+\vspace{5mm}
 \subsection{Requirements}
 
 The requirements for the system are shaped by the operational context of remote train operation, where reliability and low latency are critical. Unlike a controlled lab setting, a moving train introduces real-world challenges such as varying network conditions, physical vibrations, and the need for the system to perform consistently during operation.
@@ -24,6 +25,7 @@ The key requirements identified for the system are:
   \item[Reproducibility.] The setup must be easy to redeploy on new hardware, both for continued development within the project and for future use by other researchers or partners.
 \end{description}
 
+\vspace{5mm}
 \subsection{Development Methodology}\label{subsec:develop_methodology}
 
 \subsubsection{Iterative Design and the Minimum Viable Product}
@@ -43,6 +45,7 @@ Development proceeded in a series of focused sprints, each targeting a specific 
 Early sprints concentrated on establishing the functional baseline. This included configuring the Linux environment, installing GStreamer and its required plugins, connecting a single camera over a wired Ethernet cable, achieving a live display on the receiver, and confirming that probe timestamps could be logged on both machines. Later sprints introduced support for a second and third camera, the configuration variants tested in the experimental evaluation and an attempt on GPS-based clock synchronisation that was eventually set aside in favour of network time synchronisation using NTP.
 
 Each sprint aimed to produce a testable system state, and the results from each round of testing directly shaped the priorities for the next sprint. For example, early latency measurements showed that the GStreamer jitter buffer contributed a major fixed latency, much larger percentage than assumed, which led to disabling it in the baseline configuration. This kind of short feedback loop, in which findings drive the next design decision, is a central characteristic of iterative development as described by Wohlin et al.~\cite{wohlin2012} and is what distinguishes this approach from a linear process.
+\vspace{5mm}
 \subsection{System Overview}
 
 The system consists of two computers, a sender and a receiver connected over a 5G and Wi-Fi network, with three Hikvision IP cameras attached to the sender via a dedicated Ethernet interface using a network switch. The sender computer uses a 5G modem to connect to the receiver which is on the lab Wi-Fi. Originally a GPS-disciplined clock source was supposed to be used, due to problems of overriding computer clock, it was put aside and network regulation of clock source was used with NTP servers from Google, Apple and Cloudflare.
@@ -63,6 +66,7 @@ At the application layer, the sender pulls video from each camera using RTSP ove
     \caption{Application and Transport Layer Setup of Project.}\label{fig:appAndTransSetup}
 \end{figure}
 
+\vspace{5mm}
 \subsection{Components}
 
 The system is built from the following physical and software components.
@@ -77,6 +81,7 @@ The system is built from the following physical and software components.
 
 \textbf{Receiver computer.} A Dell Precision 3591 laptop running Ubuntu acts as the receiver. It is built around Intel Core i7 processor, paired with up to 16 GB of DDR5 memory. The machine connects to the internet through a standard Wi-Fi router and was stationed at a fixed NTNU lab location for the duration of all experiments, simulating a remote operator control room.
 
+\vspace{5mm}
 \subsection{Architecture}
 
 \subsubsection{Network Addressing and Subnet Design}
@@ -113,6 +118,7 @@ The sender connects to the internet through a 5G modem using a dynamically assig
 
 Tailscale and WireGuard do introduce some additional latency compared to a direct connection, as every packet must pass through the encrypted tunnel and be processed by the WireGuard protocol on both ends before being delivered. The overhead is generally small, but it is a consistent addition to every packet and cannot be removed from the measurement results. Running all tests through Tailscale means this overhead is present equally across all configurations, so the results remain comparable to each other, but the absolute latency values will be slightly higher than what a direct connection would produce. The virtual IP layer also adds a small amount of packet size overhead to every transmitted frame, which is necessary to account for when applying the bandwidth constraints in a limited bandwidth test condition.
 
+\vspace{5mm}
 \subsection{Pipeline Design}
 
 \subsubsection{GStreamer}
@@ -173,6 +179,7 @@ The receiver pipeline for each camera stream with configurations, H.264 and UDP 
 
 \textbf{xvimagesink} renders each decoded frame to the display as soon as it arrives. \texttt{sync=false} disables presentation time gating, so frames are shown immediately upon decoding rather than being held to match any clock reference.
 
+\vspace{5mm}
 \subsection{Measurement Design}\label{subsec:measurementdesign}
 This subsection describes the implementations done to get good measurements of the system. Six distinct measurements are collected during a run of the video system, this to get a proper understanding of the trade-offs and benefits of all components tested. An important aspect of all the measurement design was to try to avoid as much noise and disturbance to the main video stream. This is done by separating measurements where possible, but also avoid writing to disk during the run. Instead everything is logged locally before it is written to disk. Writing to disk occur after the video streaming stop, reducing the contribution of workload on the computers.
 

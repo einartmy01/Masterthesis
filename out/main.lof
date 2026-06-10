@@ -28,8 +28,8 @@
 \contentsline {figure}{\numberline {27}{\ignorespaces Video Quality with BRISQUE score graph over time for C1.}}{54}{figure.caption.53}%
 \contentsline {figure}{\numberline {28}{\ignorespaces Average Glass-to-glass latency distribution for T1 UDP \- RTP, lab setup.}}{55}{figure.caption.54}%
 \contentsline {figure}{\numberline {29}{\ignorespaces Average Glass-to-glass latency distribution for C1 H.264, moving experiment.}}{55}{figure.caption.55}%
-\contentsline {figure}{\numberline {30}{\ignorespaces BRISQUE graphs for UDP bandwidth comparison.}}{57}{figure.caption.56}%
-\contentsline {figure}{\numberline {31}{\ignorespaces Graph over the sender pipeline latency for T6, TCP with poor bandwidth. Red line is 95p and yellow is the mean value.}}{57}{figure.caption.57}%
-\contentsline {figure}{\numberline {32}{\ignorespaces Graph over the transit latency for T6, TCP with poor bandwidth. Red line is 95p and yellow is the mean value.}}{58}{figure.caption.58}%
-\contentsline {figure}{\numberline {33}{\ignorespaces CPU usage over time showing a usage spike for test T1.}}{60}{figure.caption.60}%
-\contentsline {figure}{\numberline {34}{\ignorespaces Sender pipeline latency over time showing latency spike for test T1.}}{60}{figure.caption.61}%
+\contentsline {figure}{\numberline {30}{\ignorespaces BRISQUE graphs for UDP bandwidth comparison.}}{58}{figure.caption.56}%
+\contentsline {figure}{\numberline {31}{\ignorespaces Graph over the sender pipeline latency for T6, TCP with poor bandwidth. Red line is 95p and yellow is the mean value.}}{58}{figure.caption.57}%
+\contentsline {figure}{\numberline {32}{\ignorespaces Graph over the transit latency for T6, TCP with poor bandwidth. Red line is 95p and yellow is the mean value.}}{59}{figure.caption.58}%
+\contentsline {figure}{\numberline {33}{\ignorespaces CPU usage over time showing a usage spike for test T1.}}{61}{figure.caption.60}%
+\contentsline {figure}{\numberline {34}{\ignorespaces Sender pipeline latency over time showing latency spike for test T1.}}{61}{figure.caption.61}%

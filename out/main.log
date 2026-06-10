@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.3.16)  9 JUN 2026 18:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.3.16)  10 JUN 2026 18:26
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1225,15 +1225,9 @@ Package gensymb Info: Using \textmu for \micro on input line 10.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-(././title.tex
-<./Images/NTNU_logo.png, id=523, 426.393pt x 110.5731pt>
-File: ./Images/NTNU_logo.png Graphic file (type png)
-<use ./Images/NTNU_logo.png>
-Package pdftex.def Info: ./Images/NTNU_logo.png  used on input line 6.
-(pdftex.def)             Requested size: 170.71393pt x 44.26894pt.
- [1
+(./Sections/00 Preface.tex) [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./Images/NTNU_logo.png>]) (./Sections/00 Preface.tex) [1{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}] (./Sections/001 Abstract.tex) [2] [3] (out/main.toc
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}] (./Sections/001 Abstract.tex) [2] (out/main.toc
 LaTeX Font Info:    Trying to load font information for U+msa on input line 5.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
@@ -1241,11 +1235,11 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 LaTeX Font Info:    Trying to load font information for U+msb on input line 5.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [4] [5] [6])
+) [3] [4] [5])
 \tf@toc=\write9
 \openout9 = `main.toc'.
 
- (out/main.lof [7] [8])
+ [6] (out/main.lof [7])
 \tf@lof=\write10
 \openout10 = `main.lof'.
 
@@ -1253,104 +1247,99 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \tf@lot=\write11
 \openout11 = `main.lot'.
 
- [9] (./Sections/01 Introduction.tex
-pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.20 
-      [1] [2] Excluding 'comment' comment.) [3] (./Sections/02 Theory.tex [4]
-<Images/Theory/ThreeMonitorSetup.png, id=896, 583.17876pt x 364.36125pt>
+ [8] [9] (./Sections/01 Introduction.tex [1] [2] Excluding 'comment' comment.) [3] (./Sections/02 Theory.tex [4]
+<Images/Theory/ThreeMonitorSetup.png, id=906, 583.17876pt x 364.36125pt>
 File: Images/Theory/ThreeMonitorSetup.png Graphic file (type png)
 <use Images/Theory/ThreeMonitorSetup.png>
-Package pdftex.def Info: Images/Theory/ThreeMonitorSetup.png  used on input line 41.
-(pdftex.def)             Requested size: 256.0774pt x 159.99698pt.
+Package pdftex.def Info: Images/Theory/ThreeMonitorSetup.png  used on input line 39.
+(pdftex.def)             Requested size: 341.43436pt x 213.32559pt.
  [5 <./Images/Theory/ThreeMonitorSetup.png>]
-<Images/Theory/SpatialRed.png, id=922, 288.07625pt x 293.095pt>
+<Images/Theory/SpatialRed.png, id=933, 288.07625pt x 293.095pt>
 File: Images/Theory/SpatialRed.png Graphic file (type png)
 <use Images/Theory/SpatialRed.png>
 Package pdftex.def Info: Images/Theory/SpatialRed.png  used on input line 65.
 (pdftex.def)             Requested size: 149.37956pt x 151.9854pt.
-<Images/Theory/TemperoalRed.png, id=925, 557.08125pt x 251.94125pt>
+<Images/Theory/TemperoalRed.png, id=936, 557.08125pt x 251.94125pt>
 File: Images/Theory/TemperoalRed.png Graphic file (type png)
 <use Images/Theory/TemperoalRed.png>
 Package pdftex.def Info: Images/Theory/TemperoalRed.png  used on input line 71.
 (pdftex.def)             Requested size: 256.0774pt x 115.81364pt.
  [6 <./Images/Theory/SpatialRed.png> <./Images/Theory/TemperoalRed.png>]
-<Images/Theory/264265HEVC.png, id=947, 1040.88875pt x 348.30125pt>
+<Images/Theory/264265HEVC.png, id=956, 1040.88875pt x 348.30125pt>
 File: Images/Theory/264265HEVC.png Graphic file (type png)
 <use Images/Theory/264265HEVC.png>
 Package pdftex.def Info: Images/Theory/264265HEVC.png  used on input line 90.
-(pdftex.def)             Requested size: 341.43436pt x 114.24886pt.
- [7 <./Images/Theory/264265HEVC.png>] [8] [9] [10] [11] [12] [13] [14] [15] [16]
-<Images/Theory/BRISQUEResult.png, id=1137, 1384.17125pt x 480.79625pt>
+(pdftex.def)             Requested size: 426.79134pt x 142.80975pt.
+ [7 <./Images/Theory/264265HEVC.png>] [8] [9] [10] [11] [12] [13] [14] [15] [16] [17]
+<Images/Theory/BRISQUEResult.png, id=1153, 1384.17125pt x 480.79625pt>
 File: Images/Theory/BRISQUEResult.png Graphic file (type png)
 <use Images/Theory/BRISQUEResult.png>
-Package pdftex.def Info: Images/Theory/BRISQUEResult.png  used on input line 312.
-(pdftex.def)             Requested size: 341.43436pt x 118.5921pt.
- [17]) [18 <./Images/Theory/BRISQUEResult.png>] (./Sections/03 System Design.tex [19]
-<Images/System/PhysicalSetup2.png, id=1165, 1249.66875pt x 615.29875pt>
+Package pdftex.def Info: Images/Theory/BRISQUEResult.png  used on input line 303.
+(pdftex.def)             Requested size: 362.77524pt x 126.00914pt.
+) [18 <./Images/Theory/BRISQUEResult.png>] (./Sections/03 System Design.tex [19]
+<Images/System/PhysicalSetup2.png, id=1176, 1249.66875pt x 615.29875pt>
 File: Images/System/PhysicalSetup2.png Graphic file (type png)
 <use Images/System/PhysicalSetup2.png>
-Package pdftex.def Info: Images/System/PhysicalSetup2.png  used on input line 54.
+Package pdftex.def Info: Images/System/PhysicalSetup2.png  used on input line 57.
 (pdftex.def)             Requested size: 384.10959pt x 189.1164pt.
  [20]
-<Images/System/ApplicationAndTransportSetup2.png, id=1172, 934.49126pt x 452.69125pt>
+<Images/System/ApplicationAndTransportSetup2.png, id=1183, 934.49126pt x 452.69125pt>
 File: Images/System/ApplicationAndTransportSetup2.png Graphic file (type png)
 <use Images/System/ApplicationAndTransportSetup2.png>
-Package pdftex.def Info: Images/System/ApplicationAndTransportSetup2.png  used on input line 62.
+Package pdftex.def Info: Images/System/ApplicationAndTransportSetup2.png  used on input line 65.
 (pdftex.def)             Requested size: 384.10959pt x 186.07431pt.
  [21 <./Images/System/PhysicalSetup2.png> <./Images/System/ApplicationAndTransportSetup2.png>] [22] (./Sections/Tables/IPSetup.tex)
-<Images/System/SequenceDiagramCompCam.png, id=1188, 996.72375pt x 709.65125pt>
+<Images/System/SequenceDiagramCompCam.png, id=1199, 996.72375pt x 709.65125pt>
 File: Images/System/SequenceDiagramCompCam.png Graphic file (type png)
 <use Images/System/SequenceDiagramCompCam.png>
-Package pdftex.def Info: Images/System/SequenceDiagramCompCam.png  used on input line 102.
+Package pdftex.def Info: Images/System/SequenceDiagramCompCam.png  used on input line 107.
 (pdftex.def)             Requested size: 384.10959pt x 273.47104pt.
  [23 <./Images/System/SequenceDiagramCompCam.png>] [24]
-<Images/System/SenderPipeline.png, id=1201, 1105.12875pt x 701.62125pt>
+<Images/System/SenderPipeline.png, id=1212, 1105.12875pt x 701.62125pt>
 File: Images/System/SenderPipeline.png Graphic file (type png)
 <use Images/System/SenderPipeline.png>
-Package pdftex.def Info: Images/System/SenderPipeline.png  used on input line 134.
+Package pdftex.def Info: Images/System/SenderPipeline.png  used on input line 140.
 (pdftex.def)             Requested size: 426.79134pt x 270.95471pt.
  [25 <./Images/System/SenderPipeline.png>]
-<Images/System/ReceiverPipeline.png, id=1208, 960.58875pt x 597.23125pt>
+<Images/System/ReceiverPipeline.png, id=1219, 960.58875pt x 597.23125pt>
 File: Images/System/ReceiverPipeline.png Graphic file (type png)
 <use Images/System/ReceiverPipeline.png>
-Package pdftex.def Info: Images/System/ReceiverPipeline.png  used on input line 166.
+Package pdftex.def Info: Images/System/ReceiverPipeline.png  used on input line 172.
 (pdftex.def)             Requested size: 426.79134pt x 265.35242pt.
  [26 <./Images/System/ReceiverPipeline.png>]
-<Images/System/SenderProbes.png, id=1216, 1107.13625pt x 777.90625pt>
+<Images/System/SenderProbes.png, id=1227, 1107.13625pt x 777.90625pt>
 File: Images/System/SenderProbes.png Graphic file (type png)
 <use Images/System/SenderProbes.png>
-Package pdftex.def Info: Images/System/SenderProbes.png  used on input line 187.
+Package pdftex.def Info: Images/System/SenderProbes.png  used on input line 194.
 (pdftex.def)             Requested size: 384.10959pt x 269.88542pt.
  [27]
-<Images/System/ReceiverProbes.png, id=1222, 1091.07625pt x 534.99875pt>
+<Images/System/ReceiverProbes.png, id=1232, 1091.07625pt x 534.99875pt>
 File: Images/System/ReceiverProbes.png Graphic file (type png)
 <use Images/System/ReceiverProbes.png>
-Package pdftex.def Info: Images/System/ReceiverProbes.png  used on input line 195.
+Package pdftex.def Info: Images/System/ReceiverProbes.png  used on input line 202.
 (pdftex.def)             Requested size: 384.10959pt x 188.34625pt.
  [28 <./Images/System/SenderProbes.png> <./Images/System/ReceiverProbes.png>] [29]
-<Images/System/BRISQUEProbe.png, id=1238, 964.60374pt x 878.28125pt>
+<Images/System/BRISQUEProbe.png, id=1249, 964.60374pt x 878.28125pt>
 File: Images/System/BRISQUEProbe.png Graphic file (type png)
 <use Images/System/BRISQUEProbe.png>
-Package pdftex.def Info: Images/System/BRISQUEProbe.png  used on input line 229.
+Package pdftex.def Info: Images/System/BRISQUEProbe.png  used on input line 236.
 (pdftex.def)             Requested size: 384.10959pt x 349.73831pt.
  [30 <./Images/System/BRISQUEProbe.png>]) [31] (./Sections/04 Methodology.tex [32] [33] (./Sections/Tables/TransportExpSchedule.tex) [34] (./Sections/Tables/CodecExpSchedule.tex)
-<Images/Test&Equipment/LabSetup.jpg, id=1272, 1282.7925pt x 722.7pt>
+<Images/Test&Equipment/LabSetup.jpg, id=1283, 1282.7925pt x 722.7pt>
 File: Images/Test&Equipment/LabSetup.jpg Graphic file (type jpg)
 <use Images/Test&Equipment/LabSetup.jpg>
-Package pdftex.def Info: Images/Test&Equipment/LabSetup.jpg  used on input line 102.
+Package pdftex.def Info: Images/Test&Equipment/LabSetup.jpg  used on input line 104.
 (pdftex.def)             Requested size: 384.10959pt x 216.39262pt.
  [35]
-<Images/Test&Equipment/Road.png, id=1278, 565.11125pt x 914.41624pt>
+<Images/Test&Equipment/Road.png, id=1289, 565.11125pt x 914.41624pt>
 File: Images/Test&Equipment/Road.png Graphic file (type png)
 <use Images/Test&Equipment/Road.png>
-Package pdftex.def Info: Images/Test&Equipment/Road.png  used on input line 110.
+Package pdftex.def Info: Images/Test&Equipment/Road.png  used on input line 112.
 (pdftex.def)             Requested size: 128.0387pt x 207.17192pt.
-<Images/Test&Equipment/TestOveriewSetup.png, id=1280, 1167.36125pt x 703.62875pt>
+<Images/Test&Equipment/TestOveriewSetup.png, id=1291, 1167.36125pt x 703.62875pt>
 File: Images/Test&Equipment/TestOveriewSetup.png Graphic file (type png)
 <use Images/Test&Equipment/TestOveriewSetup.png>
-Package pdftex.def Info: Images/Test&Equipment/TestOveriewSetup.png  used on input line 118.
+Package pdftex.def Info: Images/Test&Equipment/TestOveriewSetup.png  used on input line 120.
 (pdftex.def)             Requested size: 384.10959pt x 231.5218pt.
  [36 <./Images/Test&Equipment/LabSetup.jpg> <./Images/Test&Equipment/Road.png>] (./Sections/Tables/CameraValues.tex) (./Sections/Tables/FixedValues.tex) [37 <./Images/Test&Equipment/TestOveriewSetup.png>] (./Sections/Tables/TestEquipment.tex
 Overfull \hbox (19.45187pt too wide) in paragraph at lines 4--23
@@ -1358,132 +1347,133 @@ Overfull \hbox (19.45187pt too wide) in paragraph at lines 4--23
  []
 
 )
-<Images/Test&Equipment/Cam0Outside (Copy).jpg, id=1301, 1269.74374pt x 713.66624pt>
+<Images/Test&Equipment/Cam0Outside (Copy).jpg, id=1313, 1269.74374pt x 713.66624pt>
 File: Images/Test&Equipment/Cam0Outside (Copy).jpg Graphic file (type jpg)
 <use Images/Test&Equipment/Cam0Outside (Copy).jpg>
-Package pdftex.def Info: Images/Test&Equipment/Cam0Outside (Copy).jpg  used on input line 142.
+Package pdftex.def Info: Images/Test&Equipment/Cam0Outside (Copy).jpg  used on input line 144.
 (pdftex.def)             Requested size: 136.57634pt x 76.76117pt.
-<Images/Test&Equipment/Cam1Outside (Copy).jpg, id=1302, 1269.74374pt x 714.67pt>
+<Images/Test&Equipment/Cam1Outside (Copy).jpg, id=1314, 1269.74374pt x 714.67pt>
 File: Images/Test&Equipment/Cam1Outside (Copy).jpg Graphic file (type jpg)
 <use Images/Test&Equipment/Cam1Outside (Copy).jpg>
-Package pdftex.def Info: Images/Test&Equipment/Cam1Outside (Copy).jpg  used on input line 148.
+Package pdftex.def Info: Images/Test&Equipment/Cam1Outside (Copy).jpg  used on input line 150.
 (pdftex.def)             Requested size: 136.57634pt x 76.86914pt.
-<Images/Test&Equipment/Cam2Outside (Copy).jpg, id=1303, 1282.7925pt x 722.7pt>
+<Images/Test&Equipment/Cam2Outside (Copy).jpg, id=1315, 1282.7925pt x 722.7pt>
 File: Images/Test&Equipment/Cam2Outside (Copy).jpg Graphic file (type jpg)
 <use Images/Test&Equipment/Cam2Outside (Copy).jpg>
-Package pdftex.def Info: Images/Test&Equipment/Cam2Outside (Copy).jpg  used on input line 154.
+Package pdftex.def Info: Images/Test&Equipment/Cam2Outside (Copy).jpg  used on input line 156.
 (pdftex.def)             Requested size: 136.57634pt x 76.93886pt.
-<Images/Test&Equipment/CarSetup2.jpg, id=1304, 1282.7925pt x 722.7pt>
+<Images/Test&Equipment/CarSetup2.jpg, id=1316, 1282.7925pt x 722.7pt>
 File: Images/Test&Equipment/CarSetup2.jpg Graphic file (type jpg)
 <use Images/Test&Equipment/CarSetup2.jpg>
-Package pdftex.def Info: Images/Test&Equipment/CarSetup2.jpg  used on input line 174.
+Package pdftex.def Info: Images/Test&Equipment/CarSetup2.jpg  used on input line 164.
 (pdftex.def)             Requested size: 384.10959pt x 216.39262pt.
-<Images/Test&Equipment/NetworkModem.jpg, id=1305, 1033.8625pt x 1390.19376pt>
+<Images/Test&Equipment/NetworkModem.jpg, id=1317, 1033.8625pt x 1390.19376pt>
 File: Images/Test&Equipment/NetworkModem.jpg Graphic file (type jpg)
 <use Images/Test&Equipment/NetworkModem.jpg>
-Package pdftex.def Info: Images/Test&Equipment/NetworkModem.jpg  used on input line 182.
+Package pdftex.def Info: Images/Test&Equipment/NetworkModem.jpg  used on input line 172.
 (pdftex.def)             Requested size: 149.37956pt x 200.8623pt.
-<Images/Test&Equipment/NetworkSwitch.jpg, id=1306, 1282.7925pt x 722.7pt>
+<Images/Test&Equipment/NetworkSwitch.jpg, id=1318, 1282.7925pt x 722.7pt>
 File: Images/Test&Equipment/NetworkSwitch.jpg Graphic file (type jpg)
 <use Images/Test&Equipment/NetworkSwitch.jpg>
-Package pdftex.def Info: Images/Test&Equipment/NetworkSwitch.jpg  used on input line 189.
+Package pdftex.def Info: Images/Test&Equipment/NetworkSwitch.jpg  used on input line 179.
 (pdftex.def)             Requested size: 234.73653pt x 132.24178pt.
  [38 <./Images/Test&Equipment/Cam0Outside (Copy).jpg> <./Images/Test&Equipment/Cam1Outside (Copy).jpg> <./Images/Test&Equipment/Cam2Outside (Copy).jpg>] [39 <./Images/Test&Equipment/CarSetup2.jpg> <./Images/Test&Equipment/NetworkModem.jpg> <./Images/Test&Equipment/NetworkSwitch.jpg>] [40] [41] [42] [43]) [44] (./Sections/05 Results.tex (./Sections/Tables/TransportExpDuration.tex) (./Sections/Tables/CodecExpDuration.tex) [45] (./Sections/Tables/Results/T-send-latency.tex) (./Sections/Tables/Results/C-send-latency.tex)
-<Code/Analyzers/graphs/C1-26.05-09:49/sender_pipeline_26.05-09:49_analysis.png, id=1360, 867.24pt x 505.89pt>
+<Code/Analyzers/graphs/C1-26.05-09:49/sender_pipeline_26.05-09:49_analysis.png, id=1370, 867.24pt x 505.89pt>
 File: Code/Analyzers/graphs/C1-26.05-09:49/sender_pipeline_26.05-09:49_analysis.png Graphic file (type png)
 <use Code/Analyzers/graphs/C1-26.05-09:49/sender_pipeline_26.05-09:49_analysis.png>
-Package pdftex.def Info: Code/Analyzers/graphs/C1-26.05-09:49/sender_pipeline_26.05-09:49_analysis.png  used on input line 32.
+Package pdftex.def Info: Code/Analyzers/graphs/C1-26.05-09:49/sender_pipeline_26.05-09:49_analysis.png  used on input line 33.
 (pdftex.def)             Requested size: 405.45045pt x 236.5178pt.
  [46] (./Sections/Tables/Results/T-transit-raw.tex) (./Sections/Tables/Results/T-transit-latency.tex) [47 <./Code/Analyzers/graphs/C1-26.05-09:49/sender_pipeline_26.05-09:49_analysis.png>] (./Sections/Tables/Results/C-transit-latency.tex)
-<Code/Analyzers/graphs/C1-26.05-09:49/transit_result_26.05-09:49_analysis.png, id=1375, 1011.78pt x 361.35pt>
+<Code/Analyzers/graphs/C1-26.05-09:49/transit_result_26.05-09:49_analysis.png, id=1386, 1011.78pt x 361.35pt>
 File: Code/Analyzers/graphs/C1-26.05-09:49/transit_result_26.05-09:49_analysis.png Graphic file (type png)
 <use Code/Analyzers/graphs/C1-26.05-09:49/transit_result_26.05-09:49_analysis.png>
-Package pdftex.def Info: Code/Analyzers/graphs/C1-26.05-09:49/transit_result_26.05-09:49_analysis.png  used on input line 50.
+Package pdftex.def Info: Code/Analyzers/graphs/C1-26.05-09:49/transit_result_26.05-09:49_analysis.png  used on input line 51.
 (pdftex.def)             Requested size: 405.45045pt x 144.8076pt.
  (./Sections/Tables/Results/T-rec-latency.tex) (./Sections/Tables/Results/C-rec-latency.tex) [48 <./Code/Analyzers/graphs/C1-26.05-09:49/transit_result_26.05-09:49_analysis.png>]
-<Code/Analyzers/graphs/C1-26.05-09:49/receiver_pipeline_26.05-09:49_analysis.png, id=1381, 867.24pt x 505.89pt>
+<Code/Analyzers/graphs/C1-26.05-09:49/receiver_pipeline_26.05-09:49_analysis.png, id=1392, 867.24pt x 505.89pt>
 File: Code/Analyzers/graphs/C1-26.05-09:49/receiver_pipeline_26.05-09:49_analysis.png Graphic file (type png)
 <use Code/Analyzers/graphs/C1-26.05-09:49/receiver_pipeline_26.05-09:49_analysis.png>
-Package pdftex.def Info: Code/Analyzers/graphs/C1-26.05-09:49/receiver_pipeline_26.05-09:49_analysis.png  used on input line 62.
+Package pdftex.def Info: Code/Analyzers/graphs/C1-26.05-09:49/receiver_pipeline_26.05-09:49_analysis.png  used on input line 63.
 (pdftex.def)             Requested size: 405.45045pt x 236.5178pt.
  (./Sections/Tables/Results/T-end-latency.tex) (./Sections/Tables/Results/C-end-latency.tex) [49 <./Code/Analyzers/graphs/C1-26.05-09:49/receiver_pipeline_26.05-09:49_analysis.png>]
-<Images/Results/E2ELatencyT1.png, id=1390, 900.36375pt x 207.77625pt>
+<Images/Results/E2ELatencyT1.png, id=1401, 900.36375pt x 207.77625pt>
 File: Images/Results/E2ELatencyT1.png Graphic file (type png)
 <use Images/Results/E2ELatencyT1.png>
-Package pdftex.def Info: Images/Results/E2ELatencyT1.png  used on input line 79.
+Package pdftex.def Info: Images/Results/E2ELatencyT1.png  used on input line 80.
 (pdftex.def)             Requested size: 277.41176pt x 64.01683pt.
-<Images/Results/E2ELatencyC1.png, id=1391, 900.36375pt x 207.77625pt>
+<Images/Results/E2ELatencyC1.png, id=1402, 900.36375pt x 207.77625pt>
 File: Images/Results/E2ELatencyC1.png Graphic file (type png)
 <use Images/Results/E2ELatencyC1.png>
-Package pdftex.def Info: Images/Results/E2ELatencyC1.png  used on input line 85.
+Package pdftex.def Info: Images/Results/E2ELatencyC1.png  used on input line 86.
 (pdftex.def)             Requested size: 277.41176pt x 64.01683pt.
  (./Sections/Tables/Results/T-packetloss.tex) (./Sections/Tables/Results/C-packetloss.tex) [50 <./Images/Results/E2ELatencyT1.png> <./Images/Results/E2ELatencyC1.png>] (./Sections/Tables/Results/T-throughput.tex) (./Sections/Tables/Results/C-throughput.tex)
-<Code/Analyzers/graphs/C1-26.05-09:49/throughput_26.05-09-49.png, id=1398, 1011.78pt x 361.35pt>
+<Code/Analyzers/graphs/C1-26.05-09:49/throughput_26.05-09-49.png, id=1410, 1011.78pt x 361.35pt>
 File: Code/Analyzers/graphs/C1-26.05-09:49/throughput_26.05-09-49.png Graphic file (type png)
 <use Code/Analyzers/graphs/C1-26.05-09:49/throughput_26.05-09-49.png>
-Package pdftex.def Info: Code/Analyzers/graphs/C1-26.05-09:49/throughput_26.05-09-49.png  used on input line 107.
+Package pdftex.def Info: Code/Analyzers/graphs/C1-26.05-09:49/throughput_26.05-09-49.png  used on input line 110.
 (pdftex.def)             Requested size: 405.45045pt x 144.8076pt.
  [51] (./Sections/Tables/Results/T-cpu.tex) (./Sections/Tables/Results/C-cpu.tex)
-<Code/Analyzers/graphs/C1-26.05-09:49/sender_cpu_26.05-09:49_analysis.png, id=1405, 1004.0712pt x 569.9694pt>
+<Code/Analyzers/graphs/C1-26.05-09:49/sender_cpu_26.05-09:49_analysis.png, id=1415, 1004.0712pt x 569.9694pt>
 File: Code/Analyzers/graphs/C1-26.05-09:49/sender_cpu_26.05-09:49_analysis.png Graphic file (type png)
 <use Code/Analyzers/graphs/C1-26.05-09:49/sender_cpu_26.05-09:49_analysis.png>
-Package pdftex.def Info: Code/Analyzers/graphs/C1-26.05-09:49/sender_cpu_26.05-09:49_analysis.png  used on input line 122.
+Package pdftex.def Info: Code/Analyzers/graphs/C1-26.05-09:49/sender_cpu_26.05-09:49_analysis.png  used on input line 126.
 (pdftex.def)             Requested size: 405.45045pt x 230.15797pt.
  [52 <./Code/Analyzers/graphs/C1-26.05-09:49/throughput_26.05-09-49.png>] (./Sections/Tables/Results/T-quality.tex) (./Sections/Tables/Results/C-quality.tex)
-<Code/Analyzers/graphs/C1-26.05-09:49/quality_plot_26.05-09:49.png, id=1411, 859.0494pt x 768.9528pt>
+<Code/Analyzers/graphs/C1-26.05-09:49/quality_plot_26.05-09:49.png, id=1422, 859.0494pt x 768.9528pt>
 File: Code/Analyzers/graphs/C1-26.05-09:49/quality_plot_26.05-09:49.png Graphic file (type png)
 <use Code/Analyzers/graphs/C1-26.05-09:49/quality_plot_26.05-09:49.png>
-Package pdftex.def Info: Code/Analyzers/graphs/C1-26.05-09:49/quality_plot_26.05-09:49.png  used on input line 136.
+Package pdftex.def Info: Code/Analyzers/graphs/C1-26.05-09:49/quality_plot_26.05-09:49.png  used on input line 141.
 (pdftex.def)             Requested size: 405.45045pt x 362.9332pt.
  [53 <./Code/Analyzers/graphs/C1-26.05-09:49/sender_cpu_26.05-09:49_analysis.png>]) [54 <./Code/Analyzers/graphs/C1-26.05-09:49/quality_plot_26.05-09:49.png>] (./Sections/06 Discussion.tex
-<Images/Discussion/TotalLatencyT1Avg.png, id=1426, 1062.97125pt x 223.83624pt>
+<Images/Discussion/TotalLatencyT1Avg.png, id=1437, 1062.97125pt x 223.83624pt>
 File: Images/Discussion/TotalLatencyT1Avg.png Graphic file (type png)
 <use Images/Discussion/TotalLatencyT1Avg.png>
 Package pdftex.def Info: Images/Discussion/TotalLatencyT1Avg.png  used on input line 20.
 (pdftex.def)             Requested size: 405.45045pt x 85.3797pt.
-<Images/Discussion/TotalLatencyC1Avg.png, id=1427, 986.68625pt x 223.83624pt>
+<Images/Discussion/TotalLatencyC1Avg.png, id=1438, 986.68625pt x 223.83624pt>
 File: Images/Discussion/TotalLatencyC1Avg.png Graphic file (type png)
 <use Images/Discussion/TotalLatencyC1Avg.png>
 Package pdftex.def Info: Images/Discussion/TotalLatencyC1Avg.png  used on input line 26.
 (pdftex.def)             Requested size: 405.45045pt x 91.97838pt.
  [55 <./Images/Discussion/TotalLatencyT1Avg.png> <./Images/Discussion/TotalLatencyC1Avg.png>] [56]
-<Images/Discussion/T5UDPBandwidthBrisque.png, id=1440, 1016.79875pt x 276.03125pt>
+<Images/Discussion/T5UDPBandwidthBrisque.png, id=1453, 1016.79875pt x 276.03125pt>
 File: Images/Discussion/T5UDPBandwidthBrisque.png Graphic file (type png)
 <use Images/Discussion/T5UDPBandwidthBrisque.png>
-Package pdftex.def Info: Images/Discussion/T5UDPBandwidthBrisque.png  used on input line 58.
+Package pdftex.def Info: Images/Discussion/T5UDPBandwidthBrisque.png  used on input line 68.
 (pdftex.def)             Requested size: 196.32687pt x 53.29727pt.
-<Images/Discussion/T1UDPBrisque.png, id=1441, 1016.79875pt x 276.03125pt>
+<Images/Discussion/T1UDPBrisque.png, id=1454, 1016.79875pt x 276.03125pt>
 File: Images/Discussion/T1UDPBrisque.png Graphic file (type png)
 <use Images/Discussion/T1UDPBrisque.png>
-Package pdftex.def Info: Images/Discussion/T1UDPBrisque.png  used on input line 64.
+Package pdftex.def Info: Images/Discussion/T1UDPBrisque.png  used on input line 74.
 (pdftex.def)             Requested size: 196.32687pt x 53.29727pt.
-<Code/Analyzers/graphs/T6-25.05-17:05/sender_pipeline_25.05-17:05_analysis.png, id=1443, 867.24pt x 505.89pt>
+ [57]
+<Code/Analyzers/graphs/T6-25.05-17:05/sender_pipeline_25.05-17:05_analysis.png, id=1460, 867.24pt x 505.89pt>
 File: Code/Analyzers/graphs/T6-25.05-17:05/sender_pipeline_25.05-17:05_analysis.png Graphic file (type png)
 <use Code/Analyzers/graphs/T6-25.05-17:05/sender_pipeline_25.05-17:05_analysis.png>
-Package pdftex.def Info: Code/Analyzers/graphs/T6-25.05-17:05/sender_pipeline_25.05-17:05_analysis.png  used on input line 74.
+Package pdftex.def Info: Code/Analyzers/graphs/T6-25.05-17:05/sender_pipeline_25.05-17:05_analysis.png  used on input line 84.
 (pdftex.def)             Requested size: 405.45045pt x 236.5178pt.
-<Code/Analyzers/graphs/T6-25.05-17:05/transit_result_25.05-17:05_analysis.png, id=1446, 1011.78pt x 361.35pt>
+<Code/Analyzers/graphs/T6-25.05-17:05/transit_result_25.05-17:05_analysis.png, id=1463, 1011.78pt x 361.35pt>
 File: Code/Analyzers/graphs/T6-25.05-17:05/transit_result_25.05-17:05_analysis.png Graphic file (type png)
 <use Code/Analyzers/graphs/T6-25.05-17:05/transit_result_25.05-17:05_analysis.png>
-Package pdftex.def Info: Code/Analyzers/graphs/T6-25.05-17:05/transit_result_25.05-17:05_analysis.png  used on input line 82.
+Package pdftex.def Info: Code/Analyzers/graphs/T6-25.05-17:05/transit_result_25.05-17:05_analysis.png  used on input line 92.
 (pdftex.def)             Requested size: 405.45045pt x 144.8076pt.
- [57 <./Images/Discussion/T5UDPBandwidthBrisque.png> <./Images/Discussion/T1UDPBrisque.png> <./Code/Analyzers/graphs/T6-25.05-17:05/sender_pipeline_25.05-17:05_analysis.png>] (./Sections/Tables/Results/C-notranscode-latency-summary.tex) [58 <./Code/Analyzers/graphs/T6-25.05-17:05/transit_result_25.05-17:05_analysis.png>] [59]
-<Images/Discussion/CPUusageT1.png, id=1469, 1144.275pt x 435.6275pt>
+ [58 <./Images/Discussion/T5UDPBandwidthBrisque.png> <./Images/Discussion/T1UDPBrisque.png> <./Code/Analyzers/graphs/T6-25.05-17:05/sender_pipeline_25.05-17:05_analysis.png>] (./Sections/Tables/Results/C-notranscode-latency-summary.tex) [59 <./Code/Analyzers/graphs/T6-25.05-17:05/transit_result_25.05-17:05_analysis.png>] [60]
+<Images/Discussion/CPUusageT1.png, id=1486, 1144.275pt x 435.6275pt>
 File: Images/Discussion/CPUusageT1.png Graphic file (type png)
 <use Images/Discussion/CPUusageT1.png>
-Package pdftex.def Info: Images/Discussion/CPUusageT1.png  used on input line 132.
+Package pdftex.def Info: Images/Discussion/CPUusageT1.png  used on input line 142.
 (pdftex.def)             Requested size: 405.45045pt x 154.35304pt.
-<Images/Discussion/SenderLatencyT1.png, id=1470, 1127.21124pt x 308.15125pt>
+<Images/Discussion/SenderLatencyT1.png, id=1487, 1127.21124pt x 308.15125pt>
 File: Images/Discussion/SenderLatencyT1.png Graphic file (type png)
 <use Images/Discussion/SenderLatencyT1.png>
-Package pdftex.def Info: Images/Discussion/SenderLatencyT1.png  used on input line 138.
+Package pdftex.def Info: Images/Discussion/SenderLatencyT1.png  used on input line 148.
 (pdftex.def)             Requested size: 405.45045pt x 110.84032pt.
- [60 <./Images/Discussion/CPUusageT1.png> <./Images/Discussion/SenderLatencyT1.png>] [61] [62] Excluding 'comment' comment. [63] [64]) [65] (./Sections/07 Conclusion.tex [66]) [67]
+ [61 <./Images/Discussion/CPUusageT1.png> <./Images/Discussion/SenderLatencyT1.png>] [62] [63] [64] [65]) [66] (./Sections/07 Conclusion.tex [67]) [68]
 Overfull \hbox (0.21512pt too wide) in paragraph at lines 45--45
 []\OT1/cmr/m/n/10 Inzirillo Francesco et al. \OT1/cmr/m/it/10 D5.4 - Doc-u-ment-a-tion of use cases for Re-mote Driv-ing\OT1/cmr/m/n/10 . FP2R2DATO
  []
 
-[68]
+[69]
 Overfull \hbox (0.75958pt too wide) in paragraph at lines 45--45
 \OT1/cmr/m/it/10 Trans-ac-tions on Cir-cuits and Sys-tems for Video Tech-no-logy \OT1/cmr/m/n/10 13 (2003). \OT1/cmr/m/sc/10 url\OT1/cmr/m/n/10 : [][]$\OT1/cmss/m/n/10 https : / / ieeexplore .
  []
@@ -1503,40 +1493,87 @@ Overfull \hbox (27.14835pt too wide) in paragraph at lines 45--45
 \OT1/cmss/m/n/10 Video[]Latency[]Measurement[]between[]a[]Robot[]and[]Its[]Remote[]Control[]Station[]Causes[]and[]Mitigation$[][]
  []
 
-[69]
+[70]
 Overfull \hbox (12.4204pt too wide) in paragraph at lines 45--45
 []\OT1/cmr/m/n/10 GStreamer Pro-ject. \OT1/cmr/m/it/10 Sink Ele-ments\OT1/cmr/m/n/10 . 2024. \OT1/cmr/m/sc/10 url\OT1/cmr/m/n/10 : [][]$\OT1/cmss/m/n/10 https : / / gstreamer . freedesktop . org / documentation /
  []
 
-[70]
+[71]
 Overfull \hbox (3.58064pt too wide) in paragraph at lines 45--45
 []\OT1/cmr/m/n/10 Umme Sara, Morium Ak-ter and Mo-hammad Shorif Ud-din. `  Im-age Qual-ity As-sess-ment through
  []
 
-[71] [72] (out/main.aux)
+[72] [73] (./Appendices/Appendix.tex
+
+pdfTeX warning: pdflatex (file ./Appendices/NTNU_AI_Declaration.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Appendices/NTNU_AI_Declaration.pdf, id=1674, 597.50829pt x 845.0471pt>
+File: Appendices/NTNU_AI_Declaration.pdf Graphic file (type pdf)
+<use Appendices/NTNU_AI_Declaration.pdf>
+Package pdftex.def Info: Appendices/NTNU_AI_Declaration.pdf  used on input line 11.
+(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
+
+
+pdfTeX warning: pdflatex (file ./Appendices/NTNU_AI_Declaration.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+File: Appendices/NTNU_AI_Declaration.pdf Graphic file (type pdf)
+<use Appendices/NTNU_AI_Declaration.pdf>
+Package pdftex.def Info: Appendices/NTNU_AI_Declaration.pdf  used on input line 11.
+(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
+
+
+pdfTeX warning: pdflatex (file ./Appendices/NTNU_AI_Declaration.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+
+
+pdfTeX warning: pdflatex (file ./Appendices/NTNU_AI_Declaration.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Appendices/NTNU_AI_Declaration.pdf, id=1677, page=1, 597.50829pt x 845.0471pt>
+File: Appendices/NTNU_AI_Declaration.pdf Graphic file (type pdf)
+<use Appendices/NTNU_AI_Declaration.pdf, page 1>
+Package pdftex.def Info: Appendices/NTNU_AI_Declaration.pdf , page1 used on input line 11.
+(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
+File: Appendices/NTNU_AI_Declaration.pdf Graphic file (type pdf)
+<use Appendices/NTNU_AI_Declaration.pdf, page 1>
+Package pdftex.def Info: Appendices/NTNU_AI_Declaration.pdf , page1 used on input line 11.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+[74]
+File: Appendices/NTNU_AI_Declaration.pdf Graphic file (type pdf)
+<use Appendices/NTNU_AI_Declaration.pdf, page 1>
+Package pdftex.def Info: Appendices/NTNU_AI_Declaration.pdf , page1 used on input line 11.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+File: Appendices/NTNU_AI_Declaration.pdf Graphic file (type pdf)
+<use Appendices/NTNU_AI_Declaration.pdf, page 1>
+Package pdftex.def Info: Appendices/NTNU_AI_Declaration.pdf , page1 used on input line 11.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+File: Appendices/NTNU_AI_Declaration.pdf Graphic file (type pdf)
+<use Appendices/NTNU_AI_Declaration.pdf, page 1>
+Package pdftex.def Info: Appendices/NTNU_AI_Declaration.pdf , page1 used on input line 11.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+ [75
+
+ <./Appendices/NTNU_AI_Declaration.pdf>]) (out/main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 074CE82FC322793F0CCF0FF90A439A96;21457.
+(rerunfilecheck)             Checksum: 959987F5511B073631C3B78FE368619B;22158.
+runsystem(rm main.pyg)...executed.
+
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 43572 strings out of 474222
- 913554 string characters out of 5748733
- 1955975 words of memory out of 5000000
- 64663 multiletter control sequences out of 15000+600000
- 573948 words of font info for 92 fonts, out of 8000000 for 9000
+ 43581 strings out of 474222
+ 914073 string characters out of 5748733
+ 1954975 words of memory out of 5000000
+ 64665 multiletter control sequences out of 15000+600000
+ 572393 words of font info for 87 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 117i,14n,121p,1609b,3014s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on out/main.pdf (82 pages, 5875135 bytes).
+ 117i,17n,121p,1609b,3014s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on out/main.pdf (84 pages, 5904026 bytes).
 PDF statistics:
- 1804 PDF objects out of 2073 (max. 8388607)
- 1592 compressed objects within 16 object streams
- 342 named destinations out of 1000 (max. 500000)
- 1240 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1860 PDF objects out of 2073 (max. 8388607)
+ 1635 compressed objects within 17 object streams
+ 348 named destinations out of 1000 (max. 500000)
+ 1287 words of extra memory for PDF output out of 10000 (max. 10000000)
 

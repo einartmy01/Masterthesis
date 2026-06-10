@@ -1,6 +1,6 @@
 \babel@toc {british}{}\relax 
-\contentsline {section}{List of Figures}{viii}{Doc-Start}%
-\contentsline {section}{List of Tables}{ix}{Doc-Start}%
+\contentsline {section}{List of Figures}{vii}{Doc-Start}%
+\contentsline {section}{List of Tables}{viii}{Doc-Start}%
 \contentsline {section}{\numberline {1}Introduction}{1}{section.1}%
 \contentsline {subsection}{\numberline {1.1}Background and Motivation}{1}{subsection.1.1}%
 \contentsline {subsection}{\numberline {1.2}Problem}{1}{subsection.1.2}%
@@ -15,7 +15,7 @@
 \contentsline {subsubsection}{\numberline {2.1.3}Latency Requirements and Regulations}{5}{subsubsection.2.1.3}%
 \contentsline {subsection}{\numberline {2.2}Video Streaming}{6}{subsection.2.2}%
 \contentsline {subsection}{\numberline {2.3}Video Compression}{6}{subsection.2.3}%
-\contentsline {subsubsection}{\numberline {2.3.1}H.264}{6}{subsubsection.2.3.1}%
+\contentsline {subsubsection}{\numberline {2.3.1}H.264}{7}{subsubsection.2.3.1}%
 \contentsline {subsubsection}{\numberline {2.3.2}H.265}{7}{subsubsection.2.3.2}%
 \contentsline {subsubsection}{\numberline {2.3.3}Frame Types}{7}{subsubsection.2.3.3}%
 \contentsline {subsubsection}{\numberline {2.3.4}NAL Units}{8}{subsubsection.2.3.4}%
@@ -24,30 +24,30 @@
 \contentsline {subsubsection}{\numberline {2.4.1}RTP and SRTP}{8}{subsubsection.2.4.1}%
 \contentsline {subsubsection}{\numberline {2.4.2}UDP}{9}{subsubsection.2.4.2}%
 \contentsline {subsubsection}{\numberline {2.4.3}TCP}{9}{subsubsection.2.4.3}%
-\contentsline {subsection}{\numberline {2.5}Streaming Parameters}{9}{subsection.2.5}%
-\contentsline {subsubsection}{\numberline {2.5.1}Bandwidth}{9}{subsubsection.2.5.1}%
+\contentsline {subsection}{\numberline {2.5}Streaming Parameters}{10}{subsection.2.5}%
+\contentsline {subsubsection}{\numberline {2.5.1}Bandwidth}{10}{subsubsection.2.5.1}%
 \contentsline {subsubsection}{\numberline {2.5.2}Resolution}{10}{subsubsection.2.5.2}%
 \contentsline {subsection}{\numberline {2.6}Latency Sources in a Video Streaming Pipeline}{10}{subsection.2.6}%
 \contentsline {subsubsection}{\numberline {2.6.1}Capturing}{10}{subsubsection.2.6.1}%
-\contentsline {subsubsection}{\numberline {2.6.2}Encoding}{10}{subsubsection.2.6.2}%
+\contentsline {subsubsection}{\numberline {2.6.2}Encoding}{11}{subsubsection.2.6.2}%
 \contentsline {subsubsection}{\numberline {2.6.3}Transmitting}{11}{subsubsection.2.6.3}%
 \contentsline {subsubsection}{\numberline {2.6.4}Decoding}{11}{subsubsection.2.6.4}%
-\contentsline {subsubsection}{\numberline {2.6.5}Rendering}{11}{subsubsection.2.6.5}%
+\contentsline {subsubsection}{\numberline {2.6.5}Rendering}{12}{subsubsection.2.6.5}%
 \contentsline {subsection}{\numberline {2.7}Clock Synchronisation}{12}{subsection.2.7}%
 \contentsline {subsubsection}{\numberline {2.7.1}GPS-Based Clock Synchronisation}{12}{subsubsection.2.7.1}%
-\contentsline {subsubsection}{\numberline {2.7.2}Network-Based Clock Synchronisation with Chrony}{12}{subsubsection.2.7.2}%
+\contentsline {subsubsection}{\numberline {2.7.2}Network-Based Clock Synchronisation with Chrony}{13}{subsubsection.2.7.2}%
 \contentsline {subsection}{\numberline {2.8}GStreamer}{13}{subsection.2.8}%
 \contentsline {subsubsection}{\numberline {2.8.1}Pipeline and Elements}{13}{subsubsection.2.8.1}%
 \contentsline {subsubsection}{\numberline {2.8.2}Pads}{14}{subsubsection.2.8.2}%
 \contentsline {subsubsection}{\numberline {2.8.3}Sinks}{14}{subsubsection.2.8.3}%
-\contentsline {subsubsection}{\numberline {2.8.4}Probes}{14}{subsubsection.2.8.4}%
+\contentsline {subsubsection}{\numberline {2.8.4}Probes}{15}{subsubsection.2.8.4}%
 \contentsline {subsection}{\numberline {2.9}Network and Communication}{15}{subsection.2.9}%
 \contentsline {subsubsection}{\numberline {2.9.1}Wi-Fi}{15}{subsubsection.2.9.1}%
 \contentsline {subsubsection}{\numberline {2.9.2}Cellular and 5G}{15}{subsubsection.2.9.2}%
-\contentsline {subsubsection}{\numberline {2.9.3}Tailscale}{15}{subsubsection.2.9.3}%
+\contentsline {subsubsection}{\numberline {2.9.3}Tailscale}{16}{subsubsection.2.9.3}%
 \contentsline {subsection}{\numberline {2.10}Performance Metrics}{16}{subsection.2.10}%
 \contentsline {subsubsection}{\numberline {2.10.1}Latency}{16}{subsubsection.2.10.1}%
-\contentsline {subsubsection}{\numberline {2.10.2}Packet Loss}{16}{subsubsection.2.10.2}%
+\contentsline {subsubsection}{\numberline {2.10.2}Packet Loss}{17}{subsubsection.2.10.2}%
 \contentsline {subsubsection}{\numberline {2.10.3}Throughput}{17}{subsubsection.2.10.3}%
 \contentsline {subsubsection}{\numberline {2.10.4}CPU Usage}{17}{subsubsection.2.10.4}%
 \contentsline {subsubsection}{\numberline {2.10.5}Visual Quality}{17}{subsubsection.2.10.5}%
@@ -62,7 +62,7 @@
 \contentsline {subsubsection}{\numberline {3.5.1}Network Addressing and Subnet Design}{22}{subsubsection.3.5.1}%
 \contentsline {subsubsection}{\numberline {3.5.2}Separation of Camera Network and Internet Uplink}{22}{subsubsection.3.5.2}%
 \contentsline {subsubsection}{\numberline {3.5.3}Camera to Sender}{23}{subsubsection.3.5.3}%
-\contentsline {subsubsection}{\numberline {3.5.4}Sender to Receiver}{23}{subsubsection.3.5.4}%
+\contentsline {subsubsection}{\numberline {3.5.4}Sender to Receiver}{24}{subsubsection.3.5.4}%
 \contentsline {subsubsection}{\numberline {3.5.5}Tailscale as a Network Overlay}{24}{subsubsection.3.5.5}%
 \contentsline {subsection}{\numberline {3.6}Pipeline Design}{24}{subsection.3.6}%
 \contentsline {subsubsection}{\numberline {3.6.1}GStreamer}{24}{subsubsection.3.6.1}%
@@ -106,25 +106,29 @@
 \contentsline {section}{\numberline {6}Discussion}{55}{section.6}%
 \contentsline {subsection}{\numberline {6.1}Addressing the Research Questions}{55}{subsection.6.1}%
 \contentsline {subsubsection}{\numberline {6.1.1}Constant Glass To Glass latency}{55}{subsubsection.6.1.1}%
-\contentsline {subsection}{\numberline {6.2}Transport Protocol Performance }{56}{subsection.6.2}%
-\contentsline {subsubsection}{\numberline {6.2.1}UDP vs.\ TCP under Normal Conditions (T1 vs.\ T4)}{56}{subsubsection.6.2.1}%
-\contentsline {subsubsection}{\numberline {6.2.2}Cost of Encryption: SRTP Overhead (T1 vs.\ T3)}{56}{subsubsection.6.2.2}%
-\contentsline {subsubsection}{\numberline {6.2.3}Effect of Bandwidth Constraint (T5 vs.\ T6)}{56}{subsubsection.6.2.3}%
-\contentsline {subsection}{\numberline {6.3}Codec Configuration Performance}{58}{subsection.6.3}%
-\contentsline {subsubsection}{\numberline {6.3.1}The Value of Skipping Re-encoding (C2 vs.\ C1, C6 vs.\ C5)}{58}{subsubsection.6.3.1}%
-\contentsline {subsubsection}{\numberline {6.3.2}Effects of 720p Resolution (C3 vs.\ C1, C7 vs.\ C5)}{59}{subsubsection.6.3.2}%
-\contentsline {subsubsection}{\numberline {6.3.3}GPU Acceleration (C4 vs.\ C1, C8 vs.\ C5)}{59}{subsubsection.6.3.3}%
-\contentsline {subsubsection}{\numberline {6.3.4}H.264 vs.\ H.265 (C1 \- C4 vs.\ C5 \- C8)}{61}{subsubsection.6.3.4}%
-\contentsline {subsubsection}{\numberline {6.3.5}MJPEG (C9)}{61}{subsubsection.6.3.5}%
-\contentsline {subsection}{\numberline {6.4}Interplay of configurations}{61}{subsection.6.4}%
-\contentsline {subsubsection}{\numberline {6.4.1}Throughput and Transit Latency}{61}{subsubsection.6.4.1}%
-\contentsline {subsubsection}{\numberline {6.4.2}The Latency Quality Compromise}{62}{subsubsection.6.4.2}%
-\contentsline {subsubsection}{\numberline {6.4.3}Configuration Recommendation for RTO}{63}{subsubsection.6.4.3}%
-\contentsline {subsection}{\numberline {6.5}Limitations and Methodological Reflections}{63}{subsection.6.5}%
-\contentsline {subsubsection}{\numberline {6.5.1}Measurement Validity}{63}{subsubsection.6.5.1}%
-\contentsline {subsubsection}{\numberline {6.5.2}Generalisability}{64}{subsubsection.6.5.2}%
-\contentsline {subsection}{\numberline {6.6}Relation to Prior Work}{64}{subsection.6.6}%
-\contentsline {section}{\numberline {7}Conclusion}{66}{section.7}%
-\contentsline {subsection}{\numberline {7.1}Main Findings}{66}{subsection.7.1}%
-\contentsline {subsection}{\numberline {7.2}Future Work}{67}{subsection.7.2}%
-\contentsline {section}{References}{68}{subsection.7.2}%
+\contentsline {subsection}{\numberline {6.2}Comparison Against RTO Latency Requirements}{56}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Transport Protocol Performance }{56}{subsection.6.3}%
+\contentsline {subsubsection}{\numberline {6.3.1}UDP vs.\ TCP under Normal Conditions (T1 vs.\ T4)}{57}{subsubsection.6.3.1}%
+\contentsline {subsubsection}{\numberline {6.3.2}Cost of Encryption: SRTP Overhead (T1 vs.\ T3)}{57}{subsubsection.6.3.2}%
+\contentsline {subsubsection}{\numberline {6.3.3}Effect of Bandwidth Constraint (T5 vs.\ T6)}{57}{subsubsection.6.3.3}%
+\contentsline {subsection}{\numberline {6.4}Codec Configuration Performance}{59}{subsection.6.4}%
+\contentsline {subsubsection}{\numberline {6.4.1}The Value of Skipping Re-encoding (C2 vs.\ C1, C6 vs.\ C5)}{59}{subsubsection.6.4.1}%
+\contentsline {subsubsection}{\numberline {6.4.2}Effects of 720p Resolution (C3 vs.\ C1, C7 vs.\ C5)}{60}{subsubsection.6.4.2}%
+\contentsline {subsubsection}{\numberline {6.4.3}GPU Acceleration (C4 vs.\ C1, C8 vs.\ C5)}{60}{subsubsection.6.4.3}%
+\contentsline {subsubsection}{\numberline {6.4.4}H.264 vs.\ H.265 (C1 \- C4 vs.\ C5 \- C8)}{62}{subsubsection.6.4.4}%
+\contentsline {subsubsection}{\numberline {6.4.5}MJPEG (C9)}{62}{subsubsection.6.4.5}%
+\contentsline {subsection}{\numberline {6.5}Interplay of configurations}{62}{subsection.6.5}%
+\contentsline {subsubsection}{\numberline {6.5.1}Throughput and Transit Latency}{62}{subsubsection.6.5.1}%
+\contentsline {subsubsection}{\numberline {6.5.2}The Latency Quality Compromise}{63}{subsubsection.6.5.2}%
+\contentsline {subsubsection}{\numberline {6.5.3}Configuration Recommendation for RTO}{64}{subsubsection.6.5.3}%
+\contentsline {subsection}{\numberline {6.6}Limitations and Methodological Reflections}{64}{subsection.6.6}%
+\contentsline {subsubsection}{\numberline {6.6.1}Measurement Validity}{64}{subsubsection.6.6.1}%
+\contentsline {subsubsection}{\numberline {6.6.2}Generalisability}{65}{subsubsection.6.6.2}%
+\contentsline {subsection}{\numberline {6.7}Relation to Prior Work}{65}{subsection.6.7}%
+\contentsline {section}{\numberline {7}Conclusion}{67}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Main Findings}{67}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Future Work}{68}{subsection.7.2}%
+\contentsline {section}{References}{69}{subsection.7.2}%
+\contentsline {section}{Appendix}{74}{subsection.7.2}%
+\contentsline {subsection}{\numberline {A}Source Code Repository}{74}{subsection.Alph0.1}%
+\contentsline {subsection}{\numberline {B}AI Declaration}{74}{subsection.Alph0.2}%

@@ -1,5 +1,6 @@
 \section{Methodology}\label{chap:methodology}
 
+\vspace{5mm}
 \subsection{Research Methodology}
 
 \subsubsection{Literature and Knowledge acquisition}
@@ -53,6 +54,7 @@ Several digital tools as mentioned below were used for this paper. The main purp
     \item Visual Studio Code: was used as the main LaTeX editor because of its powerful extensions for LaTeX support, syntax highlighting, and version control integration.
 \end{itemize}
 
+\vspace{5mm}
 \subsection{Experimental Methodology}
 This subsection describes how the experimental work in this thesis was designed, conducted, and evaluated. It covers the design of experiments, the test setup and equipment used and the procedure followed during testing.
 
@@ -157,18 +159,6 @@ All the test equipment is listed below in Table~\ref{tab:test_equipment}. The ca
     \caption{Cameras outside view.}
     \label{fig:camerasfromoutside}
 \end{figure}
-% \begin{figure}[H]
-%     \centering
-%     \includegraphics[width=0.9\textwidth]{Images/Test&Equipment/DashboardView.jpg}
-%     \caption{Dashboard view from inside the car}
-%     \label{fig:dashboardview}
-% \end{figure}
-% \begin{figure}[H]
-%     \centering
-%     \includegraphics[width=0.9\textwidth]{Images/Test&Equipment/Computers.jpg}
-%     \caption{Computers used in all tests}
-%     \label{fig:computers}
-% \end{figure}
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.9\textwidth]{Images/Test&Equipment/CarSetup2.jpg}
@@ -194,21 +184,6 @@ All the test equipment is listed below in Table~\ref{tab:test_equipment}. The ca
     \label{fig:networkequipment}
 \end{figure}
 
-% \begin{figure}[H]
-%     \centering
-%     \includegraphics[width=0.9\textwidth]{Images/Test&Equipment/PowerSupply.jpg}
-%     \caption{Power supply for experiment}
-%     \label{fig:powersupply}
-% \end{figure}
-
-
-% \begin{figure}[H]
-%     \centering
-%     \includegraphics[width=0.6\textwidth]{Images/Test&Equipment/ReceiverComputer.jpeg}
-%     \caption{Receiver computer receiving images}
-%     \label{fig:receiver}
-% \end{figure}
-
 \subsubsection{Test Procedure}
 The test procedure differed between the transport tests and the codec tests. The transport tests were conducted in a static lab environment, while the codec tests were conducted from a moving vehicle.
 
@@ -227,6 +202,7 @@ Because the codec tests were run from a moving vehicle, the surrounding conditio
 
 Two further controls were built into the way the data was handled rather than the way it was captured. The first 10 seconds of every log file are discarded so that pipeline startup transients do not enter any of the reported statistics, and this cutoff is applied identically across all analysis scripts so that no configuration gains an advantage from a shorter or longer warmup window. Each test also ran three cameras at once, each in its own independent GStreamer pipeline, so every configuration was measured three times concurrently under identical conditions instead of from a single observation.
 
+\vspace{5mm}
 \subsection{Measurement and Analysis}
 
 \subsubsection{Measurement metrics}
@@ -272,6 +248,7 @@ The individual analysers, which are listed in the appendix, and what they comput
 
 The results for each metric are summarised using mean, minimum, maximum, and 95th percentile. The 95th percentile is included alongside the mean because it more honestly represents what an operator would experience during a run. A configuration with a low mean but a high 95th percentile produces frequent disruptive spikes that the average alone would not show. For metrics logged per camera, the values from all three cameras are pooled into a single sample before computing statistics, giving a result representative of the overall system rather than any individual stream. No other statistical tests are applied, as the OFAT design produces one observation per configuration and the goal is practical comparison rather than hypothesis testing.
 
+\vspace{5mm}
 \subsection{Limitations}
 
 Due to time constraints and availability of help and material to complete experiment, each test was done only once. The configurations were validated repeatedly during development, so the results are not untested, but a single final run per configuration means unique effects on that particular day cannot be ruled out. The reason it was only performed once was due to time and the volume of logging data produced. The codec test on the road was the most demanding to execute as it required the most people and equipment, and running the lab tests over too many sessions would also risk obscuring genuine spikes in a large average. The lab results were confirmed to be consistent with previous development runs before being accepted.
@@ -284,6 +261,7 @@ The hardware used in the tests was determined entirely by what was available for
 
 No formal operator evaluation was carried out because the system is still a prototype and has not yet reached the maturity required for a study with professional train operators. Such a study would require safety approvals, operator availability, and coordination with a railway operator, all of which were outside the scope of this thesis.
 
+\vspace{5mm}
 \subsection{Reliability}
 
 Wohlin et al. define reliability as the degree to which a study would yield the same results if repeated under the same conditions~\cite{wohlin2012}. The controls described in Subsection~\ref{subsubsec:controllingUmeasruedVariables} contribute to this directly, as fixing the route, the driver and the full set of parameter values means the conditions of each test are documented well enough to be reproduced. Beyond keeping the conditions stable, a few aspects of the study design speak specifically to whether the same numbers would appear again on a repeat run.
@@ -292,6 +270,7 @@ The clearest evidence is that the configurations were carefully developed. Every
 
 Reliability also extends to how the data is processed, not only how it is collected. The raw logs from every run are passed through the same analysis scripts with the same fixed warmup exclusion, so a given set of logs will always yield the same statistics no matter when the analysis is run. Finally, because three independent pipelines were recorded at once for each configuration, every reported result already draws on three concurrent measurements rather than one, which acts as a small built in repeat within each test and makes a single misleading measurement less likely to survive into the results.
 
+\vspace{5mm}
 \subsection{Validity}
 
 Saunders et al. distinguish between internal, external, and construct validity as three dimensions that together determine whether a study's conclusions can be trusted~\cite{saunders2019}.

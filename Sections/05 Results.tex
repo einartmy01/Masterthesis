@@ -15,6 +15,7 @@ The codec configuration tests examine how codec choice, resolution, and encoding
 \input{Sections/Tables/CodecExpDuration.tex}
 
 
+\vspace{5mm}
 \subsection{System Latency}\label{subsec:system_latency}
 
 The latency result is split up into multiple steps. Sender latency, Transit latency and lastly Receiver latency. Combined they give out a full end-to-end latency. All the latencies of the system were measured using timestamps at the sender and receiver. T1 and C1 served as the baseline configurations. Table~\ref{tab:send_transport_latency} summarises the mean, minimum, maximum and 95\% percentile of latency in sender for each transport test.
@@ -35,7 +36,7 @@ The passthrough configurations (T2, C2 and C6) have no sender pipeline stage and
 
 \textbf{Transit:}
 
-Transit latency is computed from timestamps on two separately clocked machines, the sender and the receiver. Before the experiments a clock offset check was completed, establishing a uncertainty of up to 7~ms between the clocks. Table~\ref{tab:transit_transport_raw} shows the raw, uncorrected values for the transport tests. The negative minimum values in the UDP tests are physically impossible and directly reflect the clock drift. The TCP tests  produced no negative values, as the higher inherent latency of TCP kept all measurements above zero.
+Transit latency is computed from timestamps on two separately clocked machines, the sender and the receiver. Before the experiments a clock offset check was completed, establishing a uncertainty of up to 7~ms between the clocks. Table~\ref{tab:transit_transport_raw} shows the raw, uncorrected values for the transport tests. The negative minimum values in the UDP tests are physically impossible and directly reflect the clock drift. The TCP tests produced no negative values, as the higher inherent latency of TCP kept all measurements above zero.
 
 \input{Sections/Tables/Results/T-transit-raw.tex}
 
@@ -86,6 +87,7 @@ To better visualize where latency comes from, Figure~\ref{fig:latencyDistributio
     \caption{End-to-end latency distribution for C1 H.264, moving experiment.}\label{fig:latencyDistributionC1}
 \end{figure}
 
+\vspace{5mm}
 \subsection{Packet Loss Rate}\label{subsec:packet_loss}
 
 Packet loss was calculated from RTP sequence numbers by logging every packet sent and every packet received, then matching the logs to determine how many packets sent by the sender were not received. For the entire experiment no excess packets were received that were not sent, indicating stable receiver logging. Packet loss data for C4 is unavailable due to the same logging error that affected transit data.
@@ -94,6 +96,7 @@ Packet loss was calculated from RTP sequence numbers by logging every packet sen
 
 \input{Sections/Tables/Results/C-packetloss.tex}
 
+\vspace{5mm}
 \subsection{Throughput}\label{subsec:results_throughput}
 
 Throughput was logged at the sender side and reflects the volume of encoded video data leaving the pipeline per second. Under unlimited bandwidth conditions (T1-T4), throughput reflects the natural output of the encoder with a bandwidth of over 100~Mbps. Under the poor bandwidth condition (T5 and T6), throughput is additionally constrained by the available capacity of 18~Mbps and 12~Mbps. The output measured includes the Tailscale wrapping adding a small percentage to the packets size, this is adjusted for in the constraint tests (T5 and T6) by adding a buffer at the constraint.
@@ -108,6 +111,7 @@ Throughput was logged at the sender side and reflects the volume of encoded vide
     \caption{Sender throughput graph over time for C1.}\label{fig:C1Throughput}
 \end{figure}
 
+\vspace{5mm}
 \subsection{CPU Usage on Sender}\label{subsec:cpu_usage}
 
 CPU usage was sampled at regular intervals during each test using the \texttt{sar} utility from the \texttt{sysstat} package. The values reported represent the total CPU load across all cores during the active streaming period. 
@@ -123,6 +127,7 @@ The passthrough configurations T2, C2 and C6 have no encoding step and are there
     \caption{Sender CPU usage graph over time for C1.}\label{fig:C1CPU}
 \end{figure}
 
+\vspace{5mm}
 \subsection{Visual Quality}\label{subsec:visual_quality}
 
 Visual quality was assessed on captured frames using the BRISQUE no-reference image quality metric. Lower BRISQUE scores indicate better perceptual quality. Individual measurements were done per camera and the scores are aggregated across all three cameras per test.
@@ -137,4 +142,4 @@ Visual quality was assessed on captured frames using the BRISQUE no-reference im
     \caption{Video Quality with BRISQUE score graph over time for C1.}\label{fig:C1Quality}
 \end{figure}
 
-Interpretation of these findings, including their implications for remote train operation and comparison against the 3GPP TS~22.289 latency threshold, is provided in Chapter~\ref{chap:discussion}.
+Interpretation of these findings, including their implications for remote train operation and comparison against latency threshold, is provided in Chapter~\ref{chap:discussion}.

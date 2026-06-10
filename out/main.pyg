@@ -1,0 +1,3 @@
+# This is a comment
+print('Hello world from Python!')
+print('I am using the "rrt" style to print this code in beautiful colors')

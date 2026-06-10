@@ -1,13 +1,11 @@
 \section{Theory}
 This chapter provides the theoretical background needed to understand the work in this thesis. Beginning with Automatic Train Operation and the role of remote driving within that framework, it covers the fundamentals of video streaming including codecs and transport protocols, introduces GStreamer as the core technology used in the pipeline, describes the main sources of latency in a streaming system, and discusses the relevant characteristics of the communication technologies used in testing.
 
+\vspace{5mm}
 \subsection{Remote Train Operations}\label{subsec:rto}
- 
 Remote Train Operations (RTO) refer to the act of monitoring and controlling a train from a location outside the locomotive, typically a centralised control room, using live video and a remote control interface. As railways move toward higher levels of automation, RTO has become an important part of safety features and the practical deployment. It allows human operators to intervene when automated systems encounter situations they cannot handle on their own, and it serves as a required fallback layer for trains operating without a driver or without staff adequate to drive~\cite{jurgensen2025, fp2r2dato2023d5_4}.
- 
 
 \subsubsection{Grades of Automation}\label{subsec:goa}
- 
 The Grade of Automation (GoA) is a classification system defined in the international standard IEC~62290--1 that describes how much of the train operation is handled automatically instead of by a human~\cite{iec62290}. The standard defines five levels, from GoA~0 to GoA~4, where each higher level adds more responsibility from the driver to the automated system. Table~\ref{tab:goa} summarises the levels.
  
 \begin{table}[h]
@@ -36,9 +34,9 @@ Research on human factors in remote driving consistently shows that video qualit
 
 Beyond individual video quality, remote train driving typically requires multiple simultaneous camera views. A camera facing straight forward is needed for obstacle and signal detection, while side cameras support the operator's experience, needed for immersiveness of speed and movement as shown in Figure~\ref{fig:trippelmonitor}~\cite{fp2r2dato2023d5_4, jurgensen2025, neumeier2019}.
  
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
-    \includegraphics[width=0.6\textwidth]{Images/Theory/ThreeMonitorSetup.png}
+    \includegraphics[width=0.8\textwidth]{Images/Theory/ThreeMonitorSetup.png}
     \caption{Three monitor tele operation simulator setup used by Neumeier et al.\ to evaluate the effect of latency on remote driving performance~\cite{neumeier2019}.}\label{fig:trippelmonitor}
 \end{figure}
 
@@ -46,19 +44,21 @@ Beyond individual video quality, remote train driving typically requires multipl
  
 Latency is a central performance parameter in a RTO video system. If the delay between what happens on the track and what the operator sees on screen is too large, safe intervention becomes impossible. As of now, a big challenge is that no single universally agreed threshold exists for remote train operation, and most values currently used in the field are borrowed from research on cars, drones, and cranes~\cite{myhrvold2025}.
  
-The most relevant regulatory reference comes from 3GPP TS~22.289, a technical specification developed in cooperation with the International Union of Railways (UIC) and the European Telecommunications Standards Institute (ETSI)~\cite{3gppts22289}. It classifies remote video control at GoA~3 and GoA~4 as \textit{Very Critical Video Communication} and sets a target end-to-end latency of \(\leq 100\)~ms at speeds up to 500~km/h, or \(\leq 10\)~ms at speeds up to 40~km/h, with a reliability requirement of 99.9\% and a data rate of 10--20~Mbps. These values are defined at the communication interface and are not yet formally adopted into ERA's Technical Specifications for Interoperability (TSIs)~\cite{3gppts22289}.
+The most relevant regulatory reference comes from 3GPP TS~22.289, a technical specification developed in cooperation with the International Union of Railways (UIC) and the European Telecommunications Standards Institute (ETSI)~\cite{3gppts22289}. It classifies remote video control at GoA~3 and GoA~4 as \textit{Very Critical Video Communication} and sets a target end-to-end latency of \(\leq 100\)~ms at speeds up to 500~km/h, or \(\leq 10\)~ms at speeds up to 40~km/h, with a reliability requirement of 99.9\% and a data rate of 10--20~Mbps. These values are defined at the communication interface and are not yet formally adopted into ERA's Technical Specifications for Interoperability (TSIs)~\cite{3gppts22289}. 3GPP sets end-to-end to be between sender and receiver interfaces, describing a transit latency avoiding capture, encoding, decoding and rendering. 
  
 Empirical studies from railway demonstrations report glass-to-glass (G2G) latency values of 340--380~ms for tramway remote driving using commercial systems~\cite{fp2r2dato2024d41_2}, while the Kozarevic study at NTNU measured an average of around 120~ms to 240~ms using a GPS-synchronised measurement method~\cite{kozarevic2025}. Human factors research from other vehicle domains suggests that operators begin to adjust their behaviour at delays above 250--300~ms, and that latency variability can also be more disruptive than a consistently higher but stable delay~\cite{myhrvold2025, neumeier2019}.
 
+\vspace{5mm}
 \subsection{Video Streaming}\label{subsec:video-streaming}
 Video streaming is the continuous transmission of video data from a source to a receiver over a network, allowing the receiver to display the content in real time without storing the full recording first~\cite{sodagar2011}. In a remote train operation context, this means live footage from cameras on or near the train is captured, compressed, sent across a network, and displayed on the operator's screen with as little delay as possible.
  
 A video streaming system can be thought of as a chain of components, each with its own role. At the sending end, raw video is captured by a camera and handed to an encoder, which compresses it into a format suitable for transmission. The compressed data is then packaged into a transport protocol and sent across the network. At the receiving end, the process is reversed and packets are reassembled, decoded back into raw frames, and rendered on screen. The choices made at each step, which codec, which protocol, which network directly affect the end-to-end latency and video quality that the remote operator experiences~\cite{myhrvold2025, mejias2024}.
 
+\vspace{5mm}
 \subsection{Video Compression}\label{subsec:codecs}
 Video compression works by removing redundancy from the raw video signal. There are two main types of redundancy that codecs use for compression. Spatial redundancy exists within a single frame where neighbouring pixels often have similar values, as shown in Figure~\ref{fig:spatial-redundancy} where the background and some of the skin share the same colour. Temporal redundancy exists across frames where much of the image remains unchanged between one frame and the next, as shown in Figure~\ref{fig:temporal-redundancy} where only the people move, while the background and table stay still. A video encoder exploits both types of redundancy to represent the video with fewer bits than the original raw data. Compression can be lossless where the original data can be perfectly reconstructed, or lossy where some information is discarded in exchange for a much smaller file size. Most video streaming applications use lossy compression, as lossless video requires far more bandwidth than most networks can provide~\cite{blomqvist2018, richardson2010}.
 
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
     \begin{minipage}{0.35\textwidth}
         \centering
@@ -85,14 +85,13 @@ H.265, also known as High Efficiency Video Coding (HEVC) and formally standardis
  
 HEVC achieves its efficiency gains by replacing the fixed 16$\times$16 macroblock structure of H.264 with a flexible Coding Tree Unit (CTU) architecture that supports block sizes up to 64$\times$64 pixels as shown in Figure~\ref{fig:264v265encoding}. Larger blocks handle uniform image regions efficiently, while smaller blocks are used in areas with fine detail or motion. This adaptive structure allows the encoder to allocate coding effort where it is most needed, reducing the total number of bits required to represent a frame at a given quality level~\cite{sullivan2012hevc}.
 
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{Images/Theory/264265HEVC.png}
+    \includegraphics[width=\textwidth]{Images/Theory/264265HEVC.png}
     \caption{Difference between HEVC, H.265 technology, and H.264 of method for encoding~\cite{blomqvist2018}.}\label{fig:264v265encoding}
 \end{figure}
 
 Another difference compared to H.264 is computational cost. Encoding with H.265 requires significantly more processing power, which increases encoding time and places greater demand on the sender hardware~\cite{ohm2012}.
-
 
 \subsubsection{Frame Types}\label{subsubsec:frametypes}
 
@@ -115,8 +114,8 @@ Because each frame carries all the data needed for its own decoding, MJPEG has t
  
 The main limitation of MJPEG is its high bandwidth consumption. Without temporal compression, every frame must carry its full spatial data, which results in bitrates several times higher than H.264 at equivalent quality~\cite{kaknjo2018videolatency}.
 
+\vspace{5mm}
 \subsection{Transport Protocols}\label{subsec:transport-protocols}
- 
 \subsubsection{RTP and SRTP}\label{subsubsec:rtp-srtp}
 The Real-time Transport Protocol (RTP) is a network protocol designed for the delivery of audio and video over IP networks, standardised by the IETF in RFC~3550~\cite{rfc3550}. It operates at the application layer and is typically carried over UDP, adding a structured header on top of each media payload. The header contains a sequence number that increments with each packet, allowing the receiver to detect packet loss and reorder out of order arrivals. A timestamp reflects the sampling time of the media content and is used to pace playback at the correct rate on the receiving end. The marker bit signals significant events in the stream, most commonly the last packet belonging to a video frame, so the receiver knows when a complete frame has arrived and is ready for decoding~\cite{rfc3550}.
  
@@ -134,20 +133,19 @@ The Transmission Control Protocol (TCP) is a transport layer protocol defined in
  
 TCP also implements flow control and congestion control mechanisms. Flow control prevents the sender from transmitting data faster than the receiver can process it, using a sliding window that the receiver advertises. Congestion control reduces the transmission rate when packet loss is detected, interpreting loss as a signal of network congestion~\cite{forouzan2012}. These mechanisms make TCP well suited for applications that require complete and correct data delivery, such as file transfer and web browsing, but the added overhead means the transmission rate can vary depending on network conditions~\cite{forouzan2012}.
 
+\vspace{5mm}
 \subsection{Streaming Parameters}\label{subsec:streaming-params}
- 
 \subsubsection{Bandwidth}\label{subsubsec:bandwidth}
 Bandwidth in video streaming refers to the amount of data that can be transmitted per unit of time across a network connection, typically measured in megabits per second (Mbps). In a streaming pipeline the term bitrate is often used alongside bandwidth. Bitrate describes how much data the encoder produces per second, while bandwidth describes how much the network can carry. When bitrate exceeds available bandwidth, packets accumulate in buffers or are dropped, leading to increased latency, visual degradation, or stream interruptions~\cite{sodagar2011}.
  
 The required bandwidth depends on the codec, resolution, frame rate, and scene complexity. A higher bitrate generally produces better visual quality, but the relationship is not linear. Subjective testing has shown that perceived quality improves sharply at low bitrates and then levels off as bitrate increases, meaning that doubling the bitrate does not double the perceived quality~\cite{pinson2012}.
  
 \subsubsection{Resolution}\label{subsubsec:resolution}
- 
 Resolution defines the number of pixels in each video frame, expressed as width by height. Common values include 1280$\times$720 (720p) and 1920$\times$1080 (1080p). A higher resolution captures more spatial detail, but also increases the amount of data per frame that the encoder must compress and the network must carry~\cite{pinson2012}.
  
 For a given codec and bitrate, increasing resolution without increasing the bitrate results in more compression per pixel, which can reduce sharpness and introduce visible artefacts. Conversely, a high resolution with a sufficiently high bitrate produces a clearer image. The 3GPP Rel-16 specification for video based remote railway control recommends a minimum of 1920$\times$1080 at 30 frames per second as the target output quality~\cite{mejias2024}.
 
-
+\vspace{5mm}
 \subsection{Latency Sources in a Video Streaming Pipeline}\label{subsec:latency-sources}
 The total delay from when a video frame is captured by a camera to when it is displayed on the operator's screen is commonly referred to as glass-to-glass latency. This delay does not originate from a single component but accumulates across each stage of the streaming pipeline~\cite{dobrian2011}. Understanding where latency is introduced at each stage is necessary for identifying bottlenecks and evaluating the overall performance of a streaming system.
  
@@ -160,7 +158,6 @@ The image sensor captures light across all its pixels during one exposure interv
  
 After exposure, the raw sensor data passes through a series of internal processing steps such as demosaicing, noise reduction, and scaling before being handed to the encoder. The time required for these steps depends on the camera hardware and the features enabled, and can add several milliseconds to the total capture delay~\cite{axis2024, kaknjo2018}. In network cameras the combined capture and internal processing time is typically under 50 milliseconds, though it varies between camera models and frame types.
 
- 
 \subsubsection{Encoding}\label{subsec:encoding}
 Encoding latency is the delay introduced while the encoder compresses raw video frames into a transmittable format. It originates from the computational steps required to apply intra and inter frame prediction, transform coding, and entropy coding to each frame~\cite{axis2024}.
  
@@ -168,7 +165,6 @@ Buffering is another significant source of encoding delay. Encoders that use B-f
  
 The computational load of the encoding process itself also contributes to delay. More complex encoding settings produce better compression but require more processing time per frame. When the encoding time for a single frame exceeds the frame period, frames begin to queue and latency accumulates over time. The choice of encoder preset and hardware therefore directly affects how much delay the encoding stage adds to the pipeline~\cite{axis2024}.
 
- 
 \subsubsection{Transmitting}\label{subsec:transmitting}
 Transmission latency is the delay introduced while encoded video data travels across the network from the sender to the receiver. It consists of several components that accumulate along the path~\cite{forouzan2012}.
  
@@ -184,19 +180,17 @@ Frame reordering is another notable source of decoding delay. When B-frames are 
 When the encoder is configured without B-frames, as is common in low latency streaming, the reordering delay is eliminated and the decoder can output each frame as soon as it is decoded. The remaining decoding latency is then primarily determined by the processing time per frame, which on modern hardware is typically in the range of a few milliseconds~\cite{axis2024}.
 
 \subsubsection{Rendering}\label{subsec:rendering}
-
 Rendering latency is the delay introduced at the final stage of the pipeline, where a decoded frame is passed to the display and made visible to the viewer. It consists of two main components, the time required for the rendering application to prepare and present the frame to the graphics system, and the time the display itself takes to show it~\cite{axis2024}.
  
 A display can only update its image at the rate defined by its refresh rate, measured in hertz. A monitor running at 60~Hz updates 60 times per second, meaning a new image appears at most once every 16.7~milliseconds. If a decoded frame arrives just after a refresh has occurred, it must wait until the next refresh cycle before it becomes visible, introducing up to one full frame period of additional latency~\cite{leray2018}. Higher refresh rates reduce this waiting time, as the interval between refresh cycles is shorter.
  
 The rendering application may also hold frames in a buffer before handing them to the display, either to synchronise with the refresh cycle or to ensure smooth playback. This buffering adds a predictable but fixed amount of delay. Combined with the display's own internal processing time, rendering latency is typically in the range of one to two frame periods and represents the last contribution to the total glass-to-glass delay~\cite{axis2024}.
 
+\vspace{5mm}
 \subsection{Clock Synchronisation}\label{subsec:clock-sync}
-
 Accurate latency measurement between two separate machines requires that both share a common time reference. Each computer maintains an internal clock driven by a local hardware oscillator. Even at identical nominal frequencies, two independent oscillators will accumulate a growing offset over time due to differences in temperature, aging, and manufacturing tolerances~\cite{vannicola2012}. When a timestamp recorded on one machine is compared against a timestamp recorded on another, any offset between the two clocks appears directly in the measured result. Depending on the magnitude of the drift, this error can easily exceed the latency values being measured, making clock synchronisation a requirement for accurate one-way delay measurement.
 
 \subsubsection{GPS-Based Clock Synchronisation}\label{subsubsec:gps-sync}
-
 The Global Positioning System (GPS) operates satellites that each carry onboard atomic clocks traceable to Coordinated Universal Time (UTC). Each satellite broadcasts a navigation message containing the current time along with parameters allowing a receiver to compute the signal propagation delay from the satellite to the receiver. By combining signals from at least four satellites and solving for the receiver position and clock offset simultaneously, a GPS receiver can derive a precise absolute time reference~\cite{misra2011}.
 
 A common timing output from GPS receivers is the pulse-per-second (PPS) signal. This is a periodic electrical pulse whose rising edge is aligned to the UTC second boundary. Commercial GPS receivers designed for timing applications typically achieve a PPS accuracy of 100 nanoseconds or better relative to UTC, and precision timing receivers can reach the range of tens of nanoseconds under stable conditions~\cite{vannicola2012, sesia2010}. The PPS signal provides a hardware-level time reference that is independent of network conditions and available continuously as long as the receiver has a clear view of the sky.
@@ -204,19 +198,18 @@ A common timing output from GPS receivers is the pulse-per-second (PPS) signal. 
 When a computer's operating system is disciplined by a GPS PPS signal, the kernel timestamps each incoming pulse and uses the known UTC alignment to adjust the phase and frequency of the system clock continuously. The resulting clock closely tracks UTC, with residual errors typically in the sub-microsecond range~\cite{sesia2010}. For latency measurements in a video streaming system where delays are on the order of tens to hundreds of milliseconds, this accuracy level means that clock error contributes negligibly to the measured values. GPS-based synchronisation is therefore used in studies where high measurement precision is required and where both endpoints can be equipped with a GPS receiver, as seen in the latency measurement work of Kaknjo et al.~\cite{kaknjo2018} and the tramway remote driving tests reported in FP2R2DATO D41.2~\cite{fp2r2dato2024d41_2}.
 
 \subsubsection{Network-Based Clock Synchronisation with Chrony}\label{subsubsec:chrony-sync}
-
 When a hardware GPS reference is not available, clock synchronisation can be achieved over a network using the Network Time Protocol (NTP). NTP operates by exchanging timestamped packets between a client and one or more time servers. The client records the time it sent the request, the time the server received it, the time the server sent its reply, and the time the client received the reply. From these four timestamps, NTP estimates the round-trip propagation delay and uses half of that value to approximate the one-way delay, computing a correction to the local clock~\cite{rfc5905}.
 
 Chrony is an NTP implementation for Linux systems that is designed to maintain accurate synchronisation under variable network conditions. Rather than making abrupt step corrections to the clock, Chrony adjusts the frequency of the local oscillator continuously, which reduces disruption to running processes and improves long-term stability~\cite{chronyproject}. It also tracks the estimated error of each configured time source and selects the most reliable one based on a combination of stratum, distance, and measured jitter.
 
 When synchronised to public internet time servers such as those provided by the \texttt{pool.ntp.org} project, Chrony typically achieves a clock accuracy within a few milliseconds over an internet connection. On a local area network under stable conditions the accuracy improves to tens of microseconds, and with hardware timestamping enabled on the network interface, where the network card rather than the kernel records packet arrival and departure times, sub-microsecond accuracy is possible~\cite{redhat2024chrony, redhat2024hw}.
 
+\vspace{5mm}
 \subsection{GStreamer}\label{subsec:gstreamer}
 GStreamer is an open source multimedia framework written in C that allows developers to construct pipelines of media processing components~\cite{gstreamer_intro}. It was originally developed at the Oregon Graduate Institute in 1999 and has since become a widely used foundation for applications ranging from media playback and transcoding to real-time video streaming and computer vision~\cite{gstreamer_intro}. The framework is built around a modular, plugin based architecture where each processing step is provided by a plugin, and individual components can be combined freely to form a complete processing chain suited to the application at hand.
  
 The following subsections describe the core concepts of GStreamer that are relevant to understanding how a streaming pipeline is constructed and instrumented.
 
- 
 \subsubsection{Pipeline and Elements}\label{subsec:pipeline-elements}
 An element is the fundamental building block in GStreamer. Each element performs a single, specific task in the media processing chain, such as reading data from a network socket, decoding a compressed video stream, converting a pixel format, or writing frames to a display. Elements are linked together in sequence to form a pipeline, where the output of one element flows into the input of the next~\cite{gstreamer_elements}.
  
@@ -224,7 +217,6 @@ A pipeline is a specialised container that manages a group of connected elements
  
 Elements are broadly categorised by their role in the pipeline. Source elements produce data and have no input, for example by reading from a camera or a network port. Filter elements receive data, process it, and pass it on, covering tasks such as encoding, decoding, and format conversion. Sink elements consume data at the end of the pipeline and have no output, typically by rendering video to a screen or writing data to a socket~\cite{gstreamer_elements}. By combining elements of these three types, a complete media processing pipeline can be assembled from reusable components without writing the processing logic from scratch.
 
- 
 \subsubsection{Pads}\label{subsec:pads}
 Pads are the connection points through which data flows between elements in a GStreamer pipeline. Every element exposes one or more pads, and data moves from the source pad of one element to the sink pad of the next. Source pads produce data and sink pads consume it, where the terms are defined from the perspective of the element itself~\cite{gstreamer_pads}.
  
@@ -232,7 +224,6 @@ Each pad carries capability information, called caps, which describes the type a
  
 Pads can be either static or dynamic. Static pads are always present on the element from the moment it is created. Dynamic pads appear only when the element begins processing data and has determined what format it is working with, which is common in demuxers and parsers that must read the stream before knowing its structure~\cite{gstreamer_pads}.
 
- 
 \subsubsection{Sinks}\label{subsec:sinks}
 A sink element is the terminal point of a GStreamer pipeline. It receives data from upstream elements and delivers it to an output destination, such as a display, a file, or a network socket. Sink elements have one or more sink pads for receiving data but no source pads, as they do not pass data further down the pipeline~\cite{gstreamer_sink}.
  
@@ -247,7 +238,7 @@ A probe is installed on a pad using the \texttt{gst\_pad\_add\_probe} function, 
  
 Probes are particularly useful for latency measurement, as they allow the application to record a timestamp at one pad when data enters the pipeline and another timestamp at a downstream pad when the processed data exits. The difference between the two timestamps represents the processing time between those two points in the pipeline~\cite{gstreamer_pipeline_manip}.
 
-
+\vspace{5mm}
 \subsection{Network and Communication}\label{subsec:network}
 The network connection between the sender and receiver is an important part of any remote operation system. The choice of network technology affects how much data can be sent, how quickly it arrives, and how stable the connection is under varying conditions. The following subsections cover the network technologies relevant to this thesis.
  
@@ -270,7 +261,7 @@ The main idea behind Tailscale is that devices connect directly to each other ra
  
 WireGuard, which handles the actual data transfer, adds encryption and authentication to every packet passing through the tunnel. The protocol is designed to have low overhead compared to older VPN technologies, which keeps the additional latency introduced by the encrypted tunnel small~\cite{donenfeld2017wireguard}.
 
-
+\vspace{5mm}
 \subsection{Performance Metrics}\label{subsec:metrics}
 Evaluating a video streaming system requires measuring several aspects of its behaviour under different conditions. The metrics covered in this subsection are latency, packet loss, throughput, CPU usage, and visual quality. Together they give a picture of how the system performs from both a network and a visual standpoint.
 
@@ -309,7 +300,6 @@ No reference methods, also called blind quality assessment, estimate quality fro
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{Images/Theory/BRISQUEResult.png}
+    \includegraphics[width=0.85\textwidth]{Images/Theory/BRISQUEResult.png}
     \caption{Difference of BRISQUE evaluation~\cite{pennada2023}.}\label{fig:brisqueResult}
 \end{figure}
-
